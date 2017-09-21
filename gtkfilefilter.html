@@ -89,7 +89,7 @@ $('body').removeClass('no-script');
 </nav>
 
 <main>
-<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="gtkfilefilter.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['c', 'javascript', 'python']" data-hotdoc-meta-gi-language="c">
+<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="gtkfilefilter.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['python', 'c', 'javascript']" data-hotdoc-meta-gi-language="c">
 <script src="assets/js/utils.js"></script>
 
 <div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
@@ -108,6 +108,42 @@ $('body').removeClass('no-script');
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="GtkFileFilter">
 	
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h2 data-hotdoc-id="GtkFileFilter">
+	<span><code>Gtk.FileFilter</code></span>
+</h2>
+
+
+<div class="hierarchy_container">
+	<div class="hierarchy_details">
+<pre>
+<a title="GObject.Object" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct">GObject.Object</a>
+    <span class="lineart">╰──</span><a title="GObject.InitiallyUnowned" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned">GObject.InitiallyUnowned</a>
+        <span class="lineart">╰──</span>Gtk.FileFilter
+</pre>
+
+</div>
+
+</div>
+
+<div class="interfaces_container">
+	
+<p><b>Implemented interfaces:</b>
+    <a title="Gtk.Buildable" href="gtkbuildable.html#GtkBuildable">Gtk.Buildable</a>
+</p>
+
+</div>
+
+
+
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -180,42 +216,6 @@ $('body').removeClass('no-script');
 
 
         </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h2 data-hotdoc-id="GtkFileFilter">
-	<span><code>Gtk.FileFilter</code></span>
-</h2>
-
-
-<div class="hierarchy_container">
-	<div class="hierarchy_details">
-<pre>
-<a title="GObject.Object" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct">GObject.Object</a>
-    <span class="lineart">╰──</span><a title="GObject.InitiallyUnowned" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned">GObject.InitiallyUnowned</a>
-        <span class="lineart">╰──</span>Gtk.FileFilter
-</pre>
-
-</div>
-
-</div>
-
-<div class="interfaces_container">
-	
-<p><b>Implemented interfaces:</b>
-    <a title="Gtk.Buildable" href="gtkbuildable.html#GtkBuildable">Gtk.Buildable</a>
-</p>
-
-</div>
-
-
-
-
-
-
-        </div>
 
 </div>
 
@@ -225,6 +225,55 @@ $('body').removeClass('no-script');
 
 <div class="base_symbol_container" data-hotdoc-tags="since:2.4;" id="gtk_file_filter_new">
 	
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_file_filter_new">
+	<span><code>Gtk.FileFilter.new</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.FileFilter.new ():
+    #python wrapper for 'gtk_file_filter_new'</pre>
+
+<p>Creates a new <a href="gtkfilefilter.html#GtkFileFilter">Gtk.FileFilter</a> with no rules added to it.
+Such a filter doesn’t accept any files, so is not
+particularly useful until you add rules with
+<a href="gtkfilefilter.html#gtk_file_filter_add_mime_type">Gtk.FileFilter.add_mime_type</a>, <a href="gtkfilefilter.html#gtk_file_filter_add_pattern">Gtk.FileFilter.add_pattern</a>,
+or <a href="gtkfilefilter.html#gtk_file_filter_add_custom">Gtk.FileFilter.add_custom</a>. To create a filter
+that accepts any file, use:</p>
+<pre><code class="language-[&lt;!--"> GtkFileFilter *filter = gtk_file_filter_new ();
+ gtk_file_filter_add_pattern (filter, "*");
+</code></pre>
+
+
+
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.FileFilter" href="gtkfilefilter.html#GtkFileFilter">Gtk.FileFilter</a>
+										)
+								–
+			</div>
+							<p>a new <a href="gtkfilefilter.html#GtkFileFilter">Gtk.FileFilter</a></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.4
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -323,32 +372,48 @@ that accepts any file, use:</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.22;" id="gtk_file_filter_new_from_gvariant">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_file_filter_new">
-	<span><code>Gtk.FileFilter.new</code></span>
+<h4 data-hotdoc-id="gtk_file_filter_new_from_gvariant">
+	<span><code>Gtk.FileFilter.new_from_gvariant</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.FileFilter.new ():
-    #python wrapper for 'gtk_file_filter_new'</pre>
+def Gtk.FileFilter.new_from_gvariant (variant):
+    #python wrapper for 'gtk_file_filter_new_from_gvariant'</pre>
 
-<p>Creates a new <a href="gtkfilefilter.html#GtkFileFilter">Gtk.FileFilter</a> with no rules added to it.
-Such a filter doesn’t accept any files, so is not
-particularly useful until you add rules with
-<a href="gtkfilefilter.html#gtk_file_filter_add_mime_type">Gtk.FileFilter.add_mime_type</a>, <a href="gtkfilefilter.html#gtk_file_filter_add_pattern">Gtk.FileFilter.add_pattern</a>,
-or <a href="gtkfilefilter.html#gtk_file_filter_add_custom">Gtk.FileFilter.add_custom</a>. To create a filter
-that accepts any file, use:</p>
-<pre><code class="language-[&lt;!--"> GtkFileFilter *filter = gtk_file_filter_new ();
- gtk_file_filter_add_pattern (filter, "*");
-</code></pre>
+<p>Deserialize a file filter from an a{sv} variant in
+the format produced by <a href="gtkfilefilter.html#gtk_file_filter_to_gvariant">Gtk.FileFilter.to_gvariant</a>.</p>
 
 
 
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>variant</code></em></i>
+					(
+						<a title="GLib.Variant" href="https://developer.gnome.org/glib/stable/glib-GVariant.html">GLib.Variant</a>
+						)
+				–
+	</div>
+			<p>an a{sv} <a href="https://developer.gnome.org/glib/stable/glib-GVariant.html">GLib.Variant</a></p>
+
+	</div>
+
+			</div>
 
 		<div class="return-values-container">
 		<div class="symbol-detail">
@@ -359,7 +424,7 @@ that accepts any file, use:</p>
 										)
 								–
 			</div>
-							<p>a new <a href="gtkfilefilter.html#GtkFileFilter">Gtk.FileFilter</a></p>
+							<p>a new <a href="gtkfilefilter.html#GtkFileFilter">Gtk.FileFilter</a> object</p>
 
 					</div>
 	</div>
@@ -367,18 +432,11 @@ that accepts any file, use:</p>
 
 
 	<p>
-	<b>Since</b>			: 2.4
+	<b>Since</b>			: 3.22
 		</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:3.22;" id="gtk_file_filter_new_from_gvariant">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -498,64 +556,6 @@ the format produced by <a href="gtkfilefilter.html#gtk_file_filter_to_gvariant">
 
 
         </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_file_filter_new_from_gvariant">
-	<span><code>Gtk.FileFilter.new_from_gvariant</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.FileFilter.new_from_gvariant (variant):
-    #python wrapper for 'gtk_file_filter_new_from_gvariant'</pre>
-
-<p>Deserialize a file filter from an a{sv} variant in
-the format produced by <a href="gtkfilefilter.html#gtk_file_filter_to_gvariant">Gtk.FileFilter.to_gvariant</a>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>variant</code></em></i>
-					(
-						<a title="GLib.Variant" href="https://developer.gnome.org/glib/stable/glib-GVariant.html">GLib.Variant</a>
-						)
-				–
-	</div>
-			<p>an a{sv} <a href="https://developer.gnome.org/glib/stable/glib-GVariant.html">GLib.Variant</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Gtk.FileFilter" href="gtkfilefilter.html#GtkFileFilter">Gtk.FileFilter</a>
-										)
-								–
-			</div>
-							<p>a new <a href="gtkfilefilter.html#GtkFileFilter">Gtk.FileFilter</a> object</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.22
-		</p>
-
-
-        </div>
 
 </div>
 
@@ -565,6 +565,65 @@ the format produced by <a href="gtkfilefilter.html#gtk_file_filter_to_gvariant">
 
 <div class="base_symbol_container" data-hotdoc-tags="since:2.4;" id="gtk_file_filter_set_name">
 	
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_file_filter_set_name">
+	<span><code>Gtk.FileFilter.set_name</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.FileFilter.set_name (self, name):
+    #python wrapper for 'gtk_file_filter_set_name'</pre>
+
+<p>Sets the human-readable name of the filter; this is the string
+that will be displayed in the file selector user interface if
+there is a selectable list of filters.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>filter</code></em></i>
+					(
+						<a title="Gtk.FileFilter" href="gtkfilefilter.html#GtkFileFilter">Gtk.FileFilter</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkfilefilter.html#GtkFileFilter">Gtk.FileFilter</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>name</code></em></i>
+					(
+						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
+						)
+				–
+	</div>
+			<p>the human-readable-name for the filter, or <a href="https://docs.python.org/3/library/constants.html#None">None</a>
+to remove any existing name.</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.4
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -685,23 +744,28 @@ to remove any existing name.</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.4;" id="gtk_file_filter_get_name">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_file_filter_set_name">
-	<span><code>Gtk.FileFilter.set_name</code></span>
+<h4 data-hotdoc-id="gtk_file_filter_get_name">
+	<span><code>Gtk.FileFilter.get_name</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.FileFilter.set_name (self, name):
-    #python wrapper for 'gtk_file_filter_set_name'</pre>
+def Gtk.FileFilter.get_name (self):
+    #python wrapper for 'gtk_file_filter_get_name'</pre>
 
-<p>Sets the human-readable name of the filter; this is the string
-that will be displayed in the file selector user interface if
-there is a selectable list of filters.</p>
+<p>Gets the human-readable name for the filter. See <a href="gtkfilefilter.html#gtk_file_filter_set_name">Gtk.FileFilter.set_name</a>.</p>
 
 
 
@@ -720,21 +784,23 @@ there is a selectable list of filters.</p>
 
 	</div>
 
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>name</code></em></i>
-					(
-						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
-						)
-				–
-	</div>
-			<p>the human-readable-name for the filter, or <a href="https://docs.python.org/3/library/constants.html#None">None</a>
-to remove any existing name.</p>
-
-	</div>
-
 			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
+										)
+								–
+			</div>
+							<p>The human-readable name of the filter,
+or <a href="https://docs.python.org/3/library/constants.html#None">None</a>. This value is owned by GTK+ and must not
+be modified or freed.</p>
+
+					</div>
+	</div>
 
 
 
@@ -744,13 +810,6 @@ to remove any existing name.</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.4;" id="gtk_file_filter_get_name">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -872,21 +931,28 @@ be modified or freed.</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.4;" id="gtk_file_filter_add_mime_type">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_file_filter_get_name">
-	<span><code>Gtk.FileFilter.get_name</code></span>
+<h4 data-hotdoc-id="gtk_file_filter_add_mime_type">
+	<span><code>Gtk.FileFilter.add_mime_type</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.FileFilter.get_name (self):
-    #python wrapper for 'gtk_file_filter_get_name'</pre>
+def Gtk.FileFilter.add_mime_type (self, mime_type):
+    #python wrapper for 'gtk_file_filter_add_mime_type'</pre>
 
-<p>Gets the human-readable name for the filter. See <a href="gtkfilefilter.html#gtk_file_filter_set_name">Gtk.FileFilter.set_name</a>.</p>
+<p>Adds a rule allowing a given mime type to <em>filter</em>.</p>
 
 
 
@@ -901,27 +967,24 @@ def Gtk.FileFilter.get_name (self):
 						)
 				–
 	</div>
-			<p>a <a href="gtkfilefilter.html#GtkFileFilter">Gtk.FileFilter</a></p>
+			<p>A <a href="gtkfilefilter.html#GtkFileFilter">Gtk.FileFilter</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>mime_type</code></em></i>
+					(
+						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
+						)
+				–
+	</div>
+			<p>name of a MIME type</p>
 
 	</div>
 
 			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
-										)
-								–
-			</div>
-							<p>The human-readable name of the filter,
-or <a href="https://docs.python.org/3/library/constants.html#None">None</a>. This value is owned by GTK+ and must not
-be modified or freed.</p>
-
-					</div>
-	</div>
 
 
 
@@ -931,13 +994,6 @@ be modified or freed.</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.4;" id="gtk_file_filter_add_mime_type">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -1047,21 +1103,28 @@ function Gtk.prototype.add_mime_type(mime_type: <a title="String" href="https://
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.4;" id="gtk_file_filter_add_pattern">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_file_filter_add_mime_type">
-	<span><code>Gtk.FileFilter.add_mime_type</code></span>
+<h4 data-hotdoc-id="gtk_file_filter_add_pattern">
+	<span><code>Gtk.FileFilter.add_pattern</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.FileFilter.add_mime_type (self, mime_type):
-    #python wrapper for 'gtk_file_filter_add_mime_type'</pre>
+def Gtk.FileFilter.add_pattern (self, pattern):
+    #python wrapper for 'gtk_file_filter_add_pattern'</pre>
 
-<p>Adds a rule allowing a given mime type to <em>filter</em>.</p>
+<p>Adds a rule allowing a shell style glob to a filter.</p>
 
 
 
@@ -1076,20 +1139,20 @@ def Gtk.FileFilter.add_mime_type (self, mime_type):
 						)
 				–
 	</div>
-			<p>A <a href="gtkfilefilter.html#GtkFileFilter">Gtk.FileFilter</a></p>
+			<p>a <a href="gtkfilefilter.html#GtkFileFilter">Gtk.FileFilter</a></p>
 
 	</div>
 
 					
 <div class="symbol-detail">
 	<div>
-		<i><em><code>mime_type</code></em></i>
+		<i><em><code>pattern</code></em></i>
 					(
 						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
 						)
 				–
 	</div>
-			<p>name of a MIME type</p>
+			<p>a shell style glob</p>
 
 	</div>
 
@@ -1103,13 +1166,6 @@ def Gtk.FileFilter.add_mime_type (self, mime_type):
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.4;" id="gtk_file_filter_add_pattern">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -1219,21 +1275,29 @@ function Gtk.prototype.add_pattern(pattern: <a title="String" href="https://deve
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.6;" id="gtk_file_filter_add_pixbuf_formats">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_file_filter_add_pattern">
-	<span><code>Gtk.FileFilter.add_pattern</code></span>
+<h4 data-hotdoc-id="gtk_file_filter_add_pixbuf_formats">
+	<span><code>Gtk.FileFilter.add_pixbuf_formats</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.FileFilter.add_pattern (self, pattern):
-    #python wrapper for 'gtk_file_filter_add_pattern'</pre>
+def Gtk.FileFilter.add_pixbuf_formats (self):
+    #python wrapper for 'gtk_file_filter_add_pixbuf_formats'</pre>
 
-<p>Adds a rule allowing a shell style glob to a filter.</p>
+<p>Adds a rule allowing image files in the formats supported
+by GdkPixbuf.</p>
 
 
 
@@ -1252,36 +1316,16 @@ def Gtk.FileFilter.add_pattern (self, pattern):
 
 	</div>
 
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>pattern</code></em></i>
-					(
-						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
-						)
-				–
-	</div>
-			<p>a shell style glob</p>
-
-	</div>
-
 			</div>
 
 
 
 	<p>
-	<b>Since</b>			: 2.4
+	<b>Since</b>			: 2.6
 		</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.6;" id="gtk_file_filter_add_pixbuf_formats">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -1369,22 +1413,32 @@ by GdkPixbuf.</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.4;" id="gtk_file_filter_add_custom">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_file_filter_add_pixbuf_formats">
-	<span><code>Gtk.FileFilter.add_pixbuf_formats</code></span>
+<h4 data-hotdoc-id="gtk_file_filter_add_custom">
+	<span><code>Gtk.FileFilter.add_custom</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.FileFilter.add_pixbuf_formats (self):
-    #python wrapper for 'gtk_file_filter_add_pixbuf_formats'</pre>
+def Gtk.FileFilter.add_custom (self, needed, func, data, notify):
+    #python wrapper for 'gtk_file_filter_add_custom'</pre>
 
-<p>Adds a rule allowing image files in the formats supported
-by GdkPixbuf.</p>
+<p>Adds rule to a filter that allows files based on a custom callback
+function. The bitfield <em>needed</em> which is passed in provides information
+about what sorts of information that the filter function needs;
+this allows GTK+ to avoid retrieving expensive information when
+it isn’t needed by the filter.</p>
 
 
 
@@ -1403,23 +1457,70 @@ by GdkPixbuf.</p>
 
 	</div>
 
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>needed</code></em></i>
+					(
+						<a title="Gtk.FileFilterFlags" href="gtkfilefilter.html#GtkFileFilterFlags">Gtk.FileFilterFlags</a>
+						)
+				–
+	</div>
+			<p>bitfield of flags indicating the information that the custom
+filter function needs.</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>func</code></em></i>
+					(
+						<a title="Gtk.FileFilterFunc" href="gtkfilefilter.html#GtkFileFilterFunc">Gtk.FileFilterFunc</a>
+						)
+				–
+	</div>
+			<p>callback function; if the function returns <a href="https://docs.python.org/3/library/constants.html#True">True</a>, then
+the file will be displayed.</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>data</code></em></i>
+					(
+						<a title="object" href="https://docs.python.org/3/library/functions.html#object">object</a>
+						)
+				–
+	</div>
+			<p>data to pass to <em>func</em></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>notify</code></em></i>
+					(
+						<a title="GLib.DestroyNotify" href="https://developer.gnome.org/glib/unstable/glib-Datasets.html#GDestroyNotify">GLib.DestroyNotify</a>
+						)
+				–
+	</div>
+			<p>function to call to free <em>data</em> when it is no longer needed.</p>
+
+	</div>
+
 			</div>
 
 
 
 	<p>
-	<b>Since</b>			: 2.6
+	<b>Since</b>			: 2.4
 		</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.4;" id="gtk_file_filter_add_custom">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -1613,25 +1714,32 @@ the file will be displayed.</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.4;" id="gtk_file_filter_get_needed">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_file_filter_add_custom">
-	<span><code>Gtk.FileFilter.add_custom</code></span>
+<h4 data-hotdoc-id="gtk_file_filter_get_needed">
+	<span><code>Gtk.FileFilter.get_needed</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.FileFilter.add_custom (self, needed, func, data, notify):
-    #python wrapper for 'gtk_file_filter_add_custom'</pre>
+def Gtk.FileFilter.get_needed (self):
+    #python wrapper for 'gtk_file_filter_get_needed'</pre>
 
-<p>Adds rule to a filter that allows files based on a custom callback
-function. The bitfield <em>needed</em> which is passed in provides information
-about what sorts of information that the filter function needs;
-this allows GTK+ to avoid retrieving expensive information when
-it isn’t needed by the filter.</p>
+<p>Gets the fields that need to be filled in for the <a href="gtkfilefilter.html#GtkFileFilterInfo">Gtk.FileFilterInfo</a>
+passed to <a href="gtkfilefilter.html#gtk_file_filter_filter">Gtk.FileFilter.filter</a></p>
+<p>This function will not typically be used by applications; it
+is intended principally for use in the implementation of
+<a href="gtkfilechooser.html#GtkFileChooser">Gtk.FileChooser</a>.</p>
 
 
 
@@ -1650,61 +1758,22 @@ it isn’t needed by the filter.</p>
 
 	</div>
 
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>needed</code></em></i>
-					(
-						<a title="Gtk.FileFilterFlags" href="gtkfilefilter.html#GtkFileFilterFlags">Gtk.FileFilterFlags</a>
-						)
-				–
-	</div>
-			<p>bitfield of flags indicating the information that the custom
-filter function needs.</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>func</code></em></i>
-					(
-						<a title="Gtk.FileFilterFunc" href="gtkfilefilter.html#GtkFileFilterFunc">Gtk.FileFilterFunc</a>
-						)
-				–
-	</div>
-			<p>callback function; if the function returns <a href="https://docs.python.org/3/library/constants.html#True">True</a>, then
-the file will be displayed.</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>data</code></em></i>
-					(
-						<a title="object" href="https://docs.python.org/3/library/functions.html#object">object</a>
-						)
-				–
-	</div>
-			<p>data to pass to <em>func</em></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>notify</code></em></i>
-					(
-						<a title="GLib.DestroyNotify" href="https://developer.gnome.org/glib/unstable/glib-Datasets.html#GDestroyNotify">GLib.DestroyNotify</a>
-						)
-				–
-	</div>
-			<p>function to call to free <em>data</em> when it is no longer needed.</p>
-
-	</div>
-
 			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.FileFilterFlags" href="gtkfilefilter.html#GtkFileFilterFlags">Gtk.FileFilterFlags</a>
+										)
+								–
+			</div>
+							<p>bitfield of flags indicating needed fields when
+calling <a href="gtkfilefilter.html#gtk_file_filter_filter">Gtk.FileFilter.filter</a></p>
+
+					</div>
+	</div>
 
 
 
@@ -1714,13 +1783,6 @@ the file will be displayed.</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.4;" id="gtk_file_filter_get_needed">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -1842,22 +1904,30 @@ calling <a href="gtkfilefilter.html#gtk_file_filter_filter">Gtk.prototype.filter
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.4;" id="gtk_file_filter_filter">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_file_filter_get_needed">
-	<span><code>Gtk.FileFilter.get_needed</code></span>
+<h4 data-hotdoc-id="gtk_file_filter_filter">
+	<span><code>Gtk.FileFilter.filter</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.FileFilter.get_needed (self):
-    #python wrapper for 'gtk_file_filter_get_needed'</pre>
+def Gtk.FileFilter.filter (self, filter_info):
+    #python wrapper for 'gtk_file_filter_filter'</pre>
 
-<p>Gets the fields that need to be filled in for the <a href="gtkfilefilter.html#GtkFileFilterInfo">Gtk.FileFilterInfo</a>
-passed to <a href="gtkfilefilter.html#gtk_file_filter_filter">Gtk.FileFilter.filter</a></p>
+<p>Tests whether a file should be displayed according to <em>filter</em>.
+The <a href="gtkfilefilter.html#GtkFileFilterInfo">Gtk.FileFilterInfo</a> <em>filter_info</em> should include
+the fields returned from <a href="gtkfilefilter.html#gtk_file_filter_get_needed">Gtk.FileFilter.get_needed</a>.</p>
 <p>This function will not typically be used by applications; it
 is intended principally for use in the implementation of
 <a href="gtkfilechooser.html#GtkFileChooser">Gtk.FileChooser</a>.</p>
@@ -1879,6 +1949,20 @@ is intended principally for use in the implementation of
 
 	</div>
 
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>filter_info</code></em></i>
+					(
+						<a title="Gtk.FileFilterInfo" href="gtkfilefilter.html#GtkFileFilterInfo">Gtk.FileFilterInfo</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkfilefilter.html#GtkFileFilterInfo">Gtk.FileFilterInfo</a> containing information
+about a file.</p>
+
+	</div>
+
 			</div>
 
 		<div class="return-values-container">
@@ -1886,12 +1970,11 @@ is intended principally for use in the implementation of
 			<div>
 				<b>Returns</b>
 									(
-					<a title="Gtk.FileFilterFlags" href="gtkfilefilter.html#GtkFileFilterFlags">Gtk.FileFilterFlags</a>
+					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
 										)
 								–
 			</div>
-							<p>bitfield of flags indicating needed fields when
-calling <a href="gtkfilefilter.html#gtk_file_filter_filter">Gtk.FileFilter.filter</a></p>
+							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if the file should be displayed</p>
 
 					</div>
 	</div>
@@ -1904,13 +1987,6 @@ calling <a href="gtkfilefilter.html#gtk_file_filter_filter">Gtk.FileFilter.filte
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.4;" id="gtk_file_filter_filter">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -2058,26 +2134,28 @@ about a file.</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.22;" id="gtk_file_filter_to_gvariant">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_file_filter_filter">
-	<span><code>Gtk.FileFilter.filter</code></span>
+<h4 data-hotdoc-id="gtk_file_filter_to_gvariant">
+	<span><code>Gtk.FileFilter.to_gvariant</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.FileFilter.filter (self, filter_info):
-    #python wrapper for 'gtk_file_filter_filter'</pre>
+def Gtk.FileFilter.to_gvariant (self):
+    #python wrapper for 'gtk_file_filter_to_gvariant'</pre>
 
-<p>Tests whether a file should be displayed according to <em>filter</em>.
-The <a href="gtkfilefilter.html#GtkFileFilterInfo">Gtk.FileFilterInfo</a> <em>filter_info</em> should include
-the fields returned from <a href="gtkfilefilter.html#gtk_file_filter_get_needed">Gtk.FileFilter.get_needed</a>.</p>
-<p>This function will not typically be used by applications; it
-is intended principally for use in the implementation of
-<a href="gtkfilechooser.html#GtkFileChooser">Gtk.FileChooser</a>.</p>
+<p>Serialize a file filter to an a{sv} variant.</p>
 
 
 
@@ -2096,20 +2174,6 @@ is intended principally for use in the implementation of
 
 	</div>
 
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>filter_info</code></em></i>
-					(
-						<a title="Gtk.FileFilterInfo" href="gtkfilefilter.html#GtkFileFilterInfo">Gtk.FileFilterInfo</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkfilefilter.html#GtkFileFilterInfo">Gtk.FileFilterInfo</a> containing information
-about a file.</p>
-
-	</div>
-
 			</div>
 
 		<div class="return-values-container">
@@ -2117,11 +2181,11 @@ about a file.</p>
 			<div>
 				<b>Returns</b>
 									(
-					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+					<a title="GLib.Variant" href="https://developer.gnome.org/glib/stable/glib-GVariant.html">GLib.Variant</a>
 										)
 								–
 			</div>
-							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if the file should be displayed</p>
+							<p>a new, floating, <a href="https://developer.gnome.org/glib/stable/glib-GVariant.html">GLib.Variant</a></p>
 
 					</div>
 	</div>
@@ -2129,18 +2193,11 @@ about a file.</p>
 
 
 	<p>
-	<b>Since</b>			: 2.4
+	<b>Since</b>			: 3.22
 		</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:3.22;" id="gtk_file_filter_to_gvariant">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -2258,63 +2315,6 @@ function Gtk.prototype.to_gvariant(): {
 
 
         </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_file_filter_to_gvariant">
-	<span><code>Gtk.FileFilter.to_gvariant</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.FileFilter.to_gvariant (self):
-    #python wrapper for 'gtk_file_filter_to_gvariant'</pre>
-
-<p>Serialize a file filter to an a{sv} variant.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>filter</code></em></i>
-					(
-						<a title="Gtk.FileFilter" href="gtkfilefilter.html#GtkFileFilter">Gtk.FileFilter</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkfilefilter.html#GtkFileFilter">Gtk.FileFilter</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="GLib.Variant" href="https://developer.gnome.org/glib/stable/glib-GVariant.html">GLib.Variant</a>
-										)
-								–
-			</div>
-							<p>a new, floating, <a href="https://developer.gnome.org/glib/stable/glib-GVariant.html">GLib.Variant</a></p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.22
-		</p>
-
-
-        </div>
 
 </div>
 
@@ -2326,6 +2326,86 @@ def Gtk.FileFilter.to_gvariant (self):
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="GtkFileFilterInfo">
 	
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3>
+	Gtk.FileFilterInfo
+</h3>
+
+
+<p>A <a href="gtkfilefilter.html#GtkFileFilterInfo">Gtk.FileFilterInfo</a>-struct is used to pass information about the
+tested file to <a href="gtkfilefilter.html#gtk_file_filter_filter">Gtk.FileFilter.filter</a>.</p>
+
+
+
+
+	<div class="members-container">
+		<h4>Attributes</h4>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkFileFilterInfo.contains">
+	<div>
+		<i><em><code>FileFilterInfo.contains</code></em></i>
+		(<a title="Gtk.FileFilterFlags" href="gtkfilefilter.html#GtkFileFilterFlags">Gtk.FileFilterFlags</a>)
+		–
+	</div>
+			<p>Flags indicating which of the following fields need
+are filled</p>
+
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GtkFileFilterInfo.filename">
+	<div>
+		<i><em><code>FileFilterInfo.filename</code></em></i>
+		(<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>)
+		–
+	</div>
+			<p>the filename of the file being tested</p>
+
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GtkFileFilterInfo.uri">
+	<div>
+		<i><em><code>FileFilterInfo.uri</code></em></i>
+		(<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>)
+		–
+	</div>
+			<p>the URI for the file being tested</p>
+
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GtkFileFilterInfo.display_name">
+	<div>
+		<i><em><code>FileFilterInfo.display_name</code></em></i>
+		(<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>)
+		–
+	</div>
+			<p>the string that will be used to display the file
+in the file chooser</p>
+
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GtkFileFilterInfo.mime_type">
+	<div>
+		<i><em><code>FileFilterInfo.mime_type</code></em></i>
+		(<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>)
+		–
+	</div>
+			<p>the mime type of the file</p>
+
+	</div>
+
+			</div>
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -2486,86 +2566,6 @@ in the file chooser</p>
 
 
         </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3>
-	Gtk.FileFilterInfo
-</h3>
-
-
-<p>A <a href="gtkfilefilter.html#GtkFileFilterInfo">Gtk.FileFilterInfo</a>-struct is used to pass information about the
-tested file to <a href="gtkfilefilter.html#gtk_file_filter_filter">Gtk.FileFilter.filter</a>.</p>
-
-
-
-
-	<div class="members-container">
-		<h4>Attributes</h4>
-					
-<div class="symbol-detail" data-hotdoc-id="GtkFileFilterInfo.contains">
-	<div>
-		<i><em><code>FileFilterInfo.contains</code></em></i>
-		(<a title="Gtk.FileFilterFlags" href="gtkfilefilter.html#GtkFileFilterFlags">Gtk.FileFilterFlags</a>)
-		–
-	</div>
-			<p>Flags indicating which of the following fields need
-are filled</p>
-
-	</div>
-
-					
-<div class="symbol-detail" data-hotdoc-id="GtkFileFilterInfo.filename">
-	<div>
-		<i><em><code>FileFilterInfo.filename</code></em></i>
-		(<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>)
-		–
-	</div>
-			<p>the filename of the file being tested</p>
-
-	</div>
-
-					
-<div class="symbol-detail" data-hotdoc-id="GtkFileFilterInfo.uri">
-	<div>
-		<i><em><code>FileFilterInfo.uri</code></em></i>
-		(<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>)
-		–
-	</div>
-			<p>the URI for the file being tested</p>
-
-	</div>
-
-					
-<div class="symbol-detail" data-hotdoc-id="GtkFileFilterInfo.display_name">
-	<div>
-		<i><em><code>FileFilterInfo.display_name</code></em></i>
-		(<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>)
-		–
-	</div>
-			<p>the string that will be used to display the file
-in the file chooser</p>
-
-	</div>
-
-					
-<div class="symbol-detail" data-hotdoc-id="GtkFileFilterInfo.mime_type">
-	<div>
-		<i><em><code>FileFilterInfo.mime_type</code></em></i>
-		(<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>)
-		–
-	</div>
-			<p>the mime type of the file</p>
-
-	</div>
-
-			</div>
-
-
-
-        </div>
 
 </div>
 
@@ -2575,6 +2575,69 @@ in the file chooser</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="GtkFileFilterFlags">
 	
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="GtkFileFilterFlags">
+	<span><code>Gtk.FileFilterFlags</code></span>
+</h3>
+
+
+<p>These flags indicate what parts of a <a href="gtkfilefilter.html#GtkFileFilterInfo">Gtk.FileFilterInfo</a> struct
+are filled or need to be filled.</p>
+
+
+
+
+	<div class="members-container">
+		<h4>Members</h4>
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_FILE_FILTER_FILENAME">
+	<div>
+		<i><em><code>Gtk.FileFilterFlags.FILENAME</code></em></i>
+		(<span class="value">1</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_FILE_FILTER_URI">
+	<div>
+		<i><em><code>Gtk.FileFilterFlags.URI</code></em></i>
+		(<span class="value">2</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_FILE_FILTER_DISPLAY_NAME">
+	<div>
+		<i><em><code>Gtk.FileFilterFlags.DISPLAY_NAME</code></em></i>
+		(<span class="value">4</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_FILE_FILTER_MIME_TYPE">
+	<div>
+		<i><em><code>Gtk.FileFilterFlags.MIME_TYPE</code></em></i>
+		(<span class="value">8</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -2701,69 +2764,6 @@ are filled or need to be filled.</p>
 
 
         </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="GtkFileFilterFlags">
-	<span><code>Gtk.FileFilterFlags</code></span>
-</h3>
-
-
-<p>These flags indicate what parts of a <a href="gtkfilefilter.html#GtkFileFilterInfo">Gtk.FileFilterInfo</a> struct
-are filled or need to be filled.</p>
-
-
-
-
-	<div class="members-container">
-		<h4>Members</h4>
-					
-<div class="symbol-detail" data-hotdoc-id="GTK_FILE_FILTER_FILENAME">
-	<div>
-		<i><em><code>Gtk.FileFilterFlags.FILENAME</code></em></i>
-		(<span class="value">1</span>)
-		–
-	</div>
-			<i>No description available</i>
-	</div>
-
-					
-<div class="symbol-detail" data-hotdoc-id="GTK_FILE_FILTER_URI">
-	<div>
-		<i><em><code>Gtk.FileFilterFlags.URI</code></em></i>
-		(<span class="value">2</span>)
-		–
-	</div>
-			<i>No description available</i>
-	</div>
-
-					
-<div class="symbol-detail" data-hotdoc-id="GTK_FILE_FILTER_DISPLAY_NAME">
-	<div>
-		<i><em><code>Gtk.FileFilterFlags.DISPLAY_NAME</code></em></i>
-		(<span class="value">4</span>)
-		–
-	</div>
-			<i>No description available</i>
-	</div>
-
-					
-<div class="symbol-detail" data-hotdoc-id="GTK_FILE_FILTER_MIME_TYPE">
-	<div>
-		<i><em><code>Gtk.FileFilterFlags.MIME_TYPE</code></em></i>
-		(<span class="value">8</span>)
-		–
-	</div>
-			<i>No description available</i>
-	</div>
-
-			</div>
-
-
-
-        </div>
 
 </div>
 
@@ -2773,6 +2773,78 @@ are filled or need to be filled.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="GtkFileFilterFunc">
 	
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="GtkFileFilterFunc">
+	<span><code>Gtk.FileFilterFunc</code></span>
+</h3>
+
+
+
+
+<pre class="c-prototype">
+<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+(*Gtk.FileFilterFunc) (<a title="Gtk.FileFilterInfo" href="gtkfilefilter.html#GtkFileFilterInfo">Gtk.FileFilterInfo</a>,
+                       <a title="object" href="https://docs.python.org/3/library/functions.html#object">object</a>)</pre>
+
+<p>The type of function that is used with custom filters, see
+<a href="gtkfilefilter.html#gtk_file_filter_add_custom">Gtk.FileFilter.add_custom</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>filter_info</code></em></i>
+					(
+						<a title="Gtk.FileFilterInfo" href="gtkfilefilter.html#GtkFileFilterInfo">Gtk.FileFilterInfo</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkfilefilter.html#GtkFileFilterInfo">Gtk.FileFilterInfo</a> that is filled according
+to the <em>needed</em> flags passed to <a href="gtkfilefilter.html#gtk_file_filter_add_custom">Gtk.FileFilter.add_custom</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>data</code></em></i>
+					(
+						<a title="object" href="https://docs.python.org/3/library/functions.html#object">object</a>
+						)
+				–
+	</div>
+			<p>user data passed to <a href="gtkfilefilter.html#gtk_file_filter_add_custom">Gtk.FileFilter.add_custom</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+										)
+								–
+			</div>
+							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if the file should be displayed</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -2904,78 +2976,6 @@ to the <em>needed</em> flags passed to <a href="gtkfilefilter.html#gtk_file_filt
 								–
 			</div>
 							<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if the file should be displayed</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="GtkFileFilterFunc">
-	<span><code>Gtk.FileFilterFunc</code></span>
-</h3>
-
-
-
-
-<pre class="c-prototype">
-<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
-(*Gtk.FileFilterFunc) (<a title="Gtk.FileFilterInfo" href="gtkfilefilter.html#GtkFileFilterInfo">Gtk.FileFilterInfo</a>,
-                       <a title="object" href="https://docs.python.org/3/library/functions.html#object">object</a>)</pre>
-
-<p>The type of function that is used with custom filters, see
-<a href="gtkfilefilter.html#gtk_file_filter_add_custom">Gtk.FileFilter.add_custom</a>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>filter_info</code></em></i>
-					(
-						<a title="Gtk.FileFilterInfo" href="gtkfilefilter.html#GtkFileFilterInfo">Gtk.FileFilterInfo</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkfilefilter.html#GtkFileFilterInfo">Gtk.FileFilterInfo</a> that is filled according
-to the <em>needed</em> flags passed to <a href="gtkfilefilter.html#gtk_file_filter_add_custom">Gtk.FileFilter.add_custom</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>data</code></em></i>
-					(
-						<a title="object" href="https://docs.python.org/3/library/functions.html#object">object</a>
-						)
-				–
-	</div>
-			<p>user data passed to <a href="gtkfilefilter.html#gtk_file_filter_add_custom">Gtk.FileFilter.add_custom</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
-										)
-								–
-			</div>
-							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if the file should be displayed</p>
 
 					</div>
 	</div>

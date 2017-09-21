@@ -89,7 +89,7 @@ $('body').removeClass('no-script');
 </nav>
 
 <main>
-<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="gtkappchooser.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['c', 'javascript', 'python']" data-hotdoc-meta-gi-language="c">
+<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="gtkappchooser.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['python', 'c', 'javascript']" data-hotdoc-meta-gi-language="c">
 <script src="assets/js/utils.js"></script>
 
 <div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
@@ -110,6 +110,64 @@ $('body').removeClass('no-script');
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_app_chooser_get_app_info">
 	
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_app_chooser_get_app_info">
+	<span><code>Gtk.AppChooser.get_app_info</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.AppChooser.get_app_info (self):
+    #python wrapper for 'gtk_app_chooser_get_app_info'</pre>
+
+<p>Returns the currently selected application.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>self</code></em></i>
+					(
+						<a title="Gtk.AppChooser" href="gtkappchooser.html#GtkAppChooser">Gtk.AppChooser</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkappchooser.html#GtkAppChooser">Gtk.AppChooser</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gio.AppInfo" href="https://developer.gnome.org/gio/unstable/GAppInfo.html#GAppInfo-struct">Gio.AppInfo</a>
+										)
+								–
+			</div>
+							<p>a <a href="https://developer.gnome.org/gio/unstable/GAppInfo.html#GAppInfo-struct">Gio.AppInfo</a> for the currently selected
+application, or <a href="https://docs.python.org/3/library/constants.html#None">None</a> if none is selected. Free with <a href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-unref">GObject.Object.unref</a></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -230,21 +288,28 @@ application, or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_app_chooser_get_content_type">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_app_chooser_get_app_info">
-	<span><code>Gtk.AppChooser.get_app_info</code></span>
+<h4 data-hotdoc-id="gtk_app_chooser_get_content_type">
+	<span><code>Gtk.AppChooser.get_content_type</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.AppChooser.get_app_info (self):
-    #python wrapper for 'gtk_app_chooser_get_app_info'</pre>
+def Gtk.AppChooser.get_content_type (self):
+    #python wrapper for 'gtk_app_chooser_get_content_type'</pre>
 
-<p>Returns the currently selected application.</p>
+<p>Returns the current value of the <a href="https://developer.gnome.org/gtk3/GtkAppChooser.html#GtkAppChooser--content-type">content-type</a> property.</p>
 
 
 
@@ -270,12 +335,11 @@ def Gtk.AppChooser.get_app_info (self):
 			<div>
 				<b>Returns</b>
 									(
-					<a title="Gio.AppInfo" href="https://developer.gnome.org/gio/unstable/GAppInfo.html#GAppInfo-struct">Gio.AppInfo</a>
+					<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
 										)
 								–
 			</div>
-							<p>a <a href="https://developer.gnome.org/gio/unstable/GAppInfo.html#GAppInfo-struct">Gio.AppInfo</a> for the currently selected
-application, or <a href="https://docs.python.org/3/library/constants.html#None">None</a> if none is selected. Free with <a href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-unref">GObject.Object.unref</a></p>
+							<p>the content type of <em>self</em>. Free with <a href="https://developer.gnome.org/glib/unstable/glib-Memory-Allocation.html#g-free">GLib.free</a></p>
 
 					</div>
 	</div>
@@ -288,13 +352,6 @@ application, or <a href="https://docs.python.org/3/library/constants.html#None">
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_app_chooser_get_content_type">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -406,21 +463,28 @@ function Gtk.prototype.get_content_type(): {
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_app_chooser_refresh">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_app_chooser_get_content_type">
-	<span><code>Gtk.AppChooser.get_content_type</code></span>
+<h4 data-hotdoc-id="gtk_app_chooser_refresh">
+	<span><code>Gtk.AppChooser.refresh</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.AppChooser.get_content_type (self):
-    #python wrapper for 'gtk_app_chooser_get_content_type'</pre>
+def Gtk.AppChooser.refresh (self):
+    #python wrapper for 'gtk_app_chooser_refresh'</pre>
 
-<p>Returns the current value of the <a href="https://developer.gnome.org/gtk3/GtkAppChooser.html#GtkAppChooser--content-type">content-type</a> property.</p>
+<p>Reloads the list of applications.</p>
 
 
 
@@ -441,20 +505,6 @@ def Gtk.AppChooser.get_content_type (self):
 
 			</div>
 
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
-										)
-								–
-			</div>
-							<p>the content type of <em>self</em>. Free with <a href="https://developer.gnome.org/glib/unstable/glib-Memory-Allocation.html#g-free">GLib.free</a></p>
-
-					</div>
-	</div>
-
 
 
 	<p>
@@ -463,13 +513,6 @@ def Gtk.AppChooser.get_content_type (self):
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_app_chooser_refresh">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -555,49 +598,6 @@ function Gtk.prototype.refresh(): {
 
 
         </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_app_chooser_refresh">
-	<span><code>Gtk.AppChooser.refresh</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.AppChooser.refresh (self):
-    #python wrapper for 'gtk_app_chooser_refresh'</pre>
-
-<p>Reloads the list of applications.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>self</code></em></i>
-					(
-						<a title="Gtk.AppChooser" href="gtkappchooser.html#GtkAppChooser">Gtk.AppChooser</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkappchooser.html#GtkAppChooser">Gtk.AppChooser</a></p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.0
-		</p>
-
-
-        </div>
 
 </div>
 
@@ -609,6 +609,20 @@ def Gtk.AppChooser.refresh (self):
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="GtkAppChooser">
 	
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="GtkAppChooser">
+	<span><code>Gtk.AppChooser</code></span>
+</h3>
+
+
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -624,20 +638,6 @@ def Gtk.AppChooser.refresh (self):
 
         </div>
         <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h3 data-hotdoc-id="GtkAppChooser">
-	<span><code>Gtk.AppChooser</code></span>
-</h3>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
             
 
 

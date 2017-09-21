@@ -89,7 +89,7 @@ $('body').removeClass('no-script');
 </nav>
 
 <main>
-<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="gtkmain.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['c', 'javascript', 'python']" data-hotdoc-meta-gi-language="c">
+<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="gtkmain.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['python', 'c', 'javascript']" data-hotdoc-meta-gi-language="c">
 <script src="assets/js/utils.js"></script>
 
 <div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
@@ -109,6 +109,51 @@ $('body').removeClass('no-script');
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_grab_add">
 	
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_grab_add">
+	<span><code>Gtk.Widget.grab_add</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Widget.grab_add (self):
+    #python wrapper for 'gtk_grab_add'</pre>
+
+<p>Makes <em>widget</em> the current grabbed widget.</p>
+<p>This means that interaction with other widgets in the same
+application is blocked and mouse as well as keyboard events
+are delivered to this widget.</p>
+<p>If <em>widget</em> is not sensitive, it is not set as the current
+grabbed widget and this function does nothing.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>widget</code></em></i>
+					(
+						<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>The widget that grabs keyboard and pointer events</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -198,26 +243,30 @@ grabbed widget and this function does nothing.</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_grab_remove">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_grab_add">
-	<span><code>Gtk.Widget.grab_add</code></span>
+<h4 data-hotdoc-id="gtk_grab_remove">
+	<span><code>Gtk.Widget.grab_remove</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.Widget.grab_add (self):
-    #python wrapper for 'gtk_grab_add'</pre>
+def Gtk.Widget.grab_remove (self):
+    #python wrapper for 'gtk_grab_remove'</pre>
 
-<p>Makes <em>widget</em> the current grabbed widget.</p>
-<p>This means that interaction with other widgets in the same
-application is blocked and mouse as well as keyboard events
-are delivered to this widget.</p>
-<p>If <em>widget</em> is not sensitive, it is not set as the current
-grabbed widget and this function does nothing.</p>
+<p>Removes the grab from the given widget.</p>
+<p>You have to pair calls to <a href="gtkmain.html#gtk_grab_add">Gtk.Widget.grab_add</a> and <a href="gtkmain.html#gtk_grab_remove">Gtk.Widget.grab_remove</a>.</p>
+<p>If <em>widget</em> does not have the grab, this function does nothing.</p>
 
 
 
@@ -232,7 +281,7 @@ grabbed widget and this function does nothing.</p>
 						)
 				–
 	</div>
-			<p>The widget that grabs keyboard and pointer events</p>
+			<p>The widget which gives up the grab</p>
 
 	</div>
 
@@ -243,13 +292,6 @@ grabbed widget and this function does nothing.</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_grab_remove">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -333,48 +375,6 @@ function Gtk.prototype.grab_remove(): {
 
 
         </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_grab_remove">
-	<span><code>Gtk.Widget.grab_remove</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.Widget.grab_remove (self):
-    #python wrapper for 'gtk_grab_remove'</pre>
-
-<p>Removes the grab from the given widget.</p>
-<p>You have to pair calls to <a href="gtkmain.html#gtk_grab_add">Gtk.Widget.grab_add</a> and <a href="gtkmain.html#gtk_grab_remove">Gtk.Widget.grab_remove</a>.</p>
-<p>If <em>widget</em> does not have the grab, this function does nothing.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
-						)
-				–
-	</div>
-			<p>The widget which gives up the grab</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
 
 </div>
 
@@ -386,6 +386,36 @@ def Gtk.Widget.grab_remove (self):
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_disable_setlocale">
 	
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_disable_setlocale">
+	<span><code>Gtk.disable_setlocale</code></span>
+</h3>
+
+
+<pre class="python-prototype">
+def Gtk.disable_setlocale ():
+    #python wrapper for 'gtk_disable_setlocale'</pre>
+
+<p>Prevents <a href="gtkmain.html#gtk_init">Gtk.init</a>, <a href="gtkmain.html#gtk_init_check">Gtk.init_check</a> and
+<a href="https://developer.gnome.org/gtk3/gtk3-General.html#gtk-parse-args">gtk_parse_args (not introspectable)</a> from automatically
+calling <code>setlocale (LC_ALL, "")</code>. You would
+want to use this function if you wanted to set the locale for
+your program to something other than the user’s locale, or if
+you wanted to set different values for different locale categories.</p>
+<p>Most programs should not need to call this function.</p>
+
+
+
+
+
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -448,36 +478,6 @@ you wanted to set different values for different locale categories.</p>
 
 
         </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_disable_setlocale">
-	<span><code>Gtk.disable_setlocale</code></span>
-</h3>
-
-
-<pre class="python-prototype">
-def Gtk.disable_setlocale ():
-    #python wrapper for 'gtk_disable_setlocale'</pre>
-
-<p>Prevents <a href="gtkmain.html#gtk_init">Gtk.init</a>, <a href="gtkmain.html#gtk_init_check">Gtk.init_check</a> and
-<a href="https://developer.gnome.org/gtk3/gtk3-General.html#gtk-parse-args">gtk_parse_args (not introspectable)</a> from automatically
-calling <code>setlocale (LC_ALL, "")</code>. You would
-want to use this function if you wanted to set the locale for
-your program to something other than the user’s locale, or if
-you wanted to set different values for different locale categories.</p>
-<p>Most programs should not need to call this function.</p>
-
-
-
-
-
-
-
-
-        </div>
 
 </div>
 
@@ -485,6 +485,51 @@ you wanted to set different values for different locale categories.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_get_default_language">
 	
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_get_default_language">
+	<span><code>Gtk.get_default_language</code></span>
+</h3>
+
+
+<pre class="python-prototype">
+def Gtk.get_default_language ():
+    #python wrapper for 'gtk_get_default_language'</pre>
+
+<p>Returns the <a href="https://developer.gnome.org/pango/unstable/pango-Scripts-and-Languages.html#PangoLanguage-struct">Pango.Language</a> for the default language currently in
+effect. (Note that this can change over the life of an
+application.) The default language is derived from the current
+locale. It determines, for example, whether GTK+ uses the
+right-to-left or left-to-right text direction.</p>
+<p>This function is equivalent to <a href="https://developer.gnome.org/pango/unstable/pango-Scripts-and-Languages.html#pango-language-get-default">Pango.Language.get_default</a>.
+See that function for details.</p>
+
+
+
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Pango.Language" href="https://developer.gnome.org/pango/unstable/pango-Scripts-and-Languages.html#PangoLanguage-struct">Pango.Language</a>
+										)
+								–
+			</div>
+							<p>the default language as a <a href="https://developer.gnome.org/pango/unstable/pango-Scripts-and-Languages.html#PangoLanguage-struct">Pango.Language</a>,
+must not be freed</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -581,27 +626,43 @@ must not be freed</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.12;" id="gtk_get_locale_direction">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h3 data-hotdoc-id="gtk_get_default_language">
-	<span><code>Gtk.get_default_language</code></span>
+<h3 data-hotdoc-id="gtk_get_locale_direction">
+	<span><code>Gtk.get_locale_direction</code></span>
 </h3>
 
 
 <pre class="python-prototype">
-def Gtk.get_default_language ():
-    #python wrapper for 'gtk_get_default_language'</pre>
+def Gtk.get_locale_direction ():
+    #python wrapper for 'gtk_get_locale_direction'</pre>
 
-<p>Returns the <a href="https://developer.gnome.org/pango/unstable/pango-Scripts-and-Languages.html#PangoLanguage-struct">Pango.Language</a> for the default language currently in
-effect. (Note that this can change over the life of an
-application.) The default language is derived from the current
-locale. It determines, for example, whether GTK+ uses the
-right-to-left or left-to-right text direction.</p>
-<p>This function is equivalent to <a href="https://developer.gnome.org/pango/unstable/pango-Scripts-and-Languages.html#pango-language-get-default">Pango.Language.get_default</a>.
-See that function for details.</p>
+<p>Get the direction of the current locale. This is the expected
+reading direction for text and UI.</p>
+<p>This function depends on the current locale being set with
+setlocale and will default to setting the <a href="gtkwidget.html#GTK_TEXT_DIR_LTR">Gtk.TextDirection.LTR</a>
+direction otherwise. <a href="gtkwidget.html#GTK_TEXT_DIR_NONE">Gtk.TextDirection.NONE</a> will never be returned.</p>
+<p>GTK+ sets the default text direction according to the locale
+during <a href="gtkmain.html#gtk_init">Gtk.init</a>, and you should normally use
+<a href="gtkwidget.html#gtk_widget_get_direction">Gtk.Widget.get_direction</a> or <a href="gtkwidget.html#gtk_widget_get_default_direction">Gtk.Widget.get_default_direction</a>
+to obtain the current direcion.</p>
+<p>This function is only needed rare cases when the locale is
+changed after GTK+ has already been initialized. In this case,
+you can use it to update the default text direction as follows:</p>
+<pre><code class="language-[&lt;!--"> setlocale (LC_ALL, new_locale);
+ direction = gtk_get_locale_direction ();
+ gtk_widget_set_default_direction (direction);
+</code></pre>
 
 
 
@@ -611,28 +672,23 @@ See that function for details.</p>
 			<div>
 				<b>Returns</b>
 									(
-					<a title="Pango.Language" href="https://developer.gnome.org/pango/unstable/pango-Scripts-and-Languages.html#PangoLanguage-struct">Pango.Language</a>
+					<a title="Gtk.TextDirection" href="gtkwidget.html#GtkTextDirection">Gtk.TextDirection</a>
 										)
 								–
 			</div>
-							<p>the default language as a <a href="https://developer.gnome.org/pango/unstable/pango-Scripts-and-Languages.html#PangoLanguage-struct">Pango.Language</a>,
-must not be freed</p>
+							<p>the <a href="gtkwidget.html#GtkTextDirection">Gtk.TextDirection</a> of the current locale</p>
 
 					</div>
 	</div>
 
 
 
+	<p>
+	<b>Since</b>			: 3.12
+		</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:3.12;" id="gtk_get_locale_direction">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -745,62 +801,6 @@ you can use it to update the default text direction as follows:</p>
 
 
         </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_get_locale_direction">
-	<span><code>Gtk.get_locale_direction</code></span>
-</h3>
-
-
-<pre class="python-prototype">
-def Gtk.get_locale_direction ():
-    #python wrapper for 'gtk_get_locale_direction'</pre>
-
-<p>Get the direction of the current locale. This is the expected
-reading direction for text and UI.</p>
-<p>This function depends on the current locale being set with
-setlocale and will default to setting the <a href="gtkwidget.html#GTK_TEXT_DIR_LTR">Gtk.TextDirection.LTR</a>
-direction otherwise. <a href="gtkwidget.html#GTK_TEXT_DIR_NONE">Gtk.TextDirection.NONE</a> will never be returned.</p>
-<p>GTK+ sets the default text direction according to the locale
-during <a href="gtkmain.html#gtk_init">Gtk.init</a>, and you should normally use
-<a href="gtkwidget.html#gtk_widget_get_direction">Gtk.Widget.get_direction</a> or <a href="gtkwidget.html#gtk_widget_get_default_direction">Gtk.Widget.get_default_direction</a>
-to obtain the current direcion.</p>
-<p>This function is only needed rare cases when the locale is
-changed after GTK+ has already been initialized. In this case,
-you can use it to update the default text direction as follows:</p>
-<pre><code class="language-[&lt;!--"> setlocale (LC_ALL, new_locale);
- direction = gtk_get_locale_direction ();
- gtk_widget_set_default_direction (direction);
-</code></pre>
-
-
-
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Gtk.TextDirection" href="gtkwidget.html#GtkTextDirection">Gtk.TextDirection</a>
-										)
-								–
-			</div>
-							<p>the <a href="gtkwidget.html#GtkTextDirection">Gtk.TextDirection</a> of the current locale</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.12
-		</p>
-
-
-        </div>
 
 </div>
 
@@ -808,6 +808,45 @@ you can use it to update the default text direction as follows:</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_init">
 	
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_init">
+	<span><code>Gtk.init</code></span>
+</h3>
+
+
+<pre class="python-prototype">
+def Gtk.init ():
+    #python wrapper for 'gtk_init'</pre>
+
+<p>Call this function before using any other GTK+ functions in your GUI
+applications.  It will initialize everything needed to operate the
+toolkit and parses some standard command line options.</p>
+<p>If you are using <a href="gtkapplication.html#GtkApplication">Gtk.Application</a>, you don't have to call <a href="gtkmain.html#gtk_init">Gtk.init</a>
+or <a href="gtkmain.html#gtk_init_check">Gtk.init_check</a>; the GtkApplication::startup handler
+does it for you.</p>
+<p>This function will terminate your program if it was unable to
+initialize the windowing system for some reason. If you want
+your program to fall back to a textual interface you want to
+call <a href="gtkmain.html#gtk_init_check">Gtk.init_check</a> instead.</p>
+<p>Since 2.18, GTK+ calls <code>signal (SIGPIPE, SIG_IGN)</code>
+during initialization, to ignore SIGPIPE signals, since these are
+almost never wanted in graphical applications. If you do need to
+handle SIGPIPE for some reason, reset the handler after <a href="gtkmain.html#gtk_init">Gtk.init</a>,
+but notice that other libraries (e.g. libdbus or gvfs) might do
+similar things.</p>
+
+
+
+
+
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -888,45 +927,6 @@ similar things.</p>
 
 
         </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_init">
-	<span><code>Gtk.init</code></span>
-</h3>
-
-
-<pre class="python-prototype">
-def Gtk.init ():
-    #python wrapper for 'gtk_init'</pre>
-
-<p>Call this function before using any other GTK+ functions in your GUI
-applications.  It will initialize everything needed to operate the
-toolkit and parses some standard command line options.</p>
-<p>If you are using <a href="gtkapplication.html#GtkApplication">Gtk.Application</a>, you don't have to call <a href="gtkmain.html#gtk_init">Gtk.init</a>
-or <a href="gtkmain.html#gtk_init_check">Gtk.init_check</a>; the GtkApplication::startup handler
-does it for you.</p>
-<p>This function will terminate your program if it was unable to
-initialize the windowing system for some reason. If you want
-your program to fall back to a textual interface you want to
-call <a href="gtkmain.html#gtk_init_check">Gtk.init_check</a> instead.</p>
-<p>Since 2.18, GTK+ calls <code>signal (SIGPIPE, SIG_IGN)</code>
-during initialization, to ignore SIGPIPE signals, since these are
-almost never wanted in graphical applications. If you do need to
-handle SIGPIPE for some reason, reset the handler after <a href="gtkmain.html#gtk_init">Gtk.init</a>,
-but notice that other libraries (e.g. libdbus or gvfs) might do
-similar things.</p>
-
-
-
-
-
-
-
-
-        </div>
 
 </div>
 
@@ -934,6 +934,50 @@ similar things.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_init_check">
 	
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_init_check">
+	<span><code>Gtk.init_check</code></span>
+</h3>
+
+
+<pre class="python-prototype">
+def Gtk.init_check ():
+    #python wrapper for 'gtk_init_check'</pre>
+
+<p>This function does the same work as <a href="gtkmain.html#gtk_init">Gtk.init</a> with only a single
+change: It does not terminate the program if the windowing system
+can’t be initialized. Instead it returns <a href="https://docs.python.org/3/library/constants.html#False">False</a> on failure.</p>
+<p>This way the application can fall back to some other means of
+communication with the user - for example a curses or command line
+interface.</p>
+
+
+
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+										)
+								–
+			</div>
+							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if the windowing system has been successfully
+initialized, <a href="https://docs.python.org/3/library/constants.html#False">False</a> otherwise</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -1022,26 +1066,38 @@ initialized, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Re
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_events_pending">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h3 data-hotdoc-id="gtk_init_check">
-	<span><code>Gtk.init_check</code></span>
+<h3 data-hotdoc-id="gtk_events_pending">
+	<span><code>Gtk.events_pending</code></span>
 </h3>
 
 
 <pre class="python-prototype">
-def Gtk.init_check ():
-    #python wrapper for 'gtk_init_check'</pre>
+def Gtk.events_pending ():
+    #python wrapper for 'gtk_events_pending'</pre>
 
-<p>This function does the same work as <a href="gtkmain.html#gtk_init">Gtk.init</a> with only a single
-change: It does not terminate the program if the windowing system
-can’t be initialized. Instead it returns <a href="https://docs.python.org/3/library/constants.html#False">False</a> on failure.</p>
-<p>This way the application can fall back to some other means of
-communication with the user - for example a curses or command line
-interface.</p>
+<p>Checks if any events are pending.</p>
+<p>This can be used to update the UI and invoke timeouts etc.
+while doing some time intensive computation.</p>
+<h2>Updating the UI during a long computation</h2>
+<pre><code class="language-[&lt;!--">  // computation going on...
+
+  while (gtk_events_pending ())
+    gtk_main_iteration ();
+
+  // ...computation continued
+</code></pre>
 
 
 
@@ -1055,8 +1111,7 @@ interface.</p>
 										)
 								–
 			</div>
-							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if the windowing system has been successfully
-initialized, <a href="https://docs.python.org/3/library/constants.html#False">False</a> otherwise</p>
+							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if any events are pending, <a href="https://docs.python.org/3/library/constants.html#False">False</a> otherwise</p>
 
 					</div>
 	</div>
@@ -1066,13 +1121,6 @@ initialized, <a href="https://docs.python.org/3/library/constants.html#False">Fa
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_events_pending">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -1169,54 +1217,6 @@ while doing some time intensive computation.</p>
 
 
         </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_events_pending">
-	<span><code>Gtk.events_pending</code></span>
-</h3>
-
-
-<pre class="python-prototype">
-def Gtk.events_pending ():
-    #python wrapper for 'gtk_events_pending'</pre>
-
-<p>Checks if any events are pending.</p>
-<p>This can be used to update the UI and invoke timeouts etc.
-while doing some time intensive computation.</p>
-<h2>Updating the UI during a long computation</h2>
-<pre><code class="language-[&lt;!--">  // computation going on...
-
-  while (gtk_events_pending ())
-    gtk_main_iteration ();
-
-  // ...computation continued
-</code></pre>
-
-
-
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
-										)
-								–
-			</div>
-							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if any events are pending, <a href="https://docs.python.org/3/library/constants.html#False">False</a> otherwise</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
 
 </div>
 
@@ -1224,6 +1224,32 @@ while doing some time intensive computation.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_main">
 	
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_main">
+	<span><code>Gtk.main</code></span>
+</h3>
+
+
+<pre class="python-prototype">
+def Gtk.main ():
+    #python wrapper for 'gtk_main'</pre>
+
+<p>Runs the main loop until <a href="gtkmain.html#gtk_main_quit">Gtk.main_quit</a> is called.</p>
+<p>You can nest calls to <a href="gtkmain.html#gtk_main">Gtk.main</a>. In that case <a href="gtkmain.html#gtk_main_quit">Gtk.main_quit</a>
+will make the innermost invocation of the main loop return.</p>
+
+
+
+
+
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -1278,32 +1304,6 @@ will make the innermost invocation of the main loop return.</p>
 
 
         </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_main">
-	<span><code>Gtk.main</code></span>
-</h3>
-
-
-<pre class="python-prototype">
-def Gtk.main ():
-    #python wrapper for 'gtk_main'</pre>
-
-<p>Runs the main loop until <a href="gtkmain.html#gtk_main_quit">Gtk.main_quit</a> is called.</p>
-<p>You can nest calls to <a href="gtkmain.html#gtk_main">Gtk.main</a>. In that case <a href="gtkmain.html#gtk_main_quit">Gtk.main_quit</a>
-will make the innermost invocation of the main loop return.</p>
-
-
-
-
-
-
-
-
-        </div>
 
 </div>
 
@@ -1311,6 +1311,45 @@ will make the innermost invocation of the main loop return.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_main_level">
 	
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_main_level">
+	<span><code>Gtk.main_level</code></span>
+</h3>
+
+
+<pre class="python-prototype">
+def Gtk.main_level ():
+    #python wrapper for 'gtk_main_level'</pre>
+
+<p>Asks for the current nesting level of the main loop.</p>
+
+
+
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+										)
+								–
+			</div>
+							<p>the nesting level of the current invocation
+of the main loop</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -1389,45 +1428,6 @@ of the main loop</p>
 
 
         </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_main_level">
-	<span><code>Gtk.main_level</code></span>
-</h3>
-
-
-<pre class="python-prototype">
-def Gtk.main_level ():
-    #python wrapper for 'gtk_main_level'</pre>
-
-<p>Asks for the current nesting level of the main loop.</p>
-
-
-
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
-										)
-								–
-			</div>
-							<p>the nesting level of the current invocation
-of the main loop</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
 
 </div>
 
@@ -1435,6 +1435,31 @@ of the main loop</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_main_quit">
 	
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_main_quit">
+	<span><code>Gtk.main_quit</code></span>
+</h3>
+
+
+<pre class="python-prototype">
+def Gtk.main_quit ():
+    #python wrapper for 'gtk_main_quit'</pre>
+
+<p>Makes the innermost invocation of the main loop return
+when it regains control.</p>
+
+
+
+
+
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -1487,31 +1512,6 @@ when it regains control.</p>
 
 
         </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_main_quit">
-	<span><code>Gtk.main_quit</code></span>
-</h3>
-
-
-<pre class="python-prototype">
-def Gtk.main_quit ():
-    #python wrapper for 'gtk_main_quit'</pre>
-
-<p>Makes the innermost invocation of the main loop return
-when it regains control.</p>
-
-
-
-
-
-
-
-
-        </div>
 
 </div>
 
@@ -1519,6 +1519,49 @@ when it regains control.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_main_iteration">
 	
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_main_iteration">
+	<span><code>Gtk.main_iteration</code></span>
+</h3>
+
+
+<pre class="python-prototype">
+def Gtk.main_iteration ():
+    #python wrapper for 'gtk_main_iteration'</pre>
+
+<p>Runs a single iteration of the mainloop.</p>
+<p>If no events are waiting to be processed GTK+ will block
+until the next event is noticed. If you don’t want to block
+look at <a href="gtkmain.html#gtk_main_iteration_do">Gtk.main_iteration_do</a> or check if any events are
+pending with <a href="gtkmain.html#gtk_events_pending">Gtk.events_pending</a> first.</p>
+
+
+
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+										)
+								–
+			</div>
+							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if <a href="gtkmain.html#gtk_main_quit">Gtk.main_quit</a> has been called for the
+innermost mainloop</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -1605,28 +1648,49 @@ innermost mainloop</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_main_iteration_do">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h3 data-hotdoc-id="gtk_main_iteration">
-	<span><code>Gtk.main_iteration</code></span>
+<h3 data-hotdoc-id="gtk_main_iteration_do">
+	<span><code>Gtk.main_iteration_do</code></span>
 </h3>
 
 
 <pre class="python-prototype">
-def Gtk.main_iteration ():
-    #python wrapper for 'gtk_main_iteration'</pre>
+def Gtk.main_iteration_do (blocking):
+    #python wrapper for 'gtk_main_iteration_do'</pre>
 
-<p>Runs a single iteration of the mainloop.</p>
-<p>If no events are waiting to be processed GTK+ will block
-until the next event is noticed. If you don’t want to block
-look at <a href="gtkmain.html#gtk_main_iteration_do">Gtk.main_iteration_do</a> or check if any events are
-pending with <a href="gtkmain.html#gtk_events_pending">Gtk.events_pending</a> first.</p>
+<p>Runs a single iteration of the mainloop.
+If no events are available either return or block depending on
+the value of <em>blocking</em>.</p>
 
 
 
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>blocking</code></em></i>
+					(
+						<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+						)
+				–
+	</div>
+			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if you want GTK+ to block if no events are pending</p>
+
+	</div>
+
+			</div>
 
 		<div class="return-values-container">
 		<div class="symbol-detail">
@@ -1648,13 +1712,6 @@ innermost mainloop</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_main_iteration_do">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -1766,23 +1823,67 @@ innermost mainloop</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_main_do_event">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h3 data-hotdoc-id="gtk_main_iteration_do">
-	<span><code>Gtk.main_iteration_do</code></span>
+<h3 data-hotdoc-id="gtk_main_do_event">
+	<span><code>Gtk.main_do_event</code></span>
 </h3>
 
 
 <pre class="python-prototype">
-def Gtk.main_iteration_do (blocking):
-    #python wrapper for 'gtk_main_iteration_do'</pre>
+def Gtk.main_do_event (event):
+    #python wrapper for 'gtk_main_do_event'</pre>
 
-<p>Runs a single iteration of the mainloop.
-If no events are available either return or block depending on
-the value of <em>blocking</em>.</p>
+<p>Processes a single GDK event.</p>
+<p>This is public only to allow filtering of events between GDK and GTK+.
+You will not usually need to call this function directly.</p>
+<p>While you should not call this function directly, you might want to
+know how exactly events are handled. So here is what this function
+does with the event:</p>
+<ol>
+<li>
+<p>Compress enter/leave notify events. If the event passed build an
+enter/leave pair together with the next event (peeked from GDK), both
+events are thrown away. This is to avoid a backlog of (de-)highlighting
+widgets crossed by the pointer.</p>
+</li>
+<li>
+<p>Find the widget which got the event. If the widget can’t be determined
+the event is thrown away unless it belongs to a INCR transaction.</p>
+</li>
+<li>
+<p>Then the event is pushed onto a stack so you can query the currently
+handled event with <a href="gtkmain.html#gtk_get_current_event">Gtk.get_current_event</a>.</p>
+</li>
+<li>
+<p>The event is sent to a widget. If a grab is active all events for widgets
+that are not in the contained in the grab widget are sent to the latter
+with a few exceptions:</p>
+<ul>
+<li>Deletion and destruction events are still sent to the event widget for
+obvious reasons.</li>
+<li>Events which directly relate to the visual representation of the event
+widget.</li>
+<li>Leave events are delivered to the event widget if there was an enter
+event delivered to it before without the paired leave event.</li>
+<li>Drag events are not redirected because it is unclear what the semantics
+of that would be.</li>
+</ul>
+</li>
+<li>
+<p>After finishing the delivery the event is popped from the event stack.</p>
+</li>
+</ol>
 
 
 
@@ -1791,45 +1892,23 @@ the value of <em>blocking</em>.</p>
 					
 <div class="symbol-detail">
 	<div>
-		<i><em><code>blocking</code></em></i>
+		<i><em><code>event</code></em></i>
 					(
-						<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+						Gdk.Event
 						)
 				–
 	</div>
-			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if you want GTK+ to block if no events are pending</p>
+			<p>An event to process (normally passed by GDK)</p>
 
 	</div>
 
 			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
-										)
-								–
-			</div>
-							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if <a href="gtkmain.html#gtk_main_quit">Gtk.main_quit</a> has been called for the
-innermost mainloop</p>
-
-					</div>
-	</div>
 
 
 
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_main_do_event">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -1987,85 +2066,6 @@ of that would be.</li>
 
 
         </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_main_do_event">
-	<span><code>Gtk.main_do_event</code></span>
-</h3>
-
-
-<pre class="python-prototype">
-def Gtk.main_do_event (event):
-    #python wrapper for 'gtk_main_do_event'</pre>
-
-<p>Processes a single GDK event.</p>
-<p>This is public only to allow filtering of events between GDK and GTK+.
-You will not usually need to call this function directly.</p>
-<p>While you should not call this function directly, you might want to
-know how exactly events are handled. So here is what this function
-does with the event:</p>
-<ol>
-<li>
-<p>Compress enter/leave notify events. If the event passed build an
-enter/leave pair together with the next event (peeked from GDK), both
-events are thrown away. This is to avoid a backlog of (de-)highlighting
-widgets crossed by the pointer.</p>
-</li>
-<li>
-<p>Find the widget which got the event. If the widget can’t be determined
-the event is thrown away unless it belongs to a INCR transaction.</p>
-</li>
-<li>
-<p>Then the event is pushed onto a stack so you can query the currently
-handled event with <a href="gtkmain.html#gtk_get_current_event">Gtk.get_current_event</a>.</p>
-</li>
-<li>
-<p>The event is sent to a widget. If a grab is active all events for widgets
-that are not in the contained in the grab widget are sent to the latter
-with a few exceptions:</p>
-<ul>
-<li>Deletion and destruction events are still sent to the event widget for
-obvious reasons.</li>
-<li>Events which directly relate to the visual representation of the event
-widget.</li>
-<li>Leave events are delivered to the event widget if there was an enter
-event delivered to it before without the paired leave event.</li>
-<li>Drag events are not redirected because it is unclear what the semantics
-of that would be.</li>
-</ul>
-</li>
-<li>
-<p>After finishing the delivery the event is popped from the event stack.</p>
-</li>
-</ol>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>event</code></em></i>
-					(
-						Gdk.Event
-						)
-				–
-	</div>
-			<p>An event to process (normally passed by GDK)</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
 
 </div>
 
@@ -2073,6 +2073,80 @@ of that would be.</li>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_true">
 	
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_true">
+	<span><code>Gtk.true</code></span>
+</h3>
+
+
+<pre class="python-prototype">
+def Gtk.true ():
+    #python wrapper for 'gtk_true'</pre>
+
+<p>All this function does it to return <a href="https://docs.python.org/3/library/constants.html#True">True</a>.</p>
+<p>This can be useful for example if you want to inhibit the deletion
+of a window. Of course you should not do this as the user expects
+a reaction from clicking the close icon of the window...</p>
+<h2>A persistent window</h2>
+<pre><code class="language-[&lt;!--"> #include &lt;gtk/gtk.h&gt;
+
+ int
+ main (int argc, char **argv)
+ {
+   GtkWidget *win, *but;
+   const char *text = "Close yourself. I mean it!";
+
+   gtk_init (&amp;argc, &amp;argv);
+
+   win = gtk_window_new (GTK_WINDOW_TOPLEVEL);
+   g_signal_connect (win,
+                     "delete-event",
+                     G_CALLBACK (gtk_true),
+                     NULL);
+   g_signal_connect (win, "destroy",
+                     G_CALLBACK (gtk_main_quit),
+                     NULL);
+
+   but = gtk_button_new_with_label (text);
+   g_signal_connect_swapped (but, "clicked",
+                             G_CALLBACK (gtk_object_destroy),
+                             win);
+   gtk_container_add (GTK_CONTAINER (win), but);
+
+   gtk_widget_show (win);
+
+   gtk_main ();
+
+   return 0;
+ }
+</code></pre>
+
+
+
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+										)
+								–
+			</div>
+							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a></p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -2221,57 +2295,29 @@ a reaction from clicking the close icon of the window...</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_false">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h3 data-hotdoc-id="gtk_true">
-	<span><code>Gtk.true</code></span>
+<h3 data-hotdoc-id="gtk_false">
+	<span><code>Gtk.false</code></span>
 </h3>
 
 
 <pre class="python-prototype">
-def Gtk.true ():
-    #python wrapper for 'gtk_true'</pre>
+def Gtk.false ():
+    #python wrapper for 'gtk_false'</pre>
 
-<p>All this function does it to return <a href="https://docs.python.org/3/library/constants.html#True">True</a>.</p>
-<p>This can be useful for example if you want to inhibit the deletion
-of a window. Of course you should not do this as the user expects
-a reaction from clicking the close icon of the window...</p>
-<h2>A persistent window</h2>
-<pre><code class="language-[&lt;!--"> #include &lt;gtk/gtk.h&gt;
-
- int
- main (int argc, char **argv)
- {
-   GtkWidget *win, *but;
-   const char *text = "Close yourself. I mean it!";
-
-   gtk_init (&amp;argc, &amp;argv);
-
-   win = gtk_window_new (GTK_WINDOW_TOPLEVEL);
-   g_signal_connect (win,
-                     "delete-event",
-                     G_CALLBACK (gtk_true),
-                     NULL);
-   g_signal_connect (win, "destroy",
-                     G_CALLBACK (gtk_main_quit),
-                     NULL);
-
-   but = gtk_button_new_with_label (text);
-   g_signal_connect_swapped (but, "clicked",
-                             G_CALLBACK (gtk_object_destroy),
-                             win);
-   gtk_container_add (GTK_CONTAINER (win), but);
-
-   gtk_widget_show (win);
-
-   gtk_main ();
-
-   return 0;
- }
-</code></pre>
+<p>Analogical to <a href="gtkmain.html#gtk_true">Gtk.true</a>, this function does nothing
+but always returns <a href="https://docs.python.org/3/library/constants.html#False">False</a>.</p>
 
 
 
@@ -2285,7 +2331,7 @@ a reaction from clicking the close icon of the window...</p>
 										)
 								–
 			</div>
-							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a></p>
+							<p><a href="https://docs.python.org/3/library/constants.html#False">False</a></p>
 
 					</div>
 	</div>
@@ -2295,13 +2341,6 @@ a reaction from clicking the close icon of the window...</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_false">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -2380,22 +2419,28 @@ but always returns <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScr
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_grab_get_current">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h3 data-hotdoc-id="gtk_false">
-	<span><code>Gtk.false</code></span>
+<h3 data-hotdoc-id="gtk_grab_get_current">
+	<span><code>Gtk.grab_get_current</code></span>
 </h3>
 
 
 <pre class="python-prototype">
-def Gtk.false ():
-    #python wrapper for 'gtk_false'</pre>
+def Gtk.grab_get_current ():
+    #python wrapper for 'gtk_grab_get_current'</pre>
 
-<p>Analogical to <a href="gtkmain.html#gtk_true">Gtk.true</a>, this function does nothing
-but always returns <a href="https://docs.python.org/3/library/constants.html#False">False</a>.</p>
+<p>Queries the current grab of the default window group.</p>
 
 
 
@@ -2405,11 +2450,12 @@ but always returns <a href="https://docs.python.org/3/library/constants.html#Fal
 			<div>
 				<b>Returns</b>
 									(
-					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+					<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
 										)
 								–
 			</div>
-							<p><a href="https://docs.python.org/3/library/constants.html#False">False</a></p>
+							<p>The widget which currently
+has the grab or <a href="https://docs.python.org/3/library/constants.html#None">None</a> if no grab is active</p>
 
 					</div>
 	</div>
@@ -2419,13 +2465,6 @@ but always returns <a href="https://docs.python.org/3/library/constants.html#Fal
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_grab_get_current">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -2511,45 +2550,6 @@ has the grab or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript
 
 
         </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_grab_get_current">
-	<span><code>Gtk.grab_get_current</code></span>
-</h3>
-
-
-<pre class="python-prototype">
-def Gtk.grab_get_current ():
-    #python wrapper for 'gtk_grab_get_current'</pre>
-
-<p>Queries the current grab of the default window group.</p>
-
-
-
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
-										)
-								–
-			</div>
-							<p>The widget which currently
-has the grab or <a href="https://docs.python.org/3/library/constants.html#None">None</a> if no grab is active</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
 
 </div>
 
@@ -2557,6 +2557,78 @@ has the grab or <a href="https://docs.python.org/3/library/constants.html#None">
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_device_grab_add">
 	
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_device_grab_add">
+	<span><code>Gtk.device_grab_add</code></span>
+</h3>
+
+
+<pre class="python-prototype">
+def Gtk.device_grab_add (widget, device, block_others):
+    #python wrapper for 'gtk_device_grab_add'</pre>
+
+<p>Adds a GTK+ grab on <em>device</em>, so all the events on <em>device</em> and its
+associated pointer or keyboard (if any) are delivered to <em>widget</em>.
+If the <em>block_others</em> parameter is <a href="https://docs.python.org/3/library/constants.html#True">True</a>, any other devices will be
+unable to interact with <em>widget</em> during the grab.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>widget</code></em></i>
+					(
+						<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkwidget.html#GtkWidget">Gtk.Widget</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>device</code></em></i>
+					(
+						<a title="Gdk.Device" href="https://developer.gnome.org/gdk3/GdkDevice.html#GdkDevice-struct">Gdk.Device</a>
+						)
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/gdk3/GdkDevice.html#GdkDevice-struct">Gdk.Device</a> to grab on.</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>block_others</code></em></i>
+					(
+						<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+						)
+				–
+	</div>
+			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> to prevent other devices to interact with <em>widget</em>.</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -2696,24 +2768,30 @@ unable to interact with <em>widget</em> during the grab.</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_device_grab_remove">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h3 data-hotdoc-id="gtk_device_grab_add">
-	<span><code>Gtk.device_grab_add</code></span>
+<h3 data-hotdoc-id="gtk_device_grab_remove">
+	<span><code>Gtk.device_grab_remove</code></span>
 </h3>
 
 
 <pre class="python-prototype">
-def Gtk.device_grab_add (widget, device, block_others):
-    #python wrapper for 'gtk_device_grab_add'</pre>
+def Gtk.device_grab_remove (widget, device):
+    #python wrapper for 'gtk_device_grab_remove'</pre>
 
-<p>Adds a GTK+ grab on <em>device</em>, so all the events on <em>device</em> and its
-associated pointer or keyboard (if any) are delivered to <em>widget</em>.
-If the <em>block_others</em> parameter is <a href="https://docs.python.org/3/library/constants.html#True">True</a>, any other devices will be
-unable to interact with <em>widget</em> during the grab.</p>
+<p>Removes a device grab from the given widget.</p>
+<p>You have to pair calls to <a href="gtkmain.html#gtk_device_grab_add">Gtk.device_grab_add</a> and
+<a href="gtkmain.html#gtk_device_grab_remove">Gtk.device_grab_remove</a>.</p>
 
 
 
@@ -2741,20 +2819,7 @@ unable to interact with <em>widget</em> during the grab.</p>
 						)
 				–
 	</div>
-			<p>a <a href="https://developer.gnome.org/gdk3/GdkDevice.html#GdkDevice-struct">Gdk.Device</a> to grab on.</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>block_others</code></em></i>
-					(
-						<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
-						)
-				–
-	</div>
-			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> to prevent other devices to interact with <em>widget</em>.</p>
+			<p>a <a href="https://developer.gnome.org/gdk3/GdkDevice.html#GdkDevice-struct">Gdk.Device</a></p>
 
 	</div>
 
@@ -2768,13 +2833,6 @@ unable to interact with <em>widget</em> during the grab.</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_device_grab_remove">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -2888,64 +2946,6 @@ function prototype.device_grab_remove(widget: <a title="Gtk.Widget" href="gtkwid
 
 
         </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_device_grab_remove">
-	<span><code>Gtk.device_grab_remove</code></span>
-</h3>
-
-
-<pre class="python-prototype">
-def Gtk.device_grab_remove (widget, device):
-    #python wrapper for 'gtk_device_grab_remove'</pre>
-
-<p>Removes a device grab from the given widget.</p>
-<p>You have to pair calls to <a href="gtkmain.html#gtk_device_grab_add">Gtk.device_grab_add</a> and
-<a href="gtkmain.html#gtk_device_grab_remove">Gtk.device_grab_remove</a>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkwidget.html#GtkWidget">Gtk.Widget</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>device</code></em></i>
-					(
-						<a title="Gdk.Device" href="https://developer.gnome.org/gdk3/GdkDevice.html#GdkDevice-struct">Gdk.Device</a>
-						)
-				–
-	</div>
-			<p>a <a href="https://developer.gnome.org/gdk3/GdkDevice.html#GdkDevice-struct">Gdk.Device</a></p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.0
-		</p>
-
-
-        </div>
 
 </div>
 
@@ -2953,6 +2953,49 @@ def Gtk.device_grab_remove (widget, device):
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_get_current_event">
 	
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_get_current_event">
+	<span><code>Gtk.get_current_event</code></span>
+</h3>
+
+
+<pre class="python-prototype">
+def Gtk.get_current_event ():
+    #python wrapper for 'gtk_get_current_event'</pre>
+
+<p>Obtains a copy of the event currently being processed by GTK+.</p>
+<p>For example, if you are handling a <a href="https://developer.gnome.org/gtk3/GtkButton.html#GtkButton-clicked">clicked</a> signal,
+the current event will be the <a href="https://developer.gnome.org/gdk3/gdk3-Event-Structures.html#GdkEventButton">Gdk.EventButton</a> that triggered
+the ::clicked signal.</p>
+
+
+
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					Gdk.Event
+										)
+								–
+			</div>
+							<p>a copy of the current event, or
+<a href="https://docs.python.org/3/library/constants.html#None">None</a> if there is no current event. The returned event must be
+freed with <a href="https://developer.gnome.org/gdk3/gdk3-Events.html#gdk-event-free">Gdk.Event.free</a>.</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -3046,24 +3089,29 @@ freed with <a href="https://developer.gnome.org/gdk3/gdk3-Events.html#gdk-event-
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_get_current_event_time">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h3 data-hotdoc-id="gtk_get_current_event">
-	<span><code>Gtk.get_current_event</code></span>
+<h3 data-hotdoc-id="gtk_get_current_event_time">
+	<span><code>Gtk.get_current_event_time</code></span>
 </h3>
 
 
 <pre class="python-prototype">
-def Gtk.get_current_event ():
-    #python wrapper for 'gtk_get_current_event'</pre>
+def Gtk.get_current_event_time ():
+    #python wrapper for 'gtk_get_current_event_time'</pre>
 
-<p>Obtains a copy of the event currently being processed by GTK+.</p>
-<p>For example, if you are handling a <a href="https://developer.gnome.org/gtk3/GtkButton.html#GtkButton-clicked">clicked</a> signal,
-the current event will be the <a href="https://developer.gnome.org/gdk3/gdk3-Event-Structures.html#GdkEventButton">Gdk.EventButton</a> that triggered
-the ::clicked signal.</p>
+<p>If there is a current event and it has a timestamp,
+return that timestamp, otherwise return <a href="https://developer.gnome.org/gdk3/gdk3-Events.html#GDK-CURRENT-TIME:CAPS">Gdk.CURRENT_TIME</a>.</p>
 
 
 
@@ -3073,13 +3121,12 @@ the ::clicked signal.</p>
 			<div>
 				<b>Returns</b>
 									(
-					Gdk.Event
+					<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
 										)
 								–
 			</div>
-							<p>a copy of the current event, or
-<a href="https://docs.python.org/3/library/constants.html#None">None</a> if there is no current event. The returned event must be
-freed with <a href="https://developer.gnome.org/gdk3/gdk3-Events.html#gdk-event-free">Gdk.Event.free</a>.</p>
+							<p>the timestamp from the current event,
+or <a href="https://developer.gnome.org/gdk3/gdk3-Events.html#GDK-CURRENT-TIME:CAPS">Gdk.CURRENT_TIME</a>.</p>
 
 					</div>
 	</div>
@@ -3089,13 +3136,6 @@ freed with <a href="https://developer.gnome.org/gdk3/gdk3-Events.html#gdk-event-
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_get_current_event_time">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -3176,46 +3216,6 @@ or <a href="https://developer.gnome.org/gdk3/gdk3-Events.html#GDK-CURRENT-TIME:C
 
 
         </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_get_current_event_time">
-	<span><code>Gtk.get_current_event_time</code></span>
-</h3>
-
-
-<pre class="python-prototype">
-def Gtk.get_current_event_time ():
-    #python wrapper for 'gtk_get_current_event_time'</pre>
-
-<p>If there is a current event and it has a timestamp,
-return that timestamp, otherwise return <a href="https://developer.gnome.org/gdk3/gdk3-Events.html#GDK-CURRENT-TIME:CAPS">Gdk.CURRENT_TIME</a>.</p>
-
-
-
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
-										)
-								–
-			</div>
-							<p>the timestamp from the current event,
-or <a href="https://developer.gnome.org/gdk3/gdk3-Events.html#GDK-CURRENT-TIME:CAPS">Gdk.CURRENT_TIME</a>.</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
 
 </div>
 
@@ -3223,6 +3223,63 @@ or <a href="https://developer.gnome.org/gdk3/gdk3-Events.html#GDK-CURRENT-TIME:C
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_get_current_event_state">
 	
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_get_current_event_state">
+	<span><code>Gtk.get_current_event_state</code></span>
+</h3>
+
+
+<pre class="python-prototype">
+def Gtk.get_current_event_state ():
+    #python wrapper for 'gtk_get_current_event_state'</pre>
+
+<p>If there is a current event and it has a state field, place
+that state field in <em>state</em> and return <a href="https://docs.python.org/3/library/constants.html#True">True</a>, otherwise return
+<a href="https://docs.python.org/3/library/constants.html#False">False</a>.</p>
+
+
+
+
+		<div class="return-values-container">
+		<p><b>Returns a tuple made of:</b></p>
+				
+<div class="symbol-detail">
+	<div>
+									(
+			<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+						)
+				–
+	</div>
+			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if there was a current event and it
+had a state field</p>
+
+	</div>
+
+				
+<div class="symbol-detail">
+	<div>
+				<i><em><code>state</code></em></i>
+									(
+			<a title="Gdk.ModifierType" href="https://developer.gnome.org/gdk3/gdk3-Windows.html#GdkModifierType">Gdk.ModifierType</a>
+						)
+				–
+	</div>
+			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if there was a current event and it
+had a state field</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -3339,63 +3396,6 @@ had a state field</p>
 
 
         </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_get_current_event_state">
-	<span><code>Gtk.get_current_event_state</code></span>
-</h3>
-
-
-<pre class="python-prototype">
-def Gtk.get_current_event_state ():
-    #python wrapper for 'gtk_get_current_event_state'</pre>
-
-<p>If there is a current event and it has a state field, place
-that state field in <em>state</em> and return <a href="https://docs.python.org/3/library/constants.html#True">True</a>, otherwise return
-<a href="https://docs.python.org/3/library/constants.html#False">False</a>.</p>
-
-
-
-
-		<div class="return-values-container">
-		<p><b>Returns a tuple made of:</b></p>
-				
-<div class="symbol-detail">
-	<div>
-									(
-			<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
-						)
-				–
-	</div>
-			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if there was a current event and it
-had a state field</p>
-
-	</div>
-
-				
-<div class="symbol-detail">
-	<div>
-				<i><em><code>state</code></em></i>
-									(
-			<a title="Gdk.ModifierType" href="https://developer.gnome.org/gdk3/gdk3-Windows.html#GdkModifierType">Gdk.ModifierType</a>
-						)
-				–
-	</div>
-			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if there was a current event and it
-had a state field</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
 
 </div>
 
@@ -3403,6 +3403,45 @@ had a state field</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_get_current_event_device">
 	
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_get_current_event_device">
+	<span><code>Gtk.get_current_event_device</code></span>
+</h3>
+
+
+<pre class="python-prototype">
+def Gtk.get_current_event_device ():
+    #python wrapper for 'gtk_get_current_event_device'</pre>
+
+<p>If there is a current event and it has a device, return that
+device, otherwise return <a href="https://docs.python.org/3/library/constants.html#None">None</a>.</p>
+
+
+
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gdk.Device" href="https://developer.gnome.org/gdk3/GdkDevice.html#GdkDevice-struct">Gdk.Device</a>
+										)
+								–
+			</div>
+							<p>a <a href="https://developer.gnome.org/gdk3/GdkDevice.html#GdkDevice-struct">Gdk.Device</a>, or <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -3488,36 +3527,61 @@ device, otherwise return <a href="https://developer.mozilla.org/en-US/docs/Web/J
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_get_event_widget">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h3 data-hotdoc-id="gtk_get_current_event_device">
-	<span><code>Gtk.get_current_event_device</code></span>
+<h3 data-hotdoc-id="gtk_get_event_widget">
+	<span><code>Gtk.get_event_widget</code></span>
 </h3>
 
 
 <pre class="python-prototype">
-def Gtk.get_current_event_device ():
-    #python wrapper for 'gtk_get_current_event_device'</pre>
+def Gtk.get_event_widget (event):
+    #python wrapper for 'gtk_get_event_widget'</pre>
 
-<p>If there is a current event and it has a device, return that
-device, otherwise return <a href="https://docs.python.org/3/library/constants.html#None">None</a>.</p>
+<p>If <em>event</em> is <a href="https://docs.python.org/3/library/constants.html#None">None</a> or the event was not associated with any widget,
+returns <a href="https://docs.python.org/3/library/constants.html#None">None</a>, otherwise returns the widget that received the event
+originally.</p>
 
 
 
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>event</code></em></i>
+					(
+						Gdk.Event
+						)
+				–
+	</div>
+			<p>a GdkEvent</p>
+
+	</div>
+
+			</div>
 
 		<div class="return-values-container">
 		<div class="symbol-detail">
 			<div>
 				<b>Returns</b>
 									(
-					<a title="Gdk.Device" href="https://developer.gnome.org/gdk3/GdkDevice.html#GdkDevice-struct">Gdk.Device</a>
+					<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
 										)
 								–
 			</div>
-							<p>a <a href="https://developer.gnome.org/gdk3/GdkDevice.html#GdkDevice-struct">Gdk.Device</a>, or <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
+							<p>the widget that originally
+received <em>event</em>, or <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
 
 					</div>
 	</div>
@@ -3527,13 +3591,6 @@ device, otherwise return <a href="https://docs.python.org/3/library/constants.ht
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_get_event_widget">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -3652,23 +3709,30 @@ received <em>event</em>, or <a href="https://developer.mozilla.org/en-US/docs/We
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.92;" id="gtk_get_event_target">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h3 data-hotdoc-id="gtk_get_event_widget">
-	<span><code>Gtk.get_event_widget</code></span>
+<h3 data-hotdoc-id="gtk_get_event_target">
+	<span><code>Gtk.get_event_target</code></span>
 </h3>
 
 
 <pre class="python-prototype">
-def Gtk.get_event_widget (event):
-    #python wrapper for 'gtk_get_event_widget'</pre>
+def Gtk.get_event_target (event):
+    #python wrapper for 'gtk_get_event_target'</pre>
 
 <p>If <em>event</em> is <a href="https://docs.python.org/3/library/constants.html#None">None</a> or the event was not associated with any widget,
-returns <a href="https://docs.python.org/3/library/constants.html#None">None</a>, otherwise returns the widget that received the event
-originally.</p>
+returns <a href="https://docs.python.org/3/library/constants.html#None">None</a>, otherwise returns the widget that is the deepmost
+receiver of the event.</p>
 
 
 
@@ -3698,24 +3762,19 @@ originally.</p>
 										)
 								–
 			</div>
-							<p>the widget that originally
-received <em>event</em>, or <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
+							<p>the target widget, or <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
 
 					</div>
 	</div>
 
 
 
+	<p>
+	<b>Since</b>			: 3.92
+		</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:3.92;" id="gtk_get_event_target">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -3838,23 +3897,30 @@ receiver of the event.</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.92;" id="gtk_get_event_target_with_type">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h3 data-hotdoc-id="gtk_get_event_target">
-	<span><code>Gtk.get_event_target</code></span>
+<h3 data-hotdoc-id="gtk_get_event_target_with_type">
+	<span><code>Gtk.get_event_target_with_type</code></span>
 </h3>
 
 
 <pre class="python-prototype">
-def Gtk.get_event_target (event):
-    #python wrapper for 'gtk_get_event_target'</pre>
+def Gtk.get_event_target_with_type (event, type):
+    #python wrapper for 'gtk_get_event_target_with_type'</pre>
 
 <p>If <em>event</em> is <a href="https://docs.python.org/3/library/constants.html#None">None</a> or the event was not associated with any widget,
-returns <a href="https://docs.python.org/3/library/constants.html#None">None</a>, otherwise returns the widget that is the deepmost
-receiver of the event.</p>
+returns <a href="https://docs.python.org/3/library/constants.html#None">None</a>, otherwise returns first widget found from the event
+target to the toplevel that matches <em>type</em>.</p>
 
 
 
@@ -3873,6 +3939,19 @@ receiver of the event.</p>
 
 	</div>
 
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>type</code></em></i>
+					(
+						<a title="GObject.Type" href="https://developer.gnome.org/gobject/stable/gobject-Type-Information.html#GType">GObject.Type</a>
+						)
+				–
+	</div>
+			<p>the type to look for</p>
+
+	</div>
+
 			</div>
 
 		<div class="return-values-container">
@@ -3884,7 +3963,8 @@ receiver of the event.</p>
 										)
 								–
 			</div>
-							<p>the target widget, or <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
+							<p>the widget in the target stack
+with the given type, or <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
 
 					</div>
 	</div>
@@ -3897,13 +3977,6 @@ receiver of the event.</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:3.92;" id="gtk_get_event_target_with_type">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -4052,28 +4125,61 @@ with the given type, or <a href="https://developer.mozilla.org/en-US/docs/Web/Ja
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_propagate_event">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h3 data-hotdoc-id="gtk_get_event_target_with_type">
-	<span><code>Gtk.get_event_target_with_type</code></span>
+<h3 data-hotdoc-id="gtk_propagate_event">
+	<span><code>Gtk.propagate_event</code></span>
 </h3>
 
 
 <pre class="python-prototype">
-def Gtk.get_event_target_with_type (event, type):
-    #python wrapper for 'gtk_get_event_target_with_type'</pre>
+def Gtk.propagate_event (widget, event):
+    #python wrapper for 'gtk_propagate_event'</pre>
 
-<p>If <em>event</em> is <a href="https://docs.python.org/3/library/constants.html#None">None</a> or the event was not associated with any widget,
-returns <a href="https://docs.python.org/3/library/constants.html#None">None</a>, otherwise returns first widget found from the event
-target to the toplevel that matches <em>type</em>.</p>
+<p>Sends an event to a widget, propagating the event to parent widgets
+if the event remains unhandled. This function will emit the event
+through all the hierarchy of <em>widget</em> through all propagation phases.</p>
+<p>Events received by GTK+ from GDK normally begin in <a href="gtkmain.html#gtk_main_do_event">Gtk.main_do_event</a>.
+Depending on the type of event, existence of modal dialogs, grabs, etc.,
+the event may be propagated; if so, this function is used.</p>
+<p><a href="gtkmain.html#gtk_propagate_event">Gtk.propagate_event</a> calls <a href="gtkwidget.html#gtk_widget_event">Gtk.Widget.event</a> on each widget it
+decides to send the event to. So <a href="gtkwidget.html#gtk_widget_event">Gtk.Widget.event</a> is the lowest-level
+function; it simply emits the <a href="https://developer.gnome.org/gtk3/GtkWidget.html#GtkWidget-event">event</a> and possibly an
+event-specific signal on a widget. <a href="gtkmain.html#gtk_propagate_event">Gtk.propagate_event</a> is a bit
+higher-level, and <a href="gtkmain.html#gtk_main_do_event">Gtk.main_do_event</a> is the highest level.</p>
+<p>All that said, you most likely don’t want to use any of these
+functions; synthesizing events is rarely needed. There are almost
+certainly better ways to achieve your goals. For example, use
+<a href="gtkwidget.html#gtk_widget_queue_draw">Gtk.Widget.queue_draw</a> instead
+of making up expose events.</p>
 
 
 
 	<div class="parameters-container">
 		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>widget</code></em></i>
+					(
+						<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkwidget.html#GtkWidget">Gtk.Widget</a></p>
+
+	</div>
+
 					
 <div class="symbol-detail">
 	<div>
@@ -4083,55 +4189,17 @@ target to the toplevel that matches <em>type</em>.</p>
 						)
 				–
 	</div>
-			<p>a GdkEvent</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>type</code></em></i>
-					(
-						<a title="GObject.Type" href="https://developer.gnome.org/gobject/stable/gobject-Type-Information.html#GType">GObject.Type</a>
-						)
-				–
-	</div>
-			<p>the type to look for</p>
+			<p>an event</p>
 
 	</div>
 
 			</div>
 
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
-										)
-								–
-			</div>
-							<p>the widget in the target stack
-with the given type, or <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
-
-					</div>
-	</div>
 
 
-
-	<p>
-	<b>Since</b>			: 3.92
-		</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_propagate_event">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -4265,74 +4333,6 @@ of making up expose events.</p>
 
 
         </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_propagate_event">
-	<span><code>Gtk.propagate_event</code></span>
-</h3>
-
-
-<pre class="python-prototype">
-def Gtk.propagate_event (widget, event):
-    #python wrapper for 'gtk_propagate_event'</pre>
-
-<p>Sends an event to a widget, propagating the event to parent widgets
-if the event remains unhandled. This function will emit the event
-through all the hierarchy of <em>widget</em> through all propagation phases.</p>
-<p>Events received by GTK+ from GDK normally begin in <a href="gtkmain.html#gtk_main_do_event">Gtk.main_do_event</a>.
-Depending on the type of event, existence of modal dialogs, grabs, etc.,
-the event may be propagated; if so, this function is used.</p>
-<p><a href="gtkmain.html#gtk_propagate_event">Gtk.propagate_event</a> calls <a href="gtkwidget.html#gtk_widget_event">Gtk.Widget.event</a> on each widget it
-decides to send the event to. So <a href="gtkwidget.html#gtk_widget_event">Gtk.Widget.event</a> is the lowest-level
-function; it simply emits the <a href="https://developer.gnome.org/gtk3/GtkWidget.html#GtkWidget-event">event</a> and possibly an
-event-specific signal on a widget. <a href="gtkmain.html#gtk_propagate_event">Gtk.propagate_event</a> is a bit
-higher-level, and <a href="gtkmain.html#gtk_main_do_event">Gtk.main_do_event</a> is the highest level.</p>
-<p>All that said, you most likely don’t want to use any of these
-functions; synthesizing events is rarely needed. There are almost
-certainly better ways to achieve your goals. For example, use
-<a href="gtkwidget.html#gtk_widget_queue_draw">Gtk.Widget.queue_draw</a> instead
-of making up expose events.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkwidget.html#GtkWidget">Gtk.Widget</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>event</code></em></i>
-					(
-						Gdk.Event
-						)
-				–
-	</div>
-			<p>an event</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
 
 </div>
 
@@ -4342,6 +4342,24 @@ of making up expose events.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="GTK_PRIORITY_RESIZE">
 	
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="GTK_PRIORITY_RESIZE">
+	<span><code>Gtk.PRIORITY_RESIZE</code></span>
+</h3>
+
+
+<p>Use this priority for functionality related to size allocation.</p>
+<p>It is used internally by GTK+ to compute the sizes of widgets.
+This priority is higher than <a href="https://developer.gnome.org/gdk3/gdk3-Events.html#GDK-PRIORITY-REDRAW:CAPS">Gdk.PRIORITY_REDRAW</a> to avoid
+resizing a widget which was just redrawn.</p>
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -4382,24 +4400,6 @@ resizing a widget which was just redrawn.</p>
 
 
         </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="GTK_PRIORITY_RESIZE">
-	<span><code>Gtk.PRIORITY_RESIZE</code></span>
-</h3>
-
-
-<p>Use this priority for functionality related to size allocation.</p>
-<p>It is used internally by GTK+ to compute the sizes of widgets.
-This priority is higher than <a href="https://developer.gnome.org/gdk3/gdk3-Events.html#GDK-PRIORITY-REDRAW:CAPS">Gdk.PRIORITY_REDRAW</a> to avoid
-resizing a widget which was just redrawn.</p>
-
-
-
-        </div>
 
 </div>
 
@@ -4409,6 +4409,62 @@ resizing a widget which was just redrawn.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="GtkModuleInitFunc">
 	
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="GtkModuleInitFunc">
+	<span><code>Gtk.ModuleInitFunc</code></span>
+</h3>
+
+
+
+
+<pre class="c-prototype">
+(*Gtk.ModuleInitFunc) (<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>,
+                       [ <a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a> ])</pre>
+
+<p>Each GTK+ module must have a function gtk_module_init with this prototype.
+This function is called after loading the module.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>argc</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>GTK+ always passes <a href="https://docs.python.org/3/library/constants.html#None">None</a> for this argument</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>argv</code></em></i>
+					(
+						[ <a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a> ]
+						)
+				–
+	</div>
+			<p>GTK+ always passes <a href="https://docs.python.org/3/library/constants.html#None">None</a> for this argument</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -4526,62 +4582,6 @@ This function is called after loading the module.</p>
 
 
         </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="GtkModuleInitFunc">
-	<span><code>Gtk.ModuleInitFunc</code></span>
-</h3>
-
-
-
-
-<pre class="c-prototype">
-(*Gtk.ModuleInitFunc) (<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>,
-                       [ <a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a> ])</pre>
-
-<p>Each GTK+ module must have a function gtk_module_init with this prototype.
-This function is called after loading the module.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>argc</code></em></i>
-					(
-						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
-						)
-				–
-	</div>
-			<p>GTK+ always passes <a href="https://docs.python.org/3/library/constants.html#None">None</a> for this argument</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>argv</code></em></i>
-					(
-						[ <a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a> ]
-						)
-				–
-	</div>
-			<p>GTK+ always passes <a href="https://docs.python.org/3/library/constants.html#None">None</a> for this argument</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
 
 </div>
 
@@ -4589,49 +4589,7 @@ This function is called after loading the module.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="since:2.2;" id="GtkModuleDisplayInitFunc">
 	
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h3 data-hotdoc-id="GtkModuleDisplayInitFunc">
-	<span><code>GtkModuleDisplayInitFunc</code></span>
-</h3>
-
-
-
-
-<pre class="c-prototype">
-(*GtkModuleDisplayInitFunc) (<a title="GdkDisplay" href="https://developer.gnome.org/gdk3/GdkDisplay.html#GdkDisplay-struct">GdkDisplay</a> * display)</pre>
-
-<p>A multihead-aware GTK+ module may have a gtk_module_display_init function
-with this prototype. GTK+ calls this function for each opened display.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>display</code></em></i>
-				–
-	</div>
-			<p>an open <a href="https://developer.gnome.org/gdk3/GdkDisplay.html#GdkDisplay-struct">GdkDisplay</a></p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.2
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
+        <div class="gi-symbol gi-symbol-python">
             
 
 
@@ -4676,7 +4634,49 @@ with this prototype. GTK+ calls this function for each opened display.</p>
 
 
         </div>
-        <div class="gi-symbol gi-symbol-python">
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h3 data-hotdoc-id="GtkModuleDisplayInitFunc">
+	<span><code>GtkModuleDisplayInitFunc</code></span>
+</h3>
+
+
+
+
+<pre class="c-prototype">
+(*GtkModuleDisplayInitFunc) (<a title="GdkDisplay" href="https://developer.gnome.org/gdk3/GdkDisplay.html#GdkDisplay-struct">GdkDisplay</a> * display)</pre>
+
+<p>A multihead-aware GTK+ module may have a gtk_module_display_init function
+with this prototype. GTK+ calls this function for each opened display.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>display</code></em></i>
+				–
+	</div>
+			<p>an open <a href="https://developer.gnome.org/gdk3/GdkDisplay.html#GdkDisplay-struct">GdkDisplay</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.2
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
             
 
 

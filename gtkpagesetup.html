@@ -89,7 +89,7 @@ $('body').removeClass('no-script');
 </nav>
 
 <main>
-<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="gtkpagesetup.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['c', 'javascript', 'python']" data-hotdoc-meta-gi-language="c">
+<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="gtkpagesetup.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['python', 'c', 'javascript']" data-hotdoc-meta-gi-language="c">
 <script src="assets/js/utils.js"></script>
 
 <div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
@@ -107,6 +107,34 @@ $('body').removeClass('no-script');
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="GtkPageSetup">
 	
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h2 data-hotdoc-id="GtkPageSetup">
+	<span><code>Gtk.PageSetup</code></span>
+</h2>
+
+
+<div class="hierarchy_container">
+	<div class="hierarchy_details">
+<pre>
+<a title="GObject.Object" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct">GObject.Object</a>
+    <span class="lineart">╰──</span>Gtk.PageSetup
+</pre>
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -163,34 +191,6 @@ $('body').removeClass('no-script');
 
 
         </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h2 data-hotdoc-id="GtkPageSetup">
-	<span><code>Gtk.PageSetup</code></span>
-</h2>
-
-
-<div class="hierarchy_container">
-	<div class="hierarchy_details">
-<pre>
-<a title="GObject.Object" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct">GObject.Object</a>
-    <span class="lineart">╰──</span>Gtk.PageSetup
-</pre>
-
-</div>
-
-</div>
-
-
-
-
-
-
-
-        </div>
 
 </div>
 
@@ -200,6 +200,47 @@ $('body').removeClass('no-script');
 
 <div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_page_setup_new">
 	
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_page_setup_new">
+	<span><code>Gtk.PageSetup.new</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.PageSetup.new ():
+    #python wrapper for 'gtk_page_setup_new'</pre>
+
+<p>Creates a new <a href="gtkpagesetup.html#GtkPageSetup">Gtk.PageSetup</a>.</p>
+
+
+
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.PageSetup" href="gtkpagesetup.html#GtkPageSetup">Gtk.PageSetup</a>
+										)
+								–
+			</div>
+							<p>a new <a href="gtkpagesetup.html#GtkPageSetup">Gtk.PageSetup</a>.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -282,24 +323,50 @@ function Gtk.prototype.new(): {
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.12;" id="gtk_page_setup_new_from_file">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_page_setup_new">
-	<span><code>Gtk.PageSetup.new</code></span>
+<h4 data-hotdoc-id="gtk_page_setup_new_from_file">
+	<span><code>Gtk.PageSetup.new_from_file</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.PageSetup.new ():
-    #python wrapper for 'gtk_page_setup_new'</pre>
+@raises(<a href="https://developer.gnome.org/glib/stable/glib-Error-Reporting.html">GLib.GError</a>)
+def Gtk.PageSetup.new_from_file (file_name):
+    #python wrapper for 'gtk_page_setup_new_from_file'</pre>
 
-<p>Creates a new <a href="gtkpagesetup.html#GtkPageSetup">Gtk.PageSetup</a>.</p>
+<p>Reads the page setup from the file <em>file_name</em>. Returns a
+new <a href="gtkpagesetup.html#GtkPageSetup">Gtk.PageSetup</a> object with the restored page setup,
+or <a href="https://docs.python.org/3/library/constants.html#None">None</a> if an error occurred. See <a href="gtkpagesetup.html#gtk_page_setup_to_file">Gtk.PageSetup.to_file</a>.</p>
 
 
 
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>file_name</code></em></i>
+					(
+						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
+						)
+				–
+	</div>
+			<p>the filename to read the page setup from</p>
+
+	</div>
+
+			</div>
 
 		<div class="return-values-container">
 		<div class="symbol-detail">
@@ -310,7 +377,7 @@ def Gtk.PageSetup.new ():
 										)
 								–
 			</div>
-							<p>a new <a href="gtkpagesetup.html#GtkPageSetup">Gtk.PageSetup</a>.</p>
+							<p>the restored <a href="gtkpagesetup.html#GtkPageSetup">Gtk.PageSetup</a></p>
 
 					</div>
 	</div>
@@ -318,18 +385,11 @@ def Gtk.PageSetup.new ():
 
 
 	<p>
-	<b>Since</b>			: 2.10
+	<b>Since</b>			: 2.12
 		</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.12;" id="gtk_page_setup_new_from_file">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -450,24 +510,31 @@ or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Gl
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.12;" id="gtk_page_setup_new_from_key_file">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_page_setup_new_from_file">
-	<span><code>Gtk.PageSetup.new_from_file</code></span>
+<h4 data-hotdoc-id="gtk_page_setup_new_from_key_file">
+	<span><code>Gtk.PageSetup.new_from_key_file</code></span>
 </h4>
 
 
 <pre class="python-prototype">
 @raises(<a href="https://developer.gnome.org/glib/stable/glib-Error-Reporting.html">GLib.GError</a>)
-def Gtk.PageSetup.new_from_file (file_name):
-    #python wrapper for 'gtk_page_setup_new_from_file'</pre>
+def Gtk.PageSetup.new_from_key_file (key_file, group_name):
+    #python wrapper for 'gtk_page_setup_new_from_key_file'</pre>
 
-<p>Reads the page setup from the file <em>file_name</em>. Returns a
-new <a href="gtkpagesetup.html#GtkPageSetup">Gtk.PageSetup</a> object with the restored page setup,
-or <a href="https://docs.python.org/3/library/constants.html#None">None</a> if an error occurred. See <a href="gtkpagesetup.html#gtk_page_setup_to_file">Gtk.PageSetup.to_file</a>.</p>
+<p>Reads the page setup from the group <em>group_name</em> in the key file
+<em>key_file</em>. Returns a new <a href="gtkpagesetup.html#GtkPageSetup">Gtk.PageSetup</a> object with the restored
+page setup, or <a href="https://docs.python.org/3/library/constants.html#None">None</a> if an error occurred.</p>
 
 
 
@@ -476,13 +543,27 @@ or <a href="https://docs.python.org/3/library/constants.html#None">None</a> if a
 					
 <div class="symbol-detail">
 	<div>
-		<i><em><code>file_name</code></em></i>
+		<i><em><code>key_file</code></em></i>
+					(
+						<a title="GLib.KeyFile" href="https://developer.gnome.org/glib/unstable/glib-Key-value-file-parser.html#GKeyFile">GLib.KeyFile</a>
+						)
+				–
+	</div>
+			<p>the <a href="https://developer.gnome.org/glib/unstable/glib-Key-value-file-parser.html#GKeyFile">GLib.KeyFile</a> to retrieve the page_setup from</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>group_name</code></em></i>
 					(
 						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
 						)
 				–
 	</div>
-			<p>the filename to read the page setup from</p>
+			<p>the name of the group in the key_file to read, or <a href="https://docs.python.org/3/library/constants.html#None">None</a>
+to use the default name “Page Setup”</p>
 
 	</div>
 
@@ -510,13 +591,6 @@ or <a href="https://docs.python.org/3/library/constants.html#None">None</a> if a
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.12;" id="gtk_page_setup_new_from_key_file">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -663,24 +737,29 @@ to use the default name “Page Setup”</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.22;" id="gtk_page_setup_new_from_gvariant">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_page_setup_new_from_key_file">
-	<span><code>Gtk.PageSetup.new_from_key_file</code></span>
+<h4 data-hotdoc-id="gtk_page_setup_new_from_gvariant">
+	<span><code>Gtk.PageSetup.new_from_gvariant</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-@raises(<a href="https://developer.gnome.org/glib/stable/glib-Error-Reporting.html">GLib.GError</a>)
-def Gtk.PageSetup.new_from_key_file (key_file, group_name):
-    #python wrapper for 'gtk_page_setup_new_from_key_file'</pre>
+def Gtk.PageSetup.new_from_gvariant (variant):
+    #python wrapper for 'gtk_page_setup_new_from_gvariant'</pre>
 
-<p>Reads the page setup from the group <em>group_name</em> in the key file
-<em>key_file</em>. Returns a new <a href="gtkpagesetup.html#GtkPageSetup">Gtk.PageSetup</a> object with the restored
-page setup, or <a href="https://docs.python.org/3/library/constants.html#None">None</a> if an error occurred.</p>
+<p>Desrialize a page setup from an a{sv} variant in
+the format produced by <a href="gtkpagesetup.html#gtk_page_setup_to_gvariant">Gtk.PageSetup.to_gvariant</a>.</p>
 
 
 
@@ -689,27 +768,13 @@ page setup, or <a href="https://docs.python.org/3/library/constants.html#None">N
 					
 <div class="symbol-detail">
 	<div>
-		<i><em><code>key_file</code></em></i>
+		<i><em><code>variant</code></em></i>
 					(
-						<a title="GLib.KeyFile" href="https://developer.gnome.org/glib/unstable/glib-Key-value-file-parser.html#GKeyFile">GLib.KeyFile</a>
+						<a title="GLib.Variant" href="https://developer.gnome.org/glib/stable/glib-GVariant.html">GLib.Variant</a>
 						)
 				–
 	</div>
-			<p>the <a href="https://developer.gnome.org/glib/unstable/glib-Key-value-file-parser.html#GKeyFile">GLib.KeyFile</a> to retrieve the page_setup from</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>group_name</code></em></i>
-					(
-						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
-						)
-				–
-	</div>
-			<p>the name of the group in the key_file to read, or <a href="https://docs.python.org/3/library/constants.html#None">None</a>
-to use the default name “Page Setup”</p>
+			<p>an a{sv} <a href="https://developer.gnome.org/glib/stable/glib-GVariant.html">GLib.Variant</a></p>
 
 	</div>
 
@@ -724,7 +789,7 @@ to use the default name “Page Setup”</p>
 										)
 								–
 			</div>
-							<p>the restored <a href="gtkpagesetup.html#GtkPageSetup">Gtk.PageSetup</a></p>
+							<p>a new <a href="gtkpagesetup.html#GtkPageSetup">Gtk.PageSetup</a> object</p>
 
 					</div>
 	</div>
@@ -732,18 +797,11 @@ to use the default name “Page Setup”</p>
 
 
 	<p>
-	<b>Since</b>			: 2.12
+	<b>Since</b>			: 3.22
 		</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:3.22;" id="gtk_page_setup_new_from_gvariant">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -863,22 +921,30 @@ the format produced by <a href="gtkpagesetup.html#gtk_page_setup_to_gvariant">Gt
 
 
         </div>
+
+</div>
+
+
+            <h3 class="symbol_section">Methods</h3>
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_page_setup_copy">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_page_setup_new_from_gvariant">
-	<span><code>Gtk.PageSetup.new_from_gvariant</code></span>
+<h4 data-hotdoc-id="gtk_page_setup_copy">
+	<span><code>Gtk.PageSetup.copy</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.PageSetup.new_from_gvariant (variant):
-    #python wrapper for 'gtk_page_setup_new_from_gvariant'</pre>
+def Gtk.PageSetup.copy (self):
+    #python wrapper for 'gtk_page_setup_copy'</pre>
 
-<p>Desrialize a page setup from an a{sv} variant in
-the format produced by <a href="gtkpagesetup.html#gtk_page_setup_to_gvariant">Gtk.PageSetup.to_gvariant</a>.</p>
+<p>Copies a <a href="gtkpagesetup.html#GtkPageSetup">Gtk.PageSetup</a>.</p>
 
 
 
@@ -887,13 +953,13 @@ the format produced by <a href="gtkpagesetup.html#gtk_page_setup_to_gvariant">Gt
 					
 <div class="symbol-detail">
 	<div>
-		<i><em><code>variant</code></em></i>
+		<i><em><code>other</code></em></i>
 					(
-						<a title="GLib.Variant" href="https://developer.gnome.org/glib/stable/glib-GVariant.html">GLib.Variant</a>
+						<a title="Gtk.PageSetup" href="gtkpagesetup.html#GtkPageSetup">Gtk.PageSetup</a>
 						)
 				–
 	</div>
-			<p>an a{sv} <a href="https://developer.gnome.org/glib/stable/glib-GVariant.html">GLib.Variant</a></p>
+			<p>the <a href="gtkpagesetup.html#GtkPageSetup">Gtk.PageSetup</a> to copy</p>
 
 	</div>
 
@@ -908,7 +974,7 @@ the format produced by <a href="gtkpagesetup.html#gtk_page_setup_to_gvariant">Gt
 										)
 								–
 			</div>
-							<p>a new <a href="gtkpagesetup.html#GtkPageSetup">Gtk.PageSetup</a> object</p>
+							<p>a copy of <em>other</em></p>
 
 					</div>
 	</div>
@@ -916,20 +982,11 @@ the format produced by <a href="gtkpagesetup.html#gtk_page_setup_to_gvariant">Gt
 
 
 	<p>
-	<b>Since</b>			: 3.22
+	<b>Since</b>			: 2.10
 		</p>
 
 
         </div>
-
-</div>
-
-
-            <h3 class="symbol_section">Methods</h3>
-                    
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_page_setup_copy">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -1047,21 +1104,28 @@ function Gtk.prototype.copy(): {
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_page_setup_get_orientation">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_page_setup_copy">
-	<span><code>Gtk.PageSetup.copy</code></span>
+<h4 data-hotdoc-id="gtk_page_setup_get_orientation">
+	<span><code>Gtk.PageSetup.get_orientation</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.PageSetup.copy (self):
-    #python wrapper for 'gtk_page_setup_copy'</pre>
+def Gtk.PageSetup.get_orientation (self):
+    #python wrapper for 'gtk_page_setup_get_orientation'</pre>
 
-<p>Copies a <a href="gtkpagesetup.html#GtkPageSetup">Gtk.PageSetup</a>.</p>
+<p>Gets the page orientation of the <a href="gtkpagesetup.html#GtkPageSetup">Gtk.PageSetup</a>.</p>
 
 
 
@@ -1070,13 +1134,13 @@ def Gtk.PageSetup.copy (self):
 					
 <div class="symbol-detail">
 	<div>
-		<i><em><code>other</code></em></i>
+		<i><em><code>setup</code></em></i>
 					(
 						<a title="Gtk.PageSetup" href="gtkpagesetup.html#GtkPageSetup">Gtk.PageSetup</a>
 						)
 				–
 	</div>
-			<p>the <a href="gtkpagesetup.html#GtkPageSetup">Gtk.PageSetup</a> to copy</p>
+			<p>a <a href="gtkpagesetup.html#GtkPageSetup">Gtk.PageSetup</a></p>
 
 	</div>
 
@@ -1087,11 +1151,11 @@ def Gtk.PageSetup.copy (self):
 			<div>
 				<b>Returns</b>
 									(
-					<a title="Gtk.PageSetup" href="gtkpagesetup.html#GtkPageSetup">Gtk.PageSetup</a>
+					<a title="Gtk.PageOrientation" href="gtkprintsettings.html#GtkPageOrientation">Gtk.PageOrientation</a>
 										)
 								–
 			</div>
-							<p>a copy of <em>other</em></p>
+							<p>the page orientation</p>
 
 					</div>
 	</div>
@@ -1104,13 +1168,6 @@ def Gtk.PageSetup.copy (self):
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_page_setup_get_orientation">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -1222,21 +1279,28 @@ function Gtk.prototype.get_orientation(): {
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_page_setup_set_orientation">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_page_setup_get_orientation">
-	<span><code>Gtk.PageSetup.get_orientation</code></span>
+<h4 data-hotdoc-id="gtk_page_setup_set_orientation">
+	<span><code>Gtk.PageSetup.set_orientation</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.PageSetup.get_orientation (self):
-    #python wrapper for 'gtk_page_setup_get_orientation'</pre>
+def Gtk.PageSetup.set_orientation (self, orientation):
+    #python wrapper for 'gtk_page_setup_set_orientation'</pre>
 
-<p>Gets the page orientation of the <a href="gtkpagesetup.html#GtkPageSetup">Gtk.PageSetup</a>.</p>
+<p>Sets the page orientation of the <a href="gtkpagesetup.html#GtkPageSetup">Gtk.PageSetup</a>.</p>
 
 
 
@@ -1255,21 +1319,20 @@ def Gtk.PageSetup.get_orientation (self):
 
 	</div>
 
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Gtk.PageOrientation" href="gtkprintsettings.html#GtkPageOrientation">Gtk.PageOrientation</a>
-										)
-								–
-			</div>
-							<p>the page orientation</p>
-
-					</div>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>orientation</code></em></i>
+					(
+						<a title="Gtk.PageOrientation" href="gtkprintsettings.html#GtkPageOrientation">Gtk.PageOrientation</a>
+						)
+				–
 	</div>
+			<p>a <a href="gtkprintsettings.html#GtkPageOrientation">Gtk.PageOrientation</a> value</p>
+
+	</div>
+
+			</div>
 
 
 
@@ -1279,13 +1342,6 @@ def Gtk.PageSetup.get_orientation (self):
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_page_setup_set_orientation">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -1395,21 +1451,28 @@ function Gtk.prototype.set_orientation(orientation: <a title="Gtk.PageOrientatio
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_page_setup_get_paper_size">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_page_setup_set_orientation">
-	<span><code>Gtk.PageSetup.set_orientation</code></span>
+<h4 data-hotdoc-id="gtk_page_setup_get_paper_size">
+	<span><code>Gtk.PageSetup.get_paper_size</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.PageSetup.set_orientation (self, orientation):
-    #python wrapper for 'gtk_page_setup_set_orientation'</pre>
+def Gtk.PageSetup.get_paper_size (self):
+    #python wrapper for 'gtk_page_setup_get_paper_size'</pre>
 
-<p>Sets the page orientation of the <a href="gtkpagesetup.html#GtkPageSetup">Gtk.PageSetup</a>.</p>
+<p>Gets the paper size of the <a href="gtkpagesetup.html#GtkPageSetup">Gtk.PageSetup</a>.</p>
 
 
 
@@ -1428,20 +1491,21 @@ def Gtk.PageSetup.set_orientation (self, orientation):
 
 	</div>
 
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>orientation</code></em></i>
-					(
-						<a title="Gtk.PageOrientation" href="gtkprintsettings.html#GtkPageOrientation">Gtk.PageOrientation</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkprintsettings.html#GtkPageOrientation">Gtk.PageOrientation</a> value</p>
-
-	</div>
-
 			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.PaperSize" href="gtkpapersize.html#GtkPaperSize">Gtk.PaperSize</a>
+										)
+								–
+			</div>
+							<p>the paper size</p>
+
+					</div>
+	</div>
 
 
 
@@ -1451,13 +1515,6 @@ def Gtk.PageSetup.set_orientation (self, orientation):
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_page_setup_get_paper_size">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -1575,21 +1632,30 @@ function Gtk.prototype.get_paper_size(): {
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_page_setup_set_paper_size">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_page_setup_get_paper_size">
-	<span><code>Gtk.PageSetup.get_paper_size</code></span>
+<h4 data-hotdoc-id="gtk_page_setup_set_paper_size">
+	<span><code>Gtk.PageSetup.set_paper_size</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.PageSetup.get_paper_size (self):
-    #python wrapper for 'gtk_page_setup_get_paper_size'</pre>
+def Gtk.PageSetup.set_paper_size (self, size):
+    #python wrapper for 'gtk_page_setup_set_paper_size'</pre>
 
-<p>Gets the paper size of the <a href="gtkpagesetup.html#GtkPageSetup">Gtk.PageSetup</a>.</p>
+<p>Sets the paper size of the <a href="gtkpagesetup.html#GtkPageSetup">Gtk.PageSetup</a> without
+changing the margins. See
+<a href="gtkpagesetup.html#gtk_page_setup_set_paper_size_and_default_margins">Gtk.PageSetup.set_paper_size_and_default_margins</a>.</p>
 
 
 
@@ -1608,21 +1674,20 @@ def Gtk.PageSetup.get_paper_size (self):
 
 	</div>
 
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Gtk.PaperSize" href="gtkpapersize.html#GtkPaperSize">Gtk.PaperSize</a>
-										)
-								–
-			</div>
-							<p>the paper size</p>
-
-					</div>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>size</code></em></i>
+					(
+						<a title="Gtk.PaperSize" href="gtkpapersize.html#GtkPaperSize">Gtk.PaperSize</a>
+						)
+				–
 	</div>
+			<p>a <a href="gtkpapersize.html#GtkPaperSize">Gtk.PaperSize</a></p>
+
+	</div>
+
+			</div>
 
 
 
@@ -1632,13 +1697,6 @@ def Gtk.PageSetup.get_paper_size (self):
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_page_setup_set_paper_size">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -1752,23 +1810,28 @@ changing the margins. See
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_page_setup_get_top_margin">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_page_setup_set_paper_size">
-	<span><code>Gtk.PageSetup.set_paper_size</code></span>
+<h4 data-hotdoc-id="gtk_page_setup_get_top_margin">
+	<span><code>Gtk.PageSetup.get_top_margin</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.PageSetup.set_paper_size (self, size):
-    #python wrapper for 'gtk_page_setup_set_paper_size'</pre>
+def Gtk.PageSetup.get_top_margin (self, unit):
+    #python wrapper for 'gtk_page_setup_get_top_margin'</pre>
 
-<p>Sets the paper size of the <a href="gtkpagesetup.html#GtkPageSetup">Gtk.PageSetup</a> without
-changing the margins. See
-<a href="gtkpagesetup.html#gtk_page_setup_set_paper_size_and_default_margins">Gtk.PageSetup.set_paper_size_and_default_margins</a>.</p>
+<p>Gets the top margin in units of <em>unit</em>.</p>
 
 
 
@@ -1790,17 +1853,31 @@ changing the margins. See
 					
 <div class="symbol-detail">
 	<div>
-		<i><em><code>size</code></em></i>
+		<i><em><code>unit</code></em></i>
 					(
-						<a title="Gtk.PaperSize" href="gtkpapersize.html#GtkPaperSize">Gtk.PaperSize</a>
+						<a title="Gtk.Unit" href="gtkpapersize.html#GtkUnit">Gtk.Unit</a>
 						)
 				–
 	</div>
-			<p>a <a href="gtkpapersize.html#GtkPaperSize">Gtk.PaperSize</a></p>
+			<p>the unit for the return value</p>
 
 	</div>
 
 			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+										)
+								–
+			</div>
+							<p>the top margin</p>
+
+					</div>
+	</div>
 
 
 
@@ -1810,13 +1887,6 @@ changing the margins. See
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_page_setup_get_top_margin">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -1952,21 +2022,28 @@ function Gtk.prototype.get_top_margin(unit: <a title="Gtk.Unit" href="gtkpapersi
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_page_setup_set_top_margin">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_page_setup_get_top_margin">
-	<span><code>Gtk.PageSetup.get_top_margin</code></span>
+<h4 data-hotdoc-id="gtk_page_setup_set_top_margin">
+	<span><code>Gtk.PageSetup.set_top_margin</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.PageSetup.get_top_margin (self, unit):
-    #python wrapper for 'gtk_page_setup_get_top_margin'</pre>
+def Gtk.PageSetup.set_top_margin (self, margin, unit):
+    #python wrapper for 'gtk_page_setup_set_top_margin'</pre>
 
-<p>Gets the top margin in units of <em>unit</em>.</p>
+<p>Sets the top margin of the <a href="gtkpagesetup.html#GtkPageSetup">Gtk.PageSetup</a>.</p>
 
 
 
@@ -1988,31 +2065,30 @@ def Gtk.PageSetup.get_top_margin (self, unit):
 					
 <div class="symbol-detail">
 	<div>
+		<i><em><code>margin</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>the new top margin in units of <em>unit</em></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
 		<i><em><code>unit</code></em></i>
 					(
 						<a title="Gtk.Unit" href="gtkpapersize.html#GtkUnit">Gtk.Unit</a>
 						)
 				–
 	</div>
-			<p>the unit for the return value</p>
+			<p>the units for <em>margin</em></p>
 
 	</div>
 
 			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
-										)
-								–
-			</div>
-							<p>the top margin</p>
-
-					</div>
-	</div>
 
 
 
@@ -2022,13 +2098,6 @@ def Gtk.PageSetup.get_top_margin (self, unit):
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_page_setup_set_top_margin">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -2162,21 +2231,28 @@ function Gtk.prototype.set_top_margin(margin: <a title="Number" href="https://de
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_page_setup_get_bottom_margin">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_page_setup_set_top_margin">
-	<span><code>Gtk.PageSetup.set_top_margin</code></span>
+<h4 data-hotdoc-id="gtk_page_setup_get_bottom_margin">
+	<span><code>Gtk.PageSetup.get_bottom_margin</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.PageSetup.set_top_margin (self, margin, unit):
-    #python wrapper for 'gtk_page_setup_set_top_margin'</pre>
+def Gtk.PageSetup.get_bottom_margin (self, unit):
+    #python wrapper for 'gtk_page_setup_get_bottom_margin'</pre>
 
-<p>Sets the top margin of the <a href="gtkpagesetup.html#GtkPageSetup">Gtk.PageSetup</a>.</p>
+<p>Gets the bottom margin in units of <em>unit</em>.</p>
 
 
 
@@ -2198,30 +2274,31 @@ def Gtk.PageSetup.set_top_margin (self, margin, unit):
 					
 <div class="symbol-detail">
 	<div>
-		<i><em><code>margin</code></em></i>
-					(
-						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
-						)
-				–
-	</div>
-			<p>the new top margin in units of <em>unit</em></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
 		<i><em><code>unit</code></em></i>
 					(
 						<a title="Gtk.Unit" href="gtkpapersize.html#GtkUnit">Gtk.Unit</a>
 						)
 				–
 	</div>
-			<p>the units for <em>margin</em></p>
+			<p>the unit for the return value</p>
 
 	</div>
 
 			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+										)
+								–
+			</div>
+							<p>the bottom margin</p>
+
+					</div>
+	</div>
 
 
 
@@ -2231,13 +2308,6 @@ def Gtk.PageSetup.set_top_margin (self, margin, unit):
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_page_setup_get_bottom_margin">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -2373,21 +2443,28 @@ function Gtk.prototype.get_bottom_margin(unit: <a title="Gtk.Unit" href="gtkpape
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_page_setup_set_bottom_margin">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_page_setup_get_bottom_margin">
-	<span><code>Gtk.PageSetup.get_bottom_margin</code></span>
+<h4 data-hotdoc-id="gtk_page_setup_set_bottom_margin">
+	<span><code>Gtk.PageSetup.set_bottom_margin</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.PageSetup.get_bottom_margin (self, unit):
-    #python wrapper for 'gtk_page_setup_get_bottom_margin'</pre>
+def Gtk.PageSetup.set_bottom_margin (self, margin, unit):
+    #python wrapper for 'gtk_page_setup_set_bottom_margin'</pre>
 
-<p>Gets the bottom margin in units of <em>unit</em>.</p>
+<p>Sets the bottom margin of the <a href="gtkpagesetup.html#GtkPageSetup">Gtk.PageSetup</a>.</p>
 
 
 
@@ -2409,31 +2486,30 @@ def Gtk.PageSetup.get_bottom_margin (self, unit):
 					
 <div class="symbol-detail">
 	<div>
+		<i><em><code>margin</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>the new bottom margin in units of <em>unit</em></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
 		<i><em><code>unit</code></em></i>
 					(
 						<a title="Gtk.Unit" href="gtkpapersize.html#GtkUnit">Gtk.Unit</a>
 						)
 				–
 	</div>
-			<p>the unit for the return value</p>
+			<p>the units for <em>margin</em></p>
 
 	</div>
 
 			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
-										)
-								–
-			</div>
-							<p>the bottom margin</p>
-
-					</div>
-	</div>
 
 
 
@@ -2443,13 +2519,6 @@ def Gtk.PageSetup.get_bottom_margin (self, unit):
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_page_setup_set_bottom_margin">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -2583,21 +2652,28 @@ function Gtk.prototype.set_bottom_margin(margin: <a title="Number" href="https:/
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_page_setup_get_left_margin">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_page_setup_set_bottom_margin">
-	<span><code>Gtk.PageSetup.set_bottom_margin</code></span>
+<h4 data-hotdoc-id="gtk_page_setup_get_left_margin">
+	<span><code>Gtk.PageSetup.get_left_margin</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.PageSetup.set_bottom_margin (self, margin, unit):
-    #python wrapper for 'gtk_page_setup_set_bottom_margin'</pre>
+def Gtk.PageSetup.get_left_margin (self, unit):
+    #python wrapper for 'gtk_page_setup_get_left_margin'</pre>
 
-<p>Sets the bottom margin of the <a href="gtkpagesetup.html#GtkPageSetup">Gtk.PageSetup</a>.</p>
+<p>Gets the left margin in units of <em>unit</em>.</p>
 
 
 
@@ -2619,30 +2695,31 @@ def Gtk.PageSetup.set_bottom_margin (self, margin, unit):
 					
 <div class="symbol-detail">
 	<div>
-		<i><em><code>margin</code></em></i>
-					(
-						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
-						)
-				–
-	</div>
-			<p>the new bottom margin in units of <em>unit</em></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
 		<i><em><code>unit</code></em></i>
 					(
 						<a title="Gtk.Unit" href="gtkpapersize.html#GtkUnit">Gtk.Unit</a>
 						)
 				–
 	</div>
-			<p>the units for <em>margin</em></p>
+			<p>the unit for the return value</p>
 
 	</div>
 
 			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+										)
+								–
+			</div>
+							<p>the left margin</p>
+
+					</div>
+	</div>
 
 
 
@@ -2652,13 +2729,6 @@ def Gtk.PageSetup.set_bottom_margin (self, margin, unit):
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_page_setup_get_left_margin">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -2794,21 +2864,28 @@ function Gtk.prototype.get_left_margin(unit: <a title="Gtk.Unit" href="gtkpapers
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_page_setup_set_left_margin">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_page_setup_get_left_margin">
-	<span><code>Gtk.PageSetup.get_left_margin</code></span>
+<h4 data-hotdoc-id="gtk_page_setup_set_left_margin">
+	<span><code>Gtk.PageSetup.set_left_margin</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.PageSetup.get_left_margin (self, unit):
-    #python wrapper for 'gtk_page_setup_get_left_margin'</pre>
+def Gtk.PageSetup.set_left_margin (self, margin, unit):
+    #python wrapper for 'gtk_page_setup_set_left_margin'</pre>
 
-<p>Gets the left margin in units of <em>unit</em>.</p>
+<p>Sets the left margin of the <a href="gtkpagesetup.html#GtkPageSetup">Gtk.PageSetup</a>.</p>
 
 
 
@@ -2830,31 +2907,30 @@ def Gtk.PageSetup.get_left_margin (self, unit):
 					
 <div class="symbol-detail">
 	<div>
+		<i><em><code>margin</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>the new left margin in units of <em>unit</em></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
 		<i><em><code>unit</code></em></i>
 					(
 						<a title="Gtk.Unit" href="gtkpapersize.html#GtkUnit">Gtk.Unit</a>
 						)
 				–
 	</div>
-			<p>the unit for the return value</p>
+			<p>the units for <em>margin</em></p>
 
 	</div>
 
 			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
-										)
-								–
-			</div>
-							<p>the left margin</p>
-
-					</div>
-	</div>
 
 
 
@@ -2864,13 +2940,6 @@ def Gtk.PageSetup.get_left_margin (self, unit):
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_page_setup_set_left_margin">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -3004,21 +3073,28 @@ function Gtk.prototype.set_left_margin(margin: <a title="Number" href="https://d
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_page_setup_get_right_margin">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_page_setup_set_left_margin">
-	<span><code>Gtk.PageSetup.set_left_margin</code></span>
+<h4 data-hotdoc-id="gtk_page_setup_get_right_margin">
+	<span><code>Gtk.PageSetup.get_right_margin</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.PageSetup.set_left_margin (self, margin, unit):
-    #python wrapper for 'gtk_page_setup_set_left_margin'</pre>
+def Gtk.PageSetup.get_right_margin (self, unit):
+    #python wrapper for 'gtk_page_setup_get_right_margin'</pre>
 
-<p>Sets the left margin of the <a href="gtkpagesetup.html#GtkPageSetup">Gtk.PageSetup</a>.</p>
+<p>Gets the right margin in units of <em>unit</em>.</p>
 
 
 
@@ -3040,30 +3116,31 @@ def Gtk.PageSetup.set_left_margin (self, margin, unit):
 					
 <div class="symbol-detail">
 	<div>
-		<i><em><code>margin</code></em></i>
-					(
-						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
-						)
-				–
-	</div>
-			<p>the new left margin in units of <em>unit</em></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
 		<i><em><code>unit</code></em></i>
 					(
 						<a title="Gtk.Unit" href="gtkpapersize.html#GtkUnit">Gtk.Unit</a>
 						)
 				–
 	</div>
-			<p>the units for <em>margin</em></p>
+			<p>the unit for the return value</p>
 
 	</div>
 
 			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+										)
+								–
+			</div>
+							<p>the right margin</p>
+
+					</div>
+	</div>
 
 
 
@@ -3073,13 +3150,6 @@ def Gtk.PageSetup.set_left_margin (self, margin, unit):
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_page_setup_get_right_margin">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -3215,21 +3285,28 @@ function Gtk.prototype.get_right_margin(unit: <a title="Gtk.Unit" href="gtkpaper
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_page_setup_set_right_margin">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_page_setup_get_right_margin">
-	<span><code>Gtk.PageSetup.get_right_margin</code></span>
+<h4 data-hotdoc-id="gtk_page_setup_set_right_margin">
+	<span><code>Gtk.PageSetup.set_right_margin</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.PageSetup.get_right_margin (self, unit):
-    #python wrapper for 'gtk_page_setup_get_right_margin'</pre>
+def Gtk.PageSetup.set_right_margin (self, margin, unit):
+    #python wrapper for 'gtk_page_setup_set_right_margin'</pre>
 
-<p>Gets the right margin in units of <em>unit</em>.</p>
+<p>Sets the right margin of the <a href="gtkpagesetup.html#GtkPageSetup">Gtk.PageSetup</a>.</p>
 
 
 
@@ -3251,31 +3328,30 @@ def Gtk.PageSetup.get_right_margin (self, unit):
 					
 <div class="symbol-detail">
 	<div>
+		<i><em><code>margin</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>the new right margin in units of <em>unit</em></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
 		<i><em><code>unit</code></em></i>
 					(
 						<a title="Gtk.Unit" href="gtkpapersize.html#GtkUnit">Gtk.Unit</a>
 						)
 				–
 	</div>
-			<p>the unit for the return value</p>
+			<p>the units for <em>margin</em></p>
 
 	</div>
 
 			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
-										)
-								–
-			</div>
-							<p>the right margin</p>
-
-					</div>
-	</div>
 
 
 
@@ -3285,13 +3361,6 @@ def Gtk.PageSetup.get_right_margin (self, unit):
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_page_setup_set_right_margin">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -3425,21 +3494,29 @@ function Gtk.prototype.set_right_margin(margin: <a title="Number" href="https://
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_page_setup_set_paper_size_and_default_margins">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_page_setup_set_right_margin">
-	<span><code>Gtk.PageSetup.set_right_margin</code></span>
+<h4 data-hotdoc-id="gtk_page_setup_set_paper_size_and_default_margins">
+	<span><code>Gtk.PageSetup.set_paper_size_and_default_margins</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.PageSetup.set_right_margin (self, margin, unit):
-    #python wrapper for 'gtk_page_setup_set_right_margin'</pre>
+def Gtk.PageSetup.set_paper_size_and_default_margins (self, size):
+    #python wrapper for 'gtk_page_setup_set_paper_size_and_default_margins'</pre>
 
-<p>Sets the right margin of the <a href="gtkpagesetup.html#GtkPageSetup">Gtk.PageSetup</a>.</p>
+<p>Sets the paper size of the <a href="gtkpagesetup.html#GtkPageSetup">Gtk.PageSetup</a> and modifies
+the margins according to the new paper size.</p>
 
 
 
@@ -3461,26 +3538,13 @@ def Gtk.PageSetup.set_right_margin (self, margin, unit):
 					
 <div class="symbol-detail">
 	<div>
-		<i><em><code>margin</code></em></i>
+		<i><em><code>size</code></em></i>
 					(
-						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						<a title="Gtk.PaperSize" href="gtkpapersize.html#GtkPaperSize">Gtk.PaperSize</a>
 						)
 				–
 	</div>
-			<p>the new right margin in units of <em>unit</em></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>unit</code></em></i>
-					(
-						<a title="Gtk.Unit" href="gtkpapersize.html#GtkUnit">Gtk.Unit</a>
-						)
-				–
-	</div>
-			<p>the units for <em>margin</em></p>
+			<p>a <a href="gtkpapersize.html#GtkPaperSize">Gtk.PaperSize</a></p>
 
 	</div>
 
@@ -3494,13 +3558,6 @@ def Gtk.PageSetup.set_right_margin (self, margin, unit):
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_page_setup_set_paper_size_and_default_margins">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -3612,22 +3669,31 @@ the margins according to the new paper size.</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_page_setup_get_paper_width">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_page_setup_set_paper_size_and_default_margins">
-	<span><code>Gtk.PageSetup.set_paper_size_and_default_margins</code></span>
+<h4 data-hotdoc-id="gtk_page_setup_get_paper_width">
+	<span><code>Gtk.PageSetup.get_paper_width</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.PageSetup.set_paper_size_and_default_margins (self, size):
-    #python wrapper for 'gtk_page_setup_set_paper_size_and_default_margins'</pre>
+def Gtk.PageSetup.get_paper_width (self, unit):
+    #python wrapper for 'gtk_page_setup_get_paper_width'</pre>
 
-<p>Sets the paper size of the <a href="gtkpagesetup.html#GtkPageSetup">Gtk.PageSetup</a> and modifies
-the margins according to the new paper size.</p>
+<p>Returns the paper width in units of <em>unit</em>.</p>
+<p>Note that this function takes orientation, but
+not margins into consideration.
+See <a href="gtkpagesetup.html#gtk_page_setup_get_page_width">Gtk.PageSetup.get_page_width</a>.</p>
 
 
 
@@ -3649,17 +3715,31 @@ the margins according to the new paper size.</p>
 					
 <div class="symbol-detail">
 	<div>
-		<i><em><code>size</code></em></i>
+		<i><em><code>unit</code></em></i>
 					(
-						<a title="Gtk.PaperSize" href="gtkpapersize.html#GtkPaperSize">Gtk.PaperSize</a>
+						<a title="Gtk.Unit" href="gtkpapersize.html#GtkUnit">Gtk.Unit</a>
 						)
 				–
 	</div>
-			<p>a <a href="gtkpapersize.html#GtkPaperSize">Gtk.PaperSize</a></p>
+			<p>the unit for the return value</p>
 
 	</div>
 
 			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+										)
+								–
+			</div>
+							<p>the paper width.</p>
+
+					</div>
+	</div>
 
 
 
@@ -3669,13 +3749,6 @@ the margins according to the new paper size.</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_page_setup_get_paper_width">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -3817,24 +3890,31 @@ See <a href="gtkpagesetup.html#gtk_page_setup_get_page_width">Gtk.prototype.get_
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_page_setup_get_paper_height">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_page_setup_get_paper_width">
-	<span><code>Gtk.PageSetup.get_paper_width</code></span>
+<h4 data-hotdoc-id="gtk_page_setup_get_paper_height">
+	<span><code>Gtk.PageSetup.get_paper_height</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.PageSetup.get_paper_width (self, unit):
-    #python wrapper for 'gtk_page_setup_get_paper_width'</pre>
+def Gtk.PageSetup.get_paper_height (self, unit):
+    #python wrapper for 'gtk_page_setup_get_paper_height'</pre>
 
-<p>Returns the paper width in units of <em>unit</em>.</p>
+<p>Returns the paper height in units of <em>unit</em>.</p>
 <p>Note that this function takes orientation, but
 not margins into consideration.
-See <a href="gtkpagesetup.html#gtk_page_setup_get_page_width">Gtk.PageSetup.get_page_width</a>.</p>
+See <a href="gtkpagesetup.html#gtk_page_setup_get_page_height">Gtk.PageSetup.get_page_height</a>.</p>
 
 
 
@@ -3877,7 +3957,7 @@ See <a href="gtkpagesetup.html#gtk_page_setup_get_page_width">Gtk.PageSetup.get_
 										)
 								–
 			</div>
-							<p>the paper width.</p>
+							<p>the paper height.</p>
 
 					</div>
 	</div>
@@ -3890,13 +3970,6 @@ See <a href="gtkpagesetup.html#gtk_page_setup_get_page_width">Gtk.PageSetup.get_
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_page_setup_get_paper_height">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -4038,24 +4111,31 @@ See <a href="gtkpagesetup.html#gtk_page_setup_get_page_height">Gtk.prototype.get
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_page_setup_get_page_width">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_page_setup_get_paper_height">
-	<span><code>Gtk.PageSetup.get_paper_height</code></span>
+<h4 data-hotdoc-id="gtk_page_setup_get_page_width">
+	<span><code>Gtk.PageSetup.get_page_width</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.PageSetup.get_paper_height (self, unit):
-    #python wrapper for 'gtk_page_setup_get_paper_height'</pre>
+def Gtk.PageSetup.get_page_width (self, unit):
+    #python wrapper for 'gtk_page_setup_get_page_width'</pre>
 
-<p>Returns the paper height in units of <em>unit</em>.</p>
-<p>Note that this function takes orientation, but
-not margins into consideration.
-See <a href="gtkpagesetup.html#gtk_page_setup_get_page_height">Gtk.PageSetup.get_page_height</a>.</p>
+<p>Returns the page width in units of <em>unit</em>.</p>
+<p>Note that this function takes orientation and
+margins into consideration.
+See <a href="gtkpagesetup.html#gtk_page_setup_get_paper_width">Gtk.PageSetup.get_paper_width</a>.</p>
 
 
 
@@ -4098,7 +4178,7 @@ See <a href="gtkpagesetup.html#gtk_page_setup_get_page_height">Gtk.PageSetup.get
 										)
 								–
 			</div>
-							<p>the paper height.</p>
+							<p>the page width.</p>
 
 					</div>
 	</div>
@@ -4111,13 +4191,6 @@ See <a href="gtkpagesetup.html#gtk_page_setup_get_page_height">Gtk.PageSetup.get
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_page_setup_get_page_width">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -4259,24 +4332,31 @@ See <a href="gtkpagesetup.html#gtk_page_setup_get_paper_width">Gtk.prototype.get
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_page_setup_get_page_height">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_page_setup_get_page_width">
-	<span><code>Gtk.PageSetup.get_page_width</code></span>
+<h4 data-hotdoc-id="gtk_page_setup_get_page_height">
+	<span><code>Gtk.PageSetup.get_page_height</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.PageSetup.get_page_width (self, unit):
-    #python wrapper for 'gtk_page_setup_get_page_width'</pre>
+def Gtk.PageSetup.get_page_height (self, unit):
+    #python wrapper for 'gtk_page_setup_get_page_height'</pre>
 
-<p>Returns the page width in units of <em>unit</em>.</p>
+<p>Returns the page height in units of <em>unit</em>.</p>
 <p>Note that this function takes orientation and
 margins into consideration.
-See <a href="gtkpagesetup.html#gtk_page_setup_get_paper_width">Gtk.PageSetup.get_paper_width</a>.</p>
+See <a href="gtkpagesetup.html#gtk_page_setup_get_paper_height">Gtk.PageSetup.get_paper_height</a>.</p>
 
 
 
@@ -4319,7 +4399,7 @@ See <a href="gtkpagesetup.html#gtk_page_setup_get_paper_width">Gtk.PageSetup.get
 										)
 								–
 			</div>
-							<p>the page width.</p>
+							<p>the page height.</p>
 
 					</div>
 	</div>
@@ -4332,13 +4412,6 @@ See <a href="gtkpagesetup.html#gtk_page_setup_get_paper_width">Gtk.PageSetup.get
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_page_setup_get_page_height">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -4480,24 +4553,30 @@ See <a href="gtkpagesetup.html#gtk_page_setup_get_paper_height">Gtk.prototype.ge
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.14;" id="gtk_page_setup_load_file">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_page_setup_get_page_height">
-	<span><code>Gtk.PageSetup.get_page_height</code></span>
+<h4 data-hotdoc-id="gtk_page_setup_load_file">
+	<span><code>Gtk.PageSetup.load_file</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.PageSetup.get_page_height (self, unit):
-    #python wrapper for 'gtk_page_setup_get_page_height'</pre>
+@raises(<a href="https://developer.gnome.org/glib/stable/glib-Error-Reporting.html">GLib.GError</a>)
+def Gtk.PageSetup.load_file (self, file_name):
+    #python wrapper for 'gtk_page_setup_load_file'</pre>
 
-<p>Returns the page height in units of <em>unit</em>.</p>
-<p>Note that this function takes orientation and
-margins into consideration.
-See <a href="gtkpagesetup.html#gtk_page_setup_get_paper_height">Gtk.PageSetup.get_paper_height</a>.</p>
+<p>Reads the page setup from the file <em>file_name</em>.
+See <a href="gtkpagesetup.html#gtk_page_setup_to_file">Gtk.PageSetup.to_file</a>.</p>
 
 
 
@@ -4519,13 +4598,13 @@ See <a href="gtkpagesetup.html#gtk_page_setup_get_paper_height">Gtk.PageSetup.ge
 					
 <div class="symbol-detail">
 	<div>
-		<i><em><code>unit</code></em></i>
+		<i><em><code>file_name</code></em></i>
 					(
-						<a title="Gtk.Unit" href="gtkpapersize.html#GtkUnit">Gtk.Unit</a>
+						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
 						)
 				–
 	</div>
-			<p>the unit for the return value</p>
+			<p>the filename to read the page setup from</p>
 
 	</div>
 
@@ -4536,11 +4615,11 @@ See <a href="gtkpagesetup.html#gtk_page_setup_get_paper_height">Gtk.PageSetup.ge
 			<div>
 				<b>Returns</b>
 									(
-					<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
 										)
 								–
 			</div>
-							<p>the page height.</p>
+							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> on success</p>
 
 					</div>
 	</div>
@@ -4548,18 +4627,11 @@ See <a href="gtkpagesetup.html#gtk_page_setup_get_paper_height">Gtk.PageSetup.ge
 
 
 	<p>
-	<b>Since</b>			: 2.10
+	<b>Since</b>			: 2.14
 		</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.14;" id="gtk_page_setup_load_file">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -4702,23 +4774,30 @@ See <a href="gtkpagesetup.html#gtk_page_setup_to_file">Gtk.prototype.to_file</a>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.14;" id="gtk_page_setup_load_key_file">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_page_setup_load_file">
-	<span><code>Gtk.PageSetup.load_file</code></span>
+<h4 data-hotdoc-id="gtk_page_setup_load_key_file">
+	<span><code>Gtk.PageSetup.load_key_file</code></span>
 </h4>
 
 
 <pre class="python-prototype">
 @raises(<a href="https://developer.gnome.org/glib/stable/glib-Error-Reporting.html">GLib.GError</a>)
-def Gtk.PageSetup.load_file (self, file_name):
-    #python wrapper for 'gtk_page_setup_load_file'</pre>
+def Gtk.PageSetup.load_key_file (self, key_file, group_name):
+    #python wrapper for 'gtk_page_setup_load_key_file'</pre>
 
-<p>Reads the page setup from the file <em>file_name</em>.
-See <a href="gtkpagesetup.html#gtk_page_setup_to_file">Gtk.PageSetup.to_file</a>.</p>
+<p>Reads the page setup from the group <em>group_name</em> in the key file
+<em>key_file</em>.</p>
 
 
 
@@ -4740,13 +4819,27 @@ See <a href="gtkpagesetup.html#gtk_page_setup_to_file">Gtk.PageSetup.to_file</a>
 					
 <div class="symbol-detail">
 	<div>
-		<i><em><code>file_name</code></em></i>
+		<i><em><code>key_file</code></em></i>
+					(
+						<a title="GLib.KeyFile" href="https://developer.gnome.org/glib/unstable/glib-Key-value-file-parser.html#GKeyFile">GLib.KeyFile</a>
+						)
+				–
+	</div>
+			<p>the <a href="https://developer.gnome.org/glib/unstable/glib-Key-value-file-parser.html#GKeyFile">GLib.KeyFile</a> to retrieve the page_setup from</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>group_name</code></em></i>
 					(
 						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
 						)
 				–
 	</div>
-			<p>the filename to read the page setup from</p>
+			<p>the name of the group in the key_file to read, or <a href="https://docs.python.org/3/library/constants.html#None">None</a>
+to use the default name “Page Setup”</p>
 
 	</div>
 
@@ -4774,13 +4867,6 @@ See <a href="gtkpagesetup.html#gtk_page_setup_to_file">Gtk.PageSetup.to_file</a>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.14;" id="gtk_page_setup_load_key_file">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -4949,23 +5035,29 @@ to use the default name “Page Setup”</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.12;" id="gtk_page_setup_to_file">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_page_setup_load_key_file">
-	<span><code>Gtk.PageSetup.load_key_file</code></span>
+<h4 data-hotdoc-id="gtk_page_setup_to_file">
+	<span><code>Gtk.PageSetup.to_file</code></span>
 </h4>
 
 
 <pre class="python-prototype">
 @raises(<a href="https://developer.gnome.org/glib/stable/glib-Error-Reporting.html">GLib.GError</a>)
-def Gtk.PageSetup.load_key_file (self, key_file, group_name):
-    #python wrapper for 'gtk_page_setup_load_key_file'</pre>
+def Gtk.PageSetup.to_file (self, file_name):
+    #python wrapper for 'gtk_page_setup_to_file'</pre>
 
-<p>Reads the page setup from the group <em>group_name</em> in the key file
-<em>key_file</em>.</p>
+<p>This function saves the information from <em>setup</em> to <em>file_name</em>.</p>
 
 
 
@@ -4987,27 +5079,13 @@ def Gtk.PageSetup.load_key_file (self, key_file, group_name):
 					
 <div class="symbol-detail">
 	<div>
-		<i><em><code>key_file</code></em></i>
-					(
-						<a title="GLib.KeyFile" href="https://developer.gnome.org/glib/unstable/glib-Key-value-file-parser.html#GKeyFile">GLib.KeyFile</a>
-						)
-				–
-	</div>
-			<p>the <a href="https://developer.gnome.org/glib/unstable/glib-Key-value-file-parser.html#GKeyFile">GLib.KeyFile</a> to retrieve the page_setup from</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>group_name</code></em></i>
+		<i><em><code>file_name</code></em></i>
 					(
 						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
 						)
 				–
 	</div>
-			<p>the name of the group in the key_file to read, or <a href="https://docs.python.org/3/library/constants.html#None">None</a>
-to use the default name “Page Setup”</p>
+			<p>the file to save to</p>
 
 	</div>
 
@@ -5030,18 +5108,11 @@ to use the default name “Page Setup”</p>
 
 
 	<p>
-	<b>Since</b>			: 2.14
+	<b>Since</b>			: 2.12
 		</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.12;" id="gtk_page_setup_to_file">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -5182,22 +5253,28 @@ function Gtk.prototype.to_file(file_name: filename): {
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.12;" id="gtk_page_setup_to_key_file">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_page_setup_to_file">
-	<span><code>Gtk.PageSetup.to_file</code></span>
+<h4 data-hotdoc-id="gtk_page_setup_to_key_file">
+	<span><code>Gtk.PageSetup.to_key_file</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-@raises(<a href="https://developer.gnome.org/glib/stable/glib-Error-Reporting.html">GLib.GError</a>)
-def Gtk.PageSetup.to_file (self, file_name):
-    #python wrapper for 'gtk_page_setup_to_file'</pre>
+def Gtk.PageSetup.to_key_file (self, key_file, group_name):
+    #python wrapper for 'gtk_page_setup_to_key_file'</pre>
 
-<p>This function saves the information from <em>setup</em> to <em>file_name</em>.</p>
+<p>This function adds the page setup from <em>setup</em> to <em>key_file</em>.</p>
 
 
 
@@ -5219,31 +5296,31 @@ def Gtk.PageSetup.to_file (self, file_name):
 					
 <div class="symbol-detail">
 	<div>
-		<i><em><code>file_name</code></em></i>
+		<i><em><code>key_file</code></em></i>
+					(
+						<a title="GLib.KeyFile" href="https://developer.gnome.org/glib/unstable/glib-Key-value-file-parser.html#GKeyFile">GLib.KeyFile</a>
+						)
+				–
+	</div>
+			<p>the <a href="https://developer.gnome.org/glib/unstable/glib-Key-value-file-parser.html#GKeyFile">GLib.KeyFile</a> to save the page setup to</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>group_name</code></em></i>
 					(
 						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
 						)
 				–
 	</div>
-			<p>the file to save to</p>
+			<p>the group to add the settings to in <em>key_file</em>,
+or <a href="https://docs.python.org/3/library/constants.html#None">None</a> to use the default name “Page Setup”</p>
 
 	</div>
 
 			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
-										)
-								–
-			</div>
-							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> on success</p>
-
-					</div>
-	</div>
 
 
 
@@ -5253,13 +5330,6 @@ def Gtk.PageSetup.to_file (self, file_name):
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.12;" id="gtk_page_setup_to_key_file">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -5395,21 +5465,29 @@ or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Gl
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.22;" id="gtk_page_setup_to_gvariant">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_page_setup_to_key_file">
-	<span><code>Gtk.PageSetup.to_key_file</code></span>
+<h4 data-hotdoc-id="gtk_page_setup_to_gvariant">
+	<span><code>Gtk.PageSetup.to_gvariant</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.PageSetup.to_key_file (self, key_file, group_name):
-    #python wrapper for 'gtk_page_setup_to_key_file'</pre>
+def Gtk.PageSetup.to_gvariant (self):
+    #python wrapper for 'gtk_page_setup_to_gvariant'</pre>
 
-<p>This function adds the page setup from <em>setup</em> to <em>key_file</em>.</p>
+<p>Serialize page setup to an a{sv} variant.</p>
+<p>Return: (transfer none): a new, floating, <a href="https://developer.gnome.org/glib/stable/glib-GVariant.html">GLib.Variant</a></p>
 
 
 
@@ -5428,50 +5506,29 @@ def Gtk.PageSetup.to_key_file (self, key_file, group_name):
 
 	</div>
 
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>key_file</code></em></i>
-					(
-						<a title="GLib.KeyFile" href="https://developer.gnome.org/glib/unstable/glib-Key-value-file-parser.html#GKeyFile">GLib.KeyFile</a>
-						)
-				–
-	</div>
-			<p>the <a href="https://developer.gnome.org/glib/unstable/glib-Key-value-file-parser.html#GKeyFile">GLib.KeyFile</a> to save the page setup to</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>group_name</code></em></i>
-					(
-						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
-						)
-				–
-	</div>
-			<p>the group to add the settings to in <em>key_file</em>,
-or <a href="https://docs.python.org/3/library/constants.html#None">None</a> to use the default name “Page Setup”</p>
-
-	</div>
-
 			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="GLib.Variant" href="https://developer.gnome.org/glib/stable/glib-GVariant.html">GLib.Variant</a>
+										)
+								–
+			</div>
+							<i>No description available</i>
+					</div>
+	</div>
 
 
 
 	<p>
-	<b>Since</b>			: 2.12
+	<b>Since</b>			: 3.22
 		</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:3.22;" id="gtk_page_setup_to_gvariant">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -5568,63 +5625,6 @@ function Gtk.prototype.to_gvariant(): {
 				<b>Returns</b>
 									(
 					<a title="GLib.Variant" href="https://developer.gnome.org/glib/unstable/glib-GVariant.html#GVariant">GLib.Variant</a>
-										)
-								–
-			</div>
-							<i>No description available</i>
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.22
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_page_setup_to_gvariant">
-	<span><code>Gtk.PageSetup.to_gvariant</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.PageSetup.to_gvariant (self):
-    #python wrapper for 'gtk_page_setup_to_gvariant'</pre>
-
-<p>Serialize page setup to an a{sv} variant.</p>
-<p>Return: (transfer none): a new, floating, <a href="https://developer.gnome.org/glib/stable/glib-GVariant.html">GLib.Variant</a></p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>setup</code></em></i>
-					(
-						<a title="Gtk.PageSetup" href="gtkpagesetup.html#GtkPageSetup">Gtk.PageSetup</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkpagesetup.html#GtkPageSetup">Gtk.PageSetup</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="GLib.Variant" href="https://developer.gnome.org/glib/stable/glib-GVariant.html">GLib.Variant</a>
 										)
 								–
 			</div>

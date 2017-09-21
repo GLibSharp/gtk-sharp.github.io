@@ -89,7 +89,7 @@ $('body').removeClass('no-script');
 </nav>
 
 <main>
-<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="gtkscrollable.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['c', 'javascript', 'python']" data-hotdoc-meta-gi-language="c">
+<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="gtkscrollable.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['python', 'c', 'javascript']" data-hotdoc-meta-gi-language="c">
 <script src="assets/js/utils.js"></script>
 
 <div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
@@ -110,6 +110,63 @@ $('body').removeClass('no-script');
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_scrollable_get_hadjustment">
 	
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrollable_get_hadjustment">
+	<span><code>Gtk.Scrollable.get_hadjustment</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Scrollable.get_hadjustment (self):
+    #python wrapper for 'gtk_scrollable_get_hadjustment'</pre>
+
+<p>Retrieves the <a href="gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a> used for horizontal scrolling.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrollable</code></em></i>
+					(
+						<a title="Gtk.Scrollable" href="gtkscrollable.html#GtkScrollable">Gtk.Scrollable</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscrollable.html#GtkScrollable">Gtk.Scrollable</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Adjustment" href="gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a>
+										)
+								–
+			</div>
+							<p>horizontal <a href="gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a>.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -227,21 +284,28 @@ function Gtk.prototype.get_hadjustment(): {
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_scrollable_set_hadjustment">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_scrollable_get_hadjustment">
-	<span><code>Gtk.Scrollable.get_hadjustment</code></span>
+<h4 data-hotdoc-id="gtk_scrollable_set_hadjustment">
+	<span><code>Gtk.Scrollable.set_hadjustment</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.Scrollable.get_hadjustment (self):
-    #python wrapper for 'gtk_scrollable_get_hadjustment'</pre>
+def Gtk.Scrollable.set_hadjustment (self, hadjustment):
+    #python wrapper for 'gtk_scrollable_set_hadjustment'</pre>
 
-<p>Retrieves the <a href="gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a> used for horizontal scrolling.</p>
+<p>Sets the horizontal adjustment of the <a href="gtkscrollable.html#GtkScrollable">Gtk.Scrollable</a>.</p>
 
 
 
@@ -260,21 +324,20 @@ def Gtk.Scrollable.get_hadjustment (self):
 
 	</div>
 
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Gtk.Adjustment" href="gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a>
-										)
-								–
-			</div>
-							<p>horizontal <a href="gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a>.</p>
-
-					</div>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>hadjustment</code></em></i>
+					(
+						<a title="Gtk.Adjustment" href="gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a>
+						)
+				–
 	</div>
+			<p>a <a href="gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a></p>
+
+	</div>
+
+			</div>
 
 
 
@@ -284,13 +347,6 @@ def Gtk.Scrollable.get_hadjustment (self):
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_scrollable_set_hadjustment">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -405,21 +461,28 @@ function Gtk.prototype.set_hadjustment(hadjustment: <a title="Gtk.Adjustment" hr
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_scrollable_get_vadjustment">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_scrollable_set_hadjustment">
-	<span><code>Gtk.Scrollable.set_hadjustment</code></span>
+<h4 data-hotdoc-id="gtk_scrollable_get_vadjustment">
+	<span><code>Gtk.Scrollable.get_vadjustment</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.Scrollable.set_hadjustment (self, hadjustment):
-    #python wrapper for 'gtk_scrollable_set_hadjustment'</pre>
+def Gtk.Scrollable.get_vadjustment (self):
+    #python wrapper for 'gtk_scrollable_get_vadjustment'</pre>
 
-<p>Sets the horizontal adjustment of the <a href="gtkscrollable.html#GtkScrollable">Gtk.Scrollable</a>.</p>
+<p>Retrieves the <a href="gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a> used for vertical scrolling.</p>
 
 
 
@@ -438,20 +501,21 @@ def Gtk.Scrollable.set_hadjustment (self, hadjustment):
 
 	</div>
 
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>hadjustment</code></em></i>
-					(
-						<a title="Gtk.Adjustment" href="gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a></p>
-
-	</div>
-
 			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Adjustment" href="gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a>
+										)
+								–
+			</div>
+							<p>vertical <a href="gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a>.</p>
+
+					</div>
+	</div>
 
 
 
@@ -461,13 +525,6 @@ def Gtk.Scrollable.set_hadjustment (self, hadjustment):
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_scrollable_get_vadjustment">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -585,21 +642,28 @@ function Gtk.prototype.get_vadjustment(): {
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_scrollable_set_vadjustment">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_scrollable_get_vadjustment">
-	<span><code>Gtk.Scrollable.get_vadjustment</code></span>
+<h4 data-hotdoc-id="gtk_scrollable_set_vadjustment">
+	<span><code>Gtk.Scrollable.set_vadjustment</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.Scrollable.get_vadjustment (self):
-    #python wrapper for 'gtk_scrollable_get_vadjustment'</pre>
+def Gtk.Scrollable.set_vadjustment (self, vadjustment):
+    #python wrapper for 'gtk_scrollable_set_vadjustment'</pre>
 
-<p>Retrieves the <a href="gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a> used for vertical scrolling.</p>
+<p>Sets the vertical adjustment of the <a href="gtkscrollable.html#GtkScrollable">Gtk.Scrollable</a>.</p>
 
 
 
@@ -618,21 +682,20 @@ def Gtk.Scrollable.get_vadjustment (self):
 
 	</div>
 
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Gtk.Adjustment" href="gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a>
-										)
-								–
-			</div>
-							<p>vertical <a href="gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a>.</p>
-
-					</div>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>vadjustment</code></em></i>
+					(
+						<a title="Gtk.Adjustment" href="gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a>
+						)
+				–
 	</div>
+			<p>a <a href="gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a></p>
+
+	</div>
+
+			</div>
 
 
 
@@ -642,13 +705,6 @@ def Gtk.Scrollable.get_vadjustment (self):
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_scrollable_set_vadjustment">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -763,21 +819,28 @@ function Gtk.prototype.set_vadjustment(vadjustment: <a title="Gtk.Adjustment" hr
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_scrollable_get_hscroll_policy">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_scrollable_set_vadjustment">
-	<span><code>Gtk.Scrollable.set_vadjustment</code></span>
+<h4 data-hotdoc-id="gtk_scrollable_get_hscroll_policy">
+	<span><code>Gtk.Scrollable.get_hscroll_policy</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.Scrollable.set_vadjustment (self, vadjustment):
-    #python wrapper for 'gtk_scrollable_set_vadjustment'</pre>
+def Gtk.Scrollable.get_hscroll_policy (self):
+    #python wrapper for 'gtk_scrollable_get_hscroll_policy'</pre>
 
-<p>Sets the vertical adjustment of the <a href="gtkscrollable.html#GtkScrollable">Gtk.Scrollable</a>.</p>
+<p>Gets the horizontal <a href="gtkscrollable.html#GtkScrollablePolicy">Gtk.ScrollablePolicy</a>.</p>
 
 
 
@@ -796,20 +859,21 @@ def Gtk.Scrollable.set_vadjustment (self, vadjustment):
 
 	</div>
 
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>vadjustment</code></em></i>
-					(
-						<a title="Gtk.Adjustment" href="gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a></p>
-
-	</div>
-
 			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.ScrollablePolicy" href="gtkscrollable.html#GtkScrollablePolicy">Gtk.ScrollablePolicy</a>
+										)
+								–
+			</div>
+							<p>The horizontal <a href="gtkscrollable.html#GtkScrollablePolicy">Gtk.ScrollablePolicy</a>.</p>
+
+					</div>
+	</div>
 
 
 
@@ -819,13 +883,6 @@ def Gtk.Scrollable.set_vadjustment (self, vadjustment):
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_scrollable_get_hscroll_policy">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -937,21 +994,30 @@ function Gtk.prototype.get_hscroll_policy(): {
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_scrollable_set_hscroll_policy">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_scrollable_get_hscroll_policy">
-	<span><code>Gtk.Scrollable.get_hscroll_policy</code></span>
+<h4 data-hotdoc-id="gtk_scrollable_set_hscroll_policy">
+	<span><code>Gtk.Scrollable.set_hscroll_policy</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.Scrollable.get_hscroll_policy (self):
-    #python wrapper for 'gtk_scrollable_get_hscroll_policy'</pre>
+def Gtk.Scrollable.set_hscroll_policy (self, policy):
+    #python wrapper for 'gtk_scrollable_set_hscroll_policy'</pre>
 
-<p>Gets the horizontal <a href="gtkscrollable.html#GtkScrollablePolicy">Gtk.ScrollablePolicy</a>.</p>
+<p>Sets the <a href="gtkscrollable.html#GtkScrollablePolicy">Gtk.ScrollablePolicy</a> to determine whether
+horizontal scrolling should start below the minimum width or
+below the natural width.</p>
 
 
 
@@ -970,21 +1036,20 @@ def Gtk.Scrollable.get_hscroll_policy (self):
 
 	</div>
 
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Gtk.ScrollablePolicy" href="gtkscrollable.html#GtkScrollablePolicy">Gtk.ScrollablePolicy</a>
-										)
-								–
-			</div>
-							<p>The horizontal <a href="gtkscrollable.html#GtkScrollablePolicy">Gtk.ScrollablePolicy</a>.</p>
-
-					</div>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>policy</code></em></i>
+					(
+						<a title="Gtk.ScrollablePolicy" href="gtkscrollable.html#GtkScrollablePolicy">Gtk.ScrollablePolicy</a>
+						)
+				–
 	</div>
+			<p>the horizontal <a href="gtkscrollable.html#GtkScrollablePolicy">Gtk.ScrollablePolicy</a></p>
+
+	</div>
+
+			</div>
 
 
 
@@ -994,13 +1059,6 @@ def Gtk.Scrollable.get_hscroll_policy (self):
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_scrollable_set_hscroll_policy">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -1114,23 +1172,28 @@ below the natural width.</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_scrollable_get_vscroll_policy">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_scrollable_set_hscroll_policy">
-	<span><code>Gtk.Scrollable.set_hscroll_policy</code></span>
+<h4 data-hotdoc-id="gtk_scrollable_get_vscroll_policy">
+	<span><code>Gtk.Scrollable.get_vscroll_policy</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.Scrollable.set_hscroll_policy (self, policy):
-    #python wrapper for 'gtk_scrollable_set_hscroll_policy'</pre>
+def Gtk.Scrollable.get_vscroll_policy (self):
+    #python wrapper for 'gtk_scrollable_get_vscroll_policy'</pre>
 
-<p>Sets the <a href="gtkscrollable.html#GtkScrollablePolicy">Gtk.ScrollablePolicy</a> to determine whether
-horizontal scrolling should start below the minimum width or
-below the natural width.</p>
+<p>Gets the vertical <a href="gtkscrollable.html#GtkScrollablePolicy">Gtk.ScrollablePolicy</a>.</p>
 
 
 
@@ -1149,20 +1212,21 @@ below the natural width.</p>
 
 	</div>
 
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>policy</code></em></i>
-					(
-						<a title="Gtk.ScrollablePolicy" href="gtkscrollable.html#GtkScrollablePolicy">Gtk.ScrollablePolicy</a>
-						)
-				–
-	</div>
-			<p>the horizontal <a href="gtkscrollable.html#GtkScrollablePolicy">Gtk.ScrollablePolicy</a></p>
-
-	</div>
-
 			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.ScrollablePolicy" href="gtkscrollable.html#GtkScrollablePolicy">Gtk.ScrollablePolicy</a>
+										)
+								–
+			</div>
+							<p>The vertical <a href="gtkscrollable.html#GtkScrollablePolicy">Gtk.ScrollablePolicy</a>.</p>
+
+					</div>
+	</div>
 
 
 
@@ -1172,13 +1236,6 @@ below the natural width.</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_scrollable_get_vscroll_policy">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -1290,21 +1347,30 @@ function Gtk.prototype.get_vscroll_policy(): {
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_scrollable_set_vscroll_policy">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_scrollable_get_vscroll_policy">
-	<span><code>Gtk.Scrollable.get_vscroll_policy</code></span>
+<h4 data-hotdoc-id="gtk_scrollable_set_vscroll_policy">
+	<span><code>Gtk.Scrollable.set_vscroll_policy</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.Scrollable.get_vscroll_policy (self):
-    #python wrapper for 'gtk_scrollable_get_vscroll_policy'</pre>
+def Gtk.Scrollable.set_vscroll_policy (self, policy):
+    #python wrapper for 'gtk_scrollable_set_vscroll_policy'</pre>
 
-<p>Gets the vertical <a href="gtkscrollable.html#GtkScrollablePolicy">Gtk.ScrollablePolicy</a>.</p>
+<p>Sets the <a href="gtkscrollable.html#GtkScrollablePolicy">Gtk.ScrollablePolicy</a> to determine whether
+vertical scrolling should start below the minimum height or
+below the natural height.</p>
 
 
 
@@ -1323,21 +1389,20 @@ def Gtk.Scrollable.get_vscroll_policy (self):
 
 	</div>
 
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Gtk.ScrollablePolicy" href="gtkscrollable.html#GtkScrollablePolicy">Gtk.ScrollablePolicy</a>
-										)
-								–
-			</div>
-							<p>The vertical <a href="gtkscrollable.html#GtkScrollablePolicy">Gtk.ScrollablePolicy</a>.</p>
-
-					</div>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>policy</code></em></i>
+					(
+						<a title="Gtk.ScrollablePolicy" href="gtkscrollable.html#GtkScrollablePolicy">Gtk.ScrollablePolicy</a>
+						)
+				–
 	</div>
+			<p>the vertical <a href="gtkscrollable.html#GtkScrollablePolicy">Gtk.ScrollablePolicy</a></p>
+
+	</div>
+
+			</div>
 
 
 
@@ -1347,13 +1412,6 @@ def Gtk.Scrollable.get_vscroll_policy (self):
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_scrollable_set_vscroll_policy">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -1467,23 +1525,32 @@ below the natural height.</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.16;" id="gtk_scrollable_get_border">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_scrollable_set_vscroll_policy">
-	<span><code>Gtk.Scrollable.set_vscroll_policy</code></span>
+<h4 data-hotdoc-id="gtk_scrollable_get_border">
+	<span><code>Gtk.Scrollable.get_border</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.Scrollable.set_vscroll_policy (self, policy):
-    #python wrapper for 'gtk_scrollable_set_vscroll_policy'</pre>
+def Gtk.Scrollable.get_border (self):
+    #python wrapper for 'gtk_scrollable_get_border'</pre>
 
-<p>Sets the <a href="gtkscrollable.html#GtkScrollablePolicy">Gtk.ScrollablePolicy</a> to determine whether
-vertical scrolling should start below the minimum height or
-below the natural height.</p>
+<p>Returns the size of a non-scrolling border around the
+outside of the scrollable. An example for this would
+be treeview headers. GTK+ can use this information to
+display overlayed graphics, like the overshoot indication,
+at the right position.</p>
 
 
 
@@ -1502,16 +1569,32 @@ below the natural height.</p>
 
 	</div>
 
-					
+			</div>
+
+		<div class="return-values-container">
+		<p><b>Returns a tuple made of:</b></p>
+				
 <div class="symbol-detail">
 	<div>
-		<i><em><code>policy</code></em></i>
-					(
-						<a title="Gtk.ScrollablePolicy" href="gtkscrollable.html#GtkScrollablePolicy">Gtk.ScrollablePolicy</a>
+									(
+			<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
 						)
 				–
 	</div>
-			<p>the vertical <a href="gtkscrollable.html#GtkScrollablePolicy">Gtk.ScrollablePolicy</a></p>
+			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if <em>border</em> has been set</p>
+
+	</div>
+
+				
+<div class="symbol-detail">
+	<div>
+				<i><em><code>border</code></em></i>
+									(
+			<a title="Gtk.Border" href="gtkstylecontext.html#GtkBorder">Gtk.Border</a>
+						)
+				–
+	</div>
+			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if <em>border</em> has been set</p>
 
 	</div>
 
@@ -1520,18 +1603,11 @@ below the natural height.</p>
 
 
 	<p>
-	<b>Since</b>			: 3.0
+	<b>Since</b>			: 3.16
 		</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:3.16;" id="gtk_scrollable_get_border">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -1682,82 +1758,6 @@ at the right position.</p>
 
 
         </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_scrollable_get_border">
-	<span><code>Gtk.Scrollable.get_border</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.Scrollable.get_border (self):
-    #python wrapper for 'gtk_scrollable_get_border'</pre>
-
-<p>Returns the size of a non-scrolling border around the
-outside of the scrollable. An example for this would
-be treeview headers. GTK+ can use this information to
-display overlayed graphics, like the overshoot indication,
-at the right position.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>scrollable</code></em></i>
-					(
-						<a title="Gtk.Scrollable" href="gtkscrollable.html#GtkScrollable">Gtk.Scrollable</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkscrollable.html#GtkScrollable">Gtk.Scrollable</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<p><b>Returns a tuple made of:</b></p>
-				
-<div class="symbol-detail">
-	<div>
-									(
-			<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
-						)
-				–
-	</div>
-			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if <em>border</em> has been set</p>
-
-	</div>
-
-				
-<div class="symbol-detail">
-	<div>
-				<i><em><code>border</code></em></i>
-									(
-			<a title="Gtk.Border" href="gtkstylecontext.html#GtkBorder">Gtk.Border</a>
-						)
-				–
-	</div>
-			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if <em>border</em> has been set</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.16
-		</p>
-
-
-        </div>
 
 </div>
 
@@ -1769,6 +1769,20 @@ at the right position.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="GtkScrollable">
 	
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="GtkScrollable">
+	<span><code>Gtk.Scrollable</code></span>
+</h3>
+
+
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -1797,20 +1811,6 @@ at the right position.</p>
 
 
         </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="GtkScrollable">
-	<span><code>Gtk.Scrollable</code></span>
-</h3>
-
-
-
-
-
-        </div>
 
 </div>
 
@@ -1820,6 +1820,49 @@ at the right position.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="GtkScrollablePolicy">
 	
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="GtkScrollablePolicy">
+	<span><code>Gtk.ScrollablePolicy</code></span>
+</h3>
+
+
+<p>Defines the policy to be used in a scrollable widget when updating
+the scrolled window adjustments in a given orientation.</p>
+
+
+
+
+	<div class="members-container">
+		<h4>Members</h4>
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_SCROLL_MINIMUM">
+	<div>
+		<i><em><code>Gtk.ScrollablePolicy.MINIMUM</code></em></i>
+		(<span class="value">0</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_SCROLL_NATURAL">
+	<div>
+		<i><em><code>Gtk.ScrollablePolicy.NATURAL</code></em></i>
+		(<span class="value">1</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -1864,49 +1907,6 @@ the scrolled window adjustments in a given orientation.</p>
 
         </div>
         <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h3 data-hotdoc-id="GtkScrollablePolicy">
-	<span><code>Gtk.ScrollablePolicy</code></span>
-</h3>
-
-
-<p>Defines the policy to be used in a scrollable widget when updating
-the scrolled window adjustments in a given orientation.</p>
-
-
-
-
-	<div class="members-container">
-		<h4>Members</h4>
-					
-<div class="symbol-detail" data-hotdoc-id="GTK_SCROLL_MINIMUM">
-	<div>
-		<i><em><code>Gtk.ScrollablePolicy.MINIMUM</code></em></i>
-		(<span class="value">0</span>)
-		–
-	</div>
-			<i>No description available</i>
-	</div>
-
-					
-<div class="symbol-detail" data-hotdoc-id="GTK_SCROLL_NATURAL">
-	<div>
-		<i><em><code>Gtk.ScrollablePolicy.NATURAL</code></em></i>
-		(<span class="value">1</span>)
-		–
-	</div>
-			<i>No description available</i>
-	</div>
-
-			</div>
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
             
 
 

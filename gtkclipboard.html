@@ -89,7 +89,7 @@ $('body').removeClass('no-script');
 </nav>
 
 <main>
-<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="gtkclipboard.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['c', 'javascript', 'python']" data-hotdoc-meta-gi-language="c">
+<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="gtkclipboard.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['python', 'c', 'javascript']" data-hotdoc-meta-gi-language="c">
 <script src="assets/js/utils.js"></script>
 
 <div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
@@ -107,6 +107,34 @@ $('body').removeClass('no-script');
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="GtkClipboard">
 	
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h2 data-hotdoc-id="GtkClipboard">
+	<span><code>Gtk.Clipboard</code></span>
+</h2>
+
+
+<div class="hierarchy_container">
+	<div class="hierarchy_details">
+<pre>
+<a title="GObject.Object" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct">GObject.Object</a>
+    <span class="lineart">╰──</span>Gtk.Clipboard
+</pre>
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -163,34 +191,6 @@ $('body').removeClass('no-script');
 
 
         </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h2 data-hotdoc-id="GtkClipboard">
-	<span><code>Gtk.Clipboard</code></span>
-</h2>
-
-
-<div class="hierarchy_container">
-	<div class="hierarchy_details">
-<pre>
-<a title="GObject.Object" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct">GObject.Object</a>
-    <span class="lineart">╰──</span>Gtk.Clipboard
-</pre>
-
-</div>
-
-</div>
-
-
-
-
-
-
-
-        </div>
 
 </div>
 
@@ -200,6 +200,63 @@ $('body').removeClass('no-script');
 
 <div class="base_symbol_container" data-hotdoc-tags="since:2.2;" id="gtk_clipboard_get_display">
 	
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_clipboard_get_display">
+	<span><code>Gtk.Clipboard.get_display</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Clipboard.get_display (self):
+    #python wrapper for 'gtk_clipboard_get_display'</pre>
+
+<p>Gets the <a href="https://developer.gnome.org/gdk3/GdkDisplay.html#GdkDisplay-struct">Gdk.Display</a> associated with <em>clipboard</em></p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>clipboard</code></em></i>
+					(
+						<a title="Gtk.Clipboard" href="gtkclipboard.html#GtkClipboard">Gtk.Clipboard</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkclipboard.html#GtkClipboard">Gtk.Clipboard</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gdk.Display" href="https://developer.gnome.org/gdk3/GdkDisplay.html#GdkDisplay-struct">Gdk.Display</a>
+										)
+								–
+			</div>
+							<p>the <a href="https://developer.gnome.org/gdk3/GdkDisplay.html#GdkDisplay-struct">Gdk.Display</a> associated with <em>clipboard</em></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.2
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -273,63 +330,6 @@ gtk_clipboard_get_display (<a title="GtkClipboard" href="gtkclipboard.html#GtkCl
 function Gtk.prototype.get_display(): {
     // javascript wrapper for 'gtk_clipboard_get_display'
 }</pre>
-
-<p>Gets the <a href="https://developer.gnome.org/gdk3/GdkDisplay.html#GdkDisplay-struct">Gdk.Display</a> associated with <em>clipboard</em></p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>clipboard</code></em></i>
-					(
-						<a title="Gtk.Clipboard" href="gtkclipboard.html#GtkClipboard">Gtk.Clipboard</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkclipboard.html#GtkClipboard">Gtk.Clipboard</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Gdk.Display" href="https://developer.gnome.org/gdk3/GdkDisplay.html#GdkDisplay-struct">Gdk.Display</a>
-										)
-								–
-			</div>
-							<p>the <a href="https://developer.gnome.org/gdk3/GdkDisplay.html#GdkDisplay-struct">Gdk.Display</a> associated with <em>clipboard</em></p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.2
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_clipboard_get_display">
-	<span><code>Gtk.Clipboard.get_display</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.Clipboard.get_display (self):
-    #python wrapper for 'gtk_clipboard_get_display'</pre>
 
 <p>Gets the <a href="https://developer.gnome.org/gdk3/GdkDisplay.html#GdkDisplay-struct">Gdk.Display</a> associated with <em>clipboard</em></p>
 
@@ -653,6 +653,64 @@ functions will be ignored.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_clipboard_get_owner">
 	
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_clipboard_get_owner">
+	<span><code>Gtk.Clipboard.get_owner</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Clipboard.get_owner (self):
+    #python wrapper for 'gtk_clipboard_get_owner'</pre>
+
+<p>If the clipboard contents callbacks were set with
+<a href="gtkclipboard.html#gtk_clipboard_set_with_owner">gtk_clipboard_set_with_owner (not introspectable)</a>, and the <a href="gtkclipboard.html#gtk_clipboard_set_with_data">gtk_clipboard_set_with_data (not introspectable)</a> or
+<a href="gtkclipboard.html#gtk_clipboard_clear">Gtk.Clipboard.clear</a> has not subsequently called, returns the owner set
+by <a href="gtkclipboard.html#gtk_clipboard_set_with_owner">gtk_clipboard_set_with_owner (not introspectable)</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>clipboard</code></em></i>
+					(
+						<a title="Gtk.Clipboard" href="gtkclipboard.html#GtkClipboard">Gtk.Clipboard</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkclipboard.html#GtkClipboard">Gtk.Clipboard</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="GObject.Object" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct">GObject.Object</a>
+										)
+								–
+			</div>
+							<p>the owner of the clipboard, if any;
+otherwise <a href="https://docs.python.org/3/library/constants.html#None">None</a>.</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -773,24 +831,32 @@ otherwise <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refer
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_clipboard_clear">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_clipboard_get_owner">
-	<span><code>Gtk.Clipboard.get_owner</code></span>
+<h4 data-hotdoc-id="gtk_clipboard_clear">
+	<span><code>Gtk.Clipboard.clear</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.Clipboard.get_owner (self):
-    #python wrapper for 'gtk_clipboard_get_owner'</pre>
+def Gtk.Clipboard.clear (self):
+    #python wrapper for 'gtk_clipboard_clear'</pre>
 
-<p>If the clipboard contents callbacks were set with
-<a href="gtkclipboard.html#gtk_clipboard_set_with_owner">gtk_clipboard_set_with_owner (not introspectable)</a>, and the <a href="gtkclipboard.html#gtk_clipboard_set_with_data">gtk_clipboard_set_with_data (not introspectable)</a> or
-<a href="gtkclipboard.html#gtk_clipboard_clear">Gtk.Clipboard.clear</a> has not subsequently called, returns the owner set
-by <a href="gtkclipboard.html#gtk_clipboard_set_with_owner">gtk_clipboard_set_with_owner (not introspectable)</a>.</p>
+<p>Clears the contents of the clipboard. Generally this should only
+be called between the time you call <a href="gtkclipboard.html#gtk_clipboard_set_with_owner">gtk_clipboard_set_with_owner (not introspectable)</a>
+or <a href="gtkclipboard.html#gtk_clipboard_set_with_data">gtk_clipboard_set_with_data (not introspectable)</a>,
+and when the <em>clear_func</em> you supplied is called. Otherwise, the
+clipboard may be owned by someone else.</p>
 
 
 
@@ -811,33 +877,11 @@ by <a href="gtkclipboard.html#gtk_clipboard_set_with_owner">gtk_clipboard_set_wi
 
 			</div>
 
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="GObject.Object" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct">GObject.Object</a>
-										)
-								–
-			</div>
-							<p>the owner of the clipboard, if any;
-otherwise <a href="https://docs.python.org/3/library/constants.html#None">None</a>.</p>
-
-					</div>
-	</div>
-
 
 
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_clipboard_clear">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -925,25 +969,31 @@ clipboard may be owned by someone else.</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_clipboard_set_text">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_clipboard_clear">
-	<span><code>Gtk.Clipboard.clear</code></span>
+<h4 data-hotdoc-id="gtk_clipboard_set_text">
+	<span><code>Gtk.Clipboard.set_text</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.Clipboard.clear (self):
-    #python wrapper for 'gtk_clipboard_clear'</pre>
+def Gtk.Clipboard.set_text (self, text, len):
+    #python wrapper for 'gtk_clipboard_set_text'</pre>
 
-<p>Clears the contents of the clipboard. Generally this should only
-be called between the time you call <a href="gtkclipboard.html#gtk_clipboard_set_with_owner">gtk_clipboard_set_with_owner (not introspectable)</a>
-or <a href="gtkclipboard.html#gtk_clipboard_set_with_data">gtk_clipboard_set_with_data (not introspectable)</a>,
-and when the <em>clear_func</em> you supplied is called. Otherwise, the
-clipboard may be owned by someone else.</p>
+<p>Sets the contents of the clipboard to the given UTF-8 string. GTK+ will
+make a copy of the text and take responsibility for responding
+for requests for the text, and for converting the text into
+the requested format.</p>
 
 
 
@@ -958,7 +1008,34 @@ clipboard may be owned by someone else.</p>
 						)
 				–
 	</div>
-			<p>a <a href="gtkclipboard.html#GtkClipboard">Gtk.Clipboard</a></p>
+			<p>a <a href="gtkclipboard.html#GtkClipboard">Gtk.Clipboard</a> object</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>text</code></em></i>
+					(
+						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
+						)
+				–
+	</div>
+			<p>a UTF-8 string.</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>len</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>length of <em>text</em>, in bytes, or -1, in which case
+the length will be determined with strlen.</p>
 
 	</div>
 
@@ -969,13 +1046,6 @@ clipboard may be owned by someone else.</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_clipboard_set_text">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -1111,24 +1181,31 @@ the length will be determined with strlen.</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.6;" id="gtk_clipboard_set_image">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_clipboard_set_text">
-	<span><code>Gtk.Clipboard.set_text</code></span>
+<h4 data-hotdoc-id="gtk_clipboard_set_image">
+	<span><code>Gtk.Clipboard.set_image</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.Clipboard.set_text (self, text, len):
-    #python wrapper for 'gtk_clipboard_set_text'</pre>
+def Gtk.Clipboard.set_image (self, pixbuf):
+    #python wrapper for 'gtk_clipboard_set_image'</pre>
 
-<p>Sets the contents of the clipboard to the given UTF-8 string. GTK+ will
-make a copy of the text and take responsibility for responding
-for requests for the text, and for converting the text into
-the requested format.</p>
+<p>Sets the contents of the clipboard to the given <a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf.Pixbuf</a>.
+GTK+ will take responsibility for responding for requests
+for the image, and for converting the image into the
+requested format.</p>
 
 
 
@@ -1150,27 +1227,13 @@ the requested format.</p>
 					
 <div class="symbol-detail">
 	<div>
-		<i><em><code>text</code></em></i>
+		<i><em><code>pixbuf</code></em></i>
 					(
-						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
+						<a title="GdkPixbuf.Pixbuf" href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf.Pixbuf</a>
 						)
 				–
 	</div>
-			<p>a UTF-8 string.</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>len</code></em></i>
-					(
-						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
-						)
-				–
-	</div>
-			<p>length of <em>text</em>, in bytes, or -1, in which case
-the length will be determined with strlen.</p>
+			<p>a <a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf.Pixbuf</a></p>
 
 	</div>
 
@@ -1178,16 +1241,12 @@ the length will be determined with strlen.</p>
 
 
 
+	<p>
+	<b>Since</b>			: 2.6
+		</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.6;" id="gtk_clipboard_set_image">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -1303,24 +1362,30 @@ requested format.</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_clipboard_request_contents">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_clipboard_set_image">
-	<span><code>Gtk.Clipboard.set_image</code></span>
+<h4 data-hotdoc-id="gtk_clipboard_request_contents">
+	<span><code>Gtk.Clipboard.request_contents</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.Clipboard.set_image (self, pixbuf):
-    #python wrapper for 'gtk_clipboard_set_image'</pre>
+def Gtk.Clipboard.request_contents (self, target, callback, user_data):
+    #python wrapper for 'gtk_clipboard_request_contents'</pre>
 
-<p>Sets the contents of the clipboard to the given <a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf.Pixbuf</a>.
-GTK+ will take responsibility for responding for requests
-for the image, and for converting the image into the
-requested format.</p>
+<p>Requests the contents of clipboard as the given target.
+When the results of the result are later received the supplied callback
+will be called.</p>
 
 
 
@@ -1335,20 +1400,49 @@ requested format.</p>
 						)
 				–
 	</div>
-			<p>a <a href="gtkclipboard.html#GtkClipboard">Gtk.Clipboard</a> object</p>
+			<p>a <a href="gtkclipboard.html#GtkClipboard">Gtk.Clipboard</a></p>
 
 	</div>
 
 					
 <div class="symbol-detail">
 	<div>
-		<i><em><code>pixbuf</code></em></i>
+		<i><em><code>target</code></em></i>
 					(
-						<a title="GdkPixbuf.Pixbuf" href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf.Pixbuf</a>
+						<a title="Gdk.Atom" href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">Gdk.Atom</a>
 						)
 				–
 	</div>
-			<p>a <a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf.Pixbuf</a></p>
+			<p>an atom representing the form into which the clipboard
+owner should convert the selection.</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>callback</code></em></i>
+					(
+						<a title="Gtk.ClipboardReceivedFunc" href="gtkclipboard.html#GtkClipboardReceivedFunc">Gtk.ClipboardReceivedFunc</a>
+						)
+				–
+	</div>
+			<p>A function to call when the results are received
+(or the retrieval fails). If the retrieval fails the length field of
+<em>selection_data</em> will be negative.</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>user_data</code></em></i>
+					(
+						<a title="object" href="https://docs.python.org/3/library/functions.html#object">object</a>
+						)
+				–
+	</div>
+			<p>user data to pass to <em>callback</em></p>
 
 	</div>
 
@@ -1356,19 +1450,9 @@ requested format.</p>
 
 
 
-	<p>
-	<b>Since</b>			: 2.6
-		</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_clipboard_request_contents">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -1535,23 +1619,34 @@ owner should convert the selection.</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_clipboard_request_text">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_clipboard_request_contents">
-	<span><code>Gtk.Clipboard.request_contents</code></span>
+<h4 data-hotdoc-id="gtk_clipboard_request_text">
+	<span><code>Gtk.Clipboard.request_text</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.Clipboard.request_contents (self, target, callback, user_data):
-    #python wrapper for 'gtk_clipboard_request_contents'</pre>
+def Gtk.Clipboard.request_text (self, callback, user_data):
+    #python wrapper for 'gtk_clipboard_request_text'</pre>
 
-<p>Requests the contents of clipboard as the given target.
-When the results of the result are later received the supplied callback
-will be called.</p>
+<p>Requests the contents of the clipboard as text. When the text is
+later received, it will be converted to UTF-8 if necessary, and
+<em>callback</em> will be called.</p>
+<p>The <em>text</em> parameter to <em>callback</em> will contain the resulting text if
+the request succeeded, or <a href="https://docs.python.org/3/library/constants.html#None">None</a> if it failed. This could happen for
+various reasons, in particular if the clipboard was empty or if the
+contents of the clipboard could not be converted into text form.</p>
 
 
 
@@ -1573,29 +1668,14 @@ will be called.</p>
 					
 <div class="symbol-detail">
 	<div>
-		<i><em><code>target</code></em></i>
-					(
-						<a title="Gdk.Atom" href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">Gdk.Atom</a>
-						)
-				–
-	</div>
-			<p>an atom representing the form into which the clipboard
-owner should convert the selection.</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
 		<i><em><code>callback</code></em></i>
 					(
-						<a title="Gtk.ClipboardReceivedFunc" href="gtkclipboard.html#GtkClipboardReceivedFunc">Gtk.ClipboardReceivedFunc</a>
+						<a title="Gtk.ClipboardTextReceivedFunc" href="gtkclipboard.html#GtkClipboardTextReceivedFunc">Gtk.ClipboardTextReceivedFunc</a>
 						)
 				–
 	</div>
-			<p>A function to call when the results are received
-(or the retrieval fails). If the retrieval fails the length field of
-<em>selection_data</em> will be negative.</p>
+			<p>a function to call when the text is received,
+or the retrieval fails. (It will always be called one way or the other.)</p>
 
 	</div>
 
@@ -1608,7 +1688,7 @@ owner should convert the selection.</p>
 						)
 				–
 	</div>
-			<p>user data to pass to <em>callback</em></p>
+			<p>user data to pass to <em>callback</em>.</p>
 
 	</div>
 
@@ -1619,13 +1699,6 @@ owner should convert the selection.</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_clipboard_request_text">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -1772,27 +1845,35 @@ or the retrieval fails. (It will always be called one way or the other.)</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.6;" id="gtk_clipboard_request_image">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_clipboard_request_text">
-	<span><code>Gtk.Clipboard.request_text</code></span>
+<h4 data-hotdoc-id="gtk_clipboard_request_image">
+	<span><code>Gtk.Clipboard.request_image</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.Clipboard.request_text (self, callback, user_data):
-    #python wrapper for 'gtk_clipboard_request_text'</pre>
+def Gtk.Clipboard.request_image (self, callback, user_data):
+    #python wrapper for 'gtk_clipboard_request_image'</pre>
 
-<p>Requests the contents of the clipboard as text. When the text is
-later received, it will be converted to UTF-8 if necessary, and
+<p>Requests the contents of the clipboard as image. When the image is
+later received, it will be converted to a <a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf.Pixbuf</a>, and
 <em>callback</em> will be called.</p>
-<p>The <em>text</em> parameter to <em>callback</em> will contain the resulting text if
-the request succeeded, or <a href="https://docs.python.org/3/library/constants.html#None">None</a> if it failed. This could happen for
-various reasons, in particular if the clipboard was empty or if the
-contents of the clipboard could not be converted into text form.</p>
+<p>The <em>pixbuf</em> parameter to <em>callback</em> will contain the resulting
+<a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf.Pixbuf</a> if the request succeeded, or <a href="https://docs.python.org/3/library/constants.html#None">None</a> if it failed. This
+could happen for various reasons, in particular if the clipboard
+was empty or if the contents of the clipboard could not be
+converted into an image.</p>
 
 
 
@@ -1816,11 +1897,11 @@ contents of the clipboard could not be converted into text form.</p>
 	<div>
 		<i><em><code>callback</code></em></i>
 					(
-						<a title="Gtk.ClipboardTextReceivedFunc" href="gtkclipboard.html#GtkClipboardTextReceivedFunc">Gtk.ClipboardTextReceivedFunc</a>
+						<a title="Gtk.ClipboardImageReceivedFunc" href="gtkclipboard.html#GtkClipboardImageReceivedFunc">Gtk.ClipboardImageReceivedFunc</a>
 						)
 				–
 	</div>
-			<p>a function to call when the text is received,
+			<p>a function to call when the image is received,
 or the retrieval fails. (It will always be called one way or the other.)</p>
 
 	</div>
@@ -1842,16 +1923,12 @@ or the retrieval fails. (It will always be called one way or the other.)</p>
 
 
 
+	<p>
+	<b>Since</b>			: 2.6
+		</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.6;" id="gtk_clipboard_request_image">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -2006,28 +2083,31 @@ or the retrieval fails. (It will always be called one way or the other.)</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.4;" id="gtk_clipboard_request_targets">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_clipboard_request_image">
-	<span><code>Gtk.Clipboard.request_image</code></span>
+<h4 data-hotdoc-id="gtk_clipboard_request_targets">
+	<span><code>Gtk.Clipboard.request_targets</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.Clipboard.request_image (self, callback, user_data):
-    #python wrapper for 'gtk_clipboard_request_image'</pre>
+def Gtk.Clipboard.request_targets (self, callback, user_data):
+    #python wrapper for 'gtk_clipboard_request_targets'</pre>
 
-<p>Requests the contents of the clipboard as image. When the image is
-later received, it will be converted to a <a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf.Pixbuf</a>, and
-<em>callback</em> will be called.</p>
-<p>The <em>pixbuf</em> parameter to <em>callback</em> will contain the resulting
-<a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf.Pixbuf</a> if the request succeeded, or <a href="https://docs.python.org/3/library/constants.html#None">None</a> if it failed. This
-could happen for various reasons, in particular if the clipboard
-was empty or if the contents of the clipboard could not be
-converted into an image.</p>
+<p>Requests the contents of the clipboard as list of supported targets.
+When the list is later received, <em>callback</em> will be called.</p>
+<p>The <em>targets</em> parameter to <em>callback</em> will contain the resulting targets if
+the request succeeded, or <a href="https://docs.python.org/3/library/constants.html#None">None</a> if it failed.</p>
 
 
 
@@ -2051,12 +2131,13 @@ converted into an image.</p>
 	<div>
 		<i><em><code>callback</code></em></i>
 					(
-						<a title="Gtk.ClipboardImageReceivedFunc" href="gtkclipboard.html#GtkClipboardImageReceivedFunc">Gtk.ClipboardImageReceivedFunc</a>
+						<a title="Gtk.ClipboardTargetsReceivedFunc" href="gtkclipboard.html#GtkClipboardTargetsReceivedFunc">Gtk.ClipboardTargetsReceivedFunc</a>
 						)
 				–
 	</div>
-			<p>a function to call when the image is received,
-or the retrieval fails. (It will always be called one way or the other.)</p>
+			<p>a function to call when the targets are
+received, or the retrieval fails. (It will always be called
+one way or the other.)</p>
 
 	</div>
 
@@ -2078,18 +2159,11 @@ or the retrieval fails. (It will always be called one way or the other.)</p>
 
 
 	<p>
-	<b>Since</b>			: 2.6
+	<b>Since</b>			: 2.4
 		</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.4;" id="gtk_clipboard_request_targets">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -2238,24 +2312,34 @@ one way or the other.)</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_clipboard_request_rich_text">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_clipboard_request_targets">
-	<span><code>Gtk.Clipboard.request_targets</code></span>
+<h4 data-hotdoc-id="gtk_clipboard_request_rich_text">
+	<span><code>Gtk.Clipboard.request_rich_text</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.Clipboard.request_targets (self, callback, user_data):
-    #python wrapper for 'gtk_clipboard_request_targets'</pre>
+def Gtk.Clipboard.request_rich_text (self, buffer, callback, user_data):
+    #python wrapper for 'gtk_clipboard_request_rich_text'</pre>
 
-<p>Requests the contents of the clipboard as list of supported targets.
-When the list is later received, <em>callback</em> will be called.</p>
-<p>The <em>targets</em> parameter to <em>callback</em> will contain the resulting targets if
-the request succeeded, or <a href="https://docs.python.org/3/library/constants.html#None">None</a> if it failed.</p>
+<p>Requests the contents of the clipboard as rich text. When the rich
+text is later received, <em>callback</em> will be called.</p>
+<p>The <em>text</em> parameter to <em>callback</em> will contain the resulting rich
+text if the request succeeded, or <a href="https://docs.python.org/3/library/constants.html#None">None</a> if it failed. The <em>length</em>
+parameter will contain <em>text</em>’s length. This function can fail for
+various reasons, in particular if the clipboard was empty or if the
+contents of the clipboard could not be converted into rich text form.</p>
 
 
 
@@ -2277,15 +2361,27 @@ the request succeeded, or <a href="https://docs.python.org/3/library/constants.h
 					
 <div class="symbol-detail">
 	<div>
-		<i><em><code>callback</code></em></i>
+		<i><em><code>buffer</code></em></i>
 					(
-						<a title="Gtk.ClipboardTargetsReceivedFunc" href="gtkclipboard.html#GtkClipboardTargetsReceivedFunc">Gtk.ClipboardTargetsReceivedFunc</a>
+						<a title="Gtk.TextBuffer" href="gtktextbuffer.html#GtkTextBuffer">Gtk.TextBuffer</a>
 						)
 				–
 	</div>
-			<p>a function to call when the targets are
-received, or the retrieval fails. (It will always be called
-one way or the other.)</p>
+			<p>a <a href="gtktextbuffer.html#GtkTextBuffer">Gtk.TextBuffer</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>callback</code></em></i>
+					(
+						<a title="Gtk.ClipboardRichTextReceivedFunc" href="gtkclipboard.html#GtkClipboardRichTextReceivedFunc">Gtk.ClipboardRichTextReceivedFunc</a>
+						)
+				–
+	</div>
+			<p>a function to call when the text is received,
+or the retrieval fails. (It will always be called one way or the other.)</p>
 
 	</div>
 
@@ -2307,18 +2403,11 @@ one way or the other.)</p>
 
 
 	<p>
-	<b>Since</b>			: 2.4
+	<b>Since</b>			: 2.10
 		</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_clipboard_request_rich_text">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -2495,27 +2584,33 @@ or the retrieval fails. (It will always be called one way or the other.)</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.14;" id="gtk_clipboard_request_uris">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_clipboard_request_rich_text">
-	<span><code>Gtk.Clipboard.request_rich_text</code></span>
+<h4 data-hotdoc-id="gtk_clipboard_request_uris">
+	<span><code>Gtk.Clipboard.request_uris</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.Clipboard.request_rich_text (self, buffer, callback, user_data):
-    #python wrapper for 'gtk_clipboard_request_rich_text'</pre>
+def Gtk.Clipboard.request_uris (self, callback, user_data):
+    #python wrapper for 'gtk_clipboard_request_uris'</pre>
 
-<p>Requests the contents of the clipboard as rich text. When the rich
-text is later received, <em>callback</em> will be called.</p>
-<p>The <em>text</em> parameter to <em>callback</em> will contain the resulting rich
-text if the request succeeded, or <a href="https://docs.python.org/3/library/constants.html#None">None</a> if it failed. The <em>length</em>
-parameter will contain <em>text</em>’s length. This function can fail for
-various reasons, in particular if the clipboard was empty or if the
-contents of the clipboard could not be converted into rich text form.</p>
+<p>Requests the contents of the clipboard as URIs. When the URIs are
+later received <em>callback</em> will be called.</p>
+<p>The <em>uris</em> parameter to <em>callback</em> will contain the resulting array of
+URIs if the request succeeded, or <a href="https://docs.python.org/3/library/constants.html#None">None</a> if it failed. This could happen
+for various reasons, in particular if the clipboard was empty or if the
+contents of the clipboard could not be converted into URI form.</p>
 
 
 
@@ -2537,26 +2632,13 @@ contents of the clipboard could not be converted into rich text form.</p>
 					
 <div class="symbol-detail">
 	<div>
-		<i><em><code>buffer</code></em></i>
-					(
-						<a title="Gtk.TextBuffer" href="gtktextbuffer.html#GtkTextBuffer">Gtk.TextBuffer</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtktextbuffer.html#GtkTextBuffer">Gtk.TextBuffer</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
 		<i><em><code>callback</code></em></i>
 					(
-						<a title="Gtk.ClipboardRichTextReceivedFunc" href="gtkclipboard.html#GtkClipboardRichTextReceivedFunc">Gtk.ClipboardRichTextReceivedFunc</a>
+						<a title="Gtk.ClipboardURIReceivedFunc" href="gtkclipboard.html#GtkClipboardURIReceivedFunc">Gtk.ClipboardURIReceivedFunc</a>
 						)
 				–
 	</div>
-			<p>a function to call when the text is received,
+			<p>a function to call when the URIs are received,
 or the retrieval fails. (It will always be called one way or the other.)</p>
 
 	</div>
@@ -2579,18 +2661,11 @@ or the retrieval fails. (It will always be called one way or the other.)</p>
 
 
 	<p>
-	<b>Since</b>			: 2.10
+	<b>Since</b>			: 2.14
 		</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.14;" id="gtk_clipboard_request_uris">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -2741,26 +2816,30 @@ or the retrieval fails. (It will always be called one way or the other.)</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_clipboard_wait_for_contents">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_clipboard_request_uris">
-	<span><code>Gtk.Clipboard.request_uris</code></span>
+<h4 data-hotdoc-id="gtk_clipboard_wait_for_contents">
+	<span><code>Gtk.Clipboard.wait_for_contents</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.Clipboard.request_uris (self, callback, user_data):
-    #python wrapper for 'gtk_clipboard_request_uris'</pre>
+def Gtk.Clipboard.wait_for_contents (self, target):
+    #python wrapper for 'gtk_clipboard_wait_for_contents'</pre>
 
-<p>Requests the contents of the clipboard as URIs. When the URIs are
-later received <em>callback</em> will be called.</p>
-<p>The <em>uris</em> parameter to <em>callback</em> will contain the resulting array of
-URIs if the request succeeded, or <a href="https://docs.python.org/3/library/constants.html#None">None</a> if it failed. This could happen
-for various reasons, in particular if the clipboard was empty or if the
-contents of the clipboard could not be converted into URI form.</p>
+<p>Requests the contents of the clipboard using the given target.
+This function waits for the data to be received using the main
+loop, so events, timeouts, etc, may be dispatched during the wait.</p>
 
 
 
@@ -2782,47 +2861,41 @@ contents of the clipboard could not be converted into URI form.</p>
 					
 <div class="symbol-detail">
 	<div>
-		<i><em><code>callback</code></em></i>
+		<i><em><code>target</code></em></i>
 					(
-						<a title="Gtk.ClipboardURIReceivedFunc" href="gtkclipboard.html#GtkClipboardURIReceivedFunc">Gtk.ClipboardURIReceivedFunc</a>
+						<a title="Gdk.Atom" href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">Gdk.Atom</a>
 						)
 				–
 	</div>
-			<p>a function to call when the URIs are received,
-or the retrieval fails. (It will always be called one way or the other.)</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>user_data</code></em></i>
-					(
-						<a title="object" href="https://docs.python.org/3/library/functions.html#object">object</a>
-						)
-				–
-	</div>
-			<p>user data to pass to <em>callback</em>.</p>
+			<p>an atom representing the form into which the clipboard
+owner should convert the selection.</p>
 
 	</div>
 
 			</div>
 
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.SelectionData" href="gtkselection.html#GtkSelectionData">Gtk.SelectionData</a>
+										)
+								–
+			</div>
+							<p>a newly-allocated <a href="gtkselection.html#GtkSelectionData">Gtk.SelectionData</a> object or <a href="https://docs.python.org/3/library/constants.html#None">None</a>
+if retrieving the given target failed. If non-%NULL,
+this value must be freed with <a href="gtkselection.html#gtk_selection_data_free">Gtk.SelectionData.free</a>
+when you are finished with it.</p>
+
+					</div>
+	</div>
 
 
-	<p>
-	<b>Since</b>			: 2.14
-		</p>
+
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_clipboard_wait_for_contents">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -2970,23 +3043,31 @@ when you are finished with it.</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_clipboard_wait_for_text">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_clipboard_wait_for_contents">
-	<span><code>Gtk.Clipboard.wait_for_contents</code></span>
+<h4 data-hotdoc-id="gtk_clipboard_wait_for_text">
+	<span><code>Gtk.Clipboard.wait_for_text</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.Clipboard.wait_for_contents (self, target):
-    #python wrapper for 'gtk_clipboard_wait_for_contents'</pre>
+def Gtk.Clipboard.wait_for_text (self):
+    #python wrapper for 'gtk_clipboard_wait_for_text'</pre>
 
-<p>Requests the contents of the clipboard using the given target.
-This function waits for the data to be received using the main
-loop, so events, timeouts, etc, may be dispatched during the wait.</p>
+<p>Requests the contents of the clipboard as text and converts
+the result to UTF-8 if necessary. This function waits for
+the data to be received using the main loop, so events,
+timeouts, etc, may be dispatched during the wait.</p>
 
 
 
@@ -3005,20 +3086,6 @@ loop, so events, timeouts, etc, may be dispatched during the wait.</p>
 
 	</div>
 
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>target</code></em></i>
-					(
-						<a title="Gdk.Atom" href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">Gdk.Atom</a>
-						)
-				–
-	</div>
-			<p>an atom representing the form into which the clipboard
-owner should convert the selection.</p>
-
-	</div>
-
 			</div>
 
 		<div class="return-values-container">
@@ -3026,14 +3093,16 @@ owner should convert the selection.</p>
 			<div>
 				<b>Returns</b>
 									(
-					<a title="Gtk.SelectionData" href="gtkselection.html#GtkSelectionData">Gtk.SelectionData</a>
+					<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
 										)
 								–
 			</div>
-							<p>a newly-allocated <a href="gtkselection.html#GtkSelectionData">Gtk.SelectionData</a> object or <a href="https://docs.python.org/3/library/constants.html#None">None</a>
-if retrieving the given target failed. If non-%NULL,
-this value must be freed with <a href="gtkselection.html#gtk_selection_data_free">Gtk.SelectionData.free</a>
-when you are finished with it.</p>
+							<p>a newly-allocated UTF-8 string which must
+be freed with <a href="https://developer.gnome.org/glib/unstable/glib-Memory-Allocation.html#g-free">GLib.free</a>, or <a href="https://docs.python.org/3/library/constants.html#None">None</a> if retrieving
+the selection data failed. (This could happen
+for various reasons, in particular if the
+clipboard was empty or if the contents of the
+clipboard could not be converted into text form.)</p>
 
 					</div>
 	</div>
@@ -3043,13 +3112,6 @@ when you are finished with it.</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_clipboard_wait_for_text">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -3177,22 +3239,29 @@ clipboard could not be converted into text form.)</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.6;" id="gtk_clipboard_wait_for_image">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_clipboard_wait_for_text">
-	<span><code>Gtk.Clipboard.wait_for_text</code></span>
+<h4 data-hotdoc-id="gtk_clipboard_wait_for_image">
+	<span><code>Gtk.Clipboard.wait_for_image</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.Clipboard.wait_for_text (self):
-    #python wrapper for 'gtk_clipboard_wait_for_text'</pre>
+def Gtk.Clipboard.wait_for_image (self):
+    #python wrapper for 'gtk_clipboard_wait_for_image'</pre>
 
-<p>Requests the contents of the clipboard as text and converts
-the result to UTF-8 if necessary. This function waits for
+<p>Requests the contents of the clipboard as image and converts
+the result to a <a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf.Pixbuf</a>. This function waits for
 the data to be received using the main loop, so events,
 timeouts, etc, may be dispatched during the wait.</p>
 
@@ -3220,32 +3289,28 @@ timeouts, etc, may be dispatched during the wait.</p>
 			<div>
 				<b>Returns</b>
 									(
-					<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
+					<a title="GdkPixbuf.Pixbuf" href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf.Pixbuf</a>
 										)
 								–
 			</div>
-							<p>a newly-allocated UTF-8 string which must
-be freed with <a href="https://developer.gnome.org/glib/unstable/glib-Memory-Allocation.html#g-free">GLib.free</a>, or <a href="https://docs.python.org/3/library/constants.html#None">None</a> if retrieving
-the selection data failed. (This could happen
-for various reasons, in particular if the
-clipboard was empty or if the contents of the
-clipboard could not be converted into text form.)</p>
+							<p>a newly-allocated <a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf.Pixbuf</a>
+object which must be disposed with <a href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-unref">GObject.Object.unref</a>, or
+<a href="https://docs.python.org/3/library/constants.html#None">None</a> if retrieving the selection data failed. (This could
+happen for various reasons, in particular if the clipboard
+was empty or if the contents of the clipboard could not be
+converted into an image.)</p>
 
 					</div>
 	</div>
 
 
 
+	<p>
+	<b>Since</b>			: 2.6
+		</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.6;" id="gtk_clipboard_wait_for_image">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -3380,23 +3445,29 @@ converted into an image.)</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_clipboard_wait_for_rich_text">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_clipboard_wait_for_image">
-	<span><code>Gtk.Clipboard.wait_for_image</code></span>
+<h4 data-hotdoc-id="gtk_clipboard_wait_for_rich_text">
+	<span><code>Gtk.Clipboard.wait_for_rich_text</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.Clipboard.wait_for_image (self):
-    #python wrapper for 'gtk_clipboard_wait_for_image'</pre>
+def Gtk.Clipboard.wait_for_rich_text (self, buffer):
+    #python wrapper for 'gtk_clipboard_wait_for_rich_text'</pre>
 
-<p>Requests the contents of the clipboard as image and converts
-the result to a <a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf.Pixbuf</a>. This function waits for
-the data to be received using the main loop, so events,
+<p>Requests the contents of the clipboard as rich text.  This function
+waits for the data to be received using the main loop, so events,
 timeouts, etc, may be dispatched during the wait.</p>
 
 
@@ -3416,42 +3487,89 @@ timeouts, etc, may be dispatched during the wait.</p>
 
 	</div>
 
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>buffer</code></em></i>
+					(
+						<a title="Gtk.TextBuffer" href="gtktextbuffer.html#GtkTextBuffer">Gtk.TextBuffer</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtktextbuffer.html#GtkTextBuffer">Gtk.TextBuffer</a></p>
+
+	</div>
+
 			</div>
 
 		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
+		<p><b>Returns a tuple made of:</b></p>
+				
+<div class="symbol-detail">
+	<div>
 									(
-					<a title="GdkPixbuf.Pixbuf" href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf.Pixbuf</a>
-										)
-								–
-			</div>
-							<p>a newly-allocated <a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf.Pixbuf</a>
-object which must be disposed with <a href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-unref">GObject.Object.unref</a>, or
-<a href="https://docs.python.org/3/library/constants.html#None">None</a> if retrieving the selection data failed. (This could
-happen for various reasons, in particular if the clipboard
-was empty or if the contents of the clipboard could not be
-converted into an image.)</p>
-
-					</div>
+			[ <a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a> ]
+						)
+				–
 	</div>
+			<p>a
+newly-allocated binary block of data which must be
+freed with <a href="https://developer.gnome.org/glib/unstable/glib-Memory-Allocation.html#g-free">GLib.free</a>, or <a href="https://docs.python.org/3/library/constants.html#None">None</a> if retrieving the
+selection data failed. (This could happen for various
+reasons, in particular if the clipboard was empty or
+if the contents of the clipboard could not be
+converted into text form.)</p>
+
+	</div>
+
+				
+<div class="symbol-detail">
+	<div>
+				<i><em><code>format</code></em></i>
+									(
+			<a title="Gdk.Atom" href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">Gdk.Atom</a>
+						)
+				–
+	</div>
+			<p>a
+newly-allocated binary block of data which must be
+freed with <a href="https://developer.gnome.org/glib/unstable/glib-Memory-Allocation.html#g-free">GLib.free</a>, or <a href="https://docs.python.org/3/library/constants.html#None">None</a> if retrieving the
+selection data failed. (This could happen for various
+reasons, in particular if the clipboard was empty or
+if the contents of the clipboard could not be
+converted into text form.)</p>
+
+	</div>
+
+				
+<div class="symbol-detail">
+	<div>
+				<i><em><code>length</code></em></i>
+									(
+			<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>a
+newly-allocated binary block of data which must be
+freed with <a href="https://developer.gnome.org/glib/unstable/glib-Memory-Allocation.html#g-free">GLib.free</a>, or <a href="https://docs.python.org/3/library/constants.html#None">None</a> if retrieving the
+selection data failed. (This could happen for various
+reasons, in particular if the clipboard was empty or
+if the contents of the clipboard could not be
+converted into text form.)</p>
+
+	</div>
+
+			</div>
 
 
 
 	<p>
-	<b>Since</b>			: 2.6
+	<b>Since</b>			: 2.10
 		</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_clipboard_wait_for_rich_text">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -3683,22 +3801,29 @@ converted into text form.)</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.14;" id="gtk_clipboard_wait_for_uris">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_clipboard_wait_for_rich_text">
-	<span><code>Gtk.Clipboard.wait_for_rich_text</code></span>
+<h4 data-hotdoc-id="gtk_clipboard_wait_for_uris">
+	<span><code>Gtk.Clipboard.wait_for_uris</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.Clipboard.wait_for_rich_text (self, buffer):
-    #python wrapper for 'gtk_clipboard_wait_for_rich_text'</pre>
+def Gtk.Clipboard.wait_for_uris (self):
+    #python wrapper for 'gtk_clipboard_wait_for_uris'</pre>
 
-<p>Requests the contents of the clipboard as rich text.  This function
-waits for the data to be received using the main loop, so events,
+<p>Requests the contents of the clipboard as URIs. This function waits
+for the data to be received using the main loop, so events,
 timeouts, etc, may be dispatched during the wait.</p>
 
 
@@ -3718,96 +3843,35 @@ timeouts, etc, may be dispatched during the wait.</p>
 
 	</div>
 
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>buffer</code></em></i>
-					(
-						<a title="Gtk.TextBuffer" href="gtktextbuffer.html#GtkTextBuffer">Gtk.TextBuffer</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtktextbuffer.html#GtkTextBuffer">Gtk.TextBuffer</a></p>
-
-	</div>
-
 			</div>
 
 		<div class="return-values-container">
-		<p><b>Returns a tuple made of:</b></p>
-				
-<div class="symbol-detail">
-	<div>
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
 									(
-			[ <a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a> ]
-						)
-				–
-	</div>
-			<p>a
-newly-allocated binary block of data which must be
-freed with <a href="https://developer.gnome.org/glib/unstable/glib-Memory-Allocation.html#g-free">GLib.free</a>, or <a href="https://docs.python.org/3/library/constants.html#None">None</a> if retrieving the
-selection data failed. (This could happen for various
-reasons, in particular if the clipboard was empty or
-if the contents of the clipboard could not be
-converted into text form.)</p>
-
-	</div>
-
-				
-<div class="symbol-detail">
-	<div>
-				<i><em><code>format</code></em></i>
-									(
-			<a title="Gdk.Atom" href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">Gdk.Atom</a>
-						)
-				–
-	</div>
-			<p>a
-newly-allocated binary block of data which must be
-freed with <a href="https://developer.gnome.org/glib/unstable/glib-Memory-Allocation.html#g-free">GLib.free</a>, or <a href="https://docs.python.org/3/library/constants.html#None">None</a> if retrieving the
-selection data failed. (This could happen for various
-reasons, in particular if the clipboard was empty or
-if the contents of the clipboard could not be
-converted into text form.)</p>
-
-	</div>
-
-				
-<div class="symbol-detail">
-	<div>
-				<i><em><code>length</code></em></i>
-									(
-			<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
-						)
-				–
-	</div>
-			<p>a
-newly-allocated binary block of data which must be
-freed with <a href="https://developer.gnome.org/glib/unstable/glib-Memory-Allocation.html#g-free">GLib.free</a>, or <a href="https://docs.python.org/3/library/constants.html#None">None</a> if retrieving the
-selection data failed. (This could happen for various
-reasons, in particular if the clipboard was empty or
-if the contents of the clipboard could not be
-converted into text form.)</p>
-
-	</div>
-
+					[ <a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a> ]
+										)
+								–
 			</div>
+							<p>(nullable) (array zero-terminated=1) (element-type utf8) (transfer full):
+a newly-allocated <a href="https://docs.python.org/3/library/constants.html#None">None</a>-terminated array of strings which must
+be freed with <a href="https://developer.gnome.org/glib/unstable/glib-String-Utility-Functions.html#g-strfreev">GLib.strfreev</a>, or <a href="https://docs.python.org/3/library/constants.html#None">None</a> if retrieving the
+selection data failed. (This could happen for various reasons,
+in particular if the clipboard was empty or if the contents of
+the clipboard could not be converted into URI form.)</p>
+
+					</div>
+	</div>
 
 
 
 	<p>
-	<b>Since</b>			: 2.10
+	<b>Since</b>			: 2.14
 		</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.14;" id="gtk_clipboard_wait_for_uris">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -3933,23 +3997,35 @@ the clipboard could not be converted into URI form.)</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_clipboard_wait_is_text_available">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_clipboard_wait_for_uris">
-	<span><code>Gtk.Clipboard.wait_for_uris</code></span>
+<h4 data-hotdoc-id="gtk_clipboard_wait_is_text_available">
+	<span><code>Gtk.Clipboard.wait_is_text_available</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.Clipboard.wait_for_uris (self):
-    #python wrapper for 'gtk_clipboard_wait_for_uris'</pre>
+def Gtk.Clipboard.wait_is_text_available (self):
+    #python wrapper for 'gtk_clipboard_wait_is_text_available'</pre>
 
-<p>Requests the contents of the clipboard as URIs. This function waits
-for the data to be received using the main loop, so events,
+<p>Test to see if there is text available to be pasted
+This is done by requesting the TARGETS atom and checking
+if it contains any of the supported text targets. This function
+waits for the data to be received using the main loop, so events,
 timeouts, etc, may be dispatched during the wait.</p>
+<p>This function is a little faster than calling
+<a href="gtkclipboard.html#gtk_clipboard_wait_for_text">Gtk.Clipboard.wait_for_text</a> since it doesn’t need to retrieve
+the actual text.</p>
 
 
 
@@ -3975,35 +4051,20 @@ timeouts, etc, may be dispatched during the wait.</p>
 			<div>
 				<b>Returns</b>
 									(
-					[ <a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a> ]
+					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
 										)
 								–
 			</div>
-							<p>(nullable) (array zero-terminated=1) (element-type utf8) (transfer full):
-a newly-allocated <a href="https://docs.python.org/3/library/constants.html#None">None</a>-terminated array of strings which must
-be freed with <a href="https://developer.gnome.org/glib/unstable/glib-String-Utility-Functions.html#g-strfreev">GLib.strfreev</a>, or <a href="https://docs.python.org/3/library/constants.html#None">None</a> if retrieving the
-selection data failed. (This could happen for various reasons,
-in particular if the clipboard was empty or if the contents of
-the clipboard could not be converted into URI form.)</p>
+							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> is there is text available, <a href="https://docs.python.org/3/library/constants.html#False">False</a> otherwise.</p>
 
 					</div>
 	</div>
 
 
 
-	<p>
-	<b>Since</b>			: 2.14
-		</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_clipboard_wait_is_text_available">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -4123,28 +4184,35 @@ the actual text.</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.6;" id="gtk_clipboard_wait_is_image_available">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_clipboard_wait_is_text_available">
-	<span><code>Gtk.Clipboard.wait_is_text_available</code></span>
+<h4 data-hotdoc-id="gtk_clipboard_wait_is_image_available">
+	<span><code>Gtk.Clipboard.wait_is_image_available</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.Clipboard.wait_is_text_available (self):
-    #python wrapper for 'gtk_clipboard_wait_is_text_available'</pre>
+def Gtk.Clipboard.wait_is_image_available (self):
+    #python wrapper for 'gtk_clipboard_wait_is_image_available'</pre>
 
-<p>Test to see if there is text available to be pasted
+<p>Test to see if there is an image available to be pasted
 This is done by requesting the TARGETS atom and checking
-if it contains any of the supported text targets. This function
+if it contains any of the supported image targets. This function
 waits for the data to be received using the main loop, so events,
 timeouts, etc, may be dispatched during the wait.</p>
 <p>This function is a little faster than calling
-<a href="gtkclipboard.html#gtk_clipboard_wait_for_text">Gtk.Clipboard.wait_for_text</a> since it doesn’t need to retrieve
-the actual text.</p>
+<a href="gtkclipboard.html#gtk_clipboard_wait_for_image">Gtk.Clipboard.wait_for_image</a> since it doesn’t need to retrieve
+the actual image data.</p>
 
 
 
@@ -4174,23 +4242,19 @@ the actual text.</p>
 										)
 								–
 			</div>
-							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> is there is text available, <a href="https://docs.python.org/3/library/constants.html#False">False</a> otherwise.</p>
+							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> is there is an image available, <a href="https://docs.python.org/3/library/constants.html#False">False</a> otherwise.</p>
 
 					</div>
 	</div>
 
 
 
+	<p>
+	<b>Since</b>			: 2.6
+		</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.6;" id="gtk_clipboard_wait_is_image_available">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -4316,28 +4380,35 @@ the actual image data.</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_clipboard_wait_is_rich_text_available">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_clipboard_wait_is_image_available">
-	<span><code>Gtk.Clipboard.wait_is_image_available</code></span>
+<h4 data-hotdoc-id="gtk_clipboard_wait_is_rich_text_available">
+	<span><code>Gtk.Clipboard.wait_is_rich_text_available</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.Clipboard.wait_is_image_available (self):
-    #python wrapper for 'gtk_clipboard_wait_is_image_available'</pre>
+def Gtk.Clipboard.wait_is_rich_text_available (self, buffer):
+    #python wrapper for 'gtk_clipboard_wait_is_rich_text_available'</pre>
 
-<p>Test to see if there is an image available to be pasted
+<p>Test to see if there is rich text available to be pasted
 This is done by requesting the TARGETS atom and checking
-if it contains any of the supported image targets. This function
+if it contains any of the supported rich text targets. This function
 waits for the data to be received using the main loop, so events,
 timeouts, etc, may be dispatched during the wait.</p>
 <p>This function is a little faster than calling
-<a href="gtkclipboard.html#gtk_clipboard_wait_for_image">Gtk.Clipboard.wait_for_image</a> since it doesn’t need to retrieve
-the actual image data.</p>
+<a href="gtkclipboard.html#gtk_clipboard_wait_for_rich_text">Gtk.Clipboard.wait_for_rich_text</a> since it doesn’t need to retrieve
+the actual text.</p>
 
 
 
@@ -4356,6 +4427,19 @@ the actual image data.</p>
 
 	</div>
 
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>buffer</code></em></i>
+					(
+						<a title="Gtk.TextBuffer" href="gtktextbuffer.html#GtkTextBuffer">Gtk.TextBuffer</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtktextbuffer.html#GtkTextBuffer">Gtk.TextBuffer</a></p>
+
+	</div>
+
 			</div>
 
 		<div class="return-values-container">
@@ -4367,7 +4451,7 @@ the actual image data.</p>
 										)
 								–
 			</div>
-							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> is there is an image available, <a href="https://docs.python.org/3/library/constants.html#False">False</a> otherwise.</p>
+							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> is there is rich text available, <a href="https://docs.python.org/3/library/constants.html#False">False</a> otherwise.</p>
 
 					</div>
 	</div>
@@ -4375,18 +4459,11 @@ the actual image data.</p>
 
 
 	<p>
-	<b>Since</b>			: 2.6
+	<b>Since</b>			: 2.10
 		</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_clipboard_wait_is_rich_text_available">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -4536,28 +4613,35 @@ the actual text.</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.14;" id="gtk_clipboard_wait_is_uris_available">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_clipboard_wait_is_rich_text_available">
-	<span><code>Gtk.Clipboard.wait_is_rich_text_available</code></span>
+<h4 data-hotdoc-id="gtk_clipboard_wait_is_uris_available">
+	<span><code>Gtk.Clipboard.wait_is_uris_available</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.Clipboard.wait_is_rich_text_available (self, buffer):
-    #python wrapper for 'gtk_clipboard_wait_is_rich_text_available'</pre>
+def Gtk.Clipboard.wait_is_uris_available (self):
+    #python wrapper for 'gtk_clipboard_wait_is_uris_available'</pre>
 
-<p>Test to see if there is rich text available to be pasted
+<p>Test to see if there is a list of URIs available to be pasted
 This is done by requesting the TARGETS atom and checking
-if it contains any of the supported rich text targets. This function
+if it contains the URI targets. This function
 waits for the data to be received using the main loop, so events,
 timeouts, etc, may be dispatched during the wait.</p>
 <p>This function is a little faster than calling
-<a href="gtkclipboard.html#gtk_clipboard_wait_for_rich_text">Gtk.Clipboard.wait_for_rich_text</a> since it doesn’t need to retrieve
-the actual text.</p>
+<a href="gtkclipboard.html#gtk_clipboard_wait_for_uris">Gtk.Clipboard.wait_for_uris</a> since it doesn’t need to retrieve
+the actual URI data.</p>
 
 
 
@@ -4576,19 +4660,6 @@ the actual text.</p>
 
 	</div>
 
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>buffer</code></em></i>
-					(
-						<a title="Gtk.TextBuffer" href="gtktextbuffer.html#GtkTextBuffer">Gtk.TextBuffer</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtktextbuffer.html#GtkTextBuffer">Gtk.TextBuffer</a></p>
-
-	</div>
-
 			</div>
 
 		<div class="return-values-container">
@@ -4600,7 +4671,7 @@ the actual text.</p>
 										)
 								–
 			</div>
-							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> is there is rich text available, <a href="https://docs.python.org/3/library/constants.html#False">False</a> otherwise.</p>
+							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> is there is an URI list available, <a href="https://docs.python.org/3/library/constants.html#False">False</a> otherwise.</p>
 
 					</div>
 	</div>
@@ -4608,18 +4679,11 @@ the actual text.</p>
 
 
 	<p>
-	<b>Since</b>			: 2.10
+	<b>Since</b>			: 2.14
 		</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.14;" id="gtk_clipboard_wait_is_uris_available">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -4745,28 +4809,32 @@ the actual URI data.</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.4;" id="gtk_clipboard_wait_for_targets">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_clipboard_wait_is_uris_available">
-	<span><code>Gtk.Clipboard.wait_is_uris_available</code></span>
+<h4 data-hotdoc-id="gtk_clipboard_wait_for_targets">
+	<span><code>Gtk.Clipboard.wait_for_targets</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.Clipboard.wait_is_uris_available (self):
-    #python wrapper for 'gtk_clipboard_wait_is_uris_available'</pre>
+def Gtk.Clipboard.wait_for_targets (self):
+    #python wrapper for 'gtk_clipboard_wait_for_targets'</pre>
 
-<p>Test to see if there is a list of URIs available to be pasted
-This is done by requesting the TARGETS atom and checking
-if it contains the URI targets. This function
-waits for the data to be received using the main loop, so events,
-timeouts, etc, may be dispatched during the wait.</p>
-<p>This function is a little faster than calling
-<a href="gtkclipboard.html#gtk_clipboard_wait_for_uris">Gtk.Clipboard.wait_for_uris</a> since it doesn’t need to retrieve
-the actual URI data.</p>
+<p>Returns a list of targets that are present on the clipboard, or <a href="https://docs.python.org/3/library/constants.html#None">None</a>
+if there aren’t any targets available. The returned list must be
+freed with <a href="https://developer.gnome.org/glib/unstable/glib-Memory-Allocation.html#g-free">GLib.free</a>.
+This function waits for the data to be received using the main
+loop, so events, timeouts, etc, may be dispatched during the wait.</p>
 
 
 
@@ -4788,34 +4856,58 @@ the actual URI data.</p>
 			</div>
 
 		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
+		<p><b>Returns a tuple made of:</b></p>
+				
+<div class="symbol-detail">
+	<div>
 									(
-					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
-										)
-								–
-			</div>
-							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> is there is an URI list available, <a href="https://docs.python.org/3/library/constants.html#False">False</a> otherwise.</p>
-
-					</div>
+			<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+						)
+				–
 	</div>
+			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if any targets are present on the clipboard,
+otherwise <a href="https://docs.python.org/3/library/constants.html#False">False</a>.</p>
+
+	</div>
+
+				
+<div class="symbol-detail">
+	<div>
+				<i><em><code>targets</code></em></i>
+									(
+			[ <a title="Gdk.Atom" href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">Gdk.Atom</a> ]
+						)
+				–
+	</div>
+			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if any targets are present on the clipboard,
+otherwise <a href="https://docs.python.org/3/library/constants.html#False">False</a>.</p>
+
+	</div>
+
+				
+<div class="symbol-detail">
+	<div>
+				<i><em><code>n_targets</code></em></i>
+									(
+			<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if any targets are present on the clipboard,
+otherwise <a href="https://docs.python.org/3/library/constants.html#False">False</a>.</p>
+
+	</div>
+
+			</div>
 
 
 
 	<p>
-	<b>Since</b>			: 2.14
+	<b>Since</b>			: 2.4
 		</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.4;" id="gtk_clipboard_wait_for_targets">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -5003,25 +5095,32 @@ otherwise <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refer
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.6;" id="gtk_clipboard_wait_is_target_available">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_clipboard_wait_for_targets">
-	<span><code>Gtk.Clipboard.wait_for_targets</code></span>
+<h4 data-hotdoc-id="gtk_clipboard_wait_is_target_available">
+	<span><code>Gtk.Clipboard.wait_is_target_available</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.Clipboard.wait_for_targets (self):
-    #python wrapper for 'gtk_clipboard_wait_for_targets'</pre>
+def Gtk.Clipboard.wait_is_target_available (self, target):
+    #python wrapper for 'gtk_clipboard_wait_is_target_available'</pre>
 
-<p>Returns a list of targets that are present on the clipboard, or <a href="https://docs.python.org/3/library/constants.html#None">None</a>
-if there aren’t any targets available. The returned list must be
-freed with <a href="https://developer.gnome.org/glib/unstable/glib-Memory-Allocation.html#g-free">GLib.free</a>.
-This function waits for the data to be received using the main
-loop, so events, timeouts, etc, may be dispatched during the wait.</p>
+<p>Checks if a clipboard supports pasting data of a given type. This
+function can be used to determine if a “Paste” menu item should be
+insensitive or not.</p>
+<p>If you want to see if there’s text available on the clipboard, use
+gtk_clipboard_wait_is_text_available () instead.</p>
 
 
 
@@ -5040,68 +5139,43 @@ loop, so events, timeouts, etc, may be dispatched during the wait.</p>
 
 	</div>
 
-			</div>
-
-		<div class="return-values-container">
-		<p><b>Returns a tuple made of:</b></p>
-				
+					
 <div class="symbol-detail">
 	<div>
-									(
-			<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+		<i><em><code>target</code></em></i>
+					(
+						<a title="Gdk.Atom" href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">Gdk.Atom</a>
 						)
 				–
 	</div>
-			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if any targets are present on the clipboard,
-otherwise <a href="https://docs.python.org/3/library/constants.html#False">False</a>.</p>
-
-	</div>
-
-				
-<div class="symbol-detail">
-	<div>
-				<i><em><code>targets</code></em></i>
-									(
-			[ <a title="Gdk.Atom" href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">Gdk.Atom</a> ]
-						)
-				–
-	</div>
-			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if any targets are present on the clipboard,
-otherwise <a href="https://docs.python.org/3/library/constants.html#False">False</a>.</p>
-
-	</div>
-
-				
-<div class="symbol-detail">
-	<div>
-				<i><em><code>n_targets</code></em></i>
-									(
-			<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
-						)
-				–
-	</div>
-			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if any targets are present on the clipboard,
-otherwise <a href="https://docs.python.org/3/library/constants.html#False">False</a>.</p>
+			<p>A <a href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">Gdk.Atom</a> indicating which target to look for.</p>
 
 	</div>
 
 			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+										)
+								–
+			</div>
+							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if the target is available, <a href="https://docs.python.org/3/library/constants.html#False">False</a> otherwise.</p>
+
+					</div>
+	</div>
 
 
 
 	<p>
-	<b>Since</b>			: 2.4
+	<b>Since</b>			: 2.6
 		</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.6;" id="gtk_clipboard_wait_is_target_available">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -5245,25 +5319,32 @@ gtk_clipboard_wait_is_text_available () instead.</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.6;" id="gtk_clipboard_set_can_store">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_clipboard_wait_is_target_available">
-	<span><code>Gtk.Clipboard.wait_is_target_available</code></span>
+<h4 data-hotdoc-id="gtk_clipboard_set_can_store">
+	<span><code>Gtk.Clipboard.set_can_store</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.Clipboard.wait_is_target_available (self, target):
-    #python wrapper for 'gtk_clipboard_wait_is_target_available'</pre>
+def Gtk.Clipboard.set_can_store (self, targets, n_targets):
+    #python wrapper for 'gtk_clipboard_set_can_store'</pre>
 
-<p>Checks if a clipboard supports pasting data of a given type. This
-function can be used to determine if a “Paste” menu item should be
-insensitive or not.</p>
-<p>If you want to see if there’s text available on the clipboard, use
-gtk_clipboard_wait_is_text_available () instead.</p>
+<p>Hints that the clipboard data should be stored somewhere when the
+application exits or when gtk_clipboard_store () is called.</p>
+<p>This value is reset when the clipboard owner changes.
+Where the clipboard data is stored is platform dependent,
+see gdk_display_store_clipboard () for more information.</p>
 
 
 
@@ -5285,31 +5366,32 @@ gtk_clipboard_wait_is_text_available () instead.</p>
 					
 <div class="symbol-detail">
 	<div>
-		<i><em><code>target</code></em></i>
+		<i><em><code>targets</code></em></i>
 					(
-						<a title="Gdk.Atom" href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">Gdk.Atom</a>
+						[ <a title="Gtk.TargetEntry" href="gtkselection.html#GtkTargetEntry">Gtk.TargetEntry</a> ]
 						)
 				–
 	</div>
-			<p>A <a href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">Gdk.Atom</a> indicating which target to look for.</p>
+			<p>array containing
+information about which forms should be stored or <a href="https://docs.python.org/3/library/constants.html#None">None</a>
+to indicate that all forms should be stored.</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>n_targets</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>number of elements in <em>targets</em></p>
 
 	</div>
 
 			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
-										)
-								–
-			</div>
-							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if the target is available, <a href="https://docs.python.org/3/library/constants.html#False">False</a> otherwise.</p>
-
-					</div>
-	</div>
 
 
 
@@ -5319,13 +5401,6 @@ gtk_clipboard_wait_is_text_available () instead.</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.6;" id="gtk_clipboard_set_can_store">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -5477,25 +5552,29 @@ to indicate that all forms should be stored.</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.6;" id="gtk_clipboard_store">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_clipboard_set_can_store">
-	<span><code>Gtk.Clipboard.set_can_store</code></span>
+<h4 data-hotdoc-id="gtk_clipboard_store">
+	<span><code>Gtk.Clipboard.store</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.Clipboard.set_can_store (self, targets, n_targets):
-    #python wrapper for 'gtk_clipboard_set_can_store'</pre>
+def Gtk.Clipboard.store (self):
+    #python wrapper for 'gtk_clipboard_store'</pre>
 
-<p>Hints that the clipboard data should be stored somewhere when the
-application exits or when gtk_clipboard_store () is called.</p>
-<p>This value is reset when the clipboard owner changes.
-Where the clipboard data is stored is platform dependent,
-see gdk_display_store_clipboard () for more information.</p>
+<p>Stores the current clipboard data somewhere so that it will stay
+around after the application has quit.</p>
 
 
 
@@ -5514,34 +5593,6 @@ see gdk_display_store_clipboard () for more information.</p>
 
 	</div>
 
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>targets</code></em></i>
-					(
-						[ <a title="Gtk.TargetEntry" href="gtkselection.html#GtkTargetEntry">Gtk.TargetEntry</a> ]
-						)
-				–
-	</div>
-			<p>array containing
-information about which forms should be stored or <a href="https://docs.python.org/3/library/constants.html#None">None</a>
-to indicate that all forms should be stored.</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>n_targets</code></em></i>
-					(
-						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
-						)
-				–
-	</div>
-			<p>number of elements in <em>targets</em></p>
-
-	</div>
-
 			</div>
 
 
@@ -5552,13 +5603,6 @@ to indicate that all forms should be stored.</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.6;" id="gtk_clipboard_store">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -5615,50 +5659,6 @@ around after the application has quit.</p>
 function Gtk.prototype.store(): {
     // javascript wrapper for 'gtk_clipboard_store'
 }</pre>
-
-<p>Stores the current clipboard data somewhere so that it will stay
-around after the application has quit.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>clipboard</code></em></i>
-					(
-						<a title="Gtk.Clipboard" href="gtkclipboard.html#GtkClipboard">Gtk.Clipboard</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkclipboard.html#GtkClipboard">Gtk.Clipboard</a></p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.6
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_clipboard_store">
-	<span><code>Gtk.Clipboard.store</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.Clipboard.store (self):
-    #python wrapper for 'gtk_clipboard_store'</pre>
 
 <p>Stores the current clipboard data somewhere so that it will stay
 around after the application has quit.</p>
@@ -5761,6 +5761,64 @@ gtk_clipboard_get_selection (<a title="GtkClipboard" href="gtkclipboard.html#Gtk
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_clipboard_get">
 	
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_clipboard_get">
+	<span><code>Gtk.Clipboard.get</code></span>
+</h3>
+
+
+<pre class="python-prototype">
+def Gtk.Clipboard.get (selection):
+    #python wrapper for 'gtk_clipboard_get'</pre>
+
+<p>Returns the clipboard object for the given selection.
+See <a href="gtkclipboard.html#gtk_clipboard_get_for_display">Gtk.Clipboard.get_for_display</a> for complete details.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>selection</code></em></i>
+					(
+						<a title="Gdk.Atom" href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">Gdk.Atom</a>
+						)
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">Gdk.Atom</a> which identifies the clipboard to use</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Clipboard" href="gtkclipboard.html#GtkClipboard">Gtk.Clipboard</a>
+										)
+								–
+			</div>
+							<p>the appropriate clipboard object. If no clipboard
+already exists, a new one will be created. Once a clipboard
+object has been created, it is persistent and, since it is
+owned by GTK+, must not be freed or unreffed.</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -5880,27 +5938,67 @@ owned by GTK+, must not be freed or unreffed.</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.2;" id="gtk_clipboard_get_for_display">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h3 data-hotdoc-id="gtk_clipboard_get">
-	<span><code>Gtk.Clipboard.get</code></span>
+<h3 data-hotdoc-id="gtk_clipboard_get_for_display">
+	<span><code>Gtk.Clipboard.get_for_display</code></span>
 </h3>
 
 
 <pre class="python-prototype">
-def Gtk.Clipboard.get (selection):
-    #python wrapper for 'gtk_clipboard_get'</pre>
+def Gtk.Clipboard.get_for_display (display, selection):
+    #python wrapper for 'gtk_clipboard_get_for_display'</pre>
 
 <p>Returns the clipboard object for the given selection.
-See <a href="gtkclipboard.html#gtk_clipboard_get_for_display">Gtk.Clipboard.get_for_display</a> for complete details.</p>
+Cut/copy/paste menu items and keyboard shortcuts should use
+the default clipboard, returned by passing <a href="https://developer.gnome.org/gdk3/gdk3-Selections.html#GDK-SELECTION-CLIPBOARD:CAPS">GDK_SELECTION_CLIPBOARD (not introspectable)</a> for <em>selection</em>.
+(%GDK_NONE is supported as a synonym for GDK_SELECTION_CLIPBOARD
+for backwards compatibility reasons.)
+The currently-selected object or text should be provided on the clipboard
+identified by <a href="https://developer.gnome.org/gdk3/gdk3-Selections.html#GDK-SELECTION-PRIMARY:CAPS">GDK_SELECTION_PRIMARY (not introspectable)</a>. Cut/copy/paste menu items
+conceptually copy the contents of the <a href="https://developer.gnome.org/gdk3/gdk3-Selections.html#GDK-SELECTION-PRIMARY:CAPS">GDK_SELECTION_PRIMARY (not introspectable)</a> clipboard
+to the default clipboard, i.e. they copy the selection to what the
+user sees as the clipboard.</p>
+<p>(Passing <a href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GDK-NONE:CAPS">GDK_NONE (not introspectable)</a> is the same as using <code>gdk_atom_intern ("CLIPBOARD", FALSE)</code>.</p>
+<p>See the
+<a href="http://www.freedesktop.org/Standards/clipboards-spec">FreeDesktop Clipboard Specification</a>
+for a detailed discussion of the “CLIPBOARD” vs. “PRIMARY”
+selections under the X window system. On Win32 the
+<a href="https://developer.gnome.org/gdk3/gdk3-Selections.html#GDK-SELECTION-PRIMARY:CAPS">GDK_SELECTION_PRIMARY (not introspectable)</a> clipboard is essentially ignored.)</p>
+<p>It’s possible to have arbitrary named clipboards; if you do invent
+new clipboards, you should prefix the selection name with an
+underscore (because the ICCCM requires that nonstandard atoms are
+underscore-prefixed), and namespace it as well. For example,
+if your application called “Foo” has a special-purpose
+clipboard, you might call it “_FOO_SPECIAL_CLIPBOARD”.</p>
 
 
 
 	<div class="parameters-container">
 		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>display</code></em></i>
+					(
+						<a title="Gdk.Display" href="https://developer.gnome.org/gdk3/GdkDisplay.html#GdkDisplay-struct">Gdk.Display</a>
+						)
+				–
+	</div>
+			<p>the <a href="https://developer.gnome.org/gdk3/GdkDisplay.html#GdkDisplay-struct">Gdk.Display</a> for which the clipboard is to be retrieved or created.</p>
+
+	</div>
+
 					
 <div class="symbol-detail">
 	<div>
@@ -5910,7 +6008,7 @@ See <a href="gtkclipboard.html#gtk_clipboard_get_for_display">Gtk.Clipboard.get_
 						)
 				–
 	</div>
-			<p>a <a href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">Gdk.Atom</a> which identifies the clipboard to use</p>
+			<p>a <a href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">Gdk.Atom</a> which identifies the clipboard to use.</p>
 
 	</div>
 
@@ -5925,26 +6023,22 @@ See <a href="gtkclipboard.html#gtk_clipboard_get_for_display">Gtk.Clipboard.get_
 										)
 								–
 			</div>
-							<p>the appropriate clipboard object. If no clipboard
-already exists, a new one will be created. Once a clipboard
-object has been created, it is persistent and, since it is
-owned by GTK+, must not be freed or unreffed.</p>
+							<p>the appropriate clipboard object. If no
+clipboard already exists, a new one will be created. Once a clipboard
+object has been created, it is persistent and, since it is owned by
+GTK+, must not be freed or unrefd.</p>
 
 					</div>
 	</div>
 
 
 
+	<p>
+	<b>Since</b>			: 2.2
+		</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.2;" id="gtk_clipboard_get_for_display">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -6134,42 +6228,29 @@ GTK+, must not be freed or unrefd.</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.16;" id="gtk_clipboard_get_default">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h3 data-hotdoc-id="gtk_clipboard_get_for_display">
-	<span><code>Gtk.Clipboard.get_for_display</code></span>
+<h3 data-hotdoc-id="gtk_clipboard_get_default">
+	<span><code>Gtk.Clipboard.get_default</code></span>
 </h3>
 
 
 <pre class="python-prototype">
-def Gtk.Clipboard.get_for_display (display, selection):
-    #python wrapper for 'gtk_clipboard_get_for_display'</pre>
+def Gtk.Clipboard.get_default (display):
+    #python wrapper for 'gtk_clipboard_get_default'</pre>
 
-<p>Returns the clipboard object for the given selection.
-Cut/copy/paste menu items and keyboard shortcuts should use
-the default clipboard, returned by passing <a href="https://developer.gnome.org/gdk3/gdk3-Selections.html#GDK-SELECTION-CLIPBOARD:CAPS">GDK_SELECTION_CLIPBOARD (not introspectable)</a> for <em>selection</em>.
-(%GDK_NONE is supported as a synonym for GDK_SELECTION_CLIPBOARD
-for backwards compatibility reasons.)
-The currently-selected object or text should be provided on the clipboard
-identified by <a href="https://developer.gnome.org/gdk3/gdk3-Selections.html#GDK-SELECTION-PRIMARY:CAPS">GDK_SELECTION_PRIMARY (not introspectable)</a>. Cut/copy/paste menu items
-conceptually copy the contents of the <a href="https://developer.gnome.org/gdk3/gdk3-Selections.html#GDK-SELECTION-PRIMARY:CAPS">GDK_SELECTION_PRIMARY (not introspectable)</a> clipboard
-to the default clipboard, i.e. they copy the selection to what the
-user sees as the clipboard.</p>
-<p>(Passing <a href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GDK-NONE:CAPS">GDK_NONE (not introspectable)</a> is the same as using <code>gdk_atom_intern ("CLIPBOARD", FALSE)</code>.</p>
-<p>See the
-<a href="http://www.freedesktop.org/Standards/clipboards-spec">FreeDesktop Clipboard Specification</a>
-for a detailed discussion of the “CLIPBOARD” vs. “PRIMARY”
-selections under the X window system. On Win32 the
-<a href="https://developer.gnome.org/gdk3/gdk3-Selections.html#GDK-SELECTION-PRIMARY:CAPS">GDK_SELECTION_PRIMARY (not introspectable)</a> clipboard is essentially ignored.)</p>
-<p>It’s possible to have arbitrary named clipboards; if you do invent
-new clipboards, you should prefix the selection name with an
-underscore (because the ICCCM requires that nonstandard atoms are
-underscore-prefixed), and namespace it as well. For example,
-if your application called “Foo” has a special-purpose
-clipboard, you might call it “_FOO_SPECIAL_CLIPBOARD”.</p>
+<p>Returns the default clipboard object for use with cut/copy/paste menu items
+and keyboard shortcuts.</p>
 
 
 
@@ -6184,20 +6265,7 @@ clipboard, you might call it “_FOO_SPECIAL_CLIPBOARD”.</p>
 						)
 				–
 	</div>
-			<p>the <a href="https://developer.gnome.org/gdk3/GdkDisplay.html#GdkDisplay-struct">Gdk.Display</a> for which the clipboard is to be retrieved or created.</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>selection</code></em></i>
-					(
-						<a title="Gdk.Atom" href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">Gdk.Atom</a>
-						)
-				–
-	</div>
-			<p>a <a href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">Gdk.Atom</a> which identifies the clipboard to use.</p>
+			<p>the <a href="https://developer.gnome.org/gdk3/GdkDisplay.html#GdkDisplay-struct">Gdk.Display</a> for which the clipboard is to be retrieved.</p>
 
 	</div>
 
@@ -6212,10 +6280,7 @@ clipboard, you might call it “_FOO_SPECIAL_CLIPBOARD”.</p>
 										)
 								–
 			</div>
-							<p>the appropriate clipboard object. If no
-clipboard already exists, a new one will be created. Once a clipboard
-object has been created, it is persistent and, since it is owned by
-GTK+, must not be freed or unrefd.</p>
+							<p>the default clipboard object.</p>
 
 					</div>
 	</div>
@@ -6223,18 +6288,11 @@ GTK+, must not be freed or unrefd.</p>
 
 
 	<p>
-	<b>Since</b>			: 2.2
+	<b>Since</b>			: 3.16
 		</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:3.16;" id="gtk_clipboard_get_default">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -6354,64 +6412,6 @@ and keyboard shortcuts.</p>
 
 
         </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_clipboard_get_default">
-	<span><code>Gtk.Clipboard.get_default</code></span>
-</h3>
-
-
-<pre class="python-prototype">
-def Gtk.Clipboard.get_default (display):
-    #python wrapper for 'gtk_clipboard_get_default'</pre>
-
-<p>Returns the default clipboard object for use with cut/copy/paste menu items
-and keyboard shortcuts.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>display</code></em></i>
-					(
-						<a title="Gdk.Display" href="https://developer.gnome.org/gdk3/GdkDisplay.html#GdkDisplay-struct">Gdk.Display</a>
-						)
-				–
-	</div>
-			<p>the <a href="https://developer.gnome.org/gdk3/GdkDisplay.html#GdkDisplay-struct">Gdk.Display</a> for which the clipboard is to be retrieved.</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Gtk.Clipboard" href="gtkclipboard.html#GtkClipboard">Gtk.Clipboard</a>
-										)
-								–
-			</div>
-							<p>the default clipboard object.</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.16
-		</p>
-
-
-        </div>
 
 </div>
 
@@ -6421,6 +6421,79 @@ and keyboard shortcuts.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="GtkClipboardReceivedFunc">
 	
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="GtkClipboardReceivedFunc">
+	<span><code>Gtk.ClipboardReceivedFunc</code></span>
+</h3>
+
+
+
+
+<pre class="c-prototype">
+(*Gtk.ClipboardReceivedFunc) (<a title="Gtk.Clipboard" href="gtkclipboard.html#GtkClipboard">Gtk.Clipboard</a>,
+                              <a title="Gtk.SelectionData" href="gtkselection.html#GtkSelectionData">Gtk.SelectionData</a>,
+                              <a title="object" href="https://docs.python.org/3/library/functions.html#object">object</a>)</pre>
+
+<p>A function to be called when the results of <a href="gtkclipboard.html#gtk_clipboard_request_contents">Gtk.Clipboard.request_contents</a>
+are received, or when the request fails.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>clipboard</code></em></i>
+					(
+						<a title="Gtk.Clipboard" href="gtkclipboard.html#GtkClipboard">Gtk.Clipboard</a>
+						)
+				–
+	</div>
+			<p>the <a href="gtkclipboard.html#GtkClipboard">Gtk.Clipboard</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>selection_data</code></em></i>
+					(
+						<a title="Gtk.SelectionData" href="gtkselection.html#GtkSelectionData">Gtk.SelectionData</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkselection.html#GtkSelectionData">Gtk.SelectionData</a> containing the data was received.
+If retrieving the data failed, then then length field
+of <em>selection_data</em> will be negative.</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>data</code></em></i>
+					(
+						<a title="object" href="https://docs.python.org/3/library/functions.html#object">object</a>
+						)
+				–
+	</div>
+			<p>the <em>user_data</em> supplied to
+<a href="gtkclipboard.html#gtk_clipboard_request_contents">Gtk.Clipboard.request_contents</a>.</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -6563,24 +6636,31 @@ of <em>selection_data</em> will be negative.</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="GtkClipboardTextReceivedFunc">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h3 data-hotdoc-id="GtkClipboardReceivedFunc">
-	<span><code>Gtk.ClipboardReceivedFunc</code></span>
+<h3 data-hotdoc-id="GtkClipboardTextReceivedFunc">
+	<span><code>Gtk.ClipboardTextReceivedFunc</code></span>
 </h3>
 
 
 
 
 <pre class="c-prototype">
-(*Gtk.ClipboardReceivedFunc) (<a title="Gtk.Clipboard" href="gtkclipboard.html#GtkClipboard">Gtk.Clipboard</a>,
-                              <a title="Gtk.SelectionData" href="gtkselection.html#GtkSelectionData">Gtk.SelectionData</a>,
-                              <a title="object" href="https://docs.python.org/3/library/functions.html#object">object</a>)</pre>
+(*Gtk.ClipboardTextReceivedFunc) (<a title="Gtk.Clipboard" href="gtkclipboard.html#GtkClipboard">Gtk.Clipboard</a>,
+                                  <a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>,
+                                  <a title="object" href="https://docs.python.org/3/library/functions.html#object">object</a>)</pre>
 
-<p>A function to be called when the results of <a href="gtkclipboard.html#gtk_clipboard_request_contents">Gtk.Clipboard.request_contents</a>
+<p>A function to be called when the results of <a href="gtkclipboard.html#gtk_clipboard_request_text">Gtk.Clipboard.request_text</a>
 are received, or when the request fails.</p>
 
 
@@ -6603,15 +6683,14 @@ are received, or when the request fails.</p>
 					
 <div class="symbol-detail">
 	<div>
-		<i><em><code>selection_data</code></em></i>
+		<i><em><code>text</code></em></i>
 					(
-						<a title="Gtk.SelectionData" href="gtkselection.html#GtkSelectionData">Gtk.SelectionData</a>
+						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
 						)
 				–
 	</div>
-			<p>a <a href="gtkselection.html#GtkSelectionData">Gtk.SelectionData</a> containing the data was received.
-If retrieving the data failed, then then length field
-of <em>selection_data</em> will be negative.</p>
+			<p>the text received, as a UTF-8 encoded string, or
+<a href="https://docs.python.org/3/library/constants.html#None">None</a> if retrieving the data failed.</p>
 
 	</div>
 
@@ -6625,7 +6704,7 @@ of <em>selection_data</em> will be negative.</p>
 				–
 	</div>
 			<p>the <em>user_data</em> supplied to
-<a href="gtkclipboard.html#gtk_clipboard_request_contents">Gtk.Clipboard.request_contents</a>.</p>
+<a href="gtkclipboard.html#gtk_clipboard_request_text">Gtk.Clipboard.request_text</a>.</p>
 
 	</div>
 
@@ -6636,13 +6715,6 @@ of <em>selection_data</em> will be negative.</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="" id="GtkClipboardTextReceivedFunc">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -6788,24 +6860,31 @@ are received, or when the request fails.</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.6;" id="GtkClipboardImageReceivedFunc">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h3 data-hotdoc-id="GtkClipboardTextReceivedFunc">
-	<span><code>Gtk.ClipboardTextReceivedFunc</code></span>
+<h3 data-hotdoc-id="GtkClipboardImageReceivedFunc">
+	<span><code>Gtk.ClipboardImageReceivedFunc</code></span>
 </h3>
 
 
 
 
 <pre class="c-prototype">
-(*Gtk.ClipboardTextReceivedFunc) (<a title="Gtk.Clipboard" href="gtkclipboard.html#GtkClipboard">Gtk.Clipboard</a>,
-                                  <a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>,
-                                  <a title="object" href="https://docs.python.org/3/library/functions.html#object">object</a>)</pre>
+(*Gtk.ClipboardImageReceivedFunc) (<a title="Gtk.Clipboard" href="gtkclipboard.html#GtkClipboard">Gtk.Clipboard</a>,
+                                   <a title="GdkPixbuf.Pixbuf" href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf.Pixbuf</a>,
+                                   <a title="object" href="https://docs.python.org/3/library/functions.html#object">object</a>)</pre>
 
-<p>A function to be called when the results of <a href="gtkclipboard.html#gtk_clipboard_request_text">Gtk.Clipboard.request_text</a>
+<p>A function to be called when the results of <a href="gtkclipboard.html#gtk_clipboard_request_image">Gtk.Clipboard.request_image</a>
 are received, or when the request fails.</p>
 
 
@@ -6828,14 +6907,13 @@ are received, or when the request fails.</p>
 					
 <div class="symbol-detail">
 	<div>
-		<i><em><code>text</code></em></i>
+		<i><em><code>pixbuf</code></em></i>
 					(
-						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
+						<a title="GdkPixbuf.Pixbuf" href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf.Pixbuf</a>
 						)
 				–
 	</div>
-			<p>the text received, as a UTF-8 encoded string, or
-<a href="https://docs.python.org/3/library/constants.html#None">None</a> if retrieving the data failed.</p>
+			<p>the received image</p>
 
 	</div>
 
@@ -6849,7 +6927,7 @@ are received, or when the request fails.</p>
 				–
 	</div>
 			<p>the <em>user_data</em> supplied to
-<a href="gtkclipboard.html#gtk_clipboard_request_text">Gtk.Clipboard.request_text</a>.</p>
+<a href="gtkclipboard.html#gtk_clipboard_request_image">Gtk.Clipboard.request_image</a>.</p>
 
 	</div>
 
@@ -6857,16 +6935,12 @@ are received, or when the request fails.</p>
 
 
 
+	<p>
+	<b>Since</b>			: 2.6
+		</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.6;" id="GtkClipboardImageReceivedFunc">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -7011,24 +7085,32 @@ are received, or when the request fails.</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.4;" id="GtkClipboardTargetsReceivedFunc">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h3 data-hotdoc-id="GtkClipboardImageReceivedFunc">
-	<span><code>Gtk.ClipboardImageReceivedFunc</code></span>
+<h3 data-hotdoc-id="GtkClipboardTargetsReceivedFunc">
+	<span><code>Gtk.ClipboardTargetsReceivedFunc</code></span>
 </h3>
 
 
 
 
 <pre class="c-prototype">
-(*Gtk.ClipboardImageReceivedFunc) (<a title="Gtk.Clipboard" href="gtkclipboard.html#GtkClipboard">Gtk.Clipboard</a>,
-                                   <a title="GdkPixbuf.Pixbuf" href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf.Pixbuf</a>,
-                                   <a title="object" href="https://docs.python.org/3/library/functions.html#object">object</a>)</pre>
+(*Gtk.ClipboardTargetsReceivedFunc) (<a title="Gtk.Clipboard" href="gtkclipboard.html#GtkClipboard">Gtk.Clipboard</a>,
+                                     [ <a title="Gdk.Atom" href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">Gdk.Atom</a> ],
+                                     <a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>,
+                                     <a title="object" href="https://docs.python.org/3/library/functions.html#object">object</a>)</pre>
 
-<p>A function to be called when the results of <a href="gtkclipboard.html#gtk_clipboard_request_image">Gtk.Clipboard.request_image</a>
+<p>A function to be called when the results of <a href="gtkclipboard.html#gtk_clipboard_request_targets">Gtk.Clipboard.request_targets</a>
 are received, or when the request fails.</p>
 
 
@@ -7051,13 +7133,27 @@ are received, or when the request fails.</p>
 					
 <div class="symbol-detail">
 	<div>
-		<i><em><code>pixbuf</code></em></i>
+		<i><em><code>atoms</code></em></i>
 					(
-						<a title="GdkPixbuf.Pixbuf" href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf.Pixbuf</a>
+						[ <a title="Gdk.Atom" href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">Gdk.Atom</a> ]
 						)
 				–
 	</div>
-			<p>the received image</p>
+			<p>the supported targets,
+as array of <a href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">Gdk.Atom</a>, or <a href="https://docs.python.org/3/library/constants.html#None">None</a> if retrieving the data failed.</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>n_atoms</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>the length of the <em>atoms</em> array.</p>
 
 	</div>
 
@@ -7071,7 +7167,7 @@ are received, or when the request fails.</p>
 				–
 	</div>
 			<p>the <em>user_data</em> supplied to
-<a href="gtkclipboard.html#gtk_clipboard_request_image">Gtk.Clipboard.request_image</a>.</p>
+<a href="gtkclipboard.html#gtk_clipboard_request_targets">Gtk.Clipboard.request_targets</a>.</p>
 
 	</div>
 
@@ -7080,18 +7176,11 @@ are received, or when the request fails.</p>
 
 
 	<p>
-	<b>Since</b>			: 2.6
+	<b>Since</b>			: 2.4
 		</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.4;" id="GtkClipboardTargetsReceivedFunc">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -7269,26 +7358,35 @@ as array of <a href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="GtkClipboardRichTextReceivedFunc">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h3 data-hotdoc-id="GtkClipboardTargetsReceivedFunc">
-	<span><code>Gtk.ClipboardTargetsReceivedFunc</code></span>
+<h3 data-hotdoc-id="GtkClipboardRichTextReceivedFunc">
+	<span><code>Gtk.ClipboardRichTextReceivedFunc</code></span>
 </h3>
 
 
 
 
 <pre class="c-prototype">
-(*Gtk.ClipboardTargetsReceivedFunc) (<a title="Gtk.Clipboard" href="gtkclipboard.html#GtkClipboard">Gtk.Clipboard</a>,
-                                     [ <a title="Gdk.Atom" href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">Gdk.Atom</a> ],
-                                     <a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>,
-                                     <a title="object" href="https://docs.python.org/3/library/functions.html#object">object</a>)</pre>
+(*Gtk.ClipboardRichTextReceivedFunc) (<a title="Gtk.Clipboard" href="gtkclipboard.html#GtkClipboard">Gtk.Clipboard</a>,
+                                      <a title="Gdk.Atom" href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">Gdk.Atom</a>,
+                                      <a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>,
+                                      <a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>,
+                                      <a title="object" href="https://docs.python.org/3/library/functions.html#object">object</a>)</pre>
 
-<p>A function to be called when the results of <a href="gtkclipboard.html#gtk_clipboard_request_targets">Gtk.Clipboard.request_targets</a>
-are received, or when the request fails.</p>
+<p>A function to be called when the results of
+<a href="gtkclipboard.html#gtk_clipboard_request_rich_text">Gtk.Clipboard.request_rich_text</a> are received, or when the request
+fails.</p>
 
 
 
@@ -7310,27 +7408,40 @@ are received, or when the request fails.</p>
 					
 <div class="symbol-detail">
 	<div>
-		<i><em><code>atoms</code></em></i>
+		<i><em><code>format</code></em></i>
 					(
-						[ <a title="Gdk.Atom" href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">Gdk.Atom</a> ]
+						<a title="Gdk.Atom" href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">Gdk.Atom</a>
 						)
 				–
 	</div>
-			<p>the supported targets,
-as array of <a href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">Gdk.Atom</a>, or <a href="https://docs.python.org/3/library/constants.html#None">None</a> if retrieving the data failed.</p>
+			<p>The format of the rich text</p>
 
 	</div>
 
 					
 <div class="symbol-detail">
 	<div>
-		<i><em><code>n_atoms</code></em></i>
+		<i><em><code>text</code></em></i>
+					(
+						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
+						)
+				–
+	</div>
+			<p>the rich text received, as
+a UTF-8 encoded string, or <a href="https://docs.python.org/3/library/constants.html#None">None</a> if retrieving the data failed.</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>length</code></em></i>
 					(
 						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
 						)
 				–
 	</div>
-			<p>the length of the <em>atoms</em> array.</p>
+			<p>Length of the text.</p>
 
 	</div>
 
@@ -7344,7 +7455,7 @@ as array of <a href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.
 				–
 	</div>
 			<p>the <em>user_data</em> supplied to
-<a href="gtkclipboard.html#gtk_clipboard_request_targets">Gtk.Clipboard.request_targets</a>.</p>
+<a href="gtkclipboard.html#gtk_clipboard_request_rich_text">Gtk.Clipboard.request_rich_text</a>.</p>
 
 	</div>
 
@@ -7353,18 +7464,11 @@ as array of <a href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.
 
 
 	<p>
-	<b>Since</b>			: 2.4
+	<b>Since</b>			: 2.10
 		</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="GtkClipboardRichTextReceivedFunc">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -7569,27 +7673,32 @@ a UTF-8 encoded string, or <a href="https://developer.mozilla.org/en-US/docs/Web
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.14;" id="GtkClipboardURIReceivedFunc">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h3 data-hotdoc-id="GtkClipboardRichTextReceivedFunc">
-	<span><code>Gtk.ClipboardRichTextReceivedFunc</code></span>
+<h3 data-hotdoc-id="GtkClipboardURIReceivedFunc">
+	<span><code>Gtk.ClipboardURIReceivedFunc</code></span>
 </h3>
 
 
 
 
 <pre class="c-prototype">
-(*Gtk.ClipboardRichTextReceivedFunc) (<a title="Gtk.Clipboard" href="gtkclipboard.html#GtkClipboard">Gtk.Clipboard</a>,
-                                      <a title="Gdk.Atom" href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">Gdk.Atom</a>,
-                                      <a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>,
-                                      <a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>,
-                                      <a title="object" href="https://docs.python.org/3/library/functions.html#object">object</a>)</pre>
+(*Gtk.ClipboardURIReceivedFunc) (<a title="Gtk.Clipboard" href="gtkclipboard.html#GtkClipboard">Gtk.Clipboard</a>,
+                                 [ <a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a> ],
+                                 <a title="object" href="https://docs.python.org/3/library/functions.html#object">object</a>)</pre>
 
 <p>A function to be called when the results of
-<a href="gtkclipboard.html#gtk_clipboard_request_rich_text">Gtk.Clipboard.request_rich_text</a> are received, or when the request
+<a href="gtkclipboard.html#gtk_clipboard_request_uris">Gtk.Clipboard.request_uris</a> are received, or when the request
 fails.</p>
 
 
@@ -7612,40 +7721,13 @@ fails.</p>
 					
 <div class="symbol-detail">
 	<div>
-		<i><em><code>format</code></em></i>
+		<i><em><code>uris</code></em></i>
 					(
-						<a title="Gdk.Atom" href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">Gdk.Atom</a>
+						[ <a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a> ]
 						)
 				–
 	</div>
-			<p>The format of the rich text</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>text</code></em></i>
-					(
-						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
-						)
-				–
-	</div>
-			<p>the rich text received, as
-a UTF-8 encoded string, or <a href="https://docs.python.org/3/library/constants.html#None">None</a> if retrieving the data failed.</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>length</code></em></i>
-					(
-						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
-						)
-				–
-	</div>
-			<p>Length of the text.</p>
+			<p>the received URIs</p>
 
 	</div>
 
@@ -7659,7 +7741,7 @@ a UTF-8 encoded string, or <a href="https://docs.python.org/3/library/constants.
 				–
 	</div>
 			<p>the <em>user_data</em> supplied to
-<a href="gtkclipboard.html#gtk_clipboard_request_rich_text">Gtk.Clipboard.request_rich_text</a>.</p>
+<a href="gtkclipboard.html#gtk_clipboard_request_uris">Gtk.Clipboard.request_uris</a>.</p>
 
 	</div>
 
@@ -7668,18 +7750,11 @@ a UTF-8 encoded string, or <a href="https://docs.python.org/3/library/constants.
 
 
 	<p>
-	<b>Since</b>			: 2.10
+	<b>Since</b>			: 2.14
 		</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.14;" id="GtkClipboardURIReceivedFunc">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -7831,26 +7906,39 @@ fails.</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="GtkClipboardGetFunc">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h3 data-hotdoc-id="GtkClipboardURIReceivedFunc">
-	<span><code>Gtk.ClipboardURIReceivedFunc</code></span>
+<h3 data-hotdoc-id="GtkClipboardGetFunc">
+	<span><code>Gtk.ClipboardGetFunc</code></span>
 </h3>
 
 
 
 
 <pre class="c-prototype">
-(*Gtk.ClipboardURIReceivedFunc) (<a title="Gtk.Clipboard" href="gtkclipboard.html#GtkClipboard">Gtk.Clipboard</a>,
-                                 [ <a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a> ],
-                                 <a title="object" href="https://docs.python.org/3/library/functions.html#object">object</a>)</pre>
+(*Gtk.ClipboardGetFunc) (<a title="Gtk.Clipboard" href="gtkclipboard.html#GtkClipboard">Gtk.Clipboard</a>,
+                         <a title="Gtk.SelectionData" href="gtkselection.html#GtkSelectionData">Gtk.SelectionData</a>,
+                         <a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>,
+                         <a title="object" href="https://docs.python.org/3/library/functions.html#object">object</a>)</pre>
 
-<p>A function to be called when the results of
-<a href="gtkclipboard.html#gtk_clipboard_request_uris">Gtk.Clipboard.request_uris</a> are received, or when the request
-fails.</p>
+<p>A function that will be called to provide the contents of the selection.
+If multiple types of data were advertised, the requested type can
+be determined from the <em>info</em> parameter or by checking the target field
+of <em>selection_data</em>. If the data could successfully be converted into
+then it should be stored into the <em>selection_data</em> object by
+calling <a href="gtkselection.html#gtk_selection_data_set">Gtk.SelectionData.set</a> (or related functions such
+as <a href="gtkselection.html#gtk_selection_data_set_text">Gtk.SelectionData.set_text</a>). If no data is set, the requestor
+will be informed that the attempt to get the data failed.</p>
 
 
 
@@ -7872,27 +7960,44 @@ fails.</p>
 					
 <div class="symbol-detail">
 	<div>
-		<i><em><code>uris</code></em></i>
+		<i><em><code>selection_data</code></em></i>
 					(
-						[ <a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a> ]
+						<a title="Gtk.SelectionData" href="gtkselection.html#GtkSelectionData">Gtk.SelectionData</a>
 						)
 				–
 	</div>
-			<p>the received URIs</p>
+			<p>a <a href="gtkselection.html#GtkSelectionData">Gtk.SelectionData</a> argument in which the requested
+data should be stored.</p>
 
 	</div>
 
 					
 <div class="symbol-detail">
 	<div>
-		<i><em><code>data</code></em></i>
+		<i><em><code>info</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>the info field corresponding to the requested target from the
+<a href="gtkselection.html#GtkTargetEntry">Gtk.TargetEntry</a> array passed to <a href="gtkclipboard.html#gtk_clipboard_set_with_data">gtk_clipboard_set_with_data (not introspectable)</a> or
+<a href="gtkclipboard.html#gtk_clipboard_set_with_owner">gtk_clipboard_set_with_owner (not introspectable)</a>.</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>user_data_or_owner</code></em></i>
 					(
 						<a title="object" href="https://docs.python.org/3/library/functions.html#object">object</a>
 						)
 				–
 	</div>
-			<p>the <em>user_data</em> supplied to
-<a href="gtkclipboard.html#gtk_clipboard_request_uris">Gtk.Clipboard.request_uris</a>.</p>
+			<p>the <em>user_data</em> argument passed to
+<a href="gtkclipboard.html#gtk_clipboard_set_with_data">gtk_clipboard_set_with_data (not introspectable)</a>, or the <em>owner</em> argument passed to
+<a href="gtkclipboard.html#gtk_clipboard_set_with_owner">gtk_clipboard_set_with_owner (not introspectable)</a></p>
 
 	</div>
 
@@ -7900,19 +8005,9 @@ fails.</p>
 
 
 
-	<p>
-	<b>Since</b>			: 2.14
-		</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="" id="GtkClipboardGetFunc">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -8091,32 +8186,32 @@ data should be stored.</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="GtkClipboardClearFunc">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h3 data-hotdoc-id="GtkClipboardGetFunc">
-	<span><code>Gtk.ClipboardGetFunc</code></span>
+<h3 data-hotdoc-id="GtkClipboardClearFunc">
+	<span><code>Gtk.ClipboardClearFunc</code></span>
 </h3>
 
 
 
 
 <pre class="c-prototype">
-(*Gtk.ClipboardGetFunc) (<a title="Gtk.Clipboard" href="gtkclipboard.html#GtkClipboard">Gtk.Clipboard</a>,
-                         <a title="Gtk.SelectionData" href="gtkselection.html#GtkSelectionData">Gtk.SelectionData</a>,
-                         <a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>,
-                         <a title="object" href="https://docs.python.org/3/library/functions.html#object">object</a>)</pre>
+(*Gtk.ClipboardClearFunc) (<a title="Gtk.Clipboard" href="gtkclipboard.html#GtkClipboard">Gtk.Clipboard</a>,
+                           <a title="object" href="https://docs.python.org/3/library/functions.html#object">object</a>)</pre>
 
-<p>A function that will be called to provide the contents of the selection.
-If multiple types of data were advertised, the requested type can
-be determined from the <em>info</em> parameter or by checking the target field
-of <em>selection_data</em>. If the data could successfully be converted into
-then it should be stored into the <em>selection_data</em> object by
-calling <a href="gtkselection.html#gtk_selection_data_set">Gtk.SelectionData.set</a> (or related functions such
-as <a href="gtkselection.html#gtk_selection_data_set_text">Gtk.SelectionData.set_text</a>). If no data is set, the requestor
-will be informed that the attempt to get the data failed.</p>
+<p>A function that will be called when the contents of the clipboard are changed
+or cleared. Once this has called, the <em>user_data_or_owner</em> argument
+will not be used again.</p>
 
 
 
@@ -8138,44 +8233,14 @@ will be informed that the attempt to get the data failed.</p>
 					
 <div class="symbol-detail">
 	<div>
-		<i><em><code>selection_data</code></em></i>
-					(
-						<a title="Gtk.SelectionData" href="gtkselection.html#GtkSelectionData">Gtk.SelectionData</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkselection.html#GtkSelectionData">Gtk.SelectionData</a> argument in which the requested
-data should be stored.</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>info</code></em></i>
-					(
-						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
-						)
-				–
-	</div>
-			<p>the info field corresponding to the requested target from the
-<a href="gtkselection.html#GtkTargetEntry">Gtk.TargetEntry</a> array passed to <a href="gtkclipboard.html#gtk_clipboard_set_with_data">gtk_clipboard_set_with_data (not introspectable)</a> or
-<a href="gtkclipboard.html#gtk_clipboard_set_with_owner">gtk_clipboard_set_with_owner (not introspectable)</a>.</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
 		<i><em><code>user_data_or_owner</code></em></i>
 					(
 						<a title="object" href="https://docs.python.org/3/library/functions.html#object">object</a>
 						)
 				–
 	</div>
-			<p>the <em>user_data</em> argument passed to
-<a href="gtkclipboard.html#gtk_clipboard_set_with_data">gtk_clipboard_set_with_data (not introspectable)</a>, or the <em>owner</em> argument passed to
-<a href="gtkclipboard.html#gtk_clipboard_set_with_owner">gtk_clipboard_set_with_owner (not introspectable)</a></p>
+			<p>the <em>user_data</em> argument passed to <a href="gtkclipboard.html#gtk_clipboard_set_with_data">gtk_clipboard_set_with_data (not introspectable)</a>,
+or the <em>owner</em> argument passed to <a href="gtkclipboard.html#gtk_clipboard_set_with_owner">gtk_clipboard_set_with_owner (not introspectable)</a></p>
 
 	</div>
 
@@ -8186,13 +8251,6 @@ data should be stored.</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="" id="GtkClipboardClearFunc">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -8288,64 +8346,6 @@ will not be used again.</p>
 		<i><em><code>user_data_or_owner</code></em></i>
 					(
 						<a title="Object" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>
-						)
-				–
-	</div>
-			<p>the <em>user_data</em> argument passed to <a href="gtkclipboard.html#gtk_clipboard_set_with_data">gtk_clipboard_set_with_data (not introspectable)</a>,
-or the <em>owner</em> argument passed to <a href="gtkclipboard.html#gtk_clipboard_set_with_owner">gtk_clipboard_set_with_owner (not introspectable)</a></p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="GtkClipboardClearFunc">
-	<span><code>Gtk.ClipboardClearFunc</code></span>
-</h3>
-
-
-
-
-<pre class="c-prototype">
-(*Gtk.ClipboardClearFunc) (<a title="Gtk.Clipboard" href="gtkclipboard.html#GtkClipboard">Gtk.Clipboard</a>,
-                           <a title="object" href="https://docs.python.org/3/library/functions.html#object">object</a>)</pre>
-
-<p>A function that will be called when the contents of the clipboard are changed
-or cleared. Once this has called, the <em>user_data_or_owner</em> argument
-will not be used again.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>clipboard</code></em></i>
-					(
-						<a title="Gtk.Clipboard" href="gtkclipboard.html#GtkClipboard">Gtk.Clipboard</a>
-						)
-				–
-	</div>
-			<p>the <a href="gtkclipboard.html#GtkClipboard">Gtk.Clipboard</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>user_data_or_owner</code></em></i>
-					(
-						<a title="object" href="https://docs.python.org/3/library/functions.html#object">object</a>
 						)
 				–
 	</div>

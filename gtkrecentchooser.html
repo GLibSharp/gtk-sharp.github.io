@@ -89,7 +89,7 @@ $('body').removeClass('no-script');
 </nav>
 
 <main>
-<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="gtkrecentchooser.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['c', 'javascript', 'python']" data-hotdoc-meta-gi-language="c">
+<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="gtkrecentchooser.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['python', 'c', 'javascript']" data-hotdoc-meta-gi-language="c">
 <script src="assets/js/utils.js"></script>
 
 <div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
@@ -110,6 +110,62 @@ $('body').removeClass('no-script');
 
 <div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_recent_chooser_set_show_private">
 	
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_recent_chooser_set_show_private">
+	<span><code>Gtk.RecentChooser.set_show_private</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.RecentChooser.set_show_private (self, show_private):
+    #python wrapper for 'gtk_recent_chooser_set_show_private'</pre>
+
+<p>Whether to show recently used resources marked registered as private.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>chooser</code></em></i>
+					(
+						<a title="Gtk.RecentChooser" href="gtkrecentchooser.html#GtkRecentChooser">Gtk.RecentChooser</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkrecentchooser.html#GtkRecentChooser">Gtk.RecentChooser</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>show_private</code></em></i>
+					(
+						<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+						)
+				–
+	</div>
+			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> to show private items, <a href="https://docs.python.org/3/library/constants.html#False">False</a> otherwise</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -219,21 +275,29 @@ function Gtk.prototype.set_show_private(show_private: <a title="Number" href="ht
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_recent_chooser_get_show_private">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_recent_chooser_set_show_private">
-	<span><code>Gtk.RecentChooser.set_show_private</code></span>
+<h4 data-hotdoc-id="gtk_recent_chooser_get_show_private">
+	<span><code>Gtk.RecentChooser.get_show_private</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.RecentChooser.set_show_private (self, show_private):
-    #python wrapper for 'gtk_recent_chooser_set_show_private'</pre>
+def Gtk.RecentChooser.get_show_private (self):
+    #python wrapper for 'gtk_recent_chooser_get_show_private'</pre>
 
-<p>Whether to show recently used resources marked registered as private.</p>
+<p>Returns whether <em>chooser</em> should display recently used resources
+registered as private.</p>
 
 
 
@@ -252,20 +316,22 @@ def Gtk.RecentChooser.set_show_private (self, show_private):
 
 	</div>
 
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>show_private</code></em></i>
-					(
-						<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
-						)
-				–
-	</div>
-			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> to show private items, <a href="https://docs.python.org/3/library/constants.html#False">False</a> otherwise</p>
-
-	</div>
-
 			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+										)
+								–
+			</div>
+							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if the recent chooser should show private items,
+<a href="https://docs.python.org/3/library/constants.html#False">False</a> otherwise.</p>
+
+					</div>
+	</div>
 
 
 
@@ -275,13 +341,6 @@ def Gtk.RecentChooser.set_show_private (self, show_private):
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_recent_chooser_get_show_private">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -397,22 +456,29 @@ registered as private.</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_recent_chooser_set_show_not_found">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_recent_chooser_get_show_private">
-	<span><code>Gtk.RecentChooser.get_show_private</code></span>
+<h4 data-hotdoc-id="gtk_recent_chooser_set_show_not_found">
+	<span><code>Gtk.RecentChooser.set_show_not_found</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.RecentChooser.get_show_private (self):
-    #python wrapper for 'gtk_recent_chooser_get_show_private'</pre>
+def Gtk.RecentChooser.set_show_not_found (self, show_not_found):
+    #python wrapper for 'gtk_recent_chooser_set_show_not_found'</pre>
 
-<p>Returns whether <em>chooser</em> should display recently used resources
-registered as private.</p>
+<p>Sets whether <em>chooser</em> should display the recently used resources that
+it didn’t find.  This only applies to local resources.</p>
 
 
 
@@ -431,22 +497,20 @@ registered as private.</p>
 
 	</div>
 
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
-										)
-								–
-			</div>
-							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if the recent chooser should show private items,
-<a href="https://docs.python.org/3/library/constants.html#False">False</a> otherwise.</p>
-
-					</div>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>show_not_found</code></em></i>
+					(
+						<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+						)
+				–
 	</div>
+			<p>whether to show the local items we didn’t find</p>
+
+	</div>
+
+			</div>
 
 
 
@@ -456,13 +520,6 @@ registered as private.</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_recent_chooser_set_show_not_found">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -574,22 +631,29 @@ it didn’t find.  This only applies to local resources.</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_recent_chooser_get_show_not_found">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_recent_chooser_set_show_not_found">
-	<span><code>Gtk.RecentChooser.set_show_not_found</code></span>
+<h4 data-hotdoc-id="gtk_recent_chooser_get_show_not_found">
+	<span><code>Gtk.RecentChooser.get_show_not_found</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.RecentChooser.set_show_not_found (self, show_not_found):
-    #python wrapper for 'gtk_recent_chooser_set_show_not_found'</pre>
+def Gtk.RecentChooser.get_show_not_found (self):
+    #python wrapper for 'gtk_recent_chooser_get_show_not_found'</pre>
 
-<p>Sets whether <em>chooser</em> should display the recently used resources that
-it didn’t find.  This only applies to local resources.</p>
+<p>Retrieves whether <em>chooser</em> should show the recently used resources that
+were not found.</p>
 
 
 
@@ -608,20 +672,22 @@ it didn’t find.  This only applies to local resources.</p>
 
 	</div>
 
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>show_not_found</code></em></i>
-					(
-						<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
-						)
-				–
-	</div>
-			<p>whether to show the local items we didn’t find</p>
-
-	</div>
-
 			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+										)
+								–
+			</div>
+							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if the resources not found should be displayed, and
+<a href="https://docs.python.org/3/library/constants.html#False">False</a> otheriwse.</p>
+
+					</div>
+	</div>
 
 
 
@@ -631,13 +697,6 @@ it didn’t find.  This only applies to local resources.</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_recent_chooser_get_show_not_found">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -753,22 +812,29 @@ were not found.</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_recent_chooser_set_show_icons">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_recent_chooser_get_show_not_found">
-	<span><code>Gtk.RecentChooser.get_show_not_found</code></span>
+<h4 data-hotdoc-id="gtk_recent_chooser_set_show_icons">
+	<span><code>Gtk.RecentChooser.set_show_icons</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.RecentChooser.get_show_not_found (self):
-    #python wrapper for 'gtk_recent_chooser_get_show_not_found'</pre>
+def Gtk.RecentChooser.set_show_icons (self, show_icons):
+    #python wrapper for 'gtk_recent_chooser_set_show_icons'</pre>
 
-<p>Retrieves whether <em>chooser</em> should show the recently used resources that
-were not found.</p>
+<p>Sets whether <em>chooser</em> should show an icon near the resource when
+displaying it.</p>
 
 
 
@@ -787,22 +853,20 @@ were not found.</p>
 
 	</div>
 
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
-										)
-								–
-			</div>
-							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if the resources not found should be displayed, and
-<a href="https://docs.python.org/3/library/constants.html#False">False</a> otheriwse.</p>
-
-					</div>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>show_icons</code></em></i>
+					(
+						<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+						)
+				–
 	</div>
+			<p>whether to show an icon near the resource</p>
+
+	</div>
+
+			</div>
 
 
 
@@ -812,13 +876,6 @@ were not found.</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_recent_chooser_set_show_icons">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -930,22 +987,28 @@ displaying it.</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_recent_chooser_get_show_icons">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_recent_chooser_set_show_icons">
-	<span><code>Gtk.RecentChooser.set_show_icons</code></span>
+<h4 data-hotdoc-id="gtk_recent_chooser_get_show_icons">
+	<span><code>Gtk.RecentChooser.get_show_icons</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.RecentChooser.set_show_icons (self, show_icons):
-    #python wrapper for 'gtk_recent_chooser_set_show_icons'</pre>
+def Gtk.RecentChooser.get_show_icons (self):
+    #python wrapper for 'gtk_recent_chooser_get_show_icons'</pre>
 
-<p>Sets whether <em>chooser</em> should show an icon near the resource when
-displaying it.</p>
+<p>Retrieves whether <em>chooser</em> should show an icon near the resource.</p>
 
 
 
@@ -964,20 +1027,21 @@ displaying it.</p>
 
 	</div>
 
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>show_icons</code></em></i>
-					(
-						<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
-						)
-				–
-	</div>
-			<p>whether to show an icon near the resource</p>
-
-	</div>
-
 			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+										)
+								–
+			</div>
+							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if the icons should be displayed, <a href="https://docs.python.org/3/library/constants.html#False">False</a> otherwise.</p>
+
+					</div>
+	</div>
 
 
 
@@ -987,13 +1051,6 @@ displaying it.</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_recent_chooser_get_show_icons">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -1105,21 +1162,28 @@ function Gtk.prototype.get_show_icons(): {
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_recent_chooser_set_select_multiple">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_recent_chooser_get_show_icons">
-	<span><code>Gtk.RecentChooser.get_show_icons</code></span>
+<h4 data-hotdoc-id="gtk_recent_chooser_set_select_multiple">
+	<span><code>Gtk.RecentChooser.set_select_multiple</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.RecentChooser.get_show_icons (self):
-    #python wrapper for 'gtk_recent_chooser_get_show_icons'</pre>
+def Gtk.RecentChooser.set_select_multiple (self, select_multiple):
+    #python wrapper for 'gtk_recent_chooser_set_select_multiple'</pre>
 
-<p>Retrieves whether <em>chooser</em> should show an icon near the resource.</p>
+<p>Sets whether <em>chooser</em> can select multiple items.</p>
 
 
 
@@ -1138,21 +1202,20 @@ def Gtk.RecentChooser.get_show_icons (self):
 
 	</div>
 
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
-										)
-								–
-			</div>
-							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if the icons should be displayed, <a href="https://docs.python.org/3/library/constants.html#False">False</a> otherwise.</p>
-
-					</div>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>select_multiple</code></em></i>
+					(
+						<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+						)
+				–
 	</div>
+			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if <em>chooser</em> can select more than one item</p>
+
+	</div>
+
+			</div>
 
 
 
@@ -1162,13 +1225,6 @@ def Gtk.RecentChooser.get_show_icons (self):
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_recent_chooser_set_select_multiple">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -1278,21 +1334,28 @@ function Gtk.prototype.set_select_multiple(select_multiple: <a title="Number" hr
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_recent_chooser_get_select_multiple">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_recent_chooser_set_select_multiple">
-	<span><code>Gtk.RecentChooser.set_select_multiple</code></span>
+<h4 data-hotdoc-id="gtk_recent_chooser_get_select_multiple">
+	<span><code>Gtk.RecentChooser.get_select_multiple</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.RecentChooser.set_select_multiple (self, select_multiple):
-    #python wrapper for 'gtk_recent_chooser_set_select_multiple'</pre>
+def Gtk.RecentChooser.get_select_multiple (self):
+    #python wrapper for 'gtk_recent_chooser_get_select_multiple'</pre>
 
-<p>Sets whether <em>chooser</em> can select multiple items.</p>
+<p>Gets whether <em>chooser</em> can select multiple items.</p>
 
 
 
@@ -1311,20 +1374,21 @@ def Gtk.RecentChooser.set_select_multiple (self, select_multiple):
 
 	</div>
 
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>select_multiple</code></em></i>
-					(
-						<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
-						)
-				–
-	</div>
-			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if <em>chooser</em> can select more than one item</p>
-
-	</div>
-
 			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+										)
+								–
+			</div>
+							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if <em>chooser</em> can select more than one item.</p>
+
+					</div>
+	</div>
 
 
 
@@ -1334,13 +1398,6 @@ def Gtk.RecentChooser.set_select_multiple (self, select_multiple):
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_recent_chooser_get_select_multiple">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -1452,21 +1509,31 @@ function Gtk.prototype.get_select_multiple(): {
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_recent_chooser_set_local_only">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_recent_chooser_get_select_multiple">
-	<span><code>Gtk.RecentChooser.get_select_multiple</code></span>
+<h4 data-hotdoc-id="gtk_recent_chooser_set_local_only">
+	<span><code>Gtk.RecentChooser.set_local_only</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.RecentChooser.get_select_multiple (self):
-    #python wrapper for 'gtk_recent_chooser_get_select_multiple'</pre>
+def Gtk.RecentChooser.set_local_only (self, local_only):
+    #python wrapper for 'gtk_recent_chooser_set_local_only'</pre>
 
-<p>Gets whether <em>chooser</em> can select multiple items.</p>
+<p>Sets whether only local resources, that is resources using the file:// URI
+scheme, should be shown in the recently used resources selector.  If
+<em>local_only</em> is <a href="https://docs.python.org/3/library/constants.html#True">True</a> (the default) then the shown resources are guaranteed
+to be accessible through the operating system native file system.</p>
 
 
 
@@ -1485,21 +1552,20 @@ def Gtk.RecentChooser.get_select_multiple (self):
 
 	</div>
 
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
-										)
-								–
-			</div>
-							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if <em>chooser</em> can select more than one item.</p>
-
-					</div>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>local_only</code></em></i>
+					(
+						<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+						)
+				–
 	</div>
+			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if only local files can be shown</p>
+
+	</div>
+
+			</div>
 
 
 
@@ -1509,13 +1575,6 @@ def Gtk.RecentChooser.get_select_multiple (self):
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_recent_chooser_set_local_only">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -1631,24 +1690,29 @@ to be accessible through the operating system native file system.</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_recent_chooser_get_local_only">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_recent_chooser_set_local_only">
-	<span><code>Gtk.RecentChooser.set_local_only</code></span>
+<h4 data-hotdoc-id="gtk_recent_chooser_get_local_only">
+	<span><code>Gtk.RecentChooser.get_local_only</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.RecentChooser.set_local_only (self, local_only):
-    #python wrapper for 'gtk_recent_chooser_set_local_only'</pre>
+def Gtk.RecentChooser.get_local_only (self):
+    #python wrapper for 'gtk_recent_chooser_get_local_only'</pre>
 
-<p>Sets whether only local resources, that is resources using the file:// URI
-scheme, should be shown in the recently used resources selector.  If
-<em>local_only</em> is <a href="https://docs.python.org/3/library/constants.html#True">True</a> (the default) then the shown resources are guaranteed
-to be accessible through the operating system native file system.</p>
+<p>Gets whether only local resources should be shown in the recently used
+resources selector.  See <a href="gtkrecentchooser.html#gtk_recent_chooser_set_local_only">Gtk.RecentChooser.set_local_only</a></p>
 
 
 
@@ -1667,20 +1731,21 @@ to be accessible through the operating system native file system.</p>
 
 	</div>
 
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>local_only</code></em></i>
-					(
-						<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
-						)
-				–
-	</div>
-			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if only local files can be shown</p>
-
-	</div>
-
 			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+										)
+								–
+			</div>
+							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if only local resources should be shown.</p>
+
+					</div>
+	</div>
 
 
 
@@ -1690,13 +1755,6 @@ to be accessible through the operating system native file system.</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_recent_chooser_get_local_only">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -1810,22 +1868,29 @@ resources selector.  See <a href="gtkrecentchooser.html#gtk_recent_chooser_set_l
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_recent_chooser_set_limit">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_recent_chooser_get_local_only">
-	<span><code>Gtk.RecentChooser.get_local_only</code></span>
+<h4 data-hotdoc-id="gtk_recent_chooser_set_limit">
+	<span><code>Gtk.RecentChooser.set_limit</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.RecentChooser.get_local_only (self):
-    #python wrapper for 'gtk_recent_chooser_get_local_only'</pre>
+def Gtk.RecentChooser.set_limit (self, limit):
+    #python wrapper for 'gtk_recent_chooser_set_limit'</pre>
 
-<p>Gets whether only local resources should be shown in the recently used
-resources selector.  See <a href="gtkrecentchooser.html#gtk_recent_chooser_set_local_only">Gtk.RecentChooser.set_local_only</a></p>
+<p>Sets the number of items that should be returned by
+<a href="gtkrecentchooser.html#gtk_recent_chooser_get_items">Gtk.RecentChooser.get_items</a> and <a href="gtkrecentchooser.html#gtk_recent_chooser_get_uris">Gtk.RecentChooser.get_uris</a>.</p>
 
 
 
@@ -1844,21 +1909,20 @@ resources selector.  See <a href="gtkrecentchooser.html#gtk_recent_chooser_set_l
 
 	</div>
 
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
-										)
-								–
-			</div>
-							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if only local resources should be shown.</p>
-
-					</div>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>limit</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
 	</div>
+			<p>a positive integer, or -1 for all items</p>
+
+	</div>
+
+			</div>
 
 
 
@@ -1868,13 +1932,6 @@ resources selector.  See <a href="gtkrecentchooser.html#gtk_recent_chooser_set_l
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_recent_chooser_set_limit">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -1986,22 +2043,29 @@ function Gtk.prototype.set_limit(limit: <a title="Number" href="https://develope
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_recent_chooser_get_limit">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_recent_chooser_set_limit">
-	<span><code>Gtk.RecentChooser.set_limit</code></span>
+<h4 data-hotdoc-id="gtk_recent_chooser_get_limit">
+	<span><code>Gtk.RecentChooser.get_limit</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.RecentChooser.set_limit (self, limit):
-    #python wrapper for 'gtk_recent_chooser_set_limit'</pre>
+def Gtk.RecentChooser.get_limit (self):
+    #python wrapper for 'gtk_recent_chooser_get_limit'</pre>
 
-<p>Sets the number of items that should be returned by
-<a href="gtkrecentchooser.html#gtk_recent_chooser_get_items">Gtk.RecentChooser.get_items</a> and <a href="gtkrecentchooser.html#gtk_recent_chooser_get_uris">Gtk.RecentChooser.get_uris</a>.</p>
+<p>Gets the number of items returned by <a href="gtkrecentchooser.html#gtk_recent_chooser_get_items">Gtk.RecentChooser.get_items</a>
+and <a href="gtkrecentchooser.html#gtk_recent_chooser_get_uris">Gtk.RecentChooser.get_uris</a>.</p>
 
 
 
@@ -2020,20 +2084,22 @@ def Gtk.RecentChooser.set_limit (self, limit):
 
 	</div>
 
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>limit</code></em></i>
-					(
-						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
-						)
-				–
-	</div>
-			<p>a positive integer, or -1 for all items</p>
-
-	</div>
-
 			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+										)
+								–
+			</div>
+							<p>A positive integer, or -1 meaning that all items are
+returned.</p>
+
+					</div>
+	</div>
 
 
 
@@ -2043,13 +2109,6 @@ def Gtk.RecentChooser.set_limit (self, limit):
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_recent_chooser_get_limit">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -2165,22 +2224,29 @@ returned.</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_recent_chooser_set_show_tips">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_recent_chooser_get_limit">
-	<span><code>Gtk.RecentChooser.get_limit</code></span>
+<h4 data-hotdoc-id="gtk_recent_chooser_set_show_tips">
+	<span><code>Gtk.RecentChooser.set_show_tips</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.RecentChooser.get_limit (self):
-    #python wrapper for 'gtk_recent_chooser_get_limit'</pre>
+def Gtk.RecentChooser.set_show_tips (self, show_tips):
+    #python wrapper for 'gtk_recent_chooser_set_show_tips'</pre>
 
-<p>Gets the number of items returned by <a href="gtkrecentchooser.html#gtk_recent_chooser_get_items">Gtk.RecentChooser.get_items</a>
-and <a href="gtkrecentchooser.html#gtk_recent_chooser_get_uris">Gtk.RecentChooser.get_uris</a>.</p>
+<p>Sets whether to show a tooltips containing the full path of each
+recently used resource in a <a href="gtkrecentchooser.html#GtkRecentChooser">Gtk.RecentChooser</a> widget.</p>
 
 
 
@@ -2199,22 +2265,20 @@ and <a href="gtkrecentchooser.html#gtk_recent_chooser_get_uris">Gtk.RecentChoose
 
 	</div>
 
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
-										)
-								–
-			</div>
-							<p>A positive integer, or -1 meaning that all items are
-returned.</p>
-
-					</div>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>show_tips</code></em></i>
+					(
+						<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+						)
+				–
 	</div>
+			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if tooltips should be shown</p>
+
+	</div>
+
+			</div>
 
 
 
@@ -2224,13 +2288,6 @@ returned.</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_recent_chooser_set_show_tips">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -2342,22 +2399,29 @@ recently used resource in a <a href="gtkrecentchooser.html#GtkRecentChooser">Gtk
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_recent_chooser_get_show_tips">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_recent_chooser_set_show_tips">
-	<span><code>Gtk.RecentChooser.set_show_tips</code></span>
+<h4 data-hotdoc-id="gtk_recent_chooser_get_show_tips">
+	<span><code>Gtk.RecentChooser.get_show_tips</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.RecentChooser.set_show_tips (self, show_tips):
-    #python wrapper for 'gtk_recent_chooser_set_show_tips'</pre>
+def Gtk.RecentChooser.get_show_tips (self):
+    #python wrapper for 'gtk_recent_chooser_get_show_tips'</pre>
 
-<p>Sets whether to show a tooltips containing the full path of each
-recently used resource in a <a href="gtkrecentchooser.html#GtkRecentChooser">Gtk.RecentChooser</a> widget.</p>
+<p>Gets whether <em>chooser</em> should display tooltips containing the full path
+of a recently user resource.</p>
 
 
 
@@ -2376,20 +2440,22 @@ recently used resource in a <a href="gtkrecentchooser.html#GtkRecentChooser">Gtk
 
 	</div>
 
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>show_tips</code></em></i>
-					(
-						<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
-						)
-				–
-	</div>
-			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if tooltips should be shown</p>
-
-	</div>
-
 			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+										)
+								–
+			</div>
+							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if the recent chooser should show tooltips,
+<a href="https://docs.python.org/3/library/constants.html#False">False</a> otherwise.</p>
+
+					</div>
+	</div>
 
 
 
@@ -2399,13 +2465,6 @@ recently used resource in a <a href="gtkrecentchooser.html#GtkRecentChooser">Gtk
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_recent_chooser_get_show_tips">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -2521,22 +2580,29 @@ of a recently user resource.</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_recent_chooser_set_sort_type">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_recent_chooser_get_show_tips">
-	<span><code>Gtk.RecentChooser.get_show_tips</code></span>
+<h4 data-hotdoc-id="gtk_recent_chooser_set_sort_type">
+	<span><code>Gtk.RecentChooser.set_sort_type</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.RecentChooser.get_show_tips (self):
-    #python wrapper for 'gtk_recent_chooser_get_show_tips'</pre>
+def Gtk.RecentChooser.set_sort_type (self, sort_type):
+    #python wrapper for 'gtk_recent_chooser_set_sort_type'</pre>
 
-<p>Gets whether <em>chooser</em> should display tooltips containing the full path
-of a recently user resource.</p>
+<p>Changes the sorting order of the recently used resources list displayed by
+<em>chooser</em>.</p>
 
 
 
@@ -2555,22 +2621,20 @@ of a recently user resource.</p>
 
 	</div>
 
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
-										)
-								–
-			</div>
-							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if the recent chooser should show tooltips,
-<a href="https://docs.python.org/3/library/constants.html#False">False</a> otherwise.</p>
-
-					</div>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>sort_type</code></em></i>
+					(
+						<a title="Gtk.RecentSortType" href="gtkrecentchooser.html#GtkRecentSortType">Gtk.RecentSortType</a>
+						)
+				–
 	</div>
+			<p>sort order that the chooser should use</p>
+
+	</div>
+
+			</div>
 
 
 
@@ -2580,13 +2644,6 @@ of a recently user resource.</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_recent_chooser_set_sort_type">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -2698,22 +2755,28 @@ function Gtk.prototype.set_sort_type(sort_type: <a title="Gtk.RecentSortType" hr
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_recent_chooser_get_sort_type">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_recent_chooser_set_sort_type">
-	<span><code>Gtk.RecentChooser.set_sort_type</code></span>
+<h4 data-hotdoc-id="gtk_recent_chooser_get_sort_type">
+	<span><code>Gtk.RecentChooser.get_sort_type</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.RecentChooser.set_sort_type (self, sort_type):
-    #python wrapper for 'gtk_recent_chooser_set_sort_type'</pre>
+def Gtk.RecentChooser.get_sort_type (self):
+    #python wrapper for 'gtk_recent_chooser_get_sort_type'</pre>
 
-<p>Changes the sorting order of the recently used resources list displayed by
-<em>chooser</em>.</p>
+<p>Gets the value set by <a href="gtkrecentchooser.html#gtk_recent_chooser_set_sort_type">Gtk.RecentChooser.set_sort_type</a>.</p>
 
 
 
@@ -2732,20 +2795,21 @@ def Gtk.RecentChooser.set_sort_type (self, sort_type):
 
 	</div>
 
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>sort_type</code></em></i>
-					(
-						<a title="Gtk.RecentSortType" href="gtkrecentchooser.html#GtkRecentSortType">Gtk.RecentSortType</a>
-						)
-				–
-	</div>
-			<p>sort order that the chooser should use</p>
-
-	</div>
-
 			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.RecentSortType" href="gtkrecentchooser.html#GtkRecentSortType">Gtk.RecentSortType</a>
+										)
+								–
+			</div>
+							<p>the sorting order of the <em>chooser</em>.</p>
+
+					</div>
+	</div>
 
 
 
@@ -2755,13 +2819,6 @@ def Gtk.RecentChooser.set_sort_type (self, sort_type):
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_recent_chooser_get_sort_type">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -2873,21 +2930,34 @@ function Gtk.prototype.get_sort_type(): {
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_recent_chooser_set_sort_func">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_recent_chooser_get_sort_type">
-	<span><code>Gtk.RecentChooser.get_sort_type</code></span>
+<h4 data-hotdoc-id="gtk_recent_chooser_set_sort_func">
+	<span><code>Gtk.RecentChooser.set_sort_func</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.RecentChooser.get_sort_type (self):
-    #python wrapper for 'gtk_recent_chooser_get_sort_type'</pre>
+def Gtk.RecentChooser.set_sort_func (self, sort_func, sort_data, data_destroy):
+    #python wrapper for 'gtk_recent_chooser_set_sort_func'</pre>
 
-<p>Gets the value set by <a href="gtkrecentchooser.html#gtk_recent_chooser_set_sort_type">Gtk.RecentChooser.set_sort_type</a>.</p>
+<p>Sets the comparison function used when sorting to be <em>sort_func</em>.  If
+the <em>chooser</em> has the sort type set to <a href="gtkrecentchooser.html#GTK_RECENT_SORT_CUSTOM">Gtk.RecentSortType.CUSTOM</a> then
+the chooser will sort using this function.</p>
+<p>To the comparison function will be passed two <a href="gtkrecentmanager.html#GtkRecentInfo">Gtk.RecentInfo</a> structs and
+<em>sort_data</em>;  <em>sort_func</em> should return a positive integer if the first
+item comes before the second, zero if the two items are equal and
+a negative integer if the first item comes after the second.</p>
 
 
 
@@ -2906,21 +2976,46 @@ def Gtk.RecentChooser.get_sort_type (self):
 
 	</div>
 
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Gtk.RecentSortType" href="gtkrecentchooser.html#GtkRecentSortType">Gtk.RecentSortType</a>
-										)
-								–
-			</div>
-							<p>the sorting order of the <em>chooser</em>.</p>
-
-					</div>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>sort_func</code></em></i>
+					(
+						<a title="Gtk.RecentSortFunc" href="gtkrecentchooser.html#GtkRecentSortFunc">Gtk.RecentSortFunc</a>
+						)
+				–
 	</div>
+			<p>the comparison function</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>sort_data</code></em></i>
+					(
+						<a title="object" href="https://docs.python.org/3/library/functions.html#object">object</a>
+						)
+				–
+	</div>
+			<p>user data to pass to <em>sort_func</em>, or <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>data_destroy</code></em></i>
+					(
+						<a title="GLib.DestroyNotify" href="https://developer.gnome.org/glib/unstable/glib-Datasets.html#GDestroyNotify">GLib.DestroyNotify</a>
+						)
+				–
+	</div>
+			<p>destroy notifier for <em>sort_data</em>, or <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
+
+	</div>
+
+			</div>
 
 
 
@@ -2930,13 +3025,6 @@ def Gtk.RecentChooser.get_sort_type (self):
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_recent_chooser_set_sort_func">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -3116,27 +3204,29 @@ a negative integer if the first item comes after the second.</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_recent_chooser_set_current_uri">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_recent_chooser_set_sort_func">
-	<span><code>Gtk.RecentChooser.set_sort_func</code></span>
+<h4 data-hotdoc-id="gtk_recent_chooser_set_current_uri">
+	<span><code>Gtk.RecentChooser.set_current_uri</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.RecentChooser.set_sort_func (self, sort_func, sort_data, data_destroy):
-    #python wrapper for 'gtk_recent_chooser_set_sort_func'</pre>
+@raises(<a href="https://developer.gnome.org/glib/stable/glib-Error-Reporting.html">GLib.GError</a>)
+def Gtk.RecentChooser.set_current_uri (self, uri):
+    #python wrapper for 'gtk_recent_chooser_set_current_uri'</pre>
 
-<p>Sets the comparison function used when sorting to be <em>sort_func</em>.  If
-the <em>chooser</em> has the sort type set to <a href="gtkrecentchooser.html#GTK_RECENT_SORT_CUSTOM">Gtk.RecentSortType.CUSTOM</a> then
-the chooser will sort using this function.</p>
-<p>To the comparison function will be passed two <a href="gtkrecentmanager.html#GtkRecentInfo">Gtk.RecentInfo</a> structs and
-<em>sort_data</em>;  <em>sort_func</em> should return a positive integer if the first
-item comes before the second, zero if the two items are equal and
-a negative integer if the first item comes after the second.</p>
+<p>Sets <em>uri</em> as the current URI for <em>chooser</em>.</p>
 
 
 
@@ -3158,43 +3248,31 @@ a negative integer if the first item comes after the second.</p>
 					
 <div class="symbol-detail">
 	<div>
-		<i><em><code>sort_func</code></em></i>
+		<i><em><code>uri</code></em></i>
 					(
-						<a title="Gtk.RecentSortFunc" href="gtkrecentchooser.html#GtkRecentSortFunc">Gtk.RecentSortFunc</a>
+						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
 						)
 				–
 	</div>
-			<p>the comparison function</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>sort_data</code></em></i>
-					(
-						<a title="object" href="https://docs.python.org/3/library/functions.html#object">object</a>
-						)
-				–
-	</div>
-			<p>user data to pass to <em>sort_func</em>, or <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>data_destroy</code></em></i>
-					(
-						<a title="GLib.DestroyNotify" href="https://developer.gnome.org/glib/unstable/glib-Datasets.html#GDestroyNotify">GLib.DestroyNotify</a>
-						)
-				–
-	</div>
-			<p>destroy notifier for <em>sort_data</em>, or <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
+			<p>a URI</p>
 
 	</div>
 
 			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+										)
+								–
+			</div>
+							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if the URI was found.</p>
+
+					</div>
+	</div>
 
 
 
@@ -3204,13 +3282,6 @@ a negative integer if the first item comes after the second.</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_recent_chooser_set_current_uri">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -3346,22 +3417,28 @@ function Gtk.prototype.set_current_uri(uri: <a title="String" href="https://deve
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_recent_chooser_get_current_uri">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_recent_chooser_set_current_uri">
-	<span><code>Gtk.RecentChooser.set_current_uri</code></span>
+<h4 data-hotdoc-id="gtk_recent_chooser_get_current_uri">
+	<span><code>Gtk.RecentChooser.get_current_uri</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-@raises(<a href="https://developer.gnome.org/glib/stable/glib-Error-Reporting.html">GLib.GError</a>)
-def Gtk.RecentChooser.set_current_uri (self, uri):
-    #python wrapper for 'gtk_recent_chooser_set_current_uri'</pre>
+def Gtk.RecentChooser.get_current_uri (self):
+    #python wrapper for 'gtk_recent_chooser_get_current_uri'</pre>
 
-<p>Sets <em>uri</em> as the current URI for <em>chooser</em>.</p>
+<p>Gets the URI currently selected by <em>chooser</em>.</p>
 
 
 
@@ -3380,19 +3457,6 @@ def Gtk.RecentChooser.set_current_uri (self, uri):
 
 	</div>
 
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>uri</code></em></i>
-					(
-						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
-						)
-				–
-	</div>
-			<p>a URI</p>
-
-	</div>
-
 			</div>
 
 		<div class="return-values-container">
@@ -3400,11 +3464,11 @@ def Gtk.RecentChooser.set_current_uri (self, uri):
 			<div>
 				<b>Returns</b>
 									(
-					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+					<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
 										)
 								–
 			</div>
-							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if the URI was found.</p>
+							<p>a newly allocated string holding a URI.</p>
 
 					</div>
 	</div>
@@ -3417,13 +3481,6 @@ def Gtk.RecentChooser.set_current_uri (self, uri):
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_recent_chooser_get_current_uri">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -3535,21 +3592,28 @@ function Gtk.prototype.get_current_uri(): {
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_recent_chooser_get_current_item">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_recent_chooser_get_current_uri">
-	<span><code>Gtk.RecentChooser.get_current_uri</code></span>
+<h4 data-hotdoc-id="gtk_recent_chooser_get_current_item">
+	<span><code>Gtk.RecentChooser.get_current_item</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.RecentChooser.get_current_uri (self):
-    #python wrapper for 'gtk_recent_chooser_get_current_uri'</pre>
+def Gtk.RecentChooser.get_current_item (self):
+    #python wrapper for 'gtk_recent_chooser_get_current_item'</pre>
 
-<p>Gets the URI currently selected by <em>chooser</em>.</p>
+<p>Gets the <a href="gtkrecentmanager.html#GtkRecentInfo">Gtk.RecentInfo</a> currently selected by <em>chooser</em>.</p>
 
 
 
@@ -3575,11 +3639,12 @@ def Gtk.RecentChooser.get_current_uri (self):
 			<div>
 				<b>Returns</b>
 									(
-					<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
+					<a title="Gtk.RecentInfo" href="gtkrecentmanager.html#GtkRecentInfo">Gtk.RecentInfo</a>
 										)
 								–
 			</div>
-							<p>a newly allocated string holding a URI.</p>
+							<p>a <a href="gtkrecentmanager.html#GtkRecentInfo">Gtk.RecentInfo</a>.  Use <a href="gtkrecentmanager.html#gtk_recent_info_unref">Gtk.RecentInfo.unref</a> when
+when you have finished using it.</p>
 
 					</div>
 	</div>
@@ -3592,13 +3657,6 @@ def Gtk.RecentChooser.get_current_uri (self):
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_recent_chooser_get_current_item">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -3712,21 +3770,29 @@ when you have finished using it.</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_recent_chooser_select_uri">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_recent_chooser_get_current_item">
-	<span><code>Gtk.RecentChooser.get_current_item</code></span>
+<h4 data-hotdoc-id="gtk_recent_chooser_select_uri">
+	<span><code>Gtk.RecentChooser.select_uri</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.RecentChooser.get_current_item (self):
-    #python wrapper for 'gtk_recent_chooser_get_current_item'</pre>
+@raises(<a href="https://developer.gnome.org/glib/stable/glib-Error-Reporting.html">GLib.GError</a>)
+def Gtk.RecentChooser.select_uri (self, uri):
+    #python wrapper for 'gtk_recent_chooser_select_uri'</pre>
 
-<p>Gets the <a href="gtkrecentmanager.html#GtkRecentInfo">Gtk.RecentInfo</a> currently selected by <em>chooser</em>.</p>
+<p>Selects <em>uri</em> inside <em>chooser</em>.</p>
 
 
 
@@ -3745,6 +3811,19 @@ def Gtk.RecentChooser.get_current_item (self):
 
 	</div>
 
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>uri</code></em></i>
+					(
+						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
+						)
+				–
+	</div>
+			<p>a URI</p>
+
+	</div>
+
 			</div>
 
 		<div class="return-values-container">
@@ -3752,12 +3831,11 @@ def Gtk.RecentChooser.get_current_item (self):
 			<div>
 				<b>Returns</b>
 									(
-					<a title="Gtk.RecentInfo" href="gtkrecentmanager.html#GtkRecentInfo">Gtk.RecentInfo</a>
+					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
 										)
 								–
 			</div>
-							<p>a <a href="gtkrecentmanager.html#GtkRecentInfo">Gtk.RecentInfo</a>.  Use <a href="gtkrecentmanager.html#gtk_recent_info_unref">Gtk.RecentInfo.unref</a> when
-when you have finished using it.</p>
+							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if <em>uri</em> was found.</p>
 
 					</div>
 	</div>
@@ -3770,13 +3848,6 @@ when you have finished using it.</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_recent_chooser_select_uri">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -3912,22 +3983,28 @@ function Gtk.prototype.select_uri(uri: <a title="String" href="https://developer
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_recent_chooser_unselect_uri">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_recent_chooser_select_uri">
-	<span><code>Gtk.RecentChooser.select_uri</code></span>
+<h4 data-hotdoc-id="gtk_recent_chooser_unselect_uri">
+	<span><code>Gtk.RecentChooser.unselect_uri</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-@raises(<a href="https://developer.gnome.org/glib/stable/glib-Error-Reporting.html">GLib.GError</a>)
-def Gtk.RecentChooser.select_uri (self, uri):
-    #python wrapper for 'gtk_recent_chooser_select_uri'</pre>
+def Gtk.RecentChooser.unselect_uri (self, uri):
+    #python wrapper for 'gtk_recent_chooser_unselect_uri'</pre>
 
-<p>Selects <em>uri</em> inside <em>chooser</em>.</p>
+<p>Unselects <em>uri</em> inside <em>chooser</em>.</p>
 
 
 
@@ -3961,20 +4038,6 @@ def Gtk.RecentChooser.select_uri (self, uri):
 
 			</div>
 
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
-										)
-								–
-			</div>
-							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if <em>uri</em> was found.</p>
-
-					</div>
-	</div>
-
 
 
 	<p>
@@ -3983,13 +4046,6 @@ def Gtk.RecentChooser.select_uri (self, uri):
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_recent_chooser_unselect_uri">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -4099,21 +4155,29 @@ function Gtk.prototype.unselect_uri(uri: <a title="String" href="https://develop
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_recent_chooser_select_all">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_recent_chooser_unselect_uri">
-	<span><code>Gtk.RecentChooser.unselect_uri</code></span>
+<h4 data-hotdoc-id="gtk_recent_chooser_select_all">
+	<span><code>Gtk.RecentChooser.select_all</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.RecentChooser.unselect_uri (self, uri):
-    #python wrapper for 'gtk_recent_chooser_unselect_uri'</pre>
+def Gtk.RecentChooser.select_all (self):
+    #python wrapper for 'gtk_recent_chooser_select_all'</pre>
 
-<p>Unselects <em>uri</em> inside <em>chooser</em>.</p>
+<p>Selects all the items inside <em>chooser</em>, if the <em>chooser</em> supports
+multiple selection.</p>
 
 
 
@@ -4132,19 +4196,6 @@ def Gtk.RecentChooser.unselect_uri (self, uri):
 
 	</div>
 
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>uri</code></em></i>
-					(
-						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
-						)
-				–
-	</div>
-			<p>a URI</p>
-
-	</div>
-
 			</div>
 
 
@@ -4155,13 +4206,6 @@ def Gtk.RecentChooser.unselect_uri (self, uri):
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_recent_chooser_select_all">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -4249,22 +4293,28 @@ multiple selection.</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_recent_chooser_unselect_all">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_recent_chooser_select_all">
-	<span><code>Gtk.RecentChooser.select_all</code></span>
+<h4 data-hotdoc-id="gtk_recent_chooser_unselect_all">
+	<span><code>Gtk.RecentChooser.unselect_all</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.RecentChooser.select_all (self):
-    #python wrapper for 'gtk_recent_chooser_select_all'</pre>
+def Gtk.RecentChooser.unselect_all (self):
+    #python wrapper for 'gtk_recent_chooser_unselect_all'</pre>
 
-<p>Selects all the items inside <em>chooser</em>, if the <em>chooser</em> supports
-multiple selection.</p>
+<p>Unselects all the items inside <em>chooser</em>.</p>
 
 
 
@@ -4293,13 +4343,6 @@ multiple selection.</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_recent_chooser_unselect_all">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -4385,21 +4428,30 @@ function Gtk.prototype.unselect_all(): {
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_recent_chooser_get_items">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_recent_chooser_unselect_all">
-	<span><code>Gtk.RecentChooser.unselect_all</code></span>
+<h4 data-hotdoc-id="gtk_recent_chooser_get_items">
+	<span><code>Gtk.RecentChooser.get_items</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.RecentChooser.unselect_all (self):
-    #python wrapper for 'gtk_recent_chooser_unselect_all'</pre>
+def Gtk.RecentChooser.get_items (self):
+    #python wrapper for 'gtk_recent_chooser_get_items'</pre>
 
-<p>Unselects all the items inside <em>chooser</em>.</p>
+<p>Gets the list of recently used resources in form of <a href="gtkrecentmanager.html#GtkRecentInfo">Gtk.RecentInfo</a> objects.</p>
+<p>The return value of this function is affected by the “sort-type” and
+“limit” properties of <em>chooser</em>.</p>
 
 
 
@@ -4420,6 +4472,23 @@ def Gtk.RecentChooser.unselect_all (self):
 
 			</div>
 
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					[ <a title="Gtk.RecentInfo" href="gtkrecentmanager.html#GtkRecentInfo">Gtk.RecentInfo</a> ]
+										)
+								–
+			</div>
+							<p>A newly allocated
+list of <a href="gtkrecentmanager.html#GtkRecentInfo">Gtk.RecentInfo</a> objects.  You should
+use <a href="gtkrecentmanager.html#gtk_recent_info_unref">Gtk.RecentInfo.unref</a> on every item of the list, and then free
+the list itself using <a href="https://developer.gnome.org/glib/unstable/glib-Doubly-Linked-Lists.html#g-list-free">g_list_free (not introspectable)</a>.</p>
+
+					</div>
+	</div>
+
 
 
 	<p>
@@ -4428,13 +4497,6 @@ def Gtk.RecentChooser.unselect_all (self):
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_recent_chooser_get_items">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -4563,23 +4625,31 @@ the list itself using <a href="https://developer.gnome.org/glib/unstable/glib-Do
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_recent_chooser_get_uris">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_recent_chooser_get_items">
-	<span><code>Gtk.RecentChooser.get_items</code></span>
+<h4 data-hotdoc-id="gtk_recent_chooser_get_uris">
+	<span><code>Gtk.RecentChooser.get_uris</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.RecentChooser.get_items (self):
-    #python wrapper for 'gtk_recent_chooser_get_items'</pre>
+def Gtk.RecentChooser.get_uris (self):
+    #python wrapper for 'gtk_recent_chooser_get_uris'</pre>
 
-<p>Gets the list of recently used resources in form of <a href="gtkrecentmanager.html#GtkRecentInfo">Gtk.RecentInfo</a> objects.</p>
-<p>The return value of this function is affected by the “sort-type” and
-“limit” properties of <em>chooser</em>.</p>
+<p>Gets the URI of the recently used resources.</p>
+<p>The return value of this function is affected by the “sort-type” and “limit”
+properties of <em>chooser</em>.</p>
+<p>Since the returned array is <a href="https://docs.python.org/3/library/constants.html#None">None</a> terminated, <em>length</em> may be <a href="https://docs.python.org/3/library/constants.html#None">None</a>.</p>
 
 
 
@@ -4601,21 +4671,37 @@ def Gtk.RecentChooser.get_items (self):
 			</div>
 
 		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
+		<p><b>Returns a tuple made of:</b></p>
+				
+<div class="symbol-detail">
+	<div>
 									(
-					[ <a title="Gtk.RecentInfo" href="gtkrecentmanager.html#GtkRecentInfo">Gtk.RecentInfo</a> ]
-										)
-								–
-			</div>
-							<p>A newly allocated
-list of <a href="gtkrecentmanager.html#GtkRecentInfo">Gtk.RecentInfo</a> objects.  You should
-use <a href="gtkrecentmanager.html#gtk_recent_info_unref">Gtk.RecentInfo.unref</a> on every item of the list, and then free
-the list itself using <a href="https://developer.gnome.org/glib/unstable/glib-Doubly-Linked-Lists.html#g-list-free">g_list_free (not introspectable)</a>.</p>
-
-					</div>
+			[ <a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a> ]
+						)
+				–
 	</div>
+			<p>(array length=length zero-terminated=1) (transfer full):
+A newly allocated, <a href="https://docs.python.org/3/library/constants.html#None">None</a>-terminated array of strings. Use
+<a href="https://developer.gnome.org/glib/unstable/glib-String-Utility-Functions.html#g-strfreev">GLib.strfreev</a> to free it.</p>
+
+	</div>
+
+				
+<div class="symbol-detail">
+	<div>
+				<i><em><code>length</code></em></i>
+									(
+			<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>(array length=length zero-terminated=1) (transfer full):
+A newly allocated, <a href="https://docs.python.org/3/library/constants.html#None">None</a>-terminated array of strings. Use
+<a href="https://developer.gnome.org/glib/unstable/glib-String-Utility-Functions.html#g-strfreev">GLib.strfreev</a> to free it.</p>
+
+	</div>
+
+			</div>
 
 
 
@@ -4625,13 +4711,6 @@ the list itself using <a href="https://developer.gnome.org/glib/unstable/glib-Do
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_recent_chooser_get_uris">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -4788,24 +4867,30 @@ A newly allocated, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScr
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_recent_chooser_add_filter">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_recent_chooser_get_uris">
-	<span><code>Gtk.RecentChooser.get_uris</code></span>
+<h4 data-hotdoc-id="gtk_recent_chooser_add_filter">
+	<span><code>Gtk.RecentChooser.add_filter</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.RecentChooser.get_uris (self):
-    #python wrapper for 'gtk_recent_chooser_get_uris'</pre>
+def Gtk.RecentChooser.add_filter (self, filter):
+    #python wrapper for 'gtk_recent_chooser_add_filter'</pre>
 
-<p>Gets the URI of the recently used resources.</p>
-<p>The return value of this function is affected by the “sort-type” and “limit”
-properties of <em>chooser</em>.</p>
-<p>Since the returned array is <a href="https://docs.python.org/3/library/constants.html#None">None</a> terminated, <em>length</em> may be <a href="https://docs.python.org/3/library/constants.html#None">None</a>.</p>
+<p>Adds <em>filter</em> to the list of <a href="gtkrecentfilter.html#GtkRecentFilter">Gtk.RecentFilter</a> objects held by <em>chooser</em>.</p>
+<p>If no previous filter objects were defined, this function will call
+<a href="gtkrecentchooser.html#gtk_recent_chooser_set_filter">Gtk.RecentChooser.set_filter</a>.</p>
 
 
 
@@ -4824,36 +4909,16 @@ properties of <em>chooser</em>.</p>
 
 	</div>
 
-			</div>
-
-		<div class="return-values-container">
-		<p><b>Returns a tuple made of:</b></p>
-				
+					
 <div class="symbol-detail">
 	<div>
-									(
-			[ <a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a> ]
+		<i><em><code>filter</code></em></i>
+					(
+						<a title="Gtk.RecentFilter" href="gtkrecentfilter.html#GtkRecentFilter">Gtk.RecentFilter</a>
 						)
 				–
 	</div>
-			<p>(array length=length zero-terminated=1) (transfer full):
-A newly allocated, <a href="https://docs.python.org/3/library/constants.html#None">None</a>-terminated array of strings. Use
-<a href="https://developer.gnome.org/glib/unstable/glib-String-Utility-Functions.html#g-strfreev">GLib.strfreev</a> to free it.</p>
-
-	</div>
-
-				
-<div class="symbol-detail">
-	<div>
-				<i><em><code>length</code></em></i>
-									(
-			<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
-						)
-				–
-	</div>
-			<p>(array length=length zero-terminated=1) (transfer full):
-A newly allocated, <a href="https://docs.python.org/3/library/constants.html#None">None</a>-terminated array of strings. Use
-<a href="https://developer.gnome.org/glib/unstable/glib-String-Utility-Functions.html#g-strfreev">GLib.strfreev</a> to free it.</p>
+			<p>a <a href="gtkrecentfilter.html#GtkRecentFilter">Gtk.RecentFilter</a></p>
 
 	</div>
 
@@ -4867,13 +4932,6 @@ A newly allocated, <a href="https://docs.python.org/3/library/constants.html#Non
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_recent_chooser_add_filter">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -4987,23 +5045,28 @@ function Gtk.prototype.add_filter(filter: <a title="Gtk.RecentFilter" href="gtkr
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_recent_chooser_remove_filter">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_recent_chooser_add_filter">
-	<span><code>Gtk.RecentChooser.add_filter</code></span>
+<h4 data-hotdoc-id="gtk_recent_chooser_remove_filter">
+	<span><code>Gtk.RecentChooser.remove_filter</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.RecentChooser.add_filter (self, filter):
-    #python wrapper for 'gtk_recent_chooser_add_filter'</pre>
+def Gtk.RecentChooser.remove_filter (self, filter):
+    #python wrapper for 'gtk_recent_chooser_remove_filter'</pre>
 
-<p>Adds <em>filter</em> to the list of <a href="gtkrecentfilter.html#GtkRecentFilter">Gtk.RecentFilter</a> objects held by <em>chooser</em>.</p>
-<p>If no previous filter objects were defined, this function will call
-<a href="gtkrecentchooser.html#gtk_recent_chooser_set_filter">Gtk.RecentChooser.set_filter</a>.</p>
+<p>Removes <em>filter</em> from the list of <a href="gtkrecentfilter.html#GtkRecentFilter">Gtk.RecentFilter</a> objects held by <em>chooser</em>.</p>
 
 
 
@@ -5045,13 +5108,6 @@ def Gtk.RecentChooser.add_filter (self, filter):
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_recent_chooser_remove_filter">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -5161,21 +5217,28 @@ function Gtk.prototype.remove_filter(filter: <a title="Gtk.RecentFilter" href="g
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_recent_chooser_list_filters">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_recent_chooser_remove_filter">
-	<span><code>Gtk.RecentChooser.remove_filter</code></span>
+<h4 data-hotdoc-id="gtk_recent_chooser_list_filters">
+	<span><code>Gtk.RecentChooser.list_filters</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.RecentChooser.remove_filter (self, filter):
-    #python wrapper for 'gtk_recent_chooser_remove_filter'</pre>
+def Gtk.RecentChooser.list_filters (self):
+    #python wrapper for 'gtk_recent_chooser_list_filters'</pre>
 
-<p>Removes <em>filter</em> from the list of <a href="gtkrecentfilter.html#GtkRecentFilter">Gtk.RecentFilter</a> objects held by <em>chooser</em>.</p>
+<p>Gets the <a href="gtkrecentfilter.html#GtkRecentFilter">Gtk.RecentFilter</a> objects held by <em>chooser</em>.</p>
 
 
 
@@ -5194,20 +5257,23 @@ def Gtk.RecentChooser.remove_filter (self, filter):
 
 	</div>
 
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>filter</code></em></i>
-					(
-						<a title="Gtk.RecentFilter" href="gtkrecentfilter.html#GtkRecentFilter">Gtk.RecentFilter</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkrecentfilter.html#GtkRecentFilter">Gtk.RecentFilter</a></p>
-
-	</div>
-
 			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="GLib.SList" href="https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html#GSList">GLib.SList</a>
+										)
+								–
+			</div>
+							<p>A singly linked list
+of <a href="gtkrecentfilter.html#GtkRecentFilter">Gtk.RecentFilter</a> objects.  You
+should just free the returned list using <a href="https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html#g-slist-free">g_slist_free (not introspectable)</a>.</p>
+
+					</div>
+	</div>
 
 
 
@@ -5217,13 +5283,6 @@ def Gtk.RecentChooser.remove_filter (self, filter):
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_recent_chooser_list_filters">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -5346,21 +5405,29 @@ should just free the returned list using <a href="https://developer.gnome.org/gl
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_recent_chooser_set_filter">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_recent_chooser_list_filters">
-	<span><code>Gtk.RecentChooser.list_filters</code></span>
+<h4 data-hotdoc-id="gtk_recent_chooser_set_filter">
+	<span><code>Gtk.RecentChooser.set_filter</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.RecentChooser.list_filters (self):
-    #python wrapper for 'gtk_recent_chooser_list_filters'</pre>
+def Gtk.RecentChooser.set_filter (self, filter):
+    #python wrapper for 'gtk_recent_chooser_set_filter'</pre>
 
-<p>Gets the <a href="gtkrecentfilter.html#GtkRecentFilter">Gtk.RecentFilter</a> objects held by <em>chooser</em>.</p>
+<p>Sets <em>filter</em> as the current <a href="gtkrecentfilter.html#GtkRecentFilter">Gtk.RecentFilter</a> object used by <em>chooser</em>
+to affect the displayed recently used resources.</p>
 
 
 
@@ -5379,23 +5446,20 @@ def Gtk.RecentChooser.list_filters (self):
 
 	</div>
 
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="GLib.SList" href="https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html#GSList">GLib.SList</a>
-										)
-								–
-			</div>
-							<p>A singly linked list
-of <a href="gtkrecentfilter.html#GtkRecentFilter">Gtk.RecentFilter</a> objects.  You
-should just free the returned list using <a href="https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html#g-slist-free">g_slist_free (not introspectable)</a>.</p>
-
-					</div>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>filter</code></em></i>
+					(
+						<a title="Gtk.RecentFilter" href="gtkrecentfilter.html#GtkRecentFilter">Gtk.RecentFilter</a>
+						)
+				–
 	</div>
+			<p>a <a href="gtkrecentfilter.html#GtkRecentFilter">Gtk.RecentFilter</a></p>
+
+	</div>
+
+			</div>
 
 
 
@@ -5405,13 +5469,6 @@ should just free the returned list using <a href="https://developer.gnome.org/gl
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_recent_chooser_set_filter">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -5528,22 +5585,29 @@ to affect the displayed recently used resources.</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_recent_chooser_get_filter">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_recent_chooser_set_filter">
-	<span><code>Gtk.RecentChooser.set_filter</code></span>
+<h4 data-hotdoc-id="gtk_recent_chooser_get_filter">
+	<span><code>Gtk.RecentChooser.get_filter</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.RecentChooser.set_filter (self, filter):
-    #python wrapper for 'gtk_recent_chooser_set_filter'</pre>
+def Gtk.RecentChooser.get_filter (self):
+    #python wrapper for 'gtk_recent_chooser_get_filter'</pre>
 
-<p>Sets <em>filter</em> as the current <a href="gtkrecentfilter.html#GtkRecentFilter">Gtk.RecentFilter</a> object used by <em>chooser</em>
-to affect the displayed recently used resources.</p>
+<p>Gets the <a href="gtkrecentfilter.html#GtkRecentFilter">Gtk.RecentFilter</a> object currently used by <em>chooser</em> to affect
+the display of the recently used resources.</p>
 
 
 
@@ -5562,20 +5626,21 @@ to affect the displayed recently used resources.</p>
 
 	</div>
 
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>filter</code></em></i>
-					(
-						<a title="Gtk.RecentFilter" href="gtkrecentfilter.html#GtkRecentFilter">Gtk.RecentFilter</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkrecentfilter.html#GtkRecentFilter">Gtk.RecentFilter</a></p>
-
-	</div>
-
 			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.RecentFilter" href="gtkrecentfilter.html#GtkRecentFilter">Gtk.RecentFilter</a>
+										)
+								–
+			</div>
+							<p>a <a href="gtkrecentfilter.html#GtkRecentFilter">Gtk.RecentFilter</a> object.</p>
+
+					</div>
+	</div>
 
 
 
@@ -5585,13 +5650,6 @@ to affect the displayed recently used resources.</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_recent_chooser_get_filter">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -5711,64 +5769,6 @@ the display of the recently used resources.</p>
 
 
         </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_recent_chooser_get_filter">
-	<span><code>Gtk.RecentChooser.get_filter</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.RecentChooser.get_filter (self):
-    #python wrapper for 'gtk_recent_chooser_get_filter'</pre>
-
-<p>Gets the <a href="gtkrecentfilter.html#GtkRecentFilter">Gtk.RecentFilter</a> object currently used by <em>chooser</em> to affect
-the display of the recently used resources.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>chooser</code></em></i>
-					(
-						<a title="Gtk.RecentChooser" href="gtkrecentchooser.html#GtkRecentChooser">Gtk.RecentChooser</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkrecentchooser.html#GtkRecentChooser">Gtk.RecentChooser</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Gtk.RecentFilter" href="gtkrecentfilter.html#GtkRecentFilter">Gtk.RecentFilter</a>
-										)
-								–
-			</div>
-							<p>a <a href="gtkrecentfilter.html#GtkRecentFilter">Gtk.RecentFilter</a> object.</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.10
-		</p>
-
-
-        </div>
 
 </div>
 
@@ -5780,6 +5780,20 @@ the display of the recently used resources.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="GtkRecentChooser">
 	
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="GtkRecentChooser">
+	<span><code>Gtk.RecentChooser</code></span>
+</h3>
+
+
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -5808,20 +5822,6 @@ the display of the recently used resources.</p>
 
 
         </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="GtkRecentChooser">
-	<span><code>Gtk.RecentChooser</code></span>
-</h3>
-
-
-
-
-
-        </div>
 
 </div>
 
@@ -5831,6 +5831,49 @@ the display of the recently used resources.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="GtkRecentChooserError">
 	
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="GtkRecentChooserError">
+	<span><code>Gtk.RecentChooserError</code></span>
+</h3>
+
+
+<p>These identify the various errors that can occur while calling
+<a href="gtkrecentchooser.html#GtkRecentChooser">Gtk.RecentChooser</a> functions.</p>
+
+
+
+
+	<div class="members-container">
+		<h4>Members</h4>
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_RECENT_CHOOSER_ERROR_NOT_FOUND">
+	<div>
+		<i><em><code>Gtk.RecentChooserError.NOT_FOUND</code></em></i>
+		(<span class="value">0</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_RECENT_CHOOSER_ERROR_INVALID_URI">
+	<div>
+		<i><em><code>Gtk.RecentChooserError.INVALID_URI</code></em></i>
+		(<span class="value">1</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -5917,18 +5960,25 @@ the display of the recently used resources.</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="GtkRecentSortType">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h3 data-hotdoc-id="GtkRecentChooserError">
-	<span><code>Gtk.RecentChooserError</code></span>
+<h3 data-hotdoc-id="GtkRecentSortType">
+	<span><code>Gtk.RecentSortType</code></span>
 </h3>
 
 
-<p>These identify the various errors that can occur while calling
-<a href="gtkrecentchooser.html#GtkRecentChooser">Gtk.RecentChooser</a> functions.</p>
+<p>Used to specify the sorting method to be applyed to the recently
+used resource list.</p>
 
 
 
@@ -5936,9 +5986,9 @@ the display of the recently used resources.</p>
 	<div class="members-container">
 		<h4>Members</h4>
 					
-<div class="symbol-detail" data-hotdoc-id="GTK_RECENT_CHOOSER_ERROR_NOT_FOUND">
+<div class="symbol-detail" data-hotdoc-id="GTK_RECENT_SORT_NONE">
 	<div>
-		<i><em><code>Gtk.RecentChooserError.NOT_FOUND</code></em></i>
+		<i><em><code>Gtk.RecentSortType.NONE</code></em></i>
 		(<span class="value">0</span>)
 		–
 	</div>
@@ -5946,10 +5996,30 @@ the display of the recently used resources.</p>
 	</div>
 
 					
-<div class="symbol-detail" data-hotdoc-id="GTK_RECENT_CHOOSER_ERROR_INVALID_URI">
+<div class="symbol-detail" data-hotdoc-id="GTK_RECENT_SORT_MRU">
 	<div>
-		<i><em><code>Gtk.RecentChooserError.INVALID_URI</code></em></i>
+		<i><em><code>Gtk.RecentSortType.MRU</code></em></i>
 		(<span class="value">1</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_RECENT_SORT_LRU">
+	<div>
+		<i><em><code>Gtk.RecentSortType.LRU</code></em></i>
+		(<span class="value">2</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_RECENT_SORT_CUSTOM">
+	<div>
+		<i><em><code>Gtk.RecentSortType.CUSTOM</code></em></i>
+		(<span class="value">3</span>)
 		–
 	</div>
 			<i>No description available</i>
@@ -5960,13 +6030,6 @@ the display of the recently used resources.</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="GtkRecentSortType">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -6093,69 +6156,6 @@ used resource list.</p>
 
 
         </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="GtkRecentSortType">
-	<span><code>Gtk.RecentSortType</code></span>
-</h3>
-
-
-<p>Used to specify the sorting method to be applyed to the recently
-used resource list.</p>
-
-
-
-
-	<div class="members-container">
-		<h4>Members</h4>
-					
-<div class="symbol-detail" data-hotdoc-id="GTK_RECENT_SORT_NONE">
-	<div>
-		<i><em><code>Gtk.RecentSortType.NONE</code></em></i>
-		(<span class="value">0</span>)
-		–
-	</div>
-			<i>No description available</i>
-	</div>
-
-					
-<div class="symbol-detail" data-hotdoc-id="GTK_RECENT_SORT_MRU">
-	<div>
-		<i><em><code>Gtk.RecentSortType.MRU</code></em></i>
-		(<span class="value">1</span>)
-		–
-	</div>
-			<i>No description available</i>
-	</div>
-
-					
-<div class="symbol-detail" data-hotdoc-id="GTK_RECENT_SORT_LRU">
-	<div>
-		<i><em><code>Gtk.RecentSortType.LRU</code></em></i>
-		(<span class="value">2</span>)
-		–
-	</div>
-			<i>No description available</i>
-	</div>
-
-					
-<div class="symbol-detail" data-hotdoc-id="GTK_RECENT_SORT_CUSTOM">
-	<div>
-		<i><em><code>Gtk.RecentSortType.CUSTOM</code></em></i>
-		(<span class="value">3</span>)
-		–
-	</div>
-			<i>No description available</i>
-	</div>
-
-			</div>
-
-
-
-        </div>
 
 </div>
 
@@ -6193,6 +6193,85 @@ used resource list.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="GtkRecentSortFunc">
 	
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="GtkRecentSortFunc">
+	<span><code>Gtk.RecentSortFunc</code></span>
+</h3>
+
+
+
+
+<pre class="c-prototype">
+<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+(*Gtk.RecentSortFunc) (<a title="Gtk.RecentInfo" href="gtkrecentmanager.html#GtkRecentInfo">Gtk.RecentInfo</a>,
+                       <a title="Gtk.RecentInfo" href="gtkrecentmanager.html#GtkRecentInfo">Gtk.RecentInfo</a>,
+                       <a title="object" href="https://docs.python.org/3/library/functions.html#object">object</a>)</pre>
+
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>a</code></em></i>
+					(
+						<a title="Gtk.RecentInfo" href="gtkrecentmanager.html#GtkRecentInfo">Gtk.RecentInfo</a>
+						)
+				–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>b</code></em></i>
+					(
+						<a title="Gtk.RecentInfo" href="gtkrecentmanager.html#GtkRecentInfo">Gtk.RecentInfo</a>
+						)
+				–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>user_data</code></em></i>
+					(
+						<a title="object" href="https://docs.python.org/3/library/functions.html#object">object</a>
+						)
+				–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+										)
+								–
+			</div>
+							<i>No description available</i>
+					</div>
+	</div>
+
+
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -6327,85 +6406,6 @@ used resource list.</p>
 				<b>Returns</b>
 									(
 					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
-										)
-								–
-			</div>
-							<i>No description available</i>
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="GtkRecentSortFunc">
-	<span><code>Gtk.RecentSortFunc</code></span>
-</h3>
-
-
-
-
-<pre class="c-prototype">
-<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
-(*Gtk.RecentSortFunc) (<a title="Gtk.RecentInfo" href="gtkrecentmanager.html#GtkRecentInfo">Gtk.RecentInfo</a>,
-                       <a title="Gtk.RecentInfo" href="gtkrecentmanager.html#GtkRecentInfo">Gtk.RecentInfo</a>,
-                       <a title="object" href="https://docs.python.org/3/library/functions.html#object">object</a>)</pre>
-
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>a</code></em></i>
-					(
-						<a title="Gtk.RecentInfo" href="gtkrecentmanager.html#GtkRecentInfo">Gtk.RecentInfo</a>
-						)
-				–
-	</div>
-			<i>No description available</i>
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>b</code></em></i>
-					(
-						<a title="Gtk.RecentInfo" href="gtkrecentmanager.html#GtkRecentInfo">Gtk.RecentInfo</a>
-						)
-				–
-	</div>
-			<i>No description available</i>
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>user_data</code></em></i>
-					(
-						<a title="object" href="https://docs.python.org/3/library/functions.html#object">object</a>
-						)
-				–
-	</div>
-			<i>No description available</i>
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
 										)
 								–
 			</div>

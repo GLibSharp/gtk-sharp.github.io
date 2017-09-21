@@ -89,7 +89,7 @@ $('body').removeClass('no-script');
 </nav>
 
 <main>
-<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="gtktoolshell.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['c', 'javascript', 'python']" data-hotdoc-meta-gi-language="c">
+<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="gtktoolshell.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['python', 'c', 'javascript']" data-hotdoc-meta-gi-language="c">
 <script src="assets/js/utils.js"></script>
 
 <div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
@@ -110,6 +110,65 @@ $('body').removeClass('no-script');
 
 <div class="base_symbol_container" data-hotdoc-tags="since:2.20;" id="gtk_tool_shell_get_ellipsize_mode">
 	
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_tool_shell_get_ellipsize_mode">
+	<span><code>Gtk.ToolShell.get_ellipsize_mode</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.ToolShell.get_ellipsize_mode (self):
+    #python wrapper for 'gtk_tool_shell_get_ellipsize_mode'</pre>
+
+<p>Retrieves the current ellipsize mode for the tool shell. Tool items must not
+call this function directly, but rely on <a href="gtktoolitem.html#gtk_tool_item_get_ellipsize_mode">Gtk.ToolItem.get_ellipsize_mode</a>
+instead.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>shell</code></em></i>
+					(
+						<a title="Gtk.ToolShell" href="gtktoolshell.html#GtkToolShell">Gtk.ToolShell</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtktoolshell.html#GtkToolShell">Gtk.ToolShell</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Pango.EllipsizeMode" href="https://developer.gnome.org/pango/unstable/pango-Layout-Objects.html#PangoEllipsizeMode">Pango.EllipsizeMode</a>
+										)
+								–
+			</div>
+							<p>the current ellipsize mode of <em>shell</em></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.20
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -225,23 +284,29 @@ instead.</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.14;" id="gtk_tool_shell_get_icon_size">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_tool_shell_get_ellipsize_mode">
-	<span><code>Gtk.ToolShell.get_ellipsize_mode</code></span>
+<h4 data-hotdoc-id="gtk_tool_shell_get_icon_size">
+	<span><code>Gtk.ToolShell.get_icon_size</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.ToolShell.get_ellipsize_mode (self):
-    #python wrapper for 'gtk_tool_shell_get_ellipsize_mode'</pre>
+def Gtk.ToolShell.get_icon_size (self):
+    #python wrapper for 'gtk_tool_shell_get_icon_size'</pre>
 
-<p>Retrieves the current ellipsize mode for the tool shell. Tool items must not
-call this function directly, but rely on <a href="gtktoolitem.html#gtk_tool_item_get_ellipsize_mode">Gtk.ToolItem.get_ellipsize_mode</a>
-instead.</p>
+<p>Retrieves the icon size for the tool shell. Tool items must not call this
+function directly, but rely on <a href="gtktoolitem.html#gtk_tool_item_get_icon_size">Gtk.ToolItem.get_icon_size</a> instead.</p>
 
 
 
@@ -267,11 +332,11 @@ instead.</p>
 			<div>
 				<b>Returns</b>
 									(
-					<a title="Pango.EllipsizeMode" href="https://developer.gnome.org/pango/unstable/pango-Layout-Objects.html#PangoEllipsizeMode">Pango.EllipsizeMode</a>
+					<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
 										)
 								–
 			</div>
-							<p>the current ellipsize mode of <em>shell</em></p>
+							<p>the current size (#GtkIconSize) for icons of <em>shell</em></p>
 
 					</div>
 	</div>
@@ -279,18 +344,11 @@ instead.</p>
 
 
 	<p>
-	<b>Since</b>			: 2.20
+	<b>Since</b>			: 2.14
 		</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.14;" id="gtk_tool_shell_get_icon_size">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -410,22 +468,30 @@ function directly, but rely on <a href="gtktoolitem.html#gtk_tool_item_get_icon_
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.14;" id="gtk_tool_shell_get_orientation">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_tool_shell_get_icon_size">
-	<span><code>Gtk.ToolShell.get_icon_size</code></span>
+<h4 data-hotdoc-id="gtk_tool_shell_get_orientation">
+	<span><code>Gtk.ToolShell.get_orientation</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.ToolShell.get_icon_size (self):
-    #python wrapper for 'gtk_tool_shell_get_icon_size'</pre>
+def Gtk.ToolShell.get_orientation (self):
+    #python wrapper for 'gtk_tool_shell_get_orientation'</pre>
 
-<p>Retrieves the icon size for the tool shell. Tool items must not call this
-function directly, but rely on <a href="gtktoolitem.html#gtk_tool_item_get_icon_size">Gtk.ToolItem.get_icon_size</a> instead.</p>
+<p>Retrieves the current orientation for the tool shell. Tool items must not
+call this function directly, but rely on <a href="gtktoolitem.html#gtk_tool_item_get_orientation">Gtk.ToolItem.get_orientation</a>
+instead.</p>
 
 
 
@@ -451,11 +517,11 @@ function directly, but rely on <a href="gtktoolitem.html#gtk_tool_item_get_icon_
 			<div>
 				<b>Returns</b>
 									(
-					<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+					<a title="Gtk.Orientation" href="gtkenums.html#GtkOrientation">Gtk.Orientation</a>
 										)
 								–
 			</div>
-							<p>the current size (#GtkIconSize) for icons of <em>shell</em></p>
+							<p>the current orientation of <em>shell</em></p>
 
 					</div>
 	</div>
@@ -468,13 +534,6 @@ function directly, but rely on <a href="gtktoolitem.html#gtk_tool_item_get_icon_
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.14;" id="gtk_tool_shell_get_orientation">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -590,22 +649,29 @@ instead.</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.14;" id="gtk_tool_shell_get_style">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_tool_shell_get_orientation">
-	<span><code>Gtk.ToolShell.get_orientation</code></span>
+<h4 data-hotdoc-id="gtk_tool_shell_get_style">
+	<span><code>Gtk.ToolShell.get_style</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.ToolShell.get_orientation (self):
-    #python wrapper for 'gtk_tool_shell_get_orientation'</pre>
+def Gtk.ToolShell.get_style (self):
+    #python wrapper for 'gtk_tool_shell_get_style'</pre>
 
-<p>Retrieves the current orientation for the tool shell. Tool items must not
-call this function directly, but rely on <a href="gtktoolitem.html#gtk_tool_item_get_orientation">Gtk.ToolItem.get_orientation</a>
+<p>Retrieves whether the tool shell has text, icons, or both. Tool items must
+not call this function directly, but rely on <a href="gtktoolitem.html#gtk_tool_item_get_toolbar_style">Gtk.ToolItem.get_toolbar_style</a>
 instead.</p>
 
 
@@ -632,11 +698,11 @@ instead.</p>
 			<div>
 				<b>Returns</b>
 									(
-					<a title="Gtk.Orientation" href="gtkenums.html#GtkOrientation">Gtk.Orientation</a>
+					<a title="Gtk.ToolbarStyle" href="gtkenums.html#GtkToolbarStyle">Gtk.ToolbarStyle</a>
 										)
 								–
 			</div>
-							<p>the current orientation of <em>shell</em></p>
+							<p>the current style of <em>shell</em></p>
 
 					</div>
 	</div>
@@ -649,13 +715,6 @@ instead.</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.14;" id="gtk_tool_shell_get_style">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -771,22 +830,29 @@ instead.</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.20;" id="gtk_tool_shell_get_text_alignment">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_tool_shell_get_style">
-	<span><code>Gtk.ToolShell.get_style</code></span>
+<h4 data-hotdoc-id="gtk_tool_shell_get_text_alignment">
+	<span><code>Gtk.ToolShell.get_text_alignment</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.ToolShell.get_style (self):
-    #python wrapper for 'gtk_tool_shell_get_style'</pre>
+def Gtk.ToolShell.get_text_alignment (self):
+    #python wrapper for 'gtk_tool_shell_get_text_alignment'</pre>
 
-<p>Retrieves whether the tool shell has text, icons, or both. Tool items must
-not call this function directly, but rely on <a href="gtktoolitem.html#gtk_tool_item_get_toolbar_style">Gtk.ToolItem.get_toolbar_style</a>
+<p>Retrieves the current text alignment for the tool shell. Tool items must not
+call this function directly, but rely on <a href="gtktoolitem.html#gtk_tool_item_get_text_alignment">Gtk.ToolItem.get_text_alignment</a>
 instead.</p>
 
 
@@ -813,11 +879,11 @@ instead.</p>
 			<div>
 				<b>Returns</b>
 									(
-					<a title="Gtk.ToolbarStyle" href="gtkenums.html#GtkToolbarStyle">Gtk.ToolbarStyle</a>
+					<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
 										)
 								–
 			</div>
-							<p>the current style of <em>shell</em></p>
+							<p>the current text alignment of <em>shell</em></p>
 
 					</div>
 	</div>
@@ -825,18 +891,11 @@ instead.</p>
 
 
 	<p>
-	<b>Since</b>			: 2.14
+	<b>Since</b>			: 2.20
 		</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.20;" id="gtk_tool_shell_get_text_alignment">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -952,22 +1011,29 @@ instead.</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.20;" id="gtk_tool_shell_get_text_orientation">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_tool_shell_get_text_alignment">
-	<span><code>Gtk.ToolShell.get_text_alignment</code></span>
+<h4 data-hotdoc-id="gtk_tool_shell_get_text_orientation">
+	<span><code>Gtk.ToolShell.get_text_orientation</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.ToolShell.get_text_alignment (self):
-    #python wrapper for 'gtk_tool_shell_get_text_alignment'</pre>
+def Gtk.ToolShell.get_text_orientation (self):
+    #python wrapper for 'gtk_tool_shell_get_text_orientation'</pre>
 
-<p>Retrieves the current text alignment for the tool shell. Tool items must not
-call this function directly, but rely on <a href="gtktoolitem.html#gtk_tool_item_get_text_alignment">Gtk.ToolItem.get_text_alignment</a>
+<p>Retrieves the current text orientation for the tool shell. Tool items must not
+call this function directly, but rely on <a href="gtktoolitem.html#gtk_tool_item_get_text_orientation">Gtk.ToolItem.get_text_orientation</a>
 instead.</p>
 
 
@@ -994,11 +1060,11 @@ instead.</p>
 			<div>
 				<b>Returns</b>
 									(
-					<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+					<a title="Gtk.Orientation" href="gtkenums.html#GtkOrientation">Gtk.Orientation</a>
 										)
 								–
 			</div>
-							<p>the current text alignment of <em>shell</em></p>
+							<p>the current text orientation of <em>shell</em></p>
 
 					</div>
 	</div>
@@ -1011,13 +1077,6 @@ instead.</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.20;" id="gtk_tool_shell_get_text_orientation">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -1133,23 +1192,32 @@ instead.</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.14;" id="gtk_tool_shell_rebuild_menu">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_tool_shell_get_text_orientation">
-	<span><code>Gtk.ToolShell.get_text_orientation</code></span>
+<h4 data-hotdoc-id="gtk_tool_shell_rebuild_menu">
+	<span><code>Gtk.ToolShell.rebuild_menu</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.ToolShell.get_text_orientation (self):
-    #python wrapper for 'gtk_tool_shell_get_text_orientation'</pre>
+def Gtk.ToolShell.rebuild_menu (self):
+    #python wrapper for 'gtk_tool_shell_rebuild_menu'</pre>
 
-<p>Retrieves the current text orientation for the tool shell. Tool items must not
-call this function directly, but rely on <a href="gtktoolitem.html#gtk_tool_item_get_text_orientation">Gtk.ToolItem.get_text_orientation</a>
-instead.</p>
+<p>Calling this function signals the tool shell that the overflow menu item for
+tool items have changed. If there is an overflow menu and if it is visible
+when this function it called, the menu will be rebuilt.</p>
+<p>Tool items must not call this function directly, but rely on
+<a href="gtktoolitem.html#gtk_tool_item_rebuild_menu">Gtk.ToolItem.rebuild_menu</a> instead.</p>
 
 
 
@@ -1170,35 +1238,14 @@ instead.</p>
 
 			</div>
 
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Gtk.Orientation" href="gtkenums.html#GtkOrientation">Gtk.Orientation</a>
-										)
-								–
-			</div>
-							<p>the current text orientation of <em>shell</em></p>
-
-					</div>
-	</div>
-
 
 
 	<p>
-	<b>Since</b>			: 2.20
+	<b>Since</b>			: 2.14
 		</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.14;" id="gtk_tool_shell_rebuild_menu">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -1292,25 +1339,30 @@ when this function it called, the menu will be rebuilt.</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.20;" id="gtk_tool_shell_get_text_size_group">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_tool_shell_rebuild_menu">
-	<span><code>Gtk.ToolShell.rebuild_menu</code></span>
+<h4 data-hotdoc-id="gtk_tool_shell_get_text_size_group">
+	<span><code>Gtk.ToolShell.get_text_size_group</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.ToolShell.rebuild_menu (self):
-    #python wrapper for 'gtk_tool_shell_rebuild_menu'</pre>
+def Gtk.ToolShell.get_text_size_group (self):
+    #python wrapper for 'gtk_tool_shell_get_text_size_group'</pre>
 
-<p>Calling this function signals the tool shell that the overflow menu item for
-tool items have changed. If there is an overflow menu and if it is visible
-when this function it called, the menu will be rebuilt.</p>
-<p>Tool items must not call this function directly, but rely on
-<a href="gtktoolitem.html#gtk_tool_item_rebuild_menu">Gtk.ToolItem.rebuild_menu</a> instead.</p>
+<p>Retrieves the current text size group for the tool shell. Tool items must not
+call this function directly, but rely on <a href="gtktoolitem.html#gtk_tool_item_get_text_size_group">Gtk.ToolItem.get_text_size_group</a>
+instead.</p>
 
 
 
@@ -1331,21 +1383,28 @@ when this function it called, the menu will be rebuilt.</p>
 
 			</div>
 
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.SizeGroup" href="gtksizegroup.html#GtkSizeGroup">Gtk.SizeGroup</a>
+										)
+								–
+			</div>
+							<p>the current text size group of <em>shell</em></p>
+
+					</div>
+	</div>
+
 
 
 	<p>
-	<b>Since</b>			: 2.14
+	<b>Since</b>			: 2.20
 		</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.20;" id="gtk_tool_shell_get_text_size_group">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -1467,65 +1526,6 @@ instead.</p>
 
 
         </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_tool_shell_get_text_size_group">
-	<span><code>Gtk.ToolShell.get_text_size_group</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.ToolShell.get_text_size_group (self):
-    #python wrapper for 'gtk_tool_shell_get_text_size_group'</pre>
-
-<p>Retrieves the current text size group for the tool shell. Tool items must not
-call this function directly, but rely on <a href="gtktoolitem.html#gtk_tool_item_get_text_size_group">Gtk.ToolItem.get_text_size_group</a>
-instead.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>shell</code></em></i>
-					(
-						<a title="Gtk.ToolShell" href="gtktoolshell.html#GtkToolShell">Gtk.ToolShell</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtktoolshell.html#GtkToolShell">Gtk.ToolShell</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Gtk.SizeGroup" href="gtksizegroup.html#GtkSizeGroup">Gtk.SizeGroup</a>
-										)
-								–
-			</div>
-							<p>the current text size group of <em>shell</em></p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.20
-		</p>
-
-
-        </div>
 
 </div>
 
@@ -1537,6 +1537,24 @@ instead.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="GtkToolShell">
 	
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="GtkToolShell">
+	<span><code>Gtk.ToolShell</code></span>
+</h3>
+
+
+
+<div class="interface_details">
+	<p>Dummy structure for accessing instances of <a href="https://developer.gnome.org/gtk3/GtkToolShell.html#GtkToolShellIface">Gtk.ToolShellIface</a>.</p>
+
+</div>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -1556,24 +1574,6 @@ instead.</p>
 
         </div>
         <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h3 data-hotdoc-id="GtkToolShell">
-	<span><code>Gtk.ToolShell</code></span>
-</h3>
-
-
-
-<div class="interface_details">
-	<p>Dummy structure for accessing instances of <a href="https://developer.gnome.org/gtk3/GtkToolShell.html#GtkToolShellIface">Gtk.ToolShellIface</a>.</p>
-
-</div>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
             
 
 

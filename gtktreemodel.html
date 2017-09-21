@@ -89,7 +89,7 @@ $('body').removeClass('no-script');
 </nav>
 
 <main>
-<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="gtktreemodel.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['c', 'javascript', 'python']" data-hotdoc-meta-gi-language="c">
+<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="gtktreemodel.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['python', 'c', 'javascript']" data-hotdoc-meta-gi-language="c">
 <script src="assets/js/utils.js"></script>
 
 <div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
@@ -108,6 +108,80 @@ $('body').removeClass('no-script');
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="GtkTreeIter">
 	
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h2 data-hotdoc-id="GtkTreeIter">
+	<span><code>Gtk.TreeIter</code></span>
+</h2>
+
+
+
+
+<div class="class_details">
+	<p>The <a href="gtktreemodel.html#GtkTreeIter">Gtk.TreeIter</a> is the primary structure
+for accessing a <a href="gtktreemodel.html#GtkTreeModel">Gtk.TreeModel</a>. Models are expected to put a unique
+integer in the <em>stamp</em> member, and put
+model-specific data in the three <em>user_data</em>
+members.</p>
+
+</div>
+
+
+
+	<div class="members-container">
+		<h3>Members</h3>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkTreeIter.stamp">
+	<div>
+		<i><em><code>TreeIter.stamp</code></em></i>
+		(<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>)
+		–
+	</div>
+			<p>a unique stamp to catch invalid iterators</p>
+
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GtkTreeIter.user_data">
+	<div>
+		<i><em><code>TreeIter.user_data</code></em></i>
+		(<a title="object" href="https://docs.python.org/3/library/functions.html#object">object</a>)
+		–
+	</div>
+			<p>model-specific data</p>
+
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GtkTreeIter.user_data2">
+	<div>
+		<i><em><code>TreeIter.user_data2</code></em></i>
+		(<a title="object" href="https://docs.python.org/3/library/functions.html#object">object</a>)
+		–
+	</div>
+			<p>model-specific data</p>
+
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GtkTreeIter.user_data3">
+	<div>
+		<i><em><code>TreeIter.user_data3</code></em></i>
+		(<a title="object" href="https://docs.python.org/3/library/functions.html#object">object</a>)
+		–
+	</div>
+			<p>model-specific data</p>
+
+	</div>
+
+			</div>
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -256,80 +330,6 @@ members.</p>
 
 
         </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h2 data-hotdoc-id="GtkTreeIter">
-	<span><code>Gtk.TreeIter</code></span>
-</h2>
-
-
-
-
-<div class="class_details">
-	<p>The <a href="gtktreemodel.html#GtkTreeIter">Gtk.TreeIter</a> is the primary structure
-for accessing a <a href="gtktreemodel.html#GtkTreeModel">Gtk.TreeModel</a>. Models are expected to put a unique
-integer in the <em>stamp</em> member, and put
-model-specific data in the three <em>user_data</em>
-members.</p>
-
-</div>
-
-
-
-	<div class="members-container">
-		<h3>Members</h3>
-					
-<div class="symbol-detail" data-hotdoc-id="GtkTreeIter.stamp">
-	<div>
-		<i><em><code>TreeIter.stamp</code></em></i>
-		(<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>)
-		–
-	</div>
-			<p>a unique stamp to catch invalid iterators</p>
-
-	</div>
-
-					
-<div class="symbol-detail" data-hotdoc-id="GtkTreeIter.user_data">
-	<div>
-		<i><em><code>TreeIter.user_data</code></em></i>
-		(<a title="object" href="https://docs.python.org/3/library/functions.html#object">object</a>)
-		–
-	</div>
-			<p>model-specific data</p>
-
-	</div>
-
-					
-<div class="symbol-detail" data-hotdoc-id="GtkTreeIter.user_data2">
-	<div>
-		<i><em><code>TreeIter.user_data2</code></em></i>
-		(<a title="object" href="https://docs.python.org/3/library/functions.html#object">object</a>)
-		–
-	</div>
-			<p>model-specific data</p>
-
-	</div>
-
-					
-<div class="symbol-detail" data-hotdoc-id="GtkTreeIter.user_data3">
-	<div>
-		<i><em><code>TreeIter.user_data3</code></em></i>
-		(<a title="object" href="https://docs.python.org/3/library/functions.html#object">object</a>)
-		–
-	</div>
-			<p>model-specific data</p>
-
-	</div>
-
-			</div>
-
-
-
-        </div>
 
 </div>
 
@@ -339,6 +339,64 @@ members.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_iter_copy">
 	
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_tree_iter_copy">
+	<span><code>Gtk.TreeIter.copy</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.TreeIter.copy (self):
+    #python wrapper for 'gtk_tree_iter_copy'</pre>
+
+<p>Creates a dynamically allocated tree iterator as a copy of <em>iter</em>.</p>
+<p>This function is not intended for use in applications,
+because you can just copy the structs by value
+(<code>GtkTreeIter new_iter = iter;</code>).
+You must free this iter with <a href="gtktreemodel.html#gtk_tree_iter_free">Gtk.TreeIter.free</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>iter</code></em></i>
+					(
+						<a title="Gtk.TreeIter" href="gtktreemodel.html#GtkTreeIter">Gtk.TreeIter</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtktreemodel.html#GtkTreeIter">Gtk.TreeIter</a>-struct</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.TreeIter" href="gtktreemodel.html#GtkTreeIter">Gtk.TreeIter</a>
+										)
+								–
+			</div>
+							<p>a newly-allocated copy of <em>iter</em></p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -452,25 +510,29 @@ You must free this iter with <a href="gtktreemodel.html#gtk_tree_iter_free">Gtk.
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_iter_free">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_tree_iter_copy">
-	<span><code>Gtk.TreeIter.copy</code></span>
+<h4 data-hotdoc-id="gtk_tree_iter_free">
+	<span><code>Gtk.TreeIter.free</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.TreeIter.copy (self):
-    #python wrapper for 'gtk_tree_iter_copy'</pre>
+def Gtk.TreeIter.free (self):
+    #python wrapper for 'gtk_tree_iter_free'</pre>
 
-<p>Creates a dynamically allocated tree iterator as a copy of <em>iter</em>.</p>
-<p>This function is not intended for use in applications,
-because you can just copy the structs by value
-(<code>GtkTreeIter new_iter = iter;</code>).
-You must free this iter with <a href="gtktreemodel.html#gtk_tree_iter_free">Gtk.TreeIter.free</a>.</p>
+<p>Frees an iterator that has been allocated by <a href="gtktreemodel.html#gtk_tree_iter_copy">Gtk.TreeIter.copy</a>.</p>
+<p>This function is mainly used for language bindings.</p>
 
 
 
@@ -485,38 +547,17 @@ You must free this iter with <a href="gtktreemodel.html#gtk_tree_iter_free">Gtk.
 						)
 				–
 	</div>
-			<p>a <a href="gtktreemodel.html#GtkTreeIter">Gtk.TreeIter</a>-struct</p>
+			<p>a dynamically allocated tree iterator</p>
 
 	</div>
 
 			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Gtk.TreeIter" href="gtktreemodel.html#GtkTreeIter">Gtk.TreeIter</a>
-										)
-								–
-			</div>
-							<p>a newly-allocated copy of <em>iter</em></p>
-
-					</div>
-	</div>
 
 
 
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_iter_free">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -598,47 +639,6 @@ function Gtk.prototype.free(): {
 
 
         </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_tree_iter_free">
-	<span><code>Gtk.TreeIter.free</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.TreeIter.free (self):
-    #python wrapper for 'gtk_tree_iter_free'</pre>
-
-<p>Frees an iterator that has been allocated by <a href="gtktreemodel.html#gtk_tree_iter_copy">Gtk.TreeIter.copy</a>.</p>
-<p>This function is mainly used for language bindings.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>iter</code></em></i>
-					(
-						<a title="Gtk.TreeIter" href="gtktreemodel.html#GtkTreeIter">Gtk.TreeIter</a>
-						)
-				–
-	</div>
-			<p>a dynamically allocated tree iterator</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
 
 </div>
 
@@ -648,6 +648,24 @@ def Gtk.TreeIter.free (self):
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="GtkTreePath">
 	
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h2 data-hotdoc-id="GtkTreePath">
+	<span><code>Gtk.TreePath</code></span>
+</h2>
+
+
+
+
+
+
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -684,24 +702,6 @@ def Gtk.TreeIter.free (self):
 
 
         </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h2 data-hotdoc-id="GtkTreePath">
-	<span><code>Gtk.TreePath</code></span>
-</h2>
-
-
-
-
-
-
-
-
-
-        </div>
 
 </div>
 
@@ -711,6 +711,45 @@ def Gtk.TreeIter.free (self):
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_path_new">
 	
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_tree_path_new">
+	<span><code>Gtk.TreePath.new</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.TreePath.new ():
+    #python wrapper for 'gtk_tree_path_new'</pre>
+
+<p>Creates a new <a href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>-struct.
+This refers to a row.</p>
+
+
+
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.TreePath" href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>
+										)
+								–
+			</div>
+							<p>A newly created <a href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>-struct.</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -789,25 +828,52 @@ This refers to a row.</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_path_new_from_string">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_tree_path_new">
-	<span><code>Gtk.TreePath.new</code></span>
+<h4 data-hotdoc-id="gtk_tree_path_new_from_string">
+	<span><code>Gtk.TreePath.new_from_string</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.TreePath.new ():
-    #python wrapper for 'gtk_tree_path_new'</pre>
+def Gtk.TreePath.new_from_string (path):
+    #python wrapper for 'gtk_tree_path_new_from_string'</pre>
 
-<p>Creates a new <a href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>-struct.
-This refers to a row.</p>
+<p>Creates a new <a href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>-struct initialized to <em>path</em>.</p>
+<p><em>path</em> is expected to be a colon separated list of numbers.
+For example, the string “10:4:0” would create a path of depth
+3 pointing to the 11th child of the root node, the 5th
+child of that 11th child, and the 1st child of that 5th child.
+If an invalid path string is passed in, <a href="https://docs.python.org/3/library/constants.html#None">None</a> is returned.</p>
 
 
 
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>path</code></em></i>
+					(
+						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
+						)
+				–
+	</div>
+			<p>The string representation of a path</p>
+
+	</div>
+
+			</div>
 
 		<div class="return-values-container">
 		<div class="symbol-detail">
@@ -818,7 +884,7 @@ This refers to a row.</p>
 										)
 								–
 			</div>
-							<p>A newly created <a href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>-struct.</p>
+							<p>A newly-created <a href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>-struct, or <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
 
 					</div>
 	</div>
@@ -828,13 +894,6 @@ This refers to a row.</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_path_new_from_string">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -950,65 +1009,6 @@ If an invalid path string is passed in, <a href="https://developer.mozilla.org/e
 
 
         </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_tree_path_new_from_string">
-	<span><code>Gtk.TreePath.new_from_string</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.TreePath.new_from_string (path):
-    #python wrapper for 'gtk_tree_path_new_from_string'</pre>
-
-<p>Creates a new <a href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>-struct initialized to <em>path</em>.</p>
-<p><em>path</em> is expected to be a colon separated list of numbers.
-For example, the string “10:4:0” would create a path of depth
-3 pointing to the 11th child of the root node, the 5th
-child of that 11th child, and the 1st child of that 5th child.
-If an invalid path string is passed in, <a href="https://docs.python.org/3/library/constants.html#None">None</a> is returned.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>path</code></em></i>
-					(
-						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
-						)
-				–
-	</div>
-			<p>The string representation of a path</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Gtk.TreePath" href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>
-										)
-								–
-			</div>
-							<p>A newly-created <a href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>-struct, or <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
 
 </div>
 
@@ -1087,6 +1087,76 @@ gtk_tree_path_new_from_indices (<a title="gint" href="https://developer.gnome.or
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.12;" id="gtk_tree_path_new_from_indicesv">
 	
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_tree_path_new_from_indicesv">
+	<span><code>Gtk.TreePath.new_from_indicesv</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.TreePath.new_from_indicesv (indices, length):
+    #python wrapper for 'gtk_tree_path_new_from_indicesv'</pre>
+
+<p>Creates a new path with the given <em>indices</em> array of <em>length</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>indices</code></em></i>
+					(
+						[ <a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a> ]
+						)
+				–
+	</div>
+			<p>array of indices</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>length</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>length of <em>indices</em> array</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.TreePath" href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>
+										)
+								–
+			</div>
+							<p>A newly created <a href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>-struct</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.12
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -1227,53 +1297,32 @@ function Gtk.prototype.new_from_indicesv(indices: [ <a title="Number" href="http
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_path_new_first">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_tree_path_new_from_indicesv">
-	<span><code>Gtk.TreePath.new_from_indicesv</code></span>
+<h4 data-hotdoc-id="gtk_tree_path_new_first">
+	<span><code>Gtk.TreePath.new_first</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.TreePath.new_from_indicesv (indices, length):
-    #python wrapper for 'gtk_tree_path_new_from_indicesv'</pre>
+def Gtk.TreePath.new_first ():
+    #python wrapper for 'gtk_tree_path_new_first'</pre>
 
-<p>Creates a new path with the given <em>indices</em> array of <em>length</em>.</p>
+<p>Creates a new <a href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>-struct.</p>
+<p>The string representation of this path is “0”.</p>
 
 
 
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>indices</code></em></i>
-					(
-						[ <a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a> ]
-						)
-				–
-	</div>
-			<p>array of indices</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>length</code></em></i>
-					(
-						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
-						)
-				–
-	</div>
-			<p>length of <em>indices</em> array</p>
-
-	</div>
-
-			</div>
 
 		<div class="return-values-container">
 		<div class="symbol-detail">
@@ -1284,26 +1333,16 @@ def Gtk.TreePath.new_from_indicesv (indices, length):
 										)
 								–
 			</div>
-							<p>A newly created <a href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>-struct</p>
+							<p>A new <a href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>-struct</p>
 
 					</div>
 	</div>
 
 
 
-	<p>
-	<b>Since</b>			: 3.12
-		</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_path_new_first">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -1382,45 +1421,6 @@ function Gtk.prototype.new_first(): {
 
 
         </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_tree_path_new_first">
-	<span><code>Gtk.TreePath.new_first</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.TreePath.new_first ():
-    #python wrapper for 'gtk_tree_path_new_first'</pre>
-
-<p>Creates a new <a href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>-struct.</p>
-<p>The string representation of this path is “0”.</p>
-
-
-
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Gtk.TreePath" href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>
-										)
-								–
-			</div>
-							<p>A new <a href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>-struct</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
 
 </div>
 
@@ -1430,6 +1430,64 @@ def Gtk.TreePath.new_first ():
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_path_to_string">
 	
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_tree_path_to_string">
+	<span><code>Gtk.TreePath.to_string</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.TreePath.to_string (self):
+    #python wrapper for 'gtk_tree_path_to_string'</pre>
+
+<p>Generates a string representation of the path.</p>
+<p>This string is a “:” separated list of numbers.
+For example, “4:10:0:3” would be an acceptable
+return value for this string.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>path</code></em></i>
+					(
+						<a title="Gtk.TreePath" href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>
+						)
+				–
+	</div>
+			<p>A <a href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>-struct</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
+										)
+								–
+			</div>
+							<p>A newly-allocated string.
+Must be freed with <a href="https://developer.gnome.org/glib/unstable/glib-Memory-Allocation.html#g-free">GLib.free</a>.</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -1543,24 +1601,29 @@ Must be freed with <a href="https://developer.gnome.org/glib/unstable/glib-Memor
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_path_append_index">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_tree_path_to_string">
-	<span><code>Gtk.TreePath.to_string</code></span>
+<h4 data-hotdoc-id="gtk_tree_path_append_index">
+	<span><code>Gtk.TreePath.append_index</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.TreePath.to_string (self):
-    #python wrapper for 'gtk_tree_path_to_string'</pre>
+def Gtk.TreePath.append_index (self, index_):
+    #python wrapper for 'gtk_tree_path_append_index'</pre>
 
-<p>Generates a string representation of the path.</p>
-<p>This string is a “:” separated list of numbers.
-For example, “4:10:0:3” would be an acceptable
-return value for this string.</p>
+<p>Appends a new index to a path.</p>
+<p>As a result, the depth of the path is increased.</p>
 
 
 
@@ -1575,39 +1638,30 @@ return value for this string.</p>
 						)
 				–
 	</div>
-			<p>A <a href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>-struct</p>
+			<p>a <a href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>-struct</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>index_</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>the index</p>
 
 	</div>
 
 			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
-										)
-								–
-			</div>
-							<p>A newly-allocated string.
-Must be freed with <a href="https://developer.gnome.org/glib/unstable/glib-Memory-Allocation.html#g-free">GLib.free</a>.</p>
-
-					</div>
-	</div>
 
 
 
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_path_append_index">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -1713,21 +1767,28 @@ function Gtk.prototype.append_index(index_: <a title="Number" href="https://deve
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_path_prepend_index">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_tree_path_append_index">
-	<span><code>Gtk.TreePath.append_index</code></span>
+<h4 data-hotdoc-id="gtk_tree_path_prepend_index">
+	<span><code>Gtk.TreePath.prepend_index</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.TreePath.append_index (self, index_):
-    #python wrapper for 'gtk_tree_path_append_index'</pre>
+def Gtk.TreePath.prepend_index (self, index_):
+    #python wrapper for 'gtk_tree_path_prepend_index'</pre>
 
-<p>Appends a new index to a path.</p>
+<p>Prepends a new index to a path.</p>
 <p>As a result, the depth of the path is increased.</p>
 
 
@@ -1767,13 +1828,6 @@ def Gtk.TreePath.append_index (self, index_):
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_path_prepend_index">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -1879,22 +1933,28 @@ function Gtk.prototype.prepend_index(index_: <a title="Number" href="https://dev
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_path_get_depth">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_tree_path_prepend_index">
-	<span><code>Gtk.TreePath.prepend_index</code></span>
+<h4 data-hotdoc-id="gtk_tree_path_get_depth">
+	<span><code>Gtk.TreePath.get_depth</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.TreePath.prepend_index (self, index_):
-    #python wrapper for 'gtk_tree_path_prepend_index'</pre>
+def Gtk.TreePath.get_depth (self):
+    #python wrapper for 'gtk_tree_path_get_depth'</pre>
 
-<p>Prepends a new index to a path.</p>
-<p>As a result, the depth of the path is increased.</p>
+<p>Returns the current depth of <em>path</em>.</p>
 
 
 
@@ -1913,33 +1973,27 @@ def Gtk.TreePath.prepend_index (self, index_):
 
 	</div>
 
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>index_</code></em></i>
-					(
-						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
-						)
-				–
-	</div>
-			<p>the index</p>
-
-	</div>
-
 			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+										)
+								–
+			</div>
+							<p>The depth of <em>path</em></p>
+
+					</div>
+	</div>
 
 
 
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_path_get_depth">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -2045,60 +2099,6 @@ function Gtk.prototype.get_depth(): {
 
 
         </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_tree_path_get_depth">
-	<span><code>Gtk.TreePath.get_depth</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.TreePath.get_depth (self):
-    #python wrapper for 'gtk_tree_path_get_depth'</pre>
-
-<p>Returns the current depth of <em>path</em>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>path</code></em></i>
-					(
-						<a title="Gtk.TreePath" href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>-struct</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
-										)
-								–
-			</div>
-							<p>The depth of <em>path</em></p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
 
 </div>
 
@@ -2166,6 +2166,83 @@ This value should not be freed.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_tree_path_get_indices_with_depth">
 	
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_tree_path_get_indices_with_depth">
+	<span><code>Gtk.TreePath.get_indices_with_depth</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.TreePath.get_indices_with_depth (self):
+    #python wrapper for 'gtk_tree_path_get_indices_with_depth'</pre>
+
+<p>Returns the current indices of <em>path</em>.</p>
+<p>This is an array of integers, each representing a node in a tree.
+It also returns the number of elements in the array.
+The array should not be freed.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>path</code></em></i>
+					(
+						<a title="Gtk.TreePath" href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>-struct</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<p><b>Returns a tuple made of:</b></p>
+				
+<div class="symbol-detail">
+	<div>
+									(
+			[ <a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a> ]
+						)
+				–
+	</div>
+			<p>The current
+indices, or <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
+
+	</div>
+
+				
+<div class="symbol-detail">
+	<div>
+				<i><em><code>depth</code></em></i>
+									(
+			<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>The current
+indices, or <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -2326,24 +2403,28 @@ indices, or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Ref
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_path_free">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_tree_path_get_indices_with_depth">
-	<span><code>Gtk.TreePath.get_indices_with_depth</code></span>
+<h4 data-hotdoc-id="gtk_tree_path_free">
+	<span><code>Gtk.TreePath.free</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.TreePath.get_indices_with_depth (self):
-    #python wrapper for 'gtk_tree_path_get_indices_with_depth'</pre>
+def Gtk.TreePath.free (self):
+    #python wrapper for 'gtk_tree_path_free'</pre>
 
-<p>Returns the current indices of <em>path</em>.</p>
-<p>This is an array of integers, each representing a node in a tree.
-It also returns the number of elements in the array.
-The array should not be freed.</p>
+<p>Frees <em>path</em>. If <em>path</em> is <a href="https://docs.python.org/3/library/constants.html#None">None</a>, it simply returns.</p>
 
 
 
@@ -2364,52 +2445,11 @@ The array should not be freed.</p>
 
 			</div>
 
-		<div class="return-values-container">
-		<p><b>Returns a tuple made of:</b></p>
-				
-<div class="symbol-detail">
-	<div>
-									(
-			[ <a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a> ]
-						)
-				–
-	</div>
-			<p>The current
-indices, or <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
-
-	</div>
-
-				
-<div class="symbol-detail">
-	<div>
-				<i><em><code>depth</code></em></i>
-									(
-			<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
-						)
-				–
-	</div>
-			<p>The current
-indices, or <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
-
-	</div>
-
-			</div>
 
 
-
-	<p>
-	<b>Since</b>			: 3.0
-		</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_path_free">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -2494,21 +2534,28 @@ function Gtk.prototype.free(): {
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_path_copy">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_tree_path_free">
-	<span><code>Gtk.TreePath.free</code></span>
+<h4 data-hotdoc-id="gtk_tree_path_copy">
+	<span><code>Gtk.TreePath.copy</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.TreePath.free (self):
-    #python wrapper for 'gtk_tree_path_free'</pre>
+def Gtk.TreePath.copy (self):
+    #python wrapper for 'gtk_tree_path_copy'</pre>
 
-<p>Frees <em>path</em>. If <em>path</em> is <a href="https://docs.python.org/3/library/constants.html#None">None</a>, it simply returns.</p>
+<p>Creates a new <a href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>-struct as a copy of <em>path</em>.</p>
 
 
 
@@ -2529,18 +2576,25 @@ def Gtk.TreePath.free (self):
 
 			</div>
 
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.TreePath" href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>
+										)
+								–
+			</div>
+							<p>a new <a href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>-struct</p>
+
+					</div>
+	</div>
+
 
 
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_path_copy">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -2646,21 +2700,31 @@ function Gtk.prototype.copy(): {
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_path_compare">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_tree_path_copy">
-	<span><code>Gtk.TreePath.copy</code></span>
+<h4 data-hotdoc-id="gtk_tree_path_compare">
+	<span><code>Gtk.TreePath.compare</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.TreePath.copy (self):
-    #python wrapper for 'gtk_tree_path_copy'</pre>
+def Gtk.TreePath.compare (self, b):
+    #python wrapper for 'gtk_tree_path_compare'</pre>
 
-<p>Creates a new <a href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>-struct as a copy of <em>path</em>.</p>
+<p>Compares two paths.</p>
+<p>If <em>a</em> appears before <em>b</em> in a tree, then -1 is returned.
+If <em>b</em> appears before <em>a</em>, then 1 is returned.
+If the two nodes are equal, then 0 is returned.</p>
 
 
 
@@ -2669,13 +2733,26 @@ def Gtk.TreePath.copy (self):
 					
 <div class="symbol-detail">
 	<div>
-		<i><em><code>path</code></em></i>
+		<i><em><code>a</code></em></i>
 					(
 						<a title="Gtk.TreePath" href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>
 						)
 				–
 	</div>
 			<p>a <a href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>-struct</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>b</code></em></i>
+					(
+						<a title="Gtk.TreePath" href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>-struct to compare with</p>
 
 	</div>
 
@@ -2686,11 +2763,11 @@ def Gtk.TreePath.copy (self):
 			<div>
 				<b>Returns</b>
 									(
-					<a title="Gtk.TreePath" href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>
+					<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
 										)
 								–
 			</div>
-							<p>a new <a href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>-struct</p>
+							<p>the relative positions of <em>a</em> and <em>b</em></p>
 
 					</div>
 	</div>
@@ -2700,13 +2777,6 @@ def Gtk.TreePath.copy (self):
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_path_compare">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -2842,24 +2912,28 @@ If the two nodes are equal, then 0 is returned.</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_path_next">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_tree_path_compare">
-	<span><code>Gtk.TreePath.compare</code></span>
+<h4 data-hotdoc-id="gtk_tree_path_next">
+	<span><code>Gtk.TreePath.next</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.TreePath.compare (self, b):
-    #python wrapper for 'gtk_tree_path_compare'</pre>
+def Gtk.TreePath.next (self):
+    #python wrapper for 'gtk_tree_path_next'</pre>
 
-<p>Compares two paths.</p>
-<p>If <em>a</em> appears before <em>b</em> in a tree, then -1 is returned.
-If <em>b</em> appears before <em>a</em>, then 1 is returned.
-If the two nodes are equal, then 0 is returned.</p>
+<p>Moves the <em>path</em> to point to the next node at the current depth.</p>
 
 
 
@@ -2868,7 +2942,7 @@ If the two nodes are equal, then 0 is returned.</p>
 					
 <div class="symbol-detail">
 	<div>
-		<i><em><code>a</code></em></i>
+		<i><em><code>path</code></em></i>
 					(
 						<a title="Gtk.TreePath" href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>
 						)
@@ -2878,47 +2952,13 @@ If the two nodes are equal, then 0 is returned.</p>
 
 	</div>
 
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>b</code></em></i>
-					(
-						<a title="Gtk.TreePath" href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>-struct to compare with</p>
-
-	</div>
-
 			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
-										)
-								–
-			</div>
-							<p>the relative positions of <em>a</em> and <em>b</em></p>
-
-					</div>
-	</div>
 
 
 
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_path_next">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -2998,21 +3038,29 @@ function Gtk.prototype.next(): {
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_path_prev">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_tree_path_next">
-	<span><code>Gtk.TreePath.next</code></span>
+<h4 data-hotdoc-id="gtk_tree_path_prev">
+	<span><code>Gtk.TreePath.prev</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.TreePath.next (self):
-    #python wrapper for 'gtk_tree_path_next'</pre>
+def Gtk.TreePath.prev (self):
+    #python wrapper for 'gtk_tree_path_prev'</pre>
 
-<p>Moves the <em>path</em> to point to the next node at the current depth.</p>
+<p>Moves the <em>path</em> to point to the previous node at the
+current depth, if it exists.</p>
 
 
 
@@ -3033,18 +3081,26 @@ def Gtk.TreePath.next (self):
 
 			</div>
 
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+										)
+								–
+			</div>
+							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if <em>path</em> has a previous node, and
+the move was made</p>
+
+					</div>
+	</div>
+
 
 
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_path_prev">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -3154,22 +3210,28 @@ the move was made</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_path_up">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_tree_path_prev">
-	<span><code>Gtk.TreePath.prev</code></span>
+<h4 data-hotdoc-id="gtk_tree_path_up">
+	<span><code>Gtk.TreePath.up</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.TreePath.prev (self):
-    #python wrapper for 'gtk_tree_path_prev'</pre>
+def Gtk.TreePath.up (self):
+    #python wrapper for 'gtk_tree_path_up'</pre>
 
-<p>Moves the <em>path</em> to point to the previous node at the
-current depth, if it exists.</p>
+<p>Moves the <em>path</em> to point to its parent node, if it has a parent.</p>
 
 
 
@@ -3199,8 +3261,7 @@ current depth, if it exists.</p>
 										)
 								–
 			</div>
-							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if <em>path</em> has a previous node, and
-the move was made</p>
+							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if <em>path</em> has a parent, and the move was made</p>
 
 					</div>
 	</div>
@@ -3210,13 +3271,6 @@ the move was made</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_path_up">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -3322,21 +3376,28 @@ function Gtk.prototype.up(): {
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_path_down">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_tree_path_up">
-	<span><code>Gtk.TreePath.up</code></span>
+<h4 data-hotdoc-id="gtk_tree_path_down">
+	<span><code>Gtk.TreePath.down</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.TreePath.up (self):
-    #python wrapper for 'gtk_tree_path_up'</pre>
+def Gtk.TreePath.down (self):
+    #python wrapper for 'gtk_tree_path_down'</pre>
 
-<p>Moves the <em>path</em> to point to its parent node, if it has a parent.</p>
+<p>Moves <em>path</em> to point to the first child of the current path.</p>
 
 
 
@@ -3357,32 +3418,11 @@ def Gtk.TreePath.up (self):
 
 			</div>
 
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
-										)
-								–
-			</div>
-							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if <em>path</em> has a parent, and the move was made</p>
-
-					</div>
-	</div>
-
 
 
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_path_down">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -3462,21 +3502,28 @@ function Gtk.prototype.down(): {
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_path_is_ancestor">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_tree_path_down">
-	<span><code>Gtk.TreePath.down</code></span>
+<h4 data-hotdoc-id="gtk_tree_path_is_ancestor">
+	<span><code>Gtk.TreePath.is_ancestor</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.TreePath.down (self):
-    #python wrapper for 'gtk_tree_path_down'</pre>
+def Gtk.TreePath.is_ancestor (self, descendant):
+    #python wrapper for 'gtk_tree_path_is_ancestor'</pre>
 
-<p>Moves <em>path</em> to point to the first child of the current path.</p>
+<p>Returns <a href="https://docs.python.org/3/library/constants.html#True">True</a> if <em>descendant</em> is a descendant of <em>path</em>.</p>
 
 
 
@@ -3495,20 +3542,40 @@ def Gtk.TreePath.down (self):
 
 	</div>
 
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>descendant</code></em></i>
+					(
+						<a title="Gtk.TreePath" href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>
+						)
+				–
+	</div>
+			<p>another <a href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>-struct</p>
+
+	</div>
+
 			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+										)
+								–
+			</div>
+							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if <em>descendant</em> is contained inside <em>path</em></p>
+
+					</div>
+	</div>
 
 
 
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_path_is_ancestor">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -3638,21 +3705,28 @@ function Gtk.prototype.is_ancestor(descendant: <a title="Gtk.TreePath" href="gtk
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_path_is_descendant">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_tree_path_is_ancestor">
-	<span><code>Gtk.TreePath.is_ancestor</code></span>
+<h4 data-hotdoc-id="gtk_tree_path_is_descendant">
+	<span><code>Gtk.TreePath.is_descendant</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.TreePath.is_ancestor (self, descendant):
-    #python wrapper for 'gtk_tree_path_is_ancestor'</pre>
+def Gtk.TreePath.is_descendant (self, ancestor):
+    #python wrapper for 'gtk_tree_path_is_descendant'</pre>
 
-<p>Returns <a href="https://docs.python.org/3/library/constants.html#True">True</a> if <em>descendant</em> is a descendant of <em>path</em>.</p>
+<p>Returns <a href="https://docs.python.org/3/library/constants.html#True">True</a> if <em>path</em> is a descendant of <em>ancestor</em>.</p>
 
 
 
@@ -3674,7 +3748,7 @@ def Gtk.TreePath.is_ancestor (self, descendant):
 					
 <div class="symbol-detail">
 	<div>
-		<i><em><code>descendant</code></em></i>
+		<i><em><code>ancestor</code></em></i>
 					(
 						<a title="Gtk.TreePath" href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>
 						)
@@ -3695,7 +3769,7 @@ def Gtk.TreePath.is_ancestor (self, descendant):
 										)
 								–
 			</div>
-							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if <em>descendant</em> is contained inside <em>path</em></p>
+							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if <em>ancestor</em> contains <em>path</em> somewhere below it</p>
 
 					</div>
 	</div>
@@ -3705,13 +3779,6 @@ def Gtk.TreePath.is_ancestor (self, descendant):
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_path_is_descendant">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -3841,73 +3908,6 @@ function Gtk.prototype.is_descendant(ancestor: <a title="Gtk.TreePath" href="gtk
 
 
         </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_tree_path_is_descendant">
-	<span><code>Gtk.TreePath.is_descendant</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.TreePath.is_descendant (self, ancestor):
-    #python wrapper for 'gtk_tree_path_is_descendant'</pre>
-
-<p>Returns <a href="https://docs.python.org/3/library/constants.html#True">True</a> if <em>path</em> is a descendant of <em>ancestor</em>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>path</code></em></i>
-					(
-						<a title="Gtk.TreePath" href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>-struct</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>ancestor</code></em></i>
-					(
-						<a title="Gtk.TreePath" href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>
-						)
-				–
-	</div>
-			<p>another <a href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>-struct</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
-										)
-								–
-			</div>
-							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if <em>ancestor</em> contains <em>path</em> somewhere below it</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
 
 </div>
 
@@ -3917,6 +3917,30 @@ def Gtk.TreePath.is_descendant (self, ancestor):
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="GtkTreeRowReference">
 	
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h2 data-hotdoc-id="GtkTreeRowReference">
+	<span><code>Gtk.TreeRowReference</code></span>
+</h2>
+
+
+
+
+<div class="class_details">
+	<p>A GtkTreeRowReference tracks model changes so that it always refers to the
+same row (a <a href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a> refers to a position, not a fixed row). Create a
+new GtkTreeRowReference with <a href="gtktreemodel.html#gtk_tree_row_reference_new">Gtk.TreeRowReference.new</a>.</p>
+
+</div>
+
+
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -3965,30 +3989,6 @@ new GtkTreeRowReference with <a href="gtktreemodel.html#gtk_tree_row_reference_n
 
 
         </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h2 data-hotdoc-id="GtkTreeRowReference">
-	<span><code>Gtk.TreeRowReference</code></span>
-</h2>
-
-
-
-
-<div class="class_details">
-	<p>A GtkTreeRowReference tracks model changes so that it always refers to the
-same row (a <a href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a> refers to a position, not a fixed row). Create a
-new GtkTreeRowReference with <a href="gtktreemodel.html#gtk_tree_row_reference_new">Gtk.TreeRowReference.new</a>.</p>
-
-</div>
-
-
-
-
-
-        </div>
 
 </div>
 
@@ -3998,6 +3998,77 @@ new GtkTreeRowReference with <a href="gtktreemodel.html#gtk_tree_row_reference_n
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_row_reference_new">
 	
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_tree_row_reference_new">
+	<span><code>Gtk.TreeRowReference.new</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.TreeRowReference.new (model, path):
+    #python wrapper for 'gtk_tree_row_reference_new'</pre>
+
+<p>Creates a row reference based on <em>path</em>.</p>
+<p>This reference will keep pointing to the node pointed to
+by <em>path</em>, so long as it exists. Any changes that occur on <em>model</em> are
+propagated, and the path is updated appropriately. If
+<em>path</em> isn’t a valid path in <em>model</em>, then <a href="https://docs.python.org/3/library/constants.html#None">None</a> is returned.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>model</code></em></i>
+					(
+						<a title="Gtk.TreeModel" href="gtktreemodel.html#GtkTreeModel">Gtk.TreeModel</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtktreemodel.html#GtkTreeModel">Gtk.TreeModel</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>path</code></em></i>
+					(
+						<a title="Gtk.TreePath" href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>
+						)
+				–
+	</div>
+			<p>a valid <a href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>-struct to monitor</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.TreeRowReference" href="gtktreemodel.html#GtkTreeRowReference">Gtk.TreeRowReference</a>
+										)
+								–
+			</div>
+							<p>a newly allocated <a href="gtktreemodel.html#GtkTreeRowReference">Gtk.TreeRowReference</a>, or <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -4135,30 +4206,65 @@ propagated, and the path is updated appropriately. If
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_row_reference_new_proxy">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_tree_row_reference_new">
-	<span><code>Gtk.TreeRowReference.new</code></span>
+<h4 data-hotdoc-id="gtk_tree_row_reference_new_proxy">
+	<span><code>Gtk.TreeRowReference.new_proxy</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.TreeRowReference.new (model, path):
-    #python wrapper for 'gtk_tree_row_reference_new'</pre>
+def Gtk.TreeRowReference.new_proxy (proxy, model, path):
+    #python wrapper for 'gtk_tree_row_reference_new_proxy'</pre>
 
+<p>You do not need to use this function.</p>
 <p>Creates a row reference based on <em>path</em>.</p>
 <p>This reference will keep pointing to the node pointed to
-by <em>path</em>, so long as it exists. Any changes that occur on <em>model</em> are
-propagated, and the path is updated appropriately. If
-<em>path</em> isn’t a valid path in <em>model</em>, then <a href="https://docs.python.org/3/library/constants.html#None">None</a> is returned.</p>
+by <em>path</em>, so long as it exists. If <em>path</em> isn’t a valid
+path in <em>model</em>, then <a href="https://docs.python.org/3/library/constants.html#None">None</a> is returned. However, unlike
+references created with <a href="gtktreemodel.html#gtk_tree_row_reference_new">Gtk.TreeRowReference.new</a>, it
+does not listen to the model for changes. The creator of
+the row reference must do this explicitly using
+<a href="gtktreemodel.html#gtk_tree_row_reference_inserted">Gtk.TreeRowReference.inserted</a>, <a href="gtktreemodel.html#gtk_tree_row_reference_deleted">Gtk.TreeRowReference.deleted</a>,
+<a href="gtktreemodel.html#gtk_tree_row_reference_reordered">gtk_tree_row_reference_reordered (not introspectable)</a>.</p>
+<p>These functions must be called exactly once per proxy when the
+corresponding signal on the model is emitted. This single call
+updates all row references for that proxy. Since built-in GTK+
+objects like <a href="gtktreeview.html#GtkTreeView">Gtk.TreeView</a> already use this mechanism internally,
+using them as the proxy object will produce unpredictable results.
+Further more, passing the same object as <em>model</em> and <em>proxy</em>
+doesn’t work for reasons of internal implementation.</p>
+<p>This type of row reference is primarily meant by structures that
+need to carefully monitor exactly when a row reference updates
+itself, and is not generally needed by most applications.</p>
 
 
 
 	<div class="parameters-container">
 		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>proxy</code></em></i>
+					(
+						<a title="GObject.Object" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct">GObject.Object</a>
+						)
+				–
+	</div>
+			<p>a proxy <a href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct">GObject.Object</a></p>
+
+	</div>
+
 					
 <div class="symbol-detail">
 	<div>
@@ -4206,13 +4312,6 @@ propagated, and the path is updated appropriately. If
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_row_reference_new_proxy">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -4404,40 +4503,30 @@ itself, and is not generally needed by most applications.</p>
 
 
         </div>
+
+</div>
+
+
+            <h3 class="symbol_section">Methods</h3>
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.8;" id="gtk_tree_row_reference_get_model">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_tree_row_reference_new_proxy">
-	<span><code>Gtk.TreeRowReference.new_proxy</code></span>
+<h4 data-hotdoc-id="gtk_tree_row_reference_get_model">
+	<span><code>Gtk.TreeRowReference.get_model</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.TreeRowReference.new_proxy (proxy, model, path):
-    #python wrapper for 'gtk_tree_row_reference_new_proxy'</pre>
+def Gtk.TreeRowReference.get_model (self):
+    #python wrapper for 'gtk_tree_row_reference_get_model'</pre>
 
-<p>You do not need to use this function.</p>
-<p>Creates a row reference based on <em>path</em>.</p>
-<p>This reference will keep pointing to the node pointed to
-by <em>path</em>, so long as it exists. If <em>path</em> isn’t a valid
-path in <em>model</em>, then <a href="https://docs.python.org/3/library/constants.html#None">None</a> is returned. However, unlike
-references created with <a href="gtktreemodel.html#gtk_tree_row_reference_new">Gtk.TreeRowReference.new</a>, it
-does not listen to the model for changes. The creator of
-the row reference must do this explicitly using
-<a href="gtktreemodel.html#gtk_tree_row_reference_inserted">Gtk.TreeRowReference.inserted</a>, <a href="gtktreemodel.html#gtk_tree_row_reference_deleted">Gtk.TreeRowReference.deleted</a>,
-<a href="gtktreemodel.html#gtk_tree_row_reference_reordered">gtk_tree_row_reference_reordered (not introspectable)</a>.</p>
-<p>These functions must be called exactly once per proxy when the
-corresponding signal on the model is emitted. This single call
-updates all row references for that proxy. Since built-in GTK+
-objects like <a href="gtktreeview.html#GtkTreeView">Gtk.TreeView</a> already use this mechanism internally,
-using them as the proxy object will produce unpredictable results.
-Further more, passing the same object as <em>model</em> and <em>proxy</em>
-doesn’t work for reasons of internal implementation.</p>
-<p>This type of row reference is primarily meant by structures that
-need to carefully monitor exactly when a row reference updates
-itself, and is not generally needed by most applications.</p>
+<p>Returns the model that the row reference is monitoring.</p>
 
 
 
@@ -4446,39 +4535,13 @@ itself, and is not generally needed by most applications.</p>
 					
 <div class="symbol-detail">
 	<div>
-		<i><em><code>proxy</code></em></i>
+		<i><em><code>reference</code></em></i>
 					(
-						<a title="GObject.Object" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct">GObject.Object</a>
+						<a title="Gtk.TreeRowReference" href="gtktreemodel.html#GtkTreeRowReference">Gtk.TreeRowReference</a>
 						)
 				–
 	</div>
-			<p>a proxy <a href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct">GObject.Object</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>model</code></em></i>
-					(
-						<a title="Gtk.TreeModel" href="gtktreemodel.html#GtkTreeModel">Gtk.TreeModel</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtktreemodel.html#GtkTreeModel">Gtk.TreeModel</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>path</code></em></i>
-					(
-						<a title="Gtk.TreePath" href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>
-						)
-				–
-	</div>
-			<p>a valid <a href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>-struct to monitor</p>
+			<p>a <a href="gtktreemodel.html#GtkTreeRowReference">Gtk.TreeRowReference</a></p>
 
 	</div>
 
@@ -4489,29 +4552,23 @@ itself, and is not generally needed by most applications.</p>
 			<div>
 				<b>Returns</b>
 									(
-					<a title="Gtk.TreeRowReference" href="gtktreemodel.html#GtkTreeRowReference">Gtk.TreeRowReference</a>
+					<a title="Gtk.TreeModel" href="gtktreemodel.html#GtkTreeModel">Gtk.TreeModel</a>
 										)
 								–
 			</div>
-							<p>a newly allocated <a href="gtktreemodel.html#GtkTreeRowReference">Gtk.TreeRowReference</a>, or <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
+							<p>the model</p>
 
 					</div>
 	</div>
 
 
 
+	<p>
+	<b>Since</b>			: 2.8
+		</p>
 
 
         </div>
-
-</div>
-
-
-            <h3 class="symbol_section">Methods</h3>
-                    
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.8;" id="gtk_tree_row_reference_get_model">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -4629,21 +4686,29 @@ function Gtk.prototype.get_model(): {
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_row_reference_get_path">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_tree_row_reference_get_model">
-	<span><code>Gtk.TreeRowReference.get_model</code></span>
+<h4 data-hotdoc-id="gtk_tree_row_reference_get_path">
+	<span><code>Gtk.TreeRowReference.get_path</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.TreeRowReference.get_model (self):
-    #python wrapper for 'gtk_tree_row_reference_get_model'</pre>
+def Gtk.TreeRowReference.get_path (self):
+    #python wrapper for 'gtk_tree_row_reference_get_path'</pre>
 
-<p>Returns the model that the row reference is monitoring.</p>
+<p>Returns a path that the row reference currently points to,
+or <a href="https://docs.python.org/3/library/constants.html#None">None</a> if the path pointed to is no longer valid.</p>
 
 
 
@@ -4669,30 +4734,20 @@ def Gtk.TreeRowReference.get_model (self):
 			<div>
 				<b>Returns</b>
 									(
-					<a title="Gtk.TreeModel" href="gtktreemodel.html#GtkTreeModel">Gtk.TreeModel</a>
+					<a title="Gtk.TreePath" href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>
 										)
 								–
 			</div>
-							<p>the model</p>
+							<p>a current path, or <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
 
 					</div>
 	</div>
 
 
 
-	<p>
-	<b>Since</b>			: 2.8
-		</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_row_reference_get_path">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -4807,22 +4862,29 @@ or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Gl
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_row_reference_valid">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_tree_row_reference_get_path">
-	<span><code>Gtk.TreeRowReference.get_path</code></span>
+<h4 data-hotdoc-id="gtk_tree_row_reference_valid">
+	<span><code>Gtk.TreeRowReference.valid</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.TreeRowReference.get_path (self):
-    #python wrapper for 'gtk_tree_row_reference_get_path'</pre>
+def Gtk.TreeRowReference.valid (self):
+    #python wrapper for 'gtk_tree_row_reference_valid'</pre>
 
-<p>Returns a path that the row reference currently points to,
-or <a href="https://docs.python.org/3/library/constants.html#None">None</a> if the path pointed to is no longer valid.</p>
+<p>Returns <a href="https://docs.python.org/3/library/constants.html#True">True</a> if the <em>reference</em> is non-%NULL and refers to
+a current valid path.</p>
 
 
 
@@ -4837,7 +4899,7 @@ or <a href="https://docs.python.org/3/library/constants.html#None">None</a> if t
 						)
 				–
 	</div>
-			<p>a <a href="gtktreemodel.html#GtkTreeRowReference">Gtk.TreeRowReference</a></p>
+			<p>a <a href="gtktreemodel.html#GtkTreeRowReference">Gtk.TreeRowReference</a>, or <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
 
 	</div>
 
@@ -4848,11 +4910,11 @@ or <a href="https://docs.python.org/3/library/constants.html#None">None</a> if t
 			<div>
 				<b>Returns</b>
 									(
-					<a title="Gtk.TreePath" href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>
+					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
 										)
 								–
 			</div>
-							<p>a current path, or <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
+							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if <em>reference</em> points to a valid path</p>
 
 					</div>
 	</div>
@@ -4862,13 +4924,6 @@ or <a href="https://docs.python.org/3/library/constants.html#None">None</a> if t
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_row_reference_valid">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -4981,22 +5036,28 @@ a current valid path.</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_row_reference_free">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_tree_row_reference_valid">
-	<span><code>Gtk.TreeRowReference.valid</code></span>
+<h4 data-hotdoc-id="gtk_tree_row_reference_free">
+	<span><code>Gtk.TreeRowReference.free</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.TreeRowReference.valid (self):
-    #python wrapper for 'gtk_tree_row_reference_valid'</pre>
+def Gtk.TreeRowReference.free (self):
+    #python wrapper for 'gtk_tree_row_reference_free'</pre>
 
-<p>Returns <a href="https://docs.python.org/3/library/constants.html#True">True</a> if the <em>reference</em> is non-%NULL and refers to
-a current valid path.</p>
+<p>Free’s <em>reference</em>. <em>reference</em> may be <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
 
 
 
@@ -5017,32 +5078,11 @@ a current valid path.</p>
 
 			</div>
 
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
-										)
-								–
-			</div>
-							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if <em>reference</em> points to a valid path</p>
-
-					</div>
-	</div>
-
 
 
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_row_reference_free">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -5127,21 +5167,28 @@ function Gtk.prototype.free(): {
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.2;" id="gtk_tree_row_reference_copy">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_tree_row_reference_free">
-	<span><code>Gtk.TreeRowReference.free</code></span>
+<h4 data-hotdoc-id="gtk_tree_row_reference_copy">
+	<span><code>Gtk.TreeRowReference.copy</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.TreeRowReference.free (self):
-    #python wrapper for 'gtk_tree_row_reference_free'</pre>
+def Gtk.TreeRowReference.copy (self):
+    #python wrapper for 'gtk_tree_row_reference_copy'</pre>
 
-<p>Free’s <em>reference</em>. <em>reference</em> may be <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
+<p>Copies a <a href="gtktreemodel.html#GtkTreeRowReference">Gtk.TreeRowReference</a>.</p>
 
 
 
@@ -5156,24 +5203,34 @@ def Gtk.TreeRowReference.free (self):
 						)
 				–
 	</div>
-			<p>a <a href="gtktreemodel.html#GtkTreeRowReference">Gtk.TreeRowReference</a>, or <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
+			<p>a <a href="gtktreemodel.html#GtkTreeRowReference">Gtk.TreeRowReference</a></p>
 
 	</div>
 
 			</div>
 
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.TreeRowReference" href="gtktreemodel.html#GtkTreeRowReference">Gtk.TreeRowReference</a>
+										)
+								–
+			</div>
+							<p>a copy of <em>reference</em></p>
+
+					</div>
+	</div>
 
 
+
+	<p>
+	<b>Since</b>			: 2.2
+		</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.2;" id="gtk_tree_row_reference_copy">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -5285,63 +5342,6 @@ function Gtk.prototype.copy(): {
 
 
         </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_tree_row_reference_copy">
-	<span><code>Gtk.TreeRowReference.copy</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.TreeRowReference.copy (self):
-    #python wrapper for 'gtk_tree_row_reference_copy'</pre>
-
-<p>Copies a <a href="gtktreemodel.html#GtkTreeRowReference">Gtk.TreeRowReference</a>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>reference</code></em></i>
-					(
-						<a title="Gtk.TreeRowReference" href="gtktreemodel.html#GtkTreeRowReference">Gtk.TreeRowReference</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtktreemodel.html#GtkTreeRowReference">Gtk.TreeRowReference</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Gtk.TreeRowReference" href="gtktreemodel.html#GtkTreeRowReference">Gtk.TreeRowReference</a>
-										)
-								–
-			</div>
-							<p>a copy of <em>reference</em></p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.2
-		</p>
-
-
-        </div>
 
 </div>
 
@@ -5353,6 +5353,63 @@ def Gtk.TreeRowReference.copy (self):
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_model_get_flags">
 	
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_tree_model_get_flags">
+	<span><code>Gtk.TreeModel.get_flags</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.TreeModel.get_flags (self):
+    #python wrapper for 'gtk_tree_model_get_flags'</pre>
+
+<p>Returns a set of flags supported by this interface.</p>
+<p>The flags are a bitwise combination of <a href="gtktreemodel.html#GtkTreeModelFlags">Gtk.TreeModelFlags</a>.
+The flags supported should not change during the lifetime
+of the <em>tree_model</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>tree_model</code></em></i>
+					(
+						<a title="Gtk.TreeModel" href="gtktreemodel.html#GtkTreeModel">Gtk.TreeModel</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtktreemodel.html#GtkTreeModel">Gtk.TreeModel</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.TreeModelFlags" href="gtktreemodel.html#GtkTreeModelFlags">Gtk.TreeModelFlags</a>
+										)
+								–
+			</div>
+							<p>the flags supported by this interface</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -5464,24 +5521,28 @@ of the <em>tree_model</em>.</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_model_get_n_columns">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_tree_model_get_flags">
-	<span><code>Gtk.TreeModel.get_flags</code></span>
+<h4 data-hotdoc-id="gtk_tree_model_get_n_columns">
+	<span><code>Gtk.TreeModel.get_n_columns</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.TreeModel.get_flags (self):
-    #python wrapper for 'gtk_tree_model_get_flags'</pre>
+def Gtk.TreeModel.get_n_columns (self):
+    #python wrapper for 'gtk_tree_model_get_n_columns'</pre>
 
-<p>Returns a set of flags supported by this interface.</p>
-<p>The flags are a bitwise combination of <a href="gtktreemodel.html#GtkTreeModelFlags">Gtk.TreeModelFlags</a>.
-The flags supported should not change during the lifetime
-of the <em>tree_model</em>.</p>
+<p>Returns the number of columns supported by <em>tree_model</em>.</p>
 
 
 
@@ -5507,11 +5568,11 @@ of the <em>tree_model</em>.</p>
 			<div>
 				<b>Returns</b>
 									(
-					<a title="Gtk.TreeModelFlags" href="gtktreemodel.html#GtkTreeModelFlags">Gtk.TreeModelFlags</a>
+					<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
 										)
 								–
 			</div>
-							<p>the flags supported by this interface</p>
+							<p>the number of columns</p>
 
 					</div>
 	</div>
@@ -5521,13 +5582,6 @@ of the <em>tree_model</em>.</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_model_get_n_columns">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -5633,21 +5687,28 @@ function Gtk.prototype.get_n_columns(): {
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_model_get_column_type">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_tree_model_get_n_columns">
-	<span><code>Gtk.TreeModel.get_n_columns</code></span>
+<h4 data-hotdoc-id="gtk_tree_model_get_column_type">
+	<span><code>Gtk.TreeModel.get_column_type</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.TreeModel.get_n_columns (self):
-    #python wrapper for 'gtk_tree_model_get_n_columns'</pre>
+def Gtk.TreeModel.get_column_type (self, index_):
+    #python wrapper for 'gtk_tree_model_get_column_type'</pre>
 
-<p>Returns the number of columns supported by <em>tree_model</em>.</p>
+<p>Returns the type of the column.</p>
 
 
 
@@ -5666,6 +5727,19 @@ def Gtk.TreeModel.get_n_columns (self):
 
 	</div>
 
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>index_</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>the column index</p>
+
+	</div>
+
 			</div>
 
 		<div class="return-values-container">
@@ -5673,11 +5747,11 @@ def Gtk.TreeModel.get_n_columns (self):
 			<div>
 				<b>Returns</b>
 									(
-					<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+					<a title="GObject.Type" href="https://developer.gnome.org/gobject/stable/gobject-Type-Information.html#GType">GObject.Type</a>
 										)
 								–
 			</div>
-							<p>the number of columns</p>
+							<p>the type of the column</p>
 
 					</div>
 	</div>
@@ -5687,13 +5761,6 @@ def Gtk.TreeModel.get_n_columns (self):
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_model_get_column_type">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -5823,21 +5890,29 @@ function Gtk.prototype.get_column_type(index_: <a title="Number" href="https://d
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_model_get_iter">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_tree_model_get_column_type">
-	<span><code>Gtk.TreeModel.get_column_type</code></span>
+<h4 data-hotdoc-id="gtk_tree_model_get_iter">
+	<span><code>Gtk.TreeModel.get_iter</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.TreeModel.get_column_type (self, index_):
-    #python wrapper for 'gtk_tree_model_get_column_type'</pre>
+def Gtk.TreeModel.get_iter (self, path):
+    #python wrapper for 'gtk_tree_model_get_iter'</pre>
 
-<p>Returns the type of the column.</p>
+<p>Sets <em>iter</em> to a valid iterator pointing to <em>path</em>.  If <em>path</em> does
+not exist, <em>iter</em> is set to an invalid iterator and <a href="https://docs.python.org/3/library/constants.html#False">False</a> is returned.</p>
 
 
 
@@ -5859,44 +5934,52 @@ def Gtk.TreeModel.get_column_type (self, index_):
 					
 <div class="symbol-detail">
 	<div>
-		<i><em><code>index_</code></em></i>
+		<i><em><code>path</code></em></i>
 					(
-						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						<a title="Gtk.TreePath" href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>
 						)
 				–
 	</div>
-			<p>the column index</p>
+			<p>the <a href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>-struct</p>
 
 	</div>
 
 			</div>
 
 		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
+		<p><b>Returns a tuple made of:</b></p>
+				
+<div class="symbol-detail">
+	<div>
 									(
-					<a title="GObject.Type" href="https://developer.gnome.org/gobject/stable/gobject-Type-Information.html#GType">GObject.Type</a>
-										)
-								–
-			</div>
-							<p>the type of the column</p>
-
-					</div>
+			<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+						)
+				–
 	</div>
+			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a>, if <em>iter</em> was set</p>
+
+	</div>
+
+				
+<div class="symbol-detail">
+	<div>
+				<i><em><code>iter</code></em></i>
+									(
+			<a title="Gtk.TreeIter" href="gtktreemodel.html#GtkTreeIter">Gtk.TreeIter</a>
+						)
+				–
+	</div>
+			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a>, if <em>iter</em> was set</p>
+
+	</div>
+
+			</div>
 
 
 
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_model_get_iter">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -6059,22 +6142,29 @@ not exist, <em>iter</em> is set to an invalid iterator and <a href="https://deve
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_model_get_iter_from_string">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_tree_model_get_iter">
-	<span><code>Gtk.TreeModel.get_iter</code></span>
+<h4 data-hotdoc-id="gtk_tree_model_get_iter_from_string">
+	<span><code>Gtk.TreeModel.get_iter_from_string</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.TreeModel.get_iter (self, path):
-    #python wrapper for 'gtk_tree_model_get_iter'</pre>
+def Gtk.TreeModel.get_iter_from_string (self, path_string):
+    #python wrapper for 'gtk_tree_model_get_iter_from_string'</pre>
 
-<p>Sets <em>iter</em> to a valid iterator pointing to <em>path</em>.  If <em>path</em> does
-not exist, <em>iter</em> is set to an invalid iterator and <a href="https://docs.python.org/3/library/constants.html#False">False</a> is returned.</p>
+<p>Sets <em>iter</em> to a valid iterator pointing to <em>path_string</em>, if it
+exists. Otherwise, <em>iter</em> is left invalid and <a href="https://docs.python.org/3/library/constants.html#False">False</a> is returned.</p>
 
 
 
@@ -6096,13 +6186,13 @@ not exist, <em>iter</em> is set to an invalid iterator and <a href="https://docs
 					
 <div class="symbol-detail">
 	<div>
-		<i><em><code>path</code></em></i>
+		<i><em><code>path_string</code></em></i>
 					(
-						<a title="Gtk.TreePath" href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>
+						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
 						)
 				–
 	</div>
-			<p>the <a href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>-struct</p>
+			<p>a string representation of a <a href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>-struct</p>
 
 	</div>
 
@@ -6142,13 +6232,6 @@ not exist, <em>iter</em> is set to an invalid iterator and <a href="https://docs
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_model_get_iter_from_string">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -6311,22 +6394,30 @@ exists. Otherwise, <em>iter</em> is left invalid and <a href="https://developer.
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_model_get_iter_first">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_tree_model_get_iter_from_string">
-	<span><code>Gtk.TreeModel.get_iter_from_string</code></span>
+<h4 data-hotdoc-id="gtk_tree_model_get_iter_first">
+	<span><code>Gtk.TreeModel.get_iter_first</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.TreeModel.get_iter_from_string (self, path_string):
-    #python wrapper for 'gtk_tree_model_get_iter_from_string'</pre>
+def Gtk.TreeModel.get_iter_first (self):
+    #python wrapper for 'gtk_tree_model_get_iter_first'</pre>
 
-<p>Sets <em>iter</em> to a valid iterator pointing to <em>path_string</em>, if it
-exists. Otherwise, <em>iter</em> is left invalid and <a href="https://docs.python.org/3/library/constants.html#False">False</a> is returned.</p>
+<p>Initializes <em>iter</em> with the first iterator in the tree
+(the one at the path "0") and returns <a href="https://docs.python.org/3/library/constants.html#True">True</a>. Returns
+<a href="https://docs.python.org/3/library/constants.html#False">False</a> if the tree is empty.</p>
 
 
 
@@ -6342,19 +6433,6 @@ exists. Otherwise, <em>iter</em> is left invalid and <a href="https://docs.pytho
 				–
 	</div>
 			<p>a <a href="gtktreemodel.html#GtkTreeModel">Gtk.TreeModel</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>path_string</code></em></i>
-					(
-						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
-						)
-				–
-	</div>
-			<p>a string representation of a <a href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>-struct</p>
 
 	</div>
 
@@ -6394,13 +6472,6 @@ exists. Otherwise, <em>iter</em> is left invalid and <a href="https://docs.pytho
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_model_get_iter_first">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -6541,23 +6612,29 @@ function Gtk.prototype.get_iter_first(): {
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_model_get_path">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_tree_model_get_iter_first">
-	<span><code>Gtk.TreeModel.get_iter_first</code></span>
+<h4 data-hotdoc-id="gtk_tree_model_get_path">
+	<span><code>Gtk.TreeModel.get_path</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.TreeModel.get_iter_first (self):
-    #python wrapper for 'gtk_tree_model_get_iter_first'</pre>
+def Gtk.TreeModel.get_path (self, iter):
+    #python wrapper for 'gtk_tree_model_get_path'</pre>
 
-<p>Initializes <em>iter</em> with the first iterator in the tree
-(the one at the path "0") and returns <a href="https://docs.python.org/3/library/constants.html#True">True</a>. Returns
-<a href="https://docs.python.org/3/library/constants.html#False">False</a> if the tree is empty.</p>
+<p>Returns a newly-created <a href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>-struct referenced by <em>iter</em>.</p>
+<p>This path should be freed with <a href="gtktreemodel.html#gtk_tree_path_free">Gtk.TreePath.free</a>.</p>
 
 
 
@@ -6576,49 +6653,40 @@ def Gtk.TreeModel.get_iter_first (self):
 
 	</div>
 
-			</div>
-
-		<div class="return-values-container">
-		<p><b>Returns a tuple made of:</b></p>
-				
+					
 <div class="symbol-detail">
 	<div>
-									(
-			<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+		<i><em><code>iter</code></em></i>
+					(
+						<a title="Gtk.TreeIter" href="gtktreemodel.html#GtkTreeIter">Gtk.TreeIter</a>
 						)
 				–
 	</div>
-			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a>, if <em>iter</em> was set</p>
-
-	</div>
-
-				
-<div class="symbol-detail">
-	<div>
-				<i><em><code>iter</code></em></i>
-									(
-			<a title="Gtk.TreeIter" href="gtktreemodel.html#GtkTreeIter">Gtk.TreeIter</a>
-						)
-				–
-	</div>
-			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a>, if <em>iter</em> was set</p>
+			<p>the <a href="gtktreemodel.html#GtkTreeIter">Gtk.TreeIter</a>-struct</p>
 
 	</div>
 
 			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.TreePath" href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>
+										)
+								–
+			</div>
+							<p>a newly-created <a href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>-struct</p>
+
+					</div>
+	</div>
 
 
 
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_model_get_path">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -6750,22 +6818,30 @@ function Gtk.prototype.get_path(iter: <a title="Gtk.TreeIter" href="gtktreemodel
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_model_get_value">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_tree_model_get_path">
-	<span><code>Gtk.TreeModel.get_path</code></span>
+<h4 data-hotdoc-id="gtk_tree_model_get_value">
+	<span><code>Gtk.TreeModel.get_value</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.TreeModel.get_path (self, iter):
-    #python wrapper for 'gtk_tree_model_get_path'</pre>
+def Gtk.TreeModel.get_value (self, iter, column):
+    #python wrapper for 'gtk_tree_model_get_value'</pre>
 
-<p>Returns a newly-created <a href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>-struct referenced by <em>iter</em>.</p>
-<p>This path should be freed with <a href="gtktreemodel.html#gtk_tree_path_free">Gtk.TreePath.free</a>.</p>
+<p>Initializes and sets <em>value</em> to that at <em>column</em>.</p>
+<p>When done with <em>value</em>, <a href="https://developer.gnome.org/gobject/unstable/gobject-Generic-values.html#g-value-unset">GObject.Value.unset</a> needs to be called
+to free any allocated memory.</p>
 
 
 
@@ -6797,34 +6873,26 @@ def Gtk.TreeModel.get_path (self, iter):
 
 	</div>
 
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Gtk.TreePath" href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>
-										)
-								–
-			</div>
-							<p>a newly-created <a href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>-struct</p>
-
-					</div>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>column</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
 	</div>
+			<p>the column to lookup the value at</p>
+
+	</div>
+
+			</div>
 
 
 
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_model_get_value">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -6973,23 +7041,30 @@ to free any allocated memory.</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_model_iter_next">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_tree_model_get_value">
-	<span><code>Gtk.TreeModel.get_value</code></span>
+<h4 data-hotdoc-id="gtk_tree_model_iter_next">
+	<span><code>Gtk.TreeModel.iter_next</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.TreeModel.get_value (self, iter, column):
-    #python wrapper for 'gtk_tree_model_get_value'</pre>
+def Gtk.TreeModel.iter_next (self, iter):
+    #python wrapper for 'gtk_tree_model_iter_next'</pre>
 
-<p>Initializes and sets <em>value</em> to that at <em>column</em>.</p>
-<p>When done with <em>value</em>, <a href="https://developer.gnome.org/gobject/unstable/gobject-Generic-values.html#g-value-unset">GObject.Value.unset</a> needs to be called
-to free any allocated memory.</p>
+<p>Sets <em>iter</em> to point to the node following it at the current level.</p>
+<p>If there is no next <em>iter</em>, <a href="https://docs.python.org/3/library/constants.html#False">False</a> is returned and <em>iter</em> is set
+to be invalid.</p>
 
 
 
@@ -7021,33 +7096,27 @@ to free any allocated memory.</p>
 
 	</div>
 
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>column</code></em></i>
-					(
-						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
-						)
-				–
-	</div>
-			<p>the column to lookup the value at</p>
-
-	</div>
-
 			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+										)
+								–
+			</div>
+							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if <em>iter</em> has been changed to the next node</p>
+
+					</div>
+	</div>
 
 
 
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_model_iter_next">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -7186,23 +7255,30 @@ to be invalid.</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_tree_model_iter_previous">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_tree_model_iter_next">
-	<span><code>Gtk.TreeModel.iter_next</code></span>
+<h4 data-hotdoc-id="gtk_tree_model_iter_previous">
+	<span><code>Gtk.TreeModel.iter_previous</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.TreeModel.iter_next (self, iter):
-    #python wrapper for 'gtk_tree_model_iter_next'</pre>
+def Gtk.TreeModel.iter_previous (self, iter):
+    #python wrapper for 'gtk_tree_model_iter_previous'</pre>
 
-<p>Sets <em>iter</em> to point to the node following it at the current level.</p>
-<p>If there is no next <em>iter</em>, <a href="https://docs.python.org/3/library/constants.html#False">False</a> is returned and <em>iter</em> is set
-to be invalid.</p>
+<p>Sets <em>iter</em> to point to the previous node at the current level.</p>
+<p>If there is no previous <em>iter</em>, <a href="https://docs.python.org/3/library/constants.html#False">False</a> is returned and <em>iter</em> is
+set to be invalid.</p>
 
 
 
@@ -7245,23 +7321,19 @@ to be invalid.</p>
 										)
 								–
 			</div>
-							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if <em>iter</em> has been changed to the next node</p>
+							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if <em>iter</em> has been changed to the previous node</p>
 
 					</div>
 	</div>
 
 
 
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_tree_model_iter_previous">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -7406,23 +7478,33 @@ set to be invalid.</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_model_iter_children">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_tree_model_iter_previous">
-	<span><code>Gtk.TreeModel.iter_previous</code></span>
+<h4 data-hotdoc-id="gtk_tree_model_iter_children">
+	<span><code>Gtk.TreeModel.iter_children</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.TreeModel.iter_previous (self, iter):
-    #python wrapper for 'gtk_tree_model_iter_previous'</pre>
+def Gtk.TreeModel.iter_children (self, parent):
+    #python wrapper for 'gtk_tree_model_iter_children'</pre>
 
-<p>Sets <em>iter</em> to point to the previous node at the current level.</p>
-<p>If there is no previous <em>iter</em>, <a href="https://docs.python.org/3/library/constants.html#False">False</a> is returned and <em>iter</em> is
-set to be invalid.</p>
+<p>Sets <em>iter</em> to point to the first child of <em>parent</em>.</p>
+<p>If <em>parent</em> has no children, <a href="https://docs.python.org/3/library/constants.html#False">False</a> is returned and <em>iter</em> is
+set to be invalid. <em>parent</em> will remain a valid node after this
+function has been called.</p>
+<p>If <em>parent</em> is <a href="https://docs.python.org/3/library/constants.html#None">None</a> returns the first node, equivalent to
+<code>gtk_tree_model_get_iter_first (tree_model, iter);</code></p>
 
 
 
@@ -7444,47 +7526,52 @@ set to be invalid.</p>
 					
 <div class="symbol-detail">
 	<div>
-		<i><em><code>iter</code></em></i>
+		<i><em><code>parent</code></em></i>
 					(
 						<a title="Gtk.TreeIter" href="gtktreemodel.html#GtkTreeIter">Gtk.TreeIter</a>
 						)
 				–
 	</div>
-			<p>the <a href="gtktreemodel.html#GtkTreeIter">Gtk.TreeIter</a>-struct</p>
+			<p>the <a href="gtktreemodel.html#GtkTreeIter">Gtk.TreeIter</a>-struct, or <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
 
 	</div>
 
 			</div>
 
 		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
+		<p><b>Returns a tuple made of:</b></p>
+				
+<div class="symbol-detail">
+	<div>
 									(
-					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
-										)
-								–
-			</div>
-							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if <em>iter</em> has been changed to the previous node</p>
+			<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+						)
+				–
+	</div>
+			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a>, if <em>iter</em> has been set to the first child</p>
 
-					</div>
 	</div>
 
+				
+<div class="symbol-detail">
+	<div>
+				<i><em><code>iter</code></em></i>
+									(
+			<a title="Gtk.TreeIter" href="gtktreemodel.html#GtkTreeIter">Gtk.TreeIter</a>
+						)
+				–
+	</div>
+			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a>, if <em>iter</em> has been set to the first child</p>
+
+	</div>
+
+			</div>
 
 
-	<p>
-	<b>Since</b>			: 3.0
-		</p>
+
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_model_iter_children">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -7660,26 +7747,28 @@ function has been called.</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_model_iter_has_child">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_tree_model_iter_children">
-	<span><code>Gtk.TreeModel.iter_children</code></span>
+<h4 data-hotdoc-id="gtk_tree_model_iter_has_child">
+	<span><code>Gtk.TreeModel.iter_has_child</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.TreeModel.iter_children (self, parent):
-    #python wrapper for 'gtk_tree_model_iter_children'</pre>
+def Gtk.TreeModel.iter_has_child (self, iter):
+    #python wrapper for 'gtk_tree_model_iter_has_child'</pre>
 
-<p>Sets <em>iter</em> to point to the first child of <em>parent</em>.</p>
-<p>If <em>parent</em> has no children, <a href="https://docs.python.org/3/library/constants.html#False">False</a> is returned and <em>iter</em> is
-set to be invalid. <em>parent</em> will remain a valid node after this
-function has been called.</p>
-<p>If <em>parent</em> is <a href="https://docs.python.org/3/library/constants.html#None">None</a> returns the first node, equivalent to
-<code>gtk_tree_model_get_iter_first (tree_model, iter);</code></p>
+<p>Returns <a href="https://docs.python.org/3/library/constants.html#True">True</a> if <em>iter</em> has children, <a href="https://docs.python.org/3/library/constants.html#False">False</a> otherwise.</p>
 
 
 
@@ -7701,59 +7790,37 @@ function has been called.</p>
 					
 <div class="symbol-detail">
 	<div>
-		<i><em><code>parent</code></em></i>
+		<i><em><code>iter</code></em></i>
 					(
 						<a title="Gtk.TreeIter" href="gtktreemodel.html#GtkTreeIter">Gtk.TreeIter</a>
 						)
 				–
 	</div>
-			<p>the <a href="gtktreemodel.html#GtkTreeIter">Gtk.TreeIter</a>-struct, or <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
+			<p>the <a href="gtktreemodel.html#GtkTreeIter">Gtk.TreeIter</a>-struct to test for children</p>
 
 	</div>
 
 			</div>
 
 		<div class="return-values-container">
-		<p><b>Returns a tuple made of:</b></p>
-				
-<div class="symbol-detail">
-	<div>
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
 									(
-			<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
-						)
-				–
-	</div>
-			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a>, if <em>iter</em> has been set to the first child</p>
-
-	</div>
-
-				
-<div class="symbol-detail">
-	<div>
-				<i><em><code>iter</code></em></i>
-									(
-			<a title="Gtk.TreeIter" href="gtktreemodel.html#GtkTreeIter">Gtk.TreeIter</a>
-						)
-				–
-	</div>
-			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a>, if <em>iter</em> has been set to the first child</p>
-
-	</div>
-
+					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+										)
+								–
 			</div>
+							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if <em>iter</em> has children</p>
+
+					</div>
+	</div>
 
 
 
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_model_iter_has_child">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -7883,21 +7950,30 @@ function Gtk.prototype.iter_has_child(iter: <a title="Gtk.TreeIter" href="gtktre
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_model_iter_n_children">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_tree_model_iter_has_child">
-	<span><code>Gtk.TreeModel.iter_has_child</code></span>
+<h4 data-hotdoc-id="gtk_tree_model_iter_n_children">
+	<span><code>Gtk.TreeModel.iter_n_children</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.TreeModel.iter_has_child (self, iter):
-    #python wrapper for 'gtk_tree_model_iter_has_child'</pre>
+def Gtk.TreeModel.iter_n_children (self, iter):
+    #python wrapper for 'gtk_tree_model_iter_n_children'</pre>
 
-<p>Returns <a href="https://docs.python.org/3/library/constants.html#True">True</a> if <em>iter</em> has children, <a href="https://docs.python.org/3/library/constants.html#False">False</a> otherwise.</p>
+<p>Returns the number of children that <em>iter</em> has.</p>
+<p>As a special case, if <em>iter</em> is <a href="https://docs.python.org/3/library/constants.html#None">None</a>, then the number
+of toplevel nodes is returned.</p>
 
 
 
@@ -7925,7 +8001,7 @@ def Gtk.TreeModel.iter_has_child (self, iter):
 						)
 				–
 	</div>
-			<p>the <a href="gtktreemodel.html#GtkTreeIter">Gtk.TreeIter</a>-struct to test for children</p>
+			<p>the <a href="gtktreemodel.html#GtkTreeIter">Gtk.TreeIter</a>-struct, or <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
 
 	</div>
 
@@ -7936,11 +8012,11 @@ def Gtk.TreeModel.iter_has_child (self, iter):
 			<div>
 				<b>Returns</b>
 									(
-					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+					<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
 										)
 								–
 			</div>
-							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if <em>iter</em> has children</p>
+							<p>the number of children of <em>iter</em></p>
 
 					</div>
 	</div>
@@ -7950,13 +8026,6 @@ def Gtk.TreeModel.iter_has_child (self, iter):
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_model_iter_n_children">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -8095,23 +8164,33 @@ of toplevel nodes is returned.</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_model_iter_nth_child">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_tree_model_iter_n_children">
-	<span><code>Gtk.TreeModel.iter_n_children</code></span>
+<h4 data-hotdoc-id="gtk_tree_model_iter_nth_child">
+	<span><code>Gtk.TreeModel.iter_nth_child</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.TreeModel.iter_n_children (self, iter):
-    #python wrapper for 'gtk_tree_model_iter_n_children'</pre>
+def Gtk.TreeModel.iter_nth_child (self, parent, n):
+    #python wrapper for 'gtk_tree_model_iter_nth_child'</pre>
 
-<p>Returns the number of children that <em>iter</em> has.</p>
-<p>As a special case, if <em>iter</em> is <a href="https://docs.python.org/3/library/constants.html#None">None</a>, then the number
-of toplevel nodes is returned.</p>
+<p>Sets <em>iter</em> to be the child of <em>parent</em>, using the given index.</p>
+<p>The first index is 0. If <em>n</em> is too big, or <em>parent</em> has no children,
+<em>iter</em> is set to an invalid iterator and <a href="https://docs.python.org/3/library/constants.html#False">False</a> is returned. <em>parent</em>
+will remain a valid node after this function has been called. As a
+special case, if <em>parent</em> is <a href="https://docs.python.org/3/library/constants.html#None">None</a>, then the <em>n</em>-th root node
+is set.</p>
 
 
 
@@ -8133,44 +8212,65 @@ of toplevel nodes is returned.</p>
 					
 <div class="symbol-detail">
 	<div>
-		<i><em><code>iter</code></em></i>
+		<i><em><code>parent</code></em></i>
 					(
 						<a title="Gtk.TreeIter" href="gtktreemodel.html#GtkTreeIter">Gtk.TreeIter</a>
 						)
 				–
 	</div>
-			<p>the <a href="gtktreemodel.html#GtkTreeIter">Gtk.TreeIter</a>-struct, or <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
+			<p>the <a href="gtktreemodel.html#GtkTreeIter">Gtk.TreeIter</a>-struct to get the child from, or <a href="https://docs.python.org/3/library/constants.html#None">None</a>.</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>n</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>the index of the desired child</p>
 
 	</div>
 
 			</div>
 
 		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
+		<p><b>Returns a tuple made of:</b></p>
+				
+<div class="symbol-detail">
+	<div>
 									(
-					<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
-										)
-								–
-			</div>
-							<p>the number of children of <em>iter</em></p>
-
-					</div>
+			<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+						)
+				–
 	</div>
+			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a>, if <em>parent</em> has an <em>n</em>-th child</p>
+
+	</div>
+
+				
+<div class="symbol-detail">
+	<div>
+				<i><em><code>iter</code></em></i>
+									(
+			<a title="Gtk.TreeIter" href="gtktreemodel.html#GtkTreeIter">Gtk.TreeIter</a>
+						)
+				–
+	</div>
+			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a>, if <em>parent</em> has an <em>n</em>-th child</p>
+
+	</div>
+
+			</div>
 
 
 
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_model_iter_nth_child">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -8370,26 +8470,34 @@ is set.</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_model_iter_parent">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_tree_model_iter_nth_child">
-	<span><code>Gtk.TreeModel.iter_nth_child</code></span>
+<h4 data-hotdoc-id="gtk_tree_model_iter_parent">
+	<span><code>Gtk.TreeModel.iter_parent</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.TreeModel.iter_nth_child (self, parent, n):
-    #python wrapper for 'gtk_tree_model_iter_nth_child'</pre>
+def Gtk.TreeModel.iter_parent (self, child):
+    #python wrapper for 'gtk_tree_model_iter_parent'</pre>
 
-<p>Sets <em>iter</em> to be the child of <em>parent</em>, using the given index.</p>
-<p>The first index is 0. If <em>n</em> is too big, or <em>parent</em> has no children,
-<em>iter</em> is set to an invalid iterator and <a href="https://docs.python.org/3/library/constants.html#False">False</a> is returned. <em>parent</em>
-will remain a valid node after this function has been called. As a
-special case, if <em>parent</em> is <a href="https://docs.python.org/3/library/constants.html#None">None</a>, then the <em>n</em>-th root node
-is set.</p>
+<p>Sets <em>iter</em> to be the parent of <em>child</em>.</p>
+<p>If <em>child</em> is at the toplevel, and doesn’t have a parent, then
+<em>iter</em> is set to an invalid iterator and <a href="https://docs.python.org/3/library/constants.html#False">False</a> is returned.
+<em>child</em> will remain a valid node after this function has been
+called.</p>
+<p><em>iter</em> will be initialized before the lookup is performed, so <em>child</em>
+and <em>iter</em> cannot point to the same memory location.</p>
 
 
 
@@ -8411,26 +8519,13 @@ is set.</p>
 					
 <div class="symbol-detail">
 	<div>
-		<i><em><code>parent</code></em></i>
+		<i><em><code>child</code></em></i>
 					(
 						<a title="Gtk.TreeIter" href="gtktreemodel.html#GtkTreeIter">Gtk.TreeIter</a>
 						)
 				–
 	</div>
-			<p>the <a href="gtktreemodel.html#GtkTreeIter">Gtk.TreeIter</a>-struct to get the child from, or <a href="https://docs.python.org/3/library/constants.html#None">None</a>.</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>n</code></em></i>
-					(
-						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
-						)
-				–
-	</div>
-			<p>the index of the desired child</p>
+			<p>the <a href="gtktreemodel.html#GtkTreeIter">Gtk.TreeIter</a>-struct</p>
 
 	</div>
 
@@ -8446,7 +8541,7 @@ is set.</p>
 						)
 				–
 	</div>
-			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a>, if <em>parent</em> has an <em>n</em>-th child</p>
+			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a>, if <em>iter</em> is set to the parent of <em>child</em></p>
 
 	</div>
 
@@ -8459,7 +8554,7 @@ is set.</p>
 						)
 				–
 	</div>
-			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a>, if <em>parent</em> has an <em>n</em>-th child</p>
+			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a>, if <em>iter</em> is set to the parent of <em>child</em></p>
 
 	</div>
 
@@ -8470,13 +8565,6 @@ is set.</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_model_iter_parent">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -8649,27 +8737,31 @@ and <em>iter</em> cannot point to the same memory location.</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.2;" id="gtk_tree_model_get_string_from_iter">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_tree_model_iter_parent">
-	<span><code>Gtk.TreeModel.iter_parent</code></span>
+<h4 data-hotdoc-id="gtk_tree_model_get_string_from_iter">
+	<span><code>Gtk.TreeModel.get_string_from_iter</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.TreeModel.iter_parent (self, child):
-    #python wrapper for 'gtk_tree_model_iter_parent'</pre>
+def Gtk.TreeModel.get_string_from_iter (self, iter):
+    #python wrapper for 'gtk_tree_model_get_string_from_iter'</pre>
 
-<p>Sets <em>iter</em> to be the parent of <em>child</em>.</p>
-<p>If <em>child</em> is at the toplevel, and doesn’t have a parent, then
-<em>iter</em> is set to an invalid iterator and <a href="https://docs.python.org/3/library/constants.html#False">False</a> is returned.
-<em>child</em> will remain a valid node after this function has been
-called.</p>
-<p><em>iter</em> will be initialized before the lookup is performed, so <em>child</em>
-and <em>iter</em> cannot point to the same memory location.</p>
+<p>Generates a string representation of the iter.</p>
+<p>This string is a “:” separated list of numbers.
+For example, “4:10:0:3” would be an acceptable
+return value for this string.</p>
 
 
 
@@ -8691,59 +8783,41 @@ and <em>iter</em> cannot point to the same memory location.</p>
 					
 <div class="symbol-detail">
 	<div>
-		<i><em><code>child</code></em></i>
+		<i><em><code>iter</code></em></i>
 					(
 						<a title="Gtk.TreeIter" href="gtktreemodel.html#GtkTreeIter">Gtk.TreeIter</a>
 						)
 				–
 	</div>
-			<p>the <a href="gtktreemodel.html#GtkTreeIter">Gtk.TreeIter</a>-struct</p>
+			<p>a <a href="gtktreemodel.html#GtkTreeIter">Gtk.TreeIter</a>-struct</p>
 
 	</div>
 
 			</div>
 
 		<div class="return-values-container">
-		<p><b>Returns a tuple made of:</b></p>
-				
-<div class="symbol-detail">
-	<div>
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
 									(
-			<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
-						)
-				–
-	</div>
-			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a>, if <em>iter</em> is set to the parent of <em>child</em></p>
-
-	</div>
-
-				
-<div class="symbol-detail">
-	<div>
-				<i><em><code>iter</code></em></i>
-									(
-			<a title="Gtk.TreeIter" href="gtktreemodel.html#GtkTreeIter">Gtk.TreeIter</a>
-						)
-				–
-	</div>
-			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a>, if <em>iter</em> is set to the parent of <em>child</em></p>
-
-	</div>
-
+					<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
+										)
+								–
 			</div>
+							<p>a newly-allocated string.
+Must be freed with <a href="https://developer.gnome.org/glib/unstable/glib-Memory-Allocation.html#g-free">GLib.free</a>.</p>
+
+					</div>
+	</div>
 
 
 
+	<p>
+	<b>Since</b>			: 2.2
+		</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="since:2.2;" id="gtk_tree_model_get_string_from_iter">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -8887,24 +8961,41 @@ Must be freed with <a href="https://developer.gnome.org/glib/unstable/glib-Memor
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_model_ref_node">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_tree_model_get_string_from_iter">
-	<span><code>Gtk.TreeModel.get_string_from_iter</code></span>
+<h4 data-hotdoc-id="gtk_tree_model_ref_node">
+	<span><code>Gtk.TreeModel.ref_node</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.TreeModel.get_string_from_iter (self, iter):
-    #python wrapper for 'gtk_tree_model_get_string_from_iter'</pre>
+def Gtk.TreeModel.ref_node (self, iter):
+    #python wrapper for 'gtk_tree_model_ref_node'</pre>
 
-<p>Generates a string representation of the iter.</p>
-<p>This string is a “:” separated list of numbers.
-For example, “4:10:0:3” would be an acceptable
-return value for this string.</p>
+<p>Lets the tree ref the node.</p>
+<p>This is an optional method for models to implement.
+To be more specific, models may ignore this call as it exists
+primarily for performance reasons.</p>
+<p>This function is primarily meant as a way for views to let
+caching models know when nodes are being displayed (and hence,
+whether or not to cache that node). Being displayed means a node
+is in an expanded branch, regardless of whether the node is currently
+visible in the viewport. For example, a file-system based model
+would not want to keep the entire file-hierarchy in memory,
+just the sections that are currently being displayed by
+every current view.</p>
+<p>A model should be expected to be able to get an iter independent
+of its reffed state.</p>
 
 
 
@@ -8932,42 +9023,17 @@ return value for this string.</p>
 						)
 				–
 	</div>
-			<p>a <a href="gtktreemodel.html#GtkTreeIter">Gtk.TreeIter</a>-struct</p>
+			<p>the <a href="gtktreemodel.html#GtkTreeIter">Gtk.TreeIter</a>-struct</p>
 
 	</div>
 
 			</div>
 
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
-										)
-								–
-			</div>
-							<p>a newly-allocated string.
-Must be freed with <a href="https://developer.gnome.org/glib/unstable/glib-Memory-Allocation.html#g-free">GLib.free</a>.</p>
-
-					</div>
-	</div>
 
 
-
-	<p>
-	<b>Since</b>			: 2.2
-		</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_model_ref_node">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -9097,34 +9163,33 @@ of its reffed state.</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_model_unref_node">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_tree_model_ref_node">
-	<span><code>Gtk.TreeModel.ref_node</code></span>
+<h4 data-hotdoc-id="gtk_tree_model_unref_node">
+	<span><code>Gtk.TreeModel.unref_node</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.TreeModel.ref_node (self, iter):
-    #python wrapper for 'gtk_tree_model_ref_node'</pre>
+def Gtk.TreeModel.unref_node (self, iter):
+    #python wrapper for 'gtk_tree_model_unref_node'</pre>
 
-<p>Lets the tree ref the node.</p>
+<p>Lets the tree unref the node.</p>
 <p>This is an optional method for models to implement.
 To be more specific, models may ignore this call as it exists
-primarily for performance reasons.</p>
-<p>This function is primarily meant as a way for views to let
-caching models know when nodes are being displayed (and hence,
-whether or not to cache that node). Being displayed means a node
-is in an expanded branch, regardless of whether the node is currently
-visible in the viewport. For example, a file-system based model
-would not want to keep the entire file-hierarchy in memory,
-just the sections that are currently being displayed by
-every current view.</p>
-<p>A model should be expected to be able to get an iter independent
-of its reffed state.</p>
+primarily for performance reasons. For more information on what
+this means, see <a href="gtktreemodel.html#gtk_tree_model_ref_node">Gtk.TreeModel.ref_node</a>.</p>
+<p>Please note that nodes that are deleted are not unreffed.</p>
 
 
 
@@ -9163,13 +9228,6 @@ of its reffed state.</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_model_unref_node">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -9244,64 +9302,6 @@ function Gtk.prototype.unref_node(iter: <a title="Gtk.TreeIter" href="gtktreemod
 To be more specific, models may ignore this call as it exists
 primarily for performance reasons. For more information on what
 this means, see <a href="gtktreemodel.html#gtk_tree_model_ref_node">Gtk.prototype.ref_node</a>.</p>
-<p>Please note that nodes that are deleted are not unreffed.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>tree_model</code></em></i>
-					(
-						<a title="Gtk.TreeModel" href="gtktreemodel.html#GtkTreeModel">Gtk.TreeModel</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtktreemodel.html#GtkTreeModel">Gtk.TreeModel</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>iter</code></em></i>
-					(
-						<a title="Gtk.TreeIter" href="gtktreemodel.html#GtkTreeIter">Gtk.TreeIter</a>
-						)
-				–
-	</div>
-			<p>the <a href="gtktreemodel.html#GtkTreeIter">Gtk.TreeIter</a>-struct</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_tree_model_unref_node">
-	<span><code>Gtk.TreeModel.unref_node</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.TreeModel.unref_node (self, iter):
-    #python wrapper for 'gtk_tree_model_unref_node'</pre>
-
-<p>Lets the tree unref the node.</p>
-<p>This is an optional method for models to implement.
-To be more specific, models may ignore this call as it exists
-primarily for performance reasons. For more information on what
-this means, see <a href="gtktreemodel.html#gtk_tree_model_ref_node">Gtk.TreeModel.ref_node</a>.</p>
 <p>Please note that nodes that are deleted are not unreffed.</p>
 
 
@@ -9494,6 +9494,74 @@ for language bindings to use.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_model_foreach">
 	
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_tree_model_foreach">
+	<span><code>Gtk.TreeModel.foreach</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.TreeModel.foreach (self, func, user_data):
+    #python wrapper for 'gtk_tree_model_foreach'</pre>
+
+<p>Calls func on each node in model in a depth-first fashion.</p>
+<p>If <em>func</em> returns <a href="https://docs.python.org/3/library/constants.html#True">True</a>, then the tree ceases to be walked,
+and <a href="gtktreemodel.html#gtk_tree_model_foreach">Gtk.TreeModel.foreach</a> returns.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>model</code></em></i>
+					(
+						<a title="Gtk.TreeModel" href="gtktreemodel.html#GtkTreeModel">Gtk.TreeModel</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtktreemodel.html#GtkTreeModel">Gtk.TreeModel</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>func</code></em></i>
+					(
+						<a title="Gtk.TreeModelForeachFunc" href="gtktreemodel.html#GtkTreeModelForeachFunc">Gtk.TreeModelForeachFunc</a>
+						)
+				–
+	</div>
+			<p>a function to be called on each row</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>user_data</code></em></i>
+					(
+						<a title="object" href="https://docs.python.org/3/library/functions.html#object">object</a>
+						)
+				–
+	</div>
+			<p>user data to passed to <em>func</em></p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -9630,23 +9698,28 @@ and <a href="gtktreemodel.html#gtk_tree_model_foreach">Gtk.prototype.foreach</a>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_model_row_changed">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_tree_model_foreach">
-	<span><code>Gtk.TreeModel.foreach</code></span>
+<h4 data-hotdoc-id="gtk_tree_model_row_changed">
+	<span><code>Gtk.TreeModel.row_changed</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.TreeModel.foreach (self, func, user_data):
-    #python wrapper for 'gtk_tree_model_foreach'</pre>
+def Gtk.TreeModel.row_changed (self, path, iter):
+    #python wrapper for 'gtk_tree_model_row_changed'</pre>
 
-<p>Calls func on each node in model in a depth-first fashion.</p>
-<p>If <em>func</em> returns <a href="https://docs.python.org/3/library/constants.html#True">True</a>, then the tree ceases to be walked,
-and <a href="gtktreemodel.html#gtk_tree_model_foreach">Gtk.TreeModel.foreach</a> returns.</p>
+<p>Emits the <a href="https://developer.gnome.org/gtk3/GtkTreeModel.html#GtkTreeModel-row-changed">row-changed</a> signal on <em>tree_model</em>.</p>
 
 
 
@@ -9655,7 +9728,7 @@ and <a href="gtktreemodel.html#gtk_tree_model_foreach">Gtk.TreeModel.foreach</a>
 					
 <div class="symbol-detail">
 	<div>
-		<i><em><code>model</code></em></i>
+		<i><em><code>tree_model</code></em></i>
 					(
 						<a title="Gtk.TreeModel" href="gtktreemodel.html#GtkTreeModel">Gtk.TreeModel</a>
 						)
@@ -9668,26 +9741,26 @@ and <a href="gtktreemodel.html#gtk_tree_model_foreach">Gtk.TreeModel.foreach</a>
 					
 <div class="symbol-detail">
 	<div>
-		<i><em><code>func</code></em></i>
+		<i><em><code>path</code></em></i>
 					(
-						<a title="Gtk.TreeModelForeachFunc" href="gtktreemodel.html#GtkTreeModelForeachFunc">Gtk.TreeModelForeachFunc</a>
+						<a title="Gtk.TreePath" href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>
 						)
 				–
 	</div>
-			<p>a function to be called on each row</p>
+			<p>a <a href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>-struct pointing to the changed row</p>
 
 	</div>
 
 					
 <div class="symbol-detail">
 	<div>
-		<i><em><code>user_data</code></em></i>
+		<i><em><code>iter</code></em></i>
 					(
-						<a title="object" href="https://docs.python.org/3/library/functions.html#object">object</a>
+						<a title="Gtk.TreeIter" href="gtktreemodel.html#GtkTreeIter">Gtk.TreeIter</a>
 						)
 				–
 	</div>
-			<p>user data to passed to <em>func</em></p>
+			<p>a valid <a href="gtktreemodel.html#GtkTreeIter">Gtk.TreeIter</a>-struct pointing to the changed row</p>
 
 	</div>
 
@@ -9698,13 +9771,6 @@ and <a href="gtktreemodel.html#gtk_tree_model_foreach">Gtk.TreeModel.foreach</a>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_model_row_changed">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -9832,21 +9898,28 @@ function Gtk.prototype.row_changed(path: <a title="Gtk.TreePath" href="gtktreemo
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_model_row_inserted">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_tree_model_row_changed">
-	<span><code>Gtk.TreeModel.row_changed</code></span>
+<h4 data-hotdoc-id="gtk_tree_model_row_inserted">
+	<span><code>Gtk.TreeModel.row_inserted</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.TreeModel.row_changed (self, path, iter):
-    #python wrapper for 'gtk_tree_model_row_changed'</pre>
+def Gtk.TreeModel.row_inserted (self, path, iter):
+    #python wrapper for 'gtk_tree_model_row_inserted'</pre>
 
-<p>Emits the <a href="https://developer.gnome.org/gtk3/GtkTreeModel.html#GtkTreeModel-row-changed">row-changed</a> signal on <em>tree_model</em>.</p>
+<p>Emits the <a href="https://developer.gnome.org/gtk3/GtkTreeModel.html#GtkTreeModel-row-inserted">row-inserted</a> signal on <em>tree_model</em>.</p>
 
 
 
@@ -9874,7 +9947,7 @@ def Gtk.TreeModel.row_changed (self, path, iter):
 						)
 				–
 	</div>
-			<p>a <a href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>-struct pointing to the changed row</p>
+			<p>a <a href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>-struct pointing to the inserted row</p>
 
 	</div>
 
@@ -9887,7 +9960,7 @@ def Gtk.TreeModel.row_changed (self, path, iter):
 						)
 				–
 	</div>
-			<p>a valid <a href="gtktreemodel.html#GtkTreeIter">Gtk.TreeIter</a>-struct pointing to the changed row</p>
+			<p>a valid <a href="gtktreemodel.html#GtkTreeIter">Gtk.TreeIter</a>-struct pointing to the inserted row</p>
 
 	</div>
 
@@ -9898,13 +9971,6 @@ def Gtk.TreeModel.row_changed (self, path, iter):
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_model_row_inserted">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -10032,21 +10098,30 @@ function Gtk.prototype.row_inserted(path: <a title="Gtk.TreePath" href="gtktreem
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_model_row_has_child_toggled">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_tree_model_row_inserted">
-	<span><code>Gtk.TreeModel.row_inserted</code></span>
+<h4 data-hotdoc-id="gtk_tree_model_row_has_child_toggled">
+	<span><code>Gtk.TreeModel.row_has_child_toggled</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.TreeModel.row_inserted (self, path, iter):
-    #python wrapper for 'gtk_tree_model_row_inserted'</pre>
+def Gtk.TreeModel.row_has_child_toggled (self, path, iter):
+    #python wrapper for 'gtk_tree_model_row_has_child_toggled'</pre>
 
-<p>Emits the <a href="https://developer.gnome.org/gtk3/GtkTreeModel.html#GtkTreeModel-row-inserted">row-inserted</a> signal on <em>tree_model</em>.</p>
+<p>Emits the <a href="https://developer.gnome.org/gtk3/GtkTreeModel.html#GtkTreeModel-row-has-child-toggled">row-has-child-toggled</a> signal on
+<em>tree_model</em>. This should be called by models after the child
+state of a node changes.</p>
 
 
 
@@ -10074,7 +10149,7 @@ def Gtk.TreeModel.row_inserted (self, path, iter):
 						)
 				–
 	</div>
-			<p>a <a href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>-struct pointing to the inserted row</p>
+			<p>a <a href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>-struct pointing to the changed row</p>
 
 	</div>
 
@@ -10087,7 +10162,7 @@ def Gtk.TreeModel.row_inserted (self, path, iter):
 						)
 				–
 	</div>
-			<p>a valid <a href="gtktreemodel.html#GtkTreeIter">Gtk.TreeIter</a>-struct pointing to the inserted row</p>
+			<p>a valid <a href="gtktreemodel.html#GtkTreeIter">Gtk.TreeIter</a>-struct pointing to the changed row</p>
 
 	</div>
 
@@ -10098,13 +10173,6 @@ def Gtk.TreeModel.row_inserted (self, path, iter):
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_model_row_has_child_toggled">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -10236,23 +10304,33 @@ state of a node changes.</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_model_row_deleted">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_tree_model_row_has_child_toggled">
-	<span><code>Gtk.TreeModel.row_has_child_toggled</code></span>
+<h4 data-hotdoc-id="gtk_tree_model_row_deleted">
+	<span><code>Gtk.TreeModel.row_deleted</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.TreeModel.row_has_child_toggled (self, path, iter):
-    #python wrapper for 'gtk_tree_model_row_has_child_toggled'</pre>
+def Gtk.TreeModel.row_deleted (self, path):
+    #python wrapper for 'gtk_tree_model_row_deleted'</pre>
 
-<p>Emits the <a href="https://developer.gnome.org/gtk3/GtkTreeModel.html#GtkTreeModel-row-has-child-toggled">row-has-child-toggled</a> signal on
-<em>tree_model</em>. This should be called by models after the child
-state of a node changes.</p>
+<p>Emits the <a href="https://developer.gnome.org/gtk3/GtkTreeModel.html#GtkTreeModel-row-deleted">row-deleted</a> signal on <em>tree_model</em>.</p>
+<p>This should be called by models after a row has been removed.
+The location pointed to by <em>path</em> should be the location that
+the row previously was at. It may not be a valid location anymore.</p>
+<p>Nodes that are deleted are not unreffed, this means that any
+outstanding references on the deleted node should not be released.</p>
 
 
 
@@ -10280,20 +10358,8 @@ state of a node changes.</p>
 						)
 				–
 	</div>
-			<p>a <a href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>-struct pointing to the changed row</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>iter</code></em></i>
-					(
-						<a title="Gtk.TreeIter" href="gtktreemodel.html#GtkTreeIter">Gtk.TreeIter</a>
-						)
-				–
-	</div>
-			<p>a valid <a href="gtktreemodel.html#GtkTreeIter">Gtk.TreeIter</a>-struct pointing to the changed row</p>
+			<p>a <a href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>-struct pointing to the previous location of
+the deleted row</p>
 
 	</div>
 
@@ -10304,13 +10370,6 @@ state of a node changes.</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_model_row_deleted">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -10380,65 +10439,6 @@ the deleted row</p>
 function Gtk.prototype.row_deleted(path: <a title="Gtk.TreePath" href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>): {
     // javascript wrapper for 'gtk_tree_model_row_deleted'
 }</pre>
-
-<p>Emits the <a href="https://developer.gnome.org/gtk3/GtkTreeModel.html#GtkTreeModel-row-deleted">row-deleted</a> signal on <em>tree_model</em>.</p>
-<p>This should be called by models after a row has been removed.
-The location pointed to by <em>path</em> should be the location that
-the row previously was at. It may not be a valid location anymore.</p>
-<p>Nodes that are deleted are not unreffed, this means that any
-outstanding references on the deleted node should not be released.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>tree_model</code></em></i>
-					(
-						<a title="Gtk.TreeModel" href="gtktreemodel.html#GtkTreeModel">Gtk.TreeModel</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtktreemodel.html#GtkTreeModel">Gtk.TreeModel</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>path</code></em></i>
-					(
-						<a title="Gtk.TreePath" href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>-struct pointing to the previous location of
-the deleted row</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_tree_model_row_deleted">
-	<span><code>Gtk.TreeModel.row_deleted</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.TreeModel.row_deleted (self, path):
-    #python wrapper for 'gtk_tree_model_row_deleted'</pre>
 
 <p>Emits the <a href="https://developer.gnome.org/gtk3/GtkTreeModel.html#GtkTreeModel-row-deleted">row-deleted</a> signal on <em>tree_model</em>.</p>
 <p>This should be called by models after a row has been removed.
@@ -10576,6 +10576,109 @@ i.e. <em>new_order</em><code>[newpos] = oldpos</code></p>
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.10;" id="gtk_tree_model_rows_reordered_with_length">
 	
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_tree_model_rows_reordered_with_length">
+	<span><code>Gtk.TreeModel.rows_reordered_with_length</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.TreeModel.rows_reordered_with_length (self, path, iter, new_order, length):
+    #python wrapper for 'gtk_tree_model_rows_reordered_with_length'</pre>
+
+<p>Emits the <a href="https://developer.gnome.org/gtk3/GtkTreeModel.html#GtkTreeModel-rows-reordered">GtkTreeModel::rows-reordered (not introspectable)</a> signal on <em>tree_model</em>.</p>
+<p>This should be called by models when their rows have been
+reordered.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>tree_model</code></em></i>
+					(
+						<a title="Gtk.TreeModel" href="gtktreemodel.html#GtkTreeModel">Gtk.TreeModel</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtktreemodel.html#GtkTreeModel">Gtk.TreeModel</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>path</code></em></i>
+					(
+						<a title="Gtk.TreePath" href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>-struct pointing to the tree node whose children
+have been reordered</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>iter</code></em></i>
+					(
+						<a title="Gtk.TreeIter" href="gtktreemodel.html#GtkTreeIter">Gtk.TreeIter</a>
+						)
+				–
+	</div>
+			<p>a valid <a href="gtktreemodel.html#GtkTreeIter">Gtk.TreeIter</a>-struct pointing to the node
+whose children have been reordered, or <a href="https://docs.python.org/3/library/constants.html#None">None</a> if the depth
+of <em>path</em> is 0</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>new_order</code></em></i>
+					(
+						[ <a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a> ]
+						)
+				–
+	</div>
+			<p>an array of integers
+mapping the current position of each child to its old
+position before the re-ordering,
+i.e. <em>new_order</em><code>[newpos] = oldpos</code></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>length</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>length of <em>new_order</em> array</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.10
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -10783,109 +10886,6 @@ i.e. <em>new_order</em><code>[newpos] = oldpos</code></p>
 
 
         </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_tree_model_rows_reordered_with_length">
-	<span><code>Gtk.TreeModel.rows_reordered_with_length</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.TreeModel.rows_reordered_with_length (self, path, iter, new_order, length):
-    #python wrapper for 'gtk_tree_model_rows_reordered_with_length'</pre>
-
-<p>Emits the <a href="https://developer.gnome.org/gtk3/GtkTreeModel.html#GtkTreeModel-rows-reordered">GtkTreeModel::rows-reordered (not introspectable)</a> signal on <em>tree_model</em>.</p>
-<p>This should be called by models when their rows have been
-reordered.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>tree_model</code></em></i>
-					(
-						<a title="Gtk.TreeModel" href="gtktreemodel.html#GtkTreeModel">Gtk.TreeModel</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtktreemodel.html#GtkTreeModel">Gtk.TreeModel</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>path</code></em></i>
-					(
-						<a title="Gtk.TreePath" href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>-struct pointing to the tree node whose children
-have been reordered</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>iter</code></em></i>
-					(
-						<a title="Gtk.TreeIter" href="gtktreemodel.html#GtkTreeIter">Gtk.TreeIter</a>
-						)
-				–
-	</div>
-			<p>a valid <a href="gtktreemodel.html#GtkTreeIter">Gtk.TreeIter</a>-struct pointing to the node
-whose children have been reordered, or <a href="https://docs.python.org/3/library/constants.html#None">None</a> if the depth
-of <em>path</em> is 0</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>new_order</code></em></i>
-					(
-						[ <a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a> ]
-						)
-				–
-	</div>
-			<p>an array of integers
-mapping the current position of each child to its old
-position before the re-ordering,
-i.e. <em>new_order</em><code>[newpos] = oldpos</code></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>length</code></em></i>
-					(
-						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
-						)
-				–
-	</div>
-			<p>length of <em>new_order</em> array</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.10
-		</p>
-
-
-        </div>
 
 </div>
 
@@ -10897,6 +10897,20 @@ i.e. <em>new_order</em><code>[newpos] = oldpos</code></p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="GtkTreeModel">
 	
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="GtkTreeModel">
+	<span><code>Gtk.TreeModel</code></span>
+</h3>
+
+
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -10925,20 +10939,6 @@ i.e. <em>new_order</em><code>[newpos] = oldpos</code></p>
 
 
         </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="GtkTreeModel">
-	<span><code>Gtk.TreeModel</code></span>
-</h3>
-
-
-
-
-
-        </div>
 
 </div>
 
@@ -10948,6 +10948,61 @@ i.e. <em>new_order</em><code>[newpos] = oldpos</code></p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_row_reference_inserted">
 	
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_tree_row_reference_inserted">
+	<span><code>Gtk.TreeRowReference.inserted</code></span>
+</h3>
+
+
+<pre class="python-prototype">
+def Gtk.TreeRowReference.inserted (proxy, path):
+    #python wrapper for 'gtk_tree_row_reference_inserted'</pre>
+
+<p>Lets a set of row reference created by
+<a href="gtktreemodel.html#gtk_tree_row_reference_new_proxy">Gtk.TreeRowReference.new_proxy</a> know that the
+model emitted the <a href="https://developer.gnome.org/gtk3/GtkTreeModel.html#GtkTreeModel-row-inserted">row-inserted</a> signal.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>proxy</code></em></i>
+					(
+						<a title="GObject.Object" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct">GObject.Object</a>
+						)
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct">GObject.Object</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>path</code></em></i>
+					(
+						<a title="Gtk.TreePath" href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>
+						)
+				–
+	</div>
+			<p>the row position that was inserted</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -11055,23 +11110,30 @@ model emitted the <a href="https://developer.gnome.org/gtk3/GtkTreeModel.html#Gt
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_row_reference_deleted">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h3 data-hotdoc-id="gtk_tree_row_reference_inserted">
-	<span><code>Gtk.TreeRowReference.inserted</code></span>
+<h3 data-hotdoc-id="gtk_tree_row_reference_deleted">
+	<span><code>Gtk.TreeRowReference.deleted</code></span>
 </h3>
 
 
 <pre class="python-prototype">
-def Gtk.TreeRowReference.inserted (proxy, path):
-    #python wrapper for 'gtk_tree_row_reference_inserted'</pre>
+def Gtk.TreeRowReference.deleted (proxy, path):
+    #python wrapper for 'gtk_tree_row_reference_deleted'</pre>
 
 <p>Lets a set of row reference created by
 <a href="gtktreemodel.html#gtk_tree_row_reference_new_proxy">Gtk.TreeRowReference.new_proxy</a> know that the
-model emitted the <a href="https://developer.gnome.org/gtk3/GtkTreeModel.html#GtkTreeModel-row-inserted">row-inserted</a> signal.</p>
+model emitted the <a href="https://developer.gnome.org/gtk3/GtkTreeModel.html#GtkTreeModel-row-deleted">row-deleted</a> signal.</p>
 
 
 
@@ -11099,7 +11161,7 @@ model emitted the <a href="https://developer.gnome.org/gtk3/GtkTreeModel.html#Gt
 						)
 				–
 	</div>
-			<p>the row position that was inserted</p>
+			<p>the path position that was deleted</p>
 
 	</div>
 
@@ -11110,13 +11172,6 @@ model emitted the <a href="https://developer.gnome.org/gtk3/GtkTreeModel.html#Gt
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_tree_row_reference_deleted">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -11185,61 +11240,6 @@ function Gtk.prototype.deleted(proxy: <a title="GObject.Object" href="https://de
 
 <p>Lets a set of row reference created by
 <a href="gtktreemodel.html#gtk_tree_row_reference_new_proxy">Gtk.prototype.new_proxy</a> know that the
-model emitted the <a href="https://developer.gnome.org/gtk3/GtkTreeModel.html#GtkTreeModel-row-deleted">row-deleted</a> signal.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>proxy</code></em></i>
-					(
-						<a title="GObject.Object" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct">GObject.Object</a>
-						)
-				–
-	</div>
-			<p>a <a href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct">GObject.Object</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>path</code></em></i>
-					(
-						<a title="Gtk.TreePath" href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>
-						)
-				–
-	</div>
-			<p>the path position that was deleted</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_tree_row_reference_deleted">
-	<span><code>Gtk.TreeRowReference.deleted</code></span>
-</h3>
-
-
-<pre class="python-prototype">
-def Gtk.TreeRowReference.deleted (proxy, path):
-    #python wrapper for 'gtk_tree_row_reference_deleted'</pre>
-
-<p>Lets a set of row reference created by
-<a href="gtktreemodel.html#gtk_tree_row_reference_new_proxy">Gtk.TreeRowReference.new_proxy</a> know that the
 model emitted the <a href="https://developer.gnome.org/gtk3/GtkTreeModel.html#GtkTreeModel-row-deleted">row-deleted</a> signal.</p>
 
 
@@ -11373,6 +11373,52 @@ model emitted the <a href="https://developer.gnome.org/gtk3/GtkTreeModel.html#Gt
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="GtkTreeModelFlags">
 	
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="GtkTreeModelFlags">
+	<span><code>Gtk.TreeModelFlags</code></span>
+</h3>
+
+
+<p>These flags indicate various properties of a <a href="gtktreemodel.html#GtkTreeModel">Gtk.TreeModel</a>.</p>
+<p>They are returned by <a href="gtktreemodel.html#gtk_tree_model_get_flags">Gtk.TreeModel.get_flags</a>, and must be
+static for the lifetime of the object. A more complete description
+of <a href="gtktreemodel.html#GTK_TREE_MODEL_ITERS_PERSIST">Gtk.TreeModelFlags.ITERS_PERSIST</a> can be found in the overview of
+this section.</p>
+
+
+
+
+	<div class="members-container">
+		<h4>Members</h4>
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_TREE_MODEL_ITERS_PERSIST">
+	<div>
+		<i><em><code>Gtk.TreeModelFlags.ITERS_PERSIST</code></em></i>
+		(<span class="value">1</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_TREE_MODEL_LIST_ONLY">
+	<div>
+		<i><em><code>Gtk.TreeModelFlags.LIST_ONLY</code></em></i>
+		(<span class="value">2</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -11465,52 +11511,6 @@ this section.</p>
 
 
         </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="GtkTreeModelFlags">
-	<span><code>Gtk.TreeModelFlags</code></span>
-</h3>
-
-
-<p>These flags indicate various properties of a <a href="gtktreemodel.html#GtkTreeModel">Gtk.TreeModel</a>.</p>
-<p>They are returned by <a href="gtktreemodel.html#gtk_tree_model_get_flags">Gtk.TreeModel.get_flags</a>, and must be
-static for the lifetime of the object. A more complete description
-of <a href="gtktreemodel.html#GTK_TREE_MODEL_ITERS_PERSIST">Gtk.TreeModelFlags.ITERS_PERSIST</a> can be found in the overview of
-this section.</p>
-
-
-
-
-	<div class="members-container">
-		<h4>Members</h4>
-					
-<div class="symbol-detail" data-hotdoc-id="GTK_TREE_MODEL_ITERS_PERSIST">
-	<div>
-		<i><em><code>Gtk.TreeModelFlags.ITERS_PERSIST</code></em></i>
-		(<span class="value">1</span>)
-		–
-	</div>
-			<i>No description available</i>
-	</div>
-
-					
-<div class="symbol-detail" data-hotdoc-id="GTK_TREE_MODEL_LIST_ONLY">
-	<div>
-		<i><em><code>Gtk.TreeModelFlags.LIST_ONLY</code></em></i>
-		(<span class="value">2</span>)
-		–
-	</div>
-			<i>No description available</i>
-	</div>
-
-			</div>
-
-
-
-        </div>
 
 </div>
 
@@ -11520,6 +11520,105 @@ this section.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="GtkTreeModelForeachFunc">
 	
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="GtkTreeModelForeachFunc">
+	<span><code>Gtk.TreeModelForeachFunc</code></span>
+</h3>
+
+
+
+
+<pre class="c-prototype">
+<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+(*Gtk.TreeModelForeachFunc) (<a title="Gtk.TreeModel" href="gtktreemodel.html#GtkTreeModel">Gtk.TreeModel</a>,
+                             <a title="Gtk.TreePath" href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>,
+                             <a title="Gtk.TreeIter" href="gtktreemodel.html#GtkTreeIter">Gtk.TreeIter</a>,
+                             <a title="object" href="https://docs.python.org/3/library/functions.html#object">object</a>)</pre>
+
+<p>Type of the callback passed to <a href="gtktreemodel.html#gtk_tree_model_foreach">Gtk.TreeModel.foreach</a> to
+iterate over the rows in a tree model.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>model</code></em></i>
+					(
+						<a title="Gtk.TreeModel" href="gtktreemodel.html#GtkTreeModel">Gtk.TreeModel</a>
+						)
+				–
+	</div>
+			<p>the <a href="gtktreemodel.html#GtkTreeModel">Gtk.TreeModel</a> being iterated</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>path</code></em></i>
+					(
+						<a title="Gtk.TreePath" href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>
+						)
+				–
+	</div>
+			<p>the current <a href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>iter</code></em></i>
+					(
+						<a title="Gtk.TreeIter" href="gtktreemodel.html#GtkTreeIter">Gtk.TreeIter</a>
+						)
+				–
+	</div>
+			<p>the current <a href="gtktreemodel.html#GtkTreeIter">Gtk.TreeIter</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>data</code></em></i>
+					(
+						<a title="object" href="https://docs.python.org/3/library/functions.html#object">object</a>
+						)
+				–
+	</div>
+			<p>The user data passed to <a href="gtktreemodel.html#gtk_tree_model_foreach">Gtk.TreeModel.foreach</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+										)
+								–
+			</div>
+							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> to stop iterating, <a href="https://docs.python.org/3/library/constants.html#False">False</a> to continue</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -11699,105 +11798,6 @@ iterate over the rows in a tree model.</p>
 								–
 			</div>
 							<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> to stop iterating, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">false</a> to continue</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="GtkTreeModelForeachFunc">
-	<span><code>Gtk.TreeModelForeachFunc</code></span>
-</h3>
-
-
-
-
-<pre class="c-prototype">
-<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
-(*Gtk.TreeModelForeachFunc) (<a title="Gtk.TreeModel" href="gtktreemodel.html#GtkTreeModel">Gtk.TreeModel</a>,
-                             <a title="Gtk.TreePath" href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>,
-                             <a title="Gtk.TreeIter" href="gtktreemodel.html#GtkTreeIter">Gtk.TreeIter</a>,
-                             <a title="object" href="https://docs.python.org/3/library/functions.html#object">object</a>)</pre>
-
-<p>Type of the callback passed to <a href="gtktreemodel.html#gtk_tree_model_foreach">Gtk.TreeModel.foreach</a> to
-iterate over the rows in a tree model.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>model</code></em></i>
-					(
-						<a title="Gtk.TreeModel" href="gtktreemodel.html#GtkTreeModel">Gtk.TreeModel</a>
-						)
-				–
-	</div>
-			<p>the <a href="gtktreemodel.html#GtkTreeModel">Gtk.TreeModel</a> being iterated</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>path</code></em></i>
-					(
-						<a title="Gtk.TreePath" href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a>
-						)
-				–
-	</div>
-			<p>the current <a href="gtktreemodel.html#GtkTreePath">Gtk.TreePath</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>iter</code></em></i>
-					(
-						<a title="Gtk.TreeIter" href="gtktreemodel.html#GtkTreeIter">Gtk.TreeIter</a>
-						)
-				–
-	</div>
-			<p>the current <a href="gtktreemodel.html#GtkTreeIter">Gtk.TreeIter</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>data</code></em></i>
-					(
-						<a title="object" href="https://docs.python.org/3/library/functions.html#object">object</a>
-						)
-				–
-	</div>
-			<p>The user data passed to <a href="gtktreemodel.html#gtk_tree_model_foreach">Gtk.TreeModel.foreach</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
-										)
-								–
-			</div>
-							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> to stop iterating, <a href="https://docs.python.org/3/library/constants.html#False">False</a> to continue</p>
 
 					</div>
 	</div>

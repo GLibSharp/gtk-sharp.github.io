@@ -89,7 +89,7 @@ $('body').removeClass('no-script');
 </nav>
 
 <main>
-<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="gtkeditable.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['c', 'javascript', 'python']" data-hotdoc-meta-gi-language="c">
+<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="gtkeditable.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['python', 'c', 'javascript']" data-hotdoc-meta-gi-language="c">
 <script src="assets/js/utils.js"></script>
 
 <div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
@@ -110,6 +110,77 @@ $('body').removeClass('no-script');
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_editable_select_region">
 	
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_editable_select_region">
+	<span><code>Gtk.Editable.select_region</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Editable.select_region (self, start_pos, end_pos):
+    #python wrapper for 'gtk_editable_select_region'</pre>
+
+<p>Selects a region of text. The characters that are selected are
+those characters at positions from <em>start_pos</em> up to, but not
+including <em>end_pos</em>. If <em>end_pos</em> is negative, then the
+characters selected are those characters from <em>start_pos</em> to
+the end of the text.</p>
+<p>Note that positions are specified in characters, not bytes.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>editable</code></em></i>
+					(
+						<a title="Gtk.Editable" href="gtkeditable.html#GtkEditable">Gtk.Editable</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkeditable.html#GtkEditable">Gtk.Editable</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>start_pos</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>start of region</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>end_pos</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>end of region</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -247,25 +318,30 @@ the end of the text.</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_editable_get_selection_bounds">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_editable_select_region">
-	<span><code>Gtk.Editable.select_region</code></span>
+<h4 data-hotdoc-id="gtk_editable_get_selection_bounds">
+	<span><code>Gtk.Editable.get_selection_bounds</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.Editable.select_region (self, start_pos, end_pos):
-    #python wrapper for 'gtk_editable_select_region'</pre>
+def Gtk.Editable.get_selection_bounds (self):
+    #python wrapper for 'gtk_editable_get_selection_bounds'</pre>
 
-<p>Selects a region of text. The characters that are selected are
-those characters at positions from <em>start_pos</em> up to, but not
-including <em>end_pos</em>. If <em>end_pos</em> is negative, then the
-characters selected are those characters from <em>start_pos</em> to
-the end of the text.</p>
+<p>Retrieves the selection bound of the editable. start_pos will be filled
+with the start of the selection and <em>end_pos</em> with end. If no text was
+selected both will be identical and <a href="https://docs.python.org/3/library/constants.html#False">False</a> will be returned.</p>
 <p>Note that positions are specified in characters, not bytes.</p>
 
 
@@ -285,29 +361,45 @@ the end of the text.</p>
 
 	</div>
 
-					
+			</div>
+
+		<div class="return-values-container">
+		<p><b>Returns a tuple made of:</b></p>
+				
 <div class="symbol-detail">
 	<div>
-		<i><em><code>start_pos</code></em></i>
-					(
-						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+									(
+			<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
 						)
 				–
 	</div>
-			<p>start of region</p>
+			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if an area is selected, <a href="https://docs.python.org/3/library/constants.html#False">False</a> otherwise</p>
 
 	</div>
 
-					
+				
 <div class="symbol-detail">
 	<div>
-		<i><em><code>end_pos</code></em></i>
-					(
-						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+				<i><em><code>start_pos</code></em></i>
+									(
+			<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
 						)
 				–
 	</div>
-			<p>end of region</p>
+			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if an area is selected, <a href="https://docs.python.org/3/library/constants.html#False">False</a> otherwise</p>
+
+	</div>
+
+				
+<div class="symbol-detail">
+	<div>
+				<i><em><code>end_pos</code></em></i>
+									(
+			<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if an area is selected, <a href="https://docs.python.org/3/library/constants.html#False">False</a> otherwise</p>
 
 	</div>
 
@@ -318,13 +410,6 @@ the end of the text.</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_editable_get_selection_bounds">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -498,24 +583,31 @@ selected both will be identical and <a href="https://developer.mozilla.org/en-US
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_editable_insert_text">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_editable_get_selection_bounds">
-	<span><code>Gtk.Editable.get_selection_bounds</code></span>
+<h4 data-hotdoc-id="gtk_editable_insert_text">
+	<span><code>Gtk.Editable.insert_text</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.Editable.get_selection_bounds (self):
-    #python wrapper for 'gtk_editable_get_selection_bounds'</pre>
+def Gtk.Editable.insert_text (self, new_text, new_text_length, position):
+    #python wrapper for 'gtk_editable_insert_text'</pre>
 
-<p>Retrieves the selection bound of the editable. start_pos will be filled
-with the start of the selection and <em>end_pos</em> with end. If no text was
-selected both will be identical and <a href="https://docs.python.org/3/library/constants.html#False">False</a> will be returned.</p>
-<p>Note that positions are specified in characters, not bytes.</p>
+<p>Inserts <em>new_text_length</em> bytes of <em>new_text</em> into the contents of the
+widget, at position <em>position</em>.</p>
+<p>Note that the position is in characters, not in bytes.
+The function updates <em>position</em> to point after the newly inserted text.</p>
 
 
 
@@ -534,45 +626,42 @@ selected both will be identical and <a href="https://docs.python.org/3/library/c
 
 	</div>
 
-			</div>
-
-		<div class="return-values-container">
-		<p><b>Returns a tuple made of:</b></p>
-				
+					
 <div class="symbol-detail">
 	<div>
-									(
-			<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+		<i><em><code>new_text</code></em></i>
+					(
+						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
 						)
 				–
 	</div>
-			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if an area is selected, <a href="https://docs.python.org/3/library/constants.html#False">False</a> otherwise</p>
+			<p>the text to append</p>
 
 	</div>
 
-				
+					
 <div class="symbol-detail">
 	<div>
-				<i><em><code>start_pos</code></em></i>
-									(
-			<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+		<i><em><code>new_text_length</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
 						)
 				–
 	</div>
-			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if an area is selected, <a href="https://docs.python.org/3/library/constants.html#False">False</a> otherwise</p>
+			<p>the length of the text in bytes, or -1</p>
 
 	</div>
 
-				
+					
 <div class="symbol-detail">
 	<div>
-				<i><em><code>end_pos</code></em></i>
-									(
-			<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+		<i><em><code>position</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
 						)
 				–
 	</div>
-			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if an area is selected, <a href="https://docs.python.org/3/library/constants.html#False">False</a> otherwise</p>
+			<p>location of the position text will be inserted at</p>
 
 	</div>
 
@@ -583,13 +672,6 @@ selected both will be identical and <a href="https://docs.python.org/3/library/c
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_editable_insert_text">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -752,24 +834,32 @@ The function updates <em>position</em> to point after the newly inserted text.</
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_editable_delete_text">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_editable_insert_text">
-	<span><code>Gtk.Editable.insert_text</code></span>
+<h4 data-hotdoc-id="gtk_editable_delete_text">
+	<span><code>Gtk.Editable.delete_text</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.Editable.insert_text (self, new_text, new_text_length, position):
-    #python wrapper for 'gtk_editable_insert_text'</pre>
+def Gtk.Editable.delete_text (self, start_pos, end_pos):
+    #python wrapper for 'gtk_editable_delete_text'</pre>
 
-<p>Inserts <em>new_text_length</em> bytes of <em>new_text</em> into the contents of the
-widget, at position <em>position</em>.</p>
-<p>Note that the position is in characters, not in bytes.
-The function updates <em>position</em> to point after the newly inserted text.</p>
+<p>Deletes a sequence of characters. The characters that are deleted are
+those characters at positions from <em>start_pos</em> up to, but not including
+<em>end_pos</em>. If <em>end_pos</em> is negative, then the characters deleted
+are those from <em>start_pos</em> to the end of the text.</p>
+<p>Note that the positions are specified in characters, not bytes.</p>
 
 
 
@@ -791,39 +881,26 @@ The function updates <em>position</em> to point after the newly inserted text.</
 					
 <div class="symbol-detail">
 	<div>
-		<i><em><code>new_text</code></em></i>
+		<i><em><code>start_pos</code></em></i>
 					(
-						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
 						)
 				–
 	</div>
-			<p>the text to append</p>
+			<p>start position</p>
 
 	</div>
 
 					
 <div class="symbol-detail">
 	<div>
-		<i><em><code>new_text_length</code></em></i>
+		<i><em><code>end_pos</code></em></i>
 					(
 						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
 						)
 				–
 	</div>
-			<p>the length of the text in bytes, or -1</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>position</code></em></i>
-					(
-						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
-						)
-				–
-	</div>
-			<p>location of the position text will be inserted at</p>
+			<p>end position</p>
 
 	</div>
 
@@ -834,13 +911,6 @@ The function updates <em>position</em> to point after the newly inserted text.</
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_editable_delete_text">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -976,25 +1046,32 @@ are those from <em>start_pos</em> to the end of the text.</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_editable_get_chars">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_editable_delete_text">
-	<span><code>Gtk.Editable.delete_text</code></span>
+<h4 data-hotdoc-id="gtk_editable_get_chars">
+	<span><code>Gtk.Editable.get_chars</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.Editable.delete_text (self, start_pos, end_pos):
-    #python wrapper for 'gtk_editable_delete_text'</pre>
+def Gtk.Editable.get_chars (self, start_pos, end_pos):
+    #python wrapper for 'gtk_editable_get_chars'</pre>
 
-<p>Deletes a sequence of characters. The characters that are deleted are
-those characters at positions from <em>start_pos</em> up to, but not including
-<em>end_pos</em>. If <em>end_pos</em> is negative, then the characters deleted
-are those from <em>start_pos</em> to the end of the text.</p>
-<p>Note that the positions are specified in characters, not bytes.</p>
+<p>Retrieves a sequence of characters. The characters that are retrieved
+are those characters at positions from <em>start_pos</em> up to, but not
+including <em>end_pos</em>. If <em>end_pos</em> is negative, then the characters
+retrieved are those characters from <em>start_pos</em> to the end of the text.</p>
+<p>Note that positions are specified in characters, not bytes.</p>
 
 
 
@@ -1022,7 +1099,7 @@ are those from <em>start_pos</em> to the end of the text.</p>
 						)
 				–
 	</div>
-			<p>start position</p>
+			<p>start of text</p>
 
 	</div>
 
@@ -1035,24 +1112,33 @@ are those from <em>start_pos</em> to the end of the text.</p>
 						)
 				–
 	</div>
-			<p>end position</p>
+			<p>end of text</p>
 
 	</div>
 
 			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
+										)
+								–
+			</div>
+							<p>a pointer to the contents of the widget as a
+string. This string is allocated by the <a href="gtkeditable.html#GtkEditable">Gtk.Editable</a>
+implementation and should be freed by the caller.</p>
+
+					</div>
+	</div>
 
 
 
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_editable_get_chars">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -1218,25 +1304,29 @@ implementation and should be freed by the caller.</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_editable_cut_clipboard">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_editable_get_chars">
-	<span><code>Gtk.Editable.get_chars</code></span>
+<h4 data-hotdoc-id="gtk_editable_cut_clipboard">
+	<span><code>Gtk.Editable.cut_clipboard</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.Editable.get_chars (self, start_pos, end_pos):
-    #python wrapper for 'gtk_editable_get_chars'</pre>
+def Gtk.Editable.cut_clipboard (self):
+    #python wrapper for 'gtk_editable_cut_clipboard'</pre>
 
-<p>Retrieves a sequence of characters. The characters that are retrieved
-are those characters at positions from <em>start_pos</em> up to, but not
-including <em>end_pos</em>. If <em>end_pos</em> is negative, then the characters
-retrieved are those characters from <em>start_pos</em> to the end of the text.</p>
-<p>Note that positions are specified in characters, not bytes.</p>
+<p>Removes the contents of the currently selected content in the editable and
+puts it on the clipboard.</p>
 
 
 
@@ -1255,62 +1345,13 @@ retrieved are those characters from <em>start_pos</em> to the end of the text.</
 
 	</div>
 
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>start_pos</code></em></i>
-					(
-						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
-						)
-				–
-	</div>
-			<p>start of text</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>end_pos</code></em></i>
-					(
-						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
-						)
-				–
-	</div>
-			<p>end of text</p>
-
-	</div>
-
 			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
-										)
-								–
-			</div>
-							<p>a pointer to the contents of the widget as a
-string. This string is allocated by the <a href="gtkeditable.html#GtkEditable">Gtk.Editable</a>
-implementation and should be freed by the caller.</p>
-
-					</div>
-	</div>
 
 
 
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_editable_cut_clipboard">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -1392,21 +1433,28 @@ puts it on the clipboard.</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_editable_copy_clipboard">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_editable_cut_clipboard">
-	<span><code>Gtk.Editable.cut_clipboard</code></span>
+<h4 data-hotdoc-id="gtk_editable_copy_clipboard">
+	<span><code>Gtk.Editable.copy_clipboard</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.Editable.cut_clipboard (self):
-    #python wrapper for 'gtk_editable_cut_clipboard'</pre>
+def Gtk.Editable.copy_clipboard (self):
+    #python wrapper for 'gtk_editable_copy_clipboard'</pre>
 
-<p>Removes the contents of the currently selected content in the editable and
+<p>Copies the contents of the currently selected content in the editable and
 puts it on the clipboard.</p>
 
 
@@ -1433,13 +1481,6 @@ puts it on the clipboard.</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_editable_copy_clipboard">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -1521,22 +1562,29 @@ puts it on the clipboard.</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_editable_paste_clipboard">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_editable_copy_clipboard">
-	<span><code>Gtk.Editable.copy_clipboard</code></span>
+<h4 data-hotdoc-id="gtk_editable_paste_clipboard">
+	<span><code>Gtk.Editable.paste_clipboard</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.Editable.copy_clipboard (self):
-    #python wrapper for 'gtk_editable_copy_clipboard'</pre>
+def Gtk.Editable.paste_clipboard (self):
+    #python wrapper for 'gtk_editable_paste_clipboard'</pre>
 
-<p>Copies the contents of the currently selected content in the editable and
-puts it on the clipboard.</p>
+<p>Pastes the content of the clipboard to the current position of the
+cursor in the editable.</p>
 
 
 
@@ -1562,13 +1610,6 @@ puts it on the clipboard.</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_editable_paste_clipboard">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -1650,22 +1691,29 @@ cursor in the editable.</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_editable_delete_selection">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_editable_paste_clipboard">
-	<span><code>Gtk.Editable.paste_clipboard</code></span>
+<h4 data-hotdoc-id="gtk_editable_delete_selection">
+	<span><code>Gtk.Editable.delete_selection</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.Editable.paste_clipboard (self):
-    #python wrapper for 'gtk_editable_paste_clipboard'</pre>
+def Gtk.Editable.delete_selection (self):
+    #python wrapper for 'gtk_editable_delete_selection'</pre>
 
-<p>Pastes the content of the clipboard to the current position of the
-cursor in the editable.</p>
+<p>Deletes the currently selected text of the editable.
+This call doesn’t do anything if there is no selected text.</p>
 
 
 
@@ -1691,13 +1739,6 @@ cursor in the editable.</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_editable_delete_selection">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -1779,22 +1820,33 @@ This call doesn’t do anything if there is no selected text.</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_editable_set_position">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_editable_delete_selection">
-	<span><code>Gtk.Editable.delete_selection</code></span>
+<h4 data-hotdoc-id="gtk_editable_set_position">
+	<span><code>Gtk.Editable.set_position</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.Editable.delete_selection (self):
-    #python wrapper for 'gtk_editable_delete_selection'</pre>
+def Gtk.Editable.set_position (self, position):
+    #python wrapper for 'gtk_editable_set_position'</pre>
 
-<p>Deletes the currently selected text of the editable.
-This call doesn’t do anything if there is no selected text.</p>
+<p>Sets the cursor position in the editable to the given value.</p>
+<p>The cursor is displayed before the character with the given (base 0)
+index in the contents of the editable. The value must be less than or
+equal to the number of characters in the editable. A value of -1
+indicates that the position should be set after the last character
+of the editable. Note that <em>position</em> is in characters, not in bytes.</p>
 
 
 
@@ -1813,6 +1865,19 @@ This call doesn’t do anything if there is no selected text.</p>
 
 	</div>
 
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>position</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>the position of the cursor</p>
+
+	</div>
+
 			</div>
 
 
@@ -1820,13 +1885,6 @@ This call doesn’t do anything if there is no selected text.</p>
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_editable_set_position">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -1940,26 +1998,30 @@ of the editable. Note that <em>position</em> is in characters, not in bytes.</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_editable_get_position">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_editable_set_position">
-	<span><code>Gtk.Editable.set_position</code></span>
+<h4 data-hotdoc-id="gtk_editable_get_position">
+	<span><code>Gtk.Editable.get_position</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.Editable.set_position (self, position):
-    #python wrapper for 'gtk_editable_set_position'</pre>
+def Gtk.Editable.get_position (self):
+    #python wrapper for 'gtk_editable_get_position'</pre>
 
-<p>Sets the cursor position in the editable to the given value.</p>
-<p>The cursor is displayed before the character with the given (base 0)
-index in the contents of the editable. The value must be less than or
-equal to the number of characters in the editable. A value of -1
-indicates that the position should be set after the last character
-of the editable. Note that <em>position</em> is in characters, not in bytes.</p>
+<p>Retrieves the current position of the cursor relative to the start
+of the content of the editable.</p>
+<p>Note that this position is in characters, not in bytes.</p>
 
 
 
@@ -1978,33 +2040,27 @@ of the editable. Note that <em>position</em> is in characters, not in bytes.</p>
 
 	</div>
 
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>position</code></em></i>
-					(
-						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
-						)
-				–
-	</div>
-			<p>the position of the cursor</p>
-
-	</div>
-
 			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+										)
+								–
+			</div>
+							<p>the cursor position</p>
+
+					</div>
+	</div>
 
 
 
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_editable_get_position">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -2114,23 +2170,29 @@ of the content of the editable.</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_editable_set_editable">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_editable_get_position">
-	<span><code>Gtk.Editable.get_position</code></span>
+<h4 data-hotdoc-id="gtk_editable_set_editable">
+	<span><code>Gtk.Editable.set_editable</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.Editable.get_position (self):
-    #python wrapper for 'gtk_editable_get_position'</pre>
+def Gtk.Editable.set_editable (self, is_editable):
+    #python wrapper for 'gtk_editable_set_editable'</pre>
 
-<p>Retrieves the current position of the cursor relative to the start
-of the content of the editable.</p>
-<p>Note that this position is in characters, not in bytes.</p>
+<p>Determines if the user can edit the text in the editable
+widget or not.</p>
 
 
 
@@ -2149,34 +2211,27 @@ of the content of the editable.</p>
 
 	</div>
 
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
-										)
-								–
-			</div>
-							<p>the cursor position</p>
-
-					</div>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>is_editable</code></em></i>
+					(
+						<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+						)
+				–
 	</div>
+			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if the user is allowed to edit the text
+in the widget</p>
+
+	</div>
+
+			</div>
 
 
 
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_editable_set_editable">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -2284,22 +2339,29 @@ in the widget</p>
 
 
         </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_editable_get_editable">
+	
         <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h4 data-hotdoc-id="gtk_editable_set_editable">
-	<span><code>Gtk.Editable.set_editable</code></span>
+<h4 data-hotdoc-id="gtk_editable_get_editable">
+	<span><code>Gtk.Editable.get_editable</code></span>
 </h4>
 
 
 <pre class="python-prototype">
-def Gtk.Editable.set_editable (self, is_editable):
-    #python wrapper for 'gtk_editable_set_editable'</pre>
+def Gtk.Editable.get_editable (self):
+    #python wrapper for 'gtk_editable_get_editable'</pre>
 
-<p>Determines if the user can edit the text in the editable
-widget or not.</p>
+<p>Retrieves whether <em>editable</em> is editable. See
+<a href="gtkeditable.html#gtk_editable_set_editable">Gtk.Editable.set_editable</a>.</p>
 
 
 
@@ -2318,34 +2380,27 @@ widget or not.</p>
 
 	</div>
 
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>is_editable</code></em></i>
-					(
-						<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
-						)
-				–
-	</div>
-			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if the user is allowed to edit the text
-in the widget</p>
-
-	</div>
-
 			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+										)
+								–
+			</div>
+							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if <em>editable</em> is editable.</p>
+
+					</div>
+	</div>
 
 
 
 
 
         </div>
-
-</div>
-
-            
-
-<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_editable_get_editable">
-	
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -2453,61 +2508,6 @@ function Gtk.prototype.get_editable(): {
 
 
         </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_editable_get_editable">
-	<span><code>Gtk.Editable.get_editable</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.Editable.get_editable (self):
-    #python wrapper for 'gtk_editable_get_editable'</pre>
-
-<p>Retrieves whether <em>editable</em> is editable. See
-<a href="gtkeditable.html#gtk_editable_set_editable">Gtk.Editable.set_editable</a>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>editable</code></em></i>
-					(
-						<a title="Gtk.Editable" href="gtkeditable.html#GtkEditable">Gtk.Editable</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkeditable.html#GtkEditable">Gtk.Editable</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
-										)
-								–
-			</div>
-							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if <em>editable</em> is editable.</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
 
 </div>
 
@@ -2519,6 +2519,20 @@ def Gtk.Editable.get_editable (self):
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="GtkEditable">
 	
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="GtkEditable">
+	<span><code>Gtk.Editable</code></span>
+</h3>
+
+
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -2534,20 +2548,6 @@ def Gtk.Editable.get_editable (self):
 
         </div>
         <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h3 data-hotdoc-id="GtkEditable">
-	<span><code>Gtk.Editable</code></span>
-</h3>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
             
 
 
