@@ -89,7 +89,7 @@ $('body').removeClass('no-script');
 </nav>
 
 <main>
-<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="gtkdnd-h.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['c', 'javascript', 'python']" data-hotdoc-meta-gi-language="c">
+<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="gtkdnd-h.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['csharp']" data-hotdoc-meta-gi-language="c">
 <script src="assets/js/utils.js"></script>
 
 <div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
@@ -105,7 +105,7 @@ $('body').removeClass('no-script');
 via the drag-and-drop metaphor.</p>
 <p>As well as the functions listed here, applications may need to use some
 facilities provided for [Selections][gtk3-Selections]. Also, the Drag and
-Drop API makes use of signals in the <a href="gtkwidget-h.html#GtkWidget">GtkWidget</a> class.</p>
+Drop API makes use of signals in the <a href="gtkwidget-h.html#GtkWidget" data-gi-href-csharp="gtkwidget-h.html#GtkWidget" data-gi-title-csharp="Gtk.Widget">GtkWidget</a> class.</p>
 
     </div>
         
@@ -116,40 +116,29 @@ Drop API makes use of signals in the <a href="gtkwidget-h.html#GtkWidget">GtkWid
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_drag_dest_set">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h4 data-hotdoc-id="gtk_drag_dest_set">
-	<span><code>gtk_drag_dest_set</code></span>
+	<span><code>Gtk.Widget.DragDestSet</code></span>
 </h4>
 
 
 
 
 <pre class="c-prototype">
-gtk_drag_dest_set (<a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> * widget,
-                   <a title="GtkDestDefaults" href="gtkdnd-h.html#GtkDestDefaults">GtkDestDefaults</a> flags,
-                   <a title="GtkTargetEntry" href="gtkselection-h.html#GtkTargetEntry">GtkTargetEntry</a> * targets,
-                   <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> n_targets,
-                   <a title="GdkDragAction" href="https://developer.gnome.org/gdk3/gdk3-Drag-and-Drop.html#GdkDragAction">GdkDragAction</a> actions)</pre>
+Gtk.Widget.DragDestSet (<a title="Gtk.DestDefaults" href="gtkdnd-h.html#GtkDestDefaults">Gtk.DestDefaults</a>,
+                        <a title="Gtk.TargetEntry" href="gtkselection-h.html#GtkTargetEntry">Gtk.TargetEntry</a> [],
+                        <a title="int" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/int">int</a>,
+                        <a title="Gdk.DragAction" href="https://developer.gnome.org/gdk3/gdk3-Drag-and-Drop.html#GdkDragAction">Gdk.DragAction</a>)</pre>
 
 
 
 
 	<div class="parameters-container">
 		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkwidget-h.html#GtkWidget">GtkWidget</a></p>
-
-	</div>
-
 					
 <div class="symbol-detail">
 	<div>
@@ -164,107 +153,12 @@ gtk_drag_dest_set (<a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWid
 <div class="symbol-detail">
 	<div>
 		<i><em><code>targets</code></em></i>
-					(
-						
-<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
-<span class="annotation">[<abbr title="Parameter points to an array of items"><span class="acronym">array</span></abbr> length=n_targets]</span>
-
-						)
-				–
-	</div>
-			<p>a pointer to an array of <a href="gtkselection-h.html#GtkTargetEntry">GtkTargetEntry</a>
-indicating the drop types that this <em>widget</em> will accept, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a>.
-Later you can access the list with <a href="gtkdnd-h.html#gtk_drag_dest_get_target_list">gtk_drag_dest_get_target_list</a>
-and <a href="gtkdnd-h.html#gtk_drag_dest_find_target">gtk_drag_dest_find_target</a>.</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>n_targets</code></em></i>
-				–
-	</div>
-			<p>the number of entries in <em>targets</em></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>actions</code></em></i>
-				–
-	</div>
-			<p>a bitmask of possible actions for a drop onto this <em>widget</em>.</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_drag_dest_set">
-	<span><code>Gtk.prototype.drag_dest_set</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.drag_dest_set(flags: <a title="Gtk.DestDefaults" href="gtkdnd-h.html#GtkDestDefaults">Gtk.DestDefaults</a>, targets: [ <a title="Gtk.TargetEntry" href="gtkselection-h.html#GtkTargetEntry">Gtk.TargetEntry</a> ], n_targets: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, actions: <a title="Gdk.DragAction" href="https://developer.gnome.org/gdk3/gdk3-Drag-and-Drop.html#GdkDragAction">Gdk.DragAction</a>): {
-    // javascript wrapper for 'gtk_drag_dest_set'
-}</pre>
-
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>flags</code></em></i>
-					(
-						<a title="Gtk.DestDefaults" href="gtkdnd-h.html#GtkDestDefaults">Gtk.DestDefaults</a>
-						)
-				–
-	</div>
-			<p>which types of default drag behavior to use</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>targets</code></em></i>
-					(
-						[ <a title="Gtk.TargetEntry" href="gtkselection-h.html#GtkTargetEntry">Gtk.TargetEntry</a> ]
-						)
 				–
 	</div>
 			<p>a pointer to an array of <a href="gtkselection-h.html#GtkTargetEntry">Gtk.TargetEntry</a>
-indicating the drop types that this <em>widget</em> will accept, or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a>.
-Later you can access the list with <a href="gtkdnd-h.html#gtk_drag_dest_get_target_list">Gtk.prototype.drag_dest_get_target_list</a>
-and <a href="gtkdnd-h.html#gtk_drag_dest_find_target">Gtk.prototype.drag_dest_find_target</a>.</p>
+indicating the drop types that this <em>widget</em> will accept, or <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/null">null</a>.
+Later you can access the list with <a href="gtkdnd-h.html#gtk_drag_dest_get_target_list">Gtk.Widget.DragDestGetTargetList</a>
+and <a href="gtkdnd-h.html#gtk_drag_dest_find_target">Gtk.Widget.DragDestFindTarget</a>.</p>
 
 	</div>
 
@@ -272,9 +166,6 @@ and <a href="gtkdnd-h.html#gtk_drag_dest_find_target">Gtk.prototype.drag_dest_fi
 <div class="symbol-detail">
 	<div>
 		<i><em><code>n_targets</code></em></i>
-					(
-						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
-						)
 				–
 	</div>
 			<p>the number of entries in <em>targets</em></p>
@@ -285,103 +176,6 @@ and <a href="gtkdnd-h.html#gtk_drag_dest_find_target">Gtk.prototype.drag_dest_fi
 <div class="symbol-detail">
 	<div>
 		<i><em><code>actions</code></em></i>
-					(
-						<a title="Gdk.DragAction" href="https://developer.gnome.org/gdk3/gdk3-Drag-and-Drop.html#GdkDragAction">Gdk.DragAction</a>
-						)
-				–
-	</div>
-			<p>a bitmask of possible actions for a drop onto this <em>widget</em>.</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_drag_dest_set">
-	<span><code>Gtk.Widget.drag_dest_set</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.Widget.drag_dest_set (self, flags, targets, n_targets, actions):
-    #python wrapper for 'gtk_drag_dest_set'</pre>
-
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>flags</code></em></i>
-					(
-						<a title="Gtk.DestDefaults" href="gtkdnd-h.html#GtkDestDefaults">Gtk.DestDefaults</a>
-						)
-				–
-	</div>
-			<p>which types of default drag behavior to use</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>targets</code></em></i>
-					(
-						[ <a title="Gtk.TargetEntry" href="gtkselection-h.html#GtkTargetEntry">Gtk.TargetEntry</a> ]
-						)
-				–
-	</div>
-			<p>a pointer to an array of <a href="gtkselection-h.html#GtkTargetEntry">Gtk.TargetEntry</a>
-indicating the drop types that this <em>widget</em> will accept, or <a href="https://docs.python.org/3/library/constants.html#None">None</a>.
-Later you can access the list with <a href="gtkdnd-h.html#gtk_drag_dest_get_target_list">Gtk.Widget.drag_dest_get_target_list</a>
-and <a href="gtkdnd-h.html#gtk_drag_dest_find_target">Gtk.Widget.drag_dest_find_target</a>.</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>n_targets</code></em></i>
-					(
-						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
-						)
-				–
-	</div>
-			<p>the number of entries in <em>targets</em></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>actions</code></em></i>
-					(
-						<a title="Gdk.DragAction" href="https://developer.gnome.org/gdk3/gdk3-Drag-and-Drop.html#GdkDragAction">Gdk.DragAction</a>
-						)
 				–
 	</div>
 			<p>a bitmask of possible actions for a drop onto this <em>widget</em>.</p>
@@ -402,116 +196,24 @@ and <a href="gtkdnd-h.html#gtk_drag_dest_find_target">Gtk.Widget.drag_dest_find_
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_drag_dest_unset">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h4 data-hotdoc-id="gtk_drag_dest_unset">
-	<span><code>gtk_drag_dest_unset</code></span>
+	<span><code>Gtk.Widget.DragDestUnset</code></span>
 </h4>
 
 
 
 
 <pre class="c-prototype">
-gtk_drag_dest_unset (<a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> * widget)</pre>
+Gtk.Widget.DragDestUnset ()</pre>
 
 
 
 
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkwidget-h.html#GtkWidget">GtkWidget</a></p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_drag_dest_unset">
-	<span><code>Gtk.prototype.drag_dest_unset</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.drag_dest_unset(): {
-    // javascript wrapper for 'gtk_drag_dest_unset'
-}</pre>
-
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a></p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_drag_dest_unset">
-	<span><code>Gtk.Widget.drag_dest_unset</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.Widget.drag_dest_unset (self):
-    #python wrapper for 'gtk_drag_dest_unset'</pre>
-
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a></p>
-
-	</div>
-
-			</div>
 
 
 
@@ -525,39 +227,28 @@ def Gtk.Widget.drag_dest_unset (self):
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_drag_dest_find_target">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h4 data-hotdoc-id="gtk_drag_dest_find_target">
-	<span><code>gtk_drag_dest_find_target</code></span>
+	<span><code>Gtk.Widget.DragDestFindTarget</code></span>
 </h4>
 
 
 
 
 <pre class="c-prototype">
-<a title="GdkAtom" href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">GdkAtom</a>
-gtk_drag_dest_find_target (<a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> * widget,
-                           <a title="GdkDragContext" href="https://developer.gnome.org/gdk3/gdk3-Drag-and-Drop.html#GdkDragContext-struct">GdkDragContext</a> * context,
-                           <a title="GtkTargetList" href="gtkselection-h.html#GtkTargetList">GtkTargetList</a> * target_list)</pre>
+<a title="Gdk.Atom" href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">Gdk.Atom</a>
+Gtk.Widget.DragDestFindTarget (<a title="Gdk.DragContext" href="https://developer.gnome.org/gdk3/gdk3-Drag-and-Drop.html#GdkDragContext-struct">Gdk.DragContext</a>,
+                               <a title="Gtk.TargetList" href="gtkselection-h.html#GtkTargetList">Gtk.TargetList</a>)</pre>
 
 
 
 
 	<div class="parameters-container">
 		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-				–
-	</div>
-			<p>drag destination widget</p>
-
-	</div>
-
 					
 <div class="symbol-detail">
 	<div>
@@ -572,14 +263,9 @@ gtk_drag_dest_find_target (<a title="GtkWidget" href="gtkwidget-h.html#GtkWidget
 <div class="symbol-detail">
 	<div>
 		<i><em><code>target_list</code></em></i>
-					(
-						
-<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
-
-						)
 				–
 	</div>
-			<p>list of droppable targets, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> to use
+			<p>list of droppable targets, or <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/null">null</a> to use
 gtk_drag_dest_get_target_list (@widget).</p>
 
 	</div>
@@ -590,167 +276,6 @@ gtk_drag_dest_get_target_list (@widget).</p>
 		<div class="symbol-detail">
 			<div>
 				<b>Returns</b>
-								–
-			</div>
-							<p>(transfer none):</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_drag_dest_find_target">
-	<span><code>Gtk.prototype.drag_dest_find_target</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.drag_dest_find_target(context: <a title="Gdk.DragContext" href="https://developer.gnome.org/gdk3/gdk3-Drag-and-Drop.html#GdkDragContext-struct">Gdk.DragContext</a>, target_list: <a title="Gtk.TargetList" href="gtkselection-h.html#GtkTargetList">Gtk.TargetList</a>): {
-    // javascript wrapper for 'gtk_drag_dest_find_target'
-}</pre>
-
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
-				–
-	</div>
-			<p>drag destination widget</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>context</code></em></i>
-					(
-						<a title="Gdk.DragContext" href="https://developer.gnome.org/gdk3/gdk3-Drag-and-Drop.html#GdkDragContext-struct">Gdk.DragContext</a>
-						)
-				–
-	</div>
-			<p>drag context</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>target_list</code></em></i>
-					(
-						<a title="Gtk.TargetList" href="gtkselection-h.html#GtkTargetList">Gtk.TargetList</a>
-						)
-				–
-	</div>
-			<p>list of droppable targets, or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a> to use
-gtk_drag_dest_get_target_list (@widget).</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Gdk.Atom" href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">Gdk.Atom</a>
-										)
-								–
-			</div>
-							<p>(transfer none):</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_drag_dest_find_target">
-	<span><code>Gtk.Widget.drag_dest_find_target</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.Widget.drag_dest_find_target (self, context, target_list):
-    #python wrapper for 'gtk_drag_dest_find_target'</pre>
-
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
-				–
-	</div>
-			<p>drag destination widget</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>context</code></em></i>
-					(
-						<a title="Gdk.DragContext" href="https://developer.gnome.org/gdk3/gdk3-Drag-and-Drop.html#GdkDragContext-struct">Gdk.DragContext</a>
-						)
-				–
-	</div>
-			<p>drag context</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>target_list</code></em></i>
-					(
-						<a title="Gtk.TargetList" href="gtkselection-h.html#GtkTargetList">Gtk.TargetList</a>
-						)
-				–
-	</div>
-			<p>list of droppable targets, or <a href="https://docs.python.org/3/library/constants.html#None">None</a> to use
-gtk_drag_dest_get_target_list (@widget).</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Gdk.Atom" href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">Gdk.Atom</a>
-										)
 								–
 			</div>
 							<p>(transfer none):</p>
@@ -770,148 +295,30 @@ gtk_drag_dest_get_target_list (@widget).</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_drag_dest_get_target_list">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h4 data-hotdoc-id="gtk_drag_dest_get_target_list">
-	<span><code>gtk_drag_dest_get_target_list</code></span>
+	<span><code>Gtk.Widget.DragDestGetTargetList</code></span>
 </h4>
 
 
 
 
 <pre class="c-prototype">
-<a title="GtkTargetList" href="gtkselection-h.html#GtkTargetList">GtkTargetList</a> *
-gtk_drag_dest_get_target_list (<a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> * widget)</pre>
+<a title="Gtk.TargetList" href="gtkselection-h.html#GtkTargetList">Gtk.TargetList</a>
+Gtk.Widget.DragDestGetTargetList ()</pre>
 
 
 
 
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkwidget-h.html#GtkWidget">GtkWidget</a></p>
-
-	</div>
-
-			</div>
 
 		<div class="return-values-container">
 		<div class="symbol-detail">
 			<div>
 				<b>Returns</b>
-								–
-			</div>
-							<i>No description available</i>
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_drag_dest_get_target_list">
-	<span><code>Gtk.prototype.drag_dest_get_target_list</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.drag_dest_get_target_list(): {
-    // javascript wrapper for 'gtk_drag_dest_get_target_list'
-}</pre>
-
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Gtk.TargetList" href="gtkselection-h.html#GtkTargetList">Gtk.TargetList</a>
-										)
-								–
-			</div>
-							<i>No description available</i>
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_drag_dest_get_target_list">
-	<span><code>Gtk.Widget.drag_dest_get_target_list</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.Widget.drag_dest_get_target_list (self):
-    #python wrapper for 'gtk_drag_dest_get_target_list'</pre>
-
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Gtk.TargetList" href="gtkselection-h.html#GtkTargetList">Gtk.TargetList</a>
-										)
 								–
 			</div>
 							<i>No description available</i>
@@ -930,21 +337,20 @@ def Gtk.Widget.drag_dest_get_target_list (self):
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_drag_dest_set_target_list">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h4 data-hotdoc-id="gtk_drag_dest_set_target_list">
-	<span><code>gtk_drag_dest_set_target_list</code></span>
+	<span><code>Gtk.Widget.DragDestSetTargetList</code></span>
 </h4>
 
 
 
 
 <pre class="c-prototype">
-gtk_drag_dest_set_target_list (<a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> * widget,
-                               <a title="GtkTargetList" href="gtkselection-h.html#GtkTargetList">GtkTargetList</a> * target_list)</pre>
+Gtk.Widget.DragDestSetTargetList (<a title="Gtk.TargetList" href="gtkselection-h.html#GtkTargetList">Gtk.TargetList</a>)</pre>
 
 
 
@@ -954,130 +360,10 @@ gtk_drag_dest_set_target_list (<a title="GtkWidget" href="gtkwidget-h.html#GtkWi
 					
 <div class="symbol-detail">
 	<div>
-		<i><em><code>widget</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkwidget-h.html#GtkWidget">GtkWidget</a> that’s a drag destination</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
 		<i><em><code>target_list</code></em></i>
-					(
-						
-<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
-
-						)
 				–
 	</div>
-			<p>list of droppable targets, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> for none</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_drag_dest_set_target_list">
-	<span><code>Gtk.prototype.drag_dest_set_target_list</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.drag_dest_set_target_list(target_list: <a title="Gtk.TargetList" href="gtkselection-h.html#GtkTargetList">Gtk.TargetList</a>): {
-    // javascript wrapper for 'gtk_drag_dest_set_target_list'
-}</pre>
-
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a> that’s a drag destination</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>target_list</code></em></i>
-					(
-						<a title="Gtk.TargetList" href="gtkselection-h.html#GtkTargetList">Gtk.TargetList</a>
-						)
-				–
-	</div>
-			<p>list of droppable targets, or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a> for none</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_drag_dest_set_target_list">
-	<span><code>Gtk.Widget.drag_dest_set_target_list</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.Widget.drag_dest_set_target_list (self, target_list):
-    #python wrapper for 'gtk_drag_dest_set_target_list'</pre>
-
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a> that’s a drag destination</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>target_list</code></em></i>
-					(
-						<a title="Gtk.TargetList" href="gtkselection-h.html#GtkTargetList">Gtk.TargetList</a>
-						)
-				–
-	</div>
-			<p>list of droppable targets, or <a href="https://docs.python.org/3/library/constants.html#None">None</a> for none</p>
+			<p>list of droppable targets, or <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/null">null</a> for none</p>
 
 	</div>
 
@@ -1095,116 +381,24 @@ def Gtk.Widget.drag_dest_set_target_list (self, target_list):
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_drag_dest_add_text_targets">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h4 data-hotdoc-id="gtk_drag_dest_add_text_targets">
-	<span><code>gtk_drag_dest_add_text_targets</code></span>
+	<span><code>Gtk.Widget.DragDestAddTextTargets</code></span>
 </h4>
 
 
 
 
 <pre class="c-prototype">
-gtk_drag_dest_add_text_targets (<a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> * widget)</pre>
+Gtk.Widget.DragDestAddTextTargets ()</pre>
 
 
 
 
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkwidget-h.html#GtkWidget">GtkWidget</a> that’s a drag destination</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_drag_dest_add_text_targets">
-	<span><code>Gtk.prototype.drag_dest_add_text_targets</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.drag_dest_add_text_targets(): {
-    // javascript wrapper for 'gtk_drag_dest_add_text_targets'
-}</pre>
-
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a> that’s a drag destination</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_drag_dest_add_text_targets">
-	<span><code>Gtk.Widget.drag_dest_add_text_targets</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.Widget.drag_dest_add_text_targets (self):
-    #python wrapper for 'gtk_drag_dest_add_text_targets'</pre>
-
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a> that’s a drag destination</p>
-
-	</div>
-
-			</div>
 
 
 
@@ -1218,116 +412,24 @@ def Gtk.Widget.drag_dest_add_text_targets (self):
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_drag_dest_add_image_targets">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h4 data-hotdoc-id="gtk_drag_dest_add_image_targets">
-	<span><code>gtk_drag_dest_add_image_targets</code></span>
+	<span><code>Gtk.Widget.DragDestAddImageTargets</code></span>
 </h4>
 
 
 
 
 <pre class="c-prototype">
-gtk_drag_dest_add_image_targets (<a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> * widget)</pre>
+Gtk.Widget.DragDestAddImageTargets ()</pre>
 
 
 
 
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkwidget-h.html#GtkWidget">GtkWidget</a> that’s a drag destination</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_drag_dest_add_image_targets">
-	<span><code>Gtk.prototype.drag_dest_add_image_targets</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.drag_dest_add_image_targets(): {
-    // javascript wrapper for 'gtk_drag_dest_add_image_targets'
-}</pre>
-
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a> that’s a drag destination</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_drag_dest_add_image_targets">
-	<span><code>Gtk.Widget.drag_dest_add_image_targets</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.Widget.drag_dest_add_image_targets (self):
-    #python wrapper for 'gtk_drag_dest_add_image_targets'</pre>
-
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a> that’s a drag destination</p>
-
-	</div>
-
-			</div>
 
 
 
@@ -1341,116 +443,24 @@ def Gtk.Widget.drag_dest_add_image_targets (self):
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_drag_dest_add_uri_targets">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h4 data-hotdoc-id="gtk_drag_dest_add_uri_targets">
-	<span><code>gtk_drag_dest_add_uri_targets</code></span>
+	<span><code>Gtk.Widget.DragDestAddUriTargets</code></span>
 </h4>
 
 
 
 
 <pre class="c-prototype">
-gtk_drag_dest_add_uri_targets (<a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> * widget)</pre>
+Gtk.Widget.DragDestAddUriTargets ()</pre>
 
 
 
 
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkwidget-h.html#GtkWidget">GtkWidget</a> that’s a drag destination</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_drag_dest_add_uri_targets">
-	<span><code>Gtk.prototype.drag_dest_add_uri_targets</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.drag_dest_add_uri_targets(): {
-    // javascript wrapper for 'gtk_drag_dest_add_uri_targets'
-}</pre>
-
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a> that’s a drag destination</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_drag_dest_add_uri_targets">
-	<span><code>Gtk.Widget.drag_dest_add_uri_targets</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.Widget.drag_dest_add_uri_targets (self):
-    #python wrapper for 'gtk_drag_dest_add_uri_targets'</pre>
-
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a> that’s a drag destination</p>
-
-	</div>
-
-			</div>
 
 
 
@@ -1464,21 +474,20 @@ def Gtk.Widget.drag_dest_add_uri_targets (self):
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_drag_dest_set_track_motion">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h4 data-hotdoc-id="gtk_drag_dest_set_track_motion">
-	<span><code>gtk_drag_dest_set_track_motion</code></span>
+	<span><code>Gtk.Widget.DragDestSetTrackMotion</code></span>
 </h4>
 
 
 
 
 <pre class="c-prototype">
-gtk_drag_dest_set_track_motion (<a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> * widget,
-                                <a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a> track_motion)</pre>
+Gtk.Widget.DragDestSetTrackMotion (<a title="bool" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/bool">bool</a>)</pre>
 
 
 
@@ -1488,122 +497,7 @@ gtk_drag_dest_set_track_motion (<a title="GtkWidget" href="gtkwidget-h.html#GtkW
 					
 <div class="symbol-detail">
 	<div>
-		<i><em><code>widget</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkwidget-h.html#GtkWidget">GtkWidget</a> that’s a drag destination</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
 		<i><em><code>track_motion</code></em></i>
-				–
-	</div>
-			<p>whether to accept all targets</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_drag_dest_set_track_motion">
-	<span><code>Gtk.prototype.drag_dest_set_track_motion</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.drag_dest_set_track_motion(track_motion: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
-    // javascript wrapper for 'gtk_drag_dest_set_track_motion'
-}</pre>
-
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a> that’s a drag destination</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>track_motion</code></em></i>
-					(
-						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
-						)
-				–
-	</div>
-			<p>whether to accept all targets</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_drag_dest_set_track_motion">
-	<span><code>Gtk.Widget.drag_dest_set_track_motion</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.Widget.drag_dest_set_track_motion (self, track_motion):
-    #python wrapper for 'gtk_drag_dest_set_track_motion'</pre>
-
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a> that’s a drag destination</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>track_motion</code></em></i>
-					(
-						<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
-						)
 				–
 	</div>
 			<p>whether to accept all targets</p>
@@ -1624,148 +518,30 @@ def Gtk.Widget.drag_dest_set_track_motion (self, track_motion):
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_drag_dest_get_track_motion">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h4 data-hotdoc-id="gtk_drag_dest_get_track_motion">
-	<span><code>gtk_drag_dest_get_track_motion</code></span>
+	<span><code>Gtk.Widget.DragDestGetTrackMotion</code></span>
 </h4>
 
 
 
 
 <pre class="c-prototype">
-<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
-gtk_drag_dest_get_track_motion (<a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> * widget)</pre>
+<a title="bool" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/bool">bool</a>
+Gtk.Widget.DragDestGetTrackMotion ()</pre>
 
 
 
 
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkwidget-h.html#GtkWidget">GtkWidget</a> that’s a drag destination</p>
-
-	</div>
-
-			</div>
 
 		<div class="return-values-container">
 		<div class="symbol-detail">
 			<div>
 				<b>Returns</b>
-								–
-			</div>
-							<i>No description available</i>
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_drag_dest_get_track_motion">
-	<span><code>Gtk.prototype.drag_dest_get_track_motion</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.drag_dest_get_track_motion(): {
-    // javascript wrapper for 'gtk_drag_dest_get_track_motion'
-}</pre>
-
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a> that’s a drag destination</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
-										)
-								–
-			</div>
-							<i>No description available</i>
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_drag_dest_get_track_motion">
-	<span><code>Gtk.Widget.drag_dest_get_track_motion</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.Widget.drag_dest_get_track_motion (self):
-    #python wrapper for 'gtk_drag_dest_get_track_motion'</pre>
-
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a> that’s a drag destination</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
-										)
 								–
 			</div>
 							<i>No description available</i>
@@ -1784,40 +560,28 @@ def Gtk.Widget.drag_dest_get_track_motion (self):
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_drag_get_data">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h4 data-hotdoc-id="gtk_drag_get_data">
-	<span><code>gtk_drag_get_data</code></span>
+	<span><code>Gtk.Widget.DragGetData</code></span>
 </h4>
 
 
 
 
 <pre class="c-prototype">
-gtk_drag_get_data (<a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> * widget,
-                   <a title="GdkDragContext" href="https://developer.gnome.org/gdk3/gdk3-Drag-and-Drop.html#GdkDragContext-struct">GdkDragContext</a> * context,
-                   <a title="GdkAtom" href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">GdkAtom</a> target,
-                   <a title="guint32" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint32">guint32</a> time_)</pre>
+Gtk.Widget.DragGetData (<a title="Gdk.DragContext" href="https://developer.gnome.org/gdk3/gdk3-Drag-and-Drop.html#GdkDragContext-struct">Gdk.DragContext</a>,
+                        <a title="Gdk.Atom" href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">Gdk.Atom</a>,
+                        <a title="uint" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/uint">uint</a>)</pre>
 
 
 
 
 	<div class="parameters-container">
 		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-				–
-	</div>
-			<p>the widget that will receive the
-<a href="https://developer.gnome.org/gtk3/GtkWidget.html#GtkWidget-drag-data-received">drag-data-received</a> signal.</p>
-
-	</div>
-
 					
 <div class="symbol-detail">
 	<div>
@@ -1845,171 +609,8 @@ gtk_drag_get_data (<a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWid
 				–
 	</div>
 			<p>a timestamp for retrieving the data. This will
-generally be the time received in a <a href="https://developer.gnome.org/gtk3/GtkWidget.html#GtkWidget-drag-motion">drag-motion</a>"
-or <a href="https://developer.gnome.org/gtk3/GtkWidget.html#GtkWidget-drag-drop">drag-drop</a>" signal.</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_drag_get_data">
-	<span><code>Gtk.prototype.drag_get_data</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.drag_get_data(context: <a title="Gdk.DragContext" href="https://developer.gnome.org/gdk3/gdk3-Drag-and-Drop.html#GdkDragContext-struct">Gdk.DragContext</a>, target: <a title="Gdk.Atom" href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">Gdk.Atom</a>, time_: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
-    // javascript wrapper for 'gtk_drag_get_data'
-}</pre>
-
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
-				–
-	</div>
-			<p>the widget that will receive the
-<a href="https://developer.gnome.org/gtk3/GtkWidget.html#GtkWidget-drag-data-received">drag-data-received</a> signal.</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>context</code></em></i>
-					(
-						<a title="Gdk.DragContext" href="https://developer.gnome.org/gdk3/gdk3-Drag-and-Drop.html#GdkDragContext-struct">Gdk.DragContext</a>
-						)
-				–
-	</div>
-			<p>the drag context</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>target</code></em></i>
-					(
-						<a title="Gdk.Atom" href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">Gdk.Atom</a>
-						)
-				–
-	</div>
-			<p>the target (form of the data) to retrieve.</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>time_</code></em></i>
-					(
-						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
-						)
-				–
-	</div>
-			<p>a timestamp for retrieving the data. This will
-generally be the time received in a <a href="https://developer.gnome.org/gtk3/GtkWidget.html#GtkWidget-drag-motion">drag-motion</a>"
-or <a href="https://developer.gnome.org/gtk3/GtkWidget.html#GtkWidget-drag-drop">drag-drop</a>" signal.</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_drag_get_data">
-	<span><code>Gtk.Widget.drag_get_data</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.Widget.drag_get_data (self, context, target, time_):
-    #python wrapper for 'gtk_drag_get_data'</pre>
-
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
-				–
-	</div>
-			<p>the widget that will receive the
-<a href="https://developer.gnome.org/gtk3/GtkWidget.html#GtkWidget-drag-data-received">drag-data-received</a> signal.</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>context</code></em></i>
-					(
-						<a title="Gdk.DragContext" href="https://developer.gnome.org/gdk3/gdk3-Drag-and-Drop.html#GdkDragContext-struct">Gdk.DragContext</a>
-						)
-				–
-	</div>
-			<p>the drag context</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>target</code></em></i>
-					(
-						<a title="Gdk.Atom" href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">Gdk.Atom</a>
-						)
-				–
-	</div>
-			<p>the target (form of the data) to retrieve.</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>time_</code></em></i>
-					(
-						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
-						)
-				–
-	</div>
-			<p>a timestamp for retrieving the data. This will
-generally be the time received in a <a href="https://developer.gnome.org/gtk3/GtkWidget.html#GtkWidget-drag-motion">drag-motion</a>"
-or <a href="https://developer.gnome.org/gtk3/GtkWidget.html#GtkWidget-drag-drop">drag-drop</a>" signal.</p>
+generally be the time received in a <a href="https://developer.gnome.org/gtk3/GtkWidget.html#GtkWidget-drag-motion">DragMotion</a>"
+or <a href="https://developer.gnome.org/gtk3/GtkWidget.html#GtkWidget-drag-drop">DragDrop</a>" signal.</p>
 
 	</div>
 
@@ -2027,116 +628,24 @@ or <a href="https://developer.gnome.org/gtk3/GtkWidget.html#GtkWidget-drag-drop"
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_drag_highlight">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h4 data-hotdoc-id="gtk_drag_highlight">
-	<span><code>gtk_drag_highlight</code></span>
+	<span><code>Gtk.Widget.DragHighlight</code></span>
 </h4>
 
 
 
 
 <pre class="c-prototype">
-gtk_drag_highlight (<a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> * widget)</pre>
+Gtk.Widget.DragHighlight ()</pre>
 
 
 
 
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-				–
-	</div>
-			<p>a widget to highlight</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_drag_highlight">
-	<span><code>Gtk.prototype.drag_highlight</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.drag_highlight(): {
-    // javascript wrapper for 'gtk_drag_highlight'
-}</pre>
-
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
-				–
-	</div>
-			<p>a widget to highlight</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_drag_highlight">
-	<span><code>Gtk.Widget.drag_highlight</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.Widget.drag_highlight (self):
-    #python wrapper for 'gtk_drag_highlight'</pre>
-
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
-				–
-	</div>
-			<p>a widget to highlight</p>
-
-	</div>
-
-			</div>
 
 
 
@@ -2150,116 +659,24 @@ def Gtk.Widget.drag_highlight (self):
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_drag_unhighlight">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h4 data-hotdoc-id="gtk_drag_unhighlight">
-	<span><code>gtk_drag_unhighlight</code></span>
+	<span><code>Gtk.Widget.DragUnhighlight</code></span>
 </h4>
 
 
 
 
 <pre class="c-prototype">
-gtk_drag_unhighlight (<a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> * widget)</pre>
+Gtk.Widget.DragUnhighlight ()</pre>
 
 
 
 
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-				–
-	</div>
-			<p>a widget to remove the highlight from.</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_drag_unhighlight">
-	<span><code>Gtk.prototype.drag_unhighlight</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.drag_unhighlight(): {
-    // javascript wrapper for 'gtk_drag_unhighlight'
-}</pre>
-
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
-				–
-	</div>
-			<p>a widget to remove the highlight from.</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_drag_unhighlight">
-	<span><code>Gtk.Widget.drag_unhighlight</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.Widget.drag_unhighlight (self):
-    #python wrapper for 'gtk_drag_unhighlight'</pre>
-
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
-				–
-	</div>
-			<p>a widget to remove the highlight from.</p>
-
-	</div>
-
-			</div>
 
 
 
@@ -2273,42 +690,32 @@ def Gtk.Widget.drag_unhighlight (self):
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_drag_begin_with_coordinates">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h4 data-hotdoc-id="gtk_drag_begin_with_coordinates">
-	<span><code>gtk_drag_begin_with_coordinates</code></span>
+	<span><code>Gtk.Widget.DragBeginWithCoordinates</code></span>
 </h4>
 
 
 
 
 <pre class="c-prototype">
-<a title="GdkDragContext" href="https://developer.gnome.org/gdk3/gdk3-Drag-and-Drop.html#GdkDragContext-struct">GdkDragContext</a> *
-gtk_drag_begin_with_coordinates (<a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> * widget,
-                                 <a title="GtkTargetList" href="gtkselection-h.html#GtkTargetList">GtkTargetList</a> * targets,
-                                 <a title="GdkDragAction" href="https://developer.gnome.org/gdk3/gdk3-Drag-and-Drop.html#GdkDragAction">GdkDragAction</a> actions,
-                                 <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> button,
-                                 GdkEvent* event,
-                                 <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> x,
-                                 <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> y)</pre>
+<a title="Gdk.DragContext" href="https://developer.gnome.org/gdk3/gdk3-Drag-and-Drop.html#GdkDragContext-struct">Gdk.DragContext</a>
+Gtk.Widget.DragBeginWithCoordinates (<a title="Gtk.TargetList" href="gtkselection-h.html#GtkTargetList">Gtk.TargetList</a>,
+                                     <a title="Gdk.DragAction" href="https://developer.gnome.org/gdk3/gdk3-Drag-and-Drop.html#GdkDragAction">Gdk.DragAction</a>,
+                                     <a title="int" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/int">int</a>,
+                                     Gdk.Event,
+                                     <a title="int" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/int">int</a>,
+                                     <a title="int" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/int">int</a>)</pre>
 
 
 
 
 	<div class="parameters-container">
 		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-				–
-	</div>
-			<i>No description available</i>
-	</div>
-
 					
 <div class="symbol-detail">
 	<div>
@@ -2369,255 +776,6 @@ gtk_drag_begin_with_coordinates (<a title="GtkWidget" href="gtkwidget-h.html#Gtk
 		<div class="symbol-detail">
 			<div>
 				<b>Returns</b>
-								–
-			</div>
-							<p>(transfer none):</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_drag_begin_with_coordinates">
-	<span><code>Gtk.prototype.drag_begin_with_coordinates</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.drag_begin_with_coordinates(targets: <a title="Gtk.TargetList" href="gtkselection-h.html#GtkTargetList">Gtk.TargetList</a>, actions: <a title="Gdk.DragAction" href="https://developer.gnome.org/gdk3/gdk3-Drag-and-Drop.html#GdkDragAction">Gdk.DragAction</a>, button: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, event: Gdk.Event, x: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, y: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
-    // javascript wrapper for 'gtk_drag_begin_with_coordinates'
-}</pre>
-
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
-				–
-	</div>
-			<i>No description available</i>
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>targets</code></em></i>
-					(
-						<a title="Gtk.TargetList" href="gtkselection-h.html#GtkTargetList">Gtk.TargetList</a>
-						)
-				–
-	</div>
-			<i>No description available</i>
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>actions</code></em></i>
-					(
-						<a title="Gdk.DragAction" href="https://developer.gnome.org/gdk3/gdk3-Drag-and-Drop.html#GdkDragAction">Gdk.DragAction</a>
-						)
-				–
-	</div>
-			<i>No description available</i>
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>button</code></em></i>
-					(
-						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
-						)
-				–
-	</div>
-			<i>No description available</i>
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>event</code></em></i>
-					(
-						Gdk.Event
-						)
-				–
-	</div>
-			<i>No description available</i>
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>x</code></em></i>
-					(
-						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
-						)
-				–
-	</div>
-			<i>No description available</i>
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>y</code></em></i>
-					(
-						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
-						)
-				–
-	</div>
-			<i>No description available</i>
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Gdk.DragContext" href="https://developer.gnome.org/gdk3/gdk3-Drag-and-Drop.html#GdkDragContext-struct">Gdk.DragContext</a>
-										)
-								–
-			</div>
-							<p>(transfer none):</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_drag_begin_with_coordinates">
-	<span><code>Gtk.Widget.drag_begin_with_coordinates</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.Widget.drag_begin_with_coordinates (self, targets, actions, button, event, x, y):
-    #python wrapper for 'gtk_drag_begin_with_coordinates'</pre>
-
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
-				–
-	</div>
-			<i>No description available</i>
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>targets</code></em></i>
-					(
-						<a title="Gtk.TargetList" href="gtkselection-h.html#GtkTargetList">Gtk.TargetList</a>
-						)
-				–
-	</div>
-			<i>No description available</i>
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>actions</code></em></i>
-					(
-						<a title="Gdk.DragAction" href="https://developer.gnome.org/gdk3/gdk3-Drag-and-Drop.html#GdkDragAction">Gdk.DragAction</a>
-						)
-				–
-	</div>
-			<i>No description available</i>
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>button</code></em></i>
-					(
-						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
-						)
-				–
-	</div>
-			<i>No description available</i>
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>event</code></em></i>
-					(
-						Gdk.Event
-						)
-				–
-	</div>
-			<i>No description available</i>
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>x</code></em></i>
-					(
-						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
-						)
-				–
-	</div>
-			<i>No description available</i>
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>y</code></em></i>
-					(
-						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
-						)
-				–
-	</div>
-			<i>No description available</i>
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Gdk.DragContext" href="https://developer.gnome.org/gdk3/gdk3-Drag-and-Drop.html#GdkDragContext-struct">Gdk.DragContext</a>
-										)
 								–
 			</div>
 							<p>(transfer none):</p>
@@ -2637,41 +795,30 @@ def Gtk.Widget.drag_begin_with_coordinates (self, targets, actions, button, even
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_drag_check_threshold">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h4 data-hotdoc-id="gtk_drag_check_threshold">
-	<span><code>gtk_drag_check_threshold</code></span>
+	<span><code>Gtk.Widget.DragCheckThreshold</code></span>
 </h4>
 
 
 
 
 <pre class="c-prototype">
-<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
-gtk_drag_check_threshold (<a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> * widget,
-                          <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> start_x,
-                          <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> start_y,
-                          <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> current_x,
-                          <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> current_y)</pre>
+<a title="bool" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/bool">bool</a>
+Gtk.Widget.DragCheckThreshold (<a title="int" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/int">int</a>,
+                               <a title="int" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/int">int</a>,
+                               <a title="int" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/int">int</a>,
+                               <a title="int" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/int">int</a>)</pre>
 
 
 
 
 	<div class="parameters-container">
 		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkwidget-h.html#GtkWidget">GtkWidget</a></p>
-
-	</div>
-
 					
 <div class="symbol-detail">
 	<div>
@@ -2718,215 +865,6 @@ gtk_drag_check_threshold (<a title="GtkWidget" href="gtkwidget-h.html#GtkWidget"
 		<div class="symbol-detail">
 			<div>
 				<b>Returns</b>
-								–
-			</div>
-							<i>No description available</i>
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_drag_check_threshold">
-	<span><code>Gtk.prototype.drag_check_threshold</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.drag_check_threshold(start_x: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, start_y: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, current_x: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, current_y: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
-    // javascript wrapper for 'gtk_drag_check_threshold'
-}</pre>
-
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>start_x</code></em></i>
-					(
-						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
-						)
-				–
-	</div>
-			<p>X coordinate of start of drag</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>start_y</code></em></i>
-					(
-						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
-						)
-				–
-	</div>
-			<p>Y coordinate of start of drag</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>current_x</code></em></i>
-					(
-						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
-						)
-				–
-	</div>
-			<p>current X coordinate</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>current_y</code></em></i>
-					(
-						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
-						)
-				–
-	</div>
-			<p>current Y coordinate</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
-										)
-								–
-			</div>
-							<i>No description available</i>
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_drag_check_threshold">
-	<span><code>Gtk.Widget.drag_check_threshold</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.Widget.drag_check_threshold (self, start_x, start_y, current_x, current_y):
-    #python wrapper for 'gtk_drag_check_threshold'</pre>
-
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>start_x</code></em></i>
-					(
-						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
-						)
-				–
-	</div>
-			<p>X coordinate of start of drag</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>start_y</code></em></i>
-					(
-						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
-						)
-				–
-	</div>
-			<p>Y coordinate of start of drag</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>current_x</code></em></i>
-					(
-						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
-						)
-				–
-	</div>
-			<p>current X coordinate</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>current_y</code></em></i>
-					(
-						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
-						)
-				–
-	</div>
-			<p>current Y coordinate</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
-										)
 								–
 			</div>
 							<i>No description available</i>
@@ -2945,24 +883,23 @@ def Gtk.Widget.drag_check_threshold (self, start_x, start_y, current_x, current_
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_drag_source_set">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h4 data-hotdoc-id="gtk_drag_source_set">
-	<span><code>gtk_drag_source_set</code></span>
+	<span><code>Gtk.Widget.DragSourceSet</code></span>
 </h4>
 
 
 
 
 <pre class="c-prototype">
-gtk_drag_source_set (<a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> * widget,
-                     <a title="GdkModifierType" href="https://developer.gnome.org/gdk3/gdk3-Windows.html#GdkModifierType">GdkModifierType</a> start_button_mask,
-                     <a title="GtkTargetEntry" href="gtkselection-h.html#GtkTargetEntry">GtkTargetEntry</a> * targets,
-                     <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> n_targets,
-                     <a title="GdkDragAction" href="https://developer.gnome.org/gdk3/gdk3-Drag-and-Drop.html#GdkDragAction">GdkDragAction</a> actions)</pre>
+Gtk.Widget.DragSourceSet (<a title="Gdk.ModifierType" href="https://developer.gnome.org/gdk3/gdk3-Windows.html#GdkModifierType">Gdk.ModifierType</a>,
+                          <a title="Gtk.TargetEntry" href="gtkselection-h.html#GtkTargetEntry">Gtk.TargetEntry</a> [],
+                          <a title="int" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/int">int</a>,
+                          <a title="Gdk.DragAction" href="https://developer.gnome.org/gdk3/gdk3-Drag-and-Drop.html#GdkDragAction">Gdk.DragAction</a>)</pre>
 
 <p>Sets up a widget so that GTK+ will start a drag operation when the user
 clicks and drags on the widget. The widget must have a window.</p>
@@ -2971,16 +908,6 @@ clicks and drags on the widget. The widget must have a window.</p>
 
 	<div class="parameters-container">
 		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkwidget-h.html#GtkWidget">GtkWidget</a></p>
-
-	</div>
-
 					
 <div class="symbol-detail">
 	<div>
@@ -2995,16 +922,10 @@ clicks and drags on the widget. The widget must have a window.</p>
 <div class="symbol-detail">
 	<div>
 		<i><em><code>targets</code></em></i>
-					(
-						
-<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
-<span class="annotation">[<abbr title="Parameter points to an array of items"><span class="acronym">array</span></abbr> length=n_targets]</span>
-
-						)
 				–
 	</div>
 			<p>the table of targets
-that the drag will support, may be <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
+that the drag will support, may be <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/null">null</a></p>
 
 	</div>
 
@@ -3022,195 +943,6 @@ that the drag will support, may be <a href="https://developer.gnome.org/glib/uns
 <div class="symbol-detail">
 	<div>
 		<i><em><code>actions</code></em></i>
-				–
-	</div>
-			<p>the bitmask of possible actions for a drag from this widget</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_drag_source_set">
-	<span><code>Gtk.prototype.drag_source_set</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.drag_source_set(start_button_mask: <a title="Gdk.ModifierType" href="https://developer.gnome.org/gdk3/gdk3-Windows.html#GdkModifierType">Gdk.ModifierType</a>, targets: [ <a title="Gtk.TargetEntry" href="gtkselection-h.html#GtkTargetEntry">Gtk.TargetEntry</a> ], n_targets: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, actions: <a title="Gdk.DragAction" href="https://developer.gnome.org/gdk3/gdk3-Drag-and-Drop.html#GdkDragAction">Gdk.DragAction</a>): {
-    // javascript wrapper for 'gtk_drag_source_set'
-}</pre>
-
-<p>Sets up a widget so that GTK+ will start a drag operation when the user
-clicks and drags on the widget. The widget must have a window.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>start_button_mask</code></em></i>
-					(
-						<a title="Gdk.ModifierType" href="https://developer.gnome.org/gdk3/gdk3-Windows.html#GdkModifierType">Gdk.ModifierType</a>
-						)
-				–
-	</div>
-			<p>the bitmask of buttons that can start the drag</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>targets</code></em></i>
-					(
-						[ <a title="Gtk.TargetEntry" href="gtkselection-h.html#GtkTargetEntry">Gtk.TargetEntry</a> ]
-						)
-				–
-	</div>
-			<p>the table of targets
-that the drag will support, may be <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>n_targets</code></em></i>
-					(
-						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
-						)
-				–
-	</div>
-			<p>the number of items in <em>targets</em></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>actions</code></em></i>
-					(
-						<a title="Gdk.DragAction" href="https://developer.gnome.org/gdk3/gdk3-Drag-and-Drop.html#GdkDragAction">Gdk.DragAction</a>
-						)
-				–
-	</div>
-			<p>the bitmask of possible actions for a drag from this widget</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_drag_source_set">
-	<span><code>Gtk.Widget.drag_source_set</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.Widget.drag_source_set (self, start_button_mask, targets, n_targets, actions):
-    #python wrapper for 'gtk_drag_source_set'</pre>
-
-<p>Sets up a widget so that GTK+ will start a drag operation when the user
-clicks and drags on the widget. The widget must have a window.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>start_button_mask</code></em></i>
-					(
-						<a title="Gdk.ModifierType" href="https://developer.gnome.org/gdk3/gdk3-Windows.html#GdkModifierType">Gdk.ModifierType</a>
-						)
-				–
-	</div>
-			<p>the bitmask of buttons that can start the drag</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>targets</code></em></i>
-					(
-						[ <a title="Gtk.TargetEntry" href="gtkselection-h.html#GtkTargetEntry">Gtk.TargetEntry</a> ]
-						)
-				–
-	</div>
-			<p>the table of targets
-that the drag will support, may be <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>n_targets</code></em></i>
-					(
-						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
-						)
-				–
-	</div>
-			<p>the number of items in <em>targets</em></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>actions</code></em></i>
-					(
-						<a title="Gdk.DragAction" href="https://developer.gnome.org/gdk3/gdk3-Drag-and-Drop.html#GdkDragAction">Gdk.DragAction</a>
-						)
 				–
 	</div>
 			<p>the bitmask of possible actions for a drag from this widget</p>
@@ -3231,71 +963,20 @@ that the drag will support, may be <a href="https://docs.python.org/3/library/co
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_drag_source_set_icon_pixbuf">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h4 data-hotdoc-id="gtk_drag_source_set_icon_pixbuf">
-	<span><code>gtk_drag_source_set_icon_pixbuf</code></span>
+	<span><code>Gtk.Widget.DragSourceSetIconPixbuf</code></span>
 </h4>
 
 
 
 
 <pre class="c-prototype">
-gtk_drag_source_set_icon_pixbuf (<a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> * widget,
-                                 <a title="GdkPixbuf" href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf</a> * pixbuf)</pre>
-
-<p>Sets the icon that will be used for drags from a particular widget
-from a <a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf</a>. GTK+ retains a reference for <em>pixbuf</em> and will
-release it when it is no longer needed.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkwidget-h.html#GtkWidget">GtkWidget</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>pixbuf</code></em></i>
-				–
-	</div>
-			<p>the <a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf</a> for the drag icon</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_drag_source_set_icon_pixbuf">
-	<span><code>Gtk.prototype.drag_source_set_icon_pixbuf</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.drag_source_set_icon_pixbuf(pixbuf: <a title="GdkPixbuf.Pixbuf" href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf.Pixbuf</a>): {
-    // javascript wrapper for 'gtk_drag_source_set_icon_pixbuf'
-}</pre>
+Gtk.Widget.DragSourceSetIconPixbuf (<a title="GdkPixbuf.Pixbuf" href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf.Pixbuf</a>)</pre>
 
 <p>Sets the icon that will be used for drags from a particular widget
 from a <a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf.Pixbuf</a>. GTK+ retains a reference for <em>pixbuf</em> and will
@@ -3308,78 +989,7 @@ release it when it is no longer needed.</p>
 					
 <div class="symbol-detail">
 	<div>
-		<i><em><code>widget</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
 		<i><em><code>pixbuf</code></em></i>
-					(
-						<a title="GdkPixbuf.Pixbuf" href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf.Pixbuf</a>
-						)
-				–
-	</div>
-			<p>the <a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf.Pixbuf</a> for the drag icon</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_drag_source_set_icon_pixbuf">
-	<span><code>Gtk.Widget.drag_source_set_icon_pixbuf</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.Widget.drag_source_set_icon_pixbuf (self, pixbuf):
-    #python wrapper for 'gtk_drag_source_set_icon_pixbuf'</pre>
-
-<p>Sets the icon that will be used for drags from a particular widget
-from a <a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf.Pixbuf</a>. GTK+ retains a reference for <em>pixbuf</em> and will
-release it when it is no longer needed.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>pixbuf</code></em></i>
-					(
-						<a title="GdkPixbuf.Pixbuf" href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf.Pixbuf</a>
-						)
 				–
 	</div>
 			<p>the <a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf.Pixbuf</a> for the drag icon</p>
@@ -3400,73 +1010,20 @@ release it when it is no longer needed.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="since:2.8;" id="gtk_drag_source_set_icon_name">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h4 data-hotdoc-id="gtk_drag_source_set_icon_name">
-	<span><code>gtk_drag_source_set_icon_name</code></span>
+	<span><code>Gtk.Widget.DragSourceSetIconName</code></span>
 </h4>
 
 
 
 
 <pre class="c-prototype">
-gtk_drag_source_set_icon_name (<a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> * widget,
-                               const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * icon_name)</pre>
-
-<p>Sets the icon that will be used for drags from a particular source
-to a themed icon. See the docs for <a href="gtkicontheme-h.html#GtkIconTheme">GtkIconTheme</a> for more details.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkwidget-h.html#GtkWidget">GtkWidget</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>icon_name</code></em></i>
-				–
-	</div>
-			<p>name of icon to use</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.8
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_drag_source_set_icon_name">
-	<span><code>Gtk.prototype.drag_source_set_icon_name</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.drag_source_set_icon_name(icon_name: <a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>): {
-    // javascript wrapper for 'gtk_drag_source_set_icon_name'
-}</pre>
+Gtk.Widget.DragSourceSetIconName (<a title="string" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/string">string</a>)</pre>
 
 <p>Sets the icon that will be used for drags from a particular source
 to a themed icon. See the docs for <a href="gtkicontheme-h.html#GtkIconTheme">Gtk.IconTheme</a> for more details.</p>
@@ -3478,80 +1035,7 @@ to a themed icon. See the docs for <a href="gtkicontheme-h.html#GtkIconTheme">Gt
 					
 <div class="symbol-detail">
 	<div>
-		<i><em><code>widget</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
 		<i><em><code>icon_name</code></em></i>
-					(
-						<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
-						)
-				–
-	</div>
-			<p>name of icon to use</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.8
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_drag_source_set_icon_name">
-	<span><code>Gtk.Widget.drag_source_set_icon_name</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.Widget.drag_source_set_icon_name (self, icon_name):
-    #python wrapper for 'gtk_drag_source_set_icon_name'</pre>
-
-<p>Sets the icon that will be used for drags from a particular source
-to a themed icon. See the docs for <a href="gtkicontheme-h.html#GtkIconTheme">Gtk.IconTheme</a> for more details.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>icon_name</code></em></i>
-					(
-						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
-						)
 				–
 	</div>
 			<p>name of icon to use</p>
@@ -3575,73 +1059,20 @@ to a themed icon. See the docs for <a href="gtkicontheme-h.html#GtkIconTheme">Gt
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.2;" id="gtk_drag_source_set_icon_gicon">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h4 data-hotdoc-id="gtk_drag_source_set_icon_gicon">
-	<span><code>gtk_drag_source_set_icon_gicon</code></span>
+	<span><code>Gtk.Widget.DragSourceSetIconGicon</code></span>
 </h4>
 
 
 
 
 <pre class="c-prototype">
-gtk_drag_source_set_icon_gicon (<a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> * widget,
-                                <a title="GIcon" href="https://developer.gnome.org/gio/unstable/GIcon.html#GIcon-struct">GIcon</a> * icon)</pre>
-
-<p>Sets the icon that will be used for drags from a particular source
-to <em>icon</em>. See the docs for <a href="gtkicontheme-h.html#GtkIconTheme">GtkIconTheme</a> for more details.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkwidget-h.html#GtkWidget">GtkWidget</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>icon</code></em></i>
-				–
-	</div>
-			<p>A <a href="https://developer.gnome.org/gio/unstable/GIcon.html#GIcon-struct">GIcon</a></p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.2
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_drag_source_set_icon_gicon">
-	<span><code>Gtk.prototype.drag_source_set_icon_gicon</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.drag_source_set_icon_gicon(icon: <a title="Gio.Icon" href="https://developer.gnome.org/gio/unstable/GIcon.html#GIcon-struct">Gio.Icon</a>): {
-    // javascript wrapper for 'gtk_drag_source_set_icon_gicon'
-}</pre>
+Gtk.Widget.DragSourceSetIconGicon (<a title="Gio.IIcon" href="https://developer.gnome.org/gio/unstable/GIcon.html#GIcon-struct">Gio.IIcon</a>)</pre>
 
 <p>Sets the icon that will be used for drags from a particular source
 to <em>icon</em>. See the docs for <a href="gtkicontheme-h.html#GtkIconTheme">Gtk.IconTheme</a> for more details.</p>
@@ -3653,83 +1084,10 @@ to <em>icon</em>. See the docs for <a href="gtkicontheme-h.html#GtkIconTheme">Gt
 					
 <div class="symbol-detail">
 	<div>
-		<i><em><code>widget</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
 		<i><em><code>icon</code></em></i>
-					(
-						<a title="Gio.Icon" href="https://developer.gnome.org/gio/unstable/GIcon.html#GIcon-struct">Gio.Icon</a>
-						)
 				–
 	</div>
-			<p>A <a href="https://developer.gnome.org/gio/unstable/GIcon.html#GIcon-struct">Gio.Icon</a></p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.2
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_drag_source_set_icon_gicon">
-	<span><code>Gtk.Widget.drag_source_set_icon_gicon</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.Widget.drag_source_set_icon_gicon (self, icon):
-    #python wrapper for 'gtk_drag_source_set_icon_gicon'</pre>
-
-<p>Sets the icon that will be used for drags from a particular source
-to <em>icon</em>. See the docs for <a href="gtkicontheme-h.html#GtkIconTheme">Gtk.IconTheme</a> for more details.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>icon</code></em></i>
-					(
-						<a title="Gio.Icon" href="https://developer.gnome.org/gio/unstable/GIcon.html#GIcon-struct">Gio.Icon</a>
-						)
-				–
-	</div>
-			<p>A <a href="https://developer.gnome.org/gio/unstable/GIcon.html#GIcon-struct">Gio.Icon</a></p>
+			<p>A <a href="https://developer.gnome.org/gio/unstable/GIcon.html#GIcon-struct">Gio.IIcon</a></p>
 
 	</div>
 
@@ -3750,119 +1108,25 @@ to <em>icon</em>. See the docs for <a href="gtkicontheme-h.html#GtkIconTheme">Gt
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_drag_source_unset">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h4 data-hotdoc-id="gtk_drag_source_unset">
-	<span><code>gtk_drag_source_unset</code></span>
+	<span><code>Gtk.Widget.DragSourceUnset</code></span>
 </h4>
 
 
 
 
 <pre class="c-prototype">
-gtk_drag_source_unset (<a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> * widget)</pre>
+Gtk.Widget.DragSourceUnset ()</pre>
 
-<p>Undoes the effects of <a href="gtkdnd-h.html#gtk_drag_source_set">gtk_drag_source_set</a>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkwidget-h.html#GtkWidget">GtkWidget</a></p>
-
-	</div>
-
-			</div>
+<p>Undoes the effects of <a href="gtkdnd-h.html#gtk_drag_source_set">Gtk.Widget.DragSourceSet</a>.</p>
 
 
 
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_drag_source_unset">
-	<span><code>Gtk.prototype.drag_source_unset</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.drag_source_unset(): {
-    // javascript wrapper for 'gtk_drag_source_unset'
-}</pre>
-
-<p>Undoes the effects of <a href="gtkdnd-h.html#gtk_drag_source_set">Gtk.prototype.drag_source_set</a>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a></p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_drag_source_unset">
-	<span><code>Gtk.Widget.drag_source_unset</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.Widget.drag_source_unset (self):
-    #python wrapper for 'gtk_drag_source_unset'</pre>
-
-<p>Undoes the effects of <a href="gtkdnd-h.html#gtk_drag_source_set">Gtk.Widget.drag_source_set</a>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a></p>
-
-	</div>
-
-			</div>
 
 
 
@@ -3876,25 +1140,24 @@ def Gtk.Widget.drag_source_unset (self):
 
 <div class="base_symbol_container" data-hotdoc-tags="since:2.4;" id="gtk_drag_source_set_target_list">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h4 data-hotdoc-id="gtk_drag_source_set_target_list">
-	<span><code>gtk_drag_source_set_target_list</code></span>
+	<span><code>Gtk.Widget.DragSourceSetTargetList</code></span>
 </h4>
 
 
 
 
 <pre class="c-prototype">
-gtk_drag_source_set_target_list (<a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> * widget,
-                                 <a title="GtkTargetList" href="gtkselection-h.html#GtkTargetList">GtkTargetList</a> * target_list)</pre>
+Gtk.Widget.DragSourceSetTargetList (<a title="Gtk.TargetList" href="gtkselection-h.html#GtkTargetList">Gtk.TargetList</a>)</pre>
 
 <p>Changes the target types that this widget offers for drag-and-drop.
 The widget must first be made into a drag source with
-<a href="gtkdnd-h.html#gtk_drag_source_set">gtk_drag_source_set</a>.</p>
+<a href="gtkdnd-h.html#gtk_drag_source_set">Gtk.Widget.DragSourceSet</a>.</p>
 
 
 
@@ -3903,142 +1166,10 @@ The widget must first be made into a drag source with
 					
 <div class="symbol-detail">
 	<div>
-		<i><em><code>widget</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkwidget-h.html#GtkWidget">GtkWidget</a> that’s a drag source</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
 		<i><em><code>target_list</code></em></i>
-					(
-						
-<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
-
-						)
 				–
 	</div>
-			<p>list of draggable targets, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> for none</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.4
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_drag_source_set_target_list">
-	<span><code>Gtk.prototype.drag_source_set_target_list</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.drag_source_set_target_list(target_list: <a title="Gtk.TargetList" href="gtkselection-h.html#GtkTargetList">Gtk.TargetList</a>): {
-    // javascript wrapper for 'gtk_drag_source_set_target_list'
-}</pre>
-
-<p>Changes the target types that this widget offers for drag-and-drop.
-The widget must first be made into a drag source with
-<a href="gtkdnd-h.html#gtk_drag_source_set">Gtk.prototype.drag_source_set</a>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a> that’s a drag source</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>target_list</code></em></i>
-					(
-						<a title="Gtk.TargetList" href="gtkselection-h.html#GtkTargetList">Gtk.TargetList</a>
-						)
-				–
-	</div>
-			<p>list of draggable targets, or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a> for none</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.4
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_drag_source_set_target_list">
-	<span><code>Gtk.Widget.drag_source_set_target_list</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.Widget.drag_source_set_target_list (self, target_list):
-    #python wrapper for 'gtk_drag_source_set_target_list'</pre>
-
-<p>Changes the target types that this widget offers for drag-and-drop.
-The widget must first be made into a drag source with
-<a href="gtkdnd-h.html#gtk_drag_source_set">Gtk.Widget.drag_source_set</a>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a> that’s a drag source</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>target_list</code></em></i>
-					(
-						<a title="Gtk.TargetList" href="gtkselection-h.html#GtkTargetList">Gtk.TargetList</a>
-						)
-				–
-	</div>
-			<p>list of draggable targets, or <a href="https://docs.python.org/3/library/constants.html#None">None</a> for none</p>
+			<p>list of draggable targets, or <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/null">null</a> for none</p>
 
 	</div>
 
@@ -4059,172 +1190,35 @@ The widget must first be made into a drag source with
 
 <div class="base_symbol_container" data-hotdoc-tags="since:2.4;" id="gtk_drag_source_get_target_list">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h4 data-hotdoc-id="gtk_drag_source_get_target_list">
-	<span><code>gtk_drag_source_get_target_list</code></span>
+	<span><code>Gtk.Widget.DragSourceGetTargetList</code></span>
 </h4>
 
 
 
 
 <pre class="c-prototype">
-<a title="GtkTargetList" href="gtkselection-h.html#GtkTargetList">GtkTargetList</a> *
-gtk_drag_source_get_target_list (<a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> * widget)</pre>
+<a title="Gtk.TargetList" href="gtkselection-h.html#GtkTargetList">Gtk.TargetList</a>
+Gtk.Widget.DragSourceGetTargetList ()</pre>
 
 <p>Gets the list of targets this widget can provide for
 drag-and-drop.</p>
 
 
 
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkwidget-h.html#GtkWidget">GtkWidget</a></p>
-
-	</div>
-
-			</div>
 
 		<div class="return-values-container">
 		<div class="symbol-detail">
 			<div>
 				<b>Returns</b>
-									(
-					
-										
-<span class="annotation">[<abbr title="NULL may be passed to the value"><span class="acronym">nullable</span></abbr>]</span>
-<span class="annotation">[<abbr title="Don't free data after the code is done"><span class="acronym">transfer: none</span></abbr>]</span>
-
-										)
 								–
 			</div>
-							<p>the <a href="gtkselection-h.html#GtkTargetList">GtkTargetList</a>, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> if none</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.4
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_drag_source_get_target_list">
-	<span><code>Gtk.prototype.drag_source_get_target_list</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.drag_source_get_target_list(): {
-    // javascript wrapper for 'gtk_drag_source_get_target_list'
-}</pre>
-
-<p>Gets the list of targets this widget can provide for
-drag-and-drop.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Gtk.TargetList" href="gtkselection-h.html#GtkTargetList">Gtk.TargetList</a>
-										)
-								–
-			</div>
-							<p>the <a href="gtkselection-h.html#GtkTargetList">Gtk.TargetList</a>, or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a> if none</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.4
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_drag_source_get_target_list">
-	<span><code>Gtk.Widget.drag_source_get_target_list</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.Widget.drag_source_get_target_list (self):
-    #python wrapper for 'gtk_drag_source_get_target_list'</pre>
-
-<p>Gets the list of targets this widget can provide for
-drag-and-drop.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Gtk.TargetList" href="gtkselection-h.html#GtkTargetList">Gtk.TargetList</a>
-										)
-								–
-			</div>
-							<p>the <a href="gtkselection-h.html#GtkTargetList">Gtk.TargetList</a>, or <a href="https://docs.python.org/3/library/constants.html#None">None</a> if none</p>
+							<p>the <a href="gtkselection-h.html#GtkTargetList">Gtk.TargetList</a>, or <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/null">null</a> if none</p>
 
 					</div>
 	</div>
@@ -4244,137 +1238,29 @@ drag-and-drop.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="since:2.6;" id="gtk_drag_source_add_text_targets">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h4 data-hotdoc-id="gtk_drag_source_add_text_targets">
-	<span><code>gtk_drag_source_add_text_targets</code></span>
+	<span><code>Gtk.Widget.DragSourceAddTextTargets</code></span>
 </h4>
 
 
 
 
 <pre class="c-prototype">
-gtk_drag_source_add_text_targets (<a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> * widget)</pre>
-
-<p>Add the text targets supported by <a href="gtkselection-h.html#GtkSelectionData">GtkSelectionData</a> to
-the target list of the drag source.  The targets
-are added with <em>info</em> = 0. If you need another value,
-use <a href="gtkselection-h.html#gtk_target_list_add_text_targets">gtk_target_list_add_text_targets</a> and
-<a href="gtkdnd-h.html#gtk_drag_source_set_target_list">gtk_drag_source_set_target_list</a>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkwidget-h.html#GtkWidget">GtkWidget</a> that’s is a drag source</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.6
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_drag_source_add_text_targets">
-	<span><code>Gtk.prototype.drag_source_add_text_targets</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.drag_source_add_text_targets(): {
-    // javascript wrapper for 'gtk_drag_source_add_text_targets'
-}</pre>
+Gtk.Widget.DragSourceAddTextTargets ()</pre>
 
 <p>Add the text targets supported by <a href="gtkselection-h.html#GtkSelectionData">Gtk.SelectionData</a> to
 the target list of the drag source.  The targets
 are added with <em>info</em> = 0. If you need another value,
-use <a href="gtkselection-h.html#gtk_target_list_add_text_targets">Gtk.prototype.add_text_targets</a> and
-<a href="gtkdnd-h.html#gtk_drag_source_set_target_list">Gtk.prototype.drag_source_set_target_list</a>.</p>
+use <a href="gtkselection-h.html#gtk_target_list_add_text_targets">Gtk.TargetList.AddTextTargets</a> and
+<a href="gtkdnd-h.html#gtk_drag_source_set_target_list">Gtk.Widget.DragSourceSetTargetList</a>.</p>
 
 
 
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a> that’s is a drag source</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.6
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_drag_source_add_text_targets">
-	<span><code>Gtk.Widget.drag_source_add_text_targets</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.Widget.drag_source_add_text_targets (self):
-    #python wrapper for 'gtk_drag_source_add_text_targets'</pre>
-
-<p>Add the text targets supported by <a href="gtkselection-h.html#GtkSelectionData">Gtk.SelectionData</a> to
-the target list of the drag source.  The targets
-are added with <em>info</em> = 0. If you need another value,
-use <a href="gtkselection-h.html#gtk_target_list_add_text_targets">Gtk.TargetList.add_text_targets</a> and
-<a href="gtkdnd-h.html#gtk_drag_source_set_target_list">Gtk.Widget.drag_source_set_target_list</a>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a> that’s is a drag source</p>
-
-	</div>
-
-			</div>
 
 
 
@@ -4391,137 +1277,29 @@ use <a href="gtkselection-h.html#gtk_target_list_add_text_targets">Gtk.TargetLis
 
 <div class="base_symbol_container" data-hotdoc-tags="since:2.6;" id="gtk_drag_source_add_image_targets">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h4 data-hotdoc-id="gtk_drag_source_add_image_targets">
-	<span><code>gtk_drag_source_add_image_targets</code></span>
+	<span><code>Gtk.Widget.DragSourceAddImageTargets</code></span>
 </h4>
 
 
 
 
 <pre class="c-prototype">
-gtk_drag_source_add_image_targets (<a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> * widget)</pre>
-
-<p>Add the writable image targets supported by <a href="gtkselection-h.html#GtkSelectionData">GtkSelectionData</a> to
-the target list of the drag source. The targets
-are added with <em>info</em> = 0. If you need another value,
-use <a href="gtkselection-h.html#gtk_target_list_add_image_targets">gtk_target_list_add_image_targets</a> and
-<a href="gtkdnd-h.html#gtk_drag_source_set_target_list">gtk_drag_source_set_target_list</a>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkwidget-h.html#GtkWidget">GtkWidget</a> that’s is a drag source</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.6
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_drag_source_add_image_targets">
-	<span><code>Gtk.prototype.drag_source_add_image_targets</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.drag_source_add_image_targets(): {
-    // javascript wrapper for 'gtk_drag_source_add_image_targets'
-}</pre>
+Gtk.Widget.DragSourceAddImageTargets ()</pre>
 
 <p>Add the writable image targets supported by <a href="gtkselection-h.html#GtkSelectionData">Gtk.SelectionData</a> to
 the target list of the drag source. The targets
 are added with <em>info</em> = 0. If you need another value,
-use <a href="gtkselection-h.html#gtk_target_list_add_image_targets">Gtk.prototype.add_image_targets</a> and
-<a href="gtkdnd-h.html#gtk_drag_source_set_target_list">Gtk.prototype.drag_source_set_target_list</a>.</p>
+use <a href="gtkselection-h.html#gtk_target_list_add_image_targets">Gtk.TargetList.AddImageTargets</a> and
+<a href="gtkdnd-h.html#gtk_drag_source_set_target_list">Gtk.Widget.DragSourceSetTargetList</a>.</p>
 
 
 
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a> that’s is a drag source</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.6
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_drag_source_add_image_targets">
-	<span><code>Gtk.Widget.drag_source_add_image_targets</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.Widget.drag_source_add_image_targets (self):
-    #python wrapper for 'gtk_drag_source_add_image_targets'</pre>
-
-<p>Add the writable image targets supported by <a href="gtkselection-h.html#GtkSelectionData">Gtk.SelectionData</a> to
-the target list of the drag source. The targets
-are added with <em>info</em> = 0. If you need another value,
-use <a href="gtkselection-h.html#gtk_target_list_add_image_targets">Gtk.TargetList.add_image_targets</a> and
-<a href="gtkdnd-h.html#gtk_drag_source_set_target_list">Gtk.Widget.drag_source_set_target_list</a>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a> that’s is a drag source</p>
-
-	</div>
-
-			</div>
 
 
 
@@ -4538,137 +1316,29 @@ use <a href="gtkselection-h.html#gtk_target_list_add_image_targets">Gtk.TargetLi
 
 <div class="base_symbol_container" data-hotdoc-tags="since:2.6;" id="gtk_drag_source_add_uri_targets">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h4 data-hotdoc-id="gtk_drag_source_add_uri_targets">
-	<span><code>gtk_drag_source_add_uri_targets</code></span>
+	<span><code>Gtk.Widget.DragSourceAddUriTargets</code></span>
 </h4>
 
 
 
 
 <pre class="c-prototype">
-gtk_drag_source_add_uri_targets (<a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> * widget)</pre>
-
-<p>Add the URI targets supported by <a href="gtkselection-h.html#GtkSelectionData">GtkSelectionData</a> to
-the target list of the drag source.  The targets
-are added with <em>info</em> = 0. If you need another value,
-use <a href="gtkselection-h.html#gtk_target_list_add_uri_targets">gtk_target_list_add_uri_targets</a> and
-<a href="gtkdnd-h.html#gtk_drag_source_set_target_list">gtk_drag_source_set_target_list</a>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkwidget-h.html#GtkWidget">GtkWidget</a> that’s is a drag source</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.6
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_drag_source_add_uri_targets">
-	<span><code>Gtk.prototype.drag_source_add_uri_targets</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.drag_source_add_uri_targets(): {
-    // javascript wrapper for 'gtk_drag_source_add_uri_targets'
-}</pre>
+Gtk.Widget.DragSourceAddUriTargets ()</pre>
 
 <p>Add the URI targets supported by <a href="gtkselection-h.html#GtkSelectionData">Gtk.SelectionData</a> to
 the target list of the drag source.  The targets
 are added with <em>info</em> = 0. If you need another value,
-use <a href="gtkselection-h.html#gtk_target_list_add_uri_targets">Gtk.prototype.add_uri_targets</a> and
-<a href="gtkdnd-h.html#gtk_drag_source_set_target_list">Gtk.prototype.drag_source_set_target_list</a>.</p>
+use <a href="gtkselection-h.html#gtk_target_list_add_uri_targets">Gtk.TargetList.AddUriTargets</a> and
+<a href="gtkdnd-h.html#gtk_drag_source_set_target_list">Gtk.Widget.DragSourceSetTargetList</a>.</p>
 
 
 
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a> that’s is a drag source</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.6
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_drag_source_add_uri_targets">
-	<span><code>Gtk.Widget.drag_source_add_uri_targets</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.Widget.drag_source_add_uri_targets (self):
-    #python wrapper for 'gtk_drag_source_add_uri_targets'</pre>
-
-<p>Add the URI targets supported by <a href="gtkselection-h.html#GtkSelectionData">Gtk.SelectionData</a> to
-the target list of the drag source.  The targets
-are added with <em>info</em> = 0. If you need another value,
-use <a href="gtkselection-h.html#gtk_target_list_add_uri_targets">Gtk.TargetList.add_uri_targets</a> and
-<a href="gtkdnd-h.html#gtk_drag_source_set_target_list">Gtk.Widget.drag_source_set_target_list</a>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a> that’s is a drag source</p>
-
-	</div>
-
-			</div>
 
 
 
@@ -4689,23 +1359,23 @@ use <a href="gtkselection-h.html#gtk_target_list_add_uri_targets">Gtk.TargetList
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_drag_finish">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h3 data-hotdoc-id="gtk_drag_finish">
-	<span><code>gtk_drag_finish</code></span>
+	<span><code>Gtk.Global.DragFinish</code></span>
 </h3>
 
 
 
 
 <pre class="c-prototype">
-gtk_drag_finish (<a title="GdkDragContext" href="https://developer.gnome.org/gdk3/gdk3-Drag-and-Drop.html#GdkDragContext-struct">GdkDragContext</a> * context,
-                 <a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a> success,
-                 <a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a> del,
-                 <a title="guint32" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint32">guint32</a> time_)</pre>
+Gtk.Global.DragFinish (<a title="Gdk.DragContext" href="https://developer.gnome.org/gdk3/gdk3-Drag-and-Drop.html#GdkDragContext-struct">Gdk.DragContext</a>,
+                       <a title="bool" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/bool">bool</a>,
+                       <a title="bool" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/bool">bool</a>,
+                       <a title="uint" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/uint">uint</a>)</pre>
 
 
 
@@ -4739,7 +1409,7 @@ gtk_drag_finish (<a title="GdkDragContext" href="https://developer.gnome.org/gdk
 				–
 	</div>
 			<p>a flag indicating whether the source should delete the
-original data. (This should be <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> for a move)</p>
+original data. (This should be <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/true">true</a> for a move)</p>
 
 	</div>
 
@@ -4749,166 +1419,7 @@ original data. (This should be <a href="https://developer.gnome.org/glib/unstabl
 		<i><em><code>time_</code></em></i>
 				–
 	</div>
-			<p>the timestamp from the <a href="https://developer.gnome.org/gtk3/GtkWidget.html#GtkWidget-drag-drop">drag-drop</a> signal.</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_drag_finish">
-	<span><code>prototype.drag_finish</code></span>
-</h3>
-
-
-<pre class="javascript-prototype">
-function prototype.drag_finish(context: <a title="Gdk.DragContext" href="https://developer.gnome.org/gdk3/gdk3-Drag-and-Drop.html#GdkDragContext-struct">Gdk.DragContext</a>, success: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, del: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, time_: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
-    // javascript wrapper for 'gtk_drag_finish'
-}</pre>
-
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>context</code></em></i>
-					(
-						<a title="Gdk.DragContext" href="https://developer.gnome.org/gdk3/gdk3-Drag-and-Drop.html#GdkDragContext-struct">Gdk.DragContext</a>
-						)
-				–
-	</div>
-			<p>the drag context.</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>success</code></em></i>
-					(
-						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
-						)
-				–
-	</div>
-			<p>a flag indicating whether the drop was successful</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>del</code></em></i>
-					(
-						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
-						)
-				–
-	</div>
-			<p>a flag indicating whether the source should delete the
-original data. (This should be <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> for a move)</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>time_</code></em></i>
-					(
-						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
-						)
-				–
-	</div>
-			<p>the timestamp from the <a href="https://developer.gnome.org/gtk3/GtkWidget.html#GtkWidget-drag-drop">drag-drop</a> signal.</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_drag_finish">
-	<span><code>Gtk.drag_finish</code></span>
-</h3>
-
-
-<pre class="python-prototype">
-def Gtk.drag_finish (context, success, del, time_):
-    #python wrapper for 'gtk_drag_finish'</pre>
-
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>context</code></em></i>
-					(
-						<a title="Gdk.DragContext" href="https://developer.gnome.org/gdk3/gdk3-Drag-and-Drop.html#GdkDragContext-struct">Gdk.DragContext</a>
-						)
-				–
-	</div>
-			<p>the drag context.</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>success</code></em></i>
-					(
-						<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
-						)
-				–
-	</div>
-			<p>a flag indicating whether the drop was successful</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>del</code></em></i>
-					(
-						<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
-						)
-				–
-	</div>
-			<p>a flag indicating whether the source should delete the
-original data. (This should be <a href="https://docs.python.org/3/library/constants.html#True">True</a> for a move)</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>time_</code></em></i>
-					(
-						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
-						)
-				–
-	</div>
-			<p>the timestamp from the <a href="https://developer.gnome.org/gtk3/GtkWidget.html#GtkWidget-drag-drop">drag-drop</a> signal.</p>
+			<p>the timestamp from the <a href="https://developer.gnome.org/gtk3/GtkWidget.html#GtkWidget-drag-drop">DragDrop</a> signal.</p>
 
 	</div>
 
@@ -4926,21 +1437,21 @@ original data. (This should be <a href="https://docs.python.org/3/library/consta
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_drag_get_source_widget">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h3 data-hotdoc-id="gtk_drag_get_source_widget">
-	<span><code>gtk_drag_get_source_widget</code></span>
+	<span><code>Gtk.Global.DragGetSourceWidget</code></span>
 </h3>
 
 
 
 
 <pre class="c-prototype">
-<a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> *
-gtk_drag_get_source_widget (<a title="GdkDragContext" href="https://developer.gnome.org/gdk3/gdk3-Drag-and-Drop.html#GdkDragContext-struct">GdkDragContext</a> * context)</pre>
+<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
+Gtk.Global.DragGetSourceWidget (<a title="Gdk.DragContext" href="https://developer.gnome.org/gdk3/gdk3-Drag-and-Drop.html#GdkDragContext-struct">Gdk.DragContext</a>)</pre>
 
 
 
@@ -4963,113 +1474,6 @@ gtk_drag_get_source_widget (<a title="GdkDragContext" href="https://developer.gn
 		<div class="symbol-detail">
 			<div>
 				<b>Returns</b>
-								–
-			</div>
-							<p>(transfer none):</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_drag_get_source_widget">
-	<span><code>prototype.drag_get_source_widget</code></span>
-</h3>
-
-
-<pre class="javascript-prototype">
-function prototype.drag_get_source_widget(context: <a title="Gdk.DragContext" href="https://developer.gnome.org/gdk3/gdk3-Drag-and-Drop.html#GdkDragContext-struct">Gdk.DragContext</a>): {
-    // javascript wrapper for 'gtk_drag_get_source_widget'
-}</pre>
-
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>context</code></em></i>
-					(
-						<a title="Gdk.DragContext" href="https://developer.gnome.org/gdk3/gdk3-Drag-and-Drop.html#GdkDragContext-struct">Gdk.DragContext</a>
-						)
-				–
-	</div>
-			<p>a (destination side) drag context</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-										)
-								–
-			</div>
-							<p>(transfer none):</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_drag_get_source_widget">
-	<span><code>Gtk.drag_get_source_widget</code></span>
-</h3>
-
-
-<pre class="python-prototype">
-def Gtk.drag_get_source_widget (context):
-    #python wrapper for 'gtk_drag_get_source_widget'</pre>
-
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>context</code></em></i>
-					(
-						<a title="Gdk.DragContext" href="https://developer.gnome.org/gdk3/gdk3-Drag-and-Drop.html#GdkDragContext-struct">Gdk.DragContext</a>
-						)
-				–
-	</div>
-			<p>a (destination side) drag context</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-										)
 								–
 			</div>
 							<p>(transfer none):</p>
@@ -5089,20 +1493,20 @@ def Gtk.drag_get_source_widget (context):
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_drag_cancel">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h3 data-hotdoc-id="gtk_drag_cancel">
-	<span><code>gtk_drag_cancel</code></span>
+	<span><code>Gtk.Global.DragCancel</code></span>
 </h3>
 
 
 
 
 <pre class="c-prototype">
-gtk_drag_cancel (<a title="GdkDragContext" href="https://developer.gnome.org/gdk3/gdk3-Drag-and-Drop.html#GdkDragContext-struct">GdkDragContext</a> * context)</pre>
+Gtk.Global.DragCancel (<a title="Gdk.DragContext" href="https://developer.gnome.org/gdk3/gdk3-Drag-and-Drop.html#GdkDragContext-struct">Gdk.DragContext</a>)</pre>
 
 
 
@@ -5115,86 +1519,7 @@ gtk_drag_cancel (<a title="GdkDragContext" href="https://developer.gnome.org/gdk
 		<i><em><code>context</code></em></i>
 				–
 	</div>
-			<p>a <a href="https://developer.gnome.org/gdk3/gdk3-Drag-and-Drop.html#GdkDragContext-struct">GdkDragContext</a>, as e.g. returned by <a href="gtkdnd-h.html#gtk_drag_begin_with_coordinates">gtk_drag_begin_with_coordinates</a></p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_drag_cancel">
-	<span><code>prototype.drag_cancel</code></span>
-</h3>
-
-
-<pre class="javascript-prototype">
-function prototype.drag_cancel(context: <a title="Gdk.DragContext" href="https://developer.gnome.org/gdk3/gdk3-Drag-and-Drop.html#GdkDragContext-struct">Gdk.DragContext</a>): {
-    // javascript wrapper for 'gtk_drag_cancel'
-}</pre>
-
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>context</code></em></i>
-					(
-						<a title="Gdk.DragContext" href="https://developer.gnome.org/gdk3/gdk3-Drag-and-Drop.html#GdkDragContext-struct">Gdk.DragContext</a>
-						)
-				–
-	</div>
-			<p>a <a href="https://developer.gnome.org/gdk3/gdk3-Drag-and-Drop.html#GdkDragContext-struct">Gdk.DragContext</a>, as e.g. returned by <a href="gtkdnd-h.html#gtk_drag_begin_with_coordinates">Gtk.prototype.drag_begin_with_coordinates</a></p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_drag_cancel">
-	<span><code>Gtk.drag_cancel</code></span>
-</h3>
-
-
-<pre class="python-prototype">
-def Gtk.drag_cancel (context):
-    #python wrapper for 'gtk_drag_cancel'</pre>
-
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>context</code></em></i>
-					(
-						<a title="Gdk.DragContext" href="https://developer.gnome.org/gdk3/gdk3-Drag-and-Drop.html#GdkDragContext-struct">Gdk.DragContext</a>
-						)
-				–
-	</div>
-			<p>a <a href="https://developer.gnome.org/gdk3/gdk3-Drag-and-Drop.html#GdkDragContext-struct">Gdk.DragContext</a>, as e.g. returned by <a href="gtkdnd-h.html#gtk_drag_begin_with_coordinates">Gtk.Widget.drag_begin_with_coordinates</a></p>
+			<p>a <a href="https://developer.gnome.org/gdk3/gdk3-Drag-and-Drop.html#GdkDragContext-struct">Gdk.DragContext</a>, as e.g. returned by <a href="gtkdnd-h.html#gtk_drag_begin_with_coordinates">Gtk.Widget.DragBeginWithCoordinates</a></p>
 
 	</div>
 
@@ -5212,23 +1537,23 @@ def Gtk.drag_cancel (context):
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_drag_set_icon_widget">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h3 data-hotdoc-id="gtk_drag_set_icon_widget">
-	<span><code>gtk_drag_set_icon_widget</code></span>
+	<span><code>Gtk.Global.DragSetIconWidget</code></span>
 </h3>
 
 
 
 
 <pre class="c-prototype">
-gtk_drag_set_icon_widget (<a title="GdkDragContext" href="https://developer.gnome.org/gdk3/gdk3-Drag-and-Drop.html#GdkDragContext-struct">GdkDragContext</a> * context,
-                          <a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> * widget,
-                          <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> hot_x,
-                          <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> hot_y)</pre>
+Gtk.Global.DragSetIconWidget (<a title="Gdk.DragContext" href="https://developer.gnome.org/gdk3/gdk3-Drag-and-Drop.html#GdkDragContext-struct">Gdk.DragContext</a>,
+                              <a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>,
+                              <a title="int" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/int">int</a>,
+                              <a title="int" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/int">int</a>)</pre>
 
 <p>Changes the icon for a widget to a given widget. GTK+
 will not destroy the icon, so if you don’t want
@@ -5274,173 +1599,6 @@ with a  context for the source side of a drag)</p>
 <div class="symbol-detail">
 	<div>
 		<i><em><code>hot_y</code></em></i>
-				–
-	</div>
-			<p>the Y offset within <em>widget</em> of the hotspot.</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_drag_set_icon_widget">
-	<span><code>prototype.drag_set_icon_widget</code></span>
-</h3>
-
-
-<pre class="javascript-prototype">
-function prototype.drag_set_icon_widget(context: <a title="Gdk.DragContext" href="https://developer.gnome.org/gdk3/gdk3-Drag-and-Drop.html#GdkDragContext-struct">Gdk.DragContext</a>, widget: <a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>, hot_x: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, hot_y: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
-    // javascript wrapper for 'gtk_drag_set_icon_widget'
-}</pre>
-
-<p>Changes the icon for a widget to a given widget. GTK+
-will not destroy the icon, so if you don’t want
-it to persist, you should connect to the “drag-end”
-signal and destroy it yourself.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>context</code></em></i>
-					(
-						<a title="Gdk.DragContext" href="https://developer.gnome.org/gdk3/gdk3-Drag-and-Drop.html#GdkDragContext-struct">Gdk.DragContext</a>
-						)
-				–
-	</div>
-			<p>the context for a drag. (This must be called
-with a  context for the source side of a drag)</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
-				–
-	</div>
-			<p>a toplevel window to use as an icon.</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>hot_x</code></em></i>
-					(
-						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
-						)
-				–
-	</div>
-			<p>the X offset within <em>widget</em> of the hotspot.</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>hot_y</code></em></i>
-					(
-						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
-						)
-				–
-	</div>
-			<p>the Y offset within <em>widget</em> of the hotspot.</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_drag_set_icon_widget">
-	<span><code>Gtk.drag_set_icon_widget</code></span>
-</h3>
-
-
-<pre class="python-prototype">
-def Gtk.drag_set_icon_widget (context, widget, hot_x, hot_y):
-    #python wrapper for 'gtk_drag_set_icon_widget'</pre>
-
-<p>Changes the icon for a widget to a given widget. GTK+
-will not destroy the icon, so if you don’t want
-it to persist, you should connect to the “drag-end”
-signal and destroy it yourself.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>context</code></em></i>
-					(
-						<a title="Gdk.DragContext" href="https://developer.gnome.org/gdk3/gdk3-Drag-and-Drop.html#GdkDragContext-struct">Gdk.DragContext</a>
-						)
-				–
-	</div>
-			<p>the context for a drag. (This must be called
-with a  context for the source side of a drag)</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
-				–
-	</div>
-			<p>a toplevel window to use as an icon.</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>hot_x</code></em></i>
-					(
-						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
-						)
-				–
-	</div>
-			<p>the X offset within <em>widget</em> of the hotspot.</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>hot_y</code></em></i>
-					(
-						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
-						)
 				–
 	</div>
 			<p>the Y offset within <em>widget</em> of the hotspot.</p>
@@ -5461,23 +1619,23 @@ with a  context for the source side of a drag)</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_drag_set_icon_pixbuf">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h3 data-hotdoc-id="gtk_drag_set_icon_pixbuf">
-	<span><code>gtk_drag_set_icon_pixbuf</code></span>
+	<span><code>Gtk.Global.DragSetIconPixbuf</code></span>
 </h3>
 
 
 
 
 <pre class="c-prototype">
-gtk_drag_set_icon_pixbuf (<a title="GdkDragContext" href="https://developer.gnome.org/gdk3/gdk3-Drag-and-Drop.html#GdkDragContext-struct">GdkDragContext</a> * context,
-                          <a title="GdkPixbuf" href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf</a> * pixbuf,
-                          <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> hot_x,
-                          <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> hot_y)</pre>
+Gtk.Global.DragSetIconPixbuf (<a title="Gdk.DragContext" href="https://developer.gnome.org/gdk3/gdk3-Drag-and-Drop.html#GdkDragContext-struct">Gdk.DragContext</a>,
+                              <a title="GdkPixbuf.Pixbuf" href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf.Pixbuf</a>,
+                              <a title="int" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/int">int</a>,
+                              <a title="int" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/int">int</a>)</pre>
 
 <p>Sets <em>pixbuf</em> as the icon for a given drag.</p>
 
@@ -5500,81 +1658,6 @@ with a  context for the source side of a drag)</p>
 <div class="symbol-detail">
 	<div>
 		<i><em><code>pixbuf</code></em></i>
-				–
-	</div>
-			<p>the <a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf</a> to use as the drag icon.</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>hot_x</code></em></i>
-				–
-	</div>
-			<p>the X offset within <em>widget</em> of the hotspot.</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>hot_y</code></em></i>
-				–
-	</div>
-			<p>the Y offset within <em>widget</em> of the hotspot.</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_drag_set_icon_pixbuf">
-	<span><code>prototype.drag_set_icon_pixbuf</code></span>
-</h3>
-
-
-<pre class="javascript-prototype">
-function prototype.drag_set_icon_pixbuf(context: <a title="Gdk.DragContext" href="https://developer.gnome.org/gdk3/gdk3-Drag-and-Drop.html#GdkDragContext-struct">Gdk.DragContext</a>, pixbuf: <a title="GdkPixbuf.Pixbuf" href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf.Pixbuf</a>, hot_x: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, hot_y: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
-    // javascript wrapper for 'gtk_drag_set_icon_pixbuf'
-}</pre>
-
-<p>Sets <em>pixbuf</em> as the icon for a given drag.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>context</code></em></i>
-					(
-						<a title="Gdk.DragContext" href="https://developer.gnome.org/gdk3/gdk3-Drag-and-Drop.html#GdkDragContext-struct">Gdk.DragContext</a>
-						)
-				–
-	</div>
-			<p>the context for a drag. (This must be called
-with a  context for the source side of a drag)</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>pixbuf</code></em></i>
-					(
-						<a title="GdkPixbuf.Pixbuf" href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf.Pixbuf</a>
-						)
 				–
 	</div>
 			<p>the <a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf.Pixbuf</a> to use as the drag icon.</p>
@@ -5585,9 +1668,6 @@ with a  context for the source side of a drag)</p>
 <div class="symbol-detail">
 	<div>
 		<i><em><code>hot_x</code></em></i>
-					(
-						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
-						)
 				–
 	</div>
 			<p>the X offset within <em>widget</em> of the hotspot.</p>
@@ -5598,89 +1678,6 @@ with a  context for the source side of a drag)</p>
 <div class="symbol-detail">
 	<div>
 		<i><em><code>hot_y</code></em></i>
-					(
-						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
-						)
-				–
-	</div>
-			<p>the Y offset within <em>widget</em> of the hotspot.</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_drag_set_icon_pixbuf">
-	<span><code>Gtk.drag_set_icon_pixbuf</code></span>
-</h3>
-
-
-<pre class="python-prototype">
-def Gtk.drag_set_icon_pixbuf (context, pixbuf, hot_x, hot_y):
-    #python wrapper for 'gtk_drag_set_icon_pixbuf'</pre>
-
-<p>Sets <em>pixbuf</em> as the icon for a given drag.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>context</code></em></i>
-					(
-						<a title="Gdk.DragContext" href="https://developer.gnome.org/gdk3/gdk3-Drag-and-Drop.html#GdkDragContext-struct">Gdk.DragContext</a>
-						)
-				–
-	</div>
-			<p>the context for a drag. (This must be called
-with a  context for the source side of a drag)</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>pixbuf</code></em></i>
-					(
-						<a title="GdkPixbuf.Pixbuf" href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf.Pixbuf</a>
-						)
-				–
-	</div>
-			<p>the <a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf.Pixbuf</a> to use as the drag icon.</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>hot_x</code></em></i>
-					(
-						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
-						)
-				–
-	</div>
-			<p>the X offset within <em>widget</em> of the hotspot.</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>hot_y</code></em></i>
-					(
-						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
-						)
 				–
 	</div>
 			<p>the Y offset within <em>widget</em> of the hotspot.</p>
@@ -5701,76 +1698,21 @@ with a  context for the source side of a drag)</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_drag_set_icon_surface">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h3 data-hotdoc-id="gtk_drag_set_icon_surface">
-	<span><code>gtk_drag_set_icon_surface</code></span>
+	<span><code>Gtk.Global.DragSetIconSurface</code></span>
 </h3>
 
 
 
 
 <pre class="c-prototype">
-gtk_drag_set_icon_surface (<a title="GdkDragContext" href="https://developer.gnome.org/gdk3/gdk3-Drag-and-Drop.html#GdkDragContext-struct">GdkDragContext</a> * context,
-                           <a title="cairo_surface_t" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-surface-t.html#cairo-surface-t">cairo_surface_t</a> * surface)</pre>
-
-<p>Sets <em>surface</em> as the icon for a given drag. GTK+ retains
-references for the arguments, and will release them when
-they are no longer needed.</p>
-<p>To position the surface relative to the mouse, use
-<a href="https://developer.gnome.org/cairo/unstable/cairo-cairo-surface-t.html#cairo-surface-set-device-offset">cairo_surface_set_device_offset</a> on <em>surface</em>. The mouse
-cursor will be positioned at the (0,0) coordinate of the
-surface.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>context</code></em></i>
-				–
-	</div>
-			<p>the context for a drag. (This must be called
-with a context for the source side of a drag)</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>surface</code></em></i>
-				–
-	</div>
-			<p>the surface to use as icon</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_drag_set_icon_surface">
-	<span><code>prototype.drag_set_icon_surface</code></span>
-</h3>
-
-
-<pre class="javascript-prototype">
-function prototype.drag_set_icon_surface(context: <a title="Gdk.DragContext" href="https://developer.gnome.org/gdk3/gdk3-Drag-and-Drop.html#GdkDragContext-struct">Gdk.DragContext</a>, surface: <a title="cairo.Surface" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-surface-t.html#cairo-surface-t">cairo.Surface</a>): {
-    // javascript wrapper for 'gtk_drag_set_icon_surface'
-}</pre>
+Gtk.Global.DragSetIconSurface (<a title="Gdk.DragContext" href="https://developer.gnome.org/gdk3/gdk3-Drag-and-Drop.html#GdkDragContext-struct">Gdk.DragContext</a>,
+                               <a title="cairo.Surface" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-surface-t.html#cairo-surface-t">cairo.Surface</a>)</pre>
 
 <p>Sets <em>surface</em> as the icon for a given drag. GTK+ retains
 references for the arguments, and will release them when
@@ -5788,9 +1730,6 @@ surface.</p>
 <div class="symbol-detail">
 	<div>
 		<i><em><code>context</code></em></i>
-					(
-						<a title="Gdk.DragContext" href="https://developer.gnome.org/gdk3/gdk3-Drag-and-Drop.html#GdkDragContext-struct">Gdk.DragContext</a>
-						)
 				–
 	</div>
 			<p>the context for a drag. (This must be called
@@ -5802,69 +1741,6 @@ with a context for the source side of a drag)</p>
 <div class="symbol-detail">
 	<div>
 		<i><em><code>surface</code></em></i>
-					(
-						<a title="cairo.Surface" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-surface-t.html#cairo-surface-t">cairo.Surface</a>
-						)
-				–
-	</div>
-			<p>the surface to use as icon</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_drag_set_icon_surface">
-	<span><code>Gtk.drag_set_icon_surface</code></span>
-</h3>
-
-
-<pre class="python-prototype">
-def Gtk.drag_set_icon_surface (context, surface):
-    #python wrapper for 'gtk_drag_set_icon_surface'</pre>
-
-<p>Sets <em>surface</em> as the icon for a given drag. GTK+ retains
-references for the arguments, and will release them when
-they are no longer needed.</p>
-<p>To position the surface relative to the mouse, use
-<a href="https://developer.gnome.org/cairo/unstable/cairo-cairo-surface-t.html#cairo-surface-set-device-offset">cairo_surface_set_device_offset (not introspectable)</a> on <em>surface</em>. The mouse
-cursor will be positioned at the (0,0) coordinate of the
-surface.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>context</code></em></i>
-					(
-						<a title="Gdk.DragContext" href="https://developer.gnome.org/gdk3/gdk3-Drag-and-Drop.html#GdkDragContext-struct">Gdk.DragContext</a>
-						)
-				–
-	</div>
-			<p>the context for a drag. (This must be called
-with a context for the source side of a drag)</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>surface</code></em></i>
-					(
-						<a title="cairo.Surface" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-surface-t.html#cairo-surface-t">cairo.Surface</a>
-						)
 				–
 	</div>
 			<p>the surface to use as icon</p>
@@ -5885,104 +1761,28 @@ with a context for the source side of a drag)</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="since:2.8;" id="gtk_drag_set_icon_name">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h3 data-hotdoc-id="gtk_drag_set_icon_name">
-	<span><code>gtk_drag_set_icon_name</code></span>
+	<span><code>Gtk.Global.DragSetIconName</code></span>
 </h3>
 
 
 
 
 <pre class="c-prototype">
-gtk_drag_set_icon_name (<a title="GdkDragContext" href="https://developer.gnome.org/gdk3/gdk3-Drag-and-Drop.html#GdkDragContext-struct">GdkDragContext</a> * context,
-                        const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * icon_name,
-                        <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> hot_x,
-                        <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> hot_y)</pre>
-
-<p>Sets the icon for a given drag from a named themed icon. See
-the docs for <a href="gtkicontheme-h.html#GtkIconTheme">GtkIconTheme</a> for more details. Note that the
-size of the icon depends on the icon theme (the icon is
-loaded at the symbolic size <a href="https://developer.gnome.org/gtk3/gtk3-Themeable-Stock-Images.html#GTK-ICON-SIZE-DND:CAPS">GTK_ICON_SIZE_DND</a>), thus
-<em>hot_x</em> and <em>hot_y</em> have to be used with care.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>context</code></em></i>
-				–
-	</div>
-			<p>the context for a drag. (This must be called
-with a context for the source side of a drag)</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>icon_name</code></em></i>
-				–
-	</div>
-			<p>name of icon to use</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>hot_x</code></em></i>
-				–
-	</div>
-			<p>the X offset of the hotspot within the icon</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>hot_y</code></em></i>
-				–
-	</div>
-			<p>the Y offset of the hotspot within the icon</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.8
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_drag_set_icon_name">
-	<span><code>prototype.drag_set_icon_name</code></span>
-</h3>
-
-
-<pre class="javascript-prototype">
-function prototype.drag_set_icon_name(context: <a title="Gdk.DragContext" href="https://developer.gnome.org/gdk3/gdk3-Drag-and-Drop.html#GdkDragContext-struct">Gdk.DragContext</a>, icon_name: <a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>, hot_x: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, hot_y: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
-    // javascript wrapper for 'gtk_drag_set_icon_name'
-}</pre>
+Gtk.Global.DragSetIconName (<a title="Gdk.DragContext" href="https://developer.gnome.org/gdk3/gdk3-Drag-and-Drop.html#GdkDragContext-struct">Gdk.DragContext</a>,
+                            <a title="string" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/string">string</a>,
+                            <a title="int" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/int">int</a>,
+                            <a title="int" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/int">int</a>)</pre>
 
 <p>Sets the icon for a given drag from a named themed icon. See
 the docs for <a href="gtkicontheme-h.html#GtkIconTheme">Gtk.IconTheme</a> for more details. Note that the
 size of the icon depends on the icon theme (the icon is
-loaded at the symbolic size <a href="https://developer.gnome.org/gtk3/gtk3-Themeable-Stock-Images.html#GTK-ICON-SIZE-DND:CAPS">Gtk.IconSize.DND</a>), thus
+loaded at the symbolic size <a href="https://developer.gnome.org/gtk3/gtk3-Themeable-Stock-Images.html#GTK-ICON-SIZE-DND:CAPS">Gtk.IconSize.Dnd</a>), thus
 <em>hot_x</em> and <em>hot_y</em> have to be used with care.</p>
 
 
@@ -5993,9 +1793,6 @@ loaded at the symbolic size <a href="https://developer.gnome.org/gtk3/gtk3-Theme
 <div class="symbol-detail">
 	<div>
 		<i><em><code>context</code></em></i>
-					(
-						<a title="Gdk.DragContext" href="https://developer.gnome.org/gdk3/gdk3-Drag-and-Drop.html#GdkDragContext-struct">Gdk.DragContext</a>
-						)
 				–
 	</div>
 			<p>the context for a drag. (This must be called
@@ -6007,9 +1804,6 @@ with a context for the source side of a drag)</p>
 <div class="symbol-detail">
 	<div>
 		<i><em><code>icon_name</code></em></i>
-					(
-						<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
-						)
 				–
 	</div>
 			<p>name of icon to use</p>
@@ -6020,9 +1814,6 @@ with a context for the source side of a drag)</p>
 <div class="symbol-detail">
 	<div>
 		<i><em><code>hot_x</code></em></i>
-					(
-						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
-						)
 				–
 	</div>
 			<p>the X offset of the hotspot within the icon</p>
@@ -6033,96 +1824,6 @@ with a context for the source side of a drag)</p>
 <div class="symbol-detail">
 	<div>
 		<i><em><code>hot_y</code></em></i>
-					(
-						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
-						)
-				–
-	</div>
-			<p>the Y offset of the hotspot within the icon</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.8
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_drag_set_icon_name">
-	<span><code>Gtk.drag_set_icon_name</code></span>
-</h3>
-
-
-<pre class="python-prototype">
-def Gtk.drag_set_icon_name (context, icon_name, hot_x, hot_y):
-    #python wrapper for 'gtk_drag_set_icon_name'</pre>
-
-<p>Sets the icon for a given drag from a named themed icon. See
-the docs for <a href="gtkicontheme-h.html#GtkIconTheme">Gtk.IconTheme</a> for more details. Note that the
-size of the icon depends on the icon theme (the icon is
-loaded at the symbolic size <a href="https://developer.gnome.org/gtk3/gtk3-Themeable-Stock-Images.html#GTK-ICON-SIZE-DND:CAPS">Gtk.IconSize.DND</a>), thus
-<em>hot_x</em> and <em>hot_y</em> have to be used with care.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>context</code></em></i>
-					(
-						<a title="Gdk.DragContext" href="https://developer.gnome.org/gdk3/gdk3-Drag-and-Drop.html#GdkDragContext-struct">Gdk.DragContext</a>
-						)
-				–
-	</div>
-			<p>the context for a drag. (This must be called
-with a context for the source side of a drag)</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>icon_name</code></em></i>
-					(
-						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
-						)
-				–
-	</div>
-			<p>name of icon to use</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>hot_x</code></em></i>
-					(
-						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
-						)
-				–
-	</div>
-			<p>the X offset of the hotspot within the icon</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>hot_y</code></em></i>
-					(
-						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
-						)
 				–
 	</div>
 			<p>the Y offset of the hotspot within the icon</p>
@@ -6146,26 +1847,26 @@ with a context for the source side of a drag)</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.2;" id="gtk_drag_set_icon_gicon">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h3 data-hotdoc-id="gtk_drag_set_icon_gicon">
-	<span><code>gtk_drag_set_icon_gicon</code></span>
+	<span><code>Gtk.Global.DragSetIconGicon</code></span>
 </h3>
 
 
 
 
 <pre class="c-prototype">
-gtk_drag_set_icon_gicon (<a title="GdkDragContext" href="https://developer.gnome.org/gdk3/gdk3-Drag-and-Drop.html#GdkDragContext-struct">GdkDragContext</a> * context,
-                         <a title="GIcon" href="https://developer.gnome.org/gio/unstable/GIcon.html#GIcon-struct">GIcon</a> * icon,
-                         <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> hot_x,
-                         <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> hot_y)</pre>
+Gtk.Global.DragSetIconGicon (<a title="Gdk.DragContext" href="https://developer.gnome.org/gdk3/gdk3-Drag-and-Drop.html#GdkDragContext-struct">Gdk.DragContext</a>,
+                             <a title="Gio.IIcon" href="https://developer.gnome.org/gio/unstable/GIcon.html#GIcon-struct">Gio.IIcon</a>,
+                             <a title="int" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/int">int</a>,
+                             <a title="int" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/int">int</a>)</pre>
 
 <p>Sets the icon for a given drag from the given <em>icon</em>.
-See the documentation for <a href="gtkdnd-h.html#gtk_drag_set_icon_name">gtk_drag_set_icon_name</a>
+See the documentation for <a href="gtkdnd-h.html#gtk_drag_set_icon_name">Gtk.Global.DragSetIconName</a>
 for more details about using icons in drag and drop.</p>
 
 
@@ -6189,7 +1890,7 @@ with a context for the source side of a drag)</p>
 		<i><em><code>icon</code></em></i>
 				–
 	</div>
-			<p>a <a href="https://developer.gnome.org/gio/unstable/GIcon.html#GIcon-struct">GIcon</a></p>
+			<p>a <a href="https://developer.gnome.org/gio/unstable/GIcon.html#GIcon-struct">Gio.IIcon</a></p>
 
 	</div>
 
@@ -6207,177 +1908,6 @@ with a context for the source side of a drag)</p>
 <div class="symbol-detail">
 	<div>
 		<i><em><code>hot_y</code></em></i>
-				–
-	</div>
-			<p>the Y offset of the hotspot within the icon</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.2
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_drag_set_icon_gicon">
-	<span><code>prototype.drag_set_icon_gicon</code></span>
-</h3>
-
-
-<pre class="javascript-prototype">
-function prototype.drag_set_icon_gicon(context: <a title="Gdk.DragContext" href="https://developer.gnome.org/gdk3/gdk3-Drag-and-Drop.html#GdkDragContext-struct">Gdk.DragContext</a>, icon: <a title="Gio.Icon" href="https://developer.gnome.org/gio/unstable/GIcon.html#GIcon-struct">Gio.Icon</a>, hot_x: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, hot_y: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
-    // javascript wrapper for 'gtk_drag_set_icon_gicon'
-}</pre>
-
-<p>Sets the icon for a given drag from the given <em>icon</em>.
-See the documentation for <a href="gtkdnd-h.html#gtk_drag_set_icon_name">prototype.drag_set_icon_name</a>
-for more details about using icons in drag and drop.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>context</code></em></i>
-					(
-						<a title="Gdk.DragContext" href="https://developer.gnome.org/gdk3/gdk3-Drag-and-Drop.html#GdkDragContext-struct">Gdk.DragContext</a>
-						)
-				–
-	</div>
-			<p>the context for a drag (This must be called
-with a context for the source side of a drag)</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>icon</code></em></i>
-					(
-						<a title="Gio.Icon" href="https://developer.gnome.org/gio/unstable/GIcon.html#GIcon-struct">Gio.Icon</a>
-						)
-				–
-	</div>
-			<p>a <a href="https://developer.gnome.org/gio/unstable/GIcon.html#GIcon-struct">Gio.Icon</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>hot_x</code></em></i>
-					(
-						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
-						)
-				–
-	</div>
-			<p>the X offset of the hotspot within the icon</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>hot_y</code></em></i>
-					(
-						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
-						)
-				–
-	</div>
-			<p>the Y offset of the hotspot within the icon</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.2
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_drag_set_icon_gicon">
-	<span><code>Gtk.drag_set_icon_gicon</code></span>
-</h3>
-
-
-<pre class="python-prototype">
-def Gtk.drag_set_icon_gicon (context, icon, hot_x, hot_y):
-    #python wrapper for 'gtk_drag_set_icon_gicon'</pre>
-
-<p>Sets the icon for a given drag from the given <em>icon</em>.
-See the documentation for <a href="gtkdnd-h.html#gtk_drag_set_icon_name">Gtk.drag_set_icon_name</a>
-for more details about using icons in drag and drop.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>context</code></em></i>
-					(
-						<a title="Gdk.DragContext" href="https://developer.gnome.org/gdk3/gdk3-Drag-and-Drop.html#GdkDragContext-struct">Gdk.DragContext</a>
-						)
-				–
-	</div>
-			<p>the context for a drag (This must be called
-with a context for the source side of a drag)</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>icon</code></em></i>
-					(
-						<a title="Gio.Icon" href="https://developer.gnome.org/gio/unstable/GIcon.html#GIcon-struct">Gio.Icon</a>
-						)
-				–
-	</div>
-			<p>a <a href="https://developer.gnome.org/gio/unstable/GIcon.html#GIcon-struct">Gio.Icon</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>hot_x</code></em></i>
-					(
-						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
-						)
-				–
-	</div>
-			<p>the X offset of the hotspot within the icon</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>hot_y</code></em></i>
-					(
-						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
-						)
 				–
 	</div>
 			<p>the Y offset of the hotspot within the icon</p>
@@ -6401,20 +1931,20 @@ with a context for the source side of a drag)</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_drag_set_icon_default">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h3 data-hotdoc-id="gtk_drag_set_icon_default">
-	<span><code>gtk_drag_set_icon_default</code></span>
+	<span><code>Gtk.Global.DragSetIconDefault</code></span>
 </h3>
 
 
 
 
 <pre class="c-prototype">
-gtk_drag_set_icon_default (<a title="GdkDragContext" href="https://developer.gnome.org/gdk3/gdk3-Drag-and-Drop.html#GdkDragContext-struct">GdkDragContext</a> * context)</pre>
+Gtk.Global.DragSetIconDefault (<a title="Gdk.DragContext" href="https://developer.gnome.org/gdk3/gdk3-Drag-and-Drop.html#GdkDragContext-struct">Gdk.DragContext</a>)</pre>
 
 <p>Sets the icon for a particular drag to the default
 icon.</p>
@@ -6427,91 +1957,6 @@ icon.</p>
 <div class="symbol-detail">
 	<div>
 		<i><em><code>context</code></em></i>
-				–
-	</div>
-			<p>the context for a drag. (This must be called
-with a  context for the source side of a drag)</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_drag_set_icon_default">
-	<span><code>prototype.drag_set_icon_default</code></span>
-</h3>
-
-
-<pre class="javascript-prototype">
-function prototype.drag_set_icon_default(context: <a title="Gdk.DragContext" href="https://developer.gnome.org/gdk3/gdk3-Drag-and-Drop.html#GdkDragContext-struct">Gdk.DragContext</a>): {
-    // javascript wrapper for 'gtk_drag_set_icon_default'
-}</pre>
-
-<p>Sets the icon for a particular drag to the default
-icon.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>context</code></em></i>
-					(
-						<a title="Gdk.DragContext" href="https://developer.gnome.org/gdk3/gdk3-Drag-and-Drop.html#GdkDragContext-struct">Gdk.DragContext</a>
-						)
-				–
-	</div>
-			<p>the context for a drag. (This must be called
-with a  context for the source side of a drag)</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_drag_set_icon_default">
-	<span><code>Gtk.drag_set_icon_default</code></span>
-</h3>
-
-
-<pre class="python-prototype">
-def Gtk.drag_set_icon_default (context):
-    #python wrapper for 'gtk_drag_set_icon_default'</pre>
-
-<p>Sets the icon for a particular drag to the default
-icon.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>context</code></em></i>
-					(
-						<a title="Gdk.DragContext" href="https://developer.gnome.org/gdk3/gdk3-Drag-and-Drop.html#GdkDragContext-struct">Gdk.DragContext</a>
-						)
 				–
 	</div>
 			<p>the context for a drag. (This must be called
@@ -6535,71 +1980,7 @@ with a  context for the source side of a drag)</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="GtkDestDefaults">
 	
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h3 data-hotdoc-id="GtkDestDefaults">
-	<span><code>GtkDestDefaults</code></span>
-</h3>
-
-
-<p>The <a href="gtkdnd-h.html#GtkDestDefaults">GtkDestDefaults</a> enumeration specifies the various
-types of action that will be taken on behalf
-of the user for a drag destination site.</p>
-
-
-
-
-	<div class="members-container">
-		<h4>Members</h4>
-					
-<div class="symbol-detail" data-hotdoc-id="GTK_DEST_DEFAULT_MOTION">
-	<div>
-		<i><em><code>GTK_DEST_DEFAULT_MOTION</code></em></i>
-		(<span class="value">1</span>)
-		–
-	</div>
-			<i>No description available</i>
-	</div>
-
-					
-<div class="symbol-detail" data-hotdoc-id="GTK_DEST_DEFAULT_HIGHLIGHT">
-	<div>
-		<i><em><code>GTK_DEST_DEFAULT_HIGHLIGHT</code></em></i>
-		(<span class="value">2</span>)
-		–
-	</div>
-			<i>No description available</i>
-	</div>
-
-					
-<div class="symbol-detail" data-hotdoc-id="GTK_DEST_DEFAULT_DROP">
-	<div>
-		<i><em><code>GTK_DEST_DEFAULT_DROP</code></em></i>
-		(<span class="value">4</span>)
-		–
-	</div>
-			<i>No description available</i>
-	</div>
-
-					
-<div class="symbol-detail" data-hotdoc-id="GTK_DEST_DEFAULT_ALL">
-	<div>
-		<i><em><code>GTK_DEST_DEFAULT_ALL</code></em></i>
-		(<span class="value">7</span>)
-		–
-	</div>
-			<i>No description available</i>
-	</div>
-
-			</div>
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
@@ -6621,7 +2002,7 @@ of the user for a drag destination site.</p>
 					
 <div class="symbol-detail" data-hotdoc-id="GTK_DEST_DEFAULT_MOTION">
 	<div>
-		<i><em><code>Gtk.DestDefaults.MOTION</code></em></i>
+		<i><em><code>Gtk.DestDefaults.Motion</code></em></i>
 		(<span class="value">1</span>)
 		–
 	</div>
@@ -6631,7 +2012,7 @@ of the user for a drag destination site.</p>
 					
 <div class="symbol-detail" data-hotdoc-id="GTK_DEST_DEFAULT_HIGHLIGHT">
 	<div>
-		<i><em><code>Gtk.DestDefaults.HIGHLIGHT</code></em></i>
+		<i><em><code>Gtk.DestDefaults.Highlight</code></em></i>
 		(<span class="value">2</span>)
 		–
 	</div>
@@ -6641,7 +2022,7 @@ of the user for a drag destination site.</p>
 					
 <div class="symbol-detail" data-hotdoc-id="GTK_DEST_DEFAULT_DROP">
 	<div>
-		<i><em><code>Gtk.DestDefaults.DROP</code></em></i>
+		<i><em><code>Gtk.DestDefaults.Drop</code></em></i>
 		(<span class="value">4</span>)
 		–
 	</div>
@@ -6651,71 +2032,7 @@ of the user for a drag destination site.</p>
 					
 <div class="symbol-detail" data-hotdoc-id="GTK_DEST_DEFAULT_ALL">
 	<div>
-		<i><em><code>Gtk.DestDefaults.ALL</code></em></i>
-		(<span class="value">7</span>)
-		–
-	</div>
-			<i>No description available</i>
-	</div>
-
-			</div>
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="GtkDestDefaults">
-	<span><code>Gtk.DestDefaults</code></span>
-</h3>
-
-
-<p>The <a href="gtkdnd-h.html#GtkDestDefaults">Gtk.DestDefaults</a> enumeration specifies the various
-types of action that will be taken on behalf
-of the user for a drag destination site.</p>
-
-
-
-
-	<div class="members-container">
-		<h4>Members</h4>
-					
-<div class="symbol-detail" data-hotdoc-id="GTK_DEST_DEFAULT_MOTION">
-	<div>
-		<i><em><code>Gtk.DestDefaults.MOTION</code></em></i>
-		(<span class="value">1</span>)
-		–
-	</div>
-			<i>No description available</i>
-	</div>
-
-					
-<div class="symbol-detail" data-hotdoc-id="GTK_DEST_DEFAULT_HIGHLIGHT">
-	<div>
-		<i><em><code>Gtk.DestDefaults.HIGHLIGHT</code></em></i>
-		(<span class="value">2</span>)
-		–
-	</div>
-			<i>No description available</i>
-	</div>
-
-					
-<div class="symbol-detail" data-hotdoc-id="GTK_DEST_DEFAULT_DROP">
-	<div>
-		<i><em><code>Gtk.DestDefaults.DROP</code></em></i>
-		(<span class="value">4</span>)
-		–
-	</div>
-			<i>No description available</i>
-	</div>
-
-					
-<div class="symbol-detail" data-hotdoc-id="GTK_DEST_DEFAULT_ALL">
-	<div>
-		<i><em><code>Gtk.DestDefaults.ALL</code></em></i>
+		<i><em><code>Gtk.DestDefaults.All</code></em></i>
 		(<span class="value">7</span>)
 		–
 	</div>
@@ -6734,70 +2051,7 @@ of the user for a drag destination site.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="GtkTargetFlags">
 	
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h3 data-hotdoc-id="GtkTargetFlags">
-	<span><code>GtkTargetFlags</code></span>
-</h3>
-
-
-<p>The <a href="gtkdnd-h.html#GtkTargetFlags">GtkTargetFlags</a> enumeration is used to specify
-constraints on a <a href="gtkselection-h.html#GtkTargetEntry">GtkTargetEntry</a>.</p>
-
-
-
-
-	<div class="members-container">
-		<h4>Members</h4>
-					
-<div class="symbol-detail" data-hotdoc-id="GTK_TARGET_SAME_APP">
-	<div>
-		<i><em><code>GTK_TARGET_SAME_APP</code></em></i>
-		(<span class="value">1</span>)
-		–
-	</div>
-			<i>No description available</i>
-	</div>
-
-					
-<div class="symbol-detail" data-hotdoc-id="GTK_TARGET_SAME_WIDGET">
-	<div>
-		<i><em><code>GTK_TARGET_SAME_WIDGET</code></em></i>
-		(<span class="value">2</span>)
-		–
-	</div>
-			<i>No description available</i>
-	</div>
-
-					
-<div class="symbol-detail" data-hotdoc-id="GTK_TARGET_OTHER_APP">
-	<div>
-		<i><em><code>GTK_TARGET_OTHER_APP</code></em></i>
-		(<span class="value">4</span>)
-		–
-	</div>
-			<i>No description available</i>
-	</div>
-
-					
-<div class="symbol-detail" data-hotdoc-id="GTK_TARGET_OTHER_WIDGET">
-	<div>
-		<i><em><code>GTK_TARGET_OTHER_WIDGET</code></em></i>
-		(<span class="value">8</span>)
-		–
-	</div>
-			<i>No description available</i>
-	</div>
-
-			</div>
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
@@ -6818,7 +2072,7 @@ constraints on a <a href="gtkselection-h.html#GtkTargetEntry">Gtk.TargetEntry</a
 					
 <div class="symbol-detail" data-hotdoc-id="GTK_TARGET_SAME_APP">
 	<div>
-		<i><em><code>Gtk.TargetFlags.SAME_APP</code></em></i>
+		<i><em><code>Gtk.TargetFlags.SameApp</code></em></i>
 		(<span class="value">1</span>)
 		–
 	</div>
@@ -6828,7 +2082,7 @@ constraints on a <a href="gtkselection-h.html#GtkTargetEntry">Gtk.TargetEntry</a
 					
 <div class="symbol-detail" data-hotdoc-id="GTK_TARGET_SAME_WIDGET">
 	<div>
-		<i><em><code>Gtk.TargetFlags.SAME_WIDGET</code></em></i>
+		<i><em><code>Gtk.TargetFlags.SameWidget</code></em></i>
 		(<span class="value">2</span>)
 		–
 	</div>
@@ -6838,7 +2092,7 @@ constraints on a <a href="gtkselection-h.html#GtkTargetEntry">Gtk.TargetEntry</a
 					
 <div class="symbol-detail" data-hotdoc-id="GTK_TARGET_OTHER_APP">
 	<div>
-		<i><em><code>Gtk.TargetFlags.OTHER_APP</code></em></i>
+		<i><em><code>Gtk.TargetFlags.OtherApp</code></em></i>
 		(<span class="value">4</span>)
 		–
 	</div>
@@ -6848,70 +2102,7 @@ constraints on a <a href="gtkselection-h.html#GtkTargetEntry">Gtk.TargetEntry</a
 					
 <div class="symbol-detail" data-hotdoc-id="GTK_TARGET_OTHER_WIDGET">
 	<div>
-		<i><em><code>Gtk.TargetFlags.OTHER_WIDGET</code></em></i>
-		(<span class="value">8</span>)
-		–
-	</div>
-			<i>No description available</i>
-	</div>
-
-			</div>
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="GtkTargetFlags">
-	<span><code>Gtk.TargetFlags</code></span>
-</h3>
-
-
-<p>The <a href="gtkdnd-h.html#GtkTargetFlags">Gtk.TargetFlags</a> enumeration is used to specify
-constraints on a <a href="gtkselection-h.html#GtkTargetEntry">Gtk.TargetEntry</a>.</p>
-
-
-
-
-	<div class="members-container">
-		<h4>Members</h4>
-					
-<div class="symbol-detail" data-hotdoc-id="GTK_TARGET_SAME_APP">
-	<div>
-		<i><em><code>Gtk.TargetFlags.SAME_APP</code></em></i>
-		(<span class="value">1</span>)
-		–
-	</div>
-			<i>No description available</i>
-	</div>
-
-					
-<div class="symbol-detail" data-hotdoc-id="GTK_TARGET_SAME_WIDGET">
-	<div>
-		<i><em><code>Gtk.TargetFlags.SAME_WIDGET</code></em></i>
-		(<span class="value">2</span>)
-		–
-	</div>
-			<i>No description available</i>
-	</div>
-
-					
-<div class="symbol-detail" data-hotdoc-id="GTK_TARGET_OTHER_APP">
-	<div>
-		<i><em><code>Gtk.TargetFlags.OTHER_APP</code></em></i>
-		(<span class="value">4</span>)
-		–
-	</div>
-			<i>No description available</i>
-	</div>
-
-					
-<div class="symbol-detail" data-hotdoc-id="GTK_TARGET_OTHER_WIDGET">
-	<div>
-		<i><em><code>Gtk.TargetFlags.OTHER_WIDGET</code></em></i>
+		<i><em><code>Gtk.TargetFlags.OtherWidget</code></em></i>
 		(<span class="value">8</span>)
 		–
 	</div>
@@ -6930,91 +2121,7 @@ constraints on a <a href="gtkselection-h.html#GtkTargetEntry">Gtk.TargetEntry</a
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="GtkDragResult">
 	
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h3 data-hotdoc-id="GtkDragResult">
-	<span><code>GtkDragResult</code></span>
-</h3>
-
-
-<p>Gives an indication why a drag operation failed.
-The value can by obtained by connecting to the
-<a href="https://developer.gnome.org/gtk3/GtkWidget.html#GtkWidget-drag-failed">drag-failed</a> signal.</p>
-
-
-
-
-	<div class="members-container">
-		<h4>Members</h4>
-					
-<div class="symbol-detail" data-hotdoc-id="GTK_DRAG_RESULT_SUCCESS">
-	<div>
-		<i><em><code>GTK_DRAG_RESULT_SUCCESS</code></em></i>
-		(<span class="value">0</span>)
-		–
-	</div>
-			<i>No description available</i>
-	</div>
-
-					
-<div class="symbol-detail" data-hotdoc-id="GTK_DRAG_RESULT_NO_TARGET">
-	<div>
-		<i><em><code>GTK_DRAG_RESULT_NO_TARGET</code></em></i>
-		(<span class="value">1</span>)
-		–
-	</div>
-			<i>No description available</i>
-	</div>
-
-					
-<div class="symbol-detail" data-hotdoc-id="GTK_DRAG_RESULT_USER_CANCELLED">
-	<div>
-		<i><em><code>GTK_DRAG_RESULT_USER_CANCELLED</code></em></i>
-		(<span class="value">2</span>)
-		–
-	</div>
-			<i>No description available</i>
-	</div>
-
-					
-<div class="symbol-detail" data-hotdoc-id="GTK_DRAG_RESULT_TIMEOUT_EXPIRED">
-	<div>
-		<i><em><code>GTK_DRAG_RESULT_TIMEOUT_EXPIRED</code></em></i>
-		(<span class="value">3</span>)
-		–
-	</div>
-			<i>No description available</i>
-	</div>
-
-					
-<div class="symbol-detail" data-hotdoc-id="GTK_DRAG_RESULT_GRAB_BROKEN">
-	<div>
-		<i><em><code>GTK_DRAG_RESULT_GRAB_BROKEN</code></em></i>
-		(<span class="value">4</span>)
-		–
-	</div>
-			<i>No description available</i>
-	</div>
-
-					
-<div class="symbol-detail" data-hotdoc-id="GTK_DRAG_RESULT_ERROR">
-	<div>
-		<i><em><code>GTK_DRAG_RESULT_ERROR</code></em></i>
-		(<span class="value">5</span>)
-		–
-	</div>
-			<i>No description available</i>
-	</div>
-
-			</div>
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
@@ -7026,7 +2133,7 @@ The value can by obtained by connecting to the
 
 <p>Gives an indication why a drag operation failed.
 The value can by obtained by connecting to the
-<a href="https://developer.gnome.org/gtk3/GtkWidget.html#GtkWidget-drag-failed">drag-failed</a> signal.</p>
+<a href="https://developer.gnome.org/gtk3/GtkWidget.html#GtkWidget-drag-failed">DragFailed</a> signal.</p>
 
 
 
@@ -7036,7 +2143,7 @@ The value can by obtained by connecting to the
 					
 <div class="symbol-detail" data-hotdoc-id="GTK_DRAG_RESULT_SUCCESS">
 	<div>
-		<i><em><code>Gtk.DragResult.SUCCESS</code></em></i>
+		<i><em><code>Gtk.DragResult.Success</code></em></i>
 		(<span class="value">0</span>)
 		–
 	</div>
@@ -7046,7 +2153,7 @@ The value can by obtained by connecting to the
 					
 <div class="symbol-detail" data-hotdoc-id="GTK_DRAG_RESULT_NO_TARGET">
 	<div>
-		<i><em><code>Gtk.DragResult.NO_TARGET</code></em></i>
+		<i><em><code>Gtk.DragResult.NoTarget</code></em></i>
 		(<span class="value">1</span>)
 		–
 	</div>
@@ -7056,7 +2163,7 @@ The value can by obtained by connecting to the
 					
 <div class="symbol-detail" data-hotdoc-id="GTK_DRAG_RESULT_USER_CANCELLED">
 	<div>
-		<i><em><code>Gtk.DragResult.USER_CANCELLED</code></em></i>
+		<i><em><code>Gtk.DragResult.UserCancelled</code></em></i>
 		(<span class="value">2</span>)
 		–
 	</div>
@@ -7066,7 +2173,7 @@ The value can by obtained by connecting to the
 					
 <div class="symbol-detail" data-hotdoc-id="GTK_DRAG_RESULT_TIMEOUT_EXPIRED">
 	<div>
-		<i><em><code>Gtk.DragResult.TIMEOUT_EXPIRED</code></em></i>
+		<i><em><code>Gtk.DragResult.TimeoutExpired</code></em></i>
 		(<span class="value">3</span>)
 		–
 	</div>
@@ -7076,7 +2183,7 @@ The value can by obtained by connecting to the
 					
 <div class="symbol-detail" data-hotdoc-id="GTK_DRAG_RESULT_GRAB_BROKEN">
 	<div>
-		<i><em><code>Gtk.DragResult.GRAB_BROKEN</code></em></i>
+		<i><em><code>Gtk.DragResult.GrabBroken</code></em></i>
 		(<span class="value">4</span>)
 		–
 	</div>
@@ -7086,91 +2193,7 @@ The value can by obtained by connecting to the
 					
 <div class="symbol-detail" data-hotdoc-id="GTK_DRAG_RESULT_ERROR">
 	<div>
-		<i><em><code>Gtk.DragResult.ERROR</code></em></i>
-		(<span class="value">5</span>)
-		–
-	</div>
-			<i>No description available</i>
-	</div>
-
-			</div>
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="GtkDragResult">
-	<span><code>Gtk.DragResult</code></span>
-</h3>
-
-
-<p>Gives an indication why a drag operation failed.
-The value can by obtained by connecting to the
-<a href="https://developer.gnome.org/gtk3/GtkWidget.html#GtkWidget-drag-failed">drag-failed</a> signal.</p>
-
-
-
-
-	<div class="members-container">
-		<h4>Members</h4>
-					
-<div class="symbol-detail" data-hotdoc-id="GTK_DRAG_RESULT_SUCCESS">
-	<div>
-		<i><em><code>Gtk.DragResult.SUCCESS</code></em></i>
-		(<span class="value">0</span>)
-		–
-	</div>
-			<i>No description available</i>
-	</div>
-
-					
-<div class="symbol-detail" data-hotdoc-id="GTK_DRAG_RESULT_NO_TARGET">
-	<div>
-		<i><em><code>Gtk.DragResult.NO_TARGET</code></em></i>
-		(<span class="value">1</span>)
-		–
-	</div>
-			<i>No description available</i>
-	</div>
-
-					
-<div class="symbol-detail" data-hotdoc-id="GTK_DRAG_RESULT_USER_CANCELLED">
-	<div>
-		<i><em><code>Gtk.DragResult.USER_CANCELLED</code></em></i>
-		(<span class="value">2</span>)
-		–
-	</div>
-			<i>No description available</i>
-	</div>
-
-					
-<div class="symbol-detail" data-hotdoc-id="GTK_DRAG_RESULT_TIMEOUT_EXPIRED">
-	<div>
-		<i><em><code>Gtk.DragResult.TIMEOUT_EXPIRED</code></em></i>
-		(<span class="value">3</span>)
-		–
-	</div>
-			<i>No description available</i>
-	</div>
-
-					
-<div class="symbol-detail" data-hotdoc-id="GTK_DRAG_RESULT_GRAB_BROKEN">
-	<div>
-		<i><em><code>Gtk.DragResult.GRAB_BROKEN</code></em></i>
-		(<span class="value">4</span>)
-		–
-	</div>
-			<i>No description available</i>
-	</div>
-
-					
-<div class="symbol-detail" data-hotdoc-id="GTK_DRAG_RESULT_ERROR">
-	<div>
-		<i><em><code>Gtk.DragResult.ERROR</code></em></i>
+		<i><em><code>Gtk.DragResult.Error</code></em></i>
 		(<span class="value">5</span>)
 		–
 	</div>

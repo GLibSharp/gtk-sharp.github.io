@@ -89,7 +89,7 @@ $('body').removeClass('no-script');
 </nav>
 
 <main>
-<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="gtkcontainer-h.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['c', 'javascript', 'python']" data-hotdoc-meta-gi-language="c">
+<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="gtkcontainer-h.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['csharp']" data-hotdoc-meta-gi-language="c">
 <script src="assets/js/utils.js"></script>
 
 <div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
@@ -103,29 +103,29 @@ $('body').removeClass('no-script');
         <h1 id="gtkcontainer-page">GtkContainer</h1>
 <p>A GTK+ user interface is constructed by nesting widgets inside widgets.
 Container widgets are the inner nodes in the resulting tree of widgets:
-they contain other widgets. So, for example, you might have a <a href="gtkwindow-h.html#GtkWindow" data-gi-href-javascript="gtkwindow-h.html#GtkWindow" data-gi-title-javascript="Gtk.Window" data-gi-href-python="gtkwindow-h.html#GtkWindow" data-gi-title-python="Gtk.Window">GtkWindow</a>
-containing a <a href="gtkframe-h.html#GtkFrame" data-gi-href-javascript="gtkframe-h.html#GtkFrame" data-gi-title-javascript="Gtk.Frame" data-gi-href-python="gtkframe-h.html#GtkFrame" data-gi-title-python="Gtk.Frame">GtkFrame</a> containing a <a href="gtklabel-h.html#GtkLabel" data-gi-href-javascript="gtklabel-h.html#GtkLabel" data-gi-title-javascript="Gtk.Label" data-gi-href-python="gtklabel-h.html#GtkLabel" data-gi-title-python="Gtk.Label">GtkLabel</a>. If you wanted an image instead
-of a textual label inside the frame, you might replace the <a href="gtklabel-h.html#GtkLabel" data-gi-href-javascript="gtklabel-h.html#GtkLabel" data-gi-title-javascript="Gtk.Label" data-gi-href-python="gtklabel-h.html#GtkLabel" data-gi-title-python="Gtk.Label">GtkLabel</a> widget
-with a <a href="gtkimage-h.html#GtkImage" data-gi-href-javascript="gtkimage-h.html#GtkImage" data-gi-title-javascript="Gtk.Image" data-gi-href-python="gtkimage-h.html#GtkImage" data-gi-title-python="Gtk.Image">GtkImage</a> widget.</p>
+they contain other widgets. So, for example, you might have a <a href="gtkwindow-h.html#GtkWindow" data-gi-href-csharp="gtkwindow-h.html#GtkWindow" data-gi-title-csharp="Gtk.Window">GtkWindow</a>
+containing a <a href="gtkframe-h.html#GtkFrame" data-gi-href-csharp="gtkframe-h.html#GtkFrame" data-gi-title-csharp="Gtk.Frame">GtkFrame</a> containing a <a href="gtklabel-h.html#GtkLabel" data-gi-href-csharp="gtklabel-h.html#GtkLabel" data-gi-title-csharp="Gtk.Label">GtkLabel</a>. If you wanted an image instead
+of a textual label inside the frame, you might replace the <a href="gtklabel-h.html#GtkLabel" data-gi-href-csharp="gtklabel-h.html#GtkLabel" data-gi-title-csharp="Gtk.Label">GtkLabel</a> widget
+with a <a href="gtkimage-h.html#GtkImage" data-gi-href-csharp="gtkimage-h.html#GtkImage" data-gi-title-csharp="Gtk.Image">GtkImage</a> widget.</p>
 <p>There are two major kinds of container widgets in GTK+. Both are subclasses
 of the abstract GtkContainer base class.</p>
 <p>The first type of container widget has a single child widget and derives
-from <a href="gtkbin-h.html#GtkBin" data-gi-href-javascript="gtkbin-h.html#GtkBin" data-gi-title-javascript="Gtk.Bin" data-gi-href-python="gtkbin-h.html#GtkBin" data-gi-title-python="Gtk.Bin">GtkBin</a>. These containers are decorators, which
-add some kind of functionality to the child. For example, a <a href="gtkbutton-h.html#GtkButton" data-gi-href-javascript="gtkbutton-h.html#GtkButton" data-gi-title-javascript="Gtk.Button" data-gi-href-python="gtkbutton-h.html#GtkButton" data-gi-title-python="Gtk.Button">GtkButton</a> makes
-its child into a clickable button; a <a href="gtkframe-h.html#GtkFrame" data-gi-href-javascript="gtkframe-h.html#GtkFrame" data-gi-title-javascript="Gtk.Frame" data-gi-href-python="gtkframe-h.html#GtkFrame" data-gi-title-python="Gtk.Frame">GtkFrame</a> draws a frame around its child
-and a <a href="gtkwindow-h.html#GtkWindow" data-gi-href-javascript="gtkwindow-h.html#GtkWindow" data-gi-title-javascript="Gtk.Window" data-gi-href-python="gtkwindow-h.html#GtkWindow" data-gi-title-python="Gtk.Window">GtkWindow</a> places its child widget inside a top-level window.</p>
+from <a href="gtkbin-h.html#GtkBin" data-gi-href-csharp="gtkbin-h.html#GtkBin" data-gi-title-csharp="Gtk.Bin">GtkBin</a>. These containers are decorators, which
+add some kind of functionality to the child. For example, a <a href="gtkbutton-h.html#GtkButton" data-gi-href-csharp="gtkbutton-h.html#GtkButton" data-gi-title-csharp="Gtk.Button">GtkButton</a> makes
+its child into a clickable button; a <a href="gtkframe-h.html#GtkFrame" data-gi-href-csharp="gtkframe-h.html#GtkFrame" data-gi-title-csharp="Gtk.Frame">GtkFrame</a> draws a frame around its child
+and a <a href="gtkwindow-h.html#GtkWindow" data-gi-href-csharp="gtkwindow-h.html#GtkWindow" data-gi-title-csharp="Gtk.Window">GtkWindow</a> places its child widget inside a top-level window.</p>
 <p>The second type of container can have more than one child; its purpose is to
 manage layout. This means that these containers assign
-sizes and positions to their children. For example, a horizontal <a href="gtkbox-h.html#GtkBox" data-gi-href-javascript="gtkbox-h.html#GtkBox" data-gi-title-javascript="Gtk.Box" data-gi-href-python="gtkbox-h.html#GtkBox" data-gi-title-python="Gtk.Box">GtkBox</a> arranges its
-children in a horizontal row, and a <a href="gtkgrid-h.html#GtkGrid" data-gi-href-javascript="gtkgrid-h.html#GtkGrid" data-gi-title-javascript="Gtk.Grid" data-gi-href-python="gtkgrid-h.html#GtkGrid" data-gi-title-python="Gtk.Grid">GtkGrid</a> arranges the widgets it contains
+sizes and positions to their children. For example, a horizontal <a href="gtkbox-h.html#GtkBox" data-gi-href-csharp="gtkbox-h.html#GtkBox" data-gi-title-csharp="Gtk.Box">GtkBox</a> arranges its
+children in a horizontal row, and a <a href="gtkgrid-h.html#GtkGrid" data-gi-href-csharp="gtkgrid-h.html#GtkGrid" data-gi-title-csharp="Gtk.Grid">GtkGrid</a> arranges the widgets it contains
 in a two-dimensional grid.</p>
-<p>For implementations of <a href="gtkcontainer-h.html#GtkContainer" data-gi-href-javascript="gtkcontainer-h.html#GtkContainer" data-gi-title-javascript="Gtk.Container" data-gi-href-python="gtkcontainer-h.html#GtkContainer" data-gi-title-python="Gtk.Container">GtkContainer</a> the virtual method <a href="https://developer.gnome.org/gtk3/GtkContainer.html#GtkContainerClass.forall">GtkContainerClass.forall</a>()
+<p>For implementations of <a href="gtkcontainer-h.html#GtkContainer" data-gi-href-csharp="gtkcontainer-h.html#GtkContainer" data-gi-title-csharp="Gtk.Container">GtkContainer</a> the virtual method <a href="https://developer.gnome.org/gtk3/GtkContainer.html#GtkContainerClass.forall">GtkContainerClass.forall</a>()
 is always required, since it's used for drawing and other internal operations
 on the children.
-If the <a href="gtkcontainer-h.html#GtkContainer" data-gi-href-javascript="gtkcontainer-h.html#GtkContainer" data-gi-title-javascript="Gtk.Container" data-gi-href-python="gtkcontainer-h.html#GtkContainer" data-gi-title-python="Gtk.Container">GtkContainer</a> implementation expect to have non internal children
+If the <a href="gtkcontainer-h.html#GtkContainer" data-gi-href-csharp="gtkcontainer-h.html#GtkContainer" data-gi-title-csharp="Gtk.Container">GtkContainer</a> implementation expect to have non internal children
 it's needed to implement both <a href="https://developer.gnome.org/gtk3/GtkContainer.html#GtkContainerClass.add">GtkContainerClass.add</a>() and <a href="https://developer.gnome.org/gtk3/GtkContainer.html#GtkContainerClass.remove">GtkContainerClass.remove</a>().
 If the GtkContainer implementation has internal children, they should be added
-with <a href="gtkwidget-h.html#gtk_widget_set_parent" data-gi-href-javascript="gtkwidget-h.html#gtk_widget_set_parent" data-gi-title-javascript="Gtk.prototype.set_parent" data-gi-href-python="gtkwidget-h.html#gtk_widget_set_parent" data-gi-title-python="Gtk.Widget.set_parent">gtk_widget_set_parent</a> on init and removed with <a href="gtkwidget-h.html#gtk_widget_unparent" data-gi-href-javascript="gtkwidget-h.html#gtk_widget_unparent" data-gi-title-javascript="Gtk.prototype.unparent" data-gi-href-python="gtkwidget-h.html#gtk_widget_unparent" data-gi-title-python="Gtk.Widget.unparent">gtk_widget_unparent</a>
+with <a href="gtkwidget-h.html#gtk_widget_set_parent" data-gi-href-csharp="gtkwidget-h.html#gtk_widget_set_parent" data-gi-title-csharp="Gtk.Widget.SetParent">gtk_widget_set_parent</a> on init and removed with <a href="gtkwidget-h.html#gtk_widget_unparent" data-gi-href-csharp="gtkwidget-h.html#gtk_widget_unparent" data-gi-title-csharp="Gtk.Widget.Unparent">gtk_widget_unparent</a>
 in the <a href="https://developer.gnome.org/gtk3/GtkWidget.html#GtkWidgetClass.destroy">GtkWidgetClass.destroy</a>() implementation.
 See more about implementing custom widgets at https://wiki.gnome.org/HowDoI/CustomWidgets</p>
 <h1 id="height-for-width-geometry-management">Height for width geometry management</h1>
@@ -137,8 +137,8 @@ width-for-height).</p>
 that make use of GTK+’s height for width geometry management system. First,
 it’s important to note that a container must prioritize one of its
 dimensions, that is to say that a widget or container can only have a
-<a href="gtkwidget-h.html#GtkSizeRequestMode" data-gi-href-javascript="gtkwidget-h.html#GtkSizeRequestMode" data-gi-title-javascript="Gtk.SizeRequestMode" data-gi-href-python="gtkwidget-h.html#GtkSizeRequestMode" data-gi-title-python="Gtk.SizeRequestMode">GtkSizeRequestMode</a> that is <a href="gtkwidget-h.html#GTK_SIZE_REQUEST_HEIGHT_FOR_WIDTH" data-gi-href-javascript="gtkwidget-h.html#GTK_SIZE_REQUEST_HEIGHT_FOR_WIDTH" data-gi-title-javascript="Gtk.SizeRequestMode.HEIGHT_FOR_WIDTH" data-gi-href-python="gtkwidget-h.html#GTK_SIZE_REQUEST_HEIGHT_FOR_WIDTH" data-gi-title-python="Gtk.SizeRequestMode.HEIGHT_FOR_WIDTH">GTK_SIZE_REQUEST_HEIGHT_FOR_WIDTH</a> or
-<a href="gtkwidget-h.html#GTK_SIZE_REQUEST_WIDTH_FOR_HEIGHT" data-gi-href-javascript="gtkwidget-h.html#GTK_SIZE_REQUEST_WIDTH_FOR_HEIGHT" data-gi-title-javascript="Gtk.SizeRequestMode.WIDTH_FOR_HEIGHT" data-gi-href-python="gtkwidget-h.html#GTK_SIZE_REQUEST_WIDTH_FOR_HEIGHT" data-gi-title-python="Gtk.SizeRequestMode.WIDTH_FOR_HEIGHT">GTK_SIZE_REQUEST_WIDTH_FOR_HEIGHT</a>. However, every widget and container
+<a href="gtkwidget-h.html#GtkSizeRequestMode" data-gi-href-csharp="gtkwidget-h.html#GtkSizeRequestMode" data-gi-title-csharp="Gtk.SizeRequestMode">GtkSizeRequestMode</a> that is <a href="gtkwidget-h.html#GTK_SIZE_REQUEST_HEIGHT_FOR_WIDTH" data-gi-href-csharp="gtkwidget-h.html#GTK_SIZE_REQUEST_HEIGHT_FOR_WIDTH" data-gi-title-csharp="Gtk.SizeRequestMode.HeightForWidth">GTK_SIZE_REQUEST_HEIGHT_FOR_WIDTH</a> or
+<a href="gtkwidget-h.html#GTK_SIZE_REQUEST_WIDTH_FOR_HEIGHT" data-gi-href-csharp="gtkwidget-h.html#GTK_SIZE_REQUEST_WIDTH_FOR_HEIGHT" data-gi-title-csharp="Gtk.SizeRequestMode.WidthForHeight">GTK_SIZE_REQUEST_WIDTH_FOR_HEIGHT</a>. However, every widget and container
 must be able to respond to the APIs for both dimensions, i.e. even if a
 widget has a request mode that is height-for-width, it is possible that
 its parent will request its sizes using the width-for-height APIs.</p>
@@ -146,7 +146,7 @@ its parent will request its sizes using the width-for-height APIs.</p>
 when implementing height-for-width (or width-for-height) containers.</p>
 <p>Each request mode involves 2 virtual methods. Height-for-width apis run
 through <a href="https://developer.gnome.org/gtk3/GtkWidget.html#gtk-widget-get-preferred-width">gtk_widget_get_preferred_width</a> and then through <a href="https://developer.gnome.org/gtk3/GtkWidget.html#gtk-widget-get-preferred-height-for-width">gtk_widget_get_preferred_height_for_width</a>.
-When handling requests in the opposite <a href="gtkwidget-h.html#GtkSizeRequestMode" data-gi-href-javascript="gtkwidget-h.html#GtkSizeRequestMode" data-gi-title-javascript="Gtk.SizeRequestMode" data-gi-href-python="gtkwidget-h.html#GtkSizeRequestMode" data-gi-title-python="Gtk.SizeRequestMode">GtkSizeRequestMode</a> it is important that
+When handling requests in the opposite <a href="gtkwidget-h.html#GtkSizeRequestMode" data-gi-href-csharp="gtkwidget-h.html#GtkSizeRequestMode" data-gi-title-csharp="Gtk.SizeRequestMode">GtkSizeRequestMode</a> it is important that
 every widget request at least enough space to display all of its content at all times.</p>
 <p>When <a href="https://developer.gnome.org/gtk3/GtkWidget.html#gtk-widget-get-preferred-height">gtk_widget_get_preferred_height</a> is called on a container that is height-for-width,
 the container must return the height for its minimum width. This is easily achieved by
@@ -206,22 +206,22 @@ of widgets in the input orientation. Assuming an height-for-width request mode, 
 would implement the get_preferred_height_for_width virtual function by first calling
 <a href="https://developer.gnome.org/gtk3/GtkWidget.html#gtk-widget-get-preferred-width">gtk_widget_get_preferred_width</a> for each of its children.</p>
 <p>For each potential group of children that are lined up horizontally, the values returned by
-<a href="https://developer.gnome.org/gtk3/GtkWidget.html#gtk-widget-get-preferred-width">gtk_widget_get_preferred_width</a> should be collected in an array of <a href="gtkwidget-h.html#GtkRequestedSize" data-gi-href-javascript="gtkwidget-h.html#GtkRequestedSize" data-gi-title-javascript="Gtk.RequestedSize" data-gi-href-python="gtkwidget-h.html#GtkRequestedSize" data-gi-title-python="Gtk.RequestedSize">GtkRequestedSize</a> structures.
+<a href="https://developer.gnome.org/gtk3/GtkWidget.html#gtk-widget-get-preferred-width">gtk_widget_get_preferred_width</a> should be collected in an array of <a href="gtkwidget-h.html#GtkRequestedSize" data-gi-href-csharp="gtkwidget-h.html#GtkRequestedSize" data-gi-title-csharp="Gtk.RequestedSize">GtkRequestedSize</a> structures.
 Any child spacing should be removed from the input <em>for_width</em> and then the collective size should be
-allocated using the <a href="gtkwidget-h.html#gtk_distribute_natural_allocation" data-gi-href-javascript="gtkwidget-h.html#gtk_distribute_natural_allocation" data-gi-title-javascript="prototype.distribute_natural_allocation" data-gi-href-python="gtkwidget-h.html#gtk_distribute_natural_allocation" data-gi-title-python="Gtk.distribute_natural_allocation">gtk_distribute_natural_allocation</a> convenience function.</p>
+allocated using the <a href="gtkwidget-h.html#gtk_distribute_natural_allocation" data-gi-href-csharp="gtkwidget-h.html#gtk_distribute_natural_allocation" data-gi-title-csharp="Gtk.Global.DistributeNaturalAllocation">gtk_distribute_natural_allocation</a> convenience function.</p>
 <p>The container will then move on to request the preferred height for each child by using
-<a href="https://developer.gnome.org/gtk3/GtkWidget.html#gtk-widget-get-preferred-height-for-width">gtk_widget_get_preferred_height_for_width</a> and using the sizes stored in the <a href="gtkwidget-h.html#GtkRequestedSize" data-gi-href-javascript="gtkwidget-h.html#GtkRequestedSize" data-gi-title-javascript="Gtk.RequestedSize" data-gi-href-python="gtkwidget-h.html#GtkRequestedSize" data-gi-title-python="Gtk.RequestedSize">GtkRequestedSize</a> array.</p>
+<a href="https://developer.gnome.org/gtk3/GtkWidget.html#gtk-widget-get-preferred-height-for-width">gtk_widget_get_preferred_height_for_width</a> and using the sizes stored in the <a href="gtkwidget-h.html#GtkRequestedSize" data-gi-href-csharp="gtkwidget-h.html#GtkRequestedSize" data-gi-title-csharp="Gtk.RequestedSize">GtkRequestedSize</a> array.</p>
 <p>To allocate a height-for-width container, it’s again important
 to consider that a container must prioritize one dimension over the other. So if
 a container is a height-for-width container it must first allocate all widgets horizontally
-using a <a href="gtkwidget-h.html#GtkRequestedSize" data-gi-href-javascript="gtkwidget-h.html#GtkRequestedSize" data-gi-title-javascript="Gtk.RequestedSize" data-gi-href-python="gtkwidget-h.html#GtkRequestedSize" data-gi-title-python="Gtk.RequestedSize">GtkRequestedSize</a> array and <a href="gtkwidget-h.html#gtk_distribute_natural_allocation" data-gi-href-javascript="gtkwidget-h.html#gtk_distribute_natural_allocation" data-gi-title-javascript="prototype.distribute_natural_allocation" data-gi-href-python="gtkwidget-h.html#gtk_distribute_natural_allocation" data-gi-title-python="Gtk.distribute_natural_allocation">gtk_distribute_natural_allocation</a> and then add any
+using a <a href="gtkwidget-h.html#GtkRequestedSize" data-gi-href-csharp="gtkwidget-h.html#GtkRequestedSize" data-gi-title-csharp="Gtk.RequestedSize">GtkRequestedSize</a> array and <a href="gtkwidget-h.html#gtk_distribute_natural_allocation" data-gi-href-csharp="gtkwidget-h.html#gtk_distribute_natural_allocation" data-gi-title-csharp="Gtk.Global.DistributeNaturalAllocation">gtk_distribute_natural_allocation</a> and then add any
 extra space (if and where appropriate) for the widget to expand.</p>
 <p>After adding all the expand space, the container assumes it was allocated sufficient
 height to fit all of its content. At this time, the container must use the total horizontal sizes
 of each widget to request the height-for-width of each of its children and store the requests in a
-<a href="gtkwidget-h.html#GtkRequestedSize" data-gi-href-javascript="gtkwidget-h.html#GtkRequestedSize" data-gi-title-javascript="Gtk.RequestedSize" data-gi-href-python="gtkwidget-h.html#GtkRequestedSize" data-gi-title-python="Gtk.RequestedSize">GtkRequestedSize</a> array for any widgets that stack vertically (for tabular containers this can
+<a href="gtkwidget-h.html#GtkRequestedSize" data-gi-href-csharp="gtkwidget-h.html#GtkRequestedSize" data-gi-title-csharp="Gtk.RequestedSize">GtkRequestedSize</a> array for any widgets that stack vertically (for tabular containers this can
 be generalized into the heights and widths of rows and columns).
-The vertical space must then again be distributed using <a href="gtkwidget-h.html#gtk_distribute_natural_allocation" data-gi-href-javascript="gtkwidget-h.html#gtk_distribute_natural_allocation" data-gi-title-javascript="prototype.distribute_natural_allocation" data-gi-href-python="gtkwidget-h.html#gtk_distribute_natural_allocation" data-gi-title-python="Gtk.distribute_natural_allocation">gtk_distribute_natural_allocation</a>
+The vertical space must then again be distributed using <a href="gtkwidget-h.html#gtk_distribute_natural_allocation" data-gi-href-csharp="gtkwidget-h.html#gtk_distribute_natural_allocation" data-gi-title-csharp="Gtk.Global.DistributeNaturalAllocation">gtk_distribute_natural_allocation</a>
 while this time considering the allocated height of the widget minus any vertical spacing
 that the container adds. Then vertical expand space should be added where appropriate and available
 and the container should go on to actually allocating the child widgets.</p>
@@ -232,17 +232,17 @@ to learn more about implementing height-for-width geometry management for widget
 These are object properties that are not specific
 to either the container or the contained widget, but rather to their relation.
 Typical examples of child properties are the position or pack-type of a widget
-which is contained in a <a href="gtkbox-h.html#GtkBox" data-gi-href-javascript="gtkbox-h.html#GtkBox" data-gi-title-javascript="Gtk.Box" data-gi-href-python="gtkbox-h.html#GtkBox" data-gi-title-python="Gtk.Box">GtkBox</a>.</p>
-<p>Use <a href="gtkcontainer-h.html#gtk_container_class_install_child_property" data-gi-href-javascript="gtkcontainer-h.html#gtk_container_class_install_child_property" data-gi-title-javascript="Gtk.prototype.install_child_property" data-gi-href-python="gtkcontainer-h.html#gtk_container_class_install_child_property" data-gi-title-python="Gtk.ContainerClass.install_child_property">gtk_container_class_install_child_property</a> to install child properties
-for a container class and <a href="gtkcontainer-h.html#gtk_container_class_find_child_property" data-gi-href-javascript="gtkcontainer-h.html#gtk_container_class_find_child_property" data-gi-title-javascript="Gtk.prototype.find_child_property" data-gi-href-python="gtkcontainer-h.html#gtk_container_class_find_child_property" data-gi-title-python="Gtk.ContainerClass.find_child_property">gtk_container_class_find_child_property</a> or
-<a href="gtkcontainer-h.html#gtk_container_class_list_child_properties" data-gi-href-javascript="gtkcontainer-h.html#gtk_container_class_list_child_properties" data-gi-title-javascript="Gtk.prototype.list_child_properties" data-gi-href-python="gtkcontainer-h.html#gtk_container_class_list_child_properties" data-gi-title-python="Gtk.ContainerClass.list_child_properties">gtk_container_class_list_child_properties</a> to get information about existing
+which is contained in a <a href="gtkbox-h.html#GtkBox" data-gi-href-csharp="gtkbox-h.html#GtkBox" data-gi-title-csharp="Gtk.Box">GtkBox</a>.</p>
+<p>Use <a href="gtkcontainer-h.html#gtk_container_class_install_child_property" data-gi-href-csharp="gtkcontainer-h.html#gtk_container_class_install_child_property" data-gi-title-csharp="Gtk.ContainerClass.InstallChildProperty">gtk_container_class_install_child_property</a> to install child properties
+for a container class and <a href="gtkcontainer-h.html#gtk_container_class_find_child_property" data-gi-href-csharp="gtkcontainer-h.html#gtk_container_class_find_child_property" data-gi-title-csharp="Gtk.ContainerClass.FindChildProperty">gtk_container_class_find_child_property</a> or
+<a href="gtkcontainer-h.html#gtk_container_class_list_child_properties" data-gi-href-csharp="gtkcontainer-h.html#gtk_container_class_list_child_properties" data-gi-title-csharp="Gtk.ContainerClass.ListChildProperties">gtk_container_class_list_child_properties</a> to get information about existing
 child properties.</p>
-<p>To set the value of a child property, use <a href="gtkcontainer-h.html#gtk_container_child_set_property" data-gi-href-javascript="gtkcontainer-h.html#gtk_container_child_set_property" data-gi-title-javascript="Gtk.prototype.child_set_property" data-gi-href-python="gtkcontainer-h.html#gtk_container_child_set_property" data-gi-title-python="Gtk.Container.child_set_property">gtk_container_child_set_property</a>,
-<a href="gtkcontainer-h.html#gtk_container_child_set" data-gi-href-javascript="gtkcontainer-h.html#gtk_container_child_set" data-gi-title-javascript="gtk_container_child_set (not introspectable)" data-gi-href-python="gtkcontainer-h.html#gtk_container_child_set" data-gi-title-python="gtk_container_child_set (not introspectable)">gtk_container_child_set</a> or <a href="gtkcontainer-h.html#gtk_container_child_set_valist" data-gi-href-javascript="gtkcontainer-h.html#gtk_container_child_set_valist" data-gi-title-javascript="gtk_container_child_set_valist (not introspectable)" data-gi-href-python="gtkcontainer-h.html#gtk_container_child_set_valist" data-gi-title-python="gtk_container_child_set_valist (not introspectable)">gtk_container_child_set_valist</a>.
+<p>To set the value of a child property, use <a href="gtkcontainer-h.html#gtk_container_child_set_property" data-gi-href-csharp="gtkcontainer-h.html#gtk_container_child_set_property" data-gi-title-csharp="Gtk.Container.ChildSetProperty">gtk_container_child_set_property</a>,
+<a href="gtkcontainer-h.html#gtk_container_child_set" data-gi-href-csharp="gtkcontainer-h.html#gtk_container_child_set" data-gi-title-csharp="gtk_container_child_set (not introspectable)">gtk_container_child_set</a> or <a href="gtkcontainer-h.html#gtk_container_child_set_valist" data-gi-href-csharp="gtkcontainer-h.html#gtk_container_child_set_valist" data-gi-title-csharp="gtk_container_child_set_valist (not introspectable)">gtk_container_child_set_valist</a>.
 To obtain the value of a child property, use
-<a href="gtkcontainer-h.html#gtk_container_child_get_property" data-gi-href-javascript="gtkcontainer-h.html#gtk_container_child_get_property" data-gi-title-javascript="Gtk.prototype.child_get_property" data-gi-href-python="gtkcontainer-h.html#gtk_container_child_get_property" data-gi-title-python="Gtk.Container.child_get_property">gtk_container_child_get_property</a>, <a href="gtkcontainer-h.html#gtk_container_child_get" data-gi-href-javascript="gtkcontainer-h.html#gtk_container_child_get" data-gi-title-javascript="gtk_container_child_get (not introspectable)" data-gi-href-python="gtkcontainer-h.html#gtk_container_child_get" data-gi-title-python="gtk_container_child_get (not introspectable)">gtk_container_child_get</a> or
-<a href="gtkcontainer-h.html#gtk_container_child_get_valist" data-gi-href-javascript="gtkcontainer-h.html#gtk_container_child_get_valist" data-gi-title-javascript="gtk_container_child_get_valist (not introspectable)" data-gi-href-python="gtkcontainer-h.html#gtk_container_child_get_valist" data-gi-title-python="gtk_container_child_get_valist (not introspectable)">gtk_container_child_get_valist</a>. To emit notification about child property
-changes, use <a href="gtkwidget-h.html#gtk_widget_child_notify" data-gi-href-javascript="gtkwidget-h.html#gtk_widget_child_notify" data-gi-title-javascript="Gtk.prototype.child_notify" data-gi-href-python="gtkwidget-h.html#gtk_widget_child_notify" data-gi-title-python="Gtk.Widget.child_notify">gtk_widget_child_notify</a>.</p>
+<a href="gtkcontainer-h.html#gtk_container_child_get_property" data-gi-href-csharp="gtkcontainer-h.html#gtk_container_child_get_property" data-gi-title-csharp="Gtk.Container.ChildGetProperty">gtk_container_child_get_property</a>, <a href="gtkcontainer-h.html#gtk_container_child_get" data-gi-href-csharp="gtkcontainer-h.html#gtk_container_child_get" data-gi-title-csharp="gtk_container_child_get (not introspectable)">gtk_container_child_get</a> or
+<a href="gtkcontainer-h.html#gtk_container_child_get_valist" data-gi-href-csharp="gtkcontainer-h.html#gtk_container_child_get_valist" data-gi-title-csharp="gtk_container_child_get_valist (not introspectable)">gtk_container_child_get_valist</a>. To emit notification about child property
+changes, use <a href="gtkwidget-h.html#gtk_widget_child_notify" data-gi-href-csharp="gtkwidget-h.html#gtk_widget_child_notify" data-gi-title-csharp="Gtk.Widget.ChildNotify">gtk_widget_child_notify</a>.</p>
 <h1 id="gtkcontainer-as-gtkbuildable">GtkContainer as GtkBuildable</h1>
 <p>The GtkContainer implementation of the GtkBuildable interface supports
 a <packing> element for children, which can contain multiple <property>
@@ -278,7 +278,7 @@ chain. The ”name” attribute gives the id of the widget.</widget></focus-chai
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="GtkContainer">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
@@ -291,293 +291,37 @@ chain. The ”name” attribute gives the id of the widget.</widget></focus-chai
 <div class="hierarchy_container">
 	<div class="hierarchy_details">
 <pre>
-<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object">GObject</a>
-    <span class="lineart">╰──</span><a title="GInitiallyUnowned" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-javascript="GObject.InitiallyUnowned" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-python="GObject.InitiallyUnowned">GInitiallyUnowned</a>
-        <span class="lineart">╰──</span><a title="GtkWidget" href="gtkwidget-h.html#GtkWidget" data-gi-href-javascript="gtkwidget-h.html#GtkWidget" data-gi-title-javascript="Gtk.Widget" data-gi-href-python="gtkwidget-h.html#GtkWidget" data-gi-title-python="Gtk.Widget">GtkWidget</a>
+<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-csharp="http://docs.go-mono.com/?link=T%3aGLib.Object" data-gi-title-csharp="GLib.Object">GObject</a>
+    <span class="lineart">╰──</span><a title="GInitiallyUnowned" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-href-csharp="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-csharp="GObject.InitiallyUnowned">GInitiallyUnowned</a>
+        <span class="lineart">╰──</span><a title="GtkWidget" href="gtkwidget-h.html#GtkWidget" data-gi-href-csharp="gtkwidget-h.html#GtkWidget" data-gi-title-csharp="Gtk.Widget">GtkWidget</a>
             <span class="lineart">╰──</span>GtkContainer
-                <span class="lineart">╰──</span><a title="GtkActionBar" href="gtkactionbar-h.html#GtkActionBar" data-gi-href-javascript="gtkactionbar-h.html#GtkActionBar" data-gi-title-javascript="Gtk.ActionBar" data-gi-href-python="gtkactionbar-h.html#GtkActionBar" data-gi-title-python="Gtk.ActionBar">GtkActionBar</a>
-                <span class="lineart">╰──</span><a title="GtkBin" href="gtkbin-h.html#GtkBin" data-gi-href-javascript="gtkbin-h.html#GtkBin" data-gi-title-javascript="Gtk.Bin" data-gi-href-python="gtkbin-h.html#GtkBin" data-gi-title-python="Gtk.Bin">GtkBin</a>
-                <span class="lineart">╰──</span><a title="GtkBox" href="gtkbox-h.html#GtkBox" data-gi-href-javascript="gtkbox-h.html#GtkBox" data-gi-title-javascript="Gtk.Box" data-gi-href-python="gtkbox-h.html#GtkBox" data-gi-title-python="Gtk.Box">GtkBox</a>
-                <span class="lineart">╰──</span><a title="GtkExpander" href="gtkexpander-h.html#GtkExpander" data-gi-href-javascript="gtkexpander-h.html#GtkExpander" data-gi-title-javascript="Gtk.Expander" data-gi-href-python="gtkexpander-h.html#GtkExpander" data-gi-title-python="Gtk.Expander">GtkExpander</a>
-                <span class="lineart">╰──</span><a title="GtkFixed" href="gtkfixed-h.html#GtkFixed" data-gi-href-javascript="gtkfixed-h.html#GtkFixed" data-gi-title-javascript="Gtk.Fixed" data-gi-href-python="gtkfixed-h.html#GtkFixed" data-gi-title-python="Gtk.Fixed">GtkFixed</a>
-                <span class="lineart">╰──</span><a title="GtkFlowBox" href="gtkflowbox-h.html#GtkFlowBox" data-gi-href-javascript="gtkflowbox-h.html#GtkFlowBox" data-gi-title-javascript="Gtk.FlowBox" data-gi-href-python="gtkflowbox-h.html#GtkFlowBox" data-gi-title-python="Gtk.FlowBox">GtkFlowBox</a>
-                <span class="lineart">╰──</span><a title="GtkGrid" href="gtkgrid-h.html#GtkGrid" data-gi-href-javascript="gtkgrid-h.html#GtkGrid" data-gi-title-javascript="Gtk.Grid" data-gi-href-python="gtkgrid-h.html#GtkGrid" data-gi-title-python="Gtk.Grid">GtkGrid</a>
-                <span class="lineart">╰──</span><a title="GtkHeaderBar" href="gtkheaderbar-h.html#GtkHeaderBar" data-gi-href-javascript="gtkheaderbar-h.html#GtkHeaderBar" data-gi-title-javascript="Gtk.HeaderBar" data-gi-href-python="gtkheaderbar-h.html#GtkHeaderBar" data-gi-title-python="Gtk.HeaderBar">GtkHeaderBar</a>
-                <span class="lineart">╰──</span><a title="GtkIconView" href="gtkiconview-h.html#GtkIconView" data-gi-href-javascript="gtkiconview-h.html#GtkIconView" data-gi-title-javascript="Gtk.IconView" data-gi-href-python="gtkiconview-h.html#GtkIconView" data-gi-title-python="Gtk.IconView">GtkIconView</a>
-                <span class="lineart">╰──</span><a title="GtkLayout" href="gtklayout-h.html#GtkLayout" data-gi-href-javascript="gtklayout-h.html#GtkLayout" data-gi-title-javascript="Gtk.Layout" data-gi-href-python="gtklayout-h.html#GtkLayout" data-gi-title-python="Gtk.Layout">GtkLayout</a>
-                <span class="lineart">╰──</span><a title="GtkListBox" href="gtklistbox-h.html#GtkListBox" data-gi-href-javascript="gtklistbox-h.html#GtkListBox" data-gi-title-javascript="Gtk.ListBox" data-gi-href-python="gtklistbox-h.html#GtkListBox" data-gi-title-python="Gtk.ListBox">GtkListBox</a>
-                <span class="lineart">╰──</span><a title="GtkMenuShell" href="gtkmenushell-h.html#GtkMenuShell" data-gi-href-javascript="gtkmenushell-h.html#GtkMenuShell" data-gi-title-javascript="Gtk.MenuShell" data-gi-href-python="gtkmenushell-h.html#GtkMenuShell" data-gi-title-python="Gtk.MenuShell">GtkMenuShell</a>
-                <span class="lineart">╰──</span><a title="GtkNotebook" href="gtknotebook-h.html#GtkNotebook" data-gi-href-javascript="gtknotebook-h.html#GtkNotebook" data-gi-title-javascript="Gtk.Notebook" data-gi-href-python="gtknotebook-h.html#GtkNotebook" data-gi-title-python="Gtk.Notebook">GtkNotebook</a>
-                <span class="lineart">╰──</span><a title="GtkPaned" href="gtkpaned-h.html#GtkPaned" data-gi-href-javascript="gtkpaned-h.html#GtkPaned" data-gi-title-javascript="Gtk.Paned" data-gi-href-python="gtkpaned-h.html#GtkPaned" data-gi-title-python="Gtk.Paned">GtkPaned</a>
-                <span class="lineart">╰──</span><a title="GtkStack" href="gtkstack-h.html#GtkStack" data-gi-href-javascript="gtkstack-h.html#GtkStack" data-gi-title-javascript="Gtk.Stack" data-gi-href-python="gtkstack-h.html#GtkStack" data-gi-title-python="Gtk.Stack">GtkStack</a>
-                <span class="lineart">╰──</span><a title="GtkTextView" href="gtktextview-h.html#GtkTextView" data-gi-href-javascript="gtktextview-h.html#GtkTextView" data-gi-title-javascript="Gtk.TextView" data-gi-href-python="gtktextview-h.html#GtkTextView" data-gi-title-python="Gtk.TextView">GtkTextView</a>
-                <span class="lineart">╰──</span><a title="GtkToolItemGroup" href="gtktoolitemgroup-h.html#GtkToolItemGroup" data-gi-href-javascript="gtktoolitemgroup-h.html#GtkToolItemGroup" data-gi-title-javascript="Gtk.ToolItemGroup" data-gi-href-python="gtktoolitemgroup-h.html#GtkToolItemGroup" data-gi-title-python="Gtk.ToolItemGroup">GtkToolItemGroup</a>
-                <span class="lineart">╰──</span><a title="GtkToolPalette" href="gtktoolpalette-h.html#GtkToolPalette" data-gi-href-javascript="gtktoolpalette-h.html#GtkToolPalette" data-gi-title-javascript="Gtk.ToolPalette" data-gi-href-python="gtktoolpalette-h.html#GtkToolPalette" data-gi-title-python="Gtk.ToolPalette">GtkToolPalette</a>
-                <span class="lineart">╰──</span><a title="GtkToolbar" href="gtktoolbar-h.html#GtkToolbar" data-gi-href-javascript="gtktoolbar-h.html#GtkToolbar" data-gi-title-javascript="Gtk.Toolbar" data-gi-href-python="gtktoolbar-h.html#GtkToolbar" data-gi-title-python="Gtk.Toolbar">GtkToolbar</a>
-                <span class="lineart">╰──</span><a title="GtkTreeView" href="gtktreeview-h.html#GtkTreeView" data-gi-href-javascript="gtktreeview-h.html#GtkTreeView" data-gi-title-javascript="Gtk.TreeView" data-gi-href-python="gtktreeview-h.html#GtkTreeView" data-gi-title-python="Gtk.TreeView">GtkTreeView</a>
+                <span class="lineart">╰──</span><a title="GtkActionBar" href="gtkactionbar-h.html#GtkActionBar" data-gi-href-csharp="gtkactionbar-h.html#GtkActionBar" data-gi-title-csharp="Gtk.ActionBar">GtkActionBar</a>
+                <span class="lineart">╰──</span><a title="GtkBin" href="gtkbin-h.html#GtkBin" data-gi-href-csharp="gtkbin-h.html#GtkBin" data-gi-title-csharp="Gtk.Bin">GtkBin</a>
+                <span class="lineart">╰──</span><a title="GtkBox" href="gtkbox-h.html#GtkBox" data-gi-href-csharp="gtkbox-h.html#GtkBox" data-gi-title-csharp="Gtk.Box">GtkBox</a>
+                <span class="lineart">╰──</span><a title="GtkExpander" href="gtkexpander-h.html#GtkExpander" data-gi-href-csharp="gtkexpander-h.html#GtkExpander" data-gi-title-csharp="Gtk.Expander">GtkExpander</a>
+                <span class="lineart">╰──</span><a title="GtkFixed" href="gtkfixed-h.html#GtkFixed" data-gi-href-csharp="gtkfixed-h.html#GtkFixed" data-gi-title-csharp="Gtk.Fixed">GtkFixed</a>
+                <span class="lineart">╰──</span><a title="GtkFlowBox" href="gtkflowbox-h.html#GtkFlowBox" data-gi-href-csharp="gtkflowbox-h.html#GtkFlowBox" data-gi-title-csharp="Gtk.FlowBox">GtkFlowBox</a>
+                <span class="lineart">╰──</span><a title="GtkGrid" href="gtkgrid-h.html#GtkGrid" data-gi-href-csharp="gtkgrid-h.html#GtkGrid" data-gi-title-csharp="Gtk.Grid">GtkGrid</a>
+                <span class="lineart">╰──</span><a title="GtkHeaderBar" href="gtkheaderbar-h.html#GtkHeaderBar" data-gi-href-csharp="gtkheaderbar-h.html#GtkHeaderBar" data-gi-title-csharp="Gtk.HeaderBar">GtkHeaderBar</a>
+                <span class="lineart">╰──</span><a title="GtkIconView" href="gtkiconview-h.html#GtkIconView" data-gi-href-csharp="gtkiconview-h.html#GtkIconView" data-gi-title-csharp="Gtk.IconView">GtkIconView</a>
+                <span class="lineart">╰──</span><a title="GtkLayout" href="gtklayout-h.html#GtkLayout" data-gi-href-csharp="gtklayout-h.html#GtkLayout" data-gi-title-csharp="Gtk.Layout">GtkLayout</a>
+                <span class="lineart">╰──</span><a title="GtkListBox" href="gtklistbox-h.html#GtkListBox" data-gi-href-csharp="gtklistbox-h.html#GtkListBox" data-gi-title-csharp="Gtk.ListBox">GtkListBox</a>
+                <span class="lineart">╰──</span><a title="GtkMenuShell" href="gtkmenushell-h.html#GtkMenuShell" data-gi-href-csharp="gtkmenushell-h.html#GtkMenuShell" data-gi-title-csharp="Gtk.MenuShell">GtkMenuShell</a>
+                <span class="lineart">╰──</span><a title="GtkNotebook" href="gtknotebook-h.html#GtkNotebook" data-gi-href-csharp="gtknotebook-h.html#GtkNotebook" data-gi-title-csharp="Gtk.Notebook">GtkNotebook</a>
+                <span class="lineart">╰──</span><a title="GtkPaned" href="gtkpaned-h.html#GtkPaned" data-gi-href-csharp="gtkpaned-h.html#GtkPaned" data-gi-title-csharp="Gtk.Paned">GtkPaned</a>
+                <span class="lineart">╰──</span><a title="GtkStack" href="gtkstack-h.html#GtkStack" data-gi-href-csharp="gtkstack-h.html#GtkStack" data-gi-title-csharp="Gtk.Stack">GtkStack</a>
+                <span class="lineart">╰──</span><a title="GtkTextView" href="gtktextview-h.html#GtkTextView" data-gi-href-csharp="gtktextview-h.html#GtkTextView" data-gi-title-csharp="Gtk.TextView">GtkTextView</a>
+                <span class="lineart">╰──</span><a title="GtkToolItemGroup" href="gtktoolitemgroup-h.html#GtkToolItemGroup" data-gi-href-csharp="gtktoolitemgroup-h.html#GtkToolItemGroup" data-gi-title-csharp="Gtk.ToolItemGroup">GtkToolItemGroup</a>
+                <span class="lineart">╰──</span><a title="GtkToolPalette" href="gtktoolpalette-h.html#GtkToolPalette" data-gi-href-csharp="gtktoolpalette-h.html#GtkToolPalette" data-gi-title-csharp="Gtk.ToolPalette">GtkToolPalette</a>
+                <span class="lineart">╰──</span><a title="GtkToolbar" href="gtktoolbar-h.html#GtkToolbar" data-gi-href-csharp="gtktoolbar-h.html#GtkToolbar" data-gi-title-csharp="Gtk.Toolbar">GtkToolbar</a>
+                <span class="lineart">╰──</span><a title="GtkTreeView" href="gtktreeview-h.html#GtkTreeView" data-gi-href-csharp="gtktreeview-h.html#GtkTreeView" data-gi-title-csharp="Gtk.TreeView">GtkTreeView</a>
 </pre>
 
 </div>
 
 </div>
 
-<div class="interfaces_container">
-	
-<p><b>Implemented interfaces:</b>
-    AtkImplementorIface, <a title="GtkBuildable" href="gtkbuildable-h.html#GtkBuildable" data-gi-href-javascript="gtkbuildable-h.html#GtkBuildable" data-gi-title-javascript="Gtk.Buildable" data-gi-href-python="gtkbuildable-h.html#GtkBuildable" data-gi-title-python="Gtk.Buildable">GtkBuildable</a>
-</p>
 
-</div>
-
-
-
-
-	<div class="members-container">
-		<h3>Members</h3>
-					
-<div class="symbol-detail" data-hotdoc-id="GtkContainer.widget">
-	<div>
-		<i><em><code>widget</code></em></i>
-		(<a title="GtkWidget" href="gtkwidget-h.html#GtkWidget" data-gi-href-javascript="gtkwidget-h.html#GtkWidget" data-gi-title-javascript="Gtk.Widget" data-gi-href-python="gtkwidget-h.html#GtkWidget" data-gi-title-python="Gtk.Widget">GtkWidget</a>)
-		–
-	</div>
-			<i>No description available</i>
-	</div>
-
-			</div>
-
-
-<h3>Class structure</h3>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="GtkContainerClass">
-	<span><code>GtkContainerClass</code></span>
-</h4>
-
-
-
-
-
-	<div class="members-container">
-		<h5>Fields</h5>
-					
-<div class="symbol-detail" data-hotdoc-id="GtkContainerClass.parent_class">
-	<div>
-		<i><em><code>parent_class</code></em></i>
-		(<a title="GtkWidgetClass" href="GtkWidgetClass">GtkWidgetClass</a>)
-		–
-	</div>
-			<i>No description available</i>
-	</div>
-
-			</div>
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h3>
-	Gtk.ContainerClass
-</h3>
-
-
-
-
-
-	<div class="members-container">
-		<h5>Attributes</h5>
-					
-<div class="symbol-detail" data-hotdoc-id="GtkContainerClass.parent_class">
-	<div>
-		<i><em><code>ContainerClass.parent_class</code></em></i>
-		(<a title="Gtk.WidgetClass" href="GtkWidgetClass">Gtk.WidgetClass</a>)
-		–
-	</div>
-			<i>No description available</i>
-	</div>
-
-			</div>
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3>
-	Gtk.ContainerClass
-</h3>
-
-
-
-
-
-	<div class="members-container">
-		<h5>Attributes</h5>
-					
-<div class="symbol-detail" data-hotdoc-id="GtkContainerClass.parent_class">
-	<div>
-		<i><em><code>ContainerClass.parent_class</code></em></i>
-		(<a title="Gtk.WidgetClass" href="GtkWidgetClass">Gtk.WidgetClass</a>)
-		–
-	</div>
-			<i>No description available</i>
-	</div>
-
-			</div>
-
-
-
-        </div>
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h2 data-hotdoc-id="GtkContainer">
-	<span><code>GtkContainer</code></span>
-</h2>
-
-
-<div class="hierarchy_container">
-	<div class="hierarchy_details">
-<pre>
-<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object">GObject</a>
-    <span class="lineart">╰──</span><a title="GInitiallyUnowned" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-javascript="GObject.InitiallyUnowned" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-python="GObject.InitiallyUnowned">GInitiallyUnowned</a>
-        <span class="lineart">╰──</span><a title="GtkWidget" href="gtkwidget-h.html#GtkWidget" data-gi-href-javascript="gtkwidget-h.html#GtkWidget" data-gi-title-javascript="Gtk.Widget" data-gi-href-python="gtkwidget-h.html#GtkWidget" data-gi-title-python="Gtk.Widget">GtkWidget</a>
-            <span class="lineart">╰──</span>GtkContainer
-                <span class="lineart">╰──</span><a title="GtkActionBar" href="gtkactionbar-h.html#GtkActionBar" data-gi-href-javascript="gtkactionbar-h.html#GtkActionBar" data-gi-title-javascript="Gtk.ActionBar" data-gi-href-python="gtkactionbar-h.html#GtkActionBar" data-gi-title-python="Gtk.ActionBar">GtkActionBar</a>
-                <span class="lineart">╰──</span><a title="GtkBin" href="gtkbin-h.html#GtkBin" data-gi-href-javascript="gtkbin-h.html#GtkBin" data-gi-title-javascript="Gtk.Bin" data-gi-href-python="gtkbin-h.html#GtkBin" data-gi-title-python="Gtk.Bin">GtkBin</a>
-                <span class="lineart">╰──</span><a title="GtkBox" href="gtkbox-h.html#GtkBox" data-gi-href-javascript="gtkbox-h.html#GtkBox" data-gi-title-javascript="Gtk.Box" data-gi-href-python="gtkbox-h.html#GtkBox" data-gi-title-python="Gtk.Box">GtkBox</a>
-                <span class="lineart">╰──</span><a title="GtkExpander" href="gtkexpander-h.html#GtkExpander" data-gi-href-javascript="gtkexpander-h.html#GtkExpander" data-gi-title-javascript="Gtk.Expander" data-gi-href-python="gtkexpander-h.html#GtkExpander" data-gi-title-python="Gtk.Expander">GtkExpander</a>
-                <span class="lineart">╰──</span><a title="GtkFixed" href="gtkfixed-h.html#GtkFixed" data-gi-href-javascript="gtkfixed-h.html#GtkFixed" data-gi-title-javascript="Gtk.Fixed" data-gi-href-python="gtkfixed-h.html#GtkFixed" data-gi-title-python="Gtk.Fixed">GtkFixed</a>
-                <span class="lineart">╰──</span><a title="GtkFlowBox" href="gtkflowbox-h.html#GtkFlowBox" data-gi-href-javascript="gtkflowbox-h.html#GtkFlowBox" data-gi-title-javascript="Gtk.FlowBox" data-gi-href-python="gtkflowbox-h.html#GtkFlowBox" data-gi-title-python="Gtk.FlowBox">GtkFlowBox</a>
-                <span class="lineart">╰──</span><a title="GtkGrid" href="gtkgrid-h.html#GtkGrid" data-gi-href-javascript="gtkgrid-h.html#GtkGrid" data-gi-title-javascript="Gtk.Grid" data-gi-href-python="gtkgrid-h.html#GtkGrid" data-gi-title-python="Gtk.Grid">GtkGrid</a>
-                <span class="lineart">╰──</span><a title="GtkHeaderBar" href="gtkheaderbar-h.html#GtkHeaderBar" data-gi-href-javascript="gtkheaderbar-h.html#GtkHeaderBar" data-gi-title-javascript="Gtk.HeaderBar" data-gi-href-python="gtkheaderbar-h.html#GtkHeaderBar" data-gi-title-python="Gtk.HeaderBar">GtkHeaderBar</a>
-                <span class="lineart">╰──</span><a title="GtkIconView" href="gtkiconview-h.html#GtkIconView" data-gi-href-javascript="gtkiconview-h.html#GtkIconView" data-gi-title-javascript="Gtk.IconView" data-gi-href-python="gtkiconview-h.html#GtkIconView" data-gi-title-python="Gtk.IconView">GtkIconView</a>
-                <span class="lineart">╰──</span><a title="GtkLayout" href="gtklayout-h.html#GtkLayout" data-gi-href-javascript="gtklayout-h.html#GtkLayout" data-gi-title-javascript="Gtk.Layout" data-gi-href-python="gtklayout-h.html#GtkLayout" data-gi-title-python="Gtk.Layout">GtkLayout</a>
-                <span class="lineart">╰──</span><a title="GtkListBox" href="gtklistbox-h.html#GtkListBox" data-gi-href-javascript="gtklistbox-h.html#GtkListBox" data-gi-title-javascript="Gtk.ListBox" data-gi-href-python="gtklistbox-h.html#GtkListBox" data-gi-title-python="Gtk.ListBox">GtkListBox</a>
-                <span class="lineart">╰──</span><a title="GtkMenuShell" href="gtkmenushell-h.html#GtkMenuShell" data-gi-href-javascript="gtkmenushell-h.html#GtkMenuShell" data-gi-title-javascript="Gtk.MenuShell" data-gi-href-python="gtkmenushell-h.html#GtkMenuShell" data-gi-title-python="Gtk.MenuShell">GtkMenuShell</a>
-                <span class="lineart">╰──</span><a title="GtkNotebook" href="gtknotebook-h.html#GtkNotebook" data-gi-href-javascript="gtknotebook-h.html#GtkNotebook" data-gi-title-javascript="Gtk.Notebook" data-gi-href-python="gtknotebook-h.html#GtkNotebook" data-gi-title-python="Gtk.Notebook">GtkNotebook</a>
-                <span class="lineart">╰──</span><a title="GtkPaned" href="gtkpaned-h.html#GtkPaned" data-gi-href-javascript="gtkpaned-h.html#GtkPaned" data-gi-title-javascript="Gtk.Paned" data-gi-href-python="gtkpaned-h.html#GtkPaned" data-gi-title-python="Gtk.Paned">GtkPaned</a>
-                <span class="lineart">╰──</span><a title="GtkStack" href="gtkstack-h.html#GtkStack" data-gi-href-javascript="gtkstack-h.html#GtkStack" data-gi-title-javascript="Gtk.Stack" data-gi-href-python="gtkstack-h.html#GtkStack" data-gi-title-python="Gtk.Stack">GtkStack</a>
-                <span class="lineart">╰──</span><a title="GtkTextView" href="gtktextview-h.html#GtkTextView" data-gi-href-javascript="gtktextview-h.html#GtkTextView" data-gi-title-javascript="Gtk.TextView" data-gi-href-python="gtktextview-h.html#GtkTextView" data-gi-title-python="Gtk.TextView">GtkTextView</a>
-                <span class="lineart">╰──</span><a title="GtkToolItemGroup" href="gtktoolitemgroup-h.html#GtkToolItemGroup" data-gi-href-javascript="gtktoolitemgroup-h.html#GtkToolItemGroup" data-gi-title-javascript="Gtk.ToolItemGroup" data-gi-href-python="gtktoolitemgroup-h.html#GtkToolItemGroup" data-gi-title-python="Gtk.ToolItemGroup">GtkToolItemGroup</a>
-                <span class="lineart">╰──</span><a title="GtkToolPalette" href="gtktoolpalette-h.html#GtkToolPalette" data-gi-href-javascript="gtktoolpalette-h.html#GtkToolPalette" data-gi-title-javascript="Gtk.ToolPalette" data-gi-href-python="gtktoolpalette-h.html#GtkToolPalette" data-gi-title-python="Gtk.ToolPalette">GtkToolPalette</a>
-                <span class="lineart">╰──</span><a title="GtkToolbar" href="gtktoolbar-h.html#GtkToolbar" data-gi-href-javascript="gtktoolbar-h.html#GtkToolbar" data-gi-title-javascript="Gtk.Toolbar" data-gi-href-python="gtktoolbar-h.html#GtkToolbar" data-gi-title-python="Gtk.Toolbar">GtkToolbar</a>
-                <span class="lineart">╰──</span><a title="GtkTreeView" href="gtktreeview-h.html#GtkTreeView" data-gi-href-javascript="gtktreeview-h.html#GtkTreeView" data-gi-title-javascript="Gtk.TreeView" data-gi-href-python="gtktreeview-h.html#GtkTreeView" data-gi-title-python="Gtk.TreeView">GtkTreeView</a>
-</pre>
-
-</div>
-
-</div>
-
-<div class="interfaces_container">
-	
-<p><b>Implemented interfaces:</b>
-    AtkImplementorIface, <a title="GtkBuildable" href="gtkbuildable-h.html#GtkBuildable" data-gi-href-javascript="gtkbuildable-h.html#GtkBuildable" data-gi-title-javascript="Gtk.Buildable" data-gi-href-python="gtkbuildable-h.html#GtkBuildable" data-gi-title-python="Gtk.Buildable">GtkBuildable</a>
-</p>
-
-</div>
-
-
-
-
-	<div class="members-container">
-		<h3>Members</h3>
-					
-<div class="symbol-detail" data-hotdoc-id="GtkContainer.widget">
-	<div>
-		<i><em><code>widget</code></em></i>
-		(<a title="GtkWidget" href="gtkwidget-h.html#GtkWidget" data-gi-href-javascript="gtkwidget-h.html#GtkWidget" data-gi-title-javascript="Gtk.Widget" data-gi-href-python="gtkwidget-h.html#GtkWidget" data-gi-title-python="Gtk.Widget">GtkWidget</a>)
-		–
-	</div>
-			<i>No description available</i>
-	</div>
-
-			</div>
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h2 data-hotdoc-id="GtkContainer">
-	<span><code>GtkContainer</code></span>
-</h2>
-
-
-<div class="hierarchy_container">
-	<div class="hierarchy_details">
-<pre>
-<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object">GObject</a>
-    <span class="lineart">╰──</span><a title="GInitiallyUnowned" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-javascript="GObject.InitiallyUnowned" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-python="GObject.InitiallyUnowned">GInitiallyUnowned</a>
-        <span class="lineart">╰──</span><a title="GtkWidget" href="gtkwidget-h.html#GtkWidget" data-gi-href-javascript="gtkwidget-h.html#GtkWidget" data-gi-title-javascript="Gtk.Widget" data-gi-href-python="gtkwidget-h.html#GtkWidget" data-gi-title-python="Gtk.Widget">GtkWidget</a>
-            <span class="lineart">╰──</span>GtkContainer
-                <span class="lineart">╰──</span><a title="GtkActionBar" href="gtkactionbar-h.html#GtkActionBar" data-gi-href-javascript="gtkactionbar-h.html#GtkActionBar" data-gi-title-javascript="Gtk.ActionBar" data-gi-href-python="gtkactionbar-h.html#GtkActionBar" data-gi-title-python="Gtk.ActionBar">GtkActionBar</a>
-                <span class="lineart">╰──</span><a title="GtkBin" href="gtkbin-h.html#GtkBin" data-gi-href-javascript="gtkbin-h.html#GtkBin" data-gi-title-javascript="Gtk.Bin" data-gi-href-python="gtkbin-h.html#GtkBin" data-gi-title-python="Gtk.Bin">GtkBin</a>
-                <span class="lineart">╰──</span><a title="GtkBox" href="gtkbox-h.html#GtkBox" data-gi-href-javascript="gtkbox-h.html#GtkBox" data-gi-title-javascript="Gtk.Box" data-gi-href-python="gtkbox-h.html#GtkBox" data-gi-title-python="Gtk.Box">GtkBox</a>
-                <span class="lineart">╰──</span><a title="GtkExpander" href="gtkexpander-h.html#GtkExpander" data-gi-href-javascript="gtkexpander-h.html#GtkExpander" data-gi-title-javascript="Gtk.Expander" data-gi-href-python="gtkexpander-h.html#GtkExpander" data-gi-title-python="Gtk.Expander">GtkExpander</a>
-                <span class="lineart">╰──</span><a title="GtkFixed" href="gtkfixed-h.html#GtkFixed" data-gi-href-javascript="gtkfixed-h.html#GtkFixed" data-gi-title-javascript="Gtk.Fixed" data-gi-href-python="gtkfixed-h.html#GtkFixed" data-gi-title-python="Gtk.Fixed">GtkFixed</a>
-                <span class="lineart">╰──</span><a title="GtkFlowBox" href="gtkflowbox-h.html#GtkFlowBox" data-gi-href-javascript="gtkflowbox-h.html#GtkFlowBox" data-gi-title-javascript="Gtk.FlowBox" data-gi-href-python="gtkflowbox-h.html#GtkFlowBox" data-gi-title-python="Gtk.FlowBox">GtkFlowBox</a>
-                <span class="lineart">╰──</span><a title="GtkGrid" href="gtkgrid-h.html#GtkGrid" data-gi-href-javascript="gtkgrid-h.html#GtkGrid" data-gi-title-javascript="Gtk.Grid" data-gi-href-python="gtkgrid-h.html#GtkGrid" data-gi-title-python="Gtk.Grid">GtkGrid</a>
-                <span class="lineart">╰──</span><a title="GtkHeaderBar" href="gtkheaderbar-h.html#GtkHeaderBar" data-gi-href-javascript="gtkheaderbar-h.html#GtkHeaderBar" data-gi-title-javascript="Gtk.HeaderBar" data-gi-href-python="gtkheaderbar-h.html#GtkHeaderBar" data-gi-title-python="Gtk.HeaderBar">GtkHeaderBar</a>
-                <span class="lineart">╰──</span><a title="GtkIconView" href="gtkiconview-h.html#GtkIconView" data-gi-href-javascript="gtkiconview-h.html#GtkIconView" data-gi-title-javascript="Gtk.IconView" data-gi-href-python="gtkiconview-h.html#GtkIconView" data-gi-title-python="Gtk.IconView">GtkIconView</a>
-                <span class="lineart">╰──</span><a title="GtkLayout" href="gtklayout-h.html#GtkLayout" data-gi-href-javascript="gtklayout-h.html#GtkLayout" data-gi-title-javascript="Gtk.Layout" data-gi-href-python="gtklayout-h.html#GtkLayout" data-gi-title-python="Gtk.Layout">GtkLayout</a>
-                <span class="lineart">╰──</span><a title="GtkListBox" href="gtklistbox-h.html#GtkListBox" data-gi-href-javascript="gtklistbox-h.html#GtkListBox" data-gi-title-javascript="Gtk.ListBox" data-gi-href-python="gtklistbox-h.html#GtkListBox" data-gi-title-python="Gtk.ListBox">GtkListBox</a>
-                <span class="lineart">╰──</span><a title="GtkMenuShell" href="gtkmenushell-h.html#GtkMenuShell" data-gi-href-javascript="gtkmenushell-h.html#GtkMenuShell" data-gi-title-javascript="Gtk.MenuShell" data-gi-href-python="gtkmenushell-h.html#GtkMenuShell" data-gi-title-python="Gtk.MenuShell">GtkMenuShell</a>
-                <span class="lineart">╰──</span><a title="GtkNotebook" href="gtknotebook-h.html#GtkNotebook" data-gi-href-javascript="gtknotebook-h.html#GtkNotebook" data-gi-title-javascript="Gtk.Notebook" data-gi-href-python="gtknotebook-h.html#GtkNotebook" data-gi-title-python="Gtk.Notebook">GtkNotebook</a>
-                <span class="lineart">╰──</span><a title="GtkPaned" href="gtkpaned-h.html#GtkPaned" data-gi-href-javascript="gtkpaned-h.html#GtkPaned" data-gi-title-javascript="Gtk.Paned" data-gi-href-python="gtkpaned-h.html#GtkPaned" data-gi-title-python="Gtk.Paned">GtkPaned</a>
-                <span class="lineart">╰──</span><a title="GtkStack" href="gtkstack-h.html#GtkStack" data-gi-href-javascript="gtkstack-h.html#GtkStack" data-gi-title-javascript="Gtk.Stack" data-gi-href-python="gtkstack-h.html#GtkStack" data-gi-title-python="Gtk.Stack">GtkStack</a>
-                <span class="lineart">╰──</span><a title="GtkTextView" href="gtktextview-h.html#GtkTextView" data-gi-href-javascript="gtktextview-h.html#GtkTextView" data-gi-title-javascript="Gtk.TextView" data-gi-href-python="gtktextview-h.html#GtkTextView" data-gi-title-python="Gtk.TextView">GtkTextView</a>
-                <span class="lineart">╰──</span><a title="GtkToolItemGroup" href="gtktoolitemgroup-h.html#GtkToolItemGroup" data-gi-href-javascript="gtktoolitemgroup-h.html#GtkToolItemGroup" data-gi-title-javascript="Gtk.ToolItemGroup" data-gi-href-python="gtktoolitemgroup-h.html#GtkToolItemGroup" data-gi-title-python="Gtk.ToolItemGroup">GtkToolItemGroup</a>
-                <span class="lineart">╰──</span><a title="GtkToolPalette" href="gtktoolpalette-h.html#GtkToolPalette" data-gi-href-javascript="gtktoolpalette-h.html#GtkToolPalette" data-gi-title-javascript="Gtk.ToolPalette" data-gi-href-python="gtktoolpalette-h.html#GtkToolPalette" data-gi-title-python="Gtk.ToolPalette">GtkToolPalette</a>
-                <span class="lineart">╰──</span><a title="GtkToolbar" href="gtktoolbar-h.html#GtkToolbar" data-gi-href-javascript="gtktoolbar-h.html#GtkToolbar" data-gi-title-javascript="Gtk.Toolbar" data-gi-href-python="gtktoolbar-h.html#GtkToolbar" data-gi-title-python="Gtk.Toolbar">GtkToolbar</a>
-                <span class="lineart">╰──</span><a title="GtkTreeView" href="gtktreeview-h.html#GtkTreeView" data-gi-href-javascript="gtktreeview-h.html#GtkTreeView" data-gi-title-javascript="Gtk.TreeView" data-gi-href-python="gtktreeview-h.html#GtkTreeView" data-gi-title-python="Gtk.TreeView">GtkTreeView</a>
-</pre>
-
-</div>
-
-</div>
-
-<div class="interfaces_container">
-	
-<p><b>Implemented interfaces:</b>
-    AtkImplementorIface, <a title="GtkBuildable" href="gtkbuildable-h.html#GtkBuildable" data-gi-href-javascript="gtkbuildable-h.html#GtkBuildable" data-gi-title-javascript="Gtk.Buildable" data-gi-href-python="gtkbuildable-h.html#GtkBuildable" data-gi-title-python="Gtk.Buildable">GtkBuildable</a>
-</p>
-
-</div>
-
-
-
-
-	<div class="members-container">
-		<h3>Members</h3>
-					
-<div class="symbol-detail" data-hotdoc-id="GtkContainer.widget">
-	<div>
-		<i><em><code>widget</code></em></i>
-		(<a title="GtkWidget" href="gtkwidget-h.html#GtkWidget" data-gi-href-javascript="gtkwidget-h.html#GtkWidget" data-gi-title-javascript="Gtk.Widget" data-gi-href-python="gtkwidget-h.html#GtkWidget" data-gi-title-python="Gtk.Widget">GtkWidget</a>)
-		–
-	</div>
-			<i>No description available</i>
-	</div>
-
-			</div>
 
 
 
@@ -591,86 +335,27 @@ chain. The ”name” attribute gives the id of the widget.</widget></focus-chai
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_container_add">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h4 data-hotdoc-id="gtk_container_add">
-	<span><code>gtk_container_add</code></span>
+	<span><code>Gtk.Container.Add</code></span>
 </h4>
 
 
 
 
 <pre class="c-prototype">
-gtk_container_add (<a title="GtkContainer" href="gtkcontainer-h.html#GtkContainer">GtkContainer</a> * container,
-                   <a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> * widget)</pre>
-
-<p>Adds <em>widget</em> to <em>container</em>. Typically used for simple containers
-such as <a href="gtkwindow-h.html#GtkWindow">GtkWindow</a>, <a href="gtkframe-h.html#GtkFrame">GtkFrame</a>, or <a href="gtkbutton-h.html#GtkButton">GtkButton</a>; for more complicated
-layout containers such as <a href="gtkbox-h.html#GtkBox">GtkBox</a> or <a href="gtkgrid-h.html#GtkGrid">GtkGrid</a>, this function will
-pick default packing parameters that may not be correct.  So
-consider functions such as <a href="gtkbox-h.html#gtk_box_pack_start">gtk_box_pack_start</a> and
-<a href="gtkgrid-h.html#gtk_grid_attach">gtk_grid_attach</a> as an alternative to <a href="gtkcontainer-h.html#gtk_container_add">gtk_container_add</a> in
-those cases. A widget may be added to only one container at a time;
-you can’t place the same widget inside two different containers.</p>
-<p>Note that some containers, such as <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">GtkScrolledWindow</a> or <a href="gtklistbox-h.html#GtkListBox">GtkListBox</a>,
-may add intermediate children between the added widget and the
-container.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>container</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkcontainer-h.html#GtkContainer">GtkContainer</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-				–
-	</div>
-			<p>a widget to be placed inside <em>container</em></p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_container_add">
-	<span><code>Gtk.prototype.add</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.add(widget: <a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>): {
-    // javascript wrapper for 'gtk_container_add'
-}</pre>
+Gtk.Container.Add (<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>)</pre>
 
 <p>Adds <em>widget</em> to <em>container</em>. Typically used for simple containers
 such as <a href="gtkwindow-h.html#GtkWindow">Gtk.Window</a>, <a href="gtkframe-h.html#GtkFrame">Gtk.Frame</a>, or <a href="gtkbutton-h.html#GtkButton">Gtk.Button</a>; for more complicated
 layout containers such as <a href="gtkbox-h.html#GtkBox">Gtk.Box</a> or <a href="gtkgrid-h.html#GtkGrid">Gtk.Grid</a>, this function will
 pick default packing parameters that may not be correct.  So
-consider functions such as <a href="gtkbox-h.html#gtk_box_pack_start">Gtk.prototype.pack_start</a> and
-<a href="gtkgrid-h.html#gtk_grid_attach">Gtk.prototype.attach</a> as an alternative to <a href="gtkcontainer-h.html#gtk_container_add">Gtk.prototype.add</a> in
+consider functions such as <a href="gtkbox-h.html#gtk_box_pack_start">Gtk.Box.PackStart</a> and
+<a href="gtkgrid-h.html#gtk_grid_attach">Gtk.Grid.Attach</a> as an alternative to <a href="gtkcontainer-h.html#gtk_container_add">Gtk.Container.Add</a> in
 those cases. A widget may be added to only one container at a time;
 you can’t place the same widget inside two different containers.</p>
 <p>Note that some containers, such as <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a> or <a href="gtklistbox-h.html#GtkListBox">Gtk.ListBox</a>,
@@ -684,86 +369,7 @@ container.</p>
 					
 <div class="symbol-detail">
 	<div>
-		<i><em><code>container</code></em></i>
-					(
-						<a title="Gtk.Container" href="gtkcontainer-h.html#GtkContainer">Gtk.Container</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkcontainer-h.html#GtkContainer">Gtk.Container</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
 		<i><em><code>widget</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
-				–
-	</div>
-			<p>a widget to be placed inside <em>container</em></p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_container_add">
-	<span><code>Gtk.Container.add</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.Container.add (self, widget):
-    #python wrapper for 'gtk_container_add'</pre>
-
-<p>Adds <em>widget</em> to <em>container</em>. Typically used for simple containers
-such as <a href="gtkwindow-h.html#GtkWindow">Gtk.Window</a>, <a href="gtkframe-h.html#GtkFrame">Gtk.Frame</a>, or <a href="gtkbutton-h.html#GtkButton">Gtk.Button</a>; for more complicated
-layout containers such as <a href="gtkbox-h.html#GtkBox">Gtk.Box</a> or <a href="gtkgrid-h.html#GtkGrid">Gtk.Grid</a>, this function will
-pick default packing parameters that may not be correct.  So
-consider functions such as <a href="gtkbox-h.html#gtk_box_pack_start">Gtk.Box.pack_start</a> and
-<a href="gtkgrid-h.html#gtk_grid_attach">Gtk.Grid.attach</a> as an alternative to <a href="gtkcontainer-h.html#gtk_container_add">Gtk.Container.add</a> in
-those cases. A widget may be added to only one container at a time;
-you can’t place the same widget inside two different containers.</p>
-<p>Note that some containers, such as <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a> or <a href="gtklistbox-h.html#GtkListBox">Gtk.ListBox</a>,
-may add intermediate children between the added widget and the
-container.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>container</code></em></i>
-					(
-						<a title="Gtk.Container" href="gtkcontainer-h.html#GtkContainer">Gtk.Container</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkcontainer-h.html#GtkContainer">Gtk.Container</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
 				–
 	</div>
 			<p>a widget to be placed inside <em>container</em></p>
@@ -784,30 +390,29 @@ container.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_container_remove">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h4 data-hotdoc-id="gtk_container_remove">
-	<span><code>gtk_container_remove</code></span>
+	<span><code>Gtk.Container.Remove</code></span>
 </h4>
 
 
 
 
 <pre class="c-prototype">
-gtk_container_remove (<a title="GtkContainer" href="gtkcontainer-h.html#GtkContainer">GtkContainer</a> * container,
-                      <a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> * widget)</pre>
+Gtk.Container.Remove (<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>)</pre>
 
 <p>Removes <em>widget</em> from <em>container</em>. <em>widget</em> must be inside <em>container</em>.
 Note that <em>container</em> will own a reference to <em>widget</em>, and that this
 may be the last reference held; so removing a widget from its
 container can destroy that widget. If you want to use <em>widget</em>
 again, you need to add a reference to it before removing it from
-a container, using <a href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-ref">g_object_ref</a>. If you don’t want to use <em>widget</em>
+a container, using <a href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-ref">GObject.Object.Ref</a>. If you don’t want to use <em>widget</em>
 again it’s usually more efficient to simply destroy it directly
-using <a href="gtkwidget-h.html#gtk_widget_destroy">gtk_widget_destroy</a> since this will remove it from the
+using <a href="gtkwidget-h.html#gtk_widget_destroy">Gtk.Widget.Destroy</a> since this will remove it from the
 container and help break any circular reference count cycles.</p>
 
 
@@ -817,140 +422,7 @@ container and help break any circular reference count cycles.</p>
 					
 <div class="symbol-detail">
 	<div>
-		<i><em><code>container</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkcontainer-h.html#GtkContainer">GtkContainer</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
 		<i><em><code>widget</code></em></i>
-				–
-	</div>
-			<p>a current child of <em>container</em></p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_container_remove">
-	<span><code>Gtk.prototype.remove</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.remove(widget: <a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>): {
-    // javascript wrapper for 'gtk_container_remove'
-}</pre>
-
-<p>Removes <em>widget</em> from <em>container</em>. <em>widget</em> must be inside <em>container</em>.
-Note that <em>container</em> will own a reference to <em>widget</em>, and that this
-may be the last reference held; so removing a widget from its
-container can destroy that widget. If you want to use <em>widget</em>
-again, you need to add a reference to it before removing it from
-a container, using <a href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-ref">GObject.prototype.ref</a>. If you don’t want to use <em>widget</em>
-again it’s usually more efficient to simply destroy it directly
-using <a href="gtkwidget-h.html#gtk_widget_destroy">Gtk.prototype.destroy</a> since this will remove it from the
-container and help break any circular reference count cycles.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>container</code></em></i>
-					(
-						<a title="Gtk.Container" href="gtkcontainer-h.html#GtkContainer">Gtk.Container</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkcontainer-h.html#GtkContainer">Gtk.Container</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
-				–
-	</div>
-			<p>a current child of <em>container</em></p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_container_remove">
-	<span><code>Gtk.Container.remove</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.Container.remove (self, widget):
-    #python wrapper for 'gtk_container_remove'</pre>
-
-<p>Removes <em>widget</em> from <em>container</em>. <em>widget</em> must be inside <em>container</em>.
-Note that <em>container</em> will own a reference to <em>widget</em>, and that this
-may be the last reference held; so removing a widget from its
-container can destroy that widget. If you want to use <em>widget</em>
-again, you need to add a reference to it before removing it from
-a container, using <a href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-ref">GObject.Object.ref</a>. If you don’t want to use <em>widget</em>
-again it’s usually more efficient to simply destroy it directly
-using <a href="gtkwidget-h.html#gtk_widget_destroy">Gtk.Widget.destroy</a> since this will remove it from the
-container and help break any circular reference count cycles.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>container</code></em></i>
-					(
-						<a title="Gtk.Container" href="gtkcontainer-h.html#GtkContainer">Gtk.Container</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkcontainer-h.html#GtkContainer">Gtk.Container</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
 				–
 	</div>
 			<p>a current child of <em>container</em></p>
@@ -971,79 +443,6 @@ container and help break any circular reference count cycles.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_container_add_with_properties">
 	
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_container_add_with_properties">
-	<span><code>gtk_container_add_with_properties</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-gtk_container_add_with_properties (<a title="GtkContainer" href="gtkcontainer-h.html#GtkContainer">GtkContainer</a> * container,
-                                   <a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> * widget,
-                                   const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * first_prop_name,
-                                   ... ...)</pre>
-
-<p>Adds <em>widget</em> to <em>container</em>, setting child properties at the same time.
-See <a href="gtkcontainer-h.html#gtk_container_add">gtk_container_add</a> and <a href="gtkcontainer-h.html#gtk_container_child_set">gtk_container_child_set</a> for more details.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>container</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkcontainer-h.html#GtkContainer">GtkContainer</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-				–
-	</div>
-			<p>a widget to be placed inside <em>container</em></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>first_prop_name</code></em></i>
-				–
-	</div>
-			<p>the name of the first child property to set</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>...</code></em></i>
-				–
-	</div>
-			<p>a <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a>-terminated list of property names and values, starting
-with <em>first_prop_name</em></p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
 
 </div>
 
@@ -1051,113 +450,24 @@ with <em>first_prop_name</em></p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_container_check_resize">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h4 data-hotdoc-id="gtk_container_check_resize">
-	<span><code>gtk_container_check_resize</code></span>
+	<span><code>Gtk.Container.CheckResize</code></span>
 </h4>
 
 
 
 
 <pre class="c-prototype">
-gtk_container_check_resize (<a title="GtkContainer" href="gtkcontainer-h.html#GtkContainer">GtkContainer</a> * container)</pre>
+Gtk.Container.CheckResize ()</pre>
 
 
 
 
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>container</code></em></i>
-				–
-	</div>
-			<i>No description available</i>
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_container_check_resize">
-	<span><code>Gtk.prototype.check_resize</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.check_resize(): {
-    // javascript wrapper for 'gtk_container_check_resize'
-}</pre>
-
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>container</code></em></i>
-					(
-						<a title="Gtk.Container" href="gtkcontainer-h.html#GtkContainer">Gtk.Container</a>
-						)
-				–
-	</div>
-			<i>No description available</i>
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_container_check_resize">
-	<span><code>Gtk.Container.check_resize</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.Container.check_resize (self):
-    #python wrapper for 'gtk_container_check_resize'</pre>
-
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>container</code></em></i>
-					(
-						<a title="Gtk.Container" href="gtkcontainer-h.html#GtkContainer">Gtk.Container</a>
-						)
-				–
-	</div>
-			<i>No description available</i>
-	</div>
-
-			</div>
 
 
 
@@ -1171,31 +481,30 @@ def Gtk.Container.check_resize (self):
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_container_foreach">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h4 data-hotdoc-id="gtk_container_foreach">
-	<span><code>gtk_container_foreach</code></span>
+	<span><code>Gtk.Container.Foreach</code></span>
 </h4>
 
 
 
 
 <pre class="c-prototype">
-gtk_container_foreach (<a title="GtkContainer" href="gtkcontainer-h.html#GtkContainer">GtkContainer</a> * container,
-                       <a title="GtkCallback" href="gtkwidget-h.html#GtkCallback">GtkCallback</a> callback,
-                       <a title="gpointer" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer">gpointer</a> callback_data)</pre>
+Gtk.Container.Foreach (<a title="Gtk.Callback" href="gtkwidget-h.html#GtkCallback">Gtk.Callback</a>,
+                       <a title="IntPtr" href="https://docs.microsoft.com/en-us/dotnet/api//system.intptr">IntPtr</a>)</pre>
 
 <p>Invokes <em>callback</em> on each non-internal child of <em>container</em>.
-See <a href="gtkcontainer-h.html#gtk_container_forall">gtk_container_forall</a> for details on what constitutes
+See <a href="gtkcontainer-h.html#gtk_container_forall">Gtk.Container.Forall</a> for details on what constitutes
 an “internal” child. For all practical purposes, this function
 should iterate over precisely those child widgets that were
 added to the container by the application with explicit add
 calls.</p>
-<p>Most applications should use <a href="gtkcontainer-h.html#gtk_container_foreach">gtk_container_foreach</a>,
-rather than <a href="gtkcontainer-h.html#gtk_container_forall">gtk_container_forall</a>.</p>
+<p>Most applications should use <a href="gtkcontainer-h.html#gtk_container_foreach">Gtk.Container.Foreach</a>,
+rather than <a href="gtkcontainer-h.html#gtk_container_forall">Gtk.Container.Forall</a>.</p>
 
 
 
@@ -1204,22 +513,7 @@ rather than <a href="gtkcontainer-h.html#gtk_container_forall">gtk_container_for
 					
 <div class="symbol-detail">
 	<div>
-		<i><em><code>container</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkcontainer-h.html#GtkContainer">GtkContainer</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
 		<i><em><code>callback</code></em></i>
-					(
-						
-<span class="annotation">[<abbr title="The callback is valid only during the call to the method"><span class="acronym">scope call</span></abbr>]</span>
-
-						)
 				–
 	</div>
 			<p>a callback</p>
@@ -1230,153 +524,6 @@ rather than <a href="gtkcontainer-h.html#gtk_container_forall">gtk_container_for
 <div class="symbol-detail">
 	<div>
 		<i><em><code>callback_data</code></em></i>
-				–
-	</div>
-			<p>callback user data</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_container_foreach">
-	<span><code>Gtk.prototype.foreach</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.foreach(callback: <a title="Gtk.Callback" href="gtkwidget-h.html#GtkCallback">Gtk.Callback</a>, callback_data: <a title="Object" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>): {
-    // javascript wrapper for 'gtk_container_foreach'
-}</pre>
-
-<p>Invokes <em>callback</em> on each non-internal child of <em>container</em>.
-See <a href="gtkcontainer-h.html#gtk_container_forall">Gtk.prototype.forall</a> for details on what constitutes
-an “internal” child. For all practical purposes, this function
-should iterate over precisely those child widgets that were
-added to the container by the application with explicit add
-calls.</p>
-<p>Most applications should use <a href="gtkcontainer-h.html#gtk_container_foreach">Gtk.prototype.foreach</a>,
-rather than <a href="gtkcontainer-h.html#gtk_container_forall">Gtk.prototype.forall</a>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>container</code></em></i>
-					(
-						<a title="Gtk.Container" href="gtkcontainer-h.html#GtkContainer">Gtk.Container</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkcontainer-h.html#GtkContainer">Gtk.Container</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>callback</code></em></i>
-					(
-						<a title="Gtk.Callback" href="gtkwidget-h.html#GtkCallback">Gtk.Callback</a>
-						)
-				–
-	</div>
-			<p>a callback</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>callback_data</code></em></i>
-					(
-						<a title="Object" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>
-						)
-				–
-	</div>
-			<p>callback user data</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_container_foreach">
-	<span><code>Gtk.Container.foreach</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.Container.foreach (self, callback, callback_data):
-    #python wrapper for 'gtk_container_foreach'</pre>
-
-<p>Invokes <em>callback</em> on each non-internal child of <em>container</em>.
-See <a href="gtkcontainer-h.html#gtk_container_forall">Gtk.Container.forall</a> for details on what constitutes
-an “internal” child. For all practical purposes, this function
-should iterate over precisely those child widgets that were
-added to the container by the application with explicit add
-calls.</p>
-<p>Most applications should use <a href="gtkcontainer-h.html#gtk_container_foreach">Gtk.Container.foreach</a>,
-rather than <a href="gtkcontainer-h.html#gtk_container_forall">Gtk.Container.forall</a>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>container</code></em></i>
-					(
-						<a title="Gtk.Container" href="gtkcontainer-h.html#GtkContainer">Gtk.Container</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkcontainer-h.html#GtkContainer">Gtk.Container</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>callback</code></em></i>
-					(
-						<a title="Gtk.Callback" href="gtkwidget-h.html#GtkCallback">Gtk.Callback</a>
-						)
-				–
-	</div>
-			<p>a callback</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>callback_data</code></em></i>
-					(
-						<a title="object" href="https://docs.python.org/3/library/functions.html#object">object</a>
-						)
 				–
 	</div>
 			<p>callback user data</p>
@@ -1397,175 +544,6 @@ rather than <a href="gtkcontainer-h.html#gtk_container_forall">Gtk.Container.for
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_container_get_children">
 	
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_container_get_children">
-	<span><code>gtk_container_get_children</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-<a title="GList" href="https://developer.gnome.org/glib/unstable/glib-Doubly-Linked-Lists.html#GList">GList</a> *
-gtk_container_get_children (<a title="GtkContainer" href="gtkcontainer-h.html#GtkContainer">GtkContainer</a> * container)</pre>
-
-<p>Returns the container’s non-internal children. See
-<a href="gtkcontainer-h.html#gtk_container_forall">gtk_container_forall</a> for details on what constitutes an "internal" child.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>container</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkcontainer-h.html#GtkContainer">GtkContainer</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					
-										
-<span class="annotation">[<abbr title="Generic and defining element of containers and arrays"><span class="acronym">element-type</span></abbr> GtkWidget]</span>
-<span class="annotation">[<abbr title="Free data container after the code is done"><span class="acronym">transfer: container</span></abbr>]</span>
-
-										)
-								–
-			</div>
-							<p>a newly-allocated list of the container’s non-internal children.</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_container_get_children">
-	<span><code>Gtk.prototype.get_children</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.get_children(): {
-    // javascript wrapper for 'gtk_container_get_children'
-}</pre>
-
-<p>Returns the container’s non-internal children. See
-<a href="gtkcontainer-h.html#gtk_container_forall">Gtk.prototype.forall</a> for details on what constitutes an "internal" child.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>container</code></em></i>
-					(
-						<a title="Gtk.Container" href="gtkcontainer-h.html#GtkContainer">Gtk.Container</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkcontainer-h.html#GtkContainer">Gtk.Container</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					[ <a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a> ]
-										)
-								–
-			</div>
-							<p>a newly-allocated list of the container’s non-internal children.</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_container_get_children">
-	<span><code>Gtk.Container.get_children</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.Container.get_children (self):
-    #python wrapper for 'gtk_container_get_children'</pre>
-
-<p>Returns the container’s non-internal children. See
-<a href="gtkcontainer-h.html#gtk_container_forall">Gtk.Container.forall</a> for details on what constitutes an "internal" child.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>container</code></em></i>
-					(
-						<a title="Gtk.Container" href="gtkcontainer-h.html#GtkContainer">Gtk.Container</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkcontainer-h.html#GtkContainer">Gtk.Container</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					[ <a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a> ]
-										)
-								–
-			</div>
-							<p>a newly-allocated list of the container’s non-internal children.</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
 
 </div>
 
@@ -1573,22 +551,21 @@ def Gtk.Container.get_children (self):
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_container_get_path_for_child">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h4 data-hotdoc-id="gtk_container_get_path_for_child">
-	<span><code>gtk_container_get_path_for_child</code></span>
+	<span><code>Gtk.Container.GetPathForChild</code></span>
 </h4>
 
 
 
 
 <pre class="c-prototype">
-<a title="GtkWidgetPath" href="gtkwidgetpath-h.html#GtkWidgetPath">GtkWidgetPath</a> *
-gtk_container_get_path_for_child (<a title="GtkContainer" href="gtkcontainer-h.html#GtkContainer">GtkContainer</a> * container,
-                                  <a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> * child)</pre>
+<a title="Gtk.WidgetPath" href="gtkwidgetpath-h.html#GtkWidgetPath">Gtk.WidgetPath</a>
+Gtk.Container.GetPathForChild (<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>)</pre>
 
 <p>Returns a newly created widget path representing all the widget hierarchy
 from the toplevel down to and including <em>child</em>.</p>
@@ -1597,16 +574,6 @@ from the toplevel down to and including <em>child</em>.</p>
 
 	<div class="parameters-container">
 		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>container</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkcontainer-h.html#GtkContainer">GtkContainer</a></p>
-
-	</div>
-
 					
 <div class="symbol-detail">
 	<div>
@@ -1623,143 +590,6 @@ from the toplevel down to and including <em>child</em>.</p>
 		<div class="symbol-detail">
 			<div>
 				<b>Returns</b>
-								–
-			</div>
-							<p>A newly created <a href="gtkwidgetpath-h.html#GtkWidgetPath">GtkWidgetPath</a></p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_container_get_path_for_child">
-	<span><code>Gtk.prototype.get_path_for_child</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.get_path_for_child(child: <a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>): {
-    // javascript wrapper for 'gtk_container_get_path_for_child'
-}</pre>
-
-<p>Returns a newly created widget path representing all the widget hierarchy
-from the toplevel down to and including <em>child</em>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>container</code></em></i>
-					(
-						<a title="Gtk.Container" href="gtkcontainer-h.html#GtkContainer">Gtk.Container</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkcontainer-h.html#GtkContainer">Gtk.Container</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>child</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
-				–
-	</div>
-			<p>a child of <em>container</em></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Gtk.WidgetPath" href="gtkwidgetpath-h.html#GtkWidgetPath">Gtk.WidgetPath</a>
-										)
-								–
-			</div>
-							<p>A newly created <a href="gtkwidgetpath-h.html#GtkWidgetPath">Gtk.WidgetPath</a></p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_container_get_path_for_child">
-	<span><code>Gtk.Container.get_path_for_child</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.Container.get_path_for_child (self, child):
-    #python wrapper for 'gtk_container_get_path_for_child'</pre>
-
-<p>Returns a newly created widget path representing all the widget hierarchy
-from the toplevel down to and including <em>child</em>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>container</code></em></i>
-					(
-						<a title="Gtk.Container" href="gtkcontainer-h.html#GtkContainer">Gtk.Container</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkcontainer-h.html#GtkContainer">Gtk.Container</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>child</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
-				–
-	</div>
-			<p>a child of <em>container</em></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Gtk.WidgetPath" href="gtkwidgetpath-h.html#GtkWidgetPath">Gtk.WidgetPath</a>
-										)
 								–
 			</div>
 							<p>A newly created <a href="gtkwidgetpath-h.html#GtkWidgetPath">Gtk.WidgetPath</a></p>
@@ -1779,178 +609,6 @@ from the toplevel down to and including <em>child</em>.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_container_get_focus_vadjustment">
 	
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_container_get_focus_vadjustment">
-	<span><code>gtk_container_get_focus_vadjustment</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-<a title="GtkAdjustment" href="gtkadjustment-h.html#GtkAdjustment">GtkAdjustment</a> *
-gtk_container_get_focus_vadjustment (<a title="GtkContainer" href="gtkcontainer-h.html#GtkContainer">GtkContainer</a> * container)</pre>
-
-<p>Retrieves the vertical focus adjustment for the container. See
-<a href="gtkcontainer-h.html#gtk_container_set_focus_vadjustment">gtk_container_set_focus_vadjustment</a>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>container</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkcontainer-h.html#GtkContainer">GtkContainer</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					
-										
-<span class="annotation">[<abbr title="NULL may be passed to the value"><span class="acronym">nullable</span></abbr>]</span>
-<span class="annotation">[<abbr title="Don't free data after the code is done"><span class="acronym">transfer: none</span></abbr>]</span>
-
-										)
-								–
-			</div>
-							<p>the vertical focus adjustment, or
-<a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> if none has been set.</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_container_get_focus_vadjustment">
-	<span><code>Gtk.prototype.get_focus_vadjustment</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.get_focus_vadjustment(): {
-    // javascript wrapper for 'gtk_container_get_focus_vadjustment'
-}</pre>
-
-<p>Retrieves the vertical focus adjustment for the container. See
-<a href="gtkcontainer-h.html#gtk_container_set_focus_vadjustment">Gtk.prototype.set_focus_vadjustment</a>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>container</code></em></i>
-					(
-						<a title="Gtk.Container" href="gtkcontainer-h.html#GtkContainer">Gtk.Container</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkcontainer-h.html#GtkContainer">Gtk.Container</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Gtk.Adjustment" href="gtkadjustment-h.html#GtkAdjustment">Gtk.Adjustment</a>
-										)
-								–
-			</div>
-							<p>the vertical focus adjustment, or
-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a> if none has been set.</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_container_get_focus_vadjustment">
-	<span><code>Gtk.Container.get_focus_vadjustment</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.Container.get_focus_vadjustment (self):
-    #python wrapper for 'gtk_container_get_focus_vadjustment'</pre>
-
-<p>Retrieves the vertical focus adjustment for the container. See
-<a href="gtkcontainer-h.html#gtk_container_set_focus_vadjustment">Gtk.Container.set_focus_vadjustment</a>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>container</code></em></i>
-					(
-						<a title="Gtk.Container" href="gtkcontainer-h.html#GtkContainer">Gtk.Container</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkcontainer-h.html#GtkContainer">Gtk.Container</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Gtk.Adjustment" href="gtkadjustment-h.html#GtkAdjustment">Gtk.Adjustment</a>
-										)
-								–
-			</div>
-							<p>the vertical focus adjustment, or
-<a href="https://docs.python.org/3/library/constants.html#None">None</a> if none has been set.</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
 
 </div>
 
@@ -1958,186 +616,6 @@ def Gtk.Container.get_focus_vadjustment (self):
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_container_set_focus_vadjustment">
 	
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_container_set_focus_vadjustment">
-	<span><code>gtk_container_set_focus_vadjustment</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-gtk_container_set_focus_vadjustment (<a title="GtkContainer" href="gtkcontainer-h.html#GtkContainer">GtkContainer</a> * container,
-                                     <a title="GtkAdjustment" href="gtkadjustment-h.html#GtkAdjustment">GtkAdjustment</a> * adjustment)</pre>
-
-<p>Hooks up an adjustment to focus handling in a container, so when a
-child of the container is focused, the adjustment is scrolled to
-show that widget. This function sets the vertical alignment. See
-<a href="gtkscrolledwindow-h.html#gtk_scrolled_window_get_vadjustment">gtk_scrolled_window_get_vadjustment</a> for a typical way of obtaining
-the adjustment and <a href="gtkcontainer-h.html#gtk_container_set_focus_hadjustment">gtk_container_set_focus_hadjustment</a> for setting
-the horizontal adjustment.</p>
-<p>The adjustments have to be in pixel units and in the same coordinate
-system as the allocation for immediate children of the container.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>container</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkcontainer-h.html#GtkContainer">GtkContainer</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>adjustment</code></em></i>
-				–
-	</div>
-			<p>an adjustment which should be adjusted when the focus
-is moved among the descendents of <em>container</em></p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_container_set_focus_vadjustment">
-	<span><code>Gtk.prototype.set_focus_vadjustment</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.set_focus_vadjustment(adjustment: <a title="Gtk.Adjustment" href="gtkadjustment-h.html#GtkAdjustment">Gtk.Adjustment</a>): {
-    // javascript wrapper for 'gtk_container_set_focus_vadjustment'
-}</pre>
-
-<p>Hooks up an adjustment to focus handling in a container, so when a
-child of the container is focused, the adjustment is scrolled to
-show that widget. This function sets the vertical alignment. See
-<a href="gtkscrolledwindow-h.html#gtk_scrolled_window_get_vadjustment">Gtk.prototype.get_vadjustment</a> for a typical way of obtaining
-the adjustment and <a href="gtkcontainer-h.html#gtk_container_set_focus_hadjustment">Gtk.prototype.set_focus_hadjustment</a> for setting
-the horizontal adjustment.</p>
-<p>The adjustments have to be in pixel units and in the same coordinate
-system as the allocation for immediate children of the container.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>container</code></em></i>
-					(
-						<a title="Gtk.Container" href="gtkcontainer-h.html#GtkContainer">Gtk.Container</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkcontainer-h.html#GtkContainer">Gtk.Container</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>adjustment</code></em></i>
-					(
-						<a title="Gtk.Adjustment" href="gtkadjustment-h.html#GtkAdjustment">Gtk.Adjustment</a>
-						)
-				–
-	</div>
-			<p>an adjustment which should be adjusted when the focus
-is moved among the descendents of <em>container</em></p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_container_set_focus_vadjustment">
-	<span><code>Gtk.Container.set_focus_vadjustment</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.Container.set_focus_vadjustment (self, adjustment):
-    #python wrapper for 'gtk_container_set_focus_vadjustment'</pre>
-
-<p>Hooks up an adjustment to focus handling in a container, so when a
-child of the container is focused, the adjustment is scrolled to
-show that widget. This function sets the vertical alignment. See
-<a href="gtkscrolledwindow-h.html#gtk_scrolled_window_get_vadjustment">Gtk.ScrolledWindow.get_vadjustment</a> for a typical way of obtaining
-the adjustment and <a href="gtkcontainer-h.html#gtk_container_set_focus_hadjustment">Gtk.Container.set_focus_hadjustment</a> for setting
-the horizontal adjustment.</p>
-<p>The adjustments have to be in pixel units and in the same coordinate
-system as the allocation for immediate children of the container.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>container</code></em></i>
-					(
-						<a title="Gtk.Container" href="gtkcontainer-h.html#GtkContainer">Gtk.Container</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkcontainer-h.html#GtkContainer">Gtk.Container</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>adjustment</code></em></i>
-					(
-						<a title="Gtk.Adjustment" href="gtkadjustment-h.html#GtkAdjustment">Gtk.Adjustment</a>
-						)
-				–
-	</div>
-			<p>an adjustment which should be adjusted when the focus
-is moved among the descendents of <em>container</em></p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
 
 </div>
 
@@ -2145,178 +623,6 @@ is moved among the descendents of <em>container</em></p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_container_get_focus_hadjustment">
 	
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_container_get_focus_hadjustment">
-	<span><code>gtk_container_get_focus_hadjustment</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-<a title="GtkAdjustment" href="gtkadjustment-h.html#GtkAdjustment">GtkAdjustment</a> *
-gtk_container_get_focus_hadjustment (<a title="GtkContainer" href="gtkcontainer-h.html#GtkContainer">GtkContainer</a> * container)</pre>
-
-<p>Retrieves the horizontal focus adjustment for the container. See
-gtk_container_set_focus_hadjustment ().</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>container</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkcontainer-h.html#GtkContainer">GtkContainer</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					
-										
-<span class="annotation">[<abbr title="NULL may be passed to the value"><span class="acronym">nullable</span></abbr>]</span>
-<span class="annotation">[<abbr title="Don't free data after the code is done"><span class="acronym">transfer: none</span></abbr>]</span>
-
-										)
-								–
-			</div>
-							<p>the horizontal focus adjustment, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> if
-none has been set.</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_container_get_focus_hadjustment">
-	<span><code>Gtk.prototype.get_focus_hadjustment</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.get_focus_hadjustment(): {
-    // javascript wrapper for 'gtk_container_get_focus_hadjustment'
-}</pre>
-
-<p>Retrieves the horizontal focus adjustment for the container. See
-gtk_container_set_focus_hadjustment ().</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>container</code></em></i>
-					(
-						<a title="Gtk.Container" href="gtkcontainer-h.html#GtkContainer">Gtk.Container</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkcontainer-h.html#GtkContainer">Gtk.Container</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Gtk.Adjustment" href="gtkadjustment-h.html#GtkAdjustment">Gtk.Adjustment</a>
-										)
-								–
-			</div>
-							<p>the horizontal focus adjustment, or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a> if
-none has been set.</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_container_get_focus_hadjustment">
-	<span><code>Gtk.Container.get_focus_hadjustment</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.Container.get_focus_hadjustment (self):
-    #python wrapper for 'gtk_container_get_focus_hadjustment'</pre>
-
-<p>Retrieves the horizontal focus adjustment for the container. See
-gtk_container_set_focus_hadjustment ().</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>container</code></em></i>
-					(
-						<a title="Gtk.Container" href="gtkcontainer-h.html#GtkContainer">Gtk.Container</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkcontainer-h.html#GtkContainer">Gtk.Container</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Gtk.Adjustment" href="gtkadjustment-h.html#GtkAdjustment">Gtk.Adjustment</a>
-										)
-								–
-			</div>
-							<p>the horizontal focus adjustment, or <a href="https://docs.python.org/3/library/constants.html#None">None</a> if
-none has been set.</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
 
 </div>
 
@@ -2324,186 +630,6 @@ none has been set.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_container_set_focus_hadjustment">
 	
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_container_set_focus_hadjustment">
-	<span><code>gtk_container_set_focus_hadjustment</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-gtk_container_set_focus_hadjustment (<a title="GtkContainer" href="gtkcontainer-h.html#GtkContainer">GtkContainer</a> * container,
-                                     <a title="GtkAdjustment" href="gtkadjustment-h.html#GtkAdjustment">GtkAdjustment</a> * adjustment)</pre>
-
-<p>Hooks up an adjustment to focus handling in a container, so when a child
-of the container is focused, the adjustment is scrolled to show that
-widget. This function sets the horizontal alignment.
-See <a href="gtkscrolledwindow-h.html#gtk_scrolled_window_get_hadjustment">gtk_scrolled_window_get_hadjustment</a> for a typical way of obtaining
-the adjustment and <a href="gtkcontainer-h.html#gtk_container_set_focus_vadjustment">gtk_container_set_focus_vadjustment</a> for setting
-the vertical adjustment.</p>
-<p>The adjustments have to be in pixel units and in the same coordinate
-system as the allocation for immediate children of the container.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>container</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkcontainer-h.html#GtkContainer">GtkContainer</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>adjustment</code></em></i>
-				–
-	</div>
-			<p>an adjustment which should be adjusted when the focus is
-moved among the descendents of <em>container</em></p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_container_set_focus_hadjustment">
-	<span><code>Gtk.prototype.set_focus_hadjustment</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.set_focus_hadjustment(adjustment: <a title="Gtk.Adjustment" href="gtkadjustment-h.html#GtkAdjustment">Gtk.Adjustment</a>): {
-    // javascript wrapper for 'gtk_container_set_focus_hadjustment'
-}</pre>
-
-<p>Hooks up an adjustment to focus handling in a container, so when a child
-of the container is focused, the adjustment is scrolled to show that
-widget. This function sets the horizontal alignment.
-See <a href="gtkscrolledwindow-h.html#gtk_scrolled_window_get_hadjustment">Gtk.prototype.get_hadjustment</a> for a typical way of obtaining
-the adjustment and <a href="gtkcontainer-h.html#gtk_container_set_focus_vadjustment">Gtk.prototype.set_focus_vadjustment</a> for setting
-the vertical adjustment.</p>
-<p>The adjustments have to be in pixel units and in the same coordinate
-system as the allocation for immediate children of the container.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>container</code></em></i>
-					(
-						<a title="Gtk.Container" href="gtkcontainer-h.html#GtkContainer">Gtk.Container</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkcontainer-h.html#GtkContainer">Gtk.Container</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>adjustment</code></em></i>
-					(
-						<a title="Gtk.Adjustment" href="gtkadjustment-h.html#GtkAdjustment">Gtk.Adjustment</a>
-						)
-				–
-	</div>
-			<p>an adjustment which should be adjusted when the focus is
-moved among the descendents of <em>container</em></p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_container_set_focus_hadjustment">
-	<span><code>Gtk.Container.set_focus_hadjustment</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.Container.set_focus_hadjustment (self, adjustment):
-    #python wrapper for 'gtk_container_set_focus_hadjustment'</pre>
-
-<p>Hooks up an adjustment to focus handling in a container, so when a child
-of the container is focused, the adjustment is scrolled to show that
-widget. This function sets the horizontal alignment.
-See <a href="gtkscrolledwindow-h.html#gtk_scrolled_window_get_hadjustment">Gtk.ScrolledWindow.get_hadjustment</a> for a typical way of obtaining
-the adjustment and <a href="gtkcontainer-h.html#gtk_container_set_focus_vadjustment">Gtk.Container.set_focus_vadjustment</a> for setting
-the vertical adjustment.</p>
-<p>The adjustments have to be in pixel units and in the same coordinate
-system as the allocation for immediate children of the container.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>container</code></em></i>
-					(
-						<a title="Gtk.Container" href="gtkcontainer-h.html#GtkContainer">Gtk.Container</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkcontainer-h.html#GtkContainer">Gtk.Container</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>adjustment</code></em></i>
-					(
-						<a title="Gtk.Adjustment" href="gtkadjustment-h.html#GtkAdjustment">Gtk.Adjustment</a>
-						)
-				–
-	</div>
-			<p>an adjustment which should be adjusted when the focus is
-moved among the descendents of <em>container</em></p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
 
 </div>
 
@@ -2511,73 +637,21 @@ moved among the descendents of <em>container</em></p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_container_child_type">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h4 data-hotdoc-id="gtk_container_child_type">
-	<span><code>gtk_container_child_type</code></span>
+	<span><code>Gtk.Container.ChildType</code></span>
 </h4>
 
 
 
 
 <pre class="c-prototype">
-<a title="GType" href="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#GType">GType</a>
-gtk_container_child_type (<a title="GtkContainer" href="gtkcontainer-h.html#GtkContainer">GtkContainer</a> * container)</pre>
-
-<p>Returns the type of the children supported by the container.</p>
-<p>Note that this may return <a href="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#G-TYPE-NONE:CAPS">G_TYPE_NONE</a> to indicate that no more
-children can be added, e.g. for a <a href="gtkpaned-h.html#GtkPaned">GtkPaned</a> which already has two
-children.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>container</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkcontainer-h.html#GtkContainer">GtkContainer</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-								–
-			</div>
-							<p>a <a href="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#GType">GType</a>.</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_container_child_type">
-	<span><code>Gtk.prototype.child_type</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.child_type(): {
-    // javascript wrapper for 'gtk_container_child_type'
-}</pre>
+GType
+Gtk.Container.ChildType ()</pre>
 
 <p>Returns the type of the children supported by the container.</p>
 <p>Note that this may return <a href="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#G-TYPE-NONE:CAPS">G_TYPE_NONE (not introspectable)</a> to indicate that no more
@@ -2586,90 +660,14 @@ children.</p>
 
 
 
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>container</code></em></i>
-					(
-						<a title="Gtk.Container" href="gtkcontainer-h.html#GtkContainer">Gtk.Container</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkcontainer-h.html#GtkContainer">Gtk.Container</a></p>
-
-	</div>
-
-			</div>
 
 		<div class="return-values-container">
 		<div class="symbol-detail">
 			<div>
 				<b>Returns</b>
-									(
-					<a title="GObject.Type" href="https://developer.gnome.org/gobject/stable/gobject-Type-Information.html#GType">GObject.Type</a>
-										)
 								–
 			</div>
-							<p>a <a href="https://developer.gnome.org/gobject/stable/gobject-Type-Information.html#GType">GObject.Type</a>.</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_container_child_type">
-	<span><code>Gtk.Container.child_type</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.Container.child_type (self):
-    #python wrapper for 'gtk_container_child_type'</pre>
-
-<p>Returns the type of the children supported by the container.</p>
-<p>Note that this may return <a href="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#G-TYPE-NONE:CAPS">G_TYPE_NONE (not introspectable)</a> to indicate that no more
-children can be added, e.g. for a <a href="gtkpaned-h.html#GtkPaned">Gtk.Paned</a> which already has two
-children.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>container</code></em></i>
-					(
-						<a title="Gtk.Container" href="gtkcontainer-h.html#GtkContainer">Gtk.Container</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkcontainer-h.html#GtkContainer">Gtk.Container</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="GObject.Type" href="https://developer.gnome.org/gobject/stable/gobject-Type-Information.html#GType">GObject.Type</a>
-										)
-								–
-			</div>
-							<p>a <a href="https://developer.gnome.org/gobject/stable/gobject-Type-Information.html#GType">GObject.Type</a>.</p>
+							<p>a <a href="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#GType">GObject.Type</a>.</p>
 
 					</div>
 	</div>
@@ -2686,78 +684,6 @@ children.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_container_child_get">
 	
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_container_child_get">
-	<span><code>gtk_container_child_get</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-gtk_container_child_get (<a title="GtkContainer" href="gtkcontainer-h.html#GtkContainer">GtkContainer</a> * container,
-                         <a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> * child,
-                         const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * first_prop_name,
-                         ... ...)</pre>
-
-<p>Gets the values of one or more child properties for <em>child</em> and <em>container</em>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>container</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkcontainer-h.html#GtkContainer">GtkContainer</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>child</code></em></i>
-				–
-	</div>
-			<p>a widget which is a child of <em>container</em></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>first_prop_name</code></em></i>
-				–
-	</div>
-			<p>the name of the first property to get</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>...</code></em></i>
-				–
-	</div>
-			<p>return location for the first property, followed
-optionally by more name/return location pairs, followed by <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
 
 </div>
 
@@ -2765,78 +691,6 @@ optionally by more name/return location pairs, followed by <a href="https://deve
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_container_child_set">
 	
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_container_child_set">
-	<span><code>gtk_container_child_set</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-gtk_container_child_set (<a title="GtkContainer" href="gtkcontainer-h.html#GtkContainer">GtkContainer</a> * container,
-                         <a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> * child,
-                         const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * first_prop_name,
-                         ... ...)</pre>
-
-<p>Sets one or more child properties for <em>child</em> and <em>container</em>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>container</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkcontainer-h.html#GtkContainer">GtkContainer</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>child</code></em></i>
-				–
-	</div>
-			<p>a widget which is a child of <em>container</em></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>first_prop_name</code></em></i>
-				–
-	</div>
-			<p>the name of the first property to set</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>...</code></em></i>
-				–
-	</div>
-			<p>a <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a>-terminated list of property names and values, starting
-with <em>first_prop_name</em></p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
 
 </div>
 
@@ -2844,23 +698,22 @@ with <em>first_prop_name</em></p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_container_child_get_property">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h4 data-hotdoc-id="gtk_container_child_get_property">
-	<span><code>gtk_container_child_get_property</code></span>
+	<span><code>Gtk.Container.ChildGetProperty</code></span>
 </h4>
 
 
 
 
 <pre class="c-prototype">
-gtk_container_child_get_property (<a title="GtkContainer" href="gtkcontainer-h.html#GtkContainer">GtkContainer</a> * container,
-                                  <a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> * child,
-                                  const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * property_name,
-                                  <a title="GValue" href="https://developer.gnome.org/gobject/unstable/gobject-Generic-values.html#GValue">GValue</a> * value)</pre>
+Gtk.Container.ChildGetProperty (<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>,
+                                <a title="string" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/string">string</a>,
+                                <a title="GObject.Value" href="https://developer.gnome.org/gobject/unstable/gobject-Generic-values.html#GValue">GObject.Value</a>)</pre>
 
 <p>Gets the value of a child property for <em>child</em> and <em>container</em>.</p>
 
@@ -2868,16 +721,6 @@ gtk_container_child_get_property (<a title="GtkContainer" href="gtkcontainer-h.h
 
 	<div class="parameters-container">
 		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>container</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkcontainer-h.html#GtkContainer">GtkContainer</a></p>
-
-	</div>
-
 					
 <div class="symbol-detail">
 	<div>
@@ -2902,165 +745,6 @@ gtk_container_child_get_property (<a title="GtkContainer" href="gtkcontainer-h.h
 <div class="symbol-detail">
 	<div>
 		<i><em><code>value</code></em></i>
-				–
-	</div>
-			<p>a location to return the value</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_container_child_get_property">
-	<span><code>Gtk.prototype.child_get_property</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.child_get_property(child: <a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>, property_name: <a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>, value: <a title="GObject.Value" href="https://developer.gnome.org/gobject/unstable/gobject-Generic-values.html#GValue">GObject.Value</a>): {
-    // javascript wrapper for 'gtk_container_child_get_property'
-}</pre>
-
-<p>Gets the value of a child property for <em>child</em> and <em>container</em>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>container</code></em></i>
-					(
-						<a title="Gtk.Container" href="gtkcontainer-h.html#GtkContainer">Gtk.Container</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkcontainer-h.html#GtkContainer">Gtk.Container</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>child</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
-				–
-	</div>
-			<p>a widget which is a child of <em>container</em></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>property_name</code></em></i>
-					(
-						<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
-						)
-				–
-	</div>
-			<p>the name of the property to get</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>value</code></em></i>
-					(
-						<a title="GObject.Value" href="https://developer.gnome.org/gobject/unstable/gobject-Generic-values.html#GValue">GObject.Value</a>
-						)
-				–
-	</div>
-			<p>a location to return the value</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_container_child_get_property">
-	<span><code>Gtk.Container.child_get_property</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.Container.child_get_property (self, child, property_name, value):
-    #python wrapper for 'gtk_container_child_get_property'</pre>
-
-<p>Gets the value of a child property for <em>child</em> and <em>container</em>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>container</code></em></i>
-					(
-						<a title="Gtk.Container" href="gtkcontainer-h.html#GtkContainer">Gtk.Container</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkcontainer-h.html#GtkContainer">Gtk.Container</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>child</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
-				–
-	</div>
-			<p>a widget which is a child of <em>container</em></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>property_name</code></em></i>
-					(
-						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
-						)
-				–
-	</div>
-			<p>the name of the property to get</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>value</code></em></i>
-					(
-						<a title="GObject.Value" href="https://developer.gnome.org/gobject/unstable/gobject-Generic-values.html#GValue">GObject.Value</a>
-						)
 				–
 	</div>
 			<p>a location to return the value</p>
@@ -3081,23 +765,22 @@ def Gtk.Container.child_get_property (self, child, property_name, value):
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_container_child_set_property">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h4 data-hotdoc-id="gtk_container_child_set_property">
-	<span><code>gtk_container_child_set_property</code></span>
+	<span><code>Gtk.Container.ChildSetProperty</code></span>
 </h4>
 
 
 
 
 <pre class="c-prototype">
-gtk_container_child_set_property (<a title="GtkContainer" href="gtkcontainer-h.html#GtkContainer">GtkContainer</a> * container,
-                                  <a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> * child,
-                                  const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * property_name,
-                                  const <a title="GValue" href="https://developer.gnome.org/gobject/unstable/gobject-Generic-values.html#GValue">GValue</a> * value)</pre>
+Gtk.Container.ChildSetProperty (<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>,
+                                <a title="string" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/string">string</a>,
+                                <a title="GObject.Value" href="https://developer.gnome.org/gobject/unstable/gobject-Generic-values.html#GValue">GObject.Value</a>)</pre>
 
 <p>Sets a child property for <em>child</em> and <em>container</em>.</p>
 
@@ -3105,16 +788,6 @@ gtk_container_child_set_property (<a title="GtkContainer" href="gtkcontainer-h.h
 
 	<div class="parameters-container">
 		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>container</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkcontainer-h.html#GtkContainer">GtkContainer</a></p>
-
-	</div>
-
 					
 <div class="symbol-detail">
 	<div>
@@ -3139,165 +812,6 @@ gtk_container_child_set_property (<a title="GtkContainer" href="gtkcontainer-h.h
 <div class="symbol-detail">
 	<div>
 		<i><em><code>value</code></em></i>
-				–
-	</div>
-			<p>the value to set the property to</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_container_child_set_property">
-	<span><code>Gtk.prototype.child_set_property</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.child_set_property(child: <a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>, property_name: <a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>, value: <a title="GObject.Value" href="https://developer.gnome.org/gobject/unstable/gobject-Generic-values.html#GValue">GObject.Value</a>): {
-    // javascript wrapper for 'gtk_container_child_set_property'
-}</pre>
-
-<p>Sets a child property for <em>child</em> and <em>container</em>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>container</code></em></i>
-					(
-						<a title="Gtk.Container" href="gtkcontainer-h.html#GtkContainer">Gtk.Container</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkcontainer-h.html#GtkContainer">Gtk.Container</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>child</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
-				–
-	</div>
-			<p>a widget which is a child of <em>container</em></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>property_name</code></em></i>
-					(
-						<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
-						)
-				–
-	</div>
-			<p>the name of the property to set</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>value</code></em></i>
-					(
-						<a title="GObject.Value" href="https://developer.gnome.org/gobject/unstable/gobject-Generic-values.html#GValue">GObject.Value</a>
-						)
-				–
-	</div>
-			<p>the value to set the property to</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_container_child_set_property">
-	<span><code>Gtk.Container.child_set_property</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.Container.child_set_property (self, child, property_name, value):
-    #python wrapper for 'gtk_container_child_set_property'</pre>
-
-<p>Sets a child property for <em>child</em> and <em>container</em>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>container</code></em></i>
-					(
-						<a title="Gtk.Container" href="gtkcontainer-h.html#GtkContainer">Gtk.Container</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkcontainer-h.html#GtkContainer">Gtk.Container</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>child</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
-				–
-	</div>
-			<p>a widget which is a child of <em>container</em></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>property_name</code></em></i>
-					(
-						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
-						)
-				–
-	</div>
-			<p>the name of the property to set</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>value</code></em></i>
-					(
-						<a title="GObject.Value" href="https://developer.gnome.org/gobject/unstable/gobject-Generic-values.html#GValue">GObject.Value</a>
-						)
 				–
 	</div>
 			<p>the value to set the property to</p>
@@ -3318,78 +832,6 @@ def Gtk.Container.child_set_property (self, child, property_name, value):
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_container_child_get_valist">
 	
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_container_child_get_valist">
-	<span><code>gtk_container_child_get_valist</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-gtk_container_child_get_valist (<a title="GtkContainer" href="gtkcontainer-h.html#GtkContainer">GtkContainer</a> * container,
-                                <a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> * child,
-                                const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * first_property_name,
-                                va_list var_args)</pre>
-
-<p>Gets the values of one or more child properties for <em>child</em> and <em>container</em>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>container</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkcontainer-h.html#GtkContainer">GtkContainer</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>child</code></em></i>
-				–
-	</div>
-			<p>a widget which is a child of <em>container</em></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>first_property_name</code></em></i>
-				–
-	</div>
-			<p>the name of the first property to get</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>var_args</code></em></i>
-				–
-	</div>
-			<p>return location for the first property, followed
-optionally by more name/return location pairs, followed by <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
 
 </div>
 
@@ -3397,78 +839,6 @@ optionally by more name/return location pairs, followed by <a href="https://deve
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_container_child_set_valist">
 	
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_container_child_set_valist">
-	<span><code>gtk_container_child_set_valist</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-gtk_container_child_set_valist (<a title="GtkContainer" href="gtkcontainer-h.html#GtkContainer">GtkContainer</a> * container,
-                                <a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> * child,
-                                const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * first_property_name,
-                                va_list var_args)</pre>
-
-<p>Sets one or more child properties for <em>child</em> and <em>container</em>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>container</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkcontainer-h.html#GtkContainer">GtkContainer</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>child</code></em></i>
-				–
-	</div>
-			<p>a widget which is a child of <em>container</em></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>first_property_name</code></em></i>
-				–
-	</div>
-			<p>the name of the first property to set</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>var_args</code></em></i>
-				–
-	</div>
-			<p>a <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a>-terminated list of property names and values, starting
-with <em>first_prop_name</em></p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
 
 </div>
 
@@ -3476,43 +846,32 @@ with <em>first_prop_name</em></p>
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.2;" id="gtk_container_child_notify">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h4 data-hotdoc-id="gtk_container_child_notify">
-	<span><code>gtk_container_child_notify</code></span>
+	<span><code>Gtk.Container.ChildNotify</code></span>
 </h4>
 
 
 
 
 <pre class="c-prototype">
-gtk_container_child_notify (<a title="GtkContainer" href="gtkcontainer-h.html#GtkContainer">GtkContainer</a> * container,
-                            <a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> * child,
-                            const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * child_property)</pre>
+Gtk.Container.ChildNotify (<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>,
+                           <a title="string" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/string">string</a>)</pre>
 
-<p>Emits a <a href="https://developer.gnome.org/gtk3/GtkWidget.html#GtkWidget-child-notify">child-notify</a> signal for the
+<p>Emits a <a href="https://developer.gnome.org/gtk3/GtkWidget.html#GtkWidget-child-notify">ChildNotify</a> signal for the
 [child property][child-properties]
 <em>child_property</em> on the child.</p>
-<p>This is an analogue of <a href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-notify">g_object_notify</a> for child properties.</p>
-<p>Also see <a href="gtkwidget-h.html#gtk_widget_child_notify">gtk_widget_child_notify</a>.</p>
+<p>This is an analogue of <a href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-notify">GObject.Object.Notify</a> for child properties.</p>
+<p>Also see <a href="gtkwidget-h.html#gtk_widget_child_notify">Gtk.Widget.ChildNotify</a>.</p>
 
 
 
 	<div class="parameters-container">
 		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>container</code></em></i>
-				–
-	</div>
-			<p>the <a href="gtkcontainer-h.html#GtkContainer">GtkContainer</a></p>
-
-	</div>
-
 					
 <div class="symbol-detail">
 	<div>
@@ -3527,155 +886,6 @@ gtk_container_child_notify (<a title="GtkContainer" href="gtkcontainer-h.html#Gt
 <div class="symbol-detail">
 	<div>
 		<i><em><code>child_property</code></em></i>
-				–
-	</div>
-			<p>the name of a child property installed on
-the class of <em>container</em></p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.2
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_container_child_notify">
-	<span><code>Gtk.prototype.child_notify</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.child_notify(child: <a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>, child_property: <a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>): {
-    // javascript wrapper for 'gtk_container_child_notify'
-}</pre>
-
-<p>Emits a <a href="https://developer.gnome.org/gtk3/GtkWidget.html#GtkWidget-child-notify">child-notify</a> signal for the
-[child property][child-properties]
-<em>child_property</em> on the child.</p>
-<p>This is an analogue of <a href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-notify">GObject.prototype.notify</a> for child properties.</p>
-<p>Also see <a href="gtkwidget-h.html#gtk_widget_child_notify">Gtk.prototype.child_notify</a>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>container</code></em></i>
-					(
-						<a title="Gtk.Container" href="gtkcontainer-h.html#GtkContainer">Gtk.Container</a>
-						)
-				–
-	</div>
-			<p>the <a href="gtkcontainer-h.html#GtkContainer">Gtk.Container</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>child</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
-				–
-	</div>
-			<p>the child widget</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>child_property</code></em></i>
-					(
-						<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
-						)
-				–
-	</div>
-			<p>the name of a child property installed on
-the class of <em>container</em></p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.2
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_container_child_notify">
-	<span><code>Gtk.Container.child_notify</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.Container.child_notify (self, child, child_property):
-    #python wrapper for 'gtk_container_child_notify'</pre>
-
-<p>Emits a <a href="https://developer.gnome.org/gtk3/GtkWidget.html#GtkWidget-child-notify">child-notify</a> signal for the
-[child property][child-properties]
-<em>child_property</em> on the child.</p>
-<p>This is an analogue of <a href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-notify">GObject.Object.notify</a> for child properties.</p>
-<p>Also see <a href="gtkwidget-h.html#gtk_widget_child_notify">Gtk.Widget.child_notify</a>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>container</code></em></i>
-					(
-						<a title="Gtk.Container" href="gtkcontainer-h.html#GtkContainer">Gtk.Container</a>
-						)
-				–
-	</div>
-			<p>the <a href="gtkcontainer-h.html#GtkContainer">Gtk.Container</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>child</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
-				–
-	</div>
-			<p>the child widget</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>child_property</code></em></i>
-					(
-						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
-						)
 				–
 	</div>
 			<p>the name of a child property installed on
@@ -3700,42 +910,31 @@ the class of <em>container</em></p>
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.18;" id="gtk_container_child_notify_by_pspec">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h4 data-hotdoc-id="gtk_container_child_notify_by_pspec">
-	<span><code>gtk_container_child_notify_by_pspec</code></span>
+	<span><code>Gtk.Container.ChildNotifyByPspec</code></span>
 </h4>
 
 
 
 
 <pre class="c-prototype">
-gtk_container_child_notify_by_pspec (<a title="GtkContainer" href="gtkcontainer-h.html#GtkContainer">GtkContainer</a> * container,
-                                     <a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> * child,
-                                     <a title="GParamSpec" href="https://developer.gnome.org/gobject/unstable/gobject-GParamSpec.html#GParamSpec">GParamSpec</a> * pspec)</pre>
+Gtk.Container.ChildNotifyByPspec (<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>,
+                                  <a title="GObject.ParamSpec" href="https://developer.gnome.org/gobject/unstable/gobject-GParamSpec.html#GParamSpec">GObject.ParamSpec</a>)</pre>
 
-<p>Emits a <a href="https://developer.gnome.org/gtk3/GtkWidget.html#GtkWidget-child-notify">child-notify</a> signal for the
+<p>Emits a <a href="https://developer.gnome.org/gtk3/GtkWidget.html#GtkWidget-child-notify">ChildNotify</a> signal for the
 [child property][child-properties] specified by
 <em>pspec</em> on the child.</p>
-<p>This is an analogue of <a href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-notify-by-pspec">g_object_notify_by_pspec</a> for child properties.</p>
+<p>This is an analogue of <a href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-notify-by-pspec">GObject.Object.NotifyByPspec</a> for child properties.</p>
 
 
 
 	<div class="parameters-container">
 		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>container</code></em></i>
-				–
-	</div>
-			<p>the <a href="gtkcontainer-h.html#GtkContainer">GtkContainer</a></p>
-
-	</div>
-
 					
 <div class="symbol-detail">
 	<div>
@@ -3750,153 +949,6 @@ gtk_container_child_notify_by_pspec (<a title="GtkContainer" href="gtkcontainer-
 <div class="symbol-detail">
 	<div>
 		<i><em><code>pspec</code></em></i>
-				–
-	</div>
-			<p>the <a href="https://developer.gnome.org/gobject/unstable/gobject-GParamSpec.html#GParamSpec">GParamSpec</a> of a child property instealled on
-the class of <em>container</em></p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.18
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_container_child_notify_by_pspec">
-	<span><code>Gtk.prototype.child_notify_by_pspec</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.child_notify_by_pspec(child: <a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>, pspec: <a title="GObject.ParamSpec" href="https://developer.gnome.org/gobject/unstable/gobject-GParamSpec.html#GParamSpec">GObject.ParamSpec</a>): {
-    // javascript wrapper for 'gtk_container_child_notify_by_pspec'
-}</pre>
-
-<p>Emits a <a href="https://developer.gnome.org/gtk3/GtkWidget.html#GtkWidget-child-notify">child-notify</a> signal for the
-[child property][child-properties] specified by
-<em>pspec</em> on the child.</p>
-<p>This is an analogue of <a href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-notify-by-pspec">GObject.prototype.notify_by_pspec</a> for child properties.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>container</code></em></i>
-					(
-						<a title="Gtk.Container" href="gtkcontainer-h.html#GtkContainer">Gtk.Container</a>
-						)
-				–
-	</div>
-			<p>the <a href="gtkcontainer-h.html#GtkContainer">Gtk.Container</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>child</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
-				–
-	</div>
-			<p>the child widget</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>pspec</code></em></i>
-					(
-						<a title="GObject.ParamSpec" href="https://developer.gnome.org/gobject/unstable/gobject-GParamSpec.html#GParamSpec">GObject.ParamSpec</a>
-						)
-				–
-	</div>
-			<p>the <a href="https://developer.gnome.org/gobject/unstable/gobject-GParamSpec.html#GParamSpec">GObject.ParamSpec</a> of a child property instealled on
-the class of <em>container</em></p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.18
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_container_child_notify_by_pspec">
-	<span><code>Gtk.Container.child_notify_by_pspec</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.Container.child_notify_by_pspec (self, child, pspec):
-    #python wrapper for 'gtk_container_child_notify_by_pspec'</pre>
-
-<p>Emits a <a href="https://developer.gnome.org/gtk3/GtkWidget.html#GtkWidget-child-notify">child-notify</a> signal for the
-[child property][child-properties] specified by
-<em>pspec</em> on the child.</p>
-<p>This is an analogue of <a href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-notify-by-pspec">GObject.Object.notify_by_pspec</a> for child properties.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>container</code></em></i>
-					(
-						<a title="Gtk.Container" href="gtkcontainer-h.html#GtkContainer">Gtk.Container</a>
-						)
-				–
-	</div>
-			<p>the <a href="gtkcontainer-h.html#GtkContainer">Gtk.Container</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>child</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
-				–
-	</div>
-			<p>the child widget</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>pspec</code></em></i>
-					(
-						<a title="GObject.ParamSpec" href="https://developer.gnome.org/gobject/unstable/gobject-GParamSpec.html#GParamSpec">GObject.ParamSpec</a>
-						)
 				–
 	</div>
 			<p>the <a href="https://developer.gnome.org/gobject/unstable/gobject-GParamSpec.html#GParamSpec">GObject.ParamSpec</a> of a child property instealled on
@@ -3921,30 +973,29 @@ the class of <em>container</em></p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_container_forall">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h4 data-hotdoc-id="gtk_container_forall">
-	<span><code>gtk_container_forall</code></span>
+	<span><code>Gtk.Container.Forall</code></span>
 </h4>
 
 
 
 
 <pre class="c-prototype">
-gtk_container_forall (<a title="GtkContainer" href="gtkcontainer-h.html#GtkContainer">GtkContainer</a> * container,
-                      <a title="GtkCallback" href="gtkwidget-h.html#GtkCallback">GtkCallback</a> callback,
-                      <a title="gpointer" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer">gpointer</a> callback_data)</pre>
+Gtk.Container.Forall (<a title="Gtk.Callback" href="gtkwidget-h.html#GtkCallback">Gtk.Callback</a>,
+                      <a title="IntPtr" href="https://docs.microsoft.com/en-us/dotnet/api//system.intptr">IntPtr</a>)</pre>
 
 <p>Invokes <em>callback</em> on each direct child of <em>container</em>, including
 children that are considered “internal” (implementation details
 of the container). “Internal” children generally weren’t added
 by the user of the container, but were added by the container
 implementation itself.</p>
-<p>Most applications should use <a href="gtkcontainer-h.html#gtk_container_foreach">gtk_container_foreach</a>, rather
-than <a href="gtkcontainer-h.html#gtk_container_forall">gtk_container_forall</a>.</p>
+<p>Most applications should use <a href="gtkcontainer-h.html#gtk_container_foreach">Gtk.Container.Foreach</a>, rather
+than <a href="gtkcontainer-h.html#gtk_container_forall">Gtk.Container.Forall</a>.</p>
 
 
 
@@ -3953,23 +1004,7 @@ than <a href="gtkcontainer-h.html#gtk_container_forall">gtk_container_forall</a>
 					
 <div class="symbol-detail">
 	<div>
-		<i><em><code>container</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkcontainer-h.html#GtkContainer">GtkContainer</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
 		<i><em><code>callback</code></em></i>
-					(
-						
-<span class="annotation">[<abbr title="The callback is valid only during the call to the method"><span class="acronym">scope call</span></abbr>]</span>
-<span class="annotation">[<abbr title="This parameter is a closure for callbacks, many bindings can pass NULL to callback_data"><span class="acronym">closure</span></abbr>]</span>
-
-						)
 				–
 	</div>
 			<p>a callback</p>
@@ -3980,151 +1015,6 @@ than <a href="gtkcontainer-h.html#gtk_container_forall">gtk_container_forall</a>
 <div class="symbol-detail">
 	<div>
 		<i><em><code>callback_data</code></em></i>
-				–
-	</div>
-			<p>callback user data</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_container_forall">
-	<span><code>Gtk.prototype.forall</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.forall(callback: <a title="Gtk.Callback" href="gtkwidget-h.html#GtkCallback">Gtk.Callback</a>, callback_data: <a title="Object" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>): {
-    // javascript wrapper for 'gtk_container_forall'
-}</pre>
-
-<p>Invokes <em>callback</em> on each direct child of <em>container</em>, including
-children that are considered “internal” (implementation details
-of the container). “Internal” children generally weren’t added
-by the user of the container, but were added by the container
-implementation itself.</p>
-<p>Most applications should use <a href="gtkcontainer-h.html#gtk_container_foreach">Gtk.prototype.foreach</a>, rather
-than <a href="gtkcontainer-h.html#gtk_container_forall">Gtk.prototype.forall</a>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>container</code></em></i>
-					(
-						<a title="Gtk.Container" href="gtkcontainer-h.html#GtkContainer">Gtk.Container</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkcontainer-h.html#GtkContainer">Gtk.Container</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>callback</code></em></i>
-					(
-						<a title="Gtk.Callback" href="gtkwidget-h.html#GtkCallback">Gtk.Callback</a>
-						)
-				–
-	</div>
-			<p>a callback</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>callback_data</code></em></i>
-					(
-						<a title="Object" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>
-						)
-				–
-	</div>
-			<p>callback user data</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_container_forall">
-	<span><code>Gtk.Container.forall</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.Container.forall (self, callback, callback_data):
-    #python wrapper for 'gtk_container_forall'</pre>
-
-<p>Invokes <em>callback</em> on each direct child of <em>container</em>, including
-children that are considered “internal” (implementation details
-of the container). “Internal” children generally weren’t added
-by the user of the container, but were added by the container
-implementation itself.</p>
-<p>Most applications should use <a href="gtkcontainer-h.html#gtk_container_foreach">Gtk.Container.foreach</a>, rather
-than <a href="gtkcontainer-h.html#gtk_container_forall">Gtk.Container.forall</a>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>container</code></em></i>
-					(
-						<a title="Gtk.Container" href="gtkcontainer-h.html#GtkContainer">Gtk.Container</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkcontainer-h.html#GtkContainer">Gtk.Container</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>callback</code></em></i>
-					(
-						<a title="Gtk.Callback" href="gtkwidget-h.html#GtkCallback">Gtk.Callback</a>
-						)
-				–
-	</div>
-			<p>a callback</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>callback_data</code></em></i>
-					(
-						<a title="object" href="https://docs.python.org/3/library/functions.html#object">object</a>
-						)
 				–
 	</div>
 			<p>callback user data</p>
@@ -4145,28 +1035,27 @@ than <a href="gtkcontainer-h.html#gtk_container_forall">Gtk.Container.forall</a>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_container_get_focus_chain">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h4 data-hotdoc-id="gtk_container_get_focus_chain">
-	<span><code>gtk_container_get_focus_chain</code></span>
+	<span><code>Gtk.Container.GetFocusChain</code></span>
 </h4>
 
 
 
 
 <pre class="c-prototype">
-<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
-gtk_container_get_focus_chain (<a title="GtkContainer" href="gtkcontainer-h.html#GtkContainer">GtkContainer</a> * container,
-                               <a title="GList" href="https://developer.gnome.org/glib/unstable/glib-Doubly-Linked-Lists.html#GList">GList</a> ** focusable_widgets)</pre>
+<a title="bool" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/bool">bool</a>
+Gtk.Container.GetFocusChain (<a title="out" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/out">out</a>  <a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a> [])</pre>
 
 <p>Retrieves the focus chain of the container, if one has been
 set explicitly. If no focus chain has been explicitly
 set, GTK+ computes the focus chain based on the positions
-of the children. In that case, GTK+ stores <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> in
-<em>focusable_widgets</em> and returns <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS">FALSE</a>.</p>
+of the children. In that case, GTK+ stores <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/null">null</a> in
+<em>focusable_widgets</em> and returns <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/false">false</a>.</p>
 
 
 
@@ -4175,30 +1064,13 @@ of the children. In that case, GTK+ stores <a href="https://developer.gnome.org/
 					
 <div class="symbol-detail">
 	<div>
-		<i><em><code>container</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkcontainer-h.html#GtkContainer">GtkContainer</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
 		<i><em><code>focusable_widgets</code></em></i>
-					(
-						
-<span class="annotation">[<abbr title="Generic and defining element of containers and arrays"><span class="acronym">element-type</span></abbr> GtkWidget]</span>
-<span class="annotation">[<abbr title="Parameter for returning results"><span class="acronym">out</span></abbr>]</span>
-<span class="annotation">[<abbr title="Free data container after the code is done"><span class="acronym">transfer: container</span></abbr>]</span>
-
-						)
 				–
 	</div>
 			<p>location
 to store the focus chain of the
-container, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a>. You should free this list
-using <a href="https://developer.gnome.org/glib/unstable/glib-Doubly-Linked-Lists.html#g-list-free">g_list_free</a> when you are done with it, however
+container, or <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/null">null</a>. You should free this list
+using <a href="https://developer.gnome.org/glib/unstable/glib-Doubly-Linked-Lists.html#g-list-free">g_list_free (not introspectable)</a> when you are done with it, however
 no additional reference count is added to the
 individual widgets in the focus chain.</p>
 
@@ -4212,162 +1084,11 @@ individual widgets in the focus chain.</p>
 				<b>Returns</b>
 								–
 			</div>
-							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if the focus chain of the container
+							<p><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/true">true</a> if the focus chain of the container
 has been set explicitly.</p>
 
 					</div>
 	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_container_get_focus_chain">
-	<span><code>Gtk.prototype.get_focus_chain</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.get_focus_chain(): {
-    // javascript wrapper for 'gtk_container_get_focus_chain'
-}</pre>
-
-<p>Retrieves the focus chain of the container, if one has been
-set explicitly. If no focus chain has been explicitly
-set, GTK+ computes the focus chain based on the positions
-of the children. In that case, GTK+ stores <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a> in
-<em>focusable_widgets</em> and returns <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">false</a>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>container</code></em></i>
-					(
-						<a title="Gtk.Container" href="gtkcontainer-h.html#GtkContainer">Gtk.Container</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkcontainer-h.html#GtkContainer">Gtk.Container</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<p><b>Returns a tuple made of:</b></p>
-				
-<div class="symbol-detail">
-	<div>
-									(
-			<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
-						)
-				–
-	</div>
-			<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if the focus chain of the container
-has been set explicitly.</p>
-
-	</div>
-
-				
-<div class="symbol-detail">
-	<div>
-				<i><em><code>focusable_widgets</code></em></i>
-									(
-			[ <a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a> ]
-						)
-				–
-	</div>
-			<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if the focus chain of the container
-has been set explicitly.</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_container_get_focus_chain">
-	<span><code>Gtk.Container.get_focus_chain</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.Container.get_focus_chain (self):
-    #python wrapper for 'gtk_container_get_focus_chain'</pre>
-
-<p>Retrieves the focus chain of the container, if one has been
-set explicitly. If no focus chain has been explicitly
-set, GTK+ computes the focus chain based on the positions
-of the children. In that case, GTK+ stores <a href="https://docs.python.org/3/library/constants.html#None">None</a> in
-<em>focusable_widgets</em> and returns <a href="https://docs.python.org/3/library/constants.html#False">False</a>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>container</code></em></i>
-					(
-						<a title="Gtk.Container" href="gtkcontainer-h.html#GtkContainer">Gtk.Container</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkcontainer-h.html#GtkContainer">Gtk.Container</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<p><b>Returns a tuple made of:</b></p>
-				
-<div class="symbol-detail">
-	<div>
-									(
-			<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
-						)
-				–
-	</div>
-			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if the focus chain of the container
-has been set explicitly.</p>
-
-	</div>
-
-				
-<div class="symbol-detail">
-	<div>
-				<i><em><code>focusable_widgets</code></em></i>
-									(
-			[ <a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a> ]
-						)
-				–
-	</div>
-			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if the focus chain of the container
-has been set explicitly.</p>
-
-	</div>
-
-			</div>
 
 
 
@@ -4381,180 +1102,6 @@ has been set explicitly.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_container_set_focus_chain">
 	
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_container_set_focus_chain">
-	<span><code>gtk_container_set_focus_chain</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-gtk_container_set_focus_chain (<a title="GtkContainer" href="gtkcontainer-h.html#GtkContainer">GtkContainer</a> * container,
-                               <a title="GList" href="https://developer.gnome.org/glib/unstable/glib-Doubly-Linked-Lists.html#GList">GList</a> * focusable_widgets)</pre>
-
-<p>Sets a focus chain, overriding the one computed automatically by GTK+.</p>
-<p>In principle each widget in the chain should be a descendant of the
-container, but this is not enforced by this method, since it’s allowed
-to set the focus chain before you pack the widgets, or have a widget
-in the chain that isn’t always packed. The necessary checks are done
-when the focus chain is actually traversed.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>container</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkcontainer-h.html#GtkContainer">GtkContainer</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>focusable_widgets</code></em></i>
-				–
-	</div>
-			<p>(transfer none) (element-type GtkWidget):
-the new focus chain</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_container_set_focus_chain">
-	<span><code>Gtk.prototype.set_focus_chain</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.set_focus_chain(focusable_widgets: [ <a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a> ]): {
-    // javascript wrapper for 'gtk_container_set_focus_chain'
-}</pre>
-
-<p>Sets a focus chain, overriding the one computed automatically by GTK+.</p>
-<p>In principle each widget in the chain should be a descendant of the
-container, but this is not enforced by this method, since it’s allowed
-to set the focus chain before you pack the widgets, or have a widget
-in the chain that isn’t always packed. The necessary checks are done
-when the focus chain is actually traversed.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>container</code></em></i>
-					(
-						<a title="Gtk.Container" href="gtkcontainer-h.html#GtkContainer">Gtk.Container</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkcontainer-h.html#GtkContainer">Gtk.Container</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>focusable_widgets</code></em></i>
-					(
-						[ <a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a> ]
-						)
-				–
-	</div>
-			<p>(transfer none) (element-type GtkWidget):
-the new focus chain</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_container_set_focus_chain">
-	<span><code>Gtk.Container.set_focus_chain</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.Container.set_focus_chain (self, focusable_widgets):
-    #python wrapper for 'gtk_container_set_focus_chain'</pre>
-
-<p>Sets a focus chain, overriding the one computed automatically by GTK+.</p>
-<p>In principle each widget in the chain should be a descendant of the
-container, but this is not enforced by this method, since it’s allowed
-to set the focus chain before you pack the widgets, or have a widget
-in the chain that isn’t always packed. The necessary checks are done
-when the focus chain is actually traversed.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>container</code></em></i>
-					(
-						<a title="Gtk.Container" href="gtkcontainer-h.html#GtkContainer">Gtk.Container</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkcontainer-h.html#GtkContainer">Gtk.Container</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>focusable_widgets</code></em></i>
-					(
-						[ <a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a> ]
-						)
-				–
-	</div>
-			<p>(transfer none) (element-type GtkWidget):
-the new focus chain</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
 
 </div>
 
@@ -4562,119 +1109,25 @@ the new focus chain</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_container_unset_focus_chain">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h4 data-hotdoc-id="gtk_container_unset_focus_chain">
-	<span><code>gtk_container_unset_focus_chain</code></span>
+	<span><code>Gtk.Container.UnsetFocusChain</code></span>
 </h4>
 
 
 
 
 <pre class="c-prototype">
-gtk_container_unset_focus_chain (<a title="GtkContainer" href="gtkcontainer-h.html#GtkContainer">GtkContainer</a> * container)</pre>
+Gtk.Container.UnsetFocusChain ()</pre>
 
-<p>Removes a focus chain explicitly set with <a href="gtkcontainer-h.html#gtk_container_set_focus_chain">gtk_container_set_focus_chain</a>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>container</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkcontainer-h.html#GtkContainer">GtkContainer</a></p>
-
-	</div>
-
-			</div>
+<p>Removes a focus chain explicitly set with <a href="gtkcontainer-h.html#gtk_container_set_focus_chain">Gtk.Container.SetFocusChain</a>.</p>
 
 
 
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_container_unset_focus_chain">
-	<span><code>Gtk.prototype.unset_focus_chain</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.unset_focus_chain(): {
-    // javascript wrapper for 'gtk_container_unset_focus_chain'
-}</pre>
-
-<p>Removes a focus chain explicitly set with <a href="gtkcontainer-h.html#gtk_container_set_focus_chain">Gtk.prototype.set_focus_chain</a>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>container</code></em></i>
-					(
-						<a title="Gtk.Container" href="gtkcontainer-h.html#GtkContainer">Gtk.Container</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkcontainer-h.html#GtkContainer">Gtk.Container</a></p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_container_unset_focus_chain">
-	<span><code>Gtk.Container.unset_focus_chain</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.Container.unset_focus_chain (self):
-    #python wrapper for 'gtk_container_unset_focus_chain'</pre>
-
-<p>Removes a focus chain explicitly set with <a href="gtkcontainer-h.html#gtk_container_set_focus_chain">Gtk.Container.set_focus_chain</a>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>container</code></em></i>
-					(
-						<a title="Gtk.Container" href="gtkcontainer-h.html#GtkContainer">Gtk.Container</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkcontainer-h.html#GtkContainer">Gtk.Container</a></p>
-
-	</div>
-
-			</div>
 
 
 
@@ -4692,22 +1145,21 @@ def Gtk.Container.unset_focus_chain (self):
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_container_class_find_child_property">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h3 data-hotdoc-id="gtk_container_class_find_child_property">
-	<span><code>gtk_container_class_find_child_property</code></span>
+	<span><code>Gtk.ContainerClass.FindChildProperty</code></span>
 </h3>
 
 
 
 
 <pre class="c-prototype">
-<a title="GParamSpec" href="https://developer.gnome.org/gobject/unstable/gobject-GParamSpec.html#GParamSpec">GParamSpec</a> *
-gtk_container_class_find_child_property (<a title="GObjectClass" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObjectClass">GObjectClass</a> * cclass,
-                                         const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * property_name)</pre>
+<a title="GObject.ParamSpec" href="https://developer.gnome.org/gobject/unstable/gobject-GParamSpec.html#GParamSpec">GObject.ParamSpec</a>
+Gtk.ContainerClass.FindChildProperty (<a title="string" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/string">string</a>)</pre>
 
 <p>Finds a child property of a container class by name.</p>
 
@@ -4715,21 +1167,6 @@ gtk_container_class_find_child_property (<a title="GObjectClass" href="https://d
 
 	<div class="parameters-container">
 		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>cclass</code></em></i>
-					(
-						
-<span class="annotation">[<abbr title="Override the parsed C type with given type"><span class="acronym">type</span></abbr> GtkContainerClass]</span>
-
-						)
-				–
-	</div>
-			<p>a <a href="GtkContainerClass">GtkContainerClass</a></p>
-
-	</div>
-
 					
 <div class="symbol-detail">
 	<div>
@@ -4746,87 +1183,10 @@ gtk_container_class_find_child_property (<a title="GObjectClass" href="https://d
 		<div class="symbol-detail">
 			<div>
 				<b>Returns</b>
-									(
-					
-										
-<span class="annotation">[<abbr title="NULL may be passed to the value"><span class="acronym">nullable</span></abbr>]</span>
-<span class="annotation">[<abbr title="Don't free data after the code is done"><span class="acronym">transfer: none</span></abbr>]</span>
-
-										)
-								–
-			</div>
-							<p>the <a href="https://developer.gnome.org/gobject/unstable/gobject-GParamSpec.html#GParamSpec">GParamSpec</a> of the child
-property or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> if <em>class</em> has no child property with that
-name.</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_container_class_find_child_property">
-	<span><code>Gtk.prototype.find_child_property</code></span>
-</h3>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.find_child_property(cclass: <a title="Gtk.ContainerClass" href="GtkContainerClass">Gtk.ContainerClass</a>, property_name: <a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>): {
-    // javascript wrapper for 'gtk_container_class_find_child_property'
-}</pre>
-
-<p>Finds a child property of a container class by name.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>cclass</code></em></i>
-					(
-						<a title="Gtk.ContainerClass" href="GtkContainerClass">Gtk.ContainerClass</a>
-						)
-				–
-	</div>
-			<p>a <a href="GtkContainerClass">Gtk.ContainerClass</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>property_name</code></em></i>
-					(
-						<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
-						)
-				–
-	</div>
-			<p>the name of the child property to find</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="GObject.ParamSpec" href="https://developer.gnome.org/gobject/unstable/gobject-GParamSpec.html#GParamSpec">GObject.ParamSpec</a>
-										)
 								–
 			</div>
 							<p>the <a href="https://developer.gnome.org/gobject/unstable/gobject-GParamSpec.html#GParamSpec">GObject.ParamSpec</a> of the child
-property or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a> if <em>class</em> has no child property with that
+property or <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/null">null</a> if <em>class</em> has no child property with that
 name.</p>
 
 					</div>
@@ -4844,22 +1204,21 @@ name.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_container_class_install_child_property">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h3 data-hotdoc-id="gtk_container_class_install_child_property">
-	<span><code>gtk_container_class_install_child_property</code></span>
+	<span><code>Gtk.ContainerClass.InstallChildProperty</code></span>
 </h3>
 
 
 
 
 <pre class="c-prototype">
-gtk_container_class_install_child_property (<a title="GtkContainerClass" href="GtkContainerClass">GtkContainerClass</a> * cclass,
-                                            <a title="guint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint">guint</a> property_id,
-                                            <a title="GParamSpec" href="https://developer.gnome.org/gobject/unstable/gobject-GParamSpec.html#GParamSpec">GParamSpec</a> * pspec)</pre>
+Gtk.ContainerClass.InstallChildProperty (<a title="uint" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/uint">uint</a>,
+                                         <a title="GObject.ParamSpec" href="https://developer.gnome.org/gobject/unstable/gobject-GParamSpec.html#GParamSpec">GObject.ParamSpec</a>)</pre>
 
 <p>Installs a child property on a container class.</p>
 
@@ -4867,16 +1226,6 @@ gtk_container_class_install_child_property (<a title="GtkContainerClass" href="G
 
 	<div class="parameters-container">
 		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>cclass</code></em></i>
-				–
-	</div>
-			<p>a <a href="GtkContainerClass">GtkContainerClass</a></p>
-
-	</div>
-
 					
 <div class="symbol-detail">
 	<div>
@@ -4891,73 +1240,6 @@ gtk_container_class_install_child_property (<a title="GtkContainerClass" href="G
 <div class="symbol-detail">
 	<div>
 		<i><em><code>pspec</code></em></i>
-				–
-	</div>
-			<p>the <a href="https://developer.gnome.org/gobject/unstable/gobject-GParamSpec.html#GParamSpec">GParamSpec</a> for the property</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_container_class_install_child_property">
-	<span><code>Gtk.prototype.install_child_property</code></span>
-</h3>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.install_child_property(cclass: <a title="Gtk.ContainerClass" href="GtkContainerClass">Gtk.ContainerClass</a>, property_id: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, pspec: <a title="GObject.ParamSpec" href="https://developer.gnome.org/gobject/unstable/gobject-GParamSpec.html#GParamSpec">GObject.ParamSpec</a>): {
-    // javascript wrapper for 'gtk_container_class_install_child_property'
-}</pre>
-
-<p>Installs a child property on a container class.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>cclass</code></em></i>
-					(
-						<a title="Gtk.ContainerClass" href="GtkContainerClass">Gtk.ContainerClass</a>
-						)
-				–
-	</div>
-			<p>a <a href="GtkContainerClass">Gtk.ContainerClass</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>property_id</code></em></i>
-					(
-						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
-						)
-				–
-	</div>
-			<p>the id for the property</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>pspec</code></em></i>
-					(
-						<a title="GObject.ParamSpec" href="https://developer.gnome.org/gobject/unstable/gobject-GParamSpec.html#GParamSpec">GObject.ParamSpec</a>
-						)
 				–
 	</div>
 			<p>the <a href="https://developer.gnome.org/gobject/unstable/gobject-GParamSpec.html#GParamSpec">GObject.ParamSpec</a> for the property</p>
@@ -4978,22 +1260,21 @@ function Gtk.prototype.install_child_property(cclass: <a title="Gtk.ContainerCla
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.18;" id="gtk_container_class_install_child_properties">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h3 data-hotdoc-id="gtk_container_class_install_child_properties">
-	<span><code>gtk_container_class_install_child_properties</code></span>
+	<span><code>Gtk.ContainerClass.InstallChildProperties</code></span>
 </h3>
 
 
 
 
 <pre class="c-prototype">
-gtk_container_class_install_child_properties (<a title="GtkContainerClass" href="GtkContainerClass">GtkContainerClass</a> * cclass,
-                                              <a title="guint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint">guint</a> n_pspecs,
-                                              <a title="GParamSpec" href="https://developer.gnome.org/gobject/unstable/gobject-GParamSpec.html#GParamSpec">GParamSpec</a> ** pspecs)</pre>
+Gtk.ContainerClass.InstallChildProperties (<a title="uint" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/uint">uint</a>,
+                                           <a title="GObject.ParamSpec" href="https://developer.gnome.org/gobject/unstable/gobject-GParamSpec.html#GParamSpec">GObject.ParamSpec</a> [])</pre>
 
 <p>Installs child properties on a container class.</p>
 
@@ -5004,90 +1285,7 @@ gtk_container_class_install_child_properties (<a title="GtkContainerClass" href=
 					
 <div class="symbol-detail">
 	<div>
-		<i><em><code>cclass</code></em></i>
-				–
-	</div>
-			<p>a <a href="GtkContainerClass">GtkContainerClass</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
 		<i><em><code>n_pspecs</code></em></i>
-				–
-	</div>
-			<p>the length of the <a href="https://developer.gnome.org/gobject/unstable/gobject-GParamSpec.html#GParamSpec">GParamSpec</a> array</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>pspecs</code></em></i>
-					(
-						
-<span class="annotation">[<abbr title="Parameter points to an array of items"><span class="acronym">array</span></abbr> length=n_pspecs]</span>
-
-						)
-				–
-	</div>
-			<p>the <a href="https://developer.gnome.org/gobject/unstable/gobject-GParamSpec.html#GParamSpec">GParamSpec</a> array defining the new
-child properties</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.18
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_container_class_install_child_properties">
-	<span><code>Gtk.prototype.install_child_properties</code></span>
-</h3>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.install_child_properties(cclass: <a title="Gtk.ContainerClass" href="GtkContainerClass">Gtk.ContainerClass</a>, n_pspecs: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, pspecs: [ <a title="GObject.ParamSpec" href="https://developer.gnome.org/gobject/unstable/gobject-GParamSpec.html#GParamSpec">GObject.ParamSpec</a> ]): {
-    // javascript wrapper for 'gtk_container_class_install_child_properties'
-}</pre>
-
-<p>Installs child properties on a container class.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>cclass</code></em></i>
-					(
-						<a title="Gtk.ContainerClass" href="GtkContainerClass">Gtk.ContainerClass</a>
-						)
-				–
-	</div>
-			<p>a <a href="GtkContainerClass">Gtk.ContainerClass</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>n_pspecs</code></em></i>
-					(
-						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
-						)
 				–
 	</div>
 			<p>the length of the <a href="https://developer.gnome.org/gobject/unstable/gobject-GParamSpec.html#GParamSpec">GObject.ParamSpec</a> array</p>
@@ -5098,9 +1296,6 @@ function Gtk.prototype.install_child_properties(cclass: <a title="Gtk.ContainerC
 <div class="symbol-detail">
 	<div>
 		<i><em><code>pspecs</code></em></i>
-					(
-						[ <a title="GObject.ParamSpec" href="https://developer.gnome.org/gobject/unstable/gobject-GParamSpec.html#GParamSpec">GObject.ParamSpec</a> ]
-						)
 				–
 	</div>
 			<p>the <a href="https://developer.gnome.org/gobject/unstable/gobject-GParamSpec.html#GParamSpec">GObject.ParamSpec</a> array defining the new
@@ -5125,22 +1320,21 @@ child properties</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_container_class_list_child_properties">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h3 data-hotdoc-id="gtk_container_class_list_child_properties">
-	<span><code>gtk_container_class_list_child_properties</code></span>
+	<span><code>Gtk.ContainerClass.ListChildProperties</code></span>
 </h3>
 
 
 
 
 <pre class="c-prototype">
-<a title="GParamSpec" href="https://developer.gnome.org/gobject/unstable/gobject-GParamSpec.html#GParamSpec">GParamSpec</a> **
-gtk_container_class_list_child_properties (<a title="GObjectClass" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObjectClass">GObjectClass</a> * cclass,
-                                           <a title="guint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint">guint</a> * n_properties)</pre>
+<a title="GObject.ParamSpec" href="https://developer.gnome.org/gobject/unstable/gobject-GParamSpec.html#GParamSpec">GObject.ParamSpec</a> []
+Gtk.ContainerClass.ListChildProperties (<a title="out" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/out">out</a>  <a title="uint" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/uint">uint</a>)</pre>
 
 <p>Returns all child properties of a container class.</p>
 
@@ -5148,21 +1342,6 @@ gtk_container_class_list_child_properties (<a title="GObjectClass" href="https:/
 
 	<div class="parameters-container">
 		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>cclass</code></em></i>
-					(
-						
-<span class="annotation">[<abbr title="Override the parsed C type with given type"><span class="acronym">type</span></abbr> GtkContainerClass]</span>
-
-						)
-				–
-	</div>
-			<p>a <a href="GtkContainerClass">GtkContainerClass</a></p>
-
-	</div>
-
 					
 <div class="symbol-detail">
 	<div>
@@ -5182,85 +1361,11 @@ gtk_container_class_list_child_properties (<a title="GObjectClass" href="https:/
 								–
 			</div>
 							<p>(array length=n_properties) (transfer container):
-a newly allocated <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a>-terminated array of <a href="https://developer.gnome.org/gobject/unstable/gobject-GParamSpec.html#GParamSpec">GParamSpec</a>*.
-The array must be freed with <a href="https://developer.gnome.org/glib/unstable/glib-Memory-Allocation.html#g-free">g_free</a>.</p>
+a newly allocated <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/null">null</a>-terminated array of <a href="https://developer.gnome.org/gobject/unstable/gobject-GParamSpec.html#GParamSpec">GObject.ParamSpec</a>*.
+The array must be freed with <a href="https://developer.gnome.org/glib/unstable/glib-Memory-Allocation.html#g-free">GLib.Global.Free</a>.</p>
 
 					</div>
 	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_container_class_list_child_properties">
-	<span><code>Gtk.prototype.list_child_properties</code></span>
-</h3>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.list_child_properties(cclass: <a title="Gtk.ContainerClass" href="GtkContainerClass">Gtk.ContainerClass</a>): {
-    // javascript wrapper for 'gtk_container_class_list_child_properties'
-}</pre>
-
-<p>Returns all child properties of a container class.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>cclass</code></em></i>
-					(
-						<a title="Gtk.ContainerClass" href="GtkContainerClass">Gtk.ContainerClass</a>
-						)
-				–
-	</div>
-			<p>a <a href="GtkContainerClass">Gtk.ContainerClass</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<p><b>Returns a tuple made of:</b></p>
-				
-<div class="symbol-detail">
-	<div>
-									(
-			[ <a title="GObject.ParamSpec" href="https://developer.gnome.org/gobject/unstable/gobject-GParamSpec.html#GParamSpec">GObject.ParamSpec</a> ]
-						)
-				–
-	</div>
-			<p>(array length=n_properties) (transfer container):
-a newly allocated <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a>-terminated array of <a href="https://developer.gnome.org/gobject/unstable/gobject-GParamSpec.html#GParamSpec">GObject.ParamSpec</a>*.
-The array must be freed with <a href="https://developer.gnome.org/glib/unstable/glib-Memory-Allocation.html#g-free">prototype.free</a>.</p>
-
-	</div>
-
-				
-<div class="symbol-detail">
-	<div>
-				<i><em><code>n_properties</code></em></i>
-									(
-			<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
-						)
-				–
-	</div>
-			<p>(array length=n_properties) (transfer container):
-a newly allocated <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a>-terminated array of <a href="https://developer.gnome.org/gobject/unstable/gobject-GParamSpec.html#GParamSpec">GObject.ParamSpec</a>*.
-The array must be freed with <a href="https://developer.gnome.org/glib/unstable/glib-Memory-Allocation.html#g-free">prototype.free</a>.</p>
-
-	</div>
-
-			</div>
 
 
 
@@ -5276,66 +1381,6 @@ The array must be freed with <a href="https://developer.gnome.org/glib/unstable/
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="GTK_CONTAINER_WARN_INVALID_CHILD_PROPERTY_ID">
 	
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h3 data-hotdoc-id="GTK_CONTAINER_WARN_INVALID_CHILD_PROPERTY_ID">
-	<span><code>GTK_CONTAINER_WARN_INVALID_CHILD_PROPERTY_ID</code></span>
-</h3>
-
-
-<pre class="raw_code">
-#define GTK_CONTAINER_WARN_INVALID_CHILD_PROPERTY_ID(object, property_id, pspec) \
-    G_OBJECT_WARN_INVALID_PSPEC ((object), "child property", (property_id), (pspec))
-</pre>
-
-<p>This macro should be used to emit a standard warning about unexpected
-properties in set_child_property and get_child_property implementations.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>object</code></em></i>
-				–
-	</div>
-			<p>the <a href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a> on which set_child_property or get_child_property
-was called</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>property_id</code></em></i>
-				–
-	</div>
-			<p>the numeric id of the property</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>pspec</code></em></i>
-				–
-	</div>
-			<p>the <a href="https://developer.gnome.org/gobject/unstable/gobject-GParamSpec.html#GParamSpec">GParamSpec</a> of the property</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
 
 </div>
 

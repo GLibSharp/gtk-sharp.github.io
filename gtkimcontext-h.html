@@ -89,7 +89,7 @@ $('body').removeClass('no-script');
 </nav>
 
 <main>
-<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="gtkimcontext-h.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['c', 'javascript', 'python']" data-hotdoc-meta-gi-language="c">
+<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="gtkimcontext-h.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['csharp']" data-hotdoc-meta-gi-language="c">
 <script src="assets/js/utils.js"></script>
 
 <div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
@@ -101,14 +101,14 @@ $('body').removeClass('no-script');
 	<div id="main">
 				    <div id="page-description" data-hotdoc-source="gtkimcontext.h.markdown" data-hotdoc-role="main">
         <h1 id="gtkimcontext-page">GtkIMContext</h1>
-<p><a href="gtkimcontext-h.html#GtkIMContext" data-gi-href-javascript="gtkimcontext-h.html#GtkIMContext" data-gi-title-javascript="Gtk.IMContext" data-gi-href-python="gtkimcontext-h.html#GtkIMContext" data-gi-title-python="Gtk.IMContext">GtkIMContext</a> defines the interface for GTK+ input methods. An input method
-is used by GTK+ text input widgets like <a href="gtkentry-h.html#GtkEntry" data-gi-href-javascript="gtkentry-h.html#GtkEntry" data-gi-title-javascript="Gtk.Entry" data-gi-href-python="gtkentry-h.html#GtkEntry" data-gi-title-python="Gtk.Entry">GtkEntry</a> to map from key events to
+<p><a href="gtkimcontext-h.html#GtkIMContext" data-gi-href-csharp="gtkimcontext-h.html#GtkIMContext" data-gi-title-csharp="Gtk.IMContext">GtkIMContext</a> defines the interface for GTK+ input methods. An input method
+is used by GTK+ text input widgets like <a href="gtkentry-h.html#GtkEntry" data-gi-href-csharp="gtkentry-h.html#GtkEntry" data-gi-title-csharp="Gtk.Entry">GtkEntry</a> to map from key events to
 Unicode character strings.</p>
 <p>The default input method can be set programmatically via the
 <a href="https://developer.gnome.org/gtk3/GtkSettings.html#GtkSettings--gtk-im-module">GtkSettings:gtk-im-module</a> GtkSettings property. Alternatively, you may set
 the GTK_IM_MODULE environment variable as documented in
 [Running GTK+ Applications][gtk-running].</p>
-<p>The <a href="gtkentry-h.html#GtkEntry" data-gi-href-javascript="gtkentry-h.html#GtkEntry" data-gi-title-javascript="Gtk.Entry" data-gi-href-python="gtkentry-h.html#GtkEntry" data-gi-title-python="Gtk.Entry">GtkEntry</a> <a href="https://developer.gnome.org/gtk3/GtkEntry.html#GtkEntry--im-module">GtkEntry:im-module</a> and <a href="gtktextview-h.html#GtkTextView" data-gi-href-javascript="gtktextview-h.html#GtkTextView" data-gi-title-javascript="Gtk.TextView" data-gi-href-python="gtktextview-h.html#GtkTextView" data-gi-title-python="Gtk.TextView">GtkTextView</a> <a href="https://developer.gnome.org/gtk3/GtkTextView.html#GtkTextView--im-module">GtkTextView:im-module</a>
+<p>The <a href="gtkentry-h.html#GtkEntry" data-gi-href-csharp="gtkentry-h.html#GtkEntry" data-gi-title-csharp="Gtk.Entry">GtkEntry</a> <a href="https://developer.gnome.org/gtk3/GtkEntry.html#GtkEntry--im-module">GtkEntry:im-module</a> and <a href="gtktextview-h.html#GtkTextView" data-gi-href-csharp="gtktextview-h.html#GtkTextView" data-gi-title-csharp="Gtk.TextView">GtkTextView</a> <a href="https://developer.gnome.org/gtk3/GtkTextView.html#GtkTextView--im-module">GtkTextView:im-module</a>
 properties may also be used to set input methods for specific widget
 instances. For instance, a certain entry widget might be expected to contain
 certain characters which would be easier to input with a certain input
@@ -124,11 +124,11 @@ preediting ends and the character is inserted as text. Ctrl+Shift+u20AC for
 example results in the € sign.</p>
 <p>Additional input methods can be made available for use by GTK+ widgets as
 loadable modules. An input method module is a small shared library which
-implements a subclass of <a href="gtkimcontext-h.html#GtkIMContext" data-gi-href-javascript="gtkimcontext-h.html#GtkIMContext" data-gi-title-javascript="Gtk.IMContext" data-gi-href-python="gtkimcontext-h.html#GtkIMContext" data-gi-title-python="Gtk.IMContext">GtkIMContext</a> or <a href="gtkimcontextsimple-h.html#GtkIMContextSimple" data-gi-href-javascript="gtkimcontextsimple-h.html#GtkIMContextSimple" data-gi-title-javascript="Gtk.IMContextSimple" data-gi-href-python="gtkimcontextsimple-h.html#GtkIMContextSimple" data-gi-title-python="Gtk.IMContextSimple">GtkIMContextSimple</a> and exports
+implements a subclass of <a href="gtkimcontext-h.html#GtkIMContext" data-gi-href-csharp="gtkimcontext-h.html#GtkIMContext" data-gi-title-csharp="Gtk.IMContext">GtkIMContext</a> or <a href="gtkimcontextsimple-h.html#GtkIMContextSimple" data-gi-href-csharp="gtkimcontextsimple-h.html#GtkIMContextSimple" data-gi-title-csharp="Gtk.IMContextSimple">GtkIMContextSimple</a> and exports
 these four functions:</p>
 <pre><code class="language-[&lt;!--"> void im_module_init(GTypeModule *module);
 </code></pre>
-<p>This function should register the <a href="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#GType" data-gi-href-javascript="https://developer.gnome.org/gobject/stable/gobject-Type-Information.html#GType" data-gi-title-javascript="GObject.Type" data-gi-href-python="https://developer.gnome.org/gobject/stable/gobject-Type-Information.html#GType" data-gi-title-python="GObject.Type">GType</a> of the <a href="gtkimcontext-h.html#GtkIMContext" data-gi-href-javascript="gtkimcontext-h.html#GtkIMContext" data-gi-title-javascript="Gtk.IMContext" data-gi-href-python="gtkimcontext-h.html#GtkIMContext" data-gi-title-python="Gtk.IMContext">GtkIMContext</a> subclass which
+<p>This function should register the <a href="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#GType" data-gi-href-csharp="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#GType" data-gi-title-csharp="GObject.Type">GType</a> of the <a href="gtkimcontext-h.html#GtkIMContext" data-gi-href-csharp="gtkimcontext-h.html#GtkIMContext" data-gi-title-csharp="Gtk.IMContext">GtkIMContext</a> subclass which
 implements the input method by means of <a href="https://developer.gnome.org/gobject/unstable/GTypeModule.html#g-type-module-register-type">g_type_module_register_type</a>. Note
 that <a href="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#g-type-register-static">g_type_register_static</a> cannot be used as the type needs to be
 registered dynamically.</p>
@@ -143,13 +143,13 @@ registered dynamically.</p>
 </code></pre>
 <p>This function returns the list of input methods provided by the module. The
 example implementation above shows a common solution and simply returns a
-pointer to statically defined array of <a href="gtkimcontext-h.html#GtkIMContextInfo" data-gi-href-javascript="gtkimcontext-h.html#GtkIMContextInfo" data-gi-title-javascript="Gtk.IMContextInfo" data-gi-href-python="gtkimcontext-h.html#GtkIMContextInfo" data-gi-title-python="Gtk.IMContextInfo">GtkIMContextInfo</a> items for each
+pointer to statically defined array of <a href="gtkimcontext-h.html#GtkIMContextInfo" data-gi-href-csharp="gtkimcontext-h.html#GtkIMContextInfo" data-gi-title-csharp="Gtk.IMContextInfo">GtkIMContextInfo</a> items for each
 provided input method.</p>
 <pre><code class="language-[&lt;!--"> GtkIMContext * im_module_create(const gchar *context_id);
 </code></pre>
 <p>This function should return a pointer to a newly created instance of the
-<a href="gtkimcontext-h.html#GtkIMContext" data-gi-href-javascript="gtkimcontext-h.html#GtkIMContext" data-gi-title-javascript="Gtk.IMContext" data-gi-href-python="gtkimcontext-h.html#GtkIMContext" data-gi-title-python="Gtk.IMContext">GtkIMContext</a> subclass identified by <em>context_id</em>. The context ID is the same
-as specified in the <a href="gtkimcontext-h.html#GtkIMContextInfo" data-gi-href-javascript="gtkimcontext-h.html#GtkIMContextInfo" data-gi-title-javascript="Gtk.IMContextInfo" data-gi-href-python="gtkimcontext-h.html#GtkIMContextInfo" data-gi-title-python="Gtk.IMContextInfo">GtkIMContextInfo</a> array returned by im_module_list.</p>
+<a href="gtkimcontext-h.html#GtkIMContext" data-gi-href-csharp="gtkimcontext-h.html#GtkIMContext" data-gi-title-csharp="Gtk.IMContext">GtkIMContext</a> subclass identified by <em>context_id</em>. The context ID is the same
+as specified in the <a href="gtkimcontext-h.html#GtkIMContextInfo" data-gi-href-csharp="gtkimcontext-h.html#GtkIMContextInfo" data-gi-title-csharp="Gtk.IMContextInfo">GtkIMContextInfo</a> array returned by im_module_list.</p>
 <p>After a new loadable input method module has been installed on the system,
 the configuration file <code>gtk.immodules</code> needs to be
 regenerated by [gtk-query-immodules-3.0][gtk-query-immodules-3.0],
@@ -162,7 +162,7 @@ in order for the new input method to become available to GTK+ applications.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="GtkIMContext">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
@@ -175,10 +175,10 @@ in order for the new input method to become available to GTK+ applications.</p>
 <div class="hierarchy_container">
 	<div class="hierarchy_details">
 <pre>
-<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object">GObject</a>
+<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-csharp="http://docs.go-mono.com/?link=T%3aGLib.Object" data-gi-title-csharp="GLib.Object">GObject</a>
     <span class="lineart">╰──</span>GtkIMContext
-        <span class="lineart">╰──</span><a title="GtkIMContextSimple" href="gtkimcontextsimple-h.html#GtkIMContextSimple" data-gi-href-javascript="gtkimcontextsimple-h.html#GtkIMContextSimple" data-gi-title-javascript="Gtk.IMContextSimple" data-gi-href-python="gtkimcontextsimple-h.html#GtkIMContextSimple" data-gi-title-python="Gtk.IMContextSimple">GtkIMContextSimple</a>
-        <span class="lineart">╰──</span><a title="GtkIMMulticontext" href="gtkimmulticontext-h.html#GtkIMMulticontext" data-gi-href-javascript="gtkimmulticontext-h.html#GtkIMMulticontext" data-gi-title-javascript="Gtk.IMMulticontext" data-gi-href-python="gtkimmulticontext-h.html#GtkIMMulticontext" data-gi-title-python="Gtk.IMMulticontext">GtkIMMulticontext</a>
+        <span class="lineart">╰──</span><a title="GtkIMContextSimple" href="gtkimcontextsimple-h.html#GtkIMContextSimple" data-gi-href-csharp="gtkimcontextsimple-h.html#GtkIMContextSimple" data-gi-title-csharp="Gtk.IMContextSimple">GtkIMContextSimple</a>
+        <span class="lineart">╰──</span><a title="GtkIMMulticontext" href="gtkimmulticontext-h.html#GtkIMMulticontext" data-gi-href-csharp="gtkimmulticontext-h.html#GtkIMMulticontext" data-gi-title-csharp="Gtk.IMMulticontext">GtkIMMulticontext</a>
 </pre>
 
 </div>
@@ -186,159 +186,6 @@ in order for the new input method to become available to GTK+ applications.</p>
 </div>
 
 
-
-
-
-	<div class="members-container">
-		<h3>Members</h3>
-					
-<div class="symbol-detail" data-hotdoc-id="GtkIMContext.parent_instance">
-	<div>
-		<i><em><code>parent_instance</code></em></i>
-		(<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object">GObject</a>)
-		–
-	</div>
-			<i>No description available</i>
-	</div>
-
-			</div>
-
-
-<h3>Class structure</h3>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="GtkIMContextClass">
-	<span><code>GtkIMContextClass</code></span>
-</h4>
-
-
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h3>
-	Gtk.IMContextClass
-</h3>
-
-
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3>
-	Gtk.IMContextClass
-</h3>
-
-
-
-
-
-
-
-        </div>
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h2 data-hotdoc-id="GtkIMContext">
-	<span><code>GtkIMContext</code></span>
-</h2>
-
-
-<div class="hierarchy_container">
-	<div class="hierarchy_details">
-<pre>
-<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object">GObject</a>
-    <span class="lineart">╰──</span>GtkIMContext
-        <span class="lineart">╰──</span><a title="GtkIMContextSimple" href="gtkimcontextsimple-h.html#GtkIMContextSimple" data-gi-href-javascript="gtkimcontextsimple-h.html#GtkIMContextSimple" data-gi-title-javascript="Gtk.IMContextSimple" data-gi-href-python="gtkimcontextsimple-h.html#GtkIMContextSimple" data-gi-title-python="Gtk.IMContextSimple">GtkIMContextSimple</a>
-        <span class="lineart">╰──</span><a title="GtkIMMulticontext" href="gtkimmulticontext-h.html#GtkIMMulticontext" data-gi-href-javascript="gtkimmulticontext-h.html#GtkIMMulticontext" data-gi-title-javascript="Gtk.IMMulticontext" data-gi-href-python="gtkimmulticontext-h.html#GtkIMMulticontext" data-gi-title-python="Gtk.IMMulticontext">GtkIMMulticontext</a>
-</pre>
-
-</div>
-
-</div>
-
-
-
-
-
-	<div class="members-container">
-		<h3>Members</h3>
-					
-<div class="symbol-detail" data-hotdoc-id="GtkIMContext.parent_instance">
-	<div>
-		<i><em><code>parent_instance</code></em></i>
-		(<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object">GObject</a>)
-		–
-	</div>
-			<i>No description available</i>
-	</div>
-
-			</div>
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h2 data-hotdoc-id="GtkIMContext">
-	<span><code>GtkIMContext</code></span>
-</h2>
-
-
-<div class="hierarchy_container">
-	<div class="hierarchy_details">
-<pre>
-<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object">GObject</a>
-    <span class="lineart">╰──</span>GtkIMContext
-        <span class="lineart">╰──</span><a title="GtkIMContextSimple" href="gtkimcontextsimple-h.html#GtkIMContextSimple" data-gi-href-javascript="gtkimcontextsimple-h.html#GtkIMContextSimple" data-gi-title-javascript="Gtk.IMContextSimple" data-gi-href-python="gtkimcontextsimple-h.html#GtkIMContextSimple" data-gi-title-python="Gtk.IMContextSimple">GtkIMContextSimple</a>
-        <span class="lineart">╰──</span><a title="GtkIMMulticontext" href="gtkimmulticontext-h.html#GtkIMMulticontext" data-gi-href-javascript="gtkimmulticontext-h.html#GtkIMMulticontext" data-gi-title-javascript="Gtk.IMMulticontext" data-gi-href-python="gtkimmulticontext-h.html#GtkIMMulticontext" data-gi-title-python="Gtk.IMMulticontext">GtkIMMulticontext</a>
-</pre>
-
-</div>
-
-</div>
-
-
-
-
-
-	<div class="members-container">
-		<h3>Members</h3>
-					
-<div class="symbol-detail" data-hotdoc-id="GtkIMContext.parent_instance">
-	<div>
-		<i><em><code>parent_instance</code></em></i>
-		(<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object">GObject</a>)
-		–
-	</div>
-			<i>No description available</i>
-	</div>
-
-			</div>
 
 
 
@@ -352,23 +199,22 @@ in order for the new input method to become available to GTK+ applications.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_im_context_get_preedit_string">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h4 data-hotdoc-id="gtk_im_context_get_preedit_string">
-	<span><code>gtk_im_context_get_preedit_string</code></span>
+	<span><code>Gtk.IMContext.GetPreeditString</code></span>
 </h4>
 
 
 
 
 <pre class="c-prototype">
-gtk_im_context_get_preedit_string (<a title="GtkIMContext" href="gtkimcontext-h.html#GtkIMContext">GtkIMContext</a> * context,
-                                   <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> ** str,
-                                   <a title="PangoAttrList" href="https://developer.gnome.org/pango/unstable/pango-Text-Attributes.html#PangoAttrList-struct">PangoAttrList</a> ** attrs,
-                                   <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> * cursor_pos)</pre>
+Gtk.IMContext.GetPreeditString (<a title="out" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/out">out</a>  <a title="string" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/string">string</a>,
+                                <a title="out" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/out">out</a>  <a title="Pango.AttrList" href="https://developer.gnome.org/pango/unstable/pango-Text-Attributes.html#PangoAttrList-struct">Pango.AttrList</a>,
+                                <a title="out" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/out">out</a>  <a title="int" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/int">int</a>)</pre>
 
 <p>Retrieve the current preedit string for the input context,
 and a list of attributes to apply to the string.
@@ -382,27 +228,11 @@ point.</p>
 					
 <div class="symbol-detail">
 	<div>
-		<i><em><code>context</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkimcontext-h.html#GtkIMContext">GtkIMContext</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
 		<i><em><code>str</code></em></i>
-					(
-						
-<span class="annotation">[<abbr title="Parameter for returning results"><span class="acronym">out</span></abbr>]</span>
-<span class="annotation">[<abbr title="Free data after the code is done"><span class="acronym">transfer: full</span></abbr>]</span>
-
-						)
 				–
 	</div>
 			<p>location to store the retrieved
-string. The string retrieved must be freed with <a href="https://developer.gnome.org/glib/unstable/glib-Memory-Allocation.html#g-free">g_free</a>.</p>
+string. The string retrieved must be freed with <a href="https://developer.gnome.org/glib/unstable/glib-Memory-Allocation.html#g-free">GLib.Global.Free</a>.</p>
 
 	</div>
 
@@ -410,17 +240,11 @@ string. The string retrieved must be freed with <a href="https://developer.gnome
 <div class="symbol-detail">
 	<div>
 		<i><em><code>attrs</code></em></i>
-					(
-						
-<span class="annotation">[<abbr title="Parameter for returning results"><span class="acronym">out</span></abbr>]</span>
-<span class="annotation">[<abbr title="Free data after the code is done"><span class="acronym">transfer: full</span></abbr>]</span>
-
-						)
 				–
 	</div>
 			<p>location to store the retrieved
 attribute list.  When you are done with this list, you
-must unreference it with <a href="https://developer.gnome.org/pango/unstable/pango-Text-Attributes.html#pango-attr-list-unref">pango_attr_list_unref</a>.</p>
+must unreference it with <a href="https://developer.gnome.org/pango/unstable/pango-Text-Attributes.html#pango-attr-list-unref">Pango.AttrList.Unref</a>.</p>
 
 	</div>
 
@@ -428,102 +252,10 @@ must unreference it with <a href="https://developer.gnome.org/pango/unstable/pan
 <div class="symbol-detail">
 	<div>
 		<i><em><code>cursor_pos</code></em></i>
-					(
-						
-<span class="annotation">[<abbr title="Parameter for returning results"><span class="acronym">out</span></abbr>]</span>
-
-						)
 				–
 	</div>
 			<p>location to store position of cursor (in characters)
 within the preedit string.</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_im_context_get_preedit_string">
-	<span><code>Gtk.prototype.get_preedit_string</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.get_preedit_string(): {
-    // javascript wrapper for 'gtk_im_context_get_preedit_string'
-}</pre>
-
-<p>Retrieve the current preedit string for the input context,
-and a list of attributes to apply to the string.
-This string should be displayed inserted at the insertion
-point.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>context</code></em></i>
-					(
-						<a title="Gtk.IMContext" href="gtkimcontext-h.html#GtkIMContext">Gtk.IMContext</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkimcontext-h.html#GtkIMContext">Gtk.IMContext</a></p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_im_context_get_preedit_string">
-	<span><code>Gtk.IMContext.get_preedit_string</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.IMContext.get_preedit_string (self):
-    #python wrapper for 'gtk_im_context_get_preedit_string'</pre>
-
-<p>Retrieve the current preedit string for the input context,
-and a list of attributes to apply to the string.
-This string should be displayed inserted at the insertion
-point.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>context</code></em></i>
-					(
-						<a title="Gtk.IMContext" href="gtkimcontext-h.html#GtkIMContext">Gtk.IMContext</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkimcontext-h.html#GtkIMContext">Gtk.IMContext</a></p>
 
 	</div>
 
@@ -541,41 +273,30 @@ point.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_im_context_filter_keypress">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h4 data-hotdoc-id="gtk_im_context_filter_keypress">
-	<span><code>gtk_im_context_filter_keypress</code></span>
+	<span><code>Gtk.IMContext.FilterKeypress</code></span>
 </h4>
 
 
 
 
 <pre class="c-prototype">
-<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
-gtk_im_context_filter_keypress (<a title="GtkIMContext" href="gtkimcontext-h.html#GtkIMContext">GtkIMContext</a> * context,
-                                <a title="GdkEventKey" href="https://developer.gnome.org/gdk3/gdk3-Event-Structures.html#GdkEventKey">GdkEventKey</a> * event)</pre>
+<a title="bool" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/bool">bool</a>
+Gtk.IMContext.FilterKeypress (<a title="Gdk.EventKey" href="https://developer.gnome.org/gdk3/gdk3-Event-Structures.html#GdkEventKey">Gdk.EventKey</a>)</pre>
 
 <p>Allow an input method to internally handle key press and release
-events. If this function returns <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a>, then no further processing
+events. If this function returns <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/true">true</a>, then no further processing
 should be done for this key event.</p>
 
 
 
 	<div class="parameters-container">
 		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>context</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkimcontext-h.html#GtkIMContext">GtkIMContext</a></p>
-
-	</div>
-
 					
 <div class="symbol-detail">
 	<div>
@@ -594,146 +315,7 @@ should be done for this key event.</p>
 				<b>Returns</b>
 								–
 			</div>
-							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if the input method handled the key event.</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_im_context_filter_keypress">
-	<span><code>Gtk.prototype.filter_keypress</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.filter_keypress(event: <a title="Gdk.EventKey" href="https://developer.gnome.org/gdk3/gdk3-Event-Structures.html#GdkEventKey">Gdk.EventKey</a>): {
-    // javascript wrapper for 'gtk_im_context_filter_keypress'
-}</pre>
-
-<p>Allow an input method to internally handle key press and release
-events. If this function returns <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a>, then no further processing
-should be done for this key event.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>context</code></em></i>
-					(
-						<a title="Gtk.IMContext" href="gtkimcontext-h.html#GtkIMContext">Gtk.IMContext</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkimcontext-h.html#GtkIMContext">Gtk.IMContext</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>event</code></em></i>
-					(
-						<a title="Gdk.EventKey" href="https://developer.gnome.org/gdk3/gdk3-Event-Structures.html#GdkEventKey">Gdk.EventKey</a>
-						)
-				–
-	</div>
-			<p>the key event</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
-										)
-								–
-			</div>
-							<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if the input method handled the key event.</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_im_context_filter_keypress">
-	<span><code>Gtk.IMContext.filter_keypress</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.IMContext.filter_keypress (self, event):
-    #python wrapper for 'gtk_im_context_filter_keypress'</pre>
-
-<p>Allow an input method to internally handle key press and release
-events. If this function returns <a href="https://docs.python.org/3/library/constants.html#True">True</a>, then no further processing
-should be done for this key event.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>context</code></em></i>
-					(
-						<a title="Gtk.IMContext" href="gtkimcontext-h.html#GtkIMContext">Gtk.IMContext</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkimcontext-h.html#GtkIMContext">Gtk.IMContext</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>event</code></em></i>
-					(
-						<a title="Gdk.EventKey" href="https://developer.gnome.org/gdk3/gdk3-Event-Structures.html#GdkEventKey">Gdk.EventKey</a>
-						)
-				–
-	</div>
-			<p>the key event</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
-										)
-								–
-			</div>
-							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if the input method handled the key event.</p>
+							<p><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/true">true</a> if the input method handled the key event.</p>
 
 					</div>
 	</div>
@@ -750,20 +332,20 @@ should be done for this key event.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_im_context_focus_in">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h4 data-hotdoc-id="gtk_im_context_focus_in">
-	<span><code>gtk_im_context_focus_in</code></span>
+	<span><code>Gtk.IMContext.FocusIn</code></span>
 </h4>
 
 
 
 
 <pre class="c-prototype">
-gtk_im_context_focus_in (<a title="GtkIMContext" href="gtkimcontext-h.html#GtkIMContext">GtkIMContext</a> * context)</pre>
+Gtk.IMContext.FocusIn ()</pre>
 
 <p>Notify the input method that the widget to which this
 input context corresponds has gained focus. The input method
@@ -772,106 +354,6 @@ this change.</p>
 
 
 
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>context</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkimcontext-h.html#GtkIMContext">GtkIMContext</a></p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_im_context_focus_in">
-	<span><code>Gtk.prototype.focus_in</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.focus_in(): {
-    // javascript wrapper for 'gtk_im_context_focus_in'
-}</pre>
-
-<p>Notify the input method that the widget to which this
-input context corresponds has gained focus. The input method
-may, for example, change the displayed feedback to reflect
-this change.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>context</code></em></i>
-					(
-						<a title="Gtk.IMContext" href="gtkimcontext-h.html#GtkIMContext">Gtk.IMContext</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkimcontext-h.html#GtkIMContext">Gtk.IMContext</a></p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_im_context_focus_in">
-	<span><code>Gtk.IMContext.focus_in</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.IMContext.focus_in (self):
-    #python wrapper for 'gtk_im_context_focus_in'</pre>
-
-<p>Notify the input method that the widget to which this
-input context corresponds has gained focus. The input method
-may, for example, change the displayed feedback to reflect
-this change.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>context</code></em></i>
-					(
-						<a title="Gtk.IMContext" href="gtkimcontext-h.html#GtkIMContext">Gtk.IMContext</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkimcontext-h.html#GtkIMContext">Gtk.IMContext</a></p>
-
-	</div>
-
-			</div>
 
 
 
@@ -885,20 +367,20 @@ this change.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_im_context_focus_out">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h4 data-hotdoc-id="gtk_im_context_focus_out">
-	<span><code>gtk_im_context_focus_out</code></span>
+	<span><code>Gtk.IMContext.FocusOut</code></span>
 </h4>
 
 
 
 
 <pre class="c-prototype">
-gtk_im_context_focus_out (<a title="GtkIMContext" href="gtkimcontext-h.html#GtkIMContext">GtkIMContext</a> * context)</pre>
+Gtk.IMContext.FocusOut ()</pre>
 
 <p>Notify the input method that the widget to which this
 input context corresponds has lost focus. The input method
@@ -907,106 +389,6 @@ state to reflect this change.</p>
 
 
 
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>context</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkimcontext-h.html#GtkIMContext">GtkIMContext</a></p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_im_context_focus_out">
-	<span><code>Gtk.prototype.focus_out</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.focus_out(): {
-    // javascript wrapper for 'gtk_im_context_focus_out'
-}</pre>
-
-<p>Notify the input method that the widget to which this
-input context corresponds has lost focus. The input method
-may, for example, change the displayed feedback or reset the contexts
-state to reflect this change.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>context</code></em></i>
-					(
-						<a title="Gtk.IMContext" href="gtkimcontext-h.html#GtkIMContext">Gtk.IMContext</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkimcontext-h.html#GtkIMContext">Gtk.IMContext</a></p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_im_context_focus_out">
-	<span><code>Gtk.IMContext.focus_out</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.IMContext.focus_out (self):
-    #python wrapper for 'gtk_im_context_focus_out'</pre>
-
-<p>Notify the input method that the widget to which this
-input context corresponds has lost focus. The input method
-may, for example, change the displayed feedback or reset the contexts
-state to reflect this change.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>context</code></em></i>
-					(
-						<a title="Gtk.IMContext" href="gtkimcontext-h.html#GtkIMContext">Gtk.IMContext</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkimcontext-h.html#GtkIMContext">Gtk.IMContext</a></p>
-
-	</div>
-
-			</div>
 
 
 
@@ -1020,20 +402,20 @@ state to reflect this change.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_im_context_reset">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h4 data-hotdoc-id="gtk_im_context_reset">
-	<span><code>gtk_im_context_reset</code></span>
+	<span><code>Gtk.IMContext.Reset</code></span>
 </h4>
 
 
 
 
 <pre class="c-prototype">
-gtk_im_context_reset (<a title="GtkIMContext" href="gtkimcontext-h.html#GtkIMContext">GtkIMContext</a> * context)</pre>
+Gtk.IMContext.Reset ()</pre>
 
 <p>Notify the input method that a change such as a change in cursor
 position has been made. This will typically cause the input
@@ -1041,104 +423,6 @@ method to clear the preedit state.</p>
 
 
 
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>context</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkimcontext-h.html#GtkIMContext">GtkIMContext</a></p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_im_context_reset">
-	<span><code>Gtk.prototype.reset</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.reset(): {
-    // javascript wrapper for 'gtk_im_context_reset'
-}</pre>
-
-<p>Notify the input method that a change such as a change in cursor
-position has been made. This will typically cause the input
-method to clear the preedit state.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>context</code></em></i>
-					(
-						<a title="Gtk.IMContext" href="gtkimcontext-h.html#GtkIMContext">Gtk.IMContext</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkimcontext-h.html#GtkIMContext">Gtk.IMContext</a></p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_im_context_reset">
-	<span><code>Gtk.IMContext.reset</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.IMContext.reset (self):
-    #python wrapper for 'gtk_im_context_reset'</pre>
-
-<p>Notify the input method that a change such as a change in cursor
-position has been made. This will typically cause the input
-method to clear the preedit state.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>context</code></em></i>
-					(
-						<a title="Gtk.IMContext" href="gtkimcontext-h.html#GtkIMContext">Gtk.IMContext</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkimcontext-h.html#GtkIMContext">Gtk.IMContext</a></p>
-
-	</div>
-
-			</div>
 
 
 
@@ -1152,168 +436,6 @@ method to clear the preedit state.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_im_context_set_cursor_location">
 	
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_im_context_set_cursor_location">
-	<span><code>gtk_im_context_set_cursor_location</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-gtk_im_context_set_cursor_location (<a title="GtkIMContext" href="gtkimcontext-h.html#GtkIMContext">GtkIMContext</a> * context,
-                                    const <a title="GdkRectangle" href="https://developer.gnome.org/gdk3/gdk3-Points-Rectangles-and-Regions.html#GdkRectangle">GdkRectangle</a> * area)</pre>
-
-<p>Notify the input method that a change in cursor
-position has been made. The location is relative to the client
-window.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>context</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkimcontext-h.html#GtkIMContext">GtkIMContext</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>area</code></em></i>
-				–
-	</div>
-			<p>new location</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_im_context_set_cursor_location">
-	<span><code>Gtk.prototype.set_cursor_location</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.set_cursor_location(area: <a title="Gdk.Rectangle" href="https://developer.gnome.org/gdk3/gdk3-Points-Rectangles-and-Regions.html#GdkRectangle">Gdk.Rectangle</a>): {
-    // javascript wrapper for 'gtk_im_context_set_cursor_location'
-}</pre>
-
-<p>Notify the input method that a change in cursor
-position has been made. The location is relative to the client
-window.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>context</code></em></i>
-					(
-						<a title="Gtk.IMContext" href="gtkimcontext-h.html#GtkIMContext">Gtk.IMContext</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkimcontext-h.html#GtkIMContext">Gtk.IMContext</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>area</code></em></i>
-					(
-						<a title="Gdk.Rectangle" href="https://developer.gnome.org/gdk3/gdk3-Points-Rectangles-and-Regions.html#GdkRectangle">Gdk.Rectangle</a>
-						)
-				–
-	</div>
-			<p>new location</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_im_context_set_cursor_location">
-	<span><code>Gtk.IMContext.set_cursor_location</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.IMContext.set_cursor_location (self, area):
-    #python wrapper for 'gtk_im_context_set_cursor_location'</pre>
-
-<p>Notify the input method that a change in cursor
-position has been made. The location is relative to the client
-window.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>context</code></em></i>
-					(
-						<a title="Gtk.IMContext" href="gtkimcontext-h.html#GtkIMContext">Gtk.IMContext</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkimcontext-h.html#GtkIMContext">Gtk.IMContext</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>area</code></em></i>
-					(
-						<a title="Gdk.Rectangle" href="https://developer.gnome.org/gdk3/gdk3-Points-Rectangles-and-Regions.html#GdkRectangle">Gdk.Rectangle</a>
-						)
-				–
-	</div>
-			<p>new location</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
 
 </div>
 
@@ -1321,171 +443,6 @@ window.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_im_context_set_use_preedit">
 	
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_im_context_set_use_preedit">
-	<span><code>gtk_im_context_set_use_preedit</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-gtk_im_context_set_use_preedit (<a title="GtkIMContext" href="gtkimcontext-h.html#GtkIMContext">GtkIMContext</a> * context,
-                                <a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a> use_preedit)</pre>
-
-<p>Sets whether the IM context should use the preedit string
-to display feedback. If <em>use_preedit</em> is FALSE (default
-is TRUE), then the IM context may use some other method to display
-feedback, such as displaying it in a child of the root window.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>context</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkimcontext-h.html#GtkIMContext">GtkIMContext</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>use_preedit</code></em></i>
-				–
-	</div>
-			<p>whether the IM context should use the preedit string.</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_im_context_set_use_preedit">
-	<span><code>Gtk.prototype.set_use_preedit</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.set_use_preedit(use_preedit: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
-    // javascript wrapper for 'gtk_im_context_set_use_preedit'
-}</pre>
-
-<p>Sets whether the IM context should use the preedit string
-to display feedback. If <em>use_preedit</em> is FALSE (default
-is TRUE), then the IM context may use some other method to display
-feedback, such as displaying it in a child of the root window.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>context</code></em></i>
-					(
-						<a title="Gtk.IMContext" href="gtkimcontext-h.html#GtkIMContext">Gtk.IMContext</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkimcontext-h.html#GtkIMContext">Gtk.IMContext</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>use_preedit</code></em></i>
-					(
-						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
-						)
-				–
-	</div>
-			<p>whether the IM context should use the preedit string.</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_im_context_set_use_preedit">
-	<span><code>Gtk.IMContext.set_use_preedit</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.IMContext.set_use_preedit (self, use_preedit):
-    #python wrapper for 'gtk_im_context_set_use_preedit'</pre>
-
-<p>Sets whether the IM context should use the preedit string
-to display feedback. If <em>use_preedit</em> is FALSE (default
-is TRUE), then the IM context may use some other method to display
-feedback, such as displaying it in a child of the root window.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>context</code></em></i>
-					(
-						<a title="Gtk.IMContext" href="gtkimcontext-h.html#GtkIMContext">Gtk.IMContext</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkimcontext-h.html#GtkIMContext">Gtk.IMContext</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>use_preedit</code></em></i>
-					(
-						<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
-						)
-				–
-	</div>
-			<p>whether the IM context should use the preedit string.</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
 
 </div>
 
@@ -1493,23 +450,22 @@ feedback, such as displaying it in a child of the root window.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_im_context_set_surrounding">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h4 data-hotdoc-id="gtk_im_context_set_surrounding">
-	<span><code>gtk_im_context_set_surrounding</code></span>
+	<span><code>Gtk.IMContext.SetSurrounding</code></span>
 </h4>
 
 
 
 
 <pre class="c-prototype">
-gtk_im_context_set_surrounding (<a title="GtkIMContext" href="gtkimcontext-h.html#GtkIMContext">GtkIMContext</a> * context,
-                                const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * text,
-                                <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> len,
-                                <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> cursor_index)</pre>
+Gtk.IMContext.SetSurrounding (<a title="string" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/string">string</a>,
+                              <a title="int" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/int">int</a>,
+                              <a title="int" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/int">int</a>)</pre>
 
 <p>Sets surrounding context around the insertion point and preedit
 string. This function is expected to be called in response to the
@@ -1520,16 +476,6 @@ effect if called at other times.</p>
 
 	<div class="parameters-container">
 		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>context</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkimcontext-h.html#GtkIMContext">GtkIMContext</a></p>
-
-	</div>
-
 					
 <div class="symbol-detail">
 	<div>
@@ -1556,175 +502,6 @@ the preedit string should not be included within
 <div class="symbol-detail">
 	<div>
 		<i><em><code>cursor_index</code></em></i>
-				–
-	</div>
-			<p>the byte index of the insertion cursor within <em>text</em>.</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_im_context_set_surrounding">
-	<span><code>Gtk.prototype.set_surrounding</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.set_surrounding(text: <a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>, len: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, cursor_index: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
-    // javascript wrapper for 'gtk_im_context_set_surrounding'
-}</pre>
-
-<p>Sets surrounding context around the insertion point and preedit
-string. This function is expected to be called in response to the
-GtkIMContext::retrieve_surrounding signal, and will likely have no
-effect if called at other times.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>context</code></em></i>
-					(
-						<a title="Gtk.IMContext" href="gtkimcontext-h.html#GtkIMContext">Gtk.IMContext</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkimcontext-h.html#GtkIMContext">Gtk.IMContext</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>text</code></em></i>
-					(
-						<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
-						)
-				–
-	</div>
-			<p>text surrounding the insertion point, as UTF-8.
-the preedit string should not be included within
-<em>text</em>.</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>len</code></em></i>
-					(
-						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
-						)
-				–
-	</div>
-			<p>the length of <em>text</em>, or -1 if <em>text</em> is nul-terminated</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>cursor_index</code></em></i>
-					(
-						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
-						)
-				–
-	</div>
-			<p>the byte index of the insertion cursor within <em>text</em>.</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_im_context_set_surrounding">
-	<span><code>Gtk.IMContext.set_surrounding</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.IMContext.set_surrounding (self, text, len, cursor_index):
-    #python wrapper for 'gtk_im_context_set_surrounding'</pre>
-
-<p>Sets surrounding context around the insertion point and preedit
-string. This function is expected to be called in response to the
-GtkIMContext::retrieve_surrounding signal, and will likely have no
-effect if called at other times.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>context</code></em></i>
-					(
-						<a title="Gtk.IMContext" href="gtkimcontext-h.html#GtkIMContext">Gtk.IMContext</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkimcontext-h.html#GtkIMContext">Gtk.IMContext</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>text</code></em></i>
-					(
-						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
-						)
-				–
-	</div>
-			<p>text surrounding the insertion point, as UTF-8.
-the preedit string should not be included within
-<em>text</em>.</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>len</code></em></i>
-					(
-						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
-						)
-				–
-	</div>
-			<p>the length of <em>text</em>, or -1 if <em>text</em> is nul-terminated</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>cursor_index</code></em></i>
-					(
-						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
-						)
 				–
 	</div>
 			<p>the byte index of the insertion cursor within <em>text</em>.</p>
@@ -1745,23 +522,22 @@ the preedit string should not be included within
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_im_context_get_surrounding">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h4 data-hotdoc-id="gtk_im_context_get_surrounding">
-	<span><code>gtk_im_context_get_surrounding</code></span>
+	<span><code>Gtk.IMContext.GetSurrounding</code></span>
 </h4>
 
 
 
 
 <pre class="c-prototype">
-<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
-gtk_im_context_get_surrounding (<a title="GtkIMContext" href="gtkimcontext-h.html#GtkIMContext">GtkIMContext</a> * context,
-                                <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> ** text,
-                                <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> * cursor_index)</pre>
+<a title="bool" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/bool">bool</a>
+Gtk.IMContext.GetSurrounding (<a title="out" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/out">out</a>  <a title="string" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/string">string</a>,
+                              <a title="out" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/out">out</a>  <a title="int" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/int">int</a>)</pre>
 
 <p>Retrieves context around the insertion point. Input methods
 typically want context in order to constrain input text based on
@@ -1771,7 +547,7 @@ only some sequences of characters are allowed.</p>
 GtkIMContext::retrieve_surrounding signal on the input method; in
 response to this signal, a widget should provide as much context as
 is available, up to an entire paragraph, by calling
-<a href="gtkimcontext-h.html#gtk_im_context_set_surrounding">gtk_im_context_set_surrounding</a>. Note that there is no obligation
+<a href="gtkimcontext-h.html#gtk_im_context_set_surrounding">Gtk.IMContext.SetSurrounding</a>. Note that there is no obligation
 for a widget to respond to the ::retrieve_surrounding signal, so input
 methods must be prepared to function without context.</p>
 
@@ -1782,29 +558,13 @@ methods must be prepared to function without context.</p>
 					
 <div class="symbol-detail">
 	<div>
-		<i><em><code>context</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkimcontext-h.html#GtkIMContext">GtkIMContext</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
 		<i><em><code>text</code></em></i>
-					(
-						
-<span class="annotation">[<abbr title="Parameter for returning results"><span class="acronym">out</span></abbr>]</span>
-<span class="annotation">[<abbr title="Free data after the code is done"><span class="acronym">transfer: full</span></abbr>]</span>
-
-						)
 				–
 	</div>
 			<p>location to store a UTF-8 encoded
 string of text holding context around the insertion point.
-If the function returns <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a>, then you must free the result
-stored in this location with <a href="https://developer.gnome.org/glib/unstable/glib-Memory-Allocation.html#g-free">g_free</a>.</p>
+If the function returns <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/true">true</a>, then you must free the result
+stored in this location with <a href="https://developer.gnome.org/glib/unstable/glib-Memory-Allocation.html#g-free">GLib.Global.Free</a>.</p>
 
 	</div>
 
@@ -1812,11 +572,6 @@ stored in this location with <a href="https://developer.gnome.org/glib/unstable/
 <div class="symbol-detail">
 	<div>
 		<i><em><code>cursor_index</code></em></i>
-					(
-						
-<span class="annotation">[<abbr title="Parameter for returning results"><span class="acronym">out</span></abbr>]</span>
-
-						)
 				–
 	</div>
 			<p>location to store byte index of the insertion
@@ -1832,202 +587,11 @@ cursor within <em>text</em>.</p>
 				<b>Returns</b>
 								–
 			</div>
-							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if surrounding text was provided; in this case
+							<p><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/true">true</a> if surrounding text was provided; in this case
 you must free the result stored in *text.</p>
 
 					</div>
 	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_im_context_get_surrounding">
-	<span><code>Gtk.prototype.get_surrounding</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.get_surrounding(): {
-    // javascript wrapper for 'gtk_im_context_get_surrounding'
-}</pre>
-
-<p>Retrieves context around the insertion point. Input methods
-typically want context in order to constrain input text based on
-existing text; this is important for languages such as Thai where
-only some sequences of characters are allowed.</p>
-<p>This function is implemented by emitting the
-GtkIMContext::retrieve_surrounding signal on the input method; in
-response to this signal, a widget should provide as much context as
-is available, up to an entire paragraph, by calling
-<a href="gtkimcontext-h.html#gtk_im_context_set_surrounding">Gtk.prototype.set_surrounding</a>. Note that there is no obligation
-for a widget to respond to the ::retrieve_surrounding signal, so input
-methods must be prepared to function without context.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>context</code></em></i>
-					(
-						<a title="Gtk.IMContext" href="gtkimcontext-h.html#GtkIMContext">Gtk.IMContext</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkimcontext-h.html#GtkIMContext">Gtk.IMContext</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<p><b>Returns a tuple made of:</b></p>
-				
-<div class="symbol-detail">
-	<div>
-									(
-			<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
-						)
-				–
-	</div>
-			<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if surrounding text was provided; in this case
-you must free the result stored in *text.</p>
-
-	</div>
-
-				
-<div class="symbol-detail">
-	<div>
-				<i><em><code>text</code></em></i>
-									(
-			<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
-						)
-				–
-	</div>
-			<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if surrounding text was provided; in this case
-you must free the result stored in *text.</p>
-
-	</div>
-
-				
-<div class="symbol-detail">
-	<div>
-				<i><em><code>cursor_index</code></em></i>
-									(
-			<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
-						)
-				–
-	</div>
-			<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if surrounding text was provided; in this case
-you must free the result stored in *text.</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_im_context_get_surrounding">
-	<span><code>Gtk.IMContext.get_surrounding</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.IMContext.get_surrounding (self):
-    #python wrapper for 'gtk_im_context_get_surrounding'</pre>
-
-<p>Retrieves context around the insertion point. Input methods
-typically want context in order to constrain input text based on
-existing text; this is important for languages such as Thai where
-only some sequences of characters are allowed.</p>
-<p>This function is implemented by emitting the
-GtkIMContext::retrieve_surrounding signal on the input method; in
-response to this signal, a widget should provide as much context as
-is available, up to an entire paragraph, by calling
-<a href="gtkimcontext-h.html#gtk_im_context_set_surrounding">Gtk.IMContext.set_surrounding</a>. Note that there is no obligation
-for a widget to respond to the ::retrieve_surrounding signal, so input
-methods must be prepared to function without context.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>context</code></em></i>
-					(
-						<a title="Gtk.IMContext" href="gtkimcontext-h.html#GtkIMContext">Gtk.IMContext</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkimcontext-h.html#GtkIMContext">Gtk.IMContext</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<p><b>Returns a tuple made of:</b></p>
-				
-<div class="symbol-detail">
-	<div>
-									(
-			<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
-						)
-				–
-	</div>
-			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if surrounding text was provided; in this case
-you must free the result stored in *text.</p>
-
-	</div>
-
-				
-<div class="symbol-detail">
-	<div>
-				<i><em><code>text</code></em></i>
-									(
-			<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
-						)
-				–
-	</div>
-			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if surrounding text was provided; in this case
-you must free the result stored in *text.</p>
-
-	</div>
-
-				
-<div class="symbol-detail">
-	<div>
-				<i><em><code>cursor_index</code></em></i>
-									(
-			<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
-						)
-				–
-	</div>
-			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if surrounding text was provided; in this case
-you must free the result stored in *text.</p>
-
-	</div>
-
-			</div>
 
 
 
@@ -2041,106 +605,22 @@ you must free the result stored in *text.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_im_context_delete_surrounding">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h4 data-hotdoc-id="gtk_im_context_delete_surrounding">
-	<span><code>gtk_im_context_delete_surrounding</code></span>
+	<span><code>Gtk.IMContext.DeleteSurrounding</code></span>
 </h4>
 
 
 
 
 <pre class="c-prototype">
-<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
-gtk_im_context_delete_surrounding (<a title="GtkIMContext" href="gtkimcontext-h.html#GtkIMContext">GtkIMContext</a> * context,
-                                   <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> offset,
-                                   <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> n_chars)</pre>
-
-<p>Asks the widget that the input context is attached to to delete
-characters around the cursor position by emitting the
-GtkIMContext::delete_surrounding signal. Note that <em>offset</em> and <em>n_chars</em>
-are in characters not in bytes which differs from the usage other
-places in <a href="gtkimcontext-h.html#GtkIMContext">GtkIMContext</a>.</p>
-<p>In order to use this function, you should first call
-<a href="gtkimcontext-h.html#gtk_im_context_get_surrounding">gtk_im_context_get_surrounding</a> to get the current context, and
-call this function immediately afterwards to make sure that you
-know what you are deleting. You should also account for the fact
-that even if the signal was handled, the input context might not
-have deleted all the characters that were requested to be deleted.</p>
-<p>This function is used by an input method that wants to make
-subsitutions in the existing text in response to new input. It is
-not useful for applications.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>context</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkimcontext-h.html#GtkIMContext">GtkIMContext</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>offset</code></em></i>
-				–
-	</div>
-			<p>offset from cursor position in chars;
-a negative value means start before the cursor.</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>n_chars</code></em></i>
-				–
-	</div>
-			<p>number of characters to delete.</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-								–
-			</div>
-							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if the signal was handled.</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_im_context_delete_surrounding">
-	<span><code>Gtk.prototype.delete_surrounding</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.delete_surrounding(offset: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, n_chars: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
-    // javascript wrapper for 'gtk_im_context_delete_surrounding'
-}</pre>
+<a title="bool" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/bool">bool</a>
+Gtk.IMContext.DeleteSurrounding (<a title="int" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/int">int</a>,
+                                 <a title="int" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/int">int</a>)</pre>
 
 <p>Asks the widget that the input context is attached to to delete
 characters around the cursor position by emitting the
@@ -2148,7 +628,7 @@ GtkIMContext::delete_surrounding signal. Note that <em>offset</em> and <em>n_cha
 are in characters not in bytes which differs from the usage other
 places in <a href="gtkimcontext-h.html#GtkIMContext">Gtk.IMContext</a>.</p>
 <p>In order to use this function, you should first call
-<a href="gtkimcontext-h.html#gtk_im_context_get_surrounding">Gtk.prototype.get_surrounding</a> to get the current context, and
+<a href="gtkimcontext-h.html#gtk_im_context_get_surrounding">Gtk.IMContext.GetSurrounding</a> to get the current context, and
 call this function immediately afterwards to make sure that you
 know what you are deleting. You should also account for the fact
 that even if the signal was handled, the input context might not
@@ -2164,23 +644,7 @@ not useful for applications.</p>
 					
 <div class="symbol-detail">
 	<div>
-		<i><em><code>context</code></em></i>
-					(
-						<a title="Gtk.IMContext" href="gtkimcontext-h.html#GtkIMContext">Gtk.IMContext</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkimcontext-h.html#GtkIMContext">Gtk.IMContext</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
 		<i><em><code>offset</code></em></i>
-					(
-						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
-						)
 				–
 	</div>
 			<p>offset from cursor position in chars;
@@ -2192,9 +656,6 @@ a negative value means start before the cursor.</p>
 <div class="symbol-detail">
 	<div>
 		<i><em><code>n_chars</code></em></i>
-					(
-						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
-						)
 				–
 	</div>
 			<p>number of characters to delete.</p>
@@ -2207,106 +668,9 @@ a negative value means start before the cursor.</p>
 		<div class="symbol-detail">
 			<div>
 				<b>Returns</b>
-									(
-					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
-										)
 								–
 			</div>
-							<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if the signal was handled.</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_im_context_delete_surrounding">
-	<span><code>Gtk.IMContext.delete_surrounding</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.IMContext.delete_surrounding (self, offset, n_chars):
-    #python wrapper for 'gtk_im_context_delete_surrounding'</pre>
-
-<p>Asks the widget that the input context is attached to to delete
-characters around the cursor position by emitting the
-GtkIMContext::delete_surrounding signal. Note that <em>offset</em> and <em>n_chars</em>
-are in characters not in bytes which differs from the usage other
-places in <a href="gtkimcontext-h.html#GtkIMContext">Gtk.IMContext</a>.</p>
-<p>In order to use this function, you should first call
-<a href="gtkimcontext-h.html#gtk_im_context_get_surrounding">Gtk.IMContext.get_surrounding</a> to get the current context, and
-call this function immediately afterwards to make sure that you
-know what you are deleting. You should also account for the fact
-that even if the signal was handled, the input context might not
-have deleted all the characters that were requested to be deleted.</p>
-<p>This function is used by an input method that wants to make
-subsitutions in the existing text in response to new input. It is
-not useful for applications.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>context</code></em></i>
-					(
-						<a title="Gtk.IMContext" href="gtkimcontext-h.html#GtkIMContext">Gtk.IMContext</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkimcontext-h.html#GtkIMContext">Gtk.IMContext</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>offset</code></em></i>
-					(
-						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
-						)
-				–
-	</div>
-			<p>offset from cursor position in chars;
-a negative value means start before the cursor.</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>n_chars</code></em></i>
-					(
-						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
-						)
-				–
-	</div>
-			<p>number of characters to delete.</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
-										)
-								–
-			</div>
-							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if the signal was handled.</p>
+							<p><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/true">true</a> if the signal was handled.</p>
 
 					</div>
 	</div>
@@ -2327,236 +691,22 @@ a negative value means start before the cursor.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="GtkIMContextInfo">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
-<h3 data-hotdoc-id="GtkIMContextInfo">
-	<span><code>GtkIMContextInfo</code></span>
-</h3>
-
-
-<p>Bookkeeping information about a loadable input method.</p>
+<h2 data-hotdoc-id="GtkIMContextInfo">
+	<span><code>Gtk.IMContextInfo</code></span>
+</h2>
 
 
 
 
-	<div class="members-container">
-		<h4>Fields</h4>
-					
-<div class="symbol-detail" data-hotdoc-id="GtkIMContextInfo.context_id">
-	<div>
-		<i><em><code>context_id</code></em></i>
-		(const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> *)
-		–
-	</div>
-			<p>The unique identification string of the input method.</p>
+<div class="class_details">
+	<p>Bookkeeping information about a loadable input method.</p>
 
-	</div>
-
-					
-<div class="symbol-detail" data-hotdoc-id="GtkIMContextInfo.context_name">
-	<div>
-		<i><em><code>context_name</code></em></i>
-		(const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> *)
-		–
-	</div>
-			<p>The human-readable name of the input method.</p>
-
-	</div>
-
-					
-<div class="symbol-detail" data-hotdoc-id="GtkIMContextInfo.domain">
-	<div>
-		<i><em><code>domain</code></em></i>
-		(const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> *)
-		–
-	</div>
-			<p>Translation domain to be used with dgettext</p>
-
-	</div>
-
-					
-<div class="symbol-detail" data-hotdoc-id="GtkIMContextInfo.domain_dirname">
-	<div>
-		<i><em><code>domain_dirname</code></em></i>
-		(const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> *)
-		–
-	</div>
-			<p>Name of locale directory for use with bindtextdomain</p>
-
-	</div>
-
-					
-<div class="symbol-detail" data-hotdoc-id="GtkIMContextInfo.default_locales">
-	<div>
-		<i><em><code>default_locales</code></em></i>
-		(const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> *)
-		–
-	</div>
-			<p>A colon-separated list of locales where this input method
-should be the default. The asterisk “*” sets the default for all locales.</p>
-
-	</div>
-
-			</div>
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h3>
-	Gtk.IMContextInfo
-</h3>
-
-
-<p>Bookkeeping information about a loadable input method.</p>
-
-
-
-
-	<div class="members-container">
-		<h4>Attributes</h4>
-					
-<div class="symbol-detail" data-hotdoc-id="GtkIMContextInfo.context_id">
-	<div>
-		<i><em><code>IMContextInfo.context_id</code></em></i>
-		(<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)
-		–
-	</div>
-			<p>The unique identification string of the input method.</p>
-
-	</div>
-
-					
-<div class="symbol-detail" data-hotdoc-id="GtkIMContextInfo.context_name">
-	<div>
-		<i><em><code>IMContextInfo.context_name</code></em></i>
-		(<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)
-		–
-	</div>
-			<p>The human-readable name of the input method.</p>
-
-	</div>
-
-					
-<div class="symbol-detail" data-hotdoc-id="GtkIMContextInfo.domain">
-	<div>
-		<i><em><code>IMContextInfo.domain</code></em></i>
-		(<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)
-		–
-	</div>
-			<p>Translation domain to be used with dgettext</p>
-
-	</div>
-
-					
-<div class="symbol-detail" data-hotdoc-id="GtkIMContextInfo.domain_dirname">
-	<div>
-		<i><em><code>IMContextInfo.domain_dirname</code></em></i>
-		(<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)
-		–
-	</div>
-			<p>Name of locale directory for use with bindtextdomain</p>
-
-	</div>
-
-					
-<div class="symbol-detail" data-hotdoc-id="GtkIMContextInfo.default_locales">
-	<div>
-		<i><em><code>IMContextInfo.default_locales</code></em></i>
-		(<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)
-		–
-	</div>
-			<p>A colon-separated list of locales where this input method
-should be the default. The asterisk “*” sets the default for all locales.</p>
-
-	</div>
-
-			</div>
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3>
-	Gtk.IMContextInfo
-</h3>
-
-
-<p>Bookkeeping information about a loadable input method.</p>
-
-
-
-
-	<div class="members-container">
-		<h4>Attributes</h4>
-					
-<div class="symbol-detail" data-hotdoc-id="GtkIMContextInfo.context_id">
-	<div>
-		<i><em><code>IMContextInfo.context_id</code></em></i>
-		(<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>)
-		–
-	</div>
-			<p>The unique identification string of the input method.</p>
-
-	</div>
-
-					
-<div class="symbol-detail" data-hotdoc-id="GtkIMContextInfo.context_name">
-	<div>
-		<i><em><code>IMContextInfo.context_name</code></em></i>
-		(<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>)
-		–
-	</div>
-			<p>The human-readable name of the input method.</p>
-
-	</div>
-
-					
-<div class="symbol-detail" data-hotdoc-id="GtkIMContextInfo.domain">
-	<div>
-		<i><em><code>IMContextInfo.domain</code></em></i>
-		(<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>)
-		–
-	</div>
-			<p>Translation domain to be used with dgettext</p>
-
-	</div>
-
-					
-<div class="symbol-detail" data-hotdoc-id="GtkIMContextInfo.domain_dirname">
-	<div>
-		<i><em><code>IMContextInfo.domain_dirname</code></em></i>
-		(<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>)
-		–
-	</div>
-			<p>Name of locale directory for use with bindtextdomain</p>
-
-	</div>
-
-					
-<div class="symbol-detail" data-hotdoc-id="GtkIMContextInfo.default_locales">
-	<div>
-		<i><em><code>IMContextInfo.default_locales</code></em></i>
-		(<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>)
-		–
-	</div>
-			<p>A colon-separated list of locales where this input method
-should be the default. The asterisk “*” sets the default for all locales.</p>
-
-	</div>
-
-			</div>
+</div>
 
 
 

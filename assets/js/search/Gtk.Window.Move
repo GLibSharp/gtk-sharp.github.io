@@ -1,0 +1,1 @@
+urls_downloaded_cb({"token": "Gtk.Window.Move", "urls": [{"url": "gtkwindow-h.html#gtk_window_move", "context": {"gi-language": ["csharp"]}}, {"url": "gtkwindow-h.html#gtk_window_get_position", "context": {"gi-language": ["csharp"]}}]});

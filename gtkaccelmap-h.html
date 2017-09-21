@@ -89,7 +89,7 @@ $('body').removeClass('no-script');
 </nav>
 
 <main>
-<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="gtkaccelmap-h.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['c', 'javascript', 'python']" data-hotdoc-meta-gi-language="c">
+<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="gtkaccelmap-h.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['csharp']" data-hotdoc-meta-gi-language="c">
 <script src="assets/js/utils.js"></script>
 
 <div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
@@ -122,26 +122,26 @@ the action the accelerator triggers, i.e. for accelerators on menu
 items, choose the item’s menu path, e.g. “File/Save As”,
 “Image/View/Zoom” or “Edit/Select All”. So a full valid accelerator
 path may look like: “<gimp-toolbox>/File/Dialogs/Tool Options...”.</gimp-toolbox></windowtype></p>
-<p>All accelerators are stored inside one global <a href="gtkaccelmap-h.html#GtkAccelMap" data-gi-href-javascript="gtkaccelmap-h.html#GtkAccelMap" data-gi-title-javascript="Gtk.AccelMap" data-gi-href-python="gtkaccelmap-h.html#GtkAccelMap" data-gi-title-python="Gtk.AccelMap">GtkAccelMap</a> that can
-be obtained using <a href="gtkaccelmap-h.html#gtk_accel_map_get" data-gi-href-javascript="gtkaccelmap-h.html#gtk_accel_map_get" data-gi-title-javascript="Gtk.prototype.get" data-gi-href-python="gtkaccelmap-h.html#gtk_accel_map_get" data-gi-title-python="Gtk.AccelMap.get">gtk_accel_map_get</a>. See
+<p>All accelerators are stored inside one global <a href="gtkaccelmap-h.html#GtkAccelMap" data-gi-href-csharp="gtkaccelmap-h.html#GtkAccelMap" data-gi-title-csharp="Gtk.AccelMap">GtkAccelMap</a> that can
+be obtained using <a href="gtkaccelmap-h.html#gtk_accel_map_get" data-gi-href-csharp="gtkaccelmap-h.html#gtk_accel_map_get" data-gi-title-csharp="Gtk.AccelMap.Get">gtk_accel_map_get</a>. See
 [Monitoring changes][monitoring-changes] for additional
 details.</p>
 <h1 id="manipulating-accelerators">Manipulating accelerators</h1>
-<p>New accelerators can be added using <a href="gtkaccelmap-h.html#gtk_accel_map_add_entry" data-gi-href-javascript="gtkaccelmap-h.html#gtk_accel_map_add_entry" data-gi-title-javascript="Gtk.prototype.add_entry" data-gi-href-python="gtkaccelmap-h.html#gtk_accel_map_add_entry" data-gi-title-python="Gtk.AccelMap.add_entry">gtk_accel_map_add_entry</a>.
-To search for specific accelerator, use <a href="gtkaccelmap-h.html#gtk_accel_map_lookup_entry" data-gi-href-javascript="gtkaccelmap-h.html#gtk_accel_map_lookup_entry" data-gi-title-javascript="Gtk.prototype.lookup_entry" data-gi-href-python="gtkaccelmap-h.html#gtk_accel_map_lookup_entry" data-gi-title-python="Gtk.AccelMap.lookup_entry">gtk_accel_map_lookup_entry</a>.
+<p>New accelerators can be added using <a href="gtkaccelmap-h.html#gtk_accel_map_add_entry" data-gi-href-csharp="gtkaccelmap-h.html#gtk_accel_map_add_entry" data-gi-title-csharp="Gtk.AccelMap.AddEntry">gtk_accel_map_add_entry</a>.
+To search for specific accelerator, use <a href="gtkaccelmap-h.html#gtk_accel_map_lookup_entry" data-gi-href-csharp="gtkaccelmap-h.html#gtk_accel_map_lookup_entry" data-gi-title-csharp="Gtk.AccelMap.LookupEntry">gtk_accel_map_lookup_entry</a>.
 Modifications of existing accelerators should be done using
-<a href="gtkaccelmap-h.html#gtk_accel_map_change_entry" data-gi-href-javascript="gtkaccelmap-h.html#gtk_accel_map_change_entry" data-gi-title-javascript="Gtk.prototype.change_entry" data-gi-href-python="gtkaccelmap-h.html#gtk_accel_map_change_entry" data-gi-title-python="Gtk.AccelMap.change_entry">gtk_accel_map_change_entry</a>.</p>
+<a href="gtkaccelmap-h.html#gtk_accel_map_change_entry" data-gi-href-csharp="gtkaccelmap-h.html#gtk_accel_map_change_entry" data-gi-title-csharp="Gtk.AccelMap.ChangeEntry">gtk_accel_map_change_entry</a>.</p>
 <p>In order to avoid having some accelerators changed, they can be
-locked using <a href="gtkaccelmap-h.html#gtk_accel_map_lock_path" data-gi-href-javascript="gtkaccelmap-h.html#gtk_accel_map_lock_path" data-gi-title-javascript="Gtk.prototype.lock_path" data-gi-href-python="gtkaccelmap-h.html#gtk_accel_map_lock_path" data-gi-title-python="Gtk.AccelMap.lock_path">gtk_accel_map_lock_path</a>. Unlocking is done using
-<a href="gtkaccelmap-h.html#gtk_accel_map_unlock_path" data-gi-href-javascript="gtkaccelmap-h.html#gtk_accel_map_unlock_path" data-gi-title-javascript="Gtk.prototype.unlock_path" data-gi-href-python="gtkaccelmap-h.html#gtk_accel_map_unlock_path" data-gi-title-python="Gtk.AccelMap.unlock_path">gtk_accel_map_unlock_path</a>.</p>
+locked using <a href="gtkaccelmap-h.html#gtk_accel_map_lock_path" data-gi-href-csharp="gtkaccelmap-h.html#gtk_accel_map_lock_path" data-gi-title-csharp="Gtk.AccelMap.LockPath">gtk_accel_map_lock_path</a>. Unlocking is done using
+<a href="gtkaccelmap-h.html#gtk_accel_map_unlock_path" data-gi-href-csharp="gtkaccelmap-h.html#gtk_accel_map_unlock_path" data-gi-title-csharp="Gtk.AccelMap.UnlockPath">gtk_accel_map_unlock_path</a>.</p>
 <h1 id="saving-and-loading-accelerator-maps">Saving and loading accelerator maps</h1>
 <p>Accelerator maps can be saved to and loaded from some external
 resource. For simple saving and loading from file,
-<a href="gtkaccelmap-h.html#gtk_accel_map_save" data-gi-href-javascript="gtkaccelmap-h.html#gtk_accel_map_save" data-gi-title-javascript="Gtk.prototype.save" data-gi-href-python="gtkaccelmap-h.html#gtk_accel_map_save" data-gi-title-python="Gtk.AccelMap.save">gtk_accel_map_save</a> and <a href="gtkaccelmap-h.html#gtk_accel_map_load" data-gi-href-javascript="gtkaccelmap-h.html#gtk_accel_map_load" data-gi-title-javascript="Gtk.prototype.load" data-gi-href-python="gtkaccelmap-h.html#gtk_accel_map_load" data-gi-title-python="Gtk.AccelMap.load">gtk_accel_map_load</a> are provided.
+<a href="gtkaccelmap-h.html#gtk_accel_map_save" data-gi-href-csharp="gtkaccelmap-h.html#gtk_accel_map_save" data-gi-title-csharp="Gtk.AccelMap.Save">gtk_accel_map_save</a> and <a href="gtkaccelmap-h.html#gtk_accel_map_load" data-gi-href-csharp="gtkaccelmap-h.html#gtk_accel_map_load" data-gi-title-csharp="Gtk.AccelMap.Load">gtk_accel_map_load</a> are provided.
 Saving and loading can also be done by providing file descriptor
-to <a href="gtkaccelmap-h.html#gtk_accel_map_save_fd" data-gi-href-javascript="gtkaccelmap-h.html#gtk_accel_map_save_fd" data-gi-title-javascript="Gtk.prototype.save_fd" data-gi-href-python="gtkaccelmap-h.html#gtk_accel_map_save_fd" data-gi-title-python="Gtk.AccelMap.save_fd">gtk_accel_map_save_fd</a> and <a href="gtkaccelmap-h.html#gtk_accel_map_load_fd" data-gi-href-javascript="gtkaccelmap-h.html#gtk_accel_map_load_fd" data-gi-title-javascript="Gtk.prototype.load_fd" data-gi-href-python="gtkaccelmap-h.html#gtk_accel_map_load_fd" data-gi-title-python="Gtk.AccelMap.load_fd">gtk_accel_map_load_fd</a>.</p>
+to <a href="gtkaccelmap-h.html#gtk_accel_map_save_fd" data-gi-href-csharp="gtkaccelmap-h.html#gtk_accel_map_save_fd" data-gi-title-csharp="Gtk.AccelMap.SaveFd">gtk_accel_map_save_fd</a> and <a href="gtkaccelmap-h.html#gtk_accel_map_load_fd" data-gi-href-csharp="gtkaccelmap-h.html#gtk_accel_map_load_fd" data-gi-title-csharp="Gtk.AccelMap.LoadFd">gtk_accel_map_load_fd</a>.</p>
 <h1 id="monitoring-changes">Monitoring changes</h1>
-<p><a href="gtkaccelmap-h.html#GtkAccelMap" data-gi-href-javascript="gtkaccelmap-h.html#GtkAccelMap" data-gi-title-javascript="Gtk.AccelMap" data-gi-href-python="gtkaccelmap-h.html#GtkAccelMap" data-gi-title-python="Gtk.AccelMap">GtkAccelMap</a> object is only useful for monitoring changes of
+<p><a href="gtkaccelmap-h.html#GtkAccelMap" data-gi-href-csharp="gtkaccelmap-h.html#GtkAccelMap" data-gi-title-csharp="Gtk.AccelMap">GtkAccelMap</a> object is only useful for monitoring changes of
 accelerators. By connecting to <a href="https://developer.gnome.org/gtk3/gtk3-Accelerator-Maps.html#GtkAccelMap-changed">GtkAccelMap::changed</a> signal, one
 can monitor changes of all accelerators. It is also possible to
 monitor only single accelerator path by using it as a detail of
@@ -154,7 +154,7 @@ the <a href="https://developer.gnome.org/gtk3/gtk3-Accelerator-Maps.html#GtkAcce
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="GtkAccelMap">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
@@ -167,120 +167,13 @@ the <a href="https://developer.gnome.org/gtk3/gtk3-Accelerator-Maps.html#GtkAcce
 <div class="hierarchy_container">
 	<div class="hierarchy_details">
 <pre>
-<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object">GObject</a>
+<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-csharp="http://docs.go-mono.com/?link=T%3aGLib.Object" data-gi-title-csharp="GLib.Object">GObject</a>
     <span class="lineart">╰──</span>GtkAccelMap
 </pre>
 
 </div>
 
 </div>
-
-
-
-
-
-
-<h3>Class structure</h3>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="GtkAccelMapClass">
-	<span><code>GtkAccelMapClass</code></span>
-</h4>
-
-
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h3>
-	Gtk.AccelMapClass
-</h3>
-
-
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3>
-	Gtk.AccelMapClass
-</h3>
-
-
-
-
-
-
-
-        </div>
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h2 data-hotdoc-id="GtkAccelMap">
-	<span><code>GtkAccelMap</code></span>
-</h2>
-
-
-<div class="hierarchy_container">
-	<div class="hierarchy_details">
-<pre>
-<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object">GObject</a>
-    <span class="lineart">╰──</span>GtkAccelMap
-</pre>
-
-</div>
-
-</div>
-
-
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h2 data-hotdoc-id="GtkAccelMap">
-	<span><code>GtkAccelMap</code></span>
-</h2>
-
-
-<div class="hierarchy_container">
-	<div class="hierarchy_details">
-<pre>
-<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object">GObject</a>
-    <span class="lineart">╰──</span>GtkAccelMap
-</pre>
-
-</div>
-
-</div>
-
-
 
 
 
@@ -298,100 +191,33 @@ the <a href="https://developer.gnome.org/gtk3/gtk3-Accelerator-Maps.html#GtkAcce
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_accel_map_add_entry">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h3 data-hotdoc-id="gtk_accel_map_add_entry">
-	<span><code>gtk_accel_map_add_entry</code></span>
+	<span><code>Gtk.AccelMap.AddEntry</code></span>
 </h3>
 
 
 
 
 <pre class="c-prototype">
-gtk_accel_map_add_entry (const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * accel_path,
-                         <a title="guint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint">guint</a> accel_key,
-                         <a title="GdkModifierType" href="https://developer.gnome.org/gdk3/gdk3-Windows.html#GdkModifierType">GdkModifierType</a> accel_mods)</pre>
+Gtk.AccelMap.AddEntry (<a title="string" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/string">string</a>,
+                       <a title="uint" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/uint">uint</a>,
+                       <a title="Gdk.ModifierType" href="https://developer.gnome.org/gdk3/gdk3-Windows.html#GdkModifierType">Gdk.ModifierType</a>)</pre>
 
 <p>Registers a new accelerator with the global accelerator map.
 This function should only be called once per <em>accel_path</em>
 with the canonical <em>accel_key</em> and <em>accel_mods</em> for this path.
 To change the accelerator during runtime programatically, use
-<a href="gtkaccelmap-h.html#gtk_accel_map_change_entry">gtk_accel_map_change_entry</a>.</p>
-<p>Set <em>accel_key</em> and <em>accel_mods</em> to 0 to request a removal of
-the accelerator.</p>
-<p>Note that <em>accel_path</em> string will be stored in a <a href="https://developer.gnome.org/glib/unstable/glib-Quarks.html#GQuark">GQuark</a>. Therefore, if you
-pass a static string, you can save some memory by interning it first with
-<a href="https://developer.gnome.org/glib/unstable/glib-Quarks.html#g-intern-static-string">g_intern_static_string</a>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>accel_path</code></em></i>
-				–
-	</div>
-			<p>valid accelerator path</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>accel_key</code></em></i>
-				–
-	</div>
-			<p>the accelerator key</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>accel_mods</code></em></i>
-				–
-	</div>
-			<p>the accelerator modifiers</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_accel_map_add_entry">
-	<span><code>Gtk.prototype.add_entry</code></span>
-</h3>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.add_entry(accel_path: <a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>, accel_key: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, accel_mods: <a title="Gdk.ModifierType" href="https://developer.gnome.org/gdk3/gdk3-Windows.html#GdkModifierType">Gdk.ModifierType</a>): {
-    // javascript wrapper for 'gtk_accel_map_add_entry'
-}</pre>
-
-<p>Registers a new accelerator with the global accelerator map.
-This function should only be called once per <em>accel_path</em>
-with the canonical <em>accel_key</em> and <em>accel_mods</em> for this path.
-To change the accelerator during runtime programatically, use
-<a href="gtkaccelmap-h.html#gtk_accel_map_change_entry">Gtk.prototype.change_entry</a>.</p>
+<a href="gtkaccelmap-h.html#gtk_accel_map_change_entry">Gtk.AccelMap.ChangeEntry</a>.</p>
 <p>Set <em>accel_key</em> and <em>accel_mods</em> to 0 to request a removal of
 the accelerator.</p>
 <p>Note that <em>accel_path</em> string will be stored in a <a href="https://developer.gnome.org/glib/unstable/glib-Quarks.html#GQuark">GLib.Quark</a>. Therefore, if you
 pass a static string, you can save some memory by interning it first with
-<a href="https://developer.gnome.org/glib/unstable/glib-Quarks.html#g-intern-static-string">prototype.intern_static_string</a>.</p>
+<a href="https://developer.gnome.org/glib/unstable/glib-Quarks.html#g-intern-static-string">GLib.Global.InternStaticString</a>.</p>
 
 
 
@@ -401,9 +227,6 @@ pass a static string, you can save some memory by interning it first with
 <div class="symbol-detail">
 	<div>
 		<i><em><code>accel_path</code></em></i>
-					(
-						<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
-						)
 				–
 	</div>
 			<p>valid accelerator path</p>
@@ -414,9 +237,6 @@ pass a static string, you can save some memory by interning it first with
 <div class="symbol-detail">
 	<div>
 		<i><em><code>accel_key</code></em></i>
-					(
-						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
-						)
 				–
 	</div>
 			<p>the accelerator key</p>
@@ -427,84 +247,6 @@ pass a static string, you can save some memory by interning it first with
 <div class="symbol-detail">
 	<div>
 		<i><em><code>accel_mods</code></em></i>
-					(
-						<a title="Gdk.ModifierType" href="https://developer.gnome.org/gdk3/gdk3-Windows.html#GdkModifierType">Gdk.ModifierType</a>
-						)
-				–
-	</div>
-			<p>the accelerator modifiers</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_accel_map_add_entry">
-	<span><code>Gtk.AccelMap.add_entry</code></span>
-</h3>
-
-
-<pre class="python-prototype">
-def Gtk.AccelMap.add_entry (accel_path, accel_key, accel_mods):
-    #python wrapper for 'gtk_accel_map_add_entry'</pre>
-
-<p>Registers a new accelerator with the global accelerator map.
-This function should only be called once per <em>accel_path</em>
-with the canonical <em>accel_key</em> and <em>accel_mods</em> for this path.
-To change the accelerator during runtime programatically, use
-<a href="gtkaccelmap-h.html#gtk_accel_map_change_entry">Gtk.AccelMap.change_entry</a>.</p>
-<p>Set <em>accel_key</em> and <em>accel_mods</em> to 0 to request a removal of
-the accelerator.</p>
-<p>Note that <em>accel_path</em> string will be stored in a <a href="https://developer.gnome.org/glib/unstable/glib-Quarks.html#GQuark">GLib.Quark</a>. Therefore, if you
-pass a static string, you can save some memory by interning it first with
-<a href="https://developer.gnome.org/glib/unstable/glib-Quarks.html#g-intern-static-string">GLib.intern_static_string</a>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>accel_path</code></em></i>
-					(
-						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
-						)
-				–
-	</div>
-			<p>valid accelerator path</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>accel_key</code></em></i>
-					(
-						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
-						)
-				–
-	</div>
-			<p>the accelerator key</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>accel_mods</code></em></i>
-					(
-						<a title="Gdk.ModifierType" href="https://developer.gnome.org/gdk3/gdk3-Windows.html#GdkModifierType">Gdk.ModifierType</a>
-						)
 				–
 	</div>
 			<p>the accelerator modifiers</p>
@@ -525,22 +267,22 @@ pass a static string, you can save some memory by interning it first with
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_accel_map_lookup_entry">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h3 data-hotdoc-id="gtk_accel_map_lookup_entry">
-	<span><code>gtk_accel_map_lookup_entry</code></span>
+	<span><code>Gtk.AccelMap.LookupEntry</code></span>
 </h3>
 
 
 
 
 <pre class="c-prototype">
-<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
-gtk_accel_map_lookup_entry (const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * accel_path,
-                            <a title="GtkAccelKey" href="gtkaccelgroup-h.html#GtkAccelKey">GtkAccelKey</a> * key)</pre>
+<a title="bool" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/bool">bool</a>
+Gtk.AccelMap.LookupEntry (<a title="string" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/string">string</a>,
+                          <a title="out" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/out">out</a>  <a title="Gtk.AccelKey" href="gtkaccelgroup-h.html#GtkAccelKey">Gtk.AccelKey</a>)</pre>
 
 <p>Looks up the accelerator entry for <em>accel_path</em> and fills in <em>key</em>.</p>
 
@@ -562,12 +304,6 @@ gtk_accel_map_lookup_entry (const <a title="gchar" href="https://developer.gnome
 <div class="symbol-detail">
 	<div>
 		<i><em><code>key</code></em></i>
-					(
-						
-<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
-<span class="annotation">[<abbr title="Parameter for returning results"><span class="acronym">out</span></abbr>]</span>
-
-						)
 				–
 	</div>
 			<p>the accelerator key to be filled in (optional)</p>
@@ -582,149 +318,10 @@ gtk_accel_map_lookup_entry (const <a title="gchar" href="https://developer.gnome
 				<b>Returns</b>
 								–
 			</div>
-							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if <em>accel_path</em> is known, <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS">FALSE</a> otherwise</p>
+							<p><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/true">true</a> if <em>accel_path</em> is known, <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/false">false</a> otherwise</p>
 
 					</div>
 	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_accel_map_lookup_entry">
-	<span><code>Gtk.prototype.lookup_entry</code></span>
-</h3>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.lookup_entry(accel_path: <a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>): {
-    // javascript wrapper for 'gtk_accel_map_lookup_entry'
-}</pre>
-
-<p>Looks up the accelerator entry for <em>accel_path</em> and fills in <em>key</em>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>accel_path</code></em></i>
-					(
-						<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
-						)
-				–
-	</div>
-			<p>a valid accelerator path</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<p><b>Returns a tuple made of:</b></p>
-				
-<div class="symbol-detail">
-	<div>
-									(
-			<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
-						)
-				–
-	</div>
-			<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if <em>accel_path</em> is known, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">false</a> otherwise</p>
-
-	</div>
-
-				
-<div class="symbol-detail">
-	<div>
-				<i><em><code>key</code></em></i>
-									(
-			<a title="Gtk.AccelKey" href="gtkaccelgroup-h.html#GtkAccelKey">Gtk.AccelKey</a>
-						)
-				–
-	</div>
-			<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if <em>accel_path</em> is known, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">false</a> otherwise</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_accel_map_lookup_entry">
-	<span><code>Gtk.AccelMap.lookup_entry</code></span>
-</h3>
-
-
-<pre class="python-prototype">
-def Gtk.AccelMap.lookup_entry (accel_path):
-    #python wrapper for 'gtk_accel_map_lookup_entry'</pre>
-
-<p>Looks up the accelerator entry for <em>accel_path</em> and fills in <em>key</em>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>accel_path</code></em></i>
-					(
-						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
-						)
-				–
-	</div>
-			<p>a valid accelerator path</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<p><b>Returns a tuple made of:</b></p>
-				
-<div class="symbol-detail">
-	<div>
-									(
-			<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
-						)
-				–
-	</div>
-			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if <em>accel_path</em> is known, <a href="https://docs.python.org/3/library/constants.html#False">False</a> otherwise</p>
-
-	</div>
-
-				
-<div class="symbol-detail">
-	<div>
-				<i><em><code>key</code></em></i>
-									(
-			<a title="Gtk.AccelKey" href="gtkaccelgroup-h.html#GtkAccelKey">Gtk.AccelKey</a>
-						)
-				–
-	</div>
-			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if <em>accel_path</em> is known, <a href="https://docs.python.org/3/library/constants.html#False">False</a> otherwise</p>
-
-	</div>
-
-			</div>
 
 
 
@@ -738,121 +335,34 @@ def Gtk.AccelMap.lookup_entry (accel_path):
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_accel_map_change_entry">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h3 data-hotdoc-id="gtk_accel_map_change_entry">
-	<span><code>gtk_accel_map_change_entry</code></span>
+	<span><code>Gtk.AccelMap.ChangeEntry</code></span>
 </h3>
 
 
 
 
 <pre class="c-prototype">
-<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
-gtk_accel_map_change_entry (const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * accel_path,
-                            <a title="guint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint">guint</a> accel_key,
-                            <a title="GdkModifierType" href="https://developer.gnome.org/gdk3/gdk3-Windows.html#GdkModifierType">GdkModifierType</a> accel_mods,
-                            <a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a> replace)</pre>
+<a title="bool" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/bool">bool</a>
+Gtk.AccelMap.ChangeEntry (<a title="string" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/string">string</a>,
+                          <a title="uint" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/uint">uint</a>,
+                          <a title="Gdk.ModifierType" href="https://developer.gnome.org/gdk3/gdk3-Windows.html#GdkModifierType">Gdk.ModifierType</a>,
+                          <a title="bool" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/bool">bool</a>)</pre>
 
 <p>Changes the <em>accel_key</em> and <em>accel_mods</em> currently associated with <em>accel_path</em>.
 Due to conflicts with other accelerators, a change may not always be possible,
 <em>replace</em> indicates whether other accelerators may be deleted to resolve such
 conflicts. A change will only occur if all conflicts could be resolved (which
 might not be the case if conflicting accelerators are locked). Successful
-changes are indicated by a <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> return value.</p>
-<p>Note that <em>accel_path</em> string will be stored in a <a href="https://developer.gnome.org/glib/unstable/glib-Quarks.html#GQuark">GQuark</a>. Therefore, if you
-pass a static string, you can save some memory by interning it first with
-<a href="https://developer.gnome.org/glib/unstable/glib-Quarks.html#g-intern-static-string">g_intern_static_string</a>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>accel_path</code></em></i>
-				–
-	</div>
-			<p>a valid accelerator path</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>accel_key</code></em></i>
-				–
-	</div>
-			<p>the new accelerator key</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>accel_mods</code></em></i>
-				–
-	</div>
-			<p>the new accelerator modifiers</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>replace</code></em></i>
-				–
-	</div>
-			<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if other accelerators may be deleted upon conflicts</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-								–
-			</div>
-							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if the accelerator could be changed, <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS">FALSE</a> otherwise</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_accel_map_change_entry">
-	<span><code>Gtk.prototype.change_entry</code></span>
-</h3>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.change_entry(accel_path: <a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>, accel_key: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, accel_mods: <a title="Gdk.ModifierType" href="https://developer.gnome.org/gdk3/gdk3-Windows.html#GdkModifierType">Gdk.ModifierType</a>, replace: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
-    // javascript wrapper for 'gtk_accel_map_change_entry'
-}</pre>
-
-<p>Changes the <em>accel_key</em> and <em>accel_mods</em> currently associated with <em>accel_path</em>.
-Due to conflicts with other accelerators, a change may not always be possible,
-<em>replace</em> indicates whether other accelerators may be deleted to resolve such
-conflicts. A change will only occur if all conflicts could be resolved (which
-might not be the case if conflicting accelerators are locked). Successful
-changes are indicated by a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> return value.</p>
+changes are indicated by a <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/true">true</a> return value.</p>
 <p>Note that <em>accel_path</em> string will be stored in a <a href="https://developer.gnome.org/glib/unstable/glib-Quarks.html#GQuark">GLib.Quark</a>. Therefore, if you
 pass a static string, you can save some memory by interning it first with
-<a href="https://developer.gnome.org/glib/unstable/glib-Quarks.html#g-intern-static-string">prototype.intern_static_string</a>.</p>
+<a href="https://developer.gnome.org/glib/unstable/glib-Quarks.html#g-intern-static-string">GLib.Global.InternStaticString</a>.</p>
 
 
 
@@ -862,9 +372,6 @@ pass a static string, you can save some memory by interning it first with
 <div class="symbol-detail">
 	<div>
 		<i><em><code>accel_path</code></em></i>
-					(
-						<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
-						)
 				–
 	</div>
 			<p>a valid accelerator path</p>
@@ -875,9 +382,6 @@ pass a static string, you can save some memory by interning it first with
 <div class="symbol-detail">
 	<div>
 		<i><em><code>accel_key</code></em></i>
-					(
-						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
-						)
 				–
 	</div>
 			<p>the new accelerator key</p>
@@ -888,9 +392,6 @@ pass a static string, you can save some memory by interning it first with
 <div class="symbol-detail">
 	<div>
 		<i><em><code>accel_mods</code></em></i>
-					(
-						<a title="Gdk.ModifierType" href="https://developer.gnome.org/gdk3/gdk3-Windows.html#GdkModifierType">Gdk.ModifierType</a>
-						)
 				–
 	</div>
 			<p>the new accelerator modifiers</p>
@@ -901,12 +402,9 @@ pass a static string, you can save some memory by interning it first with
 <div class="symbol-detail">
 	<div>
 		<i><em><code>replace</code></em></i>
-					(
-						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
-						)
 				–
 	</div>
-			<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if other accelerators may be deleted upon conflicts</p>
+			<p><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/true">true</a> if other accelerators may be deleted upon conflicts</p>
 
 	</div>
 
@@ -916,113 +414,9 @@ pass a static string, you can save some memory by interning it first with
 		<div class="symbol-detail">
 			<div>
 				<b>Returns</b>
-									(
-					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
-										)
 								–
 			</div>
-							<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if the accelerator could be changed, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">false</a> otherwise</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_accel_map_change_entry">
-	<span><code>Gtk.AccelMap.change_entry</code></span>
-</h3>
-
-
-<pre class="python-prototype">
-def Gtk.AccelMap.change_entry (accel_path, accel_key, accel_mods, replace):
-    #python wrapper for 'gtk_accel_map_change_entry'</pre>
-
-<p>Changes the <em>accel_key</em> and <em>accel_mods</em> currently associated with <em>accel_path</em>.
-Due to conflicts with other accelerators, a change may not always be possible,
-<em>replace</em> indicates whether other accelerators may be deleted to resolve such
-conflicts. A change will only occur if all conflicts could be resolved (which
-might not be the case if conflicting accelerators are locked). Successful
-changes are indicated by a <a href="https://docs.python.org/3/library/constants.html#True">True</a> return value.</p>
-<p>Note that <em>accel_path</em> string will be stored in a <a href="https://developer.gnome.org/glib/unstable/glib-Quarks.html#GQuark">GLib.Quark</a>. Therefore, if you
-pass a static string, you can save some memory by interning it first with
-<a href="https://developer.gnome.org/glib/unstable/glib-Quarks.html#g-intern-static-string">GLib.intern_static_string</a>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>accel_path</code></em></i>
-					(
-						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
-						)
-				–
-	</div>
-			<p>a valid accelerator path</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>accel_key</code></em></i>
-					(
-						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
-						)
-				–
-	</div>
-			<p>the new accelerator key</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>accel_mods</code></em></i>
-					(
-						<a title="Gdk.ModifierType" href="https://developer.gnome.org/gdk3/gdk3-Windows.html#GdkModifierType">Gdk.ModifierType</a>
-						)
-				–
-	</div>
-			<p>the new accelerator modifiers</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>replace</code></em></i>
-					(
-						<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
-						)
-				–
-	</div>
-			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if other accelerators may be deleted upon conflicts</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
-										)
-								–
-			</div>
-							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if the accelerator could be changed, <a href="https://docs.python.org/3/library/constants.html#False">False</a> otherwise</p>
+							<p><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/true">true</a> if the accelerator could be changed, <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/false">false</a> otherwise</p>
 
 					</div>
 	</div>
@@ -1039,22 +433,22 @@ pass a static string, you can save some memory by interning it first with
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_accel_map_load">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h3 data-hotdoc-id="gtk_accel_map_load">
-	<span><code>gtk_accel_map_load</code></span>
+	<span><code>Gtk.AccelMap.Load</code></span>
 </h3>
 
 
 
 
 <pre class="c-prototype">
-gtk_accel_map_load (<a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * file_name)</pre>
+Gtk.AccelMap.Load (filename)</pre>
 
-<p>Parses a file previously saved with <a href="gtkaccelmap-h.html#gtk_accel_map_save">gtk_accel_map_save</a> for
+<p>Parses a file previously saved with <a href="gtkaccelmap-h.html#gtk_accel_map_save">Gtk.AccelMap.Save</a> for
 accelerator specifications, and propagates them accordingly.</p>
 
 
@@ -1065,96 +459,6 @@ accelerator specifications, and propagates them accordingly.</p>
 <div class="symbol-detail">
 	<div>
 		<i><em><code>file_name</code></em></i>
-					(
-						
-<span class="annotation">[<abbr title="Override the parsed C type with given type"><span class="acronym">type</span></abbr> filename]</span>
-
-						)
-				–
-	</div>
-			<p>a file containing accelerator specifications,
-in the GLib file name encoding</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_accel_map_load">
-	<span><code>Gtk.prototype.load</code></span>
-</h3>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.load(file_name: filename): {
-    // javascript wrapper for 'gtk_accel_map_load'
-}</pre>
-
-<p>Parses a file previously saved with <a href="gtkaccelmap-h.html#gtk_accel_map_save">Gtk.prototype.save</a> for
-accelerator specifications, and propagates them accordingly.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>file_name</code></em></i>
-					(
-						filename
-						)
-				–
-	</div>
-			<p>a file containing accelerator specifications,
-in the GLib file name encoding</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_accel_map_load">
-	<span><code>Gtk.AccelMap.load</code></span>
-</h3>
-
-
-<pre class="python-prototype">
-def Gtk.AccelMap.load (file_name):
-    #python wrapper for 'gtk_accel_map_load'</pre>
-
-<p>Parses a file previously saved with <a href="gtkaccelmap-h.html#gtk_accel_map_save">Gtk.AccelMap.save</a> for
-accelerator specifications, and propagates them accordingly.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>file_name</code></em></i>
-					(
-						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
-						)
 				–
 	</div>
 			<p>a file containing accelerator specifications,
@@ -1176,25 +480,25 @@ in the GLib file name encoding</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_accel_map_save">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h3 data-hotdoc-id="gtk_accel_map_save">
-	<span><code>gtk_accel_map_save</code></span>
+	<span><code>Gtk.AccelMap.Save</code></span>
 </h3>
 
 
 
 
 <pre class="c-prototype">
-gtk_accel_map_save (<a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * file_name)</pre>
+Gtk.AccelMap.Save (filename)</pre>
 
 <p>Saves current accelerator specifications (accelerator path, key
 and modifiers) to <em>file_name</em>.
 The file is written in a format suitable to be read back in by
-<a href="gtkaccelmap-h.html#gtk_accel_map_load">gtk_accel_map_load</a>.</p>
+<a href="gtkaccelmap-h.html#gtk_accel_map_load">Gtk.AccelMap.Load</a>.</p>
 
 
 
@@ -1204,100 +508,6 @@ The file is written in a format suitable to be read back in by
 <div class="symbol-detail">
 	<div>
 		<i><em><code>file_name</code></em></i>
-					(
-						
-<span class="annotation">[<abbr title="Override the parsed C type with given type"><span class="acronym">type</span></abbr> filename]</span>
-
-						)
-				–
-	</div>
-			<p>the name of the file to contain
-accelerator specifications, in the GLib file name encoding</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_accel_map_save">
-	<span><code>Gtk.prototype.save</code></span>
-</h3>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.save(file_name: filename): {
-    // javascript wrapper for 'gtk_accel_map_save'
-}</pre>
-
-<p>Saves current accelerator specifications (accelerator path, key
-and modifiers) to <em>file_name</em>.
-The file is written in a format suitable to be read back in by
-<a href="gtkaccelmap-h.html#gtk_accel_map_load">Gtk.prototype.load</a>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>file_name</code></em></i>
-					(
-						filename
-						)
-				–
-	</div>
-			<p>the name of the file to contain
-accelerator specifications, in the GLib file name encoding</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_accel_map_save">
-	<span><code>Gtk.AccelMap.save</code></span>
-</h3>
-
-
-<pre class="python-prototype">
-def Gtk.AccelMap.save (file_name):
-    #python wrapper for 'gtk_accel_map_save'</pre>
-
-<p>Saves current accelerator specifications (accelerator path, key
-and modifiers) to <em>file_name</em>.
-The file is written in a format suitable to be read back in by
-<a href="gtkaccelmap-h.html#gtk_accel_map_load">Gtk.AccelMap.load</a>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>file_name</code></em></i>
-					(
-						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
-						)
 				–
 	</div>
 			<p>the name of the file to contain
@@ -1319,88 +529,24 @@ accelerator specifications, in the GLib file name encoding</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_accel_map_foreach">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h3 data-hotdoc-id="gtk_accel_map_foreach">
-	<span><code>gtk_accel_map_foreach</code></span>
+	<span><code>Gtk.AccelMap.Foreach</code></span>
 </h3>
 
 
 
 
 <pre class="c-prototype">
-gtk_accel_map_foreach (<a title="gpointer" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer">gpointer</a> data,
-                       <a title="GtkAccelMapForeach" href="gtkaccelmap-h.html#GtkAccelMapForeach">GtkAccelMapForeach</a> foreach_func)</pre>
+Gtk.AccelMap.Foreach (<a title="IntPtr" href="https://docs.microsoft.com/en-us/dotnet/api//system.intptr">IntPtr</a>,
+                      <a title="Gtk.AccelMapForeach" href="gtkaccelmap-h.html#GtkAccelMapForeach">Gtk.AccelMapForeach</a>)</pre>
 
 <p>Loops over the entries in the accelerator map whose accel path
-doesn’t match any of the filters added with <a href="gtkaccelmap-h.html#gtk_accel_map_add_filter">gtk_accel_map_add_filter</a>,
-and execute <em>foreach_func</em> on each. The signature of <em>foreach_func</em> is
-that of <a href="gtkaccelmap-h.html#GtkAccelMapForeach">GtkAccelMapForeach</a>, the <em>changed</em> parameter indicates whether
-this accelerator was changed during runtime (thus, would need
-saving during an accelerator map dump).</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>data</code></em></i>
-					(
-						
-<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
-
-						)
-				–
-	</div>
-			<p>data to be passed into <em>foreach_func</em></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>foreach_func</code></em></i>
-					(
-						
-<span class="annotation">[<abbr title="The callback is valid only during the call to the method"><span class="acronym">scope call</span></abbr>]</span>
-
-						)
-				–
-	</div>
-			<p>function to be executed for each accel
-map entry which is not filtered out</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_accel_map_foreach">
-	<span><code>Gtk.prototype.foreach</code></span>
-</h3>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.foreach(data: <a title="Object" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>, foreach_func: <a title="Gtk.AccelMapForeach" href="gtkaccelmap-h.html#GtkAccelMapForeach">Gtk.AccelMapForeach</a>): {
-    // javascript wrapper for 'gtk_accel_map_foreach'
-}</pre>
-
-<p>Loops over the entries in the accelerator map whose accel path
-doesn’t match any of the filters added with <a href="gtkaccelmap-h.html#gtk_accel_map_add_filter">Gtk.prototype.add_filter</a>,
+doesn’t match any of the filters added with <a href="gtkaccelmap-h.html#gtk_accel_map_add_filter">Gtk.AccelMap.AddFilter</a>,
 and execute <em>foreach_func</em> on each. The signature of <em>foreach_func</em> is
 that of <a href="gtkaccelmap-h.html#GtkAccelMapForeach">Gtk.AccelMapForeach</a>, the <em>changed</em> parameter indicates whether
 this accelerator was changed during runtime (thus, would need
@@ -1414,9 +560,6 @@ saving during an accelerator map dump).</p>
 <div class="symbol-detail">
 	<div>
 		<i><em><code>data</code></em></i>
-					(
-						<a title="Object" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>
-						)
 				–
 	</div>
 			<p>data to be passed into <em>foreach_func</em></p>
@@ -1427,68 +570,6 @@ saving during an accelerator map dump).</p>
 <div class="symbol-detail">
 	<div>
 		<i><em><code>foreach_func</code></em></i>
-					(
-						<a title="Gtk.AccelMapForeach" href="gtkaccelmap-h.html#GtkAccelMapForeach">Gtk.AccelMapForeach</a>
-						)
-				–
-	</div>
-			<p>function to be executed for each accel
-map entry which is not filtered out</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_accel_map_foreach">
-	<span><code>Gtk.AccelMap.foreach</code></span>
-</h3>
-
-
-<pre class="python-prototype">
-def Gtk.AccelMap.foreach (data, foreach_func):
-    #python wrapper for 'gtk_accel_map_foreach'</pre>
-
-<p>Loops over the entries in the accelerator map whose accel path
-doesn’t match any of the filters added with <a href="gtkaccelmap-h.html#gtk_accel_map_add_filter">Gtk.AccelMap.add_filter</a>,
-and execute <em>foreach_func</em> on each. The signature of <em>foreach_func</em> is
-that of <a href="gtkaccelmap-h.html#GtkAccelMapForeach">Gtk.AccelMapForeach</a>, the <em>changed</em> parameter indicates whether
-this accelerator was changed during runtime (thus, would need
-saving during an accelerator map dump).</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>data</code></em></i>
-					(
-						<a title="object" href="https://docs.python.org/3/library/functions.html#object">object</a>
-						)
-				–
-	</div>
-			<p>data to be passed into <em>foreach_func</em></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>foreach_func</code></em></i>
-					(
-						<a title="Gtk.AccelMapForeach" href="gtkaccelmap-h.html#GtkAccelMapForeach">Gtk.AccelMapForeach</a>
-						)
 				–
 	</div>
 			<p>function to be executed for each accel
@@ -1510,22 +591,22 @@ map entry which is not filtered out</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_accel_map_load_fd">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h3 data-hotdoc-id="gtk_accel_map_load_fd">
-	<span><code>gtk_accel_map_load_fd</code></span>
+	<span><code>Gtk.AccelMap.LoadFd</code></span>
 </h3>
 
 
 
 
 <pre class="c-prototype">
-gtk_accel_map_load_fd (<a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> fd)</pre>
+Gtk.AccelMap.LoadFd (<a title="int" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/int">int</a>)</pre>
 
-<p>Filedescriptor variant of <a href="gtkaccelmap-h.html#gtk_accel_map_load">gtk_accel_map_load</a>.</p>
+<p>Filedescriptor variant of <a href="gtkaccelmap-h.html#gtk_accel_map_load">Gtk.AccelMap.Load</a>.</p>
 <p>Note that the file descriptor will not be closed by this function.</p>
 
 
@@ -1536,89 +617,6 @@ gtk_accel_map_load_fd (<a title="gint" href="https://developer.gnome.org/glib/un
 <div class="symbol-detail">
 	<div>
 		<i><em><code>fd</code></em></i>
-				–
-	</div>
-			<p>a valid readable file descriptor</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_accel_map_load_fd">
-	<span><code>Gtk.prototype.load_fd</code></span>
-</h3>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.load_fd(fd: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
-    // javascript wrapper for 'gtk_accel_map_load_fd'
-}</pre>
-
-<p>Filedescriptor variant of <a href="gtkaccelmap-h.html#gtk_accel_map_load">Gtk.prototype.load</a>.</p>
-<p>Note that the file descriptor will not be closed by this function.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>fd</code></em></i>
-					(
-						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
-						)
-				–
-	</div>
-			<p>a valid readable file descriptor</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_accel_map_load_fd">
-	<span><code>Gtk.AccelMap.load_fd</code></span>
-</h3>
-
-
-<pre class="python-prototype">
-def Gtk.AccelMap.load_fd (fd):
-    #python wrapper for 'gtk_accel_map_load_fd'</pre>
-
-<p>Filedescriptor variant of <a href="gtkaccelmap-h.html#gtk_accel_map_load">Gtk.AccelMap.load</a>.</p>
-<p>Note that the file descriptor will not be closed by this function.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>fd</code></em></i>
-					(
-						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
-						)
 				–
 	</div>
 			<p>a valid readable file descriptor</p>
@@ -1639,22 +637,22 @@ def Gtk.AccelMap.load_fd (fd):
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_accel_map_save_fd">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h3 data-hotdoc-id="gtk_accel_map_save_fd">
-	<span><code>gtk_accel_map_save_fd</code></span>
+	<span><code>Gtk.AccelMap.SaveFd</code></span>
 </h3>
 
 
 
 
 <pre class="c-prototype">
-gtk_accel_map_save_fd (<a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> fd)</pre>
+Gtk.AccelMap.SaveFd (<a title="int" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/int">int</a>)</pre>
 
-<p>Filedescriptor variant of <a href="gtkaccelmap-h.html#gtk_accel_map_save">gtk_accel_map_save</a>.</p>
+<p>Filedescriptor variant of <a href="gtkaccelmap-h.html#gtk_accel_map_save">Gtk.AccelMap.Save</a>.</p>
 <p>Note that the file descriptor will not be closed by this function.</p>
 
 
@@ -1665,89 +663,6 @@ gtk_accel_map_save_fd (<a title="gint" href="https://developer.gnome.org/glib/un
 <div class="symbol-detail">
 	<div>
 		<i><em><code>fd</code></em></i>
-				–
-	</div>
-			<p>a valid writable file descriptor</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_accel_map_save_fd">
-	<span><code>Gtk.prototype.save_fd</code></span>
-</h3>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.save_fd(fd: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
-    // javascript wrapper for 'gtk_accel_map_save_fd'
-}</pre>
-
-<p>Filedescriptor variant of <a href="gtkaccelmap-h.html#gtk_accel_map_save">Gtk.prototype.save</a>.</p>
-<p>Note that the file descriptor will not be closed by this function.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>fd</code></em></i>
-					(
-						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
-						)
-				–
-	</div>
-			<p>a valid writable file descriptor</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_accel_map_save_fd">
-	<span><code>Gtk.AccelMap.save_fd</code></span>
-</h3>
-
-
-<pre class="python-prototype">
-def Gtk.AccelMap.save_fd (fd):
-    #python wrapper for 'gtk_accel_map_save_fd'</pre>
-
-<p>Filedescriptor variant of <a href="gtkaccelmap-h.html#gtk_accel_map_save">Gtk.AccelMap.save</a>.</p>
-<p>Note that the file descriptor will not be closed by this function.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>fd</code></em></i>
-					(
-						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
-						)
 				–
 	</div>
 			<p>a valid writable file descriptor</p>
@@ -1768,60 +683,22 @@ def Gtk.AccelMap.save_fd (fd):
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_accel_map_load_scanner">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h3 data-hotdoc-id="gtk_accel_map_load_scanner">
-	<span><code>gtk_accel_map_load_scanner</code></span>
+	<span><code>Gtk.AccelMap.LoadScanner</code></span>
 </h3>
 
 
 
 
 <pre class="c-prototype">
-gtk_accel_map_load_scanner (<a title="GScanner" href="https://developer.gnome.org/glib/unstable/glib-Lexical-Scanner.html#GScanner">GScanner</a> * scanner)</pre>
+Gtk.AccelMap.LoadScanner (<a title="GLib.Scanner" href="https://developer.gnome.org/glib/unstable/glib-Lexical-Scanner.html#GScanner">GLib.Scanner</a>)</pre>
 
-<p><a href="https://developer.gnome.org/glib/unstable/glib-Lexical-Scanner.html#GScanner">GScanner</a> variant of <a href="gtkaccelmap-h.html#gtk_accel_map_load">gtk_accel_map_load</a>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>scanner</code></em></i>
-				–
-	</div>
-			<p>a <a href="https://developer.gnome.org/glib/unstable/glib-Lexical-Scanner.html#GScanner">GScanner</a> which has already been provided with an input file</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_accel_map_load_scanner">
-	<span><code>Gtk.prototype.load_scanner</code></span>
-</h3>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.load_scanner(scanner: <a title="GLib.Scanner" href="https://developer.gnome.org/glib/unstable/glib-Lexical-Scanner.html#GScanner">GLib.Scanner</a>): {
-    // javascript wrapper for 'gtk_accel_map_load_scanner'
-}</pre>
-
-<p><a href="https://developer.gnome.org/glib/unstable/glib-Lexical-Scanner.html#GScanner">GLib.Scanner</a> variant of <a href="gtkaccelmap-h.html#gtk_accel_map_load">Gtk.prototype.load</a>.</p>
+<p><a href="https://developer.gnome.org/glib/unstable/glib-Lexical-Scanner.html#GScanner">GLib.Scanner</a> variant of <a href="gtkaccelmap-h.html#gtk_accel_map_load">Gtk.AccelMap.Load</a>.</p>
 
 
 
@@ -1831,49 +708,6 @@ function Gtk.prototype.load_scanner(scanner: <a title="GLib.Scanner" href="https
 <div class="symbol-detail">
 	<div>
 		<i><em><code>scanner</code></em></i>
-					(
-						<a title="GLib.Scanner" href="https://developer.gnome.org/glib/unstable/glib-Lexical-Scanner.html#GScanner">GLib.Scanner</a>
-						)
-				–
-	</div>
-			<p>a <a href="https://developer.gnome.org/glib/unstable/glib-Lexical-Scanner.html#GScanner">GLib.Scanner</a> which has already been provided with an input file</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_accel_map_load_scanner">
-	<span><code>Gtk.AccelMap.load_scanner</code></span>
-</h3>
-
-
-<pre class="python-prototype">
-def Gtk.AccelMap.load_scanner (scanner):
-    #python wrapper for 'gtk_accel_map_load_scanner'</pre>
-
-<p><a href="https://developer.gnome.org/glib/unstable/glib-Lexical-Scanner.html#GScanner">GLib.Scanner</a> variant of <a href="gtkaccelmap-h.html#gtk_accel_map_load">Gtk.AccelMap.load</a>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>scanner</code></em></i>
-					(
-						<a title="GLib.Scanner" href="https://developer.gnome.org/glib/unstable/glib-Lexical-Scanner.html#GScanner">GLib.Scanner</a>
-						)
 				–
 	</div>
 			<p>a <a href="https://developer.gnome.org/glib/unstable/glib-Lexical-Scanner.html#GScanner">GLib.Scanner</a> which has already been provided with an input file</p>
@@ -1894,24 +728,24 @@ def Gtk.AccelMap.load_scanner (scanner):
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_accel_map_add_filter">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h3 data-hotdoc-id="gtk_accel_map_add_filter">
-	<span><code>gtk_accel_map_add_filter</code></span>
+	<span><code>Gtk.AccelMap.AddFilter</code></span>
 </h3>
 
 
 
 
 <pre class="c-prototype">
-gtk_accel_map_add_filter (const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * filter_pattern)</pre>
+Gtk.AccelMap.AddFilter (<a title="string" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/string">string</a>)</pre>
 
 <p>Adds a filter to the global list of accel path filters.</p>
 <p>Accel map entries whose accel path matches one of the filters
-are skipped by <a href="gtkaccelmap-h.html#gtk_accel_map_foreach">gtk_accel_map_foreach</a>.</p>
+are skipped by <a href="gtkaccelmap-h.html#gtk_accel_map_foreach">Gtk.AccelMap.Foreach</a>.</p>
 <p>This function is intended for GTK+ modules that create their own
 menus, but don’t want them to be saved into the applications accelerator
 map dump.</p>
@@ -1924,97 +758,6 @@ map dump.</p>
 <div class="symbol-detail">
 	<div>
 		<i><em><code>filter_pattern</code></em></i>
-				–
-	</div>
-			<p>a pattern (see <a href="https://developer.gnome.org/glib/unstable/glib-Glob-style-pattern-matching.html#GPatternSpec">GPatternSpec</a>)</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_accel_map_add_filter">
-	<span><code>Gtk.prototype.add_filter</code></span>
-</h3>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.add_filter(filter_pattern: <a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>): {
-    // javascript wrapper for 'gtk_accel_map_add_filter'
-}</pre>
-
-<p>Adds a filter to the global list of accel path filters.</p>
-<p>Accel map entries whose accel path matches one of the filters
-are skipped by <a href="gtkaccelmap-h.html#gtk_accel_map_foreach">Gtk.prototype.foreach</a>.</p>
-<p>This function is intended for GTK+ modules that create their own
-menus, but don’t want them to be saved into the applications accelerator
-map dump.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>filter_pattern</code></em></i>
-					(
-						<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
-						)
-				–
-	</div>
-			<p>a pattern (see <a href="https://developer.gnome.org/glib/unstable/glib-Glob-style-pattern-matching.html#GPatternSpec">GLib.PatternSpec</a>)</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_accel_map_add_filter">
-	<span><code>Gtk.AccelMap.add_filter</code></span>
-</h3>
-
-
-<pre class="python-prototype">
-def Gtk.AccelMap.add_filter (filter_pattern):
-    #python wrapper for 'gtk_accel_map_add_filter'</pre>
-
-<p>Adds a filter to the global list of accel path filters.</p>
-<p>Accel map entries whose accel path matches one of the filters
-are skipped by <a href="gtkaccelmap-h.html#gtk_accel_map_foreach">Gtk.AccelMap.foreach</a>.</p>
-<p>This function is intended for GTK+ modules that create their own
-menus, but don’t want them to be saved into the applications accelerator
-map dump.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>filter_pattern</code></em></i>
-					(
-						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
-						)
 				–
 	</div>
 			<p>a pattern (see <a href="https://developer.gnome.org/glib/unstable/glib-Glob-style-pattern-matching.html#GPatternSpec">GLib.PatternSpec</a>)</p>
@@ -2035,79 +778,21 @@ map dump.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_accel_map_foreach_unfiltered">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h3 data-hotdoc-id="gtk_accel_map_foreach_unfiltered">
-	<span><code>gtk_accel_map_foreach_unfiltered</code></span>
+	<span><code>Gtk.AccelMap.ForeachUnfiltered</code></span>
 </h3>
 
 
 
 
 <pre class="c-prototype">
-gtk_accel_map_foreach_unfiltered (<a title="gpointer" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer">gpointer</a> data,
-                                  <a title="GtkAccelMapForeach" href="gtkaccelmap-h.html#GtkAccelMapForeach">GtkAccelMapForeach</a> foreach_func)</pre>
-
-<p>Loops over all entries in the accelerator map, and execute
-<em>foreach_func</em> on each. The signature of <em>foreach_func</em> is that of
-<a href="gtkaccelmap-h.html#GtkAccelMapForeach">GtkAccelMapForeach</a>, the <em>changed</em> parameter indicates whether
-this accelerator was changed during runtime (thus, would need
-saving during an accelerator map dump).</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>data</code></em></i>
-				–
-	</div>
-			<p>data to be passed into <em>foreach_func</em></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>foreach_func</code></em></i>
-					(
-						
-<span class="annotation">[<abbr title="The callback is valid only during the call to the method"><span class="acronym">scope call</span></abbr>]</span>
-
-						)
-				–
-	</div>
-			<p>function to be executed for each accel
-map entry</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_accel_map_foreach_unfiltered">
-	<span><code>Gtk.prototype.foreach_unfiltered</code></span>
-</h3>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.foreach_unfiltered(data: <a title="Object" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>, foreach_func: <a title="Gtk.AccelMapForeach" href="gtkaccelmap-h.html#GtkAccelMapForeach">Gtk.AccelMapForeach</a>): {
-    // javascript wrapper for 'gtk_accel_map_foreach_unfiltered'
-}</pre>
+Gtk.AccelMap.ForeachUnfiltered (<a title="IntPtr" href="https://docs.microsoft.com/en-us/dotnet/api//system.intptr">IntPtr</a>,
+                                <a title="Gtk.AccelMapForeach" href="gtkaccelmap-h.html#GtkAccelMapForeach">Gtk.AccelMapForeach</a>)</pre>
 
 <p>Loops over all entries in the accelerator map, and execute
 <em>foreach_func</em> on each. The signature of <em>foreach_func</em> is that of
@@ -2123,9 +808,6 @@ saving during an accelerator map dump).</p>
 <div class="symbol-detail">
 	<div>
 		<i><em><code>data</code></em></i>
-					(
-						<a title="Object" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>
-						)
 				–
 	</div>
 			<p>data to be passed into <em>foreach_func</em></p>
@@ -2136,67 +818,6 @@ saving during an accelerator map dump).</p>
 <div class="symbol-detail">
 	<div>
 		<i><em><code>foreach_func</code></em></i>
-					(
-						<a title="Gtk.AccelMapForeach" href="gtkaccelmap-h.html#GtkAccelMapForeach">Gtk.AccelMapForeach</a>
-						)
-				–
-	</div>
-			<p>function to be executed for each accel
-map entry</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_accel_map_foreach_unfiltered">
-	<span><code>Gtk.AccelMap.foreach_unfiltered</code></span>
-</h3>
-
-
-<pre class="python-prototype">
-def Gtk.AccelMap.foreach_unfiltered (data, foreach_func):
-    #python wrapper for 'gtk_accel_map_foreach_unfiltered'</pre>
-
-<p>Loops over all entries in the accelerator map, and execute
-<em>foreach_func</em> on each. The signature of <em>foreach_func</em> is that of
-<a href="gtkaccelmap-h.html#GtkAccelMapForeach">Gtk.AccelMapForeach</a>, the <em>changed</em> parameter indicates whether
-this accelerator was changed during runtime (thus, would need
-saving during an accelerator map dump).</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>data</code></em></i>
-					(
-						<a title="object" href="https://docs.python.org/3/library/functions.html#object">object</a>
-						)
-				–
-	</div>
-			<p>data to be passed into <em>foreach_func</em></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>foreach_func</code></em></i>
-					(
-						<a title="Gtk.AccelMapForeach" href="gtkaccelmap-h.html#GtkAccelMapForeach">Gtk.AccelMapForeach</a>
-						)
 				–
 	</div>
 			<p>function to be executed for each accel
@@ -2218,69 +839,21 @@ map entry</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="since:2.4;" id="gtk_accel_map_get">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h3 data-hotdoc-id="gtk_accel_map_get">
-	<span><code>gtk_accel_map_get</code></span>
+	<span><code>Gtk.AccelMap.Get</code></span>
 </h3>
 
 
 
 
 <pre class="c-prototype">
-<a title="GtkAccelMap" href="gtkaccelmap-h.html#GtkAccelMap">GtkAccelMap</a> *
-gtk_accel_map_get ()</pre>
-
-<p>Gets the singleton global <a href="gtkaccelmap-h.html#GtkAccelMap">GtkAccelMap</a> object. This object
-is useful only for notification of changes to the accelerator
-map via the ::changed signal; it isn’t a parameter to the
-other accelerator map functions.</p>
-
-
-
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					
-										
-<span class="annotation">[<abbr title="Don't free data after the code is done"><span class="acronym">transfer: none</span></abbr>]</span>
-
-										)
-								–
-			</div>
-							<p>the global <a href="gtkaccelmap-h.html#GtkAccelMap">GtkAccelMap</a> object</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.4
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_accel_map_get">
-	<span><code>Gtk.prototype.get</code></span>
-</h3>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.get(): {
-    // javascript wrapper for 'gtk_accel_map_get'
-}</pre>
+<a title="Gtk.AccelMap" href="gtkaccelmap-h.html#GtkAccelMap">Gtk.AccelMap</a>
+Gtk.AccelMap.Get ()</pre>
 
 <p>Gets the singleton global <a href="gtkaccelmap-h.html#GtkAccelMap">Gtk.AccelMap</a> object. This object
 is useful only for notification of changes to the accelerator
@@ -2294,53 +867,6 @@ other accelerator map functions.</p>
 		<div class="symbol-detail">
 			<div>
 				<b>Returns</b>
-									(
-					<a title="Gtk.AccelMap" href="gtkaccelmap-h.html#GtkAccelMap">Gtk.AccelMap</a>
-										)
-								–
-			</div>
-							<p>the global <a href="gtkaccelmap-h.html#GtkAccelMap">Gtk.AccelMap</a> object</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.4
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_accel_map_get">
-	<span><code>Gtk.AccelMap.get</code></span>
-</h3>
-
-
-<pre class="python-prototype">
-def Gtk.AccelMap.get ():
-    #python wrapper for 'gtk_accel_map_get'</pre>
-
-<p>Gets the singleton global <a href="gtkaccelmap-h.html#GtkAccelMap">Gtk.AccelMap</a> object. This object
-is useful only for notification of changes to the accelerator
-map via the ::changed signal; it isn’t a parameter to the
-other accelerator map functions.</p>
-
-
-
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Gtk.AccelMap" href="gtkaccelmap-h.html#GtkAccelMap">Gtk.AccelMap</a>
-										)
 								–
 			</div>
 							<p>the global <a href="gtkaccelmap-h.html#GtkAccelMap">Gtk.AccelMap</a> object</p>
@@ -2363,82 +889,29 @@ other accelerator map functions.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="since:2.4;" id="gtk_accel_map_lock_path">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h3 data-hotdoc-id="gtk_accel_map_lock_path">
-	<span><code>gtk_accel_map_lock_path</code></span>
+	<span><code>Gtk.AccelMap.LockPath</code></span>
 </h3>
 
 
 
 
 <pre class="c-prototype">
-gtk_accel_map_lock_path (const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * accel_path)</pre>
+Gtk.AccelMap.LockPath (<a title="string" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/string">string</a>)</pre>
 
 <p>Locks the given accelerator path. If the accelerator map doesn’t yet contain
 an entry for <em>accel_path</em>, a new one is created.</p>
 <p>Locking an accelerator path prevents its accelerator from being changed
 during runtime. A locked accelerator path can be unlocked by
-<a href="gtkaccelmap-h.html#gtk_accel_map_unlock_path">gtk_accel_map_unlock_path</a>. Refer to <a href="gtkaccelmap-h.html#gtk_accel_map_change_entry">gtk_accel_map_change_entry</a>
+<a href="gtkaccelmap-h.html#gtk_accel_map_unlock_path">Gtk.AccelMap.UnlockPath</a>. Refer to <a href="gtkaccelmap-h.html#gtk_accel_map_change_entry">Gtk.AccelMap.ChangeEntry</a>
 for information about runtime accelerator changes.</p>
 <p>If called more than once, <em>accel_path</em> remains locked until
-<a href="gtkaccelmap-h.html#gtk_accel_map_unlock_path">gtk_accel_map_unlock_path</a> has been called an equivalent number
-of times.</p>
-<p>Note that locking of individual accelerator paths is independent from
-locking the <a href="gtkaccelgroup-h.html#GtkAccelGroup">GtkAccelGroup</a> containing them. For runtime accelerator
-changes to be possible, both the accelerator path and its <a href="gtkaccelgroup-h.html#GtkAccelGroup">GtkAccelGroup</a>
-have to be unlocked.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>accel_path</code></em></i>
-				–
-	</div>
-			<p>a valid accelerator path</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.4
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_accel_map_lock_path">
-	<span><code>Gtk.prototype.lock_path</code></span>
-</h3>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.lock_path(accel_path: <a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>): {
-    // javascript wrapper for 'gtk_accel_map_lock_path'
-}</pre>
-
-<p>Locks the given accelerator path. If the accelerator map doesn’t yet contain
-an entry for <em>accel_path</em>, a new one is created.</p>
-<p>Locking an accelerator path prevents its accelerator from being changed
-during runtime. A locked accelerator path can be unlocked by
-<a href="gtkaccelmap-h.html#gtk_accel_map_unlock_path">Gtk.prototype.unlock_path</a>. Refer to <a href="gtkaccelmap-h.html#gtk_accel_map_change_entry">Gtk.prototype.change_entry</a>
-for information about runtime accelerator changes.</p>
-<p>If called more than once, <em>accel_path</em> remains locked until
-<a href="gtkaccelmap-h.html#gtk_accel_map_unlock_path">Gtk.prototype.unlock_path</a> has been called an equivalent number
+<a href="gtkaccelmap-h.html#gtk_accel_map_unlock_path">Gtk.AccelMap.UnlockPath</a> has been called an equivalent number
 of times.</p>
 <p>Note that locking of individual accelerator paths is independent from
 locking the <a href="gtkaccelgroup-h.html#GtkAccelGroup">Gtk.AccelGroup</a> containing them. For runtime accelerator
@@ -2453,64 +926,6 @@ have to be unlocked.</p>
 <div class="symbol-detail">
 	<div>
 		<i><em><code>accel_path</code></em></i>
-					(
-						<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
-						)
-				–
-	</div>
-			<p>a valid accelerator path</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.4
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_accel_map_lock_path">
-	<span><code>Gtk.AccelMap.lock_path</code></span>
-</h3>
-
-
-<pre class="python-prototype">
-def Gtk.AccelMap.lock_path (accel_path):
-    #python wrapper for 'gtk_accel_map_lock_path'</pre>
-
-<p>Locks the given accelerator path. If the accelerator map doesn’t yet contain
-an entry for <em>accel_path</em>, a new one is created.</p>
-<p>Locking an accelerator path prevents its accelerator from being changed
-during runtime. A locked accelerator path can be unlocked by
-<a href="gtkaccelmap-h.html#gtk_accel_map_unlock_path">Gtk.AccelMap.unlock_path</a>. Refer to <a href="gtkaccelmap-h.html#gtk_accel_map_change_entry">Gtk.AccelMap.change_entry</a>
-for information about runtime accelerator changes.</p>
-<p>If called more than once, <em>accel_path</em> remains locked until
-<a href="gtkaccelmap-h.html#gtk_accel_map_unlock_path">Gtk.AccelMap.unlock_path</a> has been called an equivalent number
-of times.</p>
-<p>Note that locking of individual accelerator paths is independent from
-locking the <a href="gtkaccelgroup-h.html#GtkAccelGroup">Gtk.AccelGroup</a> containing them. For runtime accelerator
-changes to be possible, both the accelerator path and its <a href="gtkaccelgroup-h.html#GtkAccelGroup">Gtk.AccelGroup</a>
-have to be unlocked.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>accel_path</code></em></i>
-					(
-						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
-						)
 				–
 	</div>
 			<p>a valid accelerator path</p>
@@ -2534,65 +949,23 @@ have to be unlocked.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="since:2.4;" id="gtk_accel_map_unlock_path">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h3 data-hotdoc-id="gtk_accel_map_unlock_path">
-	<span><code>gtk_accel_map_unlock_path</code></span>
+	<span><code>Gtk.AccelMap.UnlockPath</code></span>
 </h3>
 
 
 
 
 <pre class="c-prototype">
-gtk_accel_map_unlock_path (const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * accel_path)</pre>
+Gtk.AccelMap.UnlockPath (<a title="string" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/string">string</a>)</pre>
 
-<p>Undoes the last call to <a href="gtkaccelmap-h.html#gtk_accel_map_lock_path">gtk_accel_map_lock_path</a> on this <em>accel_path</em>.
-Refer to <a href="gtkaccelmap-h.html#gtk_accel_map_lock_path">gtk_accel_map_lock_path</a> for information about accelerator path locking.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>accel_path</code></em></i>
-				–
-	</div>
-			<p>a valid accelerator path</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.4
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_accel_map_unlock_path">
-	<span><code>Gtk.prototype.unlock_path</code></span>
-</h3>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.unlock_path(accel_path: <a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>): {
-    // javascript wrapper for 'gtk_accel_map_unlock_path'
-}</pre>
-
-<p>Undoes the last call to <a href="gtkaccelmap-h.html#gtk_accel_map_lock_path">Gtk.prototype.lock_path</a> on this <em>accel_path</em>.
-Refer to <a href="gtkaccelmap-h.html#gtk_accel_map_lock_path">Gtk.prototype.lock_path</a> for information about accelerator path locking.</p>
+<p>Undoes the last call to <a href="gtkaccelmap-h.html#gtk_accel_map_lock_path">Gtk.AccelMap.LockPath</a> on this <em>accel_path</em>.
+Refer to <a href="gtkaccelmap-h.html#gtk_accel_map_lock_path">Gtk.AccelMap.LockPath</a> for information about accelerator path locking.</p>
 
 
 
@@ -2602,53 +975,6 @@ Refer to <a href="gtkaccelmap-h.html#gtk_accel_map_lock_path">Gtk.prototype.lock
 <div class="symbol-detail">
 	<div>
 		<i><em><code>accel_path</code></em></i>
-					(
-						<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
-						)
-				–
-	</div>
-			<p>a valid accelerator path</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.4
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_accel_map_unlock_path">
-	<span><code>Gtk.AccelMap.unlock_path</code></span>
-</h3>
-
-
-<pre class="python-prototype">
-def Gtk.AccelMap.unlock_path (accel_path):
-    #python wrapper for 'gtk_accel_map_unlock_path'</pre>
-
-<p>Undoes the last call to <a href="gtkaccelmap-h.html#gtk_accel_map_lock_path">Gtk.AccelMap.lock_path</a> on this <em>accel_path</em>.
-Refer to <a href="gtkaccelmap-h.html#gtk_accel_map_lock_path">Gtk.AccelMap.lock_path</a> for information about accelerator path locking.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>accel_path</code></em></i>
-					(
-						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
-						)
 				–
 	</div>
 			<p>a valid accelerator path</p>
@@ -2674,90 +1000,7 @@ Refer to <a href="gtkaccelmap-h.html#gtk_accel_map_lock_path">Gtk.AccelMap.lock_
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="GtkAccelMapForeach">
 	
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h3 data-hotdoc-id="GtkAccelMapForeach">
-	<span><code>GtkAccelMapForeach</code></span>
-</h3>
-
-
-
-
-<pre class="c-prototype">
-(*GtkAccelMapForeach) (<a title="gpointer" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer">gpointer</a> data,
-                       const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * accel_path,
-                       <a title="guint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint">guint</a> accel_key,
-                       <a title="GdkModifierType" href="https://developer.gnome.org/gdk3/gdk3-Windows.html#GdkModifierType">GdkModifierType</a> accel_mods,
-                       <a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a> changed)</pre>
-
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>data</code></em></i>
-				–
-	</div>
-			<p>User data passed to <a href="gtkaccelmap-h.html#gtk_accel_map_foreach">gtk_accel_map_foreach</a> or
-<a href="gtkaccelmap-h.html#gtk_accel_map_foreach_unfiltered">gtk_accel_map_foreach_unfiltered</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>accel_path</code></em></i>
-				–
-	</div>
-			<p>Accel path of the current accelerator</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>accel_key</code></em></i>
-				–
-	</div>
-			<p>Key of the current accelerator</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>accel_mods</code></em></i>
-				–
-	</div>
-			<p>Modifiers of the current accelerator</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>changed</code></em></i>
-				–
-	</div>
-			<p>Changed flag of the accelerator (if <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a>, accelerator has changed
-during runtime and would need to be saved during an accelerator dump)</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
@@ -2770,11 +1013,11 @@ during runtime and would need to be saved during an accelerator dump)</p>
 
 
 <pre class="c-prototype">
-(*Gtk.AccelMapForeach) (<a title="Object" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>,
-                        <a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>,
-                        <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>,
+(*Gtk.AccelMapForeach) (<a title="IntPtr" href="https://docs.microsoft.com/en-us/dotnet/api//system.intptr">IntPtr</a>,
+                        <a title="string" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/string">string</a>,
+                        <a title="uint" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/uint">uint</a>,
                         <a title="Gdk.ModifierType" href="https://developer.gnome.org/gdk3/gdk3-Windows.html#GdkModifierType">Gdk.ModifierType</a>,
-                        <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>)</pre>
+                        <a title="bool" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/bool">bool</a>)</pre>
 
 
 
@@ -2785,13 +1028,10 @@ during runtime and would need to be saved during an accelerator dump)</p>
 <div class="symbol-detail">
 	<div>
 		<i><em><code>data</code></em></i>
-					(
-						<a title="Object" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>
-						)
 				–
 	</div>
-			<p>User data passed to <a href="gtkaccelmap-h.html#gtk_accel_map_foreach">Gtk.prototype.foreach</a> or
-<a href="gtkaccelmap-h.html#gtk_accel_map_foreach_unfiltered">Gtk.prototype.foreach_unfiltered</a></p>
+			<p>User data passed to <a href="gtkaccelmap-h.html#gtk_accel_map_foreach">Gtk.AccelMap.Foreach</a> or
+<a href="gtkaccelmap-h.html#gtk_accel_map_foreach_unfiltered">Gtk.AccelMap.ForeachUnfiltered</a></p>
 
 	</div>
 
@@ -2799,9 +1039,6 @@ during runtime and would need to be saved during an accelerator dump)</p>
 <div class="symbol-detail">
 	<div>
 		<i><em><code>accel_path</code></em></i>
-					(
-						<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
-						)
 				–
 	</div>
 			<p>Accel path of the current accelerator</p>
@@ -2812,9 +1049,6 @@ during runtime and would need to be saved during an accelerator dump)</p>
 <div class="symbol-detail">
 	<div>
 		<i><em><code>accel_key</code></em></i>
-					(
-						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
-						)
 				–
 	</div>
 			<p>Key of the current accelerator</p>
@@ -2825,9 +1059,6 @@ during runtime and would need to be saved during an accelerator dump)</p>
 <div class="symbol-detail">
 	<div>
 		<i><em><code>accel_mods</code></em></i>
-					(
-						<a title="Gdk.ModifierType" href="https://developer.gnome.org/gdk3/gdk3-Windows.html#GdkModifierType">Gdk.ModifierType</a>
-						)
 				–
 	</div>
 			<p>Modifiers of the current accelerator</p>
@@ -2838,110 +1069,9 @@ during runtime and would need to be saved during an accelerator dump)</p>
 <div class="symbol-detail">
 	<div>
 		<i><em><code>changed</code></em></i>
-					(
-						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
-						)
 				–
 	</div>
-			<p>Changed flag of the accelerator (if <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a>, accelerator has changed
-during runtime and would need to be saved during an accelerator dump)</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="GtkAccelMapForeach">
-	<span><code>Gtk.AccelMapForeach</code></span>
-</h3>
-
-
-
-
-<pre class="c-prototype">
-(*Gtk.AccelMapForeach) (<a title="object" href="https://docs.python.org/3/library/functions.html#object">object</a>,
-                        <a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>,
-                        <a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>,
-                        <a title="Gdk.ModifierType" href="https://developer.gnome.org/gdk3/gdk3-Windows.html#GdkModifierType">Gdk.ModifierType</a>,
-                        <a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>)</pre>
-
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>data</code></em></i>
-					(
-						<a title="object" href="https://docs.python.org/3/library/functions.html#object">object</a>
-						)
-				–
-	</div>
-			<p>User data passed to <a href="gtkaccelmap-h.html#gtk_accel_map_foreach">Gtk.AccelMap.foreach</a> or
-<a href="gtkaccelmap-h.html#gtk_accel_map_foreach_unfiltered">Gtk.AccelMap.foreach_unfiltered</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>accel_path</code></em></i>
-					(
-						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
-						)
-				–
-	</div>
-			<p>Accel path of the current accelerator</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>accel_key</code></em></i>
-					(
-						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
-						)
-				–
-	</div>
-			<p>Key of the current accelerator</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>accel_mods</code></em></i>
-					(
-						<a title="Gdk.ModifierType" href="https://developer.gnome.org/gdk3/gdk3-Windows.html#GdkModifierType">Gdk.ModifierType</a>
-						)
-				–
-	</div>
-			<p>Modifiers of the current accelerator</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>changed</code></em></i>
-					(
-						<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
-						)
-				–
-	</div>
-			<p>Changed flag of the accelerator (if <a href="https://docs.python.org/3/library/constants.html#True">True</a>, accelerator has changed
+			<p>Changed flag of the accelerator (if <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/true">true</a>, accelerator has changed
 during runtime and would need to be saved during an accelerator dump)</p>
 
 	</div>

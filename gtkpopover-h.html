@@ -89,7 +89,7 @@ $('body').removeClass('no-script');
 </nav>
 
 <main>
-<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="gtkpopover-h.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['c', 'javascript', 'python']" data-hotdoc-meta-gi-language="c">
+<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="gtkpopover-h.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['csharp']" data-hotdoc-meta-gi-language="c">
 <script src="assets/js/utils.js"></script>
 
 <div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
@@ -103,22 +103,22 @@ $('body').removeClass('no-script');
         <h1 id="gtkpopover-page">GtkPopover</h1>
 <p>GtkPopover is a bubble-like context window, primarily meant to
 provide context-dependent information or options. Popovers are
-attached to a widget, passed at construction time on <a href="gtkpopover-h.html#gtk_popover_new" data-gi-href-javascript="gtkpopover-h.html#gtk_popover_new" data-gi-title-javascript="Gtk.prototype.new" data-gi-href-python="gtkpopover-h.html#gtk_popover_new" data-gi-title-python="Gtk.Popover.new">gtk_popover_new</a>,
-or updated afterwards through <a href="gtkpopover-h.html#gtk_popover_set_relative_to" data-gi-href-javascript="gtkpopover-h.html#gtk_popover_set_relative_to" data-gi-title-javascript="Gtk.prototype.set_relative_to" data-gi-href-python="gtkpopover-h.html#gtk_popover_set_relative_to" data-gi-title-python="Gtk.Popover.set_relative_to">gtk_popover_set_relative_to</a>, by
+attached to a widget, passed at construction time on <a href="gtkpopover-h.html#gtk_popover_new" data-gi-href-csharp="gtkpopover-h.html#gtk_popover_new" data-gi-title-csharp="Gtk.Popover">gtk_popover_new</a>,
+or updated afterwards through <a href="gtkpopover-h.html#gtk_popover_set_relative_to" data-gi-href-csharp="gtkpopover-h.html#gtk_popover_set_relative_to" data-gi-title-csharp="Gtk.Popover.SetRelativeTo">gtk_popover_set_relative_to</a>, by
 default they will point to the whole widget area, although this
-behavior can be changed through <a href="gtkpopover-h.html#gtk_popover_set_pointing_to" data-gi-href-javascript="gtkpopover-h.html#gtk_popover_set_pointing_to" data-gi-title-javascript="Gtk.prototype.set_pointing_to" data-gi-href-python="gtkpopover-h.html#gtk_popover_set_pointing_to" data-gi-title-python="Gtk.Popover.set_pointing_to">gtk_popover_set_pointing_to</a>.</p>
+behavior can be changed through <a href="gtkpopover-h.html#gtk_popover_set_pointing_to" data-gi-href-csharp="gtkpopover-h.html#gtk_popover_set_pointing_to" data-gi-title-csharp="Gtk.Popover.SetPointingTo">gtk_popover_set_pointing_to</a>.</p>
 <p>The position of a popover relative to the widget it is attached to
-can also be changed through <a href="gtkpopover-h.html#gtk_popover_set_position" data-gi-href-javascript="gtkpopover-h.html#gtk_popover_set_position" data-gi-title-javascript="Gtk.prototype.set_position" data-gi-href-python="gtkpopover-h.html#gtk_popover_set_position" data-gi-title-python="Gtk.Popover.set_position">gtk_popover_set_position</a>.</p>
-<p>By default, <a href="gtkpopover-h.html#GtkPopover" data-gi-href-javascript="gtkpopover-h.html#GtkPopover" data-gi-title-javascript="Gtk.Popover" data-gi-href-python="gtkpopover-h.html#GtkPopover" data-gi-title-python="Gtk.Popover">GtkPopover</a> performs a GTK+ grab, in order to ensure
+can also be changed through <a href="gtkpopover-h.html#gtk_popover_set_position" data-gi-href-csharp="gtkpopover-h.html#gtk_popover_set_position" data-gi-title-csharp="Gtk.Popover.SetPosition">gtk_popover_set_position</a>.</p>
+<p>By default, <a href="gtkpopover-h.html#GtkPopover" data-gi-href-csharp="gtkpopover-h.html#GtkPopover" data-gi-title-csharp="Gtk.Popover">GtkPopover</a> performs a GTK+ grab, in order to ensure
 input events get redirected to it while it is shown, and also so
 the popover is dismissed in the expected situations (clicks outside
 the popover, or the Esc key being pressed). If no such modal behavior
-is desired on a popover, <a href="gtkpopover-h.html#gtk_popover_set_modal" data-gi-href-javascript="gtkpopover-h.html#gtk_popover_set_modal" data-gi-title-javascript="Gtk.prototype.set_modal" data-gi-href-python="gtkpopover-h.html#gtk_popover_set_modal" data-gi-title-python="Gtk.Popover.set_modal">gtk_popover_set_modal</a> may be called on it
+is desired on a popover, <a href="gtkpopover-h.html#gtk_popover_set_modal" data-gi-href-csharp="gtkpopover-h.html#gtk_popover_set_modal" data-gi-title-csharp="Gtk.Popover.SetModal">gtk_popover_set_modal</a> may be called on it
 to tweak its behavior.</p>
 <h2 id="gtkpopover-as-menu-replacement">GtkPopover as menu replacement</h2>
 <p>GtkPopover is often used to replace menus. To facilitate this, it
-supports being populated from a <a href="https://developer.gnome.org/gio/unstable/GMenuModel.html#GMenuModel-struct" data-gi-href-javascript="https://developer.gnome.org/gio/unstable/GMenuModel.html#GMenuModel-struct" data-gi-title-javascript="Gio.MenuModel" data-gi-href-python="https://developer.gnome.org/gio/unstable/GMenuModel.html#GMenuModel-struct" data-gi-title-python="Gio.MenuModel">GMenuModel</a>, using
-<a href="gtkpopover-h.html#gtk_popover_new_from_model" data-gi-href-javascript="gtkpopover-h.html#gtk_popover_new_from_model" data-gi-title-javascript="Gtk.prototype.new_from_model" data-gi-href-python="gtkpopover-h.html#gtk_popover_new_from_model" data-gi-title-python="Gtk.Popover.new_from_model">gtk_popover_new_from_model</a>. In addition to all the regular menu
+supports being populated from a <a href="https://developer.gnome.org/gio/unstable/GMenuModel.html#GMenuModel-struct" data-gi-href-csharp="https://developer.gnome.org/gio/unstable/GMenuModel.html#GMenuModel-struct" data-gi-title-csharp="Gio.MenuModel">GMenuModel</a>, using
+<a href="gtkpopover-h.html#gtk_popover_new_from_model" data-gi-href-csharp="gtkpopover-h.html#gtk_popover_new_from_model" data-gi-title-csharp="Gtk.Popover">gtk_popover_new_from_model</a>. In addition to all the regular menu
 model features, this function supports rendering sections in the
 model in a more compact form, as a row of icon buttons instead of
 menu items.</p>
@@ -151,15 +151,15 @@ with the ”verb-icon” attribute.</p>
      ╰── &lt;child&gt;
 </code></pre>
 <p>The contents child node always gets the .background style class and it
-gets the .menu style class if the popover is menu-like (e.g. <a href="gtkpopovermenu-h.html#GtkPopoverMenu" data-gi-href-javascript="gtkpopovermenu-h.html#GtkPopoverMenu" data-gi-title-javascript="Gtk.PopoverMenu" data-gi-href-python="gtkpopovermenu-h.html#GtkPopoverMenu" data-gi-title-python="Gtk.PopoverMenu">GtkPopoverMenu</a>
-or created using <a href="gtkpopover-h.html#gtk_popover_new_from_model" data-gi-href-javascript="gtkpopover-h.html#gtk_popover_new_from_model" data-gi-title-javascript="Gtk.prototype.new_from_model" data-gi-href-python="gtkpopover-h.html#gtk_popover_new_from_model" data-gi-title-python="Gtk.Popover.new_from_model">gtk_popover_new_from_model</a>.</p>
+gets the .menu style class if the popover is menu-like (e.g. <a href="gtkpopovermenu-h.html#GtkPopoverMenu" data-gi-href-csharp="gtkpopovermenu-h.html#GtkPopoverMenu" data-gi-title-csharp="Gtk.PopoverMenu">GtkPopoverMenu</a>
+or created using <a href="gtkpopover-h.html#gtk_popover_new_from_model" data-gi-href-csharp="gtkpopover-h.html#gtk_popover_new_from_model" data-gi-title-csharp="Gtk.Popover">gtk_popover_new_from_model</a>.</p>
 <p>Particular uses of GtkPopover, such as touch selection popups
-or magnifiers in <a href="gtkentry-h.html#GtkEntry" data-gi-href-javascript="gtkentry-h.html#GtkEntry" data-gi-title-javascript="Gtk.Entry" data-gi-href-python="gtkentry-h.html#GtkEntry" data-gi-title-python="Gtk.Entry">GtkEntry</a> or <a href="gtktextview-h.html#GtkTextView" data-gi-href-javascript="gtktextview-h.html#GtkTextView" data-gi-title-javascript="Gtk.TextView" data-gi-href-python="gtktextview-h.html#GtkTextView" data-gi-title-python="Gtk.TextView">GtkTextView</a> get style classes
+or magnifiers in <a href="gtkentry-h.html#GtkEntry" data-gi-href-csharp="gtkentry-h.html#GtkEntry" data-gi-title-csharp="Gtk.Entry">GtkEntry</a> or <a href="gtktextview-h.html#GtkTextView" data-gi-href-csharp="gtktextview-h.html#GtkTextView" data-gi-title-csharp="Gtk.TextView">GtkTextView</a> get style classes
 like .touch-selection or .magnifier to differentiate from
 plain popovers.</p>
 <p>When styling a popover directly, the popover node should usually not have any
 background.</p>
-<p>Note that, in order to accomplish appropriate arrow visuals, <a href="gtkpopover-h.html#GtkPopover" data-gi-href-javascript="gtkpopover-h.html#GtkPopover" data-gi-title-javascript="Gtk.Popover" data-gi-href-python="gtkpopover-h.html#GtkPopover" data-gi-title-python="Gtk.Popover">GtkPopover</a> uses
+<p>Note that, in order to accomplish appropriate arrow visuals, <a href="gtkpopover-h.html#GtkPopover" data-gi-href-csharp="gtkpopover-h.html#GtkPopover" data-gi-title-csharp="Gtk.Popover">GtkPopover</a> uses
 custom drawing for the arrow node. This makes it possible for the arrow to change
 its shape dynamically, but it also limits the possibilities of styling it using CSS.
 In particular, the arrow gets drawn over the content node's border so they look
@@ -174,7 +174,7 @@ solid, no border-radius, only one border width (border-bottom-width is used) and
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="GtkPopover">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
@@ -187,242 +187,20 @@ solid, no border-radius, only one border width (border-bottom-width is used) and
 <div class="hierarchy_container">
 	<div class="hierarchy_details">
 <pre>
-<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object">GObject</a>
-    <span class="lineart">╰──</span><a title="GInitiallyUnowned" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-javascript="GObject.InitiallyUnowned" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-python="GObject.InitiallyUnowned">GInitiallyUnowned</a>
-        <span class="lineart">╰──</span><a title="GtkWidget" href="gtkwidget-h.html#GtkWidget" data-gi-href-javascript="gtkwidget-h.html#GtkWidget" data-gi-title-javascript="Gtk.Widget" data-gi-href-python="gtkwidget-h.html#GtkWidget" data-gi-title-python="Gtk.Widget">GtkWidget</a>
-            <span class="lineart">╰──</span><a title="GtkContainer" href="gtkcontainer-h.html#GtkContainer" data-gi-href-javascript="gtkcontainer-h.html#GtkContainer" data-gi-title-javascript="Gtk.Container" data-gi-href-python="gtkcontainer-h.html#GtkContainer" data-gi-title-python="Gtk.Container">GtkContainer</a>
-                <span class="lineart">╰──</span><a title="GtkBin" href="gtkbin-h.html#GtkBin" data-gi-href-javascript="gtkbin-h.html#GtkBin" data-gi-title-javascript="Gtk.Bin" data-gi-href-python="gtkbin-h.html#GtkBin" data-gi-title-python="Gtk.Bin">GtkBin</a>
+<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-csharp="http://docs.go-mono.com/?link=T%3aGLib.Object" data-gi-title-csharp="GLib.Object">GObject</a>
+    <span class="lineart">╰──</span><a title="GInitiallyUnowned" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-href-csharp="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-csharp="GObject.InitiallyUnowned">GInitiallyUnowned</a>
+        <span class="lineart">╰──</span><a title="GtkWidget" href="gtkwidget-h.html#GtkWidget" data-gi-href-csharp="gtkwidget-h.html#GtkWidget" data-gi-title-csharp="Gtk.Widget">GtkWidget</a>
+            <span class="lineart">╰──</span><a title="GtkContainer" href="gtkcontainer-h.html#GtkContainer" data-gi-href-csharp="gtkcontainer-h.html#GtkContainer" data-gi-title-csharp="Gtk.Container">GtkContainer</a>
+                <span class="lineart">╰──</span><a title="GtkBin" href="gtkbin-h.html#GtkBin" data-gi-href-csharp="gtkbin-h.html#GtkBin" data-gi-title-csharp="Gtk.Bin">GtkBin</a>
                     <span class="lineart">╰──</span>GtkPopover
-                        <span class="lineart">╰──</span><a title="GtkPopoverMenu" href="gtkpopovermenu-h.html#GtkPopoverMenu" data-gi-href-javascript="gtkpopovermenu-h.html#GtkPopoverMenu" data-gi-title-javascript="Gtk.PopoverMenu" data-gi-href-python="gtkpopovermenu-h.html#GtkPopoverMenu" data-gi-title-python="Gtk.PopoverMenu">GtkPopoverMenu</a>
+                        <span class="lineart">╰──</span><a title="GtkPopoverMenu" href="gtkpopovermenu-h.html#GtkPopoverMenu" data-gi-href-csharp="gtkpopovermenu-h.html#GtkPopoverMenu" data-gi-title-csharp="Gtk.PopoverMenu">GtkPopoverMenu</a>
 </pre>
 
 </div>
 
 </div>
 
-<div class="interfaces_container">
-	
-<p><b>Implemented interfaces:</b>
-    AtkImplementorIface, <a title="GtkBuildable" href="gtkbuildable-h.html#GtkBuildable" data-gi-href-javascript="gtkbuildable-h.html#GtkBuildable" data-gi-title-javascript="Gtk.Buildable" data-gi-href-python="gtkbuildable-h.html#GtkBuildable" data-gi-title-python="Gtk.Buildable">GtkBuildable</a>
-</p>
 
-</div>
-
-
-
-
-	<div class="members-container">
-		<h3>Members</h3>
-					
-<div class="symbol-detail" data-hotdoc-id="GtkPopover.parent_instance">
-	<div>
-		<i><em><code>parent_instance</code></em></i>
-		(<a title="GtkBin" href="gtkbin-h.html#GtkBin" data-gi-href-javascript="gtkbin-h.html#GtkBin" data-gi-title-javascript="Gtk.Bin" data-gi-href-python="gtkbin-h.html#GtkBin" data-gi-title-python="Gtk.Bin">GtkBin</a>)
-		–
-	</div>
-			<i>No description available</i>
-	</div>
-
-			</div>
-
-
-<h3>Class structure</h3>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="GtkPopoverClass">
-	<span><code>GtkPopoverClass</code></span>
-</h4>
-
-
-
-
-
-	<div class="members-container">
-		<h5>Fields</h5>
-					
-<div class="symbol-detail" data-hotdoc-id="GtkPopoverClass.parent_class">
-	<div>
-		<i><em><code>parent_class</code></em></i>
-		(<a title="GtkBinClass" href="GtkBinClass">GtkBinClass</a>)
-		–
-	</div>
-			<i>No description available</i>
-	</div>
-
-			</div>
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h3>
-	Gtk.PopoverClass
-</h3>
-
-
-
-
-
-	<div class="members-container">
-		<h5>Attributes</h5>
-					
-<div class="symbol-detail" data-hotdoc-id="GtkPopoverClass.parent_class">
-	<div>
-		<i><em><code>PopoverClass.parent_class</code></em></i>
-		(<a title="Gtk.BinClass" href="GtkBinClass">Gtk.BinClass</a>)
-		–
-	</div>
-			<i>No description available</i>
-	</div>
-
-			</div>
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3>
-	Gtk.PopoverClass
-</h3>
-
-
-
-
-
-	<div class="members-container">
-		<h5>Attributes</h5>
-					
-<div class="symbol-detail" data-hotdoc-id="GtkPopoverClass.parent_class">
-	<div>
-		<i><em><code>PopoverClass.parent_class</code></em></i>
-		(<a title="Gtk.BinClass" href="GtkBinClass">Gtk.BinClass</a>)
-		–
-	</div>
-			<i>No description available</i>
-	</div>
-
-			</div>
-
-
-
-        </div>
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h2 data-hotdoc-id="GtkPopover">
-	<span><code>GtkPopover</code></span>
-</h2>
-
-
-<div class="hierarchy_container">
-	<div class="hierarchy_details">
-<pre>
-<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object">GObject</a>
-    <span class="lineart">╰──</span><a title="GInitiallyUnowned" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-javascript="GObject.InitiallyUnowned" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-python="GObject.InitiallyUnowned">GInitiallyUnowned</a>
-        <span class="lineart">╰──</span><a title="GtkWidget" href="gtkwidget-h.html#GtkWidget" data-gi-href-javascript="gtkwidget-h.html#GtkWidget" data-gi-title-javascript="Gtk.Widget" data-gi-href-python="gtkwidget-h.html#GtkWidget" data-gi-title-python="Gtk.Widget">GtkWidget</a>
-            <span class="lineart">╰──</span><a title="GtkContainer" href="gtkcontainer-h.html#GtkContainer" data-gi-href-javascript="gtkcontainer-h.html#GtkContainer" data-gi-title-javascript="Gtk.Container" data-gi-href-python="gtkcontainer-h.html#GtkContainer" data-gi-title-python="Gtk.Container">GtkContainer</a>
-                <span class="lineart">╰──</span><a title="GtkBin" href="gtkbin-h.html#GtkBin" data-gi-href-javascript="gtkbin-h.html#GtkBin" data-gi-title-javascript="Gtk.Bin" data-gi-href-python="gtkbin-h.html#GtkBin" data-gi-title-python="Gtk.Bin">GtkBin</a>
-                    <span class="lineart">╰──</span>GtkPopover
-                        <span class="lineart">╰──</span><a title="GtkPopoverMenu" href="gtkpopovermenu-h.html#GtkPopoverMenu" data-gi-href-javascript="gtkpopovermenu-h.html#GtkPopoverMenu" data-gi-title-javascript="Gtk.PopoverMenu" data-gi-href-python="gtkpopovermenu-h.html#GtkPopoverMenu" data-gi-title-python="Gtk.PopoverMenu">GtkPopoverMenu</a>
-</pre>
-
-</div>
-
-</div>
-
-<div class="interfaces_container">
-	
-<p><b>Implemented interfaces:</b>
-    AtkImplementorIface, <a title="GtkBuildable" href="gtkbuildable-h.html#GtkBuildable" data-gi-href-javascript="gtkbuildable-h.html#GtkBuildable" data-gi-title-javascript="Gtk.Buildable" data-gi-href-python="gtkbuildable-h.html#GtkBuildable" data-gi-title-python="Gtk.Buildable">GtkBuildable</a>
-</p>
-
-</div>
-
-
-
-
-	<div class="members-container">
-		<h3>Members</h3>
-					
-<div class="symbol-detail" data-hotdoc-id="GtkPopover.parent_instance">
-	<div>
-		<i><em><code>parent_instance</code></em></i>
-		(<a title="GtkBin" href="gtkbin-h.html#GtkBin" data-gi-href-javascript="gtkbin-h.html#GtkBin" data-gi-title-javascript="Gtk.Bin" data-gi-href-python="gtkbin-h.html#GtkBin" data-gi-title-python="Gtk.Bin">GtkBin</a>)
-		–
-	</div>
-			<i>No description available</i>
-	</div>
-
-			</div>
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h2 data-hotdoc-id="GtkPopover">
-	<span><code>GtkPopover</code></span>
-</h2>
-
-
-<div class="hierarchy_container">
-	<div class="hierarchy_details">
-<pre>
-<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object">GObject</a>
-    <span class="lineart">╰──</span><a title="GInitiallyUnowned" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-javascript="GObject.InitiallyUnowned" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-python="GObject.InitiallyUnowned">GInitiallyUnowned</a>
-        <span class="lineart">╰──</span><a title="GtkWidget" href="gtkwidget-h.html#GtkWidget" data-gi-href-javascript="gtkwidget-h.html#GtkWidget" data-gi-title-javascript="Gtk.Widget" data-gi-href-python="gtkwidget-h.html#GtkWidget" data-gi-title-python="Gtk.Widget">GtkWidget</a>
-            <span class="lineart">╰──</span><a title="GtkContainer" href="gtkcontainer-h.html#GtkContainer" data-gi-href-javascript="gtkcontainer-h.html#GtkContainer" data-gi-title-javascript="Gtk.Container" data-gi-href-python="gtkcontainer-h.html#GtkContainer" data-gi-title-python="Gtk.Container">GtkContainer</a>
-                <span class="lineart">╰──</span><a title="GtkBin" href="gtkbin-h.html#GtkBin" data-gi-href-javascript="gtkbin-h.html#GtkBin" data-gi-title-javascript="Gtk.Bin" data-gi-href-python="gtkbin-h.html#GtkBin" data-gi-title-python="Gtk.Bin">GtkBin</a>
-                    <span class="lineart">╰──</span>GtkPopover
-                        <span class="lineart">╰──</span><a title="GtkPopoverMenu" href="gtkpopovermenu-h.html#GtkPopoverMenu" data-gi-href-javascript="gtkpopovermenu-h.html#GtkPopoverMenu" data-gi-title-javascript="Gtk.PopoverMenu" data-gi-href-python="gtkpopovermenu-h.html#GtkPopoverMenu" data-gi-title-python="Gtk.PopoverMenu">GtkPopoverMenu</a>
-</pre>
-
-</div>
-
-</div>
-
-<div class="interfaces_container">
-	
-<p><b>Implemented interfaces:</b>
-    AtkImplementorIface, <a title="GtkBuildable" href="gtkbuildable-h.html#GtkBuildable" data-gi-href-javascript="gtkbuildable-h.html#GtkBuildable" data-gi-title-javascript="Gtk.Buildable" data-gi-href-python="gtkbuildable-h.html#GtkBuildable" data-gi-title-python="Gtk.Buildable">GtkBuildable</a>
-</p>
-
-</div>
-
-
-
-
-	<div class="members-container">
-		<h3>Members</h3>
-					
-<div class="symbol-detail" data-hotdoc-id="GtkPopover.parent_instance">
-	<div>
-		<i><em><code>parent_instance</code></em></i>
-		(<a title="GtkBin" href="gtkbin-h.html#GtkBin" data-gi-href-javascript="gtkbin-h.html#GtkBin" data-gi-title-javascript="Gtk.Bin" data-gi-href-python="gtkbin-h.html#GtkBin" data-gi-title-python="Gtk.Bin">GtkBin</a>)
-		–
-	</div>
-			<i>No description available</i>
-	</div>
-
-			</div>
 
 
 
@@ -436,21 +214,21 @@ solid, no border-radius, only one border width (border-bottom-width is used) and
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.12;" id="gtk_popover_new">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h4 data-hotdoc-id="gtk_popover_new">
-	<span><code>gtk_popover_new</code></span>
+	<span><code>Gtk.Popover</code></span>
 </h4>
 
 
 
 
 <pre class="c-prototype">
-<a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> *
-gtk_popover_new (<a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> * relative_to)</pre>
+<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
+Gtk.Popover (<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>)</pre>
 
 <p>Creates a new popover to point to <em>relative_to</em></p>
 
@@ -462,66 +240,6 @@ gtk_popover_new (<a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidge
 <div class="symbol-detail">
 	<div>
 		<i><em><code>relative_to</code></em></i>
-					(
-						
-<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
-
-						)
-				–
-	</div>
-			<p><a href="gtkwidget-h.html#GtkWidget">GtkWidget</a> the popover is related to</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-								–
-			</div>
-							<p>a new <a href="gtkpopover-h.html#GtkPopover">GtkPopover</a></p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.12
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_popover_new">
-	<span><code>Gtk.prototype.new</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.new(relative_to: <a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>): {
-    // javascript wrapper for 'gtk_popover_new'
-}</pre>
-
-<p>Creates a new popover to point to <em>relative_to</em></p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>relative_to</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
 				–
 	</div>
 			<p><a href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a> the popover is related to</p>
@@ -534,66 +252,6 @@ function Gtk.prototype.new(relative_to: <a title="Gtk.Widget" href="gtkwidget-h.
 		<div class="symbol-detail">
 			<div>
 				<b>Returns</b>
-									(
-					<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-										)
-								–
-			</div>
-							<p>a new <a href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a></p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.12
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_popover_new">
-	<span><code>Gtk.Popover.new</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.Popover.new (relative_to):
-    #python wrapper for 'gtk_popover_new'</pre>
-
-<p>Creates a new popover to point to <em>relative_to</em></p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>relative_to</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
-				–
-	</div>
-			<p><a href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a> the popover is related to</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-										)
 								–
 			</div>
 							<p>a new <a href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a></p>
@@ -616,96 +274,22 @@ def Gtk.Popover.new (relative_to):
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.12;" id="gtk_popover_new_from_model">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h4 data-hotdoc-id="gtk_popover_new_from_model">
-	<span><code>gtk_popover_new_from_model</code></span>
+	<span><code>Gtk.Popover</code></span>
 </h4>
 
 
 
 
 <pre class="c-prototype">
-<a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> *
-gtk_popover_new_from_model (<a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> * relative_to,
-                            <a title="GMenuModel" href="https://developer.gnome.org/gio/unstable/GMenuModel.html#GMenuModel-struct">GMenuModel</a> * model)</pre>
-
-<p>Creates a <a href="gtkpopover-h.html#GtkPopover">GtkPopover</a> and populates it according to
-<em>model</em>. The popover is pointed to the <em>relative_to</em> widget.</p>
-<p>The created buttons are connected to actions found in the
-<a href="gtkapplicationwindow-h.html#GtkApplicationWindow">GtkApplicationWindow</a> to which the popover belongs - typically
-by means of being attached to a widget that is contained within
-the <a href="gtkapplicationwindow-h.html#GtkApplicationWindow">GtkApplicationWindow</a> widget hierarchy.</p>
-<p>Actions can also be added using <a href="gtkwidget-h.html#gtk_widget_insert_action_group">gtk_widget_insert_action_group</a>
-on the menus attach widget or on any of its parent widgets.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>relative_to</code></em></i>
-					(
-						
-<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
-
-						)
-				–
-	</div>
-			<p><a href="gtkwidget-h.html#GtkWidget">GtkWidget</a> the popover is related to</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>model</code></em></i>
-				–
-	</div>
-			<p>a <a href="https://developer.gnome.org/gio/unstable/GMenuModel.html#GMenuModel-struct">GMenuModel</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-								–
-			</div>
-							<p>the new <a href="gtkpopover-h.html#GtkPopover">GtkPopover</a></p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.12
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_popover_new_from_model">
-	<span><code>Gtk.prototype.new_from_model</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.new_from_model(relative_to: <a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>, model: <a title="Gio.MenuModel" href="https://developer.gnome.org/gio/unstable/GMenuModel.html#GMenuModel-struct">Gio.MenuModel</a>): {
-    // javascript wrapper for 'gtk_popover_new_from_model'
-}</pre>
+<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
+Gtk.Popover (<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>,
+             <a title="Gio.MenuModel" href="https://developer.gnome.org/gio/unstable/GMenuModel.html#GMenuModel-struct">Gio.MenuModel</a>)</pre>
 
 <p>Creates a <a href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a> and populates it according to
 <em>model</em>. The popover is pointed to the <em>relative_to</em> widget.</p>
@@ -713,7 +297,7 @@ function Gtk.prototype.new_from_model(relative_to: <a title="Gtk.Widget" href="g
 <a href="gtkapplicationwindow-h.html#GtkApplicationWindow">Gtk.ApplicationWindow</a> to which the popover belongs - typically
 by means of being attached to a widget that is contained within
 the <a href="gtkapplicationwindow-h.html#GtkApplicationWindow">Gtk.ApplicationWindow</a> widget hierarchy.</p>
-<p>Actions can also be added using <a href="gtkwidget-h.html#gtk_widget_insert_action_group">Gtk.prototype.insert_action_group</a>
+<p>Actions can also be added using <a href="gtkwidget-h.html#gtk_widget_insert_action_group">Gtk.Widget.InsertActionGroup</a>
 on the menus attach widget or on any of its parent widgets.</p>
 
 
@@ -724,9 +308,6 @@ on the menus attach widget or on any of its parent widgets.</p>
 <div class="symbol-detail">
 	<div>
 		<i><em><code>relative_to</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
 				–
 	</div>
 			<p><a href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a> the popover is related to</p>
@@ -737,9 +318,6 @@ on the menus attach widget or on any of its parent widgets.</p>
 <div class="symbol-detail">
 	<div>
 		<i><em><code>model</code></em></i>
-					(
-						<a title="Gio.MenuModel" href="https://developer.gnome.org/gio/unstable/GMenuModel.html#GMenuModel-struct">Gio.MenuModel</a>
-						)
 				–
 	</div>
 			<p>a <a href="https://developer.gnome.org/gio/unstable/GMenuModel.html#GMenuModel-struct">Gio.MenuModel</a></p>
@@ -752,86 +330,6 @@ on the menus attach widget or on any of its parent widgets.</p>
 		<div class="symbol-detail">
 			<div>
 				<b>Returns</b>
-									(
-					<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-										)
-								–
-			</div>
-							<p>the new <a href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a></p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.12
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_popover_new_from_model">
-	<span><code>Gtk.Popover.new_from_model</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.Popover.new_from_model (relative_to, model):
-    #python wrapper for 'gtk_popover_new_from_model'</pre>
-
-<p>Creates a <a href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a> and populates it according to
-<em>model</em>. The popover is pointed to the <em>relative_to</em> widget.</p>
-<p>The created buttons are connected to actions found in the
-<a href="gtkapplicationwindow-h.html#GtkApplicationWindow">Gtk.ApplicationWindow</a> to which the popover belongs - typically
-by means of being attached to a widget that is contained within
-the <a href="gtkapplicationwindow-h.html#GtkApplicationWindow">Gtk.ApplicationWindow</a> widget hierarchy.</p>
-<p>Actions can also be added using <a href="gtkwidget-h.html#gtk_widget_insert_action_group">Gtk.Widget.insert_action_group</a>
-on the menus attach widget or on any of its parent widgets.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>relative_to</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
-				–
-	</div>
-			<p><a href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a> the popover is related to</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>model</code></em></i>
-					(
-						<a title="Gio.MenuModel" href="https://developer.gnome.org/gio/unstable/GMenuModel.html#GMenuModel-struct">Gio.MenuModel</a>
-						)
-				–
-	</div>
-			<p>a <a href="https://developer.gnome.org/gio/unstable/GMenuModel.html#GMenuModel-struct">Gio.MenuModel</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-										)
 								–
 			</div>
 							<p>the new <a href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a></p>
@@ -856,133 +354,40 @@ on the menus attach widget or on any of its parent widgets.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.12;" id="gtk_popover_bind_model">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h4 data-hotdoc-id="gtk_popover_bind_model">
-	<span><code>gtk_popover_bind_model</code></span>
+	<span><code>Gtk.Popover.BindModel</code></span>
 </h4>
 
 
 
 
 <pre class="c-prototype">
-gtk_popover_bind_model (<a title="GtkPopover" href="gtkpopover-h.html#GtkPopover">GtkPopover</a> * popover,
-                        <a title="GMenuModel" href="https://developer.gnome.org/gio/unstable/GMenuModel.html#GMenuModel-struct">GMenuModel</a> * model,
-                        const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * action_namespace)</pre>
-
-<p>Establishes a binding between a <a href="gtkpopover-h.html#GtkPopover">GtkPopover</a> and a <a href="https://developer.gnome.org/gio/unstable/GMenuModel.html#GMenuModel-struct">GMenuModel</a>.</p>
-<p>The contents of <em>popover</em> are removed and then refilled with menu items
-according to <em>model</em>.  When <em>model</em> changes, <em>popover</em> is updated.
-Calling this function twice on <em>popover</em> with different <em>model</em> will
-cause the first binding to be replaced with a binding to the new
-model. If <em>model</em> is <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> then any previous binding is undone and
-all children are removed.</p>
-<p>If <em>action_namespace</em> is non-%NULL then the effect is as if all
-actions mentioned in the <em>model</em> have their names prefixed with the
-namespace, plus a dot.  For example, if the action “quit” is
-mentioned and <em>action_namespace</em> is “app” then the effective action
-name is “app.quit”.</p>
-<p>This function uses <a href="gtkactionable-h.html#GtkActionable">GtkActionable</a> to define the action name and
-target values on the created menu items.  If you want to use an
-action group other than “app” and “win”, or if you want to use a
-<a href="gtkmenushell-h.html#GtkMenuShell">GtkMenuShell</a> outside of a <a href="gtkapplicationwindow-h.html#GtkApplicationWindow">GtkApplicationWindow</a>, then you will need
-to attach your own action group to the widget hierarchy using
-<a href="gtkwidget-h.html#gtk_widget_insert_action_group">gtk_widget_insert_action_group</a>.  As an example, if you created a
-group with a “quit” action and inserted it with the name “mygroup”
-then you would use the action name “mygroup.quit” in your
-<a href="https://developer.gnome.org/gio/unstable/GMenuModel.html#GMenuModel-struct">GMenuModel</a>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>popover</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkpopover-h.html#GtkPopover">GtkPopover</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>model</code></em></i>
-					(
-						
-<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
-
-						)
-				–
-	</div>
-			<p>the <a href="https://developer.gnome.org/gio/unstable/GMenuModel.html#GMenuModel-struct">GMenuModel</a> to bind to or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> to remove
-binding</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>action_namespace</code></em></i>
-					(
-						
-<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
-
-						)
-				–
-	</div>
-			<p>the namespace for actions in <em>model</em></p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.12
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_popover_bind_model">
-	<span><code>Gtk.prototype.bind_model</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.bind_model(model: <a title="Gio.MenuModel" href="https://developer.gnome.org/gio/unstable/GMenuModel.html#GMenuModel-struct">Gio.MenuModel</a>, action_namespace: <a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>): {
-    // javascript wrapper for 'gtk_popover_bind_model'
-}</pre>
+Gtk.Popover.BindModel (<a title="Gio.MenuModel" href="https://developer.gnome.org/gio/unstable/GMenuModel.html#GMenuModel-struct">Gio.MenuModel</a>,
+                       <a title="string" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/string">string</a>)</pre>
 
 <p>Establishes a binding between a <a href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a> and a <a href="https://developer.gnome.org/gio/unstable/GMenuModel.html#GMenuModel-struct">Gio.MenuModel</a>.</p>
 <p>The contents of <em>popover</em> are removed and then refilled with menu items
 according to <em>model</em>.  When <em>model</em> changes, <em>popover</em> is updated.
 Calling this function twice on <em>popover</em> with different <em>model</em> will
 cause the first binding to be replaced with a binding to the new
-model. If <em>model</em> is <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a> then any previous binding is undone and
+model. If <em>model</em> is <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/null">null</a> then any previous binding is undone and
 all children are removed.</p>
 <p>If <em>action_namespace</em> is non-%NULL then the effect is as if all
 actions mentioned in the <em>model</em> have their names prefixed with the
 namespace, plus a dot.  For example, if the action “quit” is
 mentioned and <em>action_namespace</em> is “app” then the effective action
 name is “app.quit”.</p>
-<p>This function uses <a href="gtkactionable-h.html#GtkActionable">Gtk.Actionable</a> to define the action name and
+<p>This function uses <a href="gtkactionable-h.html#GtkActionable">Gtk.IActionable</a> to define the action name and
 target values on the created menu items.  If you want to use an
 action group other than “app” and “win”, or if you want to use a
 <a href="gtkmenushell-h.html#GtkMenuShell">Gtk.MenuShell</a> outside of a <a href="gtkapplicationwindow-h.html#GtkApplicationWindow">Gtk.ApplicationWindow</a>, then you will need
 to attach your own action group to the widget hierarchy using
-<a href="gtkwidget-h.html#gtk_widget_insert_action_group">Gtk.prototype.insert_action_group</a>.  As an example, if you created a
+<a href="gtkwidget-h.html#gtk_widget_insert_action_group">Gtk.Widget.InsertActionGroup</a>.  As an example, if you created a
 group with a “quit” action and inserted it with the name “mygroup”
 then you would use the action name “mygroup.quit” in your
 <a href="https://developer.gnome.org/gio/unstable/GMenuModel.html#GMenuModel-struct">Gio.MenuModel</a>.</p>
@@ -994,26 +399,10 @@ then you would use the action name “mygroup.quit” in your
 					
 <div class="symbol-detail">
 	<div>
-		<i><em><code>popover</code></em></i>
-					(
-						<a title="Gtk.Popover" href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
 		<i><em><code>model</code></em></i>
-					(
-						<a title="Gio.MenuModel" href="https://developer.gnome.org/gio/unstable/GMenuModel.html#GMenuModel-struct">Gio.MenuModel</a>
-						)
 				–
 	</div>
-			<p>the <a href="https://developer.gnome.org/gio/unstable/GMenuModel.html#GMenuModel-struct">Gio.MenuModel</a> to bind to or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a> to remove
+			<p>the <a href="https://developer.gnome.org/gio/unstable/GMenuModel.html#GMenuModel-struct">Gio.MenuModel</a> to bind to or <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/null">null</a> to remove
 binding</p>
 
 	</div>
@@ -1022,99 +411,6 @@ binding</p>
 <div class="symbol-detail">
 	<div>
 		<i><em><code>action_namespace</code></em></i>
-					(
-						<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
-						)
-				–
-	</div>
-			<p>the namespace for actions in <em>model</em></p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.12
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_popover_bind_model">
-	<span><code>Gtk.Popover.bind_model</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.Popover.bind_model (self, model, action_namespace):
-    #python wrapper for 'gtk_popover_bind_model'</pre>
-
-<p>Establishes a binding between a <a href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a> and a <a href="https://developer.gnome.org/gio/unstable/GMenuModel.html#GMenuModel-struct">Gio.MenuModel</a>.</p>
-<p>The contents of <em>popover</em> are removed and then refilled with menu items
-according to <em>model</em>.  When <em>model</em> changes, <em>popover</em> is updated.
-Calling this function twice on <em>popover</em> with different <em>model</em> will
-cause the first binding to be replaced with a binding to the new
-model. If <em>model</em> is <a href="https://docs.python.org/3/library/constants.html#None">None</a> then any previous binding is undone and
-all children are removed.</p>
-<p>If <em>action_namespace</em> is non-%NULL then the effect is as if all
-actions mentioned in the <em>model</em> have their names prefixed with the
-namespace, plus a dot.  For example, if the action “quit” is
-mentioned and <em>action_namespace</em> is “app” then the effective action
-name is “app.quit”.</p>
-<p>This function uses <a href="gtkactionable-h.html#GtkActionable">Gtk.Actionable</a> to define the action name and
-target values on the created menu items.  If you want to use an
-action group other than “app” and “win”, or if you want to use a
-<a href="gtkmenushell-h.html#GtkMenuShell">Gtk.MenuShell</a> outside of a <a href="gtkapplicationwindow-h.html#GtkApplicationWindow">Gtk.ApplicationWindow</a>, then you will need
-to attach your own action group to the widget hierarchy using
-<a href="gtkwidget-h.html#gtk_widget_insert_action_group">Gtk.Widget.insert_action_group</a>.  As an example, if you created a
-group with a “quit” action and inserted it with the name “mygroup”
-then you would use the action name “mygroup.quit” in your
-<a href="https://developer.gnome.org/gio/unstable/GMenuModel.html#GMenuModel-struct">Gio.MenuModel</a>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>popover</code></em></i>
-					(
-						<a title="Gtk.Popover" href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>model</code></em></i>
-					(
-						<a title="Gio.MenuModel" href="https://developer.gnome.org/gio/unstable/GMenuModel.html#GMenuModel-struct">Gio.MenuModel</a>
-						)
-				–
-	</div>
-			<p>the <a href="https://developer.gnome.org/gio/unstable/GMenuModel.html#GMenuModel-struct">Gio.MenuModel</a> to bind to or <a href="https://docs.python.org/3/library/constants.html#None">None</a> to remove
-binding</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>action_namespace</code></em></i>
-					(
-						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
-						)
 				–
 	</div>
 			<p>the namespace for actions in <em>model</em></p>
@@ -1138,131 +434,27 @@ binding</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.22;" id="gtk_popover_popup">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h4 data-hotdoc-id="gtk_popover_popup">
-	<span><code>gtk_popover_popup</code></span>
+	<span><code>Gtk.Popover.Popup</code></span>
 </h4>
 
 
 
 
 <pre class="c-prototype">
-gtk_popover_popup (<a title="GtkPopover" href="gtkpopover-h.html#GtkPopover">GtkPopover</a> * popover)</pre>
+Gtk.Popover.Popup ()</pre>
 
-<p>Pops <em>popover</em> up. This is different than a <a href="gtkwidget-h.html#gtk_widget_show">gtk_widget_show</a> call
+<p>Pops <em>popover</em> up. This is different than a <a href="gtkwidget-h.html#gtk_widget_show">Gtk.Widget.Show</a> call
 in that it shows the popover with a transition. If you want to show
-the popover without a transition, use <a href="gtkwidget-h.html#gtk_widget_show">gtk_widget_show</a>.</p>
+the popover without a transition, use <a href="gtkwidget-h.html#gtk_widget_show">Gtk.Widget.Show</a>.</p>
 
 
 
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>popover</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkpopover-h.html#GtkPopover">GtkPopover</a></p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.22
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_popover_popup">
-	<span><code>Gtk.prototype.popup</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.popup(): {
-    // javascript wrapper for 'gtk_popover_popup'
-}</pre>
-
-<p>Pops <em>popover</em> up. This is different than a <a href="gtkwidget-h.html#gtk_widget_show">Gtk.prototype.show</a> call
-in that it shows the popover with a transition. If you want to show
-the popover without a transition, use <a href="gtkwidget-h.html#gtk_widget_show">Gtk.prototype.show</a>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>popover</code></em></i>
-					(
-						<a title="Gtk.Popover" href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a></p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.22
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_popover_popup">
-	<span><code>Gtk.Popover.popup</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.Popover.popup (self):
-    #python wrapper for 'gtk_popover_popup'</pre>
-
-<p>Pops <em>popover</em> up. This is different than a <a href="gtkwidget-h.html#gtk_widget_show">Gtk.Widget.show</a> call
-in that it shows the popover with a transition. If you want to show
-the popover without a transition, use <a href="gtkwidget-h.html#gtk_widget_show">Gtk.Widget.show</a>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>popover</code></em></i>
-					(
-						<a title="Gtk.Popover" href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a></p>
-
-	</div>
-
-			</div>
 
 
 
@@ -1279,131 +471,27 @@ the popover without a transition, use <a href="gtkwidget-h.html#gtk_widget_show"
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.22;" id="gtk_popover_popdown">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h4 data-hotdoc-id="gtk_popover_popdown">
-	<span><code>gtk_popover_popdown</code></span>
+	<span><code>Gtk.Popover.Popdown</code></span>
 </h4>
 
 
 
 
 <pre class="c-prototype">
-gtk_popover_popdown (<a title="GtkPopover" href="gtkpopover-h.html#GtkPopover">GtkPopover</a> * popover)</pre>
+Gtk.Popover.Popdown ()</pre>
 
-<p>Pops <em>popover</em> down.This is different than a <a href="gtkwidget-h.html#gtk_widget_hide">gtk_widget_hide</a> call
+<p>Pops <em>popover</em> down.This is different than a <a href="gtkwidget-h.html#gtk_widget_hide">Gtk.Widget.Hide</a> call
 in that it shows the popover with a transition. If you want to hide
-the popover without a transition, use <a href="gtkwidget-h.html#gtk_widget_hide">gtk_widget_hide</a>.</p>
+the popover without a transition, use <a href="gtkwidget-h.html#gtk_widget_hide">Gtk.Widget.Hide</a>.</p>
 
 
 
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>popover</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkpopover-h.html#GtkPopover">GtkPopover</a></p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.22
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_popover_popdown">
-	<span><code>Gtk.prototype.popdown</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.popdown(): {
-    // javascript wrapper for 'gtk_popover_popdown'
-}</pre>
-
-<p>Pops <em>popover</em> down.This is different than a <a href="gtkwidget-h.html#gtk_widget_hide">Gtk.prototype.hide</a> call
-in that it shows the popover with a transition. If you want to hide
-the popover without a transition, use <a href="gtkwidget-h.html#gtk_widget_hide">Gtk.prototype.hide</a>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>popover</code></em></i>
-					(
-						<a title="Gtk.Popover" href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a></p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.22
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_popover_popdown">
-	<span><code>Gtk.Popover.popdown</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.Popover.popdown (self):
-    #python wrapper for 'gtk_popover_popdown'</pre>
-
-<p>Pops <em>popover</em> down.This is different than a <a href="gtkwidget-h.html#gtk_widget_hide">Gtk.Widget.hide</a> call
-in that it shows the popover with a transition. If you want to hide
-the popover without a transition, use <a href="gtkwidget-h.html#gtk_widget_hide">Gtk.Widget.hide</a>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>popover</code></em></i>
-					(
-						<a title="Gtk.Popover" href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a></p>
-
-	</div>
-
-			</div>
 
 
 
@@ -1420,191 +508,6 @@ the popover without a transition, use <a href="gtkwidget-h.html#gtk_widget_hide"
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.12;" id="gtk_popover_set_relative_to">
 	
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_popover_set_relative_to">
-	<span><code>gtk_popover_set_relative_to</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-gtk_popover_set_relative_to (<a title="GtkPopover" href="gtkpopover-h.html#GtkPopover">GtkPopover</a> * popover,
-                             <a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> * relative_to)</pre>
-
-<p>Sets a new widget to be attached to <em>popover</em>. If <em>popover</em> is
-visible, the position will be updated.</p>
-<p>Note: the ownership of popovers is always given to their <em>relative_to</em>
-widget, so if <em>relative_to</em> is set to <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> on an attached <em>popover</em>, it
-will be detached from its previous widget, and consequently destroyed
-unless extra references are kept.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>popover</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkpopover-h.html#GtkPopover">GtkPopover</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>relative_to</code></em></i>
-					(
-						
-<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
-
-						)
-				–
-	</div>
-			<p>a <a href="gtkwidget-h.html#GtkWidget">GtkWidget</a></p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.12
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_popover_set_relative_to">
-	<span><code>Gtk.prototype.set_relative_to</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.set_relative_to(relative_to: <a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>): {
-    // javascript wrapper for 'gtk_popover_set_relative_to'
-}</pre>
-
-<p>Sets a new widget to be attached to <em>popover</em>. If <em>popover</em> is
-visible, the position will be updated.</p>
-<p>Note: the ownership of popovers is always given to their <em>relative_to</em>
-widget, so if <em>relative_to</em> is set to <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a> on an attached <em>popover</em>, it
-will be detached from its previous widget, and consequently destroyed
-unless extra references are kept.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>popover</code></em></i>
-					(
-						<a title="Gtk.Popover" href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>relative_to</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a></p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.12
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_popover_set_relative_to">
-	<span><code>Gtk.Popover.set_relative_to</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.Popover.set_relative_to (self, relative_to):
-    #python wrapper for 'gtk_popover_set_relative_to'</pre>
-
-<p>Sets a new widget to be attached to <em>popover</em>. If <em>popover</em> is
-visible, the position will be updated.</p>
-<p>Note: the ownership of popovers is always given to their <em>relative_to</em>
-widget, so if <em>relative_to</em> is set to <a href="https://docs.python.org/3/library/constants.html#None">None</a> on an attached <em>popover</em>, it
-will be detached from its previous widget, and consequently destroyed
-unless extra references are kept.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>popover</code></em></i>
-					(
-						<a title="Gtk.Popover" href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>relative_to</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a></p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.12
-		</p>
-
-
-        </div>
 
 </div>
 
@@ -1612,180 +515,6 @@ unless extra references are kept.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.12;" id="gtk_popover_get_relative_to">
 	
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_popover_get_relative_to">
-	<span><code>gtk_popover_get_relative_to</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-<a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> *
-gtk_popover_get_relative_to (<a title="GtkPopover" href="gtkpopover-h.html#GtkPopover">GtkPopover</a> * popover)</pre>
-
-<p>Returns the widget <em>popover</em> is currently attached to</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>popover</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkpopover-h.html#GtkPopover">GtkPopover</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					
-										
-<span class="annotation">[<abbr title="Don't free data after the code is done"><span class="acronym">transfer: none</span></abbr>]</span>
-
-										)
-								–
-			</div>
-							<p>a <a href="gtkwidget-h.html#GtkWidget">GtkWidget</a></p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.12
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_popover_get_relative_to">
-	<span><code>Gtk.prototype.get_relative_to</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.get_relative_to(): {
-    // javascript wrapper for 'gtk_popover_get_relative_to'
-}</pre>
-
-<p>Returns the widget <em>popover</em> is currently attached to</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>popover</code></em></i>
-					(
-						<a title="Gtk.Popover" href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-										)
-								–
-			</div>
-							<p>a <a href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a></p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.12
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_popover_get_relative_to">
-	<span><code>Gtk.Popover.get_relative_to</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.Popover.get_relative_to (self):
-    #python wrapper for 'gtk_popover_get_relative_to'</pre>
-
-<p>Returns the widget <em>popover</em> is currently attached to</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>popover</code></em></i>
-					(
-						<a title="Gtk.Popover" href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-										)
-								–
-			</div>
-							<p>a <a href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a></p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.12
-		</p>
-
-
-        </div>
 
 </div>
 
@@ -1793,177 +522,6 @@ def Gtk.Popover.get_relative_to (self):
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.12;" id="gtk_popover_set_pointing_to">
 	
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_popover_set_pointing_to">
-	<span><code>gtk_popover_set_pointing_to</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-gtk_popover_set_pointing_to (<a title="GtkPopover" href="gtkpopover-h.html#GtkPopover">GtkPopover</a> * popover,
-                             const <a title="GdkRectangle" href="https://developer.gnome.org/gdk3/gdk3-Points-Rectangles-and-Regions.html#GdkRectangle">GdkRectangle</a> * rect)</pre>
-
-<p>Sets the rectangle that <em>popover</em> will point to, in the
-coordinate space of the widget <em>popover</em> is attached to,
-see <a href="gtkpopover-h.html#gtk_popover_set_relative_to">gtk_popover_set_relative_to</a>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>popover</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkpopover-h.html#GtkPopover">GtkPopover</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>rect</code></em></i>
-				–
-	</div>
-			<p>rectangle to point to</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.12
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_popover_set_pointing_to">
-	<span><code>Gtk.prototype.set_pointing_to</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.set_pointing_to(rect: <a title="Gdk.Rectangle" href="https://developer.gnome.org/gdk3/gdk3-Points-Rectangles-and-Regions.html#GdkRectangle">Gdk.Rectangle</a>): {
-    // javascript wrapper for 'gtk_popover_set_pointing_to'
-}</pre>
-
-<p>Sets the rectangle that <em>popover</em> will point to, in the
-coordinate space of the widget <em>popover</em> is attached to,
-see <a href="gtkpopover-h.html#gtk_popover_set_relative_to">Gtk.prototype.set_relative_to</a>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>popover</code></em></i>
-					(
-						<a title="Gtk.Popover" href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>rect</code></em></i>
-					(
-						<a title="Gdk.Rectangle" href="https://developer.gnome.org/gdk3/gdk3-Points-Rectangles-and-Regions.html#GdkRectangle">Gdk.Rectangle</a>
-						)
-				–
-	</div>
-			<p>rectangle to point to</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.12
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_popover_set_pointing_to">
-	<span><code>Gtk.Popover.set_pointing_to</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.Popover.set_pointing_to (self, rect):
-    #python wrapper for 'gtk_popover_set_pointing_to'</pre>
-
-<p>Sets the rectangle that <em>popover</em> will point to, in the
-coordinate space of the widget <em>popover</em> is attached to,
-see <a href="gtkpopover-h.html#gtk_popover_set_relative_to">Gtk.Popover.set_relative_to</a>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>popover</code></em></i>
-					(
-						<a title="Gtk.Popover" href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>rect</code></em></i>
-					(
-						<a title="Gdk.Rectangle" href="https://developer.gnome.org/gdk3/gdk3-Points-Rectangles-and-Regions.html#GdkRectangle">Gdk.Rectangle</a>
-						)
-				–
-	</div>
-			<p>rectangle to point to</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.12
-		</p>
-
-
-        </div>
 
 </div>
 
@@ -1971,26 +529,25 @@ see <a href="gtkpopover-h.html#gtk_popover_set_relative_to">Gtk.Popover.set_rela
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_popover_get_pointing_to">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h4 data-hotdoc-id="gtk_popover_get_pointing_to">
-	<span><code>gtk_popover_get_pointing_to</code></span>
+	<span><code>Gtk.Popover.GetPointingTo</code></span>
 </h4>
 
 
 
 
 <pre class="c-prototype">
-<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
-gtk_popover_get_pointing_to (<a title="GtkPopover" href="gtkpopover-h.html#GtkPopover">GtkPopover</a> * popover,
-                             <a title="GdkRectangle" href="https://developer.gnome.org/gdk3/gdk3-Points-Rectangles-and-Regions.html#GdkRectangle">GdkRectangle</a> * rect)</pre>
+<a title="bool" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/bool">bool</a>
+Gtk.Popover.GetPointingTo (<a title="out" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/out">out</a>  <a title="Gdk.Rectangle" href="https://developer.gnome.org/gdk3/gdk3-Points-Rectangles-and-Regions.html#GdkRectangle">Gdk.Rectangle</a>)</pre>
 
 <p>If a rectangle to point to has been set, this function will
-return <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> and fill in <em>rect</em> with such rectangle, otherwise
-it will return <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS">FALSE</a> and fill in <em>rect</em> with the attached
+return <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/true">true</a> and fill in <em>rect</em> with such rectangle, otherwise
+it will return <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/false">false</a> and fill in <em>rect</em> with the attached
 widget coordinates.</p>
 
 
@@ -2000,22 +557,7 @@ widget coordinates.</p>
 					
 <div class="symbol-detail">
 	<div>
-		<i><em><code>popover</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkpopover-h.html#GtkPopover">GtkPopover</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
 		<i><em><code>rect</code></em></i>
-					(
-						
-<span class="annotation">[<abbr title="Parameter for returning results"><span class="acronym">out</span></abbr>]</span>
-
-						)
 				–
 	</div>
 			<p>location to store the rectangle</p>
@@ -2030,155 +572,10 @@ widget coordinates.</p>
 				<b>Returns</b>
 								–
 			</div>
-							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if a rectangle to point to was set.</p>
+							<p><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/true">true</a> if a rectangle to point to was set.</p>
 
 					</div>
 	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_popover_get_pointing_to">
-	<span><code>Gtk.prototype.get_pointing_to</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.get_pointing_to(): {
-    // javascript wrapper for 'gtk_popover_get_pointing_to'
-}</pre>
-
-<p>If a rectangle to point to has been set, this function will
-return <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> and fill in <em>rect</em> with such rectangle, otherwise
-it will return <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">false</a> and fill in <em>rect</em> with the attached
-widget coordinates.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>popover</code></em></i>
-					(
-						<a title="Gtk.Popover" href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<p><b>Returns a tuple made of:</b></p>
-				
-<div class="symbol-detail">
-	<div>
-									(
-			<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
-						)
-				–
-	</div>
-			<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if a rectangle to point to was set.</p>
-
-	</div>
-
-				
-<div class="symbol-detail">
-	<div>
-				<i><em><code>rect</code></em></i>
-									(
-			<a title="Gdk.Rectangle" href="https://developer.gnome.org/gdk3/gdk3-Points-Rectangles-and-Regions.html#GdkRectangle">Gdk.Rectangle</a>
-						)
-				–
-	</div>
-			<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if a rectangle to point to was set.</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_popover_get_pointing_to">
-	<span><code>Gtk.Popover.get_pointing_to</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.Popover.get_pointing_to (self):
-    #python wrapper for 'gtk_popover_get_pointing_to'</pre>
-
-<p>If a rectangle to point to has been set, this function will
-return <a href="https://docs.python.org/3/library/constants.html#True">True</a> and fill in <em>rect</em> with such rectangle, otherwise
-it will return <a href="https://docs.python.org/3/library/constants.html#False">False</a> and fill in <em>rect</em> with the attached
-widget coordinates.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>popover</code></em></i>
-					(
-						<a title="Gtk.Popover" href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<p><b>Returns a tuple made of:</b></p>
-				
-<div class="symbol-detail">
-	<div>
-									(
-			<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
-						)
-				–
-	</div>
-			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if a rectangle to point to was set.</p>
-
-	</div>
-
-				
-<div class="symbol-detail">
-	<div>
-				<i><em><code>rect</code></em></i>
-									(
-			<a title="Gdk.Rectangle" href="https://developer.gnome.org/gdk3/gdk3-Points-Rectangles-and-Regions.html#GdkRectangle">Gdk.Rectangle</a>
-						)
-				–
-	</div>
-			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if a rectangle to point to was set.</p>
-
-	</div>
-
-			</div>
 
 
 
@@ -2192,183 +589,6 @@ widget coordinates.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.12;" id="gtk_popover_set_position">
 	
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_popover_set_position">
-	<span><code>gtk_popover_set_position</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-gtk_popover_set_position (<a title="GtkPopover" href="gtkpopover-h.html#GtkPopover">GtkPopover</a> * popover,
-                          <a title="GtkPositionType" href="gtkenums-h.html#GtkPositionType">GtkPositionType</a> position)</pre>
-
-<p>Sets the preferred position for <em>popover</em> to appear. If the <em>popover</em>
-is currently visible, it will be immediately updated.</p>
-<p>This preference will be respected where possible, although
-on lack of space (eg. if close to the window edges), the
-<a href="gtkpopover-h.html#GtkPopover">GtkPopover</a> may choose to appear on the opposite side</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>popover</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkpopover-h.html#GtkPopover">GtkPopover</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>position</code></em></i>
-				–
-	</div>
-			<p>preferred popover position</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.12
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_popover_set_position">
-	<span><code>Gtk.prototype.set_position</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.set_position(position: <a title="Gtk.PositionType" href="gtkenums-h.html#GtkPositionType">Gtk.PositionType</a>): {
-    // javascript wrapper for 'gtk_popover_set_position'
-}</pre>
-
-<p>Sets the preferred position for <em>popover</em> to appear. If the <em>popover</em>
-is currently visible, it will be immediately updated.</p>
-<p>This preference will be respected where possible, although
-on lack of space (eg. if close to the window edges), the
-<a href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a> may choose to appear on the opposite side</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>popover</code></em></i>
-					(
-						<a title="Gtk.Popover" href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>position</code></em></i>
-					(
-						<a title="Gtk.PositionType" href="gtkenums-h.html#GtkPositionType">Gtk.PositionType</a>
-						)
-				–
-	</div>
-			<p>preferred popover position</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.12
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_popover_set_position">
-	<span><code>Gtk.Popover.set_position</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.Popover.set_position (self, position):
-    #python wrapper for 'gtk_popover_set_position'</pre>
-
-<p>Sets the preferred position for <em>popover</em> to appear. If the <em>popover</em>
-is currently visible, it will be immediately updated.</p>
-<p>This preference will be respected where possible, although
-on lack of space (eg. if close to the window edges), the
-<a href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a> may choose to appear on the opposite side</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>popover</code></em></i>
-					(
-						<a title="Gtk.Popover" href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>position</code></em></i>
-					(
-						<a title="Gtk.PositionType" href="gtkenums-h.html#GtkPositionType">Gtk.PositionType</a>
-						)
-				–
-	</div>
-			<p>preferred popover position</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.12
-		</p>
-
-
-        </div>
 
 </div>
 
@@ -2376,165 +596,6 @@ on lack of space (eg. if close to the window edges), the
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_popover_get_position">
 	
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_popover_get_position">
-	<span><code>gtk_popover_get_position</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-<a title="GtkPositionType" href="gtkenums-h.html#GtkPositionType">GtkPositionType</a>
-gtk_popover_get_position (<a title="GtkPopover" href="gtkpopover-h.html#GtkPopover">GtkPopover</a> * popover)</pre>
-
-<p>Returns the preferred position of <em>popover</em>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>popover</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkpopover-h.html#GtkPopover">GtkPopover</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-								–
-			</div>
-							<p>The preferred position.</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_popover_get_position">
-	<span><code>Gtk.prototype.get_position</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.get_position(): {
-    // javascript wrapper for 'gtk_popover_get_position'
-}</pre>
-
-<p>Returns the preferred position of <em>popover</em>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>popover</code></em></i>
-					(
-						<a title="Gtk.Popover" href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Gtk.PositionType" href="gtkenums-h.html#GtkPositionType">Gtk.PositionType</a>
-										)
-								–
-			</div>
-							<p>The preferred position.</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_popover_get_position">
-	<span><code>Gtk.Popover.get_position</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.Popover.get_position (self):
-    #python wrapper for 'gtk_popover_get_position'</pre>
-
-<p>Returns the preferred position of <em>popover</em>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>popover</code></em></i>
-					(
-						<a title="Gtk.Popover" href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Gtk.PositionType" href="gtkenums-h.html#GtkPositionType">Gtk.PositionType</a>
-										)
-								–
-			</div>
-							<p>The preferred position.</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
 
 </div>
 
@@ -2542,177 +603,6 @@ def Gtk.Popover.get_position (self):
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.20;" id="gtk_popover_set_constrain_to">
 	
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_popover_set_constrain_to">
-	<span><code>gtk_popover_set_constrain_to</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-gtk_popover_set_constrain_to (<a title="GtkPopover" href="gtkpopover-h.html#GtkPopover">GtkPopover</a> * popover,
-                              <a title="GtkPopoverConstraint" href="gtkpopover-h.html#GtkPopoverConstraint">GtkPopoverConstraint</a> constraint)</pre>
-
-<p>Sets a constraint for positioning this popover.</p>
-<p>Note that not all platforms support placing popovers freely,
-and may already impose constraints.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>popover</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkpopover-h.html#GtkPopover">GtkPopover</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>constraint</code></em></i>
-				–
-	</div>
-			<p>the new constraint</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.20
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_popover_set_constrain_to">
-	<span><code>Gtk.prototype.set_constrain_to</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.set_constrain_to(constraint: <a title="Gtk.PopoverConstraint" href="gtkpopover-h.html#GtkPopoverConstraint">Gtk.PopoverConstraint</a>): {
-    // javascript wrapper for 'gtk_popover_set_constrain_to'
-}</pre>
-
-<p>Sets a constraint for positioning this popover.</p>
-<p>Note that not all platforms support placing popovers freely,
-and may already impose constraints.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>popover</code></em></i>
-					(
-						<a title="Gtk.Popover" href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>constraint</code></em></i>
-					(
-						<a title="Gtk.PopoverConstraint" href="gtkpopover-h.html#GtkPopoverConstraint">Gtk.PopoverConstraint</a>
-						)
-				–
-	</div>
-			<p>the new constraint</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.20
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_popover_set_constrain_to">
-	<span><code>Gtk.Popover.set_constrain_to</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.Popover.set_constrain_to (self, constraint):
-    #python wrapper for 'gtk_popover_set_constrain_to'</pre>
-
-<p>Sets a constraint for positioning this popover.</p>
-<p>Note that not all platforms support placing popovers freely,
-and may already impose constraints.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>popover</code></em></i>
-					(
-						<a title="Gtk.Popover" href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>constraint</code></em></i>
-					(
-						<a title="Gtk.PopoverConstraint" href="gtkpopover-h.html#GtkPopoverConstraint">Gtk.PopoverConstraint</a>
-						)
-				–
-	</div>
-			<p>the new constraint</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.20
-		</p>
-
-
-        </div>
 
 </div>
 
@@ -2720,177 +610,6 @@ and may already impose constraints.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.20;" id="gtk_popover_get_constrain_to">
 	
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_popover_get_constrain_to">
-	<span><code>gtk_popover_get_constrain_to</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-<a title="GtkPopoverConstraint" href="gtkpopover-h.html#GtkPopoverConstraint">GtkPopoverConstraint</a>
-gtk_popover_get_constrain_to (<a title="GtkPopover" href="gtkpopover-h.html#GtkPopover">GtkPopover</a> * popover)</pre>
-
-<p>Returns the constraint for placing this popover.
-See <a href="gtkpopover-h.html#gtk_popover_set_constrain_to">gtk_popover_set_constrain_to</a>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>popover</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkpopover-h.html#GtkPopover">GtkPopover</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-								–
-			</div>
-							<p>the constraint for placing this popover.</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.20
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_popover_get_constrain_to">
-	<span><code>Gtk.prototype.get_constrain_to</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.get_constrain_to(): {
-    // javascript wrapper for 'gtk_popover_get_constrain_to'
-}</pre>
-
-<p>Returns the constraint for placing this popover.
-See <a href="gtkpopover-h.html#gtk_popover_set_constrain_to">Gtk.prototype.set_constrain_to</a>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>popover</code></em></i>
-					(
-						<a title="Gtk.Popover" href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Gtk.PopoverConstraint" href="gtkpopover-h.html#GtkPopoverConstraint">Gtk.PopoverConstraint</a>
-										)
-								–
-			</div>
-							<p>the constraint for placing this popover.</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.20
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_popover_get_constrain_to">
-	<span><code>Gtk.Popover.get_constrain_to</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.Popover.get_constrain_to (self):
-    #python wrapper for 'gtk_popover_get_constrain_to'</pre>
-
-<p>Returns the constraint for placing this popover.
-See <a href="gtkpopover-h.html#gtk_popover_set_constrain_to">Gtk.Popover.set_constrain_to</a>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>popover</code></em></i>
-					(
-						<a title="Gtk.Popover" href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Gtk.PopoverConstraint" href="gtkpopover-h.html#GtkPopoverConstraint">Gtk.PopoverConstraint</a>
-										)
-								–
-			</div>
-							<p>the constraint for placing this popover.</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.20
-		</p>
-
-
-        </div>
 
 </div>
 
@@ -2898,180 +617,6 @@ See <a href="gtkpopover-h.html#gtk_popover_set_constrain_to">Gtk.Popover.set_con
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.12;" id="gtk_popover_set_modal">
 	
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_popover_set_modal">
-	<span><code>gtk_popover_set_modal</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-gtk_popover_set_modal (<a title="GtkPopover" href="gtkpopover-h.html#GtkPopover">GtkPopover</a> * popover,
-                       <a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a> modal)</pre>
-
-<p>Sets whether <em>popover</em> is modal, a modal popover will grab all input
-within the toplevel and grab the keyboard focus on it when being
-displayed. Clicking outside the popover area or pressing Esc will
-dismiss the popover and ungrab input.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>popover</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkpopover-h.html#GtkPopover">GtkPopover</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>modal</code></em></i>
-				–
-	</div>
-			<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> to make popover claim all input within the toplevel</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.12
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_popover_set_modal">
-	<span><code>Gtk.prototype.set_modal</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.set_modal(modal: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
-    // javascript wrapper for 'gtk_popover_set_modal'
-}</pre>
-
-<p>Sets whether <em>popover</em> is modal, a modal popover will grab all input
-within the toplevel and grab the keyboard focus on it when being
-displayed. Clicking outside the popover area or pressing Esc will
-dismiss the popover and ungrab input.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>popover</code></em></i>
-					(
-						<a title="Gtk.Popover" href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>modal</code></em></i>
-					(
-						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
-						)
-				–
-	</div>
-			<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> to make popover claim all input within the toplevel</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.12
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_popover_set_modal">
-	<span><code>Gtk.Popover.set_modal</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.Popover.set_modal (self, modal):
-    #python wrapper for 'gtk_popover_set_modal'</pre>
-
-<p>Sets whether <em>popover</em> is modal, a modal popover will grab all input
-within the toplevel and grab the keyboard focus on it when being
-displayed. Clicking outside the popover area or pressing Esc will
-dismiss the popover and ungrab input.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>popover</code></em></i>
-					(
-						<a title="Gtk.Popover" href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>modal</code></em></i>
-					(
-						<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
-						)
-				–
-	</div>
-			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> to make popover claim all input within the toplevel</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.12
-		</p>
-
-
-        </div>
 
 </div>
 
@@ -3079,177 +624,6 @@ dismiss the popover and ungrab input.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.12;" id="gtk_popover_get_modal">
 	
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_popover_get_modal">
-	<span><code>gtk_popover_get_modal</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
-gtk_popover_get_modal (<a title="GtkPopover" href="gtkpopover-h.html#GtkPopover">GtkPopover</a> * popover)</pre>
-
-<p>Returns whether the popover is modal, see gtk_popover_set_modal to
-see the implications of this.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>popover</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkpopover-h.html#GtkPopover">GtkPopover</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-								–
-			</div>
-							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if <em>popover</em> is modal</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.12
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_popover_get_modal">
-	<span><code>Gtk.prototype.get_modal</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.get_modal(): {
-    // javascript wrapper for 'gtk_popover_get_modal'
-}</pre>
-
-<p>Returns whether the popover is modal, see gtk_popover_set_modal to
-see the implications of this.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>popover</code></em></i>
-					(
-						<a title="Gtk.Popover" href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
-										)
-								–
-			</div>
-							<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if <em>popover</em> is modal</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.12
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_popover_get_modal">
-	<span><code>Gtk.Popover.get_modal</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.Popover.get_modal (self):
-    #python wrapper for 'gtk_popover_get_modal'</pre>
-
-<p>Returns whether the popover is modal, see gtk_popover_set_modal to
-see the implications of this.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>popover</code></em></i>
-					(
-						<a title="Gtk.Popover" href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
-										)
-								–
-			</div>
-							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if <em>popover</em> is modal</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.12
-		</p>
-
-
-        </div>
 
 </div>
 
@@ -3257,185 +631,6 @@ see the implications of this.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.18;" id="gtk_popover_set_default_widget">
 	
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_popover_set_default_widget">
-	<span><code>gtk_popover_set_default_widget</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-gtk_popover_set_default_widget (<a title="GtkPopover" href="gtkpopover-h.html#GtkPopover">GtkPopover</a> * popover,
-                                <a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> * widget)</pre>
-
-<p>Sets the widget that should be set as default widget while
-the popover is shown (see <a href="gtkwindow-h.html#gtk_window_set_default">gtk_window_set_default</a>). <a href="gtkpopover-h.html#GtkPopover">GtkPopover</a>
-remembers the previous default widget and reestablishes it
-when the popover is dismissed.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>popover</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkpopover-h.html#GtkPopover">GtkPopover</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-					(
-						
-<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
-
-						)
-				–
-	</div>
-			<p>the new default widget, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.18
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_popover_set_default_widget">
-	<span><code>Gtk.prototype.set_default_widget</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.set_default_widget(widget: <a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>): {
-    // javascript wrapper for 'gtk_popover_set_default_widget'
-}</pre>
-
-<p>Sets the widget that should be set as default widget while
-the popover is shown (see <a href="gtkwindow-h.html#gtk_window_set_default">Gtk.prototype.set_default</a>). <a href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a>
-remembers the previous default widget and reestablishes it
-when the popover is dismissed.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>popover</code></em></i>
-					(
-						<a title="Gtk.Popover" href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
-				–
-	</div>
-			<p>the new default widget, or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.18
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_popover_set_default_widget">
-	<span><code>Gtk.Popover.set_default_widget</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.Popover.set_default_widget (self, widget):
-    #python wrapper for 'gtk_popover_set_default_widget'</pre>
-
-<p>Sets the widget that should be set as default widget while
-the popover is shown (see <a href="gtkwindow-h.html#gtk_window_set_default">Gtk.Window.set_default</a>). <a href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a>
-remembers the previous default widget and reestablishes it
-when the popover is dismissed.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>popover</code></em></i>
-					(
-						<a title="Gtk.Popover" href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
-				–
-	</div>
-			<p>the new default widget, or <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.18
-		</p>
-
-
-        </div>
 
 </div>
 
@@ -3443,187 +638,6 @@ when the popover is dismissed.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.18;" id="gtk_popover_get_default_widget">
 	
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_popover_get_default_widget">
-	<span><code>gtk_popover_get_default_widget</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-<a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> *
-gtk_popover_get_default_widget (<a title="GtkPopover" href="gtkpopover-h.html#GtkPopover">GtkPopover</a> * popover)</pre>
-
-<p>Gets the widget that should be set as the default while
-the popover is shown.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>popover</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkpopover-h.html#GtkPopover">GtkPopover</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					
-										
-<span class="annotation">[<abbr title="NULL may be passed to the value"><span class="acronym">nullable</span></abbr>]</span>
-<span class="annotation">[<abbr title="Don't free data after the code is done"><span class="acronym">transfer: none</span></abbr>]</span>
-
-										)
-								–
-			</div>
-							<p>the default widget,
-or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> if there is none</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.18
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_popover_get_default_widget">
-	<span><code>Gtk.prototype.get_default_widget</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.get_default_widget(): {
-    // javascript wrapper for 'gtk_popover_get_default_widget'
-}</pre>
-
-<p>Gets the widget that should be set as the default while
-the popover is shown.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>popover</code></em></i>
-					(
-						<a title="Gtk.Popover" href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-										)
-								–
-			</div>
-							<p>the default widget,
-or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a> if there is none</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.18
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_popover_get_default_widget">
-	<span><code>Gtk.Popover.get_default_widget</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.Popover.get_default_widget (self):
-    #python wrapper for 'gtk_popover_get_default_widget'</pre>
-
-<p>Gets the widget that should be set as the default while
-the popover is shown.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>popover</code></em></i>
-					(
-						<a title="Gtk.Popover" href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-										)
-								–
-			</div>
-							<p>the default widget,
-or <a href="https://docs.python.org/3/library/constants.html#None">None</a> if there is none</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.18
-		</p>
-
-
-        </div>
 
 </div>
 
@@ -3635,50 +649,7 @@ or <a href="https://docs.python.org/3/library/constants.html#None">None</a> if t
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.20;" id="GtkPopoverConstraint">
 	
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h3 data-hotdoc-id="GtkPopoverConstraint">
-	<span><code>GtkPopoverConstraint</code></span>
-</h3>
-
-
-<p>Describes constraints to positioning of popovers. More values
-may be added to this enumeration in the future.</p>
-
-
-
-
-	<div class="members-container">
-		<h4>Members</h4>
-					
-<div class="symbol-detail" data-hotdoc-id="GTK_POPOVER_CONSTRAINT_NONE">
-	<div>
-		<i><em><code>GTK_POPOVER_CONSTRAINT_NONE</code></em></i>
-		(<span class="value">0</span>)
-		–
-	</div>
-			<i>No description available</i>
-	</div>
-
-					
-<div class="symbol-detail" data-hotdoc-id="GTK_POPOVER_CONSTRAINT_WINDOW">
-	<div>
-		<i><em><code>GTK_POPOVER_CONSTRAINT_WINDOW</code></em></i>
-		(<span class="value">1</span>)
-		–
-	</div>
-			<i>No description available</i>
-	</div>
-
-			</div>
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
@@ -3699,7 +670,7 @@ may be added to this enumeration in the future.</p>
 					
 <div class="symbol-detail" data-hotdoc-id="GTK_POPOVER_CONSTRAINT_NONE">
 	<div>
-		<i><em><code>Gtk.PopoverConstraint.NONE</code></em></i>
+		<i><em><code>Gtk.PopoverConstraint.None</code></em></i>
 		(<span class="value">0</span>)
 		–
 	</div>
@@ -3709,50 +680,7 @@ may be added to this enumeration in the future.</p>
 					
 <div class="symbol-detail" data-hotdoc-id="GTK_POPOVER_CONSTRAINT_WINDOW">
 	<div>
-		<i><em><code>Gtk.PopoverConstraint.WINDOW</code></em></i>
-		(<span class="value">1</span>)
-		–
-	</div>
-			<i>No description available</i>
-	</div>
-
-			</div>
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="GtkPopoverConstraint">
-	<span><code>Gtk.PopoverConstraint</code></span>
-</h3>
-
-
-<p>Describes constraints to positioning of popovers. More values
-may be added to this enumeration in the future.</p>
-
-
-
-
-	<div class="members-container">
-		<h4>Members</h4>
-					
-<div class="symbol-detail" data-hotdoc-id="GTK_POPOVER_CONSTRAINT_NONE">
-	<div>
-		<i><em><code>Gtk.PopoverConstraint.NONE</code></em></i>
-		(<span class="value">0</span>)
-		–
-	</div>
-			<i>No description available</i>
-	</div>
-
-					
-<div class="symbol-detail" data-hotdoc-id="GTK_POPOVER_CONSTRAINT_WINDOW">
-	<div>
-		<i><em><code>Gtk.PopoverConstraint.WINDOW</code></em></i>
+		<i><em><code>Gtk.PopoverConstraint.Window</code></em></i>
 		(<span class="value">1</span>)
 		–
 	</div>

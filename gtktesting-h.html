@@ -89,7 +89,7 @@ $('body').removeClass('no-script');
 </nav>
 
 <main>
-<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="gtktesting-h.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['c', 'javascript', 'python']" data-hotdoc-meta-gi-language="c">
+<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="gtktesting-h.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['csharp']" data-hotdoc-meta-gi-language="c">
 <script src="assets/js/utils.js"></script>
 
 <div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
@@ -109,86 +109,6 @@ $('body').removeClass('no-script');
 
 <div class="base_symbol_container" data-hotdoc-tags="since:2.14;" id="gtk_test_init">
 	
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_test_init">
-	<span><code>gtk_test_init</code></span>
-</h3>
-
-
-
-
-<pre class="c-prototype">
-gtk_test_init (int* argcp,
-               char*** argvp,
-               ... ...)</pre>
-
-<p>This function is used to initialize a GTK+ test program.</p>
-<p>It will in turn call <a href="https://developer.gnome.org/glib/unstable/glib-Testing.html#g-test-init">g_test_init</a> and <a href="gtkmain-h.html#gtk_init">gtk_init</a> to properly
-initialize the testing framework and graphical toolkit. It’ll
-also set the program’s locale to “C” and prevent loading of rc
-files and Gtk+ modules. This is done to make tets program
-environments as deterministic as possible.</p>
-<p>Like <a href="gtkmain-h.html#gtk_init">gtk_init</a> and <a href="https://developer.gnome.org/glib/unstable/glib-Testing.html#g-test-init">g_test_init</a>, any known arguments will be
-processed and stripped from <em>argc</em> and <em>argv</em>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>argcp</code></em></i>
-				–
-	</div>
-			<p>Address of the <code>argc</code> parameter of the
-main function. Changed if any arguments were handled.</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>argvp</code></em></i>
-					(
-						
-<span class="annotation">[<abbr title="Parameter for input and for returning results"><span class="acronym">inout</span></abbr>]</span>
-<span class="annotation">[<abbr title="Parameter points to an array of items"><span class="acronym">array</span></abbr> length=argcp]</span>
-
-						)
-				–
-	</div>
-			<p>Address of the
-<code>argv</code> parameter of main.
-Any parameters understood by <a href="https://developer.gnome.org/glib/unstable/glib-Testing.html#g-test-init">g_test_init</a> or <a href="gtkmain-h.html#gtk_init">gtk_init</a> are
-stripped before return.</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>...</code></em></i>
-				–
-	</div>
-			<p>currently unused</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.14
-		</p>
-
-
-        </div>
 
 </div>
 
@@ -196,24 +116,24 @@ stripped before return.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="since:2.14;" id="gtk_test_list_all_types">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h3 data-hotdoc-id="gtk_test_list_all_types">
-	<span><code>gtk_test_list_all_types</code></span>
+	<span><code>Gtk.Global.TestListAllTypes</code></span>
 </h3>
 
 
 
 
 <pre class="c-prototype">
-<a title="GType" href="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#GType">GType</a> *
-gtk_test_list_all_types (<a title="guint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint">guint</a> * n_types)</pre>
+GType[]
+Gtk.Global.TestListAllTypes (<a title="out" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/out">out</a>  <a title="uint" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/uint">uint</a>)</pre>
 
 <p>Return the type ids that have been registered after
-calling <a href="gtktesting-h.html#gtk_test_register_all_types">gtk_test_register_all_types</a>.</p>
+calling <a href="gtktesting-h.html#gtk_test_register_all_types">Gtk.Global.TestRegisterAllTypes</a>.</p>
 
 
 
@@ -251,125 +171,6 @@ calling <a href="gtktesting-h.html#gtk_test_register_all_types">gtk_test_registe
 
 
         </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_test_list_all_types">
-	<span><code>prototype.test_list_all_types</code></span>
-</h3>
-
-
-<pre class="javascript-prototype">
-function prototype.test_list_all_types(): {
-    // javascript wrapper for 'gtk_test_list_all_types'
-}</pre>
-
-<p>Return the type ids that have been registered after
-calling <a href="gtktesting-h.html#gtk_test_register_all_types">prototype.test_register_all_types</a>.</p>
-
-
-
-
-		<div class="return-values-container">
-		<p><b>Returns a tuple made of:</b></p>
-				
-<div class="symbol-detail">
-	<div>
-									(
-			[ <a title="GObject.Type" href="https://developer.gnome.org/gobject/stable/gobject-Type-Information.html#GType">GObject.Type</a> ]
-						)
-				–
-	</div>
-			<p>(array length=n_types zero-terminated=1) (transfer none):
-0-terminated array of type ids</p>
-
-	</div>
-
-				
-<div class="symbol-detail">
-	<div>
-				<i><em><code>n_types</code></em></i>
-									(
-			<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
-						)
-				–
-	</div>
-			<p>(array length=n_types zero-terminated=1) (transfer none):
-0-terminated array of type ids</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.14
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_test_list_all_types">
-	<span><code>Gtk.test_list_all_types</code></span>
-</h3>
-
-
-<pre class="python-prototype">
-def Gtk.test_list_all_types ():
-    #python wrapper for 'gtk_test_list_all_types'</pre>
-
-<p>Return the type ids that have been registered after
-calling <a href="gtktesting-h.html#gtk_test_register_all_types">Gtk.test_register_all_types</a>.</p>
-
-
-
-
-		<div class="return-values-container">
-		<p><b>Returns a tuple made of:</b></p>
-				
-<div class="symbol-detail">
-	<div>
-									(
-			[ <a title="GObject.Type" href="https://developer.gnome.org/gobject/stable/gobject-Type-Information.html#GType">GObject.Type</a> ]
-						)
-				–
-	</div>
-			<p>(array length=n_types zero-terminated=1) (transfer none):
-0-terminated array of type ids</p>
-
-	</div>
-
-				
-<div class="symbol-detail">
-	<div>
-				<i><em><code>n_types</code></em></i>
-									(
-			<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
-						)
-				–
-	</div>
-			<p>(array length=n_types zero-terminated=1) (transfer none):
-0-terminated array of type ids</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.14
-		</p>
-
-
-        </div>
 
 </div>
 
@@ -377,83 +178,24 @@ calling <a href="gtktesting-h.html#gtk_test_register_all_types">Gtk.test_registe
 
 <div class="base_symbol_container" data-hotdoc-tags="since:2.14;" id="gtk_test_register_all_types">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h3 data-hotdoc-id="gtk_test_register_all_types">
-	<span><code>gtk_test_register_all_types</code></span>
+	<span><code>Gtk.Global.TestRegisterAllTypes</code></span>
 </h3>
 
 
 
 
 <pre class="c-prototype">
-gtk_test_register_all_types ()</pre>
+Gtk.Global.TestRegisterAllTypes ()</pre>
 
 <p>Force registration of all core Gtk+ and Gdk object types.
 This allowes to refer to any of those object types via
-<a href="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#g-type-from-name">g_type_from_name</a> after calling this function.</p>
-
-
-
-
-
-
-	<p>
-	<b>Since</b>			: 2.14
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_test_register_all_types">
-	<span><code>prototype.test_register_all_types</code></span>
-</h3>
-
-
-<pre class="javascript-prototype">
-function prototype.test_register_all_types(): {
-    // javascript wrapper for 'gtk_test_register_all_types'
-}</pre>
-
-<p>Force registration of all core Gtk+ and Gdk object types.
-This allowes to refer to any of those object types via
-<a href="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#g-type-from-name">prototype.type_from_name</a> after calling this function.</p>
-
-
-
-
-
-
-	<p>
-	<b>Since</b>			: 2.14
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_test_register_all_types">
-	<span><code>Gtk.test_register_all_types</code></span>
-</h3>
-
-
-<pre class="python-prototype">
-def Gtk.test_register_all_types ():
-    #python wrapper for 'gtk_test_register_all_types'</pre>
-
-<p>Force registration of all core Gtk+ and Gdk object types.
-This allowes to refer to any of those object types via
-<a href="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#g-type-from-name">GObject.type_from_name</a> after calling this function.</p>
+<a href="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#g-type-from-name">GObject.Global.TypeFromName</a> after calling this function.</p>
 
 
 
@@ -473,20 +215,20 @@ This allowes to refer to any of those object types via
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.10;" id="gtk_test_widget_wait_for_draw">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h3 data-hotdoc-id="gtk_test_widget_wait_for_draw">
-	<span><code>gtk_test_widget_wait_for_draw</code></span>
+	<span><code>Gtk.Global.TestWidgetWaitForDraw</code></span>
 </h3>
 
 
 
 
 <pre class="c-prototype">
-gtk_test_widget_wait_for_draw (<a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> * widget)</pre>
+Gtk.Global.TestWidgetWaitForDraw (<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>)</pre>
 
 <p>Enters the main loop and waits for <em>widget</em> to be “drawn”. In this
 context that means it waits for the frame clock of <em>widget</em> to have
@@ -503,103 +245,6 @@ server.</p>
 <div class="symbol-detail">
 	<div>
 		<i><em><code>widget</code></em></i>
-				–
-	</div>
-			<p>the widget to wait for</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.10
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_test_widget_wait_for_draw">
-	<span><code>prototype.test_widget_wait_for_draw</code></span>
-</h3>
-
-
-<pre class="javascript-prototype">
-function prototype.test_widget_wait_for_draw(widget: <a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>): {
-    // javascript wrapper for 'gtk_test_widget_wait_for_draw'
-}</pre>
-
-<p>Enters the main loop and waits for <em>widget</em> to be “drawn”. In this
-context that means it waits for the frame clock of <em>widget</em> to have
-run a full styling, layout and drawing cycle.</p>
-<p>This function is intended to be used for syncing with actions that
-depend on <em>widget</em> relayouting or on interaction with the display
-server.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
-				–
-	</div>
-			<p>the widget to wait for</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.10
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_test_widget_wait_for_draw">
-	<span><code>Gtk.test_widget_wait_for_draw</code></span>
-</h3>
-
-
-<pre class="python-prototype">
-def Gtk.test_widget_wait_for_draw (widget):
-    #python wrapper for 'gtk_test_widget_wait_for_draw'</pre>
-
-<p>Enters the main loop and waits for <em>widget</em> to be “drawn”. In this
-context that means it waits for the frame clock of <em>widget</em> to have
-run a full styling, layout and drawing cycle.</p>
-<p>This function is intended to be used for syncing with actions that
-depend on <em>widget</em> relayouting or on interaction with the display
-server.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
 				–
 	</div>
 			<p>the widget to wait for</p>

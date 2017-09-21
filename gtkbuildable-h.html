@@ -89,7 +89,7 @@ $('body').removeClass('no-script');
 </nav>
 
 <main>
-<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="gtkbuildable-h.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['c', 'javascript', 'python']" data-hotdoc-meta-gi-language="c">
+<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="gtkbuildable-h.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['csharp']" data-hotdoc-meta-gi-language="c">
 <script src="assets/js/utils.js"></script>
 
 <div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
@@ -107,10 +107,10 @@ The interface includes methods for setting names and properties of objects,
 parsing custom tags and constructing child objects.</p>
 <p>The GtkBuildable interface is implemented by all widgets and
 many of the non-widget objects that are provided by GTK+. The
-main user of this interface is <a href="gtkbuilder-h.html#GtkBuilder">GtkBuilder</a>. There should be
+main user of this interface is <a href="gtkbuilder-h.html#GtkBuilder" data-gi-href-csharp="gtkbuilder-h.html#GtkBuilder" data-gi-title-csharp="Gtk.Builder">GtkBuilder</a>. There should be
 very little need for applications to call any of these functions directly.</p>
 <p>An object only needs to implement this interface if it needs to extend the
-<a href="gtkbuilder-h.html#GtkBuilder">GtkBuilder</a> format or run any extra routines at deserialization time.</p>
+<a href="gtkbuilder-h.html#GtkBuilder" data-gi-href-csharp="gtkbuilder-h.html#GtkBuilder" data-gi-title-csharp="Gtk.Builder">GtkBuilder</a> format or run any extra routines at deserialization time.</p>
 
     </div>
         
@@ -121,171 +121,6 @@ very little need for applications to call any of these functions directly.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="since:2.12;" id="gtk_buildable_set_name">
 	
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_buildable_set_name">
-	<span><code>gtk_buildable_set_name</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-gtk_buildable_set_name (<a title="GtkBuildable" href="gtkbuildable-h.html#GtkBuildable">GtkBuildable</a> * buildable,
-                        const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * name)</pre>
-
-<p>Sets the name of the <em>buildable</em> object.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>buildable</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkbuildable-h.html#GtkBuildable">GtkBuildable</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>name</code></em></i>
-				–
-	</div>
-			<p>name to set</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.12
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_buildable_set_name">
-	<span><code>Gtk.prototype.set_name</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.set_name(name: <a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>): {
-    // javascript wrapper for 'gtk_buildable_set_name'
-}</pre>
-
-<p>Sets the name of the <em>buildable</em> object.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>buildable</code></em></i>
-					(
-						<a title="Gtk.Buildable" href="gtkbuildable-h.html#GtkBuildable">Gtk.Buildable</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkbuildable-h.html#GtkBuildable">Gtk.Buildable</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>name</code></em></i>
-					(
-						<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
-						)
-				–
-	</div>
-			<p>name to set</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.12
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_buildable_set_name">
-	<span><code>Gtk.Buildable.set_name</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.Buildable.set_name (self, name):
-    #python wrapper for 'gtk_buildable_set_name'</pre>
-
-<p>Sets the name of the <em>buildable</em> object.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>buildable</code></em></i>
-					(
-						<a title="Gtk.Buildable" href="gtkbuildable-h.html#GtkBuildable">Gtk.Buildable</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkbuildable-h.html#GtkBuildable">Gtk.Buildable</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>name</code></em></i>
-					(
-						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
-						)
-				–
-	</div>
-			<p>name to set</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.12
-		</p>
-
-
-        </div>
 
 </div>
 
@@ -293,183 +128,6 @@ def Gtk.Buildable.set_name (self, name):
 
 <div class="base_symbol_container" data-hotdoc-tags="since:2.12;" id="gtk_buildable_get_name">
 	
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_buildable_get_name">
-	<span><code>gtk_buildable_get_name</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> *
-gtk_buildable_get_name (<a title="GtkBuildable" href="gtkbuildable-h.html#GtkBuildable">GtkBuildable</a> * buildable)</pre>
-
-<p>Gets the name of the <em>buildable</em> object.</p>
-<p><a href="gtkbuilder-h.html#GtkBuilder">GtkBuilder</a> sets the name based on the
-[GtkBuilder UI definition][BUILDER-UI]
-used to construct the <em>buildable</em>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>buildable</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkbuildable-h.html#GtkBuildable">GtkBuildable</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-								–
-			</div>
-							<p>the name set with <a href="gtkbuildable-h.html#gtk_buildable_set_name">gtk_buildable_set_name</a></p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.12
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_buildable_get_name">
-	<span><code>Gtk.prototype.get_name</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.get_name(): {
-    // javascript wrapper for 'gtk_buildable_get_name'
-}</pre>
-
-<p>Gets the name of the <em>buildable</em> object.</p>
-<p><a href="gtkbuilder-h.html#GtkBuilder">Gtk.Builder</a> sets the name based on the
-[GtkBuilder UI definition][BUILDER-UI]
-used to construct the <em>buildable</em>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>buildable</code></em></i>
-					(
-						<a title="Gtk.Buildable" href="gtkbuildable-h.html#GtkBuildable">Gtk.Buildable</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkbuildable-h.html#GtkBuildable">Gtk.Buildable</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
-										)
-								–
-			</div>
-							<p>the name set with <a href="gtkbuildable-h.html#gtk_buildable_set_name">Gtk.prototype.set_name</a></p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.12
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_buildable_get_name">
-	<span><code>Gtk.Buildable.get_name</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.Buildable.get_name (self):
-    #python wrapper for 'gtk_buildable_get_name'</pre>
-
-<p>Gets the name of the <em>buildable</em> object.</p>
-<p><a href="gtkbuilder-h.html#GtkBuilder">Gtk.Builder</a> sets the name based on the
-[GtkBuilder UI definition][BUILDER-UI]
-used to construct the <em>buildable</em>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>buildable</code></em></i>
-					(
-						<a title="Gtk.Buildable" href="gtkbuildable-h.html#GtkBuildable">Gtk.Buildable</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkbuildable-h.html#GtkBuildable">Gtk.Buildable</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
-										)
-								–
-			</div>
-							<p>the name set with <a href="gtkbuildable-h.html#gtk_buildable_set_name">Gtk.Buildable.set_name</a></p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.12
-		</p>
-
-
-        </div>
 
 </div>
 
@@ -477,23 +135,22 @@ used to construct the <em>buildable</em>.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="since:2.12;" id="gtk_buildable_add_child">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h4 data-hotdoc-id="gtk_buildable_add_child">
-	<span><code>gtk_buildable_add_child</code></span>
+	<span><code>Gtk.IBuildable.AddChild</code></span>
 </h4>
 
 
 
 
 <pre class="c-prototype">
-gtk_buildable_add_child (<a title="GtkBuildable" href="gtkbuildable-h.html#GtkBuildable">GtkBuildable</a> * buildable,
-                         <a title="GtkBuilder" href="gtkbuilder-h.html#GtkBuilder">GtkBuilder</a> * builder,
-                         <a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a> * child,
-                         const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * type)</pre>
+Gtk.IBuildable.AddChild (<a title="Gtk.Builder" href="gtkbuilder-h.html#GtkBuilder">Gtk.Builder</a>,
+                         <a title="GLib.Object" href="http://docs.go-mono.com/?link=T%3aGLib.Object">GLib.Object</a>,
+                         <a title="string" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/string">string</a>)</pre>
 
 <p>Adds a child to <em>buildable</em>. <em>type</em> is an optional string
 describing how the child should be added.</p>
@@ -505,100 +162,7 @@ describing how the child should be added.</p>
 					
 <div class="symbol-detail">
 	<div>
-		<i><em><code>buildable</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkbuildable-h.html#GtkBuildable">GtkBuildable</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
 		<i><em><code>builder</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkbuilder-h.html#GtkBuilder">GtkBuilder</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>child</code></em></i>
-				–
-	</div>
-			<p>child to add</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>type</code></em></i>
-					(
-						
-<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
-
-						)
-				–
-	</div>
-			<p>kind of child or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.12
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_buildable_add_child">
-	<span><code>Gtk.prototype.add_child</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.add_child(builder: <a title="Gtk.Builder" href="gtkbuilder-h.html#GtkBuilder">Gtk.Builder</a>, child: <a title="GObject.Object" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct">GObject.Object</a>, type: <a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>): {
-    // javascript wrapper for 'gtk_buildable_add_child'
-}</pre>
-
-<p>Adds a child to <em>buildable</em>. <em>type</em> is an optional string
-describing how the child should be added.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>buildable</code></em></i>
-					(
-						<a title="Gtk.Buildable" href="gtkbuildable-h.html#GtkBuildable">Gtk.Buildable</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkbuildable-h.html#GtkBuildable">Gtk.Buildable</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>builder</code></em></i>
-					(
-						<a title="Gtk.Builder" href="gtkbuilder-h.html#GtkBuilder">Gtk.Builder</a>
-						)
 				–
 	</div>
 			<p>a <a href="gtkbuilder-h.html#GtkBuilder">Gtk.Builder</a></p>
@@ -609,9 +173,6 @@ describing how the child should be added.</p>
 <div class="symbol-detail">
 	<div>
 		<i><em><code>child</code></em></i>
-					(
-						<a title="GObject.Object" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct">GObject.Object</a>
-						)
 				–
 	</div>
 			<p>child to add</p>
@@ -622,95 +183,9 @@ describing how the child should be added.</p>
 <div class="symbol-detail">
 	<div>
 		<i><em><code>type</code></em></i>
-					(
-						<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
-						)
 				–
 	</div>
-			<p>kind of child or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.12
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_buildable_add_child">
-	<span><code>Gtk.Buildable.add_child</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.Buildable.add_child (self, builder, child, type):
-    #python wrapper for 'gtk_buildable_add_child'</pre>
-
-<p>Adds a child to <em>buildable</em>. <em>type</em> is an optional string
-describing how the child should be added.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>buildable</code></em></i>
-					(
-						<a title="Gtk.Buildable" href="gtkbuildable-h.html#GtkBuildable">Gtk.Buildable</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkbuildable-h.html#GtkBuildable">Gtk.Buildable</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>builder</code></em></i>
-					(
-						<a title="Gtk.Builder" href="gtkbuilder-h.html#GtkBuilder">Gtk.Builder</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkbuilder-h.html#GtkBuilder">Gtk.Builder</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>child</code></em></i>
-					(
-						<a title="GObject.Object" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct">GObject.Object</a>
-						)
-				–
-	</div>
-			<p>child to add</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>type</code></em></i>
-					(
-						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
-						)
-				–
-	</div>
-			<p>kind of child or <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
+			<p>kind of child or <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/null">null</a></p>
 
 	</div>
 
@@ -731,23 +206,22 @@ describing how the child should be added.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="since:2.12;" id="gtk_buildable_set_buildable_property">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h4 data-hotdoc-id="gtk_buildable_set_buildable_property">
-	<span><code>gtk_buildable_set_buildable_property</code></span>
+	<span><code>Gtk.IBuildable.SetBuildableProperty</code></span>
 </h4>
 
 
 
 
 <pre class="c-prototype">
-gtk_buildable_set_buildable_property (<a title="GtkBuildable" href="gtkbuildable-h.html#GtkBuildable">GtkBuildable</a> * buildable,
-                                      <a title="GtkBuilder" href="gtkbuilder-h.html#GtkBuilder">GtkBuilder</a> * builder,
-                                      const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * name,
-                                      const <a title="GValue" href="https://developer.gnome.org/gobject/unstable/gobject-Generic-values.html#GValue">GValue</a> * value)</pre>
+Gtk.IBuildable.SetBuildableProperty (<a title="Gtk.Builder" href="gtkbuilder-h.html#GtkBuilder">Gtk.Builder</a>,
+                                     <a title="string" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/string">string</a>,
+                                     <a title="GObject.Value" href="https://developer.gnome.org/gobject/unstable/gobject-Generic-values.html#GValue">GObject.Value</a>)</pre>
 
 <p>Sets the property name <em>name</em> to <em>value</em> on the <em>buildable</em> object.</p>
 
@@ -758,94 +232,7 @@ gtk_buildable_set_buildable_property (<a title="GtkBuildable" href="gtkbuildable
 					
 <div class="symbol-detail">
 	<div>
-		<i><em><code>buildable</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkbuildable-h.html#GtkBuildable">GtkBuildable</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
 		<i><em><code>builder</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkbuilder-h.html#GtkBuilder">GtkBuilder</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>name</code></em></i>
-				–
-	</div>
-			<p>name of property</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>value</code></em></i>
-				–
-	</div>
-			<p>value of property</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.12
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_buildable_set_buildable_property">
-	<span><code>Gtk.prototype.set_buildable_property</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.set_buildable_property(builder: <a title="Gtk.Builder" href="gtkbuilder-h.html#GtkBuilder">Gtk.Builder</a>, name: <a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>, value: <a title="GObject.Value" href="https://developer.gnome.org/gobject/unstable/gobject-Generic-values.html#GValue">GObject.Value</a>): {
-    // javascript wrapper for 'gtk_buildable_set_buildable_property'
-}</pre>
-
-<p>Sets the property name <em>name</em> to <em>value</em> on the <em>buildable</em> object.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>buildable</code></em></i>
-					(
-						<a title="Gtk.Buildable" href="gtkbuildable-h.html#GtkBuildable">Gtk.Buildable</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkbuildable-h.html#GtkBuildable">Gtk.Buildable</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>builder</code></em></i>
-					(
-						<a title="Gtk.Builder" href="gtkbuilder-h.html#GtkBuilder">Gtk.Builder</a>
-						)
 				–
 	</div>
 			<p>a <a href="gtkbuilder-h.html#GtkBuilder">Gtk.Builder</a></p>
@@ -856,9 +243,6 @@ function Gtk.prototype.set_buildable_property(builder: <a title="Gtk.Builder" hr
 <div class="symbol-detail">
 	<div>
 		<i><em><code>name</code></em></i>
-					(
-						<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
-						)
 				–
 	</div>
 			<p>name of property</p>
@@ -869,91 +253,6 @@ function Gtk.prototype.set_buildable_property(builder: <a title="Gtk.Builder" hr
 <div class="symbol-detail">
 	<div>
 		<i><em><code>value</code></em></i>
-					(
-						<a title="GObject.Value" href="https://developer.gnome.org/gobject/unstable/gobject-Generic-values.html#GValue">GObject.Value</a>
-						)
-				–
-	</div>
-			<p>value of property</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.12
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_buildable_set_buildable_property">
-	<span><code>Gtk.Buildable.set_buildable_property</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.Buildable.set_buildable_property (self, builder, name, value):
-    #python wrapper for 'gtk_buildable_set_buildable_property'</pre>
-
-<p>Sets the property name <em>name</em> to <em>value</em> on the <em>buildable</em> object.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>buildable</code></em></i>
-					(
-						<a title="Gtk.Buildable" href="gtkbuildable-h.html#GtkBuildable">Gtk.Buildable</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkbuildable-h.html#GtkBuildable">Gtk.Buildable</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>builder</code></em></i>
-					(
-						<a title="Gtk.Builder" href="gtkbuilder-h.html#GtkBuilder">Gtk.Builder</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkbuilder-h.html#GtkBuilder">Gtk.Builder</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>name</code></em></i>
-					(
-						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
-						)
-				–
-	</div>
-			<p>name of property</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>value</code></em></i>
-					(
-						<a title="GObject.Value" href="https://developer.gnome.org/gobject/unstable/gobject-Generic-values.html#GValue">GObject.Value</a>
-						)
 				–
 	</div>
 			<p>value of property</p>
@@ -977,103 +276,22 @@ def Gtk.Buildable.set_buildable_property (self, builder, name, value):
 
 <div class="base_symbol_container" data-hotdoc-tags="since:2.12;" id="gtk_buildable_construct_child">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h4 data-hotdoc-id="gtk_buildable_construct_child">
-	<span><code>gtk_buildable_construct_child</code></span>
+	<span><code>Gtk.IBuildable.ConstructChild</code></span>
 </h4>
 
 
 
 
 <pre class="c-prototype">
-<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a> *
-gtk_buildable_construct_child (<a title="GtkBuildable" href="gtkbuildable-h.html#GtkBuildable">GtkBuildable</a> * buildable,
-                               <a title="GtkBuilder" href="gtkbuilder-h.html#GtkBuilder">GtkBuilder</a> * builder,
-                               const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * name)</pre>
-
-<p>Constructs a child of <em>buildable</em> with the name <em>name</em>.</p>
-<p><a href="gtkbuilder-h.html#GtkBuilder">GtkBuilder</a> calls this function if a “constructor” has been
-specified in the UI definition.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>buildable</code></em></i>
-				–
-	</div>
-			<p>A <a href="gtkbuildable-h.html#GtkBuildable">GtkBuildable</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>builder</code></em></i>
-				–
-	</div>
-			<p><a href="gtkbuilder-h.html#GtkBuilder">GtkBuilder</a> used to construct this object</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>name</code></em></i>
-				–
-	</div>
-			<p>name of child to construct</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					
-										
-<span class="annotation">[<abbr title="Free data after the code is done"><span class="acronym">transfer: full</span></abbr>]</span>
-
-										)
-								–
-			</div>
-							<p>the constructed child</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.12
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_buildable_construct_child">
-	<span><code>Gtk.prototype.construct_child</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.construct_child(builder: <a title="Gtk.Builder" href="gtkbuilder-h.html#GtkBuilder">Gtk.Builder</a>, name: <a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>): {
-    // javascript wrapper for 'gtk_buildable_construct_child'
-}</pre>
+<a title="GLib.Object" href="http://docs.go-mono.com/?link=T%3aGLib.Object">GLib.Object</a>
+Gtk.IBuildable.ConstructChild (<a title="Gtk.Builder" href="gtkbuilder-h.html#GtkBuilder">Gtk.Builder</a>,
+                               <a title="string" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/string">string</a>)</pre>
 
 <p>Constructs a child of <em>buildable</em> with the name <em>name</em>.</p>
 <p><a href="gtkbuilder-h.html#GtkBuilder">Gtk.Builder</a> calls this function if a “constructor” has been
@@ -1086,23 +304,7 @@ specified in the UI definition.</p>
 					
 <div class="symbol-detail">
 	<div>
-		<i><em><code>buildable</code></em></i>
-					(
-						<a title="Gtk.Buildable" href="gtkbuildable-h.html#GtkBuildable">Gtk.Buildable</a>
-						)
-				–
-	</div>
-			<p>A <a href="gtkbuildable-h.html#GtkBuildable">Gtk.Buildable</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
 		<i><em><code>builder</code></em></i>
-					(
-						<a title="Gtk.Builder" href="gtkbuilder-h.html#GtkBuilder">Gtk.Builder</a>
-						)
 				–
 	</div>
 			<p><a href="gtkbuilder-h.html#GtkBuilder">Gtk.Builder</a> used to construct this object</p>
@@ -1113,9 +315,6 @@ specified in the UI definition.</p>
 <div class="symbol-detail">
 	<div>
 		<i><em><code>name</code></em></i>
-					(
-						<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
-						)
 				–
 	</div>
 			<p>name of child to construct</p>
@@ -1128,94 +327,6 @@ specified in the UI definition.</p>
 		<div class="symbol-detail">
 			<div>
 				<b>Returns</b>
-									(
-					<a title="GObject.Object" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct">GObject.Object</a>
-										)
-								–
-			</div>
-							<p>the constructed child</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.12
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_buildable_construct_child">
-	<span><code>Gtk.Buildable.construct_child</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.Buildable.construct_child (self, builder, name):
-    #python wrapper for 'gtk_buildable_construct_child'</pre>
-
-<p>Constructs a child of <em>buildable</em> with the name <em>name</em>.</p>
-<p><a href="gtkbuilder-h.html#GtkBuilder">Gtk.Builder</a> calls this function if a “constructor” has been
-specified in the UI definition.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>buildable</code></em></i>
-					(
-						<a title="Gtk.Buildable" href="gtkbuildable-h.html#GtkBuildable">Gtk.Buildable</a>
-						)
-				–
-	</div>
-			<p>A <a href="gtkbuildable-h.html#GtkBuildable">Gtk.Buildable</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>builder</code></em></i>
-					(
-						<a title="Gtk.Builder" href="gtkbuilder-h.html#GtkBuilder">Gtk.Builder</a>
-						)
-				–
-	</div>
-			<p><a href="gtkbuilder-h.html#GtkBuilder">Gtk.Builder</a> used to construct this object</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>name</code></em></i>
-					(
-						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
-						)
-				–
-	</div>
-			<p>name of child to construct</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="GObject.Object" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct">GObject.Object</a>
-										)
 								–
 			</div>
 							<p>the constructed child</p>
@@ -1238,26 +349,25 @@ specified in the UI definition.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="since:2.12;" id="gtk_buildable_custom_tag_start">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h4 data-hotdoc-id="gtk_buildable_custom_tag_start">
-	<span><code>gtk_buildable_custom_tag_start</code></span>
+	<span><code>Gtk.IBuildable.CustomTagStart</code></span>
 </h4>
 
 
 
 
 <pre class="c-prototype">
-<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
-gtk_buildable_custom_tag_start (<a title="GtkBuildable" href="gtkbuildable-h.html#GtkBuildable">GtkBuildable</a> * buildable,
-                                <a title="GtkBuilder" href="gtkbuilder-h.html#GtkBuilder">GtkBuilder</a> * builder,
-                                <a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a> * child,
-                                const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * tagname,
-                                <a title="GMarkupParser" href="https://developer.gnome.org/glib/unstable/glib-Simple-XML-Subset-Parser.html#GMarkupParser">GMarkupParser</a> * parser,
-                                <a title="gpointer" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer">gpointer</a> * data)</pre>
+<a title="bool" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/bool">bool</a>
+Gtk.IBuildable.CustomTagStart (<a title="Gtk.Builder" href="gtkbuilder-h.html#GtkBuilder">Gtk.Builder</a>,
+                               <a title="GLib.Object" href="http://docs.go-mono.com/?link=T%3aGLib.Object">GLib.Object</a>,
+                               <a title="string" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/string">string</a>,
+                               <a title="out" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/out">out</a>  <a title="GLib.MarkupParser" href="https://developer.gnome.org/glib/unstable/glib-Simple-XML-Subset-Parser.html#GMarkupParser">GLib.MarkupParser</a>,
+                               <a title="out" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/out">out</a>  <a title="IntPtr" href="https://docs.microsoft.com/en-us/dotnet/api//system.intptr">IntPtr</a>)</pre>
 
 <p>This is called for each unknown element under <child>.</child></p>
 
@@ -1268,20 +378,10 @@ gtk_buildable_custom_tag_start (<a title="GtkBuildable" href="gtkbuildable-h.htm
 					
 <div class="symbol-detail">
 	<div>
-		<i><em><code>buildable</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkbuildable-h.html#GtkBuildable">GtkBuildable</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
 		<i><em><code>builder</code></em></i>
 				–
 	</div>
-			<p>a <a href="gtkbuilder-h.html#GtkBuilder">GtkBuilder</a> used to construct this object</p>
+			<p>a <a href="gtkbuilder-h.html#GtkBuilder">Gtk.Builder</a> used to construct this object</p>
 
 	</div>
 
@@ -1289,14 +389,9 @@ gtk_buildable_custom_tag_start (<a title="GtkBuildable" href="gtkbuildable-h.htm
 <div class="symbol-detail">
 	<div>
 		<i><em><code>child</code></em></i>
-					(
-						
-<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
-
-						)
 				–
 	</div>
-			<p>child object or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> for non-child tags</p>
+			<p>child object or <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/null">null</a> for non-child tags</p>
 
 	</div>
 
@@ -1314,14 +409,9 @@ gtk_buildable_custom_tag_start (<a title="GtkBuildable" href="gtkbuildable-h.htm
 <div class="symbol-detail">
 	<div>
 		<i><em><code>parser</code></em></i>
-					(
-						
-<span class="annotation">[<abbr title="Parameter for returning results"><span class="acronym">out</span></abbr>]</span>
-
-						)
 				–
 	</div>
-			<p>a <a href="https://developer.gnome.org/glib/unstable/glib-Simple-XML-Subset-Parser.html#GMarkupParser">GMarkupParser</a> to fill in</p>
+			<p>a <a href="https://developer.gnome.org/glib/unstable/glib-Simple-XML-Subset-Parser.html#GMarkupParser">GLib.MarkupParser</a> to fill in</p>
 
 	</div>
 
@@ -1329,11 +419,6 @@ gtk_buildable_custom_tag_start (<a title="GtkBuildable" href="gtkbuildable-h.htm
 <div class="symbol-detail">
 	<div>
 		<i><em><code>data</code></em></i>
-					(
-						
-<span class="annotation">[<abbr title="Parameter for returning results"><span class="acronym">out</span></abbr>]</span>
-
-						)
 				–
 	</div>
 			<p>return location for user data that will be passed in
@@ -1349,266 +434,11 @@ to parser functions</p>
 				<b>Returns</b>
 								–
 			</div>
-							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if a object has a custom implementation, <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS">FALSE</a>
+							<p><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/true">true</a> if a object has a custom implementation, <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/false">false</a>
 if it doesn't.</p>
 
 					</div>
 	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.12
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_buildable_custom_tag_start">
-	<span><code>Gtk.prototype.custom_tag_start</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.custom_tag_start(builder: <a title="Gtk.Builder" href="gtkbuilder-h.html#GtkBuilder">Gtk.Builder</a>, child: <a title="GObject.Object" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct">GObject.Object</a>, tagname: <a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>): {
-    // javascript wrapper for 'gtk_buildable_custom_tag_start'
-}</pre>
-
-<p>This is called for each unknown element under <child>.</child></p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>buildable</code></em></i>
-					(
-						<a title="Gtk.Buildable" href="gtkbuildable-h.html#GtkBuildable">Gtk.Buildable</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkbuildable-h.html#GtkBuildable">Gtk.Buildable</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>builder</code></em></i>
-					(
-						<a title="Gtk.Builder" href="gtkbuilder-h.html#GtkBuilder">Gtk.Builder</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkbuilder-h.html#GtkBuilder">Gtk.Builder</a> used to construct this object</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>child</code></em></i>
-					(
-						<a title="GObject.Object" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct">GObject.Object</a>
-						)
-				–
-	</div>
-			<p>child object or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a> for non-child tags</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>tagname</code></em></i>
-					(
-						<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
-						)
-				–
-	</div>
-			<p>name of tag</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<p><b>Returns a tuple made of:</b></p>
-				
-<div class="symbol-detail">
-	<div>
-									(
-			<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
-						)
-				–
-	</div>
-			<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if a object has a custom implementation, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">false</a>
-if it doesn't.</p>
-
-	</div>
-
-				
-<div class="symbol-detail">
-	<div>
-				<i><em><code>parser</code></em></i>
-									(
-			<a title="GLib.MarkupParser" href="https://developer.gnome.org/glib/unstable/glib-Simple-XML-Subset-Parser.html#GMarkupParser">GLib.MarkupParser</a>
-						)
-				–
-	</div>
-			<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if a object has a custom implementation, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">false</a>
-if it doesn't.</p>
-
-	</div>
-
-				
-<div class="symbol-detail">
-	<div>
-				<i><em><code>data</code></em></i>
-									(
-			<a title="Object" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>
-						)
-				–
-	</div>
-			<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if a object has a custom implementation, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">false</a>
-if it doesn't.</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.12
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_buildable_custom_tag_start">
-	<span><code>Gtk.Buildable.custom_tag_start</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.Buildable.custom_tag_start (self, builder, child, tagname):
-    #python wrapper for 'gtk_buildable_custom_tag_start'</pre>
-
-<p>This is called for each unknown element under <child>.</child></p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>buildable</code></em></i>
-					(
-						<a title="Gtk.Buildable" href="gtkbuildable-h.html#GtkBuildable">Gtk.Buildable</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkbuildable-h.html#GtkBuildable">Gtk.Buildable</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>builder</code></em></i>
-					(
-						<a title="Gtk.Builder" href="gtkbuilder-h.html#GtkBuilder">Gtk.Builder</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkbuilder-h.html#GtkBuilder">Gtk.Builder</a> used to construct this object</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>child</code></em></i>
-					(
-						<a title="GObject.Object" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct">GObject.Object</a>
-						)
-				–
-	</div>
-			<p>child object or <a href="https://docs.python.org/3/library/constants.html#None">None</a> for non-child tags</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>tagname</code></em></i>
-					(
-						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
-						)
-				–
-	</div>
-			<p>name of tag</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<p><b>Returns a tuple made of:</b></p>
-				
-<div class="symbol-detail">
-	<div>
-									(
-			<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
-						)
-				–
-	</div>
-			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if a object has a custom implementation, <a href="https://docs.python.org/3/library/constants.html#False">False</a>
-if it doesn't.</p>
-
-	</div>
-
-				
-<div class="symbol-detail">
-	<div>
-				<i><em><code>parser</code></em></i>
-									(
-			<a title="GLib.MarkupParser" href="https://developer.gnome.org/glib/unstable/glib-Simple-XML-Subset-Parser.html#GMarkupParser">GLib.MarkupParser</a>
-						)
-				–
-	</div>
-			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if a object has a custom implementation, <a href="https://docs.python.org/3/library/constants.html#False">False</a>
-if it doesn't.</p>
-
-	</div>
-
-				
-<div class="symbol-detail">
-	<div>
-				<i><em><code>data</code></em></i>
-									(
-			<a title="object" href="https://docs.python.org/3/library/functions.html#object">object</a>
-						)
-				–
-	</div>
-			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if a object has a custom implementation, <a href="https://docs.python.org/3/library/constants.html#False">False</a>
-if it doesn't.</p>
-
-	</div>
-
-			</div>
 
 
 
@@ -1625,24 +455,23 @@ if it doesn't.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="since:2.12;" id="gtk_buildable_custom_tag_end">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h4 data-hotdoc-id="gtk_buildable_custom_tag_end">
-	<span><code>gtk_buildable_custom_tag_end</code></span>
+	<span><code>Gtk.IBuildable.CustomTagEnd</code></span>
 </h4>
 
 
 
 
 <pre class="c-prototype">
-gtk_buildable_custom_tag_end (<a title="GtkBuildable" href="gtkbuildable-h.html#GtkBuildable">GtkBuildable</a> * buildable,
-                              <a title="GtkBuilder" href="gtkbuilder-h.html#GtkBuilder">GtkBuilder</a> * builder,
-                              <a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a> * child,
-                              const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * tagname,
-                              <a title="gpointer" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer">gpointer</a> * data)</pre>
+Gtk.IBuildable.CustomTagEnd (<a title="Gtk.Builder" href="gtkbuilder-h.html#GtkBuilder">Gtk.Builder</a>,
+                             <a title="GLib.Object" href="http://docs.go-mono.com/?link=T%3aGLib.Object">GLib.Object</a>,
+                             <a title="string" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/string">string</a>,
+                             <a title="IntPtr" href="https://docs.microsoft.com/en-us/dotnet/api//system.intptr">IntPtr</a>)</pre>
 
 <p>This is called at the end of each custom element handled by
 the buildable.</p>
@@ -1654,115 +483,7 @@ the buildable.</p>
 					
 <div class="symbol-detail">
 	<div>
-		<i><em><code>buildable</code></em></i>
-				–
-	</div>
-			<p>A <a href="gtkbuildable-h.html#GtkBuildable">GtkBuildable</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
 		<i><em><code>builder</code></em></i>
-				–
-	</div>
-			<p><a href="gtkbuilder-h.html#GtkBuilder">GtkBuilder</a> used to construct this object</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>child</code></em></i>
-					(
-						
-<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
-
-						)
-				–
-	</div>
-			<p>child object or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> for non-child tags</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>tagname</code></em></i>
-				–
-	</div>
-			<p>name of tag</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>data</code></em></i>
-					(
-						
-<span class="annotation">[<abbr title="Override the parsed C type with given type"><span class="acronym">type</span></abbr> gpointer]</span>
-
-						)
-				–
-	</div>
-			<p>user data that will be passed in to parser functions</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.12
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_buildable_custom_tag_end">
-	<span><code>Gtk.prototype.custom_tag_end</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.custom_tag_end(builder: <a title="Gtk.Builder" href="gtkbuilder-h.html#GtkBuilder">Gtk.Builder</a>, child: <a title="GObject.Object" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct">GObject.Object</a>, tagname: <a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>, data: <a title="Object" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>): {
-    // javascript wrapper for 'gtk_buildable_custom_tag_end'
-}</pre>
-
-<p>This is called at the end of each custom element handled by
-the buildable.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>buildable</code></em></i>
-					(
-						<a title="Gtk.Buildable" href="gtkbuildable-h.html#GtkBuildable">Gtk.Buildable</a>
-						)
-				–
-	</div>
-			<p>A <a href="gtkbuildable-h.html#GtkBuildable">Gtk.Buildable</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>builder</code></em></i>
-					(
-						<a title="Gtk.Builder" href="gtkbuilder-h.html#GtkBuilder">Gtk.Builder</a>
-						)
 				–
 	</div>
 			<p><a href="gtkbuilder-h.html#GtkBuilder">Gtk.Builder</a> used to construct this object</p>
@@ -1773,12 +494,9 @@ the buildable.</p>
 <div class="symbol-detail">
 	<div>
 		<i><em><code>child</code></em></i>
-					(
-						<a title="GObject.Object" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct">GObject.Object</a>
-						)
 				–
 	</div>
-			<p>child object or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a> for non-child tags</p>
+			<p>child object or <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/null">null</a> for non-child tags</p>
 
 	</div>
 
@@ -1786,9 +504,6 @@ the buildable.</p>
 <div class="symbol-detail">
 	<div>
 		<i><em><code>tagname</code></em></i>
-					(
-						<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
-						)
 				–
 	</div>
 			<p>name of tag</p>
@@ -1799,105 +514,6 @@ the buildable.</p>
 <div class="symbol-detail">
 	<div>
 		<i><em><code>data</code></em></i>
-					(
-						<a title="Object" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>
-						)
-				–
-	</div>
-			<p>user data that will be passed in to parser functions</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.12
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_buildable_custom_tag_end">
-	<span><code>Gtk.Buildable.custom_tag_end</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.Buildable.custom_tag_end (self, builder, child, tagname, data):
-    #python wrapper for 'gtk_buildable_custom_tag_end'</pre>
-
-<p>This is called at the end of each custom element handled by
-the buildable.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>buildable</code></em></i>
-					(
-						<a title="Gtk.Buildable" href="gtkbuildable-h.html#GtkBuildable">Gtk.Buildable</a>
-						)
-				–
-	</div>
-			<p>A <a href="gtkbuildable-h.html#GtkBuildable">Gtk.Buildable</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>builder</code></em></i>
-					(
-						<a title="Gtk.Builder" href="gtkbuilder-h.html#GtkBuilder">Gtk.Builder</a>
-						)
-				–
-	</div>
-			<p><a href="gtkbuilder-h.html#GtkBuilder">Gtk.Builder</a> used to construct this object</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>child</code></em></i>
-					(
-						<a title="GObject.Object" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct">GObject.Object</a>
-						)
-				–
-	</div>
-			<p>child object or <a href="https://docs.python.org/3/library/constants.html#None">None</a> for non-child tags</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>tagname</code></em></i>
-					(
-						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
-						)
-				–
-	</div>
-			<p>name of tag</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>data</code></em></i>
-					(
-						<a title="object" href="https://docs.python.org/3/library/functions.html#object">object</a>
-						)
 				–
 	</div>
 			<p>user data that will be passed in to parser functions</p>
@@ -1921,26 +537,25 @@ the buildable.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="since:2.12;" id="gtk_buildable_custom_finished">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h4 data-hotdoc-id="gtk_buildable_custom_finished">
-	<span><code>gtk_buildable_custom_finished</code></span>
+	<span><code>Gtk.IBuildable.CustomFinished</code></span>
 </h4>
 
 
 
 
 <pre class="c-prototype">
-gtk_buildable_custom_finished (<a title="GtkBuildable" href="gtkbuildable-h.html#GtkBuildable">GtkBuildable</a> * buildable,
-                               <a title="GtkBuilder" href="gtkbuilder-h.html#GtkBuilder">GtkBuilder</a> * builder,
-                               <a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a> * child,
-                               const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * tagname,
-                               <a title="gpointer" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer">gpointer</a> data)</pre>
+Gtk.IBuildable.CustomFinished (<a title="Gtk.Builder" href="gtkbuilder-h.html#GtkBuilder">Gtk.Builder</a>,
+                               <a title="GLib.Object" href="http://docs.go-mono.com/?link=T%3aGLib.Object">GLib.Object</a>,
+                               <a title="string" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/string">string</a>,
+                               <a title="IntPtr" href="https://docs.microsoft.com/en-us/dotnet/api//system.intptr">IntPtr</a>)</pre>
 
-<p>This is similar to <a href="gtkbuildable-h.html#gtk_buildable_parser_finished">gtk_buildable_parser_finished</a> but is
+<p>This is similar to <a href="gtkbuildable-h.html#gtk_buildable_parser_finished">Gtk.IBuildable.ParserFinished</a> but is
 called once for each custom tag handled by the <em>buildable</em>.</p>
 
 
@@ -1950,110 +565,7 @@ called once for each custom tag handled by the <em>buildable</em>.</p>
 					
 <div class="symbol-detail">
 	<div>
-		<i><em><code>buildable</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkbuildable-h.html#GtkBuildable">GtkBuildable</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
 		<i><em><code>builder</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkbuilder-h.html#GtkBuilder">GtkBuilder</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>child</code></em></i>
-					(
-						
-<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
-
-						)
-				–
-	</div>
-			<p>child object or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> for non-child tags</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>tagname</code></em></i>
-				–
-	</div>
-			<p>the name of the tag</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>data</code></em></i>
-				–
-	</div>
-			<p>user data created in custom_tag_start</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.12
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_buildable_custom_finished">
-	<span><code>Gtk.prototype.custom_finished</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.custom_finished(builder: <a title="Gtk.Builder" href="gtkbuilder-h.html#GtkBuilder">Gtk.Builder</a>, child: <a title="GObject.Object" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct">GObject.Object</a>, tagname: <a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>, data: <a title="Object" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>): {
-    // javascript wrapper for 'gtk_buildable_custom_finished'
-}</pre>
-
-<p>This is similar to <a href="gtkbuildable-h.html#gtk_buildable_parser_finished">Gtk.prototype.parser_finished</a> but is
-called once for each custom tag handled by the <em>buildable</em>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>buildable</code></em></i>
-					(
-						<a title="Gtk.Buildable" href="gtkbuildable-h.html#GtkBuildable">Gtk.Buildable</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkbuildable-h.html#GtkBuildable">Gtk.Buildable</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>builder</code></em></i>
-					(
-						<a title="Gtk.Builder" href="gtkbuilder-h.html#GtkBuilder">Gtk.Builder</a>
-						)
 				–
 	</div>
 			<p>a <a href="gtkbuilder-h.html#GtkBuilder">Gtk.Builder</a></p>
@@ -2064,12 +576,9 @@ called once for each custom tag handled by the <em>buildable</em>.</p>
 <div class="symbol-detail">
 	<div>
 		<i><em><code>child</code></em></i>
-					(
-						<a title="GObject.Object" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct">GObject.Object</a>
-						)
 				–
 	</div>
-			<p>child object or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a> for non-child tags</p>
+			<p>child object or <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/null">null</a> for non-child tags</p>
 
 	</div>
 
@@ -2077,9 +586,6 @@ called once for each custom tag handled by the <em>buildable</em>.</p>
 <div class="symbol-detail">
 	<div>
 		<i><em><code>tagname</code></em></i>
-					(
-						<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
-						)
 				–
 	</div>
 			<p>the name of the tag</p>
@@ -2090,105 +596,6 @@ called once for each custom tag handled by the <em>buildable</em>.</p>
 <div class="symbol-detail">
 	<div>
 		<i><em><code>data</code></em></i>
-					(
-						<a title="Object" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>
-						)
-				–
-	</div>
-			<p>user data created in custom_tag_start</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.12
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_buildable_custom_finished">
-	<span><code>Gtk.Buildable.custom_finished</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.Buildable.custom_finished (self, builder, child, tagname, data):
-    #python wrapper for 'gtk_buildable_custom_finished'</pre>
-
-<p>This is similar to <a href="gtkbuildable-h.html#gtk_buildable_parser_finished">Gtk.Buildable.parser_finished</a> but is
-called once for each custom tag handled by the <em>buildable</em>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>buildable</code></em></i>
-					(
-						<a title="Gtk.Buildable" href="gtkbuildable-h.html#GtkBuildable">Gtk.Buildable</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkbuildable-h.html#GtkBuildable">Gtk.Buildable</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>builder</code></em></i>
-					(
-						<a title="Gtk.Builder" href="gtkbuilder-h.html#GtkBuilder">Gtk.Builder</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkbuilder-h.html#GtkBuilder">Gtk.Builder</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>child</code></em></i>
-					(
-						<a title="GObject.Object" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct">GObject.Object</a>
-						)
-				–
-	</div>
-			<p>child object or <a href="https://docs.python.org/3/library/constants.html#None">None</a> for non-child tags</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>tagname</code></em></i>
-					(
-						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
-						)
-				–
-	</div>
-			<p>the name of the tag</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>data</code></em></i>
-					(
-						<a title="object" href="https://docs.python.org/3/library/functions.html#object">object</a>
-						)
 				–
 	</div>
 			<p>user data created in custom_tag_start</p>
@@ -2212,26 +619,25 @@ called once for each custom tag handled by the <em>buildable</em>.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="since:2.12;" id="gtk_buildable_parser_finished">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h4 data-hotdoc-id="gtk_buildable_parser_finished">
-	<span><code>gtk_buildable_parser_finished</code></span>
+	<span><code>Gtk.IBuildable.ParserFinished</code></span>
 </h4>
 
 
 
 
 <pre class="c-prototype">
-gtk_buildable_parser_finished (<a title="GtkBuildable" href="gtkbuildable-h.html#GtkBuildable">GtkBuildable</a> * buildable,
-                               <a title="GtkBuilder" href="gtkbuilder-h.html#GtkBuilder">GtkBuilder</a> * builder)</pre>
+Gtk.IBuildable.ParserFinished (<a title="Gtk.Builder" href="gtkbuilder-h.html#GtkBuilder">Gtk.Builder</a>)</pre>
 
 <p>Called when the builder finishes the parsing of a
 [GtkBuilder UI definition][BUILDER-UI].
 Note that this will be called once for each time
-<a href="gtkbuilder-h.html#gtk_builder_add_from_file">gtk_builder_add_from_file</a> or <a href="gtkbuilder-h.html#gtk_builder_add_from_string">gtk_builder_add_from_string</a>
+<a href="gtkbuilder-h.html#gtk_builder_add_from_file">Gtk.Builder.AddFromFile</a> or <a href="gtkbuilder-h.html#gtk_builder_add_from_string">Gtk.Builder.AddFromString</a>
 is called on a builder.</p>
 
 
@@ -2241,138 +647,7 @@ is called on a builder.</p>
 					
 <div class="symbol-detail">
 	<div>
-		<i><em><code>buildable</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkbuildable-h.html#GtkBuildable">GtkBuildable</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
 		<i><em><code>builder</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkbuilder-h.html#GtkBuilder">GtkBuilder</a></p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.12
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_buildable_parser_finished">
-	<span><code>Gtk.prototype.parser_finished</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.parser_finished(builder: <a title="Gtk.Builder" href="gtkbuilder-h.html#GtkBuilder">Gtk.Builder</a>): {
-    // javascript wrapper for 'gtk_buildable_parser_finished'
-}</pre>
-
-<p>Called when the builder finishes the parsing of a
-[GtkBuilder UI definition][BUILDER-UI].
-Note that this will be called once for each time
-<a href="gtkbuilder-h.html#gtk_builder_add_from_file">Gtk.prototype.add_from_file</a> or <a href="gtkbuilder-h.html#gtk_builder_add_from_string">Gtk.prototype.add_from_string</a>
-is called on a builder.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>buildable</code></em></i>
-					(
-						<a title="Gtk.Buildable" href="gtkbuildable-h.html#GtkBuildable">Gtk.Buildable</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkbuildable-h.html#GtkBuildable">Gtk.Buildable</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>builder</code></em></i>
-					(
-						<a title="Gtk.Builder" href="gtkbuilder-h.html#GtkBuilder">Gtk.Builder</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkbuilder-h.html#GtkBuilder">Gtk.Builder</a></p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.12
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_buildable_parser_finished">
-	<span><code>Gtk.Buildable.parser_finished</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.Buildable.parser_finished (self, builder):
-    #python wrapper for 'gtk_buildable_parser_finished'</pre>
-
-<p>Called when the builder finishes the parsing of a
-[GtkBuilder UI definition][BUILDER-UI].
-Note that this will be called once for each time
-<a href="gtkbuilder-h.html#gtk_builder_add_from_file">Gtk.Builder.add_from_file</a> or <a href="gtkbuilder-h.html#gtk_builder_add_from_string">Gtk.Builder.add_from_string</a>
-is called on a builder.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>buildable</code></em></i>
-					(
-						<a title="Gtk.Buildable" href="gtkbuildable-h.html#GtkBuildable">Gtk.Buildable</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkbuildable-h.html#GtkBuildable">Gtk.Buildable</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>builder</code></em></i>
-					(
-						<a title="Gtk.Builder" href="gtkbuilder-h.html#GtkBuilder">Gtk.Builder</a>
-						)
 				–
 	</div>
 			<p>a <a href="gtkbuilder-h.html#GtkBuilder">Gtk.Builder</a></p>
@@ -2396,23 +671,22 @@ is called on a builder.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="since:2.12;" id="gtk_buildable_get_internal_child">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h4 data-hotdoc-id="gtk_buildable_get_internal_child">
-	<span><code>gtk_buildable_get_internal_child</code></span>
+	<span><code>Gtk.IBuildable.GetInternalChild</code></span>
 </h4>
 
 
 
 
 <pre class="c-prototype">
-<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a> *
-gtk_buildable_get_internal_child (<a title="GtkBuildable" href="gtkbuildable-h.html#GtkBuildable">GtkBuildable</a> * buildable,
-                                  <a title="GtkBuilder" href="gtkbuilder-h.html#GtkBuilder">GtkBuilder</a> * builder,
-                                  const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * childname)</pre>
+<a title="GLib.Object" href="http://docs.go-mono.com/?link=T%3aGLib.Object">GLib.Object</a>
+Gtk.IBuildable.GetInternalChild (<a title="Gtk.Builder" href="gtkbuilder-h.html#GtkBuilder">Gtk.Builder</a>,
+                                 <a title="string" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/string">string</a>)</pre>
 
 <p>Get the internal child called <em>childname</em> of the <em>buildable</em> object.</p>
 
@@ -2423,101 +697,7 @@ gtk_buildable_get_internal_child (<a title="GtkBuildable" href="gtkbuildable-h.h
 					
 <div class="symbol-detail">
 	<div>
-		<i><em><code>buildable</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkbuildable-h.html#GtkBuildable">GtkBuildable</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
 		<i><em><code>builder</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkbuilder-h.html#GtkBuilder">GtkBuilder</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>childname</code></em></i>
-				–
-	</div>
-			<p>name of child</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					
-										
-<span class="annotation">[<abbr title="Don't free data after the code is done"><span class="acronym">transfer: none</span></abbr>]</span>
-
-										)
-								–
-			</div>
-							<p>the internal child of the buildable object</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.12
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_buildable_get_internal_child">
-	<span><code>Gtk.prototype.get_internal_child</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.get_internal_child(builder: <a title="Gtk.Builder" href="gtkbuilder-h.html#GtkBuilder">Gtk.Builder</a>, childname: <a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>): {
-    // javascript wrapper for 'gtk_buildable_get_internal_child'
-}</pre>
-
-<p>Get the internal child called <em>childname</em> of the <em>buildable</em> object.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>buildable</code></em></i>
-					(
-						<a title="Gtk.Buildable" href="gtkbuildable-h.html#GtkBuildable">Gtk.Buildable</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkbuildable-h.html#GtkBuildable">Gtk.Buildable</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>builder</code></em></i>
-					(
-						<a title="Gtk.Builder" href="gtkbuilder-h.html#GtkBuilder">Gtk.Builder</a>
-						)
 				–
 	</div>
 			<p>a <a href="gtkbuilder-h.html#GtkBuilder">Gtk.Builder</a></p>
@@ -2528,9 +708,6 @@ function Gtk.prototype.get_internal_child(builder: <a title="Gtk.Builder" href="
 <div class="symbol-detail">
 	<div>
 		<i><em><code>childname</code></em></i>
-					(
-						<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
-						)
 				–
 	</div>
 			<p>name of child</p>
@@ -2543,92 +720,6 @@ function Gtk.prototype.get_internal_child(builder: <a title="Gtk.Builder" href="
 		<div class="symbol-detail">
 			<div>
 				<b>Returns</b>
-									(
-					<a title="GObject.Object" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct">GObject.Object</a>
-										)
-								–
-			</div>
-							<p>the internal child of the buildable object</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.12
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_buildable_get_internal_child">
-	<span><code>Gtk.Buildable.get_internal_child</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.Buildable.get_internal_child (self, builder, childname):
-    #python wrapper for 'gtk_buildable_get_internal_child'</pre>
-
-<p>Get the internal child called <em>childname</em> of the <em>buildable</em> object.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>buildable</code></em></i>
-					(
-						<a title="Gtk.Buildable" href="gtkbuildable-h.html#GtkBuildable">Gtk.Buildable</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkbuildable-h.html#GtkBuildable">Gtk.Buildable</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>builder</code></em></i>
-					(
-						<a title="Gtk.Builder" href="gtkbuilder-h.html#GtkBuilder">Gtk.Builder</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkbuilder-h.html#GtkBuilder">Gtk.Builder</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>childname</code></em></i>
-					(
-						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
-						)
-				–
-	</div>
-			<p>name of child</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="GObject.Object" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct">GObject.Object</a>
-										)
 								–
 			</div>
 							<p>the internal child of the buildable object</p>
@@ -2655,41 +746,13 @@ def Gtk.Buildable.get_internal_child (self, builder, childname):
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="GtkBuildable">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h3 data-hotdoc-id="GtkBuildable">
-	<span><code>GtkBuildable</code></span>
-</h3>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h3 data-hotdoc-id="GtkBuildable">
-	<span><code>Gtk.Buildable</code></span>
-</h3>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="GtkBuildable">
-	<span><code>Gtk.Buildable</code></span>
+	<span><code>Gtk.IBuildable</code></span>
 </h3>
 
 

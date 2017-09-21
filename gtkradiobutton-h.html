@@ -89,7 +89,7 @@ $('body').removeClass('no-script');
 </nav>
 
 <main>
-<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="gtkradiobutton-h.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['c', 'javascript', 'python']" data-hotdoc-meta-gi-language="c">
+<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="gtkradiobutton-h.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['csharp']" data-hotdoc-meta-gi-language="c">
 <script src="assets/js/utils.js"></script>
 
 <div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
@@ -101,34 +101,34 @@ $('body').removeClass('no-script');
 	<div id="main">
 				    <div id="page-description" data-hotdoc-source="gtkradiobutton.h.markdown" data-hotdoc-role="main">
         <h1 id="gtkradiobutton-page">GtkRadioButton</h1>
-<p>A single radio button performs the same basic function as a <a href="gtkcheckbutton-h.html#GtkCheckButton" data-gi-href-javascript="gtkcheckbutton-h.html#GtkCheckButton" data-gi-title-javascript="Gtk.CheckButton" data-gi-href-python="gtkcheckbutton-h.html#GtkCheckButton" data-gi-title-python="Gtk.CheckButton">GtkCheckButton</a>,
+<p>A single radio button performs the same basic function as a <a href="gtkcheckbutton-h.html#GtkCheckButton" data-gi-href-csharp="gtkcheckbutton-h.html#GtkCheckButton" data-gi-title-csharp="Gtk.CheckButton">GtkCheckButton</a>,
 as its position in the object hierarchy reflects. It is only when multiple
 radio buttons are grouped together that they become a different user
 interface component in their own right.</p>
 <p>Every radio button is a member of some group of radio buttons. When one is
 selected, all other radio buttons in the same group are deselected. A
-<a href="gtkradiobutton-h.html#GtkRadioButton" data-gi-href-javascript="gtkradiobutton-h.html#GtkRadioButton" data-gi-title-javascript="Gtk.RadioButton" data-gi-href-python="gtkradiobutton-h.html#GtkRadioButton" data-gi-title-python="Gtk.RadioButton">GtkRadioButton</a> is one way of giving the user a choice from many options.</p>
-<p>Radio button widgets are created with <a href="gtkradiobutton-h.html#gtk_radio_button_new" data-gi-href-javascript="gtkradiobutton-h.html#gtk_radio_button_new" data-gi-title-javascript="Gtk.prototype.new" data-gi-href-python="gtkradiobutton-h.html#gtk_radio_button_new" data-gi-title-python="Gtk.RadioButton.new">gtk_radio_button_new</a>, passing <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a>
+<a href="gtkradiobutton-h.html#GtkRadioButton" data-gi-href-csharp="gtkradiobutton-h.html#GtkRadioButton" data-gi-title-csharp="Gtk.RadioButton">GtkRadioButton</a> is one way of giving the user a choice from many options.</p>
+<p>Radio button widgets are created with <a href="gtkradiobutton-h.html#gtk_radio_button_new" data-gi-href-csharp="gtkradiobutton-h.html#gtk_radio_button_new" data-gi-title-csharp="Gtk.RadioButton">gtk_radio_button_new</a>, passing <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a>
 as the argument if this is the first radio button in a group. In subsequent
 calls, the group you wish to add this button to should be passed as an
-argument. Optionally, <a href="gtkradiobutton-h.html#gtk_radio_button_new_with_label" data-gi-href-javascript="gtkradiobutton-h.html#gtk_radio_button_new_with_label" data-gi-title-javascript="Gtk.prototype.new_with_label" data-gi-href-python="gtkradiobutton-h.html#gtk_radio_button_new_with_label" data-gi-title-python="Gtk.RadioButton.new_with_label">gtk_radio_button_new_with_label</a> can be used if you
+argument. Optionally, <a href="gtkradiobutton-h.html#gtk_radio_button_new_with_label" data-gi-href-csharp="gtkradiobutton-h.html#gtk_radio_button_new_with_label" data-gi-title-csharp="Gtk.RadioButton">gtk_radio_button_new_with_label</a> can be used if you
 want a text label on the radio button.</p>
 <p>Alternatively, when adding widgets to an existing group of radio buttons,
-use <a href="gtkradiobutton-h.html#gtk_radio_button_new_from_widget" data-gi-href-javascript="gtkradiobutton-h.html#gtk_radio_button_new_from_widget" data-gi-title-javascript="Gtk.prototype.new_from_widget" data-gi-href-python="gtkradiobutton-h.html#gtk_radio_button_new_from_widget" data-gi-title-python="Gtk.RadioButton.new_from_widget">gtk_radio_button_new_from_widget</a> with a <a href="gtkradiobutton-h.html#GtkRadioButton" data-gi-href-javascript="gtkradiobutton-h.html#GtkRadioButton" data-gi-title-javascript="Gtk.RadioButton" data-gi-href-python="gtkradiobutton-h.html#GtkRadioButton" data-gi-title-python="Gtk.RadioButton">GtkRadioButton</a> that already
+use <a href="gtkradiobutton-h.html#gtk_radio_button_new_from_widget" data-gi-href-csharp="gtkradiobutton-h.html#gtk_radio_button_new_from_widget" data-gi-title-csharp="Gtk.RadioButton">gtk_radio_button_new_from_widget</a> with a <a href="gtkradiobutton-h.html#GtkRadioButton" data-gi-href-csharp="gtkradiobutton-h.html#GtkRadioButton" data-gi-title-csharp="Gtk.RadioButton">GtkRadioButton</a> that already
 has a group assigned to it. The convenience function
-<a href="gtkradiobutton-h.html#gtk_radio_button_new_with_label_from_widget" data-gi-href-javascript="gtkradiobutton-h.html#gtk_radio_button_new_with_label_from_widget" data-gi-title-javascript="Gtk.prototype.new_with_label_from_widget" data-gi-href-python="gtkradiobutton-h.html#gtk_radio_button_new_with_label_from_widget" data-gi-title-python="Gtk.RadioButton.new_with_label_from_widget">gtk_radio_button_new_with_label_from_widget</a> is also provided.</p>
-<p>To retrieve the group a <a href="gtkradiobutton-h.html#GtkRadioButton" data-gi-href-javascript="gtkradiobutton-h.html#GtkRadioButton" data-gi-title-javascript="Gtk.RadioButton" data-gi-href-python="gtkradiobutton-h.html#GtkRadioButton" data-gi-title-python="Gtk.RadioButton">GtkRadioButton</a> is assigned to, use
-<a href="gtkradiobutton-h.html#gtk_radio_button_get_group" data-gi-href-javascript="gtkradiobutton-h.html#gtk_radio_button_get_group" data-gi-title-javascript="Gtk.prototype.get_group" data-gi-href-python="gtkradiobutton-h.html#gtk_radio_button_get_group" data-gi-title-python="Gtk.RadioButton.get_group">gtk_radio_button_get_group</a>.</p>
-<p>To remove a <a href="gtkradiobutton-h.html#GtkRadioButton" data-gi-href-javascript="gtkradiobutton-h.html#GtkRadioButton" data-gi-title-javascript="Gtk.RadioButton" data-gi-href-python="gtkradiobutton-h.html#GtkRadioButton" data-gi-title-python="Gtk.RadioButton">GtkRadioButton</a> from one group and make it part of a new one,
-use <a href="gtkradiobutton-h.html#gtk_radio_button_set_group" data-gi-href-javascript="gtkradiobutton-h.html#gtk_radio_button_set_group" data-gi-title-javascript="Gtk.prototype.set_group" data-gi-href-python="gtkradiobutton-h.html#gtk_radio_button_set_group" data-gi-title-python="Gtk.RadioButton.set_group">gtk_radio_button_set_group</a>.</p>
-<p>The group list does not need to be freed, as each <a href="gtkradiobutton-h.html#GtkRadioButton" data-gi-href-javascript="gtkradiobutton-h.html#GtkRadioButton" data-gi-title-javascript="Gtk.RadioButton" data-gi-href-python="gtkradiobutton-h.html#GtkRadioButton" data-gi-title-python="Gtk.RadioButton">GtkRadioButton</a> will remove
+<a href="gtkradiobutton-h.html#gtk_radio_button_new_with_label_from_widget" data-gi-href-csharp="gtkradiobutton-h.html#gtk_radio_button_new_with_label_from_widget" data-gi-title-csharp="Gtk.RadioButton">gtk_radio_button_new_with_label_from_widget</a> is also provided.</p>
+<p>To retrieve the group a <a href="gtkradiobutton-h.html#GtkRadioButton" data-gi-href-csharp="gtkradiobutton-h.html#GtkRadioButton" data-gi-title-csharp="Gtk.RadioButton">GtkRadioButton</a> is assigned to, use
+<a href="gtkradiobutton-h.html#gtk_radio_button_get_group" data-gi-href-csharp="gtkradiobutton-h.html#gtk_radio_button_get_group" data-gi-title-csharp="Gtk.RadioButton.GetGroup">gtk_radio_button_get_group</a>.</p>
+<p>To remove a <a href="gtkradiobutton-h.html#GtkRadioButton" data-gi-href-csharp="gtkradiobutton-h.html#GtkRadioButton" data-gi-title-csharp="Gtk.RadioButton">GtkRadioButton</a> from one group and make it part of a new one,
+use <a href="gtkradiobutton-h.html#gtk_radio_button_set_group" data-gi-href-csharp="gtkradiobutton-h.html#gtk_radio_button_set_group" data-gi-title-csharp="Gtk.RadioButton.SetGroup">gtk_radio_button_set_group</a>.</p>
+<p>The group list does not need to be freed, as each <a href="gtkradiobutton-h.html#GtkRadioButton" data-gi-href-csharp="gtkradiobutton-h.html#GtkRadioButton" data-gi-title-csharp="Gtk.RadioButton">GtkRadioButton</a> will remove
 itself and its list item when it is destroyed.</p>
 <h1 id="css-nodes">CSS nodes</h1>
 <pre><code class="language-[&lt;!--"> radiobutton
  ├── radio
  ╰── &lt;child&gt;
 </code></pre>
-<p>A GtkRadioButton with indicator (see <a href="gtkcheckbutton-h.html#gtk_check_button_set_draw_indicator" data-gi-href-javascript="gtkcheckbutton-h.html#gtk_check_button_set_draw_indicator" data-gi-title-javascript="Gtk.prototype.set_draw_indicator" data-gi-href-python="gtkcheckbutton-h.html#gtk_check_button_set_draw_indicator" data-gi-title-python="Gtk.CheckButton.set_draw_indicator">gtk_check_button_set_draw_indicator</a>)) has a
+<p>A GtkRadioButton with indicator (see <a href="gtkcheckbutton-h.html#gtk_check_button_set_draw_indicator" data-gi-href-csharp="gtkcheckbutton-h.html#gtk_check_button_set_draw_indicator" data-gi-title-csharp="Gtk.CheckButton.SetDrawIndicator">gtk_check_button_set_draw_indicator</a>)) has a
 main CSS node with name radiobutton and a subnode with name radio.</p>
 <pre><code class="language-[&lt;!--"> button.radio
  ├── radio
@@ -166,7 +166,7 @@ in this case.</p>
 <p>When an unselected button in the group is clicked the clicked button
 receives the <a href="https://developer.gnome.org/gtk3/GtkToggleButton.html#GtkToggleButton-toggled">GtkToggleButton::toggled</a> signal, as does the previously
 selected button.
-Inside the <a href="https://developer.gnome.org/gtk3/GtkToggleButton.html#GtkToggleButton-toggled">GtkToggleButton::toggled</a> handler, <a href="gtktogglebutton-h.html#gtk_toggle_button_get_active" data-gi-href-javascript="gtktogglebutton-h.html#gtk_toggle_button_get_active" data-gi-title-javascript="Gtk.prototype.get_active" data-gi-href-python="gtktogglebutton-h.html#gtk_toggle_button_get_active" data-gi-title-python="Gtk.ToggleButton.get_active">gtk_toggle_button_get_active</a>
+Inside the <a href="https://developer.gnome.org/gtk3/GtkToggleButton.html#GtkToggleButton-toggled">GtkToggleButton::toggled</a> handler, <a href="gtktogglebutton-h.html#gtk_toggle_button_get_active" data-gi-href-csharp="gtktogglebutton-h.html#gtk_toggle_button_get_active" data-gi-title-csharp="Gtk.ToggleButton.GetActive">gtk_toggle_button_get_active</a>
 can be used to determine if the button has been selected or deselected.</p>
 
     </div>
@@ -176,7 +176,7 @@ can be used to determine if the button has been selected or deselected.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="GtkRadioButton">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
@@ -189,14 +189,14 @@ can be used to determine if the button has been selected or deselected.</p>
 <div class="hierarchy_container">
 	<div class="hierarchy_details">
 <pre>
-<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object">GObject</a>
-    <span class="lineart">╰──</span><a title="GInitiallyUnowned" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-javascript="GObject.InitiallyUnowned" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-python="GObject.InitiallyUnowned">GInitiallyUnowned</a>
-        <span class="lineart">╰──</span><a title="GtkWidget" href="gtkwidget-h.html#GtkWidget" data-gi-href-javascript="gtkwidget-h.html#GtkWidget" data-gi-title-javascript="Gtk.Widget" data-gi-href-python="gtkwidget-h.html#GtkWidget" data-gi-title-python="Gtk.Widget">GtkWidget</a>
-            <span class="lineart">╰──</span><a title="GtkContainer" href="gtkcontainer-h.html#GtkContainer" data-gi-href-javascript="gtkcontainer-h.html#GtkContainer" data-gi-title-javascript="Gtk.Container" data-gi-href-python="gtkcontainer-h.html#GtkContainer" data-gi-title-python="Gtk.Container">GtkContainer</a>
-                <span class="lineart">╰──</span><a title="GtkBin" href="gtkbin-h.html#GtkBin" data-gi-href-javascript="gtkbin-h.html#GtkBin" data-gi-title-javascript="Gtk.Bin" data-gi-href-python="gtkbin-h.html#GtkBin" data-gi-title-python="Gtk.Bin">GtkBin</a>
-                    <span class="lineart">╰──</span><a title="GtkButton" href="gtkbutton-h.html#GtkButton" data-gi-href-javascript="gtkbutton-h.html#GtkButton" data-gi-title-javascript="Gtk.Button" data-gi-href-python="gtkbutton-h.html#GtkButton" data-gi-title-python="Gtk.Button">GtkButton</a>
-                        <span class="lineart">╰──</span><a title="GtkToggleButton" href="gtktogglebutton-h.html#GtkToggleButton" data-gi-href-javascript="gtktogglebutton-h.html#GtkToggleButton" data-gi-title-javascript="Gtk.ToggleButton" data-gi-href-python="gtktogglebutton-h.html#GtkToggleButton" data-gi-title-python="Gtk.ToggleButton">GtkToggleButton</a>
-                            <span class="lineart">╰──</span><a title="GtkCheckButton" href="gtkcheckbutton-h.html#GtkCheckButton" data-gi-href-javascript="gtkcheckbutton-h.html#GtkCheckButton" data-gi-title-javascript="Gtk.CheckButton" data-gi-href-python="gtkcheckbutton-h.html#GtkCheckButton" data-gi-title-python="Gtk.CheckButton">GtkCheckButton</a>
+<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-csharp="http://docs.go-mono.com/?link=T%3aGLib.Object" data-gi-title-csharp="GLib.Object">GObject</a>
+    <span class="lineart">╰──</span><a title="GInitiallyUnowned" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-href-csharp="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-csharp="GObject.InitiallyUnowned">GInitiallyUnowned</a>
+        <span class="lineart">╰──</span><a title="GtkWidget" href="gtkwidget-h.html#GtkWidget" data-gi-href-csharp="gtkwidget-h.html#GtkWidget" data-gi-title-csharp="Gtk.Widget">GtkWidget</a>
+            <span class="lineart">╰──</span><a title="GtkContainer" href="gtkcontainer-h.html#GtkContainer" data-gi-href-csharp="gtkcontainer-h.html#GtkContainer" data-gi-title-csharp="Gtk.Container">GtkContainer</a>
+                <span class="lineart">╰──</span><a title="GtkBin" href="gtkbin-h.html#GtkBin" data-gi-href-csharp="gtkbin-h.html#GtkBin" data-gi-title-csharp="Gtk.Bin">GtkBin</a>
+                    <span class="lineart">╰──</span><a title="GtkButton" href="gtkbutton-h.html#GtkButton" data-gi-href-csharp="gtkbutton-h.html#GtkButton" data-gi-title-csharp="Gtk.Button">GtkButton</a>
+                        <span class="lineart">╰──</span><a title="GtkToggleButton" href="gtktogglebutton-h.html#GtkToggleButton" data-gi-href-csharp="gtktogglebutton-h.html#GtkToggleButton" data-gi-title-csharp="Gtk.ToggleButton">GtkToggleButton</a>
+                            <span class="lineart">╰──</span><a title="GtkCheckButton" href="gtkcheckbutton-h.html#GtkCheckButton" data-gi-href-csharp="gtkcheckbutton-h.html#GtkCheckButton" data-gi-title-csharp="Gtk.CheckButton">GtkCheckButton</a>
                                 <span class="lineart">╰──</span>GtkRadioButton
 </pre>
 
@@ -204,233 +204,7 @@ can be used to determine if the button has been selected or deselected.</p>
 
 </div>
 
-<div class="interfaces_container">
-	
-<p><b>Implemented interfaces:</b>
-    AtkImplementorIface, <a title="GtkActionable" href="gtkactionable-h.html#GtkActionable" data-gi-href-javascript="gtkactionable-h.html#GtkActionable" data-gi-title-javascript="Gtk.Actionable" data-gi-href-python="gtkactionable-h.html#GtkActionable" data-gi-title-python="Gtk.Actionable">GtkActionable</a>, <a title="GtkBuildable" href="gtkbuildable-h.html#GtkBuildable" data-gi-href-javascript="gtkbuildable-h.html#GtkBuildable" data-gi-title-javascript="Gtk.Buildable" data-gi-href-python="gtkbuildable-h.html#GtkBuildable" data-gi-title-python="Gtk.Buildable">GtkBuildable</a>
-</p>
 
-</div>
-
-
-
-
-	<div class="members-container">
-		<h3>Members</h3>
-					
-<div class="symbol-detail" data-hotdoc-id="GtkRadioButton.check_button">
-	<div>
-		<i><em><code>check_button</code></em></i>
-		(<a title="GtkCheckButton" href="gtkcheckbutton-h.html#GtkCheckButton" data-gi-href-javascript="gtkcheckbutton-h.html#GtkCheckButton" data-gi-title-javascript="Gtk.CheckButton" data-gi-href-python="gtkcheckbutton-h.html#GtkCheckButton" data-gi-title-python="Gtk.CheckButton">GtkCheckButton</a>)
-		–
-	</div>
-			<i>No description available</i>
-	</div>
-
-			</div>
-
-
-<h3>Class structure</h3>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="GtkRadioButtonClass">
-	<span><code>GtkRadioButtonClass</code></span>
-</h4>
-
-
-
-
-
-	<div class="members-container">
-		<h5>Fields</h5>
-					
-<div class="symbol-detail" data-hotdoc-id="GtkRadioButtonClass.parent_class">
-	<div>
-		<i><em><code>parent_class</code></em></i>
-		(<a title="GtkCheckButtonClass" href="GtkCheckButtonClass">GtkCheckButtonClass</a>)
-		–
-	</div>
-			<i>No description available</i>
-	</div>
-
-			</div>
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h3>
-	Gtk.RadioButtonClass
-</h3>
-
-
-
-
-
-	<div class="members-container">
-		<h5>Attributes</h5>
-					
-<div class="symbol-detail" data-hotdoc-id="GtkRadioButtonClass.parent_class">
-	<div>
-		<i><em><code>RadioButtonClass.parent_class</code></em></i>
-		(<a title="Gtk.CheckButtonClass" href="GtkCheckButtonClass">Gtk.CheckButtonClass</a>)
-		–
-	</div>
-			<i>No description available</i>
-	</div>
-
-			</div>
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3>
-	Gtk.RadioButtonClass
-</h3>
-
-
-
-
-
-	<div class="members-container">
-		<h5>Attributes</h5>
-					
-<div class="symbol-detail" data-hotdoc-id="GtkRadioButtonClass.parent_class">
-	<div>
-		<i><em><code>RadioButtonClass.parent_class</code></em></i>
-		(<a title="Gtk.CheckButtonClass" href="GtkCheckButtonClass">Gtk.CheckButtonClass</a>)
-		–
-	</div>
-			<i>No description available</i>
-	</div>
-
-			</div>
-
-
-
-        </div>
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h2 data-hotdoc-id="GtkRadioButton">
-	<span><code>GtkRadioButton</code></span>
-</h2>
-
-
-<div class="hierarchy_container">
-	<div class="hierarchy_details">
-<pre>
-<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object">GObject</a>
-    <span class="lineart">╰──</span><a title="GInitiallyUnowned" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-javascript="GObject.InitiallyUnowned" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-python="GObject.InitiallyUnowned">GInitiallyUnowned</a>
-        <span class="lineart">╰──</span><a title="GtkWidget" href="gtkwidget-h.html#GtkWidget" data-gi-href-javascript="gtkwidget-h.html#GtkWidget" data-gi-title-javascript="Gtk.Widget" data-gi-href-python="gtkwidget-h.html#GtkWidget" data-gi-title-python="Gtk.Widget">GtkWidget</a>
-            <span class="lineart">╰──</span><a title="GtkContainer" href="gtkcontainer-h.html#GtkContainer" data-gi-href-javascript="gtkcontainer-h.html#GtkContainer" data-gi-title-javascript="Gtk.Container" data-gi-href-python="gtkcontainer-h.html#GtkContainer" data-gi-title-python="Gtk.Container">GtkContainer</a>
-                <span class="lineart">╰──</span><a title="GtkBin" href="gtkbin-h.html#GtkBin" data-gi-href-javascript="gtkbin-h.html#GtkBin" data-gi-title-javascript="Gtk.Bin" data-gi-href-python="gtkbin-h.html#GtkBin" data-gi-title-python="Gtk.Bin">GtkBin</a>
-                    <span class="lineart">╰──</span><a title="GtkButton" href="gtkbutton-h.html#GtkButton" data-gi-href-javascript="gtkbutton-h.html#GtkButton" data-gi-title-javascript="Gtk.Button" data-gi-href-python="gtkbutton-h.html#GtkButton" data-gi-title-python="Gtk.Button">GtkButton</a>
-                        <span class="lineart">╰──</span><a title="GtkToggleButton" href="gtktogglebutton-h.html#GtkToggleButton" data-gi-href-javascript="gtktogglebutton-h.html#GtkToggleButton" data-gi-title-javascript="Gtk.ToggleButton" data-gi-href-python="gtktogglebutton-h.html#GtkToggleButton" data-gi-title-python="Gtk.ToggleButton">GtkToggleButton</a>
-                            <span class="lineart">╰──</span><a title="GtkCheckButton" href="gtkcheckbutton-h.html#GtkCheckButton" data-gi-href-javascript="gtkcheckbutton-h.html#GtkCheckButton" data-gi-title-javascript="Gtk.CheckButton" data-gi-href-python="gtkcheckbutton-h.html#GtkCheckButton" data-gi-title-python="Gtk.CheckButton">GtkCheckButton</a>
-                                <span class="lineart">╰──</span>GtkRadioButton
-</pre>
-
-</div>
-
-</div>
-
-<div class="interfaces_container">
-	
-<p><b>Implemented interfaces:</b>
-    AtkImplementorIface, <a title="GtkActionable" href="gtkactionable-h.html#GtkActionable" data-gi-href-javascript="gtkactionable-h.html#GtkActionable" data-gi-title-javascript="Gtk.Actionable" data-gi-href-python="gtkactionable-h.html#GtkActionable" data-gi-title-python="Gtk.Actionable">GtkActionable</a>, <a title="GtkBuildable" href="gtkbuildable-h.html#GtkBuildable" data-gi-href-javascript="gtkbuildable-h.html#GtkBuildable" data-gi-title-javascript="Gtk.Buildable" data-gi-href-python="gtkbuildable-h.html#GtkBuildable" data-gi-title-python="Gtk.Buildable">GtkBuildable</a>
-</p>
-
-</div>
-
-
-
-
-	<div class="members-container">
-		<h3>Members</h3>
-					
-<div class="symbol-detail" data-hotdoc-id="GtkRadioButton.check_button">
-	<div>
-		<i><em><code>check_button</code></em></i>
-		(<a title="GtkCheckButton" href="gtkcheckbutton-h.html#GtkCheckButton" data-gi-href-javascript="gtkcheckbutton-h.html#GtkCheckButton" data-gi-title-javascript="Gtk.CheckButton" data-gi-href-python="gtkcheckbutton-h.html#GtkCheckButton" data-gi-title-python="Gtk.CheckButton">GtkCheckButton</a>)
-		–
-	</div>
-			<i>No description available</i>
-	</div>
-
-			</div>
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h2 data-hotdoc-id="GtkRadioButton">
-	<span><code>GtkRadioButton</code></span>
-</h2>
-
-
-<div class="hierarchy_container">
-	<div class="hierarchy_details">
-<pre>
-<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object">GObject</a>
-    <span class="lineart">╰──</span><a title="GInitiallyUnowned" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-javascript="GObject.InitiallyUnowned" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-python="GObject.InitiallyUnowned">GInitiallyUnowned</a>
-        <span class="lineart">╰──</span><a title="GtkWidget" href="gtkwidget-h.html#GtkWidget" data-gi-href-javascript="gtkwidget-h.html#GtkWidget" data-gi-title-javascript="Gtk.Widget" data-gi-href-python="gtkwidget-h.html#GtkWidget" data-gi-title-python="Gtk.Widget">GtkWidget</a>
-            <span class="lineart">╰──</span><a title="GtkContainer" href="gtkcontainer-h.html#GtkContainer" data-gi-href-javascript="gtkcontainer-h.html#GtkContainer" data-gi-title-javascript="Gtk.Container" data-gi-href-python="gtkcontainer-h.html#GtkContainer" data-gi-title-python="Gtk.Container">GtkContainer</a>
-                <span class="lineart">╰──</span><a title="GtkBin" href="gtkbin-h.html#GtkBin" data-gi-href-javascript="gtkbin-h.html#GtkBin" data-gi-title-javascript="Gtk.Bin" data-gi-href-python="gtkbin-h.html#GtkBin" data-gi-title-python="Gtk.Bin">GtkBin</a>
-                    <span class="lineart">╰──</span><a title="GtkButton" href="gtkbutton-h.html#GtkButton" data-gi-href-javascript="gtkbutton-h.html#GtkButton" data-gi-title-javascript="Gtk.Button" data-gi-href-python="gtkbutton-h.html#GtkButton" data-gi-title-python="Gtk.Button">GtkButton</a>
-                        <span class="lineart">╰──</span><a title="GtkToggleButton" href="gtktogglebutton-h.html#GtkToggleButton" data-gi-href-javascript="gtktogglebutton-h.html#GtkToggleButton" data-gi-title-javascript="Gtk.ToggleButton" data-gi-href-python="gtktogglebutton-h.html#GtkToggleButton" data-gi-title-python="Gtk.ToggleButton">GtkToggleButton</a>
-                            <span class="lineart">╰──</span><a title="GtkCheckButton" href="gtkcheckbutton-h.html#GtkCheckButton" data-gi-href-javascript="gtkcheckbutton-h.html#GtkCheckButton" data-gi-title-javascript="Gtk.CheckButton" data-gi-href-python="gtkcheckbutton-h.html#GtkCheckButton" data-gi-title-python="Gtk.CheckButton">GtkCheckButton</a>
-                                <span class="lineart">╰──</span>GtkRadioButton
-</pre>
-
-</div>
-
-</div>
-
-<div class="interfaces_container">
-	
-<p><b>Implemented interfaces:</b>
-    AtkImplementorIface, <a title="GtkActionable" href="gtkactionable-h.html#GtkActionable" data-gi-href-javascript="gtkactionable-h.html#GtkActionable" data-gi-title-javascript="Gtk.Actionable" data-gi-href-python="gtkactionable-h.html#GtkActionable" data-gi-title-python="Gtk.Actionable">GtkActionable</a>, <a title="GtkBuildable" href="gtkbuildable-h.html#GtkBuildable" data-gi-href-javascript="gtkbuildable-h.html#GtkBuildable" data-gi-title-javascript="Gtk.Buildable" data-gi-href-python="gtkbuildable-h.html#GtkBuildable" data-gi-title-python="Gtk.Buildable">GtkBuildable</a>
-</p>
-
-</div>
-
-
-
-
-	<div class="members-container">
-		<h3>Members</h3>
-					
-<div class="symbol-detail" data-hotdoc-id="GtkRadioButton.check_button">
-	<div>
-		<i><em><code>check_button</code></em></i>
-		(<a title="GtkCheckButton" href="gtkcheckbutton-h.html#GtkCheckButton" data-gi-href-javascript="gtkcheckbutton-h.html#GtkCheckButton" data-gi-title-javascript="Gtk.CheckButton" data-gi-href-python="gtkcheckbutton-h.html#GtkCheckButton" data-gi-title-python="Gtk.CheckButton">GtkCheckButton</a>)
-		–
-	</div>
-			<i>No description available</i>
-	</div>
-
-			</div>
 
 
 
@@ -444,78 +218,21 @@ can be used to determine if the button has been selected or deselected.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_radio_button_new">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h4 data-hotdoc-id="gtk_radio_button_new">
-	<span><code>gtk_radio_button_new</code></span>
+	<span><code>Gtk.RadioButton</code></span>
 </h4>
 
 
 
 
 <pre class="c-prototype">
-<a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> *
-gtk_radio_button_new (<a title="GSList" href="https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html#GSList">GSList</a> * group)</pre>
-
-<p>Creates a new <a href="gtkradiobutton-h.html#GtkRadioButton">GtkRadioButton</a>. To be of any practical value, a widget should
-then be packed into the radio button.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>group</code></em></i>
-					(
-						
-<span class="annotation">[<abbr title="Generic and defining element of containers and arrays"><span class="acronym">element-type</span></abbr> GtkRadioButton]</span>
-<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
-
-						)
-				–
-	</div>
-			<p>an existing
-radio button group, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> if you are creating a new group.</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-								–
-			</div>
-							<p>a new radio button</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_radio_button_new">
-	<span><code>Gtk.prototype.new</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.new(group: <a title="GLib.SList" href="https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html#GSList">GLib.SList</a>): {
-    // javascript wrapper for 'gtk_radio_button_new'
-}</pre>
+<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
+Gtk.RadioButton (<a title="GLib.SList" href="https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html#GSList">GLib.SList</a>)</pre>
 
 <p>Creates a new <a href="gtkradiobutton-h.html#GtkRadioButton">Gtk.RadioButton</a>. To be of any practical value, a widget should
 then be packed into the radio button.</p>
@@ -528,13 +245,10 @@ then be packed into the radio button.</p>
 <div class="symbol-detail">
 	<div>
 		<i><em><code>group</code></em></i>
-					(
-						<a title="GLib.SList" href="https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html#GSList">GLib.SList</a>
-						)
 				–
 	</div>
 			<p>an existing
-radio button group, or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a> if you are creating a new group.</p>
+radio button group, or <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/null">null</a> if you are creating a new group.</p>
 
 	</div>
 
@@ -544,65 +258,6 @@ radio button group, or <a href="https://developer.mozilla.org/en-US/docs/Web/Jav
 		<div class="symbol-detail">
 			<div>
 				<b>Returns</b>
-									(
-					<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-										)
-								–
-			</div>
-							<p>a new radio button</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_radio_button_new">
-	<span><code>Gtk.RadioButton.new</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.RadioButton.new (group):
-    #python wrapper for 'gtk_radio_button_new'</pre>
-
-<p>Creates a new <a href="gtkradiobutton-h.html#GtkRadioButton">Gtk.RadioButton</a>. To be of any practical value, a widget should
-then be packed into the radio button.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>group</code></em></i>
-					(
-						<a title="GLib.SList" href="https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html#GSList">GLib.SList</a>
-						)
-				–
-	</div>
-			<p>an existing
-radio button group, or <a href="https://docs.python.org/3/library/constants.html#None">None</a> if you are creating a new group.</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-										)
 								–
 			</div>
 							<p>a new radio button</p>
@@ -622,86 +277,24 @@ radio button group, or <a href="https://docs.python.org/3/library/constants.html
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_radio_button_new_from_widget">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h4 data-hotdoc-id="gtk_radio_button_new_from_widget">
-	<span><code>gtk_radio_button_new_from_widget</code></span>
+	<span><code>Gtk.RadioButton</code></span>
 </h4>
 
 
 
 
 <pre class="c-prototype">
-<a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> *
-gtk_radio_button_new_from_widget (<a title="GtkRadioButton" href="gtkradiobutton-h.html#GtkRadioButton">GtkRadioButton</a> * radio_group_member)</pre>
-
-<p>Creates a new <a href="gtkradiobutton-h.html#GtkRadioButton">GtkRadioButton</a>, adding it to the same group as
-<em>radio_group_member</em>. As with <a href="gtkradiobutton-h.html#gtk_radio_button_new">gtk_radio_button_new</a>, a widget
-should be packed into the radio button.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>radio_group_member</code></em></i>
-					(
-						
-<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
-
-						)
-				–
-	</div>
-			<p>an existing <a href="gtkradiobutton-h.html#GtkRadioButton">GtkRadioButton</a>.</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					
-										
-<span class="annotation">[<abbr title="Don't free data after the code is done"><span class="acronym">transfer: none</span></abbr>]</span>
-
-										)
-								–
-			</div>
-							<p>a new radio button.</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_radio_button_new_from_widget">
-	<span><code>Gtk.prototype.new_from_widget</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.new_from_widget(radio_group_member: <a title="Gtk.RadioButton" href="gtkradiobutton-h.html#GtkRadioButton">Gtk.RadioButton</a>): {
-    // javascript wrapper for 'gtk_radio_button_new_from_widget'
-}</pre>
+<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
+Gtk.RadioButton (<a title="Gtk.RadioButton" href="gtkradiobutton-h.html#GtkRadioButton">Gtk.RadioButton</a>)</pre>
 
 <p>Creates a new <a href="gtkradiobutton-h.html#GtkRadioButton">Gtk.RadioButton</a>, adding it to the same group as
-<em>radio_group_member</em>. As with <a href="gtkradiobutton-h.html#gtk_radio_button_new">Gtk.prototype.new</a>, a widget
+<em>radio_group_member</em>. As with <a href="gtkradiobutton-h.html#gtk_radio_button_new">Gtk.RadioButton</a>, a widget
 should be packed into the radio button.</p>
 
 
@@ -712,9 +305,6 @@ should be packed into the radio button.</p>
 <div class="symbol-detail">
 	<div>
 		<i><em><code>radio_group_member</code></em></i>
-					(
-						<a title="Gtk.RadioButton" href="gtkradiobutton-h.html#GtkRadioButton">Gtk.RadioButton</a>
-						)
 				–
 	</div>
 			<p>an existing <a href="gtkradiobutton-h.html#GtkRadioButton">Gtk.RadioButton</a>.</p>
@@ -727,65 +317,6 @@ should be packed into the radio button.</p>
 		<div class="symbol-detail">
 			<div>
 				<b>Returns</b>
-									(
-					<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-										)
-								–
-			</div>
-							<p>a new radio button.</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_radio_button_new_from_widget">
-	<span><code>Gtk.RadioButton.new_from_widget</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.RadioButton.new_from_widget (radio_group_member):
-    #python wrapper for 'gtk_radio_button_new_from_widget'</pre>
-
-<p>Creates a new <a href="gtkradiobutton-h.html#GtkRadioButton">Gtk.RadioButton</a>, adding it to the same group as
-<em>radio_group_member</em>. As with <a href="gtkradiobutton-h.html#gtk_radio_button_new">Gtk.RadioButton.new</a>, a widget
-should be packed into the radio button.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>radio_group_member</code></em></i>
-					(
-						<a title="Gtk.RadioButton" href="gtkradiobutton-h.html#GtkRadioButton">Gtk.RadioButton</a>
-						)
-				–
-	</div>
-			<p>an existing <a href="gtkradiobutton-h.html#GtkRadioButton">Gtk.RadioButton</a>.</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-										)
 								–
 			</div>
 							<p>a new radio button.</p>
@@ -805,88 +336,22 @@ should be packed into the radio button.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_radio_button_new_with_label">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h4 data-hotdoc-id="gtk_radio_button_new_with_label">
-	<span><code>gtk_radio_button_new_with_label</code></span>
+	<span><code>Gtk.RadioButton</code></span>
 </h4>
 
 
 
 
 <pre class="c-prototype">
-<a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> *
-gtk_radio_button_new_with_label (<a title="GSList" href="https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html#GSList">GSList</a> * group,
-                                 const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * label)</pre>
-
-<p>Creates a new <a href="gtkradiobutton-h.html#GtkRadioButton">GtkRadioButton</a> with a text label.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>group</code></em></i>
-					(
-						
-<span class="annotation">[<abbr title="Generic and defining element of containers and arrays"><span class="acronym">element-type</span></abbr> GtkRadioButton]</span>
-<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
-
-						)
-				–
-	</div>
-			<p>an existing
-radio button group, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> if you are creating a new group.</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>label</code></em></i>
-				–
-	</div>
-			<p>the text label to display next to the radio button.</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-								–
-			</div>
-							<p>a new radio button.</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_radio_button_new_with_label">
-	<span><code>Gtk.prototype.new_with_label</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.new_with_label(group: <a title="GLib.SList" href="https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html#GSList">GLib.SList</a>, label: <a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>): {
-    // javascript wrapper for 'gtk_radio_button_new_with_label'
-}</pre>
+<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
+Gtk.RadioButton (<a title="GLib.SList" href="https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html#GSList">GLib.SList</a>,
+                 <a title="string" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/string">string</a>)</pre>
 
 <p>Creates a new <a href="gtkradiobutton-h.html#GtkRadioButton">Gtk.RadioButton</a> with a text label.</p>
 
@@ -898,13 +363,10 @@ function Gtk.prototype.new_with_label(group: <a title="GLib.SList" href="https:/
 <div class="symbol-detail">
 	<div>
 		<i><em><code>group</code></em></i>
-					(
-						<a title="GLib.SList" href="https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html#GSList">GLib.SList</a>
-						)
 				–
 	</div>
 			<p>an existing
-radio button group, or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a> if you are creating a new group.</p>
+radio button group, or <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/null">null</a> if you are creating a new group.</p>
 
 	</div>
 
@@ -912,9 +374,6 @@ radio button group, or <a href="https://developer.mozilla.org/en-US/docs/Web/Jav
 <div class="symbol-detail">
 	<div>
 		<i><em><code>label</code></em></i>
-					(
-						<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
-						)
 				–
 	</div>
 			<p>the text label to display next to the radio button.</p>
@@ -927,77 +386,6 @@ radio button group, or <a href="https://developer.mozilla.org/en-US/docs/Web/Jav
 		<div class="symbol-detail">
 			<div>
 				<b>Returns</b>
-									(
-					<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-										)
-								–
-			</div>
-							<p>a new radio button.</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_radio_button_new_with_label">
-	<span><code>Gtk.RadioButton.new_with_label</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.RadioButton.new_with_label (group, label):
-    #python wrapper for 'gtk_radio_button_new_with_label'</pre>
-
-<p>Creates a new <a href="gtkradiobutton-h.html#GtkRadioButton">Gtk.RadioButton</a> with a text label.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>group</code></em></i>
-					(
-						<a title="GLib.SList" href="https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html#GSList">GLib.SList</a>
-						)
-				–
-	</div>
-			<p>an existing
-radio button group, or <a href="https://docs.python.org/3/library/constants.html#None">None</a> if you are creating a new group.</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>label</code></em></i>
-					(
-						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
-						)
-				–
-	</div>
-			<p>the text label to display next to the radio button.</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-										)
 								–
 			</div>
 							<p>a new radio button.</p>
@@ -1017,93 +405,22 @@ radio button group, or <a href="https://docs.python.org/3/library/constants.html
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_radio_button_new_with_label_from_widget">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h4 data-hotdoc-id="gtk_radio_button_new_with_label_from_widget">
-	<span><code>gtk_radio_button_new_with_label_from_widget</code></span>
+	<span><code>Gtk.RadioButton</code></span>
 </h4>
 
 
 
 
 <pre class="c-prototype">
-<a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> *
-gtk_radio_button_new_with_label_from_widget (<a title="GtkRadioButton" href="gtkradiobutton-h.html#GtkRadioButton">GtkRadioButton</a> * radio_group_member,
-                                             const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * label)</pre>
-
-<p>Creates a new <a href="gtkradiobutton-h.html#GtkRadioButton">GtkRadioButton</a> with a text label, adding it to
-the same group as <em>radio_group_member</em>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>radio_group_member</code></em></i>
-					(
-						
-<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
-
-						)
-				–
-	</div>
-			<p>widget to get radio group from or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>label</code></em></i>
-				–
-	</div>
-			<p>a text string to display next to the radio button.</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					
-										
-<span class="annotation">[<abbr title="Don't free data after the code is done"><span class="acronym">transfer: none</span></abbr>]</span>
-
-										)
-								–
-			</div>
-							<p>a new radio button.</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_radio_button_new_with_label_from_widget">
-	<span><code>Gtk.prototype.new_with_label_from_widget</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.new_with_label_from_widget(radio_group_member: <a title="Gtk.RadioButton" href="gtkradiobutton-h.html#GtkRadioButton">Gtk.RadioButton</a>, label: <a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>): {
-    // javascript wrapper for 'gtk_radio_button_new_with_label_from_widget'
-}</pre>
+<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
+Gtk.RadioButton (<a title="Gtk.RadioButton" href="gtkradiobutton-h.html#GtkRadioButton">Gtk.RadioButton</a>,
+                 <a title="string" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/string">string</a>)</pre>
 
 <p>Creates a new <a href="gtkradiobutton-h.html#GtkRadioButton">Gtk.RadioButton</a> with a text label, adding it to
 the same group as <em>radio_group_member</em>.</p>
@@ -1116,12 +433,9 @@ the same group as <em>radio_group_member</em>.</p>
 <div class="symbol-detail">
 	<div>
 		<i><em><code>radio_group_member</code></em></i>
-					(
-						<a title="Gtk.RadioButton" href="gtkradiobutton-h.html#GtkRadioButton">Gtk.RadioButton</a>
-						)
 				–
 	</div>
-			<p>widget to get radio group from or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></p>
+			<p>widget to get radio group from or <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/null">null</a></p>
 
 	</div>
 
@@ -1129,9 +443,6 @@ the same group as <em>radio_group_member</em>.</p>
 <div class="symbol-detail">
 	<div>
 		<i><em><code>label</code></em></i>
-					(
-						<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
-						)
 				–
 	</div>
 			<p>a text string to display next to the radio button.</p>
@@ -1144,77 +455,6 @@ the same group as <em>radio_group_member</em>.</p>
 		<div class="symbol-detail">
 			<div>
 				<b>Returns</b>
-									(
-					<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-										)
-								–
-			</div>
-							<p>a new radio button.</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_radio_button_new_with_label_from_widget">
-	<span><code>Gtk.RadioButton.new_with_label_from_widget</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.RadioButton.new_with_label_from_widget (radio_group_member, label):
-    #python wrapper for 'gtk_radio_button_new_with_label_from_widget'</pre>
-
-<p>Creates a new <a href="gtkradiobutton-h.html#GtkRadioButton">Gtk.RadioButton</a> with a text label, adding it to
-the same group as <em>radio_group_member</em>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>radio_group_member</code></em></i>
-					(
-						<a title="Gtk.RadioButton" href="gtkradiobutton-h.html#GtkRadioButton">Gtk.RadioButton</a>
-						)
-				–
-	</div>
-			<p>widget to get radio group from or <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>label</code></em></i>
-					(
-						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
-						)
-				–
-	</div>
-			<p>a text string to display next to the radio button.</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-										)
 								–
 			</div>
 							<p>a new radio button.</p>
@@ -1234,96 +474,26 @@ the same group as <em>radio_group_member</em>.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_radio_button_new_with_mnemonic">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h4 data-hotdoc-id="gtk_radio_button_new_with_mnemonic">
-	<span><code>gtk_radio_button_new_with_mnemonic</code></span>
+	<span><code>Gtk.RadioButton</code></span>
 </h4>
 
 
 
 
 <pre class="c-prototype">
-<a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> *
-gtk_radio_button_new_with_mnemonic (<a title="GSList" href="https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html#GSList">GSList</a> * group,
-                                    const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * label)</pre>
-
-<p>Creates a new <a href="gtkradiobutton-h.html#GtkRadioButton">GtkRadioButton</a> containing a label, adding it to the same
-group as <em>group</em>. The label will be created using
-<a href="gtklabel-h.html#gtk_label_new_with_mnemonic">gtk_label_new_with_mnemonic</a>, so underscores in <em>label</em> indicate the
-mnemonic for the button.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>group</code></em></i>
-					(
-						
-<span class="annotation">[<abbr title="Generic and defining element of containers and arrays"><span class="acronym">element-type</span></abbr> GtkRadioButton]</span>
-<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
-
-						)
-				–
-	</div>
-			<p>the radio button
-group, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>label</code></em></i>
-				–
-	</div>
-			<p>the text of the button, with an underscore in front of the
-mnemonic character</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-								–
-			</div>
-							<p>a new <a href="gtkradiobutton-h.html#GtkRadioButton">GtkRadioButton</a></p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_radio_button_new_with_mnemonic">
-	<span><code>Gtk.prototype.new_with_mnemonic</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.new_with_mnemonic(group: <a title="GLib.SList" href="https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html#GSList">GLib.SList</a>, label: <a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>): {
-    // javascript wrapper for 'gtk_radio_button_new_with_mnemonic'
-}</pre>
+<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
+Gtk.RadioButton (<a title="GLib.SList" href="https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html#GSList">GLib.SList</a>,
+                 <a title="string" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/string">string</a>)</pre>
 
 <p>Creates a new <a href="gtkradiobutton-h.html#GtkRadioButton">Gtk.RadioButton</a> containing a label, adding it to the same
 group as <em>group</em>. The label will be created using
-<a href="gtklabel-h.html#gtk_label_new_with_mnemonic">Gtk.prototype.new_with_mnemonic</a>, so underscores in <em>label</em> indicate the
+<a href="gtklabel-h.html#gtk_label_new_with_mnemonic">Gtk.Label</a>, so underscores in <em>label</em> indicate the
 mnemonic for the button.</p>
 
 
@@ -1334,13 +504,10 @@ mnemonic for the button.</p>
 <div class="symbol-detail">
 	<div>
 		<i><em><code>group</code></em></i>
-					(
-						<a title="GLib.SList" href="https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html#GSList">GLib.SList</a>
-						)
 				–
 	</div>
 			<p>the radio button
-group, or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></p>
+group, or <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/null">null</a></p>
 
 	</div>
 
@@ -1348,9 +515,6 @@ group, or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refer
 <div class="symbol-detail">
 	<div>
 		<i><em><code>label</code></em></i>
-					(
-						<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
-						)
 				–
 	</div>
 			<p>the text of the button, with an underscore in front of the
@@ -1364,81 +528,6 @@ mnemonic character</p>
 		<div class="symbol-detail">
 			<div>
 				<b>Returns</b>
-									(
-					<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-										)
-								–
-			</div>
-							<p>a new <a href="gtkradiobutton-h.html#GtkRadioButton">Gtk.RadioButton</a></p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_radio_button_new_with_mnemonic">
-	<span><code>Gtk.RadioButton.new_with_mnemonic</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.RadioButton.new_with_mnemonic (group, label):
-    #python wrapper for 'gtk_radio_button_new_with_mnemonic'</pre>
-
-<p>Creates a new <a href="gtkradiobutton-h.html#GtkRadioButton">Gtk.RadioButton</a> containing a label, adding it to the same
-group as <em>group</em>. The label will be created using
-<a href="gtklabel-h.html#gtk_label_new_with_mnemonic">Gtk.Label.new_with_mnemonic</a>, so underscores in <em>label</em> indicate the
-mnemonic for the button.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>group</code></em></i>
-					(
-						<a title="GLib.SList" href="https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html#GSList">GLib.SList</a>
-						)
-				–
-	</div>
-			<p>the radio button
-group, or <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>label</code></em></i>
-					(
-						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
-						)
-				–
-	</div>
-			<p>the text of the button, with an underscore in front of the
-mnemonic character</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-										)
 								–
 			</div>
 							<p>a new <a href="gtkradiobutton-h.html#GtkRadioButton">Gtk.RadioButton</a></p>
@@ -1458,98 +547,25 @@ mnemonic character</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_radio_button_new_with_mnemonic_from_widget">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h4 data-hotdoc-id="gtk_radio_button_new_with_mnemonic_from_widget">
-	<span><code>gtk_radio_button_new_with_mnemonic_from_widget</code></span>
+	<span><code>Gtk.RadioButton</code></span>
 </h4>
 
 
 
 
 <pre class="c-prototype">
-<a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> *
-gtk_radio_button_new_with_mnemonic_from_widget (<a title="GtkRadioButton" href="gtkradiobutton-h.html#GtkRadioButton">GtkRadioButton</a> * radio_group_member,
-                                                const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * label)</pre>
-
-<p>Creates a new <a href="gtkradiobutton-h.html#GtkRadioButton">GtkRadioButton</a> containing a label. The label
-will be created using <a href="gtklabel-h.html#gtk_label_new_with_mnemonic">gtk_label_new_with_mnemonic</a>, so underscores
-in <em>label</em> indicate the mnemonic for the button.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>radio_group_member</code></em></i>
-					(
-						
-<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
-
-						)
-				–
-	</div>
-			<p>widget to get radio group from or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>label</code></em></i>
-				–
-	</div>
-			<p>the text of the button, with an underscore in front of the
-mnemonic character</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					
-										
-<span class="annotation">[<abbr title="Don't free data after the code is done"><span class="acronym">transfer: none</span></abbr>]</span>
-
-										)
-								–
-			</div>
-							<p>a new <a href="gtkradiobutton-h.html#GtkRadioButton">GtkRadioButton</a></p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_radio_button_new_with_mnemonic_from_widget">
-	<span><code>Gtk.prototype.new_with_mnemonic_from_widget</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.new_with_mnemonic_from_widget(radio_group_member: <a title="Gtk.RadioButton" href="gtkradiobutton-h.html#GtkRadioButton">Gtk.RadioButton</a>, label: <a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>): {
-    // javascript wrapper for 'gtk_radio_button_new_with_mnemonic_from_widget'
-}</pre>
+<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
+Gtk.RadioButton (<a title="Gtk.RadioButton" href="gtkradiobutton-h.html#GtkRadioButton">Gtk.RadioButton</a>,
+                 <a title="string" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/string">string</a>)</pre>
 
 <p>Creates a new <a href="gtkradiobutton-h.html#GtkRadioButton">Gtk.RadioButton</a> containing a label. The label
-will be created using <a href="gtklabel-h.html#gtk_label_new_with_mnemonic">Gtk.prototype.new_with_mnemonic</a>, so underscores
+will be created using <a href="gtklabel-h.html#gtk_label_new_with_mnemonic">Gtk.Label</a>, so underscores
 in <em>label</em> indicate the mnemonic for the button.</p>
 
 
@@ -1560,12 +576,9 @@ in <em>label</em> indicate the mnemonic for the button.</p>
 <div class="symbol-detail">
 	<div>
 		<i><em><code>radio_group_member</code></em></i>
-					(
-						<a title="Gtk.RadioButton" href="gtkradiobutton-h.html#GtkRadioButton">Gtk.RadioButton</a>
-						)
 				–
 	</div>
-			<p>widget to get radio group from or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></p>
+			<p>widget to get radio group from or <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/null">null</a></p>
 
 	</div>
 
@@ -1573,9 +586,6 @@ in <em>label</em> indicate the mnemonic for the button.</p>
 <div class="symbol-detail">
 	<div>
 		<i><em><code>label</code></em></i>
-					(
-						<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
-						)
 				–
 	</div>
 			<p>the text of the button, with an underscore in front of the
@@ -1589,79 +599,6 @@ mnemonic character</p>
 		<div class="symbol-detail">
 			<div>
 				<b>Returns</b>
-									(
-					<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-										)
-								–
-			</div>
-							<p>a new <a href="gtkradiobutton-h.html#GtkRadioButton">Gtk.RadioButton</a></p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_radio_button_new_with_mnemonic_from_widget">
-	<span><code>Gtk.RadioButton.new_with_mnemonic_from_widget</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.RadioButton.new_with_mnemonic_from_widget (radio_group_member, label):
-    #python wrapper for 'gtk_radio_button_new_with_mnemonic_from_widget'</pre>
-
-<p>Creates a new <a href="gtkradiobutton-h.html#GtkRadioButton">Gtk.RadioButton</a> containing a label. The label
-will be created using <a href="gtklabel-h.html#gtk_label_new_with_mnemonic">Gtk.Label.new_with_mnemonic</a>, so underscores
-in <em>label</em> indicate the mnemonic for the button.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>radio_group_member</code></em></i>
-					(
-						<a title="Gtk.RadioButton" href="gtkradiobutton-h.html#GtkRadioButton">Gtk.RadioButton</a>
-						)
-				–
-	</div>
-			<p>widget to get radio group from or <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>label</code></em></i>
-					(
-						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
-						)
-				–
-	</div>
-			<p>the text of the button, with an underscore in front of the
-mnemonic character</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-										)
 								–
 			</div>
 							<p>a new <a href="gtkradiobutton-h.html#GtkRadioButton">Gtk.RadioButton</a></p>
@@ -1683,180 +620,6 @@ mnemonic character</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_radio_button_set_group">
 	
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_radio_button_set_group">
-	<span><code>gtk_radio_button_set_group</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-gtk_radio_button_set_group (<a title="GtkRadioButton" href="gtkradiobutton-h.html#GtkRadioButton">GtkRadioButton</a> * radio_button,
-                            <a title="GSList" href="https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html#GSList">GSList</a> * group)</pre>
-
-<p>Sets a <a href="gtkradiobutton-h.html#GtkRadioButton">GtkRadioButton</a>’s group. It should be noted that this does not change
-the layout of your interface in any way, so if you are changing the group,
-it is likely you will need to re-arrange the user interface to reflect these
-changes.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>radio_button</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkradiobutton-h.html#GtkRadioButton">GtkRadioButton</a>.</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>group</code></em></i>
-					(
-						
-<span class="annotation">[<abbr title="Generic and defining element of containers and arrays"><span class="acronym">element-type</span></abbr> GtkRadioButton]</span>
-<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
-
-						)
-				–
-	</div>
-			<p>an existing radio
-button group, such as one returned from <a href="gtkradiobutton-h.html#gtk_radio_button_get_group">gtk_radio_button_get_group</a>, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a>.</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_radio_button_set_group">
-	<span><code>Gtk.prototype.set_group</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.set_group(group: <a title="GLib.SList" href="https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html#GSList">GLib.SList</a>): {
-    // javascript wrapper for 'gtk_radio_button_set_group'
-}</pre>
-
-<p>Sets a <a href="gtkradiobutton-h.html#GtkRadioButton">Gtk.RadioButton</a>’s group. It should be noted that this does not change
-the layout of your interface in any way, so if you are changing the group,
-it is likely you will need to re-arrange the user interface to reflect these
-changes.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>radio_button</code></em></i>
-					(
-						<a title="Gtk.RadioButton" href="gtkradiobutton-h.html#GtkRadioButton">Gtk.RadioButton</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkradiobutton-h.html#GtkRadioButton">Gtk.RadioButton</a>.</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>group</code></em></i>
-					(
-						<a title="GLib.SList" href="https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html#GSList">GLib.SList</a>
-						)
-				–
-	</div>
-			<p>an existing radio
-button group, such as one returned from <a href="gtkradiobutton-h.html#gtk_radio_button_get_group">Gtk.prototype.get_group</a>, or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a>.</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_radio_button_set_group">
-	<span><code>Gtk.RadioButton.set_group</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.RadioButton.set_group (self, group):
-    #python wrapper for 'gtk_radio_button_set_group'</pre>
-
-<p>Sets a <a href="gtkradiobutton-h.html#GtkRadioButton">Gtk.RadioButton</a>’s group. It should be noted that this does not change
-the layout of your interface in any way, so if you are changing the group,
-it is likely you will need to re-arrange the user interface to reflect these
-changes.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>radio_button</code></em></i>
-					(
-						<a title="Gtk.RadioButton" href="gtkradiobutton-h.html#GtkRadioButton">Gtk.RadioButton</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkradiobutton-h.html#GtkRadioButton">Gtk.RadioButton</a>.</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>group</code></em></i>
-					(
-						<a title="GLib.SList" href="https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html#GSList">GLib.SList</a>
-						)
-				–
-	</div>
-			<p>an existing radio
-button group, such as one returned from <a href="gtkradiobutton-h.html#gtk_radio_button_get_group">Gtk.RadioButton.get_group</a>, or <a href="https://docs.python.org/3/library/constants.html#None">None</a>.</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
 
 </div>
 
@@ -1864,181 +627,6 @@ button group, such as one returned from <a href="gtkradiobutton-h.html#gtk_radio
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_radio_button_get_group">
 	
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_radio_button_get_group">
-	<span><code>gtk_radio_button_get_group</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-<a title="GSList" href="https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html#GSList">GSList</a> *
-gtk_radio_button_get_group (<a title="GtkRadioButton" href="gtkradiobutton-h.html#GtkRadioButton">GtkRadioButton</a> * radio_button)</pre>
-
-<p>Retrieves the group assigned to a radio button.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>radio_button</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkradiobutton-h.html#GtkRadioButton">GtkRadioButton</a>.</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					
-										
-<span class="annotation">[<abbr title="Generic and defining element of containers and arrays"><span class="acronym">element-type</span></abbr> GtkRadioButton]</span>
-<span class="annotation">[<abbr title="Don't free data after the code is done"><span class="acronym">transfer: none</span></abbr>]</span>
-
-										)
-								–
-			</div>
-							<p>a linked list
-containing all the radio buttons in the same group
-as <em>radio_button</em>. The returned list is owned by the radio button
-and must not be modified or freed.</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_radio_button_get_group">
-	<span><code>Gtk.prototype.get_group</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.get_group(): {
-    // javascript wrapper for 'gtk_radio_button_get_group'
-}</pre>
-
-<p>Retrieves the group assigned to a radio button.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>radio_button</code></em></i>
-					(
-						<a title="Gtk.RadioButton" href="gtkradiobutton-h.html#GtkRadioButton">Gtk.RadioButton</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkradiobutton-h.html#GtkRadioButton">Gtk.RadioButton</a>.</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="GLib.SList" href="https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html#GSList">GLib.SList</a>
-										)
-								–
-			</div>
-							<p>a linked list
-containing all the radio buttons in the same group
-as <em>radio_button</em>. The returned list is owned by the radio button
-and must not be modified or freed.</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_radio_button_get_group">
-	<span><code>Gtk.RadioButton.get_group</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.RadioButton.get_group (self):
-    #python wrapper for 'gtk_radio_button_get_group'</pre>
-
-<p>Retrieves the group assigned to a radio button.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>radio_button</code></em></i>
-					(
-						<a title="Gtk.RadioButton" href="gtkradiobutton-h.html#GtkRadioButton">Gtk.RadioButton</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkradiobutton-h.html#GtkRadioButton">Gtk.RadioButton</a>.</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="GLib.SList" href="https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html#GSList">GLib.SList</a>
-										)
-								–
-			</div>
-							<p>a linked list
-containing all the radio buttons in the same group
-as <em>radio_button</em>. The returned list is owned by the radio button
-and must not be modified or freed.</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
 
 </div>
 
@@ -2046,96 +634,24 @@ and must not be modified or freed.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_radio_button_join_group">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h4 data-hotdoc-id="gtk_radio_button_join_group">
-	<span><code>gtk_radio_button_join_group</code></span>
+	<span><code>Gtk.RadioButton.JoinGroup</code></span>
 </h4>
 
 
 
 
 <pre class="c-prototype">
-gtk_radio_button_join_group (<a title="GtkRadioButton" href="gtkradiobutton-h.html#GtkRadioButton">GtkRadioButton</a> * radio_button,
-                             <a title="GtkRadioButton" href="gtkradiobutton-h.html#GtkRadioButton">GtkRadioButton</a> * group_source)</pre>
-
-<p>Joins a <a href="gtkradiobutton-h.html#GtkRadioButton">GtkRadioButton</a> object to the group of another <a href="gtkradiobutton-h.html#GtkRadioButton">GtkRadioButton</a> object</p>
-<p>Use this in language bindings instead of the <a href="gtkradiobutton-h.html#gtk_radio_button_get_group">gtk_radio_button_get_group</a>
-and <a href="gtkradiobutton-h.html#gtk_radio_button_set_group">gtk_radio_button_set_group</a> methods</p>
-<p>A common way to set up a group of radio buttons is the following:</p>
-<pre><code class="language-[&lt;!--">   GtkRadioButton *radio_button;
-   GtkRadioButton *last_button;
-
-   while ( ...more buttons to add... )
-     {
-        radio_button = gtk_radio_button_new (...);
-
-        gtk_radio_button_join_group (radio_button, last_button);
-        last_button = radio_button;
-     }
-</code></pre>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>radio_button</code></em></i>
-				–
-	</div>
-			<p>the <a href="gtkradiobutton-h.html#GtkRadioButton">GtkRadioButton</a> object</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>group_source</code></em></i>
-					(
-						
-<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
-
-						)
-				–
-	</div>
-			<p>a radio button object whos group we are
-joining, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> to remove the radio button from its group</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.0
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_radio_button_join_group">
-	<span><code>Gtk.prototype.join_group</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.join_group(group_source: <a title="Gtk.RadioButton" href="gtkradiobutton-h.html#GtkRadioButton">Gtk.RadioButton</a>): {
-    // javascript wrapper for 'gtk_radio_button_join_group'
-}</pre>
+Gtk.RadioButton.JoinGroup (<a title="Gtk.RadioButton" href="gtkradiobutton-h.html#GtkRadioButton">Gtk.RadioButton</a>)</pre>
 
 <p>Joins a <a href="gtkradiobutton-h.html#GtkRadioButton">Gtk.RadioButton</a> object to the group of another <a href="gtkradiobutton-h.html#GtkRadioButton">Gtk.RadioButton</a> object</p>
-<p>Use this in language bindings instead of the <a href="gtkradiobutton-h.html#gtk_radio_button_get_group">Gtk.prototype.get_group</a>
-and <a href="gtkradiobutton-h.html#gtk_radio_button_set_group">Gtk.prototype.set_group</a> methods</p>
+<p>Use this in language bindings instead of the <a href="gtkradiobutton-h.html#gtk_radio_button_get_group">Gtk.RadioButton.GetGroup</a>
+and <a href="gtkradiobutton-h.html#gtk_radio_button_set_group">Gtk.RadioButton.SetGroup</a> methods</p>
 <p>A common way to set up a group of radio buttons is the following:</p>
 <pre><code class="language-[&lt;!--">   GtkRadioButton *radio_button;
    GtkRadioButton *last_button;
@@ -2156,98 +672,11 @@ and <a href="gtkradiobutton-h.html#gtk_radio_button_set_group">Gtk.prototype.set
 					
 <div class="symbol-detail">
 	<div>
-		<i><em><code>radio_button</code></em></i>
-					(
-						<a title="Gtk.RadioButton" href="gtkradiobutton-h.html#GtkRadioButton">Gtk.RadioButton</a>
-						)
-				–
-	</div>
-			<p>the <a href="gtkradiobutton-h.html#GtkRadioButton">Gtk.RadioButton</a> object</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
 		<i><em><code>group_source</code></em></i>
-					(
-						<a title="Gtk.RadioButton" href="gtkradiobutton-h.html#GtkRadioButton">Gtk.RadioButton</a>
-						)
 				–
 	</div>
 			<p>a radio button object whos group we are
-joining, or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a> to remove the radio button from its group</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.0
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_radio_button_join_group">
-	<span><code>Gtk.RadioButton.join_group</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.RadioButton.join_group (self, group_source):
-    #python wrapper for 'gtk_radio_button_join_group'</pre>
-
-<p>Joins a <a href="gtkradiobutton-h.html#GtkRadioButton">Gtk.RadioButton</a> object to the group of another <a href="gtkradiobutton-h.html#GtkRadioButton">Gtk.RadioButton</a> object</p>
-<p>Use this in language bindings instead of the <a href="gtkradiobutton-h.html#gtk_radio_button_get_group">Gtk.RadioButton.get_group</a>
-and <a href="gtkradiobutton-h.html#gtk_radio_button_set_group">Gtk.RadioButton.set_group</a> methods</p>
-<p>A common way to set up a group of radio buttons is the following:</p>
-<pre><code class="language-[&lt;!--">   GtkRadioButton *radio_button;
-   GtkRadioButton *last_button;
-
-   while ( ...more buttons to add... )
-     {
-        radio_button = gtk_radio_button_new (...);
-
-        gtk_radio_button_join_group (radio_button, last_button);
-        last_button = radio_button;
-     }
-</code></pre>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>radio_button</code></em></i>
-					(
-						<a title="Gtk.RadioButton" href="gtkradiobutton-h.html#GtkRadioButton">Gtk.RadioButton</a>
-						)
-				–
-	</div>
-			<p>the <a href="gtkradiobutton-h.html#GtkRadioButton">Gtk.RadioButton</a> object</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>group_source</code></em></i>
-					(
-						<a title="Gtk.RadioButton" href="gtkradiobutton-h.html#GtkRadioButton">Gtk.RadioButton</a>
-						)
-				–
-	</div>
-			<p>a radio button object whos group we are
-joining, or <a href="https://docs.python.org/3/library/constants.html#None">None</a> to remove the radio button from its group</p>
+joining, or <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/null">null</a> to remove the radio button from its group</p>
 
 	</div>
 

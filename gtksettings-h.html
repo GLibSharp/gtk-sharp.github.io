@@ -89,7 +89,7 @@ $('body').removeClass('no-script');
 </nav>
 
 <main>
-<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="gtksettings-h.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['c', 'javascript', 'python']" data-hotdoc-meta-gi-language="c">
+<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="gtksettings-h.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['csharp']" data-hotdoc-meta-gi-language="c">
 <script src="assets/js/utils.js"></script>
 
 <div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
@@ -111,7 +111,7 @@ an Xsettings manager, GTK+ reads default values for settings from
 <code>settings.ini</code> files in
 <code>/etc/gtk-4.0</code>, <code>$XDG_CONFIG_DIRS/gtk-4.0</code>
 and <code>$XDG_CONFIG_HOME/gtk-4.0</code>.
-These files must be valid key files (see <a href="https://developer.gnome.org/glib/unstable/glib-Key-value-file-parser.html#GKeyFile" data-gi-href-javascript="https://developer.gnome.org/glib/unstable/glib-Key-value-file-parser.html#GKeyFile" data-gi-title-javascript="GLib.KeyFile" data-gi-href-python="https://developer.gnome.org/glib/unstable/glib-Key-value-file-parser.html#GKeyFile" data-gi-title-python="GLib.KeyFile">GKeyFile</a>), and have
+These files must be valid key files (see <a href="https://developer.gnome.org/glib/unstable/glib-Key-value-file-parser.html#GKeyFile" data-gi-href-csharp="https://developer.gnome.org/glib/unstable/glib-Key-value-file-parser.html#GKeyFile" data-gi-title-csharp="GLib.KeyFile">GKeyFile</a>), and have
 a section called Settings. Themes can also provide default values
 for settings by installing a <code>settings.ini</code> file
 next to their <code>gtk.css</code> file.</p>
@@ -130,8 +130,8 @@ demonstrates a way to do this:</p>
    g_object_set (gtk_settings_get_default (), "gtk-enable-animations", FALSE, NULL);
 </code></pre>
 <p>There is one GtkSettings instance per screen. It can be obtained with
-<a href="gtksettings-h.html#gtk_settings_get_for_screen" data-gi-href-javascript="gtksettings-h.html#gtk_settings_get_for_screen" data-gi-title-javascript="Gtk.prototype.get_for_screen" data-gi-href-python="gtksettings-h.html#gtk_settings_get_for_screen" data-gi-title-python="Gtk.Settings.get_for_screen">gtk_settings_get_for_screen</a>, but in many cases, it is more convenient
-to use <a href="gtkwidget-h.html#gtk_widget_get_settings" data-gi-href-javascript="gtkwidget-h.html#gtk_widget_get_settings" data-gi-title-javascript="Gtk.prototype.get_settings" data-gi-href-python="gtkwidget-h.html#gtk_widget_get_settings" data-gi-title-python="Gtk.Widget.get_settings">gtk_widget_get_settings</a>. <a href="gtksettings-h.html#gtk_settings_get_default" data-gi-href-javascript="gtksettings-h.html#gtk_settings_get_default" data-gi-title-javascript="Gtk.prototype.get_default" data-gi-href-python="gtksettings-h.html#gtk_settings_get_default" data-gi-title-python="Gtk.Settings.get_default">gtk_settings_get_default</a> returns the
+<a href="gtksettings-h.html#gtk_settings_get_for_screen" data-gi-href-csharp="gtksettings-h.html#gtk_settings_get_for_screen" data-gi-title-csharp="Gtk.Settings.GetForScreen">gtk_settings_get_for_screen</a>, but in many cases, it is more convenient
+to use <a href="gtkwidget-h.html#gtk_widget_get_settings" data-gi-href-csharp="gtkwidget-h.html#gtk_widget_get_settings" data-gi-title-csharp="Gtk.Widget.GetSettings">gtk_widget_get_settings</a>. <a href="gtksettings-h.html#gtk_settings_get_default" data-gi-href-csharp="gtksettings-h.html#gtk_settings_get_default" data-gi-title-csharp="Gtk.Settings.GetDefault">gtk_settings_get_default</a> returns the
 GtkSettings instance for the default screen.</p>
 
     </div>
@@ -141,7 +141,7 @@ GtkSettings instance for the default screen.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="GtkSettings">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
@@ -154,7 +154,7 @@ GtkSettings instance for the default screen.</p>
 <div class="hierarchy_container">
 	<div class="hierarchy_details">
 <pre>
-<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object">GObject</a>
+<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-csharp="http://docs.go-mono.com/?link=T%3aGLib.Object" data-gi-title-csharp="GLib.Object">GObject</a>
     <span class="lineart">╰──</span>GtkSettings
 </pre>
 
@@ -162,219 +162,7 @@ GtkSettings instance for the default screen.</p>
 
 </div>
 
-<div class="interfaces_container">
-	
-<p><b>Implemented interfaces:</b>
-    <a title="GtkStyleProvider" href="gtkstyleprovider-h.html#GtkStyleProvider" data-gi-href-javascript="gtkstyleprovider-h.html#GtkStyleProvider" data-gi-title-javascript="Gtk.StyleProvider" data-gi-href-python="gtkstyleprovider-h.html#GtkStyleProvider" data-gi-title-python="Gtk.StyleProvider">GtkStyleProvider</a>
-</p>
 
-</div>
-
-
-
-
-	<div class="members-container">
-		<h3>Members</h3>
-					
-<div class="symbol-detail" data-hotdoc-id="GtkSettings.parent_instance">
-	<div>
-		<i><em><code>parent_instance</code></em></i>
-		(<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object">GObject</a>)
-		–
-	</div>
-			<i>No description available</i>
-	</div>
-
-			</div>
-
-
-<h3>Class structure</h3>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="GtkSettingsClass">
-	<span><code>GtkSettingsClass</code></span>
-</h4>
-
-
-
-
-
-	<div class="members-container">
-		<h5>Fields</h5>
-					
-<div class="symbol-detail" data-hotdoc-id="GtkSettingsClass.parent_class">
-	<div>
-		<i><em><code>parent_class</code></em></i>
-		(<a title="GObjectClass" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObjectClass">GObjectClass</a>)
-		–
-	</div>
-			<i>No description available</i>
-	</div>
-
-			</div>
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h3>
-	Gtk.SettingsClass
-</h3>
-
-
-
-
-
-	<div class="members-container">
-		<h5>Attributes</h5>
-					
-<div class="symbol-detail" data-hotdoc-id="GtkSettingsClass.parent_class">
-	<div>
-		<i><em><code>SettingsClass.parent_class</code></em></i>
-		(<a title="GObject.ObjectClass" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObjectClass">GObject.ObjectClass</a>)
-		–
-	</div>
-			<i>No description available</i>
-	</div>
-
-			</div>
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3>
-	Gtk.SettingsClass
-</h3>
-
-
-
-
-
-	<div class="members-container">
-		<h5>Attributes</h5>
-					
-<div class="symbol-detail" data-hotdoc-id="GtkSettingsClass.parent_class">
-	<div>
-		<i><em><code>SettingsClass.parent_class</code></em></i>
-		(<a title="GObject.ObjectClass" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObjectClass">GObject.ObjectClass</a>)
-		–
-	</div>
-			<i>No description available</i>
-	</div>
-
-			</div>
-
-
-
-        </div>
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h2 data-hotdoc-id="GtkSettings">
-	<span><code>GtkSettings</code></span>
-</h2>
-
-
-<div class="hierarchy_container">
-	<div class="hierarchy_details">
-<pre>
-<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object">GObject</a>
-    <span class="lineart">╰──</span>GtkSettings
-</pre>
-
-</div>
-
-</div>
-
-<div class="interfaces_container">
-	
-<p><b>Implemented interfaces:</b>
-    <a title="GtkStyleProvider" href="gtkstyleprovider-h.html#GtkStyleProvider" data-gi-href-javascript="gtkstyleprovider-h.html#GtkStyleProvider" data-gi-title-javascript="Gtk.StyleProvider" data-gi-href-python="gtkstyleprovider-h.html#GtkStyleProvider" data-gi-title-python="Gtk.StyleProvider">GtkStyleProvider</a>
-</p>
-
-</div>
-
-
-
-
-	<div class="members-container">
-		<h3>Members</h3>
-					
-<div class="symbol-detail" data-hotdoc-id="GtkSettings.parent_instance">
-	<div>
-		<i><em><code>parent_instance</code></em></i>
-		(<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object">GObject</a>)
-		–
-	</div>
-			<i>No description available</i>
-	</div>
-
-			</div>
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h2 data-hotdoc-id="GtkSettings">
-	<span><code>GtkSettings</code></span>
-</h2>
-
-
-<div class="hierarchy_container">
-	<div class="hierarchy_details">
-<pre>
-<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object">GObject</a>
-    <span class="lineart">╰──</span>GtkSettings
-</pre>
-
-</div>
-
-</div>
-
-<div class="interfaces_container">
-	
-<p><b>Implemented interfaces:</b>
-    <a title="GtkStyleProvider" href="gtkstyleprovider-h.html#GtkStyleProvider" data-gi-href-javascript="gtkstyleprovider-h.html#GtkStyleProvider" data-gi-title-javascript="Gtk.StyleProvider" data-gi-href-python="gtkstyleprovider-h.html#GtkStyleProvider" data-gi-title-python="Gtk.StyleProvider">GtkStyleProvider</a>
-</p>
-
-</div>
-
-
-
-
-	<div class="members-container">
-		<h3>Members</h3>
-					
-<div class="symbol-detail" data-hotdoc-id="GtkSettings.parent_instance">
-	<div>
-		<i><em><code>parent_instance</code></em></i>
-		(<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object">GObject</a>)
-		–
-	</div>
-			<i>No description available</i>
-	</div>
-
-			</div>
 
 
 
@@ -388,75 +176,20 @@ GtkSettings instance for the default screen.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.20;" id="gtk_settings_reset_property">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h4 data-hotdoc-id="gtk_settings_reset_property">
-	<span><code>gtk_settings_reset_property</code></span>
+	<span><code>Gtk.Settings.ResetProperty</code></span>
 </h4>
 
 
 
 
 <pre class="c-prototype">
-gtk_settings_reset_property (<a title="GtkSettings" href="gtksettings-h.html#GtkSettings">GtkSettings</a> * settings,
-                             const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * name)</pre>
-
-<p>Undoes the effect of calling <a href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-set">g_object_set</a> to install an
-application-specific value for a setting. After this call,
-the setting will again follow the session-wide value for
-this setting.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>settings</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtksettings-h.html#GtkSettings">GtkSettings</a> object</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>name</code></em></i>
-				–
-	</div>
-			<p>the name of the setting to reset</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.20
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_settings_reset_property">
-	<span><code>Gtk.prototype.reset_property</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.reset_property(name: <a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>): {
-    // javascript wrapper for 'gtk_settings_reset_property'
-}</pre>
+Gtk.Settings.ResetProperty (<a title="string" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/string">string</a>)</pre>
 
 <p>Undoes the effect of calling <a href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-set">g_object_set (not introspectable)</a> to install an
 application-specific value for a setting. After this call,
@@ -470,82 +203,7 @@ this setting.</p>
 					
 <div class="symbol-detail">
 	<div>
-		<i><em><code>settings</code></em></i>
-					(
-						<a title="Gtk.Settings" href="gtksettings-h.html#GtkSettings">Gtk.Settings</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtksettings-h.html#GtkSettings">Gtk.Settings</a> object</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
 		<i><em><code>name</code></em></i>
-					(
-						<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
-						)
-				–
-	</div>
-			<p>the name of the setting to reset</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.20
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_settings_reset_property">
-	<span><code>Gtk.Settings.reset_property</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.Settings.reset_property (self, name):
-    #python wrapper for 'gtk_settings_reset_property'</pre>
-
-<p>Undoes the effect of calling <a href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-set">g_object_set (not introspectable)</a> to install an
-application-specific value for a setting. After this call,
-the setting will again follow the session-wide value for
-this setting.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>settings</code></em></i>
-					(
-						<a title="Gtk.Settings" href="gtksettings-h.html#GtkSettings">Gtk.Settings</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtksettings-h.html#GtkSettings">Gtk.Settings</a> object</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>name</code></em></i>
-					(
-						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
-						)
 				–
 	</div>
 			<p>the name of the setting to reset</p>
@@ -573,69 +231,24 @@ this setting.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_settings_get_default">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h3 data-hotdoc-id="gtk_settings_get_default">
-	<span><code>gtk_settings_get_default</code></span>
+	<span><code>Gtk.Settings.GetDefault</code></span>
 </h3>
 
 
 
 
 <pre class="c-prototype">
-<a title="GtkSettings" href="gtksettings-h.html#GtkSettings">GtkSettings</a> *
-gtk_settings_get_default ()</pre>
-
-<p>Gets the <a href="gtksettings-h.html#GtkSettings">GtkSettings</a> object for the default GDK screen, creating
-it if necessary. See <a href="gtksettings-h.html#gtk_settings_get_for_screen">gtk_settings_get_for_screen</a>.</p>
-
-
-
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					
-										
-<span class="annotation">[<abbr title="NULL may be passed to the value"><span class="acronym">nullable</span></abbr>]</span>
-<span class="annotation">[<abbr title="Don't free data after the code is done"><span class="acronym">transfer: none</span></abbr>]</span>
-
-										)
-								–
-			</div>
-							<p>a <a href="gtksettings-h.html#GtkSettings">GtkSettings</a> object. If there is
-no default screen, then returns <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a>.</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_settings_get_default">
-	<span><code>Gtk.prototype.get_default</code></span>
-</h3>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.get_default(): {
-    // javascript wrapper for 'gtk_settings_get_default'
-}</pre>
+<a title="Gtk.Settings" href="gtksettings-h.html#GtkSettings">Gtk.Settings</a>
+Gtk.Settings.GetDefault ()</pre>
 
 <p>Gets the <a href="gtksettings-h.html#GtkSettings">Gtk.Settings</a> object for the default GDK screen, creating
-it if necessary. See <a href="gtksettings-h.html#gtk_settings_get_for_screen">Gtk.prototype.get_for_screen</a>.</p>
+it if necessary. See <a href="gtksettings-h.html#gtk_settings_get_for_screen">Gtk.Settings.GetForScreen</a>.</p>
 
 
 
@@ -644,53 +257,10 @@ it if necessary. See <a href="gtksettings-h.html#gtk_settings_get_for_screen">Gt
 		<div class="symbol-detail">
 			<div>
 				<b>Returns</b>
-									(
-					<a title="Gtk.Settings" href="gtksettings-h.html#GtkSettings">Gtk.Settings</a>
-										)
 								–
 			</div>
 							<p>a <a href="gtksettings-h.html#GtkSettings">Gtk.Settings</a> object. If there is
-no default screen, then returns <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a>.</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_settings_get_default">
-	<span><code>Gtk.Settings.get_default</code></span>
-</h3>
-
-
-<pre class="python-prototype">
-def Gtk.Settings.get_default ():
-    #python wrapper for 'gtk_settings_get_default'</pre>
-
-<p>Gets the <a href="gtksettings-h.html#GtkSettings">Gtk.Settings</a> object for the default GDK screen, creating
-it if necessary. See <a href="gtksettings-h.html#gtk_settings_get_for_screen">Gtk.Settings.get_for_screen</a>.</p>
-
-
-
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Gtk.Settings" href="gtksettings-h.html#GtkSettings">Gtk.Settings</a>
-										)
-								–
-			</div>
-							<p>a <a href="gtksettings-h.html#GtkSettings">Gtk.Settings</a> object. If there is
-no default screen, then returns <a href="https://docs.python.org/3/library/constants.html#None">None</a>.</p>
+no default screen, then returns <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
 
 					</div>
 	</div>
@@ -707,79 +277,21 @@ no default screen, then returns <a href="https://docs.python.org/3/library/const
 
 <div class="base_symbol_container" data-hotdoc-tags="since:2.2;" id="gtk_settings_get_for_screen">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h3 data-hotdoc-id="gtk_settings_get_for_screen">
-	<span><code>gtk_settings_get_for_screen</code></span>
+	<span><code>Gtk.Settings.GetForScreen</code></span>
 </h3>
 
 
 
 
 <pre class="c-prototype">
-<a title="GtkSettings" href="gtksettings-h.html#GtkSettings">GtkSettings</a> *
-gtk_settings_get_for_screen (<a title="GdkScreen" href="https://developer.gnome.org/gdk3/GdkScreen.html#GdkScreen-struct">GdkScreen</a> * screen)</pre>
-
-<p>Gets the <a href="gtksettings-h.html#GtkSettings">GtkSettings</a> object for <em>screen</em>, creating it if necessary.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>screen</code></em></i>
-				–
-	</div>
-			<p>a <a href="https://developer.gnome.org/gdk3/GdkScreen.html#GdkScreen-struct">GdkScreen</a>.</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					
-										
-<span class="annotation">[<abbr title="Don't free data after the code is done"><span class="acronym">transfer: none</span></abbr>]</span>
-
-										)
-								–
-			</div>
-							<p>a <a href="gtksettings-h.html#GtkSettings">GtkSettings</a> object.</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.2
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_settings_get_for_screen">
-	<span><code>Gtk.prototype.get_for_screen</code></span>
-</h3>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.get_for_screen(screen: <a title="Gdk.Screen" href="https://developer.gnome.org/gdk3/GdkScreen.html#GdkScreen-struct">Gdk.Screen</a>): {
-    // javascript wrapper for 'gtk_settings_get_for_screen'
-}</pre>
+<a title="Gtk.Settings" href="gtksettings-h.html#GtkSettings">Gtk.Settings</a>
+Gtk.Settings.GetForScreen (<a title="Gdk.Screen" href="https://developer.gnome.org/gdk3/GdkScreen.html#GdkScreen-struct">Gdk.Screen</a>)</pre>
 
 <p>Gets the <a href="gtksettings-h.html#GtkSettings">Gtk.Settings</a> object for <em>screen</em>, creating it if necessary.</p>
 
@@ -791,9 +303,6 @@ function Gtk.prototype.get_for_screen(screen: <a title="Gdk.Screen" href="https:
 <div class="symbol-detail">
 	<div>
 		<i><em><code>screen</code></em></i>
-					(
-						<a title="Gdk.Screen" href="https://developer.gnome.org/gdk3/GdkScreen.html#GdkScreen-struct">Gdk.Screen</a>
-						)
 				–
 	</div>
 			<p>a <a href="https://developer.gnome.org/gdk3/GdkScreen.html#GdkScreen-struct">Gdk.Screen</a>.</p>
@@ -806,66 +315,6 @@ function Gtk.prototype.get_for_screen(screen: <a title="Gdk.Screen" href="https:
 		<div class="symbol-detail">
 			<div>
 				<b>Returns</b>
-									(
-					<a title="Gtk.Settings" href="gtksettings-h.html#GtkSettings">Gtk.Settings</a>
-										)
-								–
-			</div>
-							<p>a <a href="gtksettings-h.html#GtkSettings">Gtk.Settings</a> object.</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.2
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_settings_get_for_screen">
-	<span><code>Gtk.Settings.get_for_screen</code></span>
-</h3>
-
-
-<pre class="python-prototype">
-def Gtk.Settings.get_for_screen (screen):
-    #python wrapper for 'gtk_settings_get_for_screen'</pre>
-
-<p>Gets the <a href="gtksettings-h.html#GtkSettings">Gtk.Settings</a> object for <em>screen</em>, creating it if necessary.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>screen</code></em></i>
-					(
-						<a title="Gdk.Screen" href="https://developer.gnome.org/gdk3/GdkScreen.html#GdkScreen-struct">Gdk.Screen</a>
-						)
-				–
-	</div>
-			<p>a <a href="https://developer.gnome.org/gdk3/GdkScreen.html#GdkScreen-struct">Gdk.Screen</a>.</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Gtk.Settings" href="gtksettings-h.html#GtkSettings">Gtk.Settings</a>
-										)
 								–
 			</div>
 							<p>a <a href="gtksettings-h.html#GtkSettings">Gtk.Settings</a> object.</p>
@@ -888,23 +337,23 @@ def Gtk.Settings.get_for_screen (screen):
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_rc_property_parse_color">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h3 data-hotdoc-id="gtk_rc_property_parse_color">
-	<span><code>gtk_rc_property_parse_color</code></span>
+	<span><code>Gtk.Global.RcPropertyParseColor</code></span>
 </h3>
 
 
 
 
 <pre class="c-prototype">
-<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
-gtk_rc_property_parse_color (const <a title="GParamSpec" href="https://developer.gnome.org/gobject/unstable/gobject-GParamSpec.html#GParamSpec">GParamSpec</a> * pspec,
-                             const <a title="GString" href="https://developer.gnome.org/glib/unstable/glib-Strings.html#GString">GString</a> * gstring,
-                             <a title="GValue" href="https://developer.gnome.org/gobject/unstable/gobject-Generic-values.html#GValue">GValue</a> * property_value)</pre>
+<a title="bool" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/bool">bool</a>
+Gtk.Global.RcPropertyParseColor (<a title="GObject.ParamSpec" href="https://developer.gnome.org/gobject/unstable/gobject-GParamSpec.html#GParamSpec">GObject.ParamSpec</a>,
+                                 <a title="GLib.String" href="https://developer.gnome.org/glib/unstable/glib-Strings.html#GString">GLib.String</a>,
+                                 <a title="GObject.Value" href="https://developer.gnome.org/gobject/unstable/gobject-Generic-values.html#GValue">GObject.Value</a>)</pre>
 
 
 
@@ -944,157 +393,6 @@ gtk_rc_property_parse_color (const <a title="GParamSpec" href="https://developer
 		<div class="symbol-detail">
 			<div>
 				<b>Returns</b>
-								–
-			</div>
-							<i>No description available</i>
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_rc_property_parse_color">
-	<span><code>prototype.rc_property_parse_color</code></span>
-</h3>
-
-
-<pre class="javascript-prototype">
-function prototype.rc_property_parse_color(pspec: <a title="GObject.ParamSpec" href="https://developer.gnome.org/gobject/unstable/gobject-GParamSpec.html#GParamSpec">GObject.ParamSpec</a>, gstring: <a title="GLib.String" href="https://developer.gnome.org/glib/unstable/glib-Strings.html#GString">GLib.String</a>, property_value: <a title="GObject.Value" href="https://developer.gnome.org/gobject/unstable/gobject-Generic-values.html#GValue">GObject.Value</a>): {
-    // javascript wrapper for 'gtk_rc_property_parse_color'
-}</pre>
-
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>pspec</code></em></i>
-					(
-						<a title="GObject.ParamSpec" href="https://developer.gnome.org/gobject/unstable/gobject-GParamSpec.html#GParamSpec">GObject.ParamSpec</a>
-						)
-				–
-	</div>
-			<i>No description available</i>
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>gstring</code></em></i>
-					(
-						<a title="GLib.String" href="https://developer.gnome.org/glib/unstable/glib-Strings.html#GString">GLib.String</a>
-						)
-				–
-	</div>
-			<i>No description available</i>
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>property_value</code></em></i>
-					(
-						<a title="GObject.Value" href="https://developer.gnome.org/gobject/unstable/gobject-Generic-values.html#GValue">GObject.Value</a>
-						)
-				–
-	</div>
-			<i>No description available</i>
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
-										)
-								–
-			</div>
-							<i>No description available</i>
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_rc_property_parse_color">
-	<span><code>Gtk.rc_property_parse_color</code></span>
-</h3>
-
-
-<pre class="python-prototype">
-def Gtk.rc_property_parse_color (pspec, gstring, property_value):
-    #python wrapper for 'gtk_rc_property_parse_color'</pre>
-
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>pspec</code></em></i>
-					(
-						<a title="GObject.ParamSpec" href="https://developer.gnome.org/gobject/unstable/gobject-GParamSpec.html#GParamSpec">GObject.ParamSpec</a>
-						)
-				–
-	</div>
-			<i>No description available</i>
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>gstring</code></em></i>
-					(
-						<a title="GLib.String" href="https://developer.gnome.org/glib/unstable/glib-Strings.html#GString">GLib.String</a>
-						)
-				–
-	</div>
-			<i>No description available</i>
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>property_value</code></em></i>
-					(
-						<a title="GObject.Value" href="https://developer.gnome.org/gobject/unstable/gobject-Generic-values.html#GValue">GObject.Value</a>
-						)
-				–
-	</div>
-			<i>No description available</i>
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
-										)
 								–
 			</div>
 							<i>No description available</i>
@@ -1113,98 +411,23 @@ def Gtk.rc_property_parse_color (pspec, gstring, property_value):
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_rc_property_parse_enum">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h3 data-hotdoc-id="gtk_rc_property_parse_enum">
-	<span><code>gtk_rc_property_parse_enum</code></span>
+	<span><code>Gtk.Global.RcPropertyParseEnum</code></span>
 </h3>
 
 
 
 
 <pre class="c-prototype">
-<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
-gtk_rc_property_parse_enum (const <a title="GParamSpec" href="https://developer.gnome.org/gobject/unstable/gobject-GParamSpec.html#GParamSpec">GParamSpec</a> * pspec,
-                            const <a title="GString" href="https://developer.gnome.org/glib/unstable/glib-Strings.html#GString">GString</a> * gstring,
-                            <a title="GValue" href="https://developer.gnome.org/gobject/unstable/gobject-Generic-values.html#GValue">GValue</a> * property_value)</pre>
-
-<p>A <a href="https://developer.gnome.org/gtk3/GtkStyle.html#GtkRcPropertyParser">GtkRcPropertyParser</a> for use with <a href="https://developer.gnome.org/gtk3/GtkSettings.html#gtk-settings-install-property-parser">gtk_settings_install_property_parser</a>
-or <a href="https://developer.gnome.org/gtk3/GtkWidget.html#gtk-widget-class-install-style-property-parser">gtk_widget_class_install_style_property_parser</a> which parses a single
-enumeration value.</p>
-<p>The enumeration value can be specified by its name, its nickname or
-its numeric value. For consistency with flags parsing, the value
-may be surrounded by parentheses.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>pspec</code></em></i>
-				–
-	</div>
-			<p>a <a href="https://developer.gnome.org/gobject/unstable/gobject-GParamSpec.html#GParamSpec">GParamSpec</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>gstring</code></em></i>
-				–
-	</div>
-			<p>the <a href="https://developer.gnome.org/glib/unstable/glib-Strings.html#GString">GString</a> to be parsed</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>property_value</code></em></i>
-				–
-	</div>
-			<p>a <a href="https://developer.gnome.org/gobject/unstable/gobject-Generic-values.html#GValue">GValue</a> which must hold enum values.</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-								–
-			</div>
-							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if <em>gstring</em> could be parsed and <em>property_value</em>
-has been set to the resulting <a href="https://developer.gnome.org/gobject/unstable/gobject-Enumeration-and-Flag-Types.html#GEnumValue">GEnumValue</a>.</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_rc_property_parse_enum">
-	<span><code>prototype.rc_property_parse_enum</code></span>
-</h3>
-
-
-<pre class="javascript-prototype">
-function prototype.rc_property_parse_enum(pspec: <a title="GObject.ParamSpec" href="https://developer.gnome.org/gobject/unstable/gobject-GParamSpec.html#GParamSpec">GObject.ParamSpec</a>, gstring: <a title="GLib.String" href="https://developer.gnome.org/glib/unstable/glib-Strings.html#GString">GLib.String</a>, property_value: <a title="GObject.Value" href="https://developer.gnome.org/gobject/unstable/gobject-Generic-values.html#GValue">GObject.Value</a>): {
-    // javascript wrapper for 'gtk_rc_property_parse_enum'
-}</pre>
+<a title="bool" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/bool">bool</a>
+Gtk.Global.RcPropertyParseEnum (<a title="GObject.ParamSpec" href="https://developer.gnome.org/gobject/unstable/gobject-GParamSpec.html#GParamSpec">GObject.ParamSpec</a>,
+                                <a title="GLib.String" href="https://developer.gnome.org/glib/unstable/glib-Strings.html#GString">GLib.String</a>,
+                                <a title="GObject.Value" href="https://developer.gnome.org/gobject/unstable/gobject-Generic-values.html#GValue">GObject.Value</a>)</pre>
 
 <p>A <a href="https://developer.gnome.org/gtk3/GtkStyle.html#GtkRcPropertyParser">Gtk.RcPropertyParser</a> for use with <a href="https://developer.gnome.org/gtk3/GtkSettings.html#gtk-settings-install-property-parser">gtk_settings_install_property_parser (not introspectable)</a>
 or <a href="https://developer.gnome.org/gtk3/GtkWidget.html#gtk-widget-class-install-style-property-parser">gtk_widget_class_install_style_property_parser (not introspectable)</a> which parses a single
@@ -1221,9 +444,6 @@ may be surrounded by parentheses.</p>
 <div class="symbol-detail">
 	<div>
 		<i><em><code>pspec</code></em></i>
-					(
-						<a title="GObject.ParamSpec" href="https://developer.gnome.org/gobject/unstable/gobject-GParamSpec.html#GParamSpec">GObject.ParamSpec</a>
-						)
 				–
 	</div>
 			<p>a <a href="https://developer.gnome.org/gobject/unstable/gobject-GParamSpec.html#GParamSpec">GObject.ParamSpec</a></p>
@@ -1234,9 +454,6 @@ may be surrounded by parentheses.</p>
 <div class="symbol-detail">
 	<div>
 		<i><em><code>gstring</code></em></i>
-					(
-						<a title="GLib.String" href="https://developer.gnome.org/glib/unstable/glib-Strings.html#GString">GLib.String</a>
-						)
 				–
 	</div>
 			<p>the <a href="https://developer.gnome.org/glib/unstable/glib-Strings.html#GString">GLib.String</a> to be parsed</p>
@@ -1247,9 +464,6 @@ may be surrounded by parentheses.</p>
 <div class="symbol-detail">
 	<div>
 		<i><em><code>property_value</code></em></i>
-					(
-						<a title="GObject.Value" href="https://developer.gnome.org/gobject/unstable/gobject-Generic-values.html#GValue">GObject.Value</a>
-						)
 				–
 	</div>
 			<p>a <a href="https://developer.gnome.org/gobject/unstable/gobject-Generic-values.html#GValue">GObject.Value</a> which must hold enum values.</p>
@@ -1262,98 +476,9 @@ may be surrounded by parentheses.</p>
 		<div class="symbol-detail">
 			<div>
 				<b>Returns</b>
-									(
-					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
-										)
 								–
 			</div>
-							<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if <em>gstring</em> could be parsed and <em>property_value</em>
-has been set to the resulting <a href="https://developer.gnome.org/gobject/unstable/gobject-Enumeration-and-Flag-Types.html#GEnumValue">GObject.EnumValue</a>.</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_rc_property_parse_enum">
-	<span><code>Gtk.rc_property_parse_enum</code></span>
-</h3>
-
-
-<pre class="python-prototype">
-def Gtk.rc_property_parse_enum (pspec, gstring, property_value):
-    #python wrapper for 'gtk_rc_property_parse_enum'</pre>
-
-<p>A <a href="https://developer.gnome.org/gtk3/GtkStyle.html#GtkRcPropertyParser">Gtk.RcPropertyParser</a> for use with <a href="https://developer.gnome.org/gtk3/GtkSettings.html#gtk-settings-install-property-parser">gtk_settings_install_property_parser (not introspectable)</a>
-or <a href="https://developer.gnome.org/gtk3/GtkWidget.html#gtk-widget-class-install-style-property-parser">gtk_widget_class_install_style_property_parser (not introspectable)</a> which parses a single
-enumeration value.</p>
-<p>The enumeration value can be specified by its name, its nickname or
-its numeric value. For consistency with flags parsing, the value
-may be surrounded by parentheses.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>pspec</code></em></i>
-					(
-						<a title="GObject.ParamSpec" href="https://developer.gnome.org/gobject/unstable/gobject-GParamSpec.html#GParamSpec">GObject.ParamSpec</a>
-						)
-				–
-	</div>
-			<p>a <a href="https://developer.gnome.org/gobject/unstable/gobject-GParamSpec.html#GParamSpec">GObject.ParamSpec</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>gstring</code></em></i>
-					(
-						<a title="GLib.String" href="https://developer.gnome.org/glib/unstable/glib-Strings.html#GString">GLib.String</a>
-						)
-				–
-	</div>
-			<p>the <a href="https://developer.gnome.org/glib/unstable/glib-Strings.html#GString">GLib.String</a> to be parsed</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>property_value</code></em></i>
-					(
-						<a title="GObject.Value" href="https://developer.gnome.org/gobject/unstable/gobject-Generic-values.html#GValue">GObject.Value</a>
-						)
-				–
-	</div>
-			<p>a <a href="https://developer.gnome.org/gobject/unstable/gobject-Generic-values.html#GValue">GObject.Value</a> which must hold enum values.</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
-										)
-								–
-			</div>
-							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if <em>gstring</em> could be parsed and <em>property_value</em>
+							<p><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/true">true</a> if <em>gstring</em> could be parsed and <em>property_value</em>
 has been set to the resulting <a href="https://developer.gnome.org/gobject/unstable/gobject-Enumeration-and-Flag-Types.html#GEnumValue">GObject.EnumValue</a>.</p>
 
 					</div>
@@ -1371,97 +496,23 @@ has been set to the resulting <a href="https://developer.gnome.org/gobject/unsta
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_rc_property_parse_flags">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h3 data-hotdoc-id="gtk_rc_property_parse_flags">
-	<span><code>gtk_rc_property_parse_flags</code></span>
+	<span><code>Gtk.Global.RcPropertyParseFlags</code></span>
 </h3>
 
 
 
 
 <pre class="c-prototype">
-<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
-gtk_rc_property_parse_flags (const <a title="GParamSpec" href="https://developer.gnome.org/gobject/unstable/gobject-GParamSpec.html#GParamSpec">GParamSpec</a> * pspec,
-                             const <a title="GString" href="https://developer.gnome.org/glib/unstable/glib-Strings.html#GString">GString</a> * gstring,
-                             <a title="GValue" href="https://developer.gnome.org/gobject/unstable/gobject-Generic-values.html#GValue">GValue</a> * property_value)</pre>
-
-<p>A <a href="https://developer.gnome.org/gtk3/GtkStyle.html#GtkRcPropertyParser">GtkRcPropertyParser</a> for use with <a href="https://developer.gnome.org/gtk3/GtkSettings.html#gtk-settings-install-property-parser">gtk_settings_install_property_parser</a>
-or <a href="https://developer.gnome.org/gtk3/GtkWidget.html#gtk-widget-class-install-style-property-parser">gtk_widget_class_install_style_property_parser</a> which parses flags.</p>
-<p>Flags can be specified by their name, their nickname or
-numerically. Multiple flags can be specified in the form
-<code>"( flag1 | flag2 | ... )"</code>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>pspec</code></em></i>
-				–
-	</div>
-			<p>a <a href="https://developer.gnome.org/gobject/unstable/gobject-GParamSpec.html#GParamSpec">GParamSpec</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>gstring</code></em></i>
-				–
-	</div>
-			<p>the <a href="https://developer.gnome.org/glib/unstable/glib-Strings.html#GString">GString</a> to be parsed</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>property_value</code></em></i>
-				–
-	</div>
-			<p>a <a href="https://developer.gnome.org/gobject/unstable/gobject-Generic-values.html#GValue">GValue</a> which must hold flags values.</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-								–
-			</div>
-							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if <em>gstring</em> could be parsed and <em>property_value</em>
-has been set to the resulting flags value.</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_rc_property_parse_flags">
-	<span><code>prototype.rc_property_parse_flags</code></span>
-</h3>
-
-
-<pre class="javascript-prototype">
-function prototype.rc_property_parse_flags(pspec: <a title="GObject.ParamSpec" href="https://developer.gnome.org/gobject/unstable/gobject-GParamSpec.html#GParamSpec">GObject.ParamSpec</a>, gstring: <a title="GLib.String" href="https://developer.gnome.org/glib/unstable/glib-Strings.html#GString">GLib.String</a>, property_value: <a title="GObject.Value" href="https://developer.gnome.org/gobject/unstable/gobject-Generic-values.html#GValue">GObject.Value</a>): {
-    // javascript wrapper for 'gtk_rc_property_parse_flags'
-}</pre>
+<a title="bool" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/bool">bool</a>
+Gtk.Global.RcPropertyParseFlags (<a title="GObject.ParamSpec" href="https://developer.gnome.org/gobject/unstable/gobject-GParamSpec.html#GParamSpec">GObject.ParamSpec</a>,
+                                 <a title="GLib.String" href="https://developer.gnome.org/glib/unstable/glib-Strings.html#GString">GLib.String</a>,
+                                 <a title="GObject.Value" href="https://developer.gnome.org/gobject/unstable/gobject-Generic-values.html#GValue">GObject.Value</a>)</pre>
 
 <p>A <a href="https://developer.gnome.org/gtk3/GtkStyle.html#GtkRcPropertyParser">Gtk.RcPropertyParser</a> for use with <a href="https://developer.gnome.org/gtk3/GtkSettings.html#gtk-settings-install-property-parser">gtk_settings_install_property_parser (not introspectable)</a>
 or <a href="https://developer.gnome.org/gtk3/GtkWidget.html#gtk-widget-class-install-style-property-parser">gtk_widget_class_install_style_property_parser (not introspectable)</a> which parses flags.</p>
@@ -1477,9 +528,6 @@ numerically. Multiple flags can be specified in the form
 <div class="symbol-detail">
 	<div>
 		<i><em><code>pspec</code></em></i>
-					(
-						<a title="GObject.ParamSpec" href="https://developer.gnome.org/gobject/unstable/gobject-GParamSpec.html#GParamSpec">GObject.ParamSpec</a>
-						)
 				–
 	</div>
 			<p>a <a href="https://developer.gnome.org/gobject/unstable/gobject-GParamSpec.html#GParamSpec">GObject.ParamSpec</a></p>
@@ -1490,9 +538,6 @@ numerically. Multiple flags can be specified in the form
 <div class="symbol-detail">
 	<div>
 		<i><em><code>gstring</code></em></i>
-					(
-						<a title="GLib.String" href="https://developer.gnome.org/glib/unstable/glib-Strings.html#GString">GLib.String</a>
-						)
 				–
 	</div>
 			<p>the <a href="https://developer.gnome.org/glib/unstable/glib-Strings.html#GString">GLib.String</a> to be parsed</p>
@@ -1503,9 +548,6 @@ numerically. Multiple flags can be specified in the form
 <div class="symbol-detail">
 	<div>
 		<i><em><code>property_value</code></em></i>
-					(
-						<a title="GObject.Value" href="https://developer.gnome.org/gobject/unstable/gobject-Generic-values.html#GValue">GObject.Value</a>
-						)
 				–
 	</div>
 			<p>a <a href="https://developer.gnome.org/gobject/unstable/gobject-Generic-values.html#GValue">GObject.Value</a> which must hold flags values.</p>
@@ -1518,97 +560,9 @@ numerically. Multiple flags can be specified in the form
 		<div class="symbol-detail">
 			<div>
 				<b>Returns</b>
-									(
-					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
-										)
 								–
 			</div>
-							<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if <em>gstring</em> could be parsed and <em>property_value</em>
-has been set to the resulting flags value.</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_rc_property_parse_flags">
-	<span><code>Gtk.rc_property_parse_flags</code></span>
-</h3>
-
-
-<pre class="python-prototype">
-def Gtk.rc_property_parse_flags (pspec, gstring, property_value):
-    #python wrapper for 'gtk_rc_property_parse_flags'</pre>
-
-<p>A <a href="https://developer.gnome.org/gtk3/GtkStyle.html#GtkRcPropertyParser">Gtk.RcPropertyParser</a> for use with <a href="https://developer.gnome.org/gtk3/GtkSettings.html#gtk-settings-install-property-parser">gtk_settings_install_property_parser (not introspectable)</a>
-or <a href="https://developer.gnome.org/gtk3/GtkWidget.html#gtk-widget-class-install-style-property-parser">gtk_widget_class_install_style_property_parser (not introspectable)</a> which parses flags.</p>
-<p>Flags can be specified by their name, their nickname or
-numerically. Multiple flags can be specified in the form
-<code>"( flag1 | flag2 | ... )"</code>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>pspec</code></em></i>
-					(
-						<a title="GObject.ParamSpec" href="https://developer.gnome.org/gobject/unstable/gobject-GParamSpec.html#GParamSpec">GObject.ParamSpec</a>
-						)
-				–
-	</div>
-			<p>a <a href="https://developer.gnome.org/gobject/unstable/gobject-GParamSpec.html#GParamSpec">GObject.ParamSpec</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>gstring</code></em></i>
-					(
-						<a title="GLib.String" href="https://developer.gnome.org/glib/unstable/glib-Strings.html#GString">GLib.String</a>
-						)
-				–
-	</div>
-			<p>the <a href="https://developer.gnome.org/glib/unstable/glib-Strings.html#GString">GLib.String</a> to be parsed</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>property_value</code></em></i>
-					(
-						<a title="GObject.Value" href="https://developer.gnome.org/gobject/unstable/gobject-Generic-values.html#GValue">GObject.Value</a>
-						)
-				–
-	</div>
-			<p>a <a href="https://developer.gnome.org/gobject/unstable/gobject-Generic-values.html#GValue">GObject.Value</a> which must hold flags values.</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
-										)
-								–
-			</div>
-							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if <em>gstring</em> could be parsed and <em>property_value</em>
+							<p><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/true">true</a> if <em>gstring</em> could be parsed and <em>property_value</em>
 has been set to the resulting flags value.</p>
 
 					</div>
@@ -1626,96 +580,23 @@ has been set to the resulting flags value.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_rc_property_parse_requisition">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h3 data-hotdoc-id="gtk_rc_property_parse_requisition">
-	<span><code>gtk_rc_property_parse_requisition</code></span>
+	<span><code>Gtk.Global.RcPropertyParseRequisition</code></span>
 </h3>
 
 
 
 
 <pre class="c-prototype">
-<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
-gtk_rc_property_parse_requisition (const <a title="GParamSpec" href="https://developer.gnome.org/gobject/unstable/gobject-GParamSpec.html#GParamSpec">GParamSpec</a> * pspec,
-                                   const <a title="GString" href="https://developer.gnome.org/glib/unstable/glib-Strings.html#GString">GString</a> * gstring,
-                                   <a title="GValue" href="https://developer.gnome.org/gobject/unstable/gobject-Generic-values.html#GValue">GValue</a> * property_value)</pre>
-
-<p>A <a href="https://developer.gnome.org/gtk3/GtkStyle.html#GtkRcPropertyParser">GtkRcPropertyParser</a> for use with <a href="https://developer.gnome.org/gtk3/GtkSettings.html#gtk-settings-install-property-parser">gtk_settings_install_property_parser</a>
-or <a href="https://developer.gnome.org/gtk3/GtkWidget.html#gtk-widget-class-install-style-property-parser">gtk_widget_class_install_style_property_parser</a> which parses a
-requisition in the form
-<code>"{ width, height }"</code> for integers width and height.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>pspec</code></em></i>
-				–
-	</div>
-			<p>a <a href="https://developer.gnome.org/gobject/unstable/gobject-GParamSpec.html#GParamSpec">GParamSpec</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>gstring</code></em></i>
-				–
-	</div>
-			<p>the <a href="https://developer.gnome.org/glib/unstable/glib-Strings.html#GString">GString</a> to be parsed</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>property_value</code></em></i>
-				–
-	</div>
-			<p>a <a href="https://developer.gnome.org/gobject/unstable/gobject-Generic-values.html#GValue">GValue</a> which must hold boxed values.</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-								–
-			</div>
-							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if <em>gstring</em> could be parsed and <em>property_value</em>
-has been set to the resulting <a href="gtkwidget-h.html#GtkRequisition">GtkRequisition</a>.</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_rc_property_parse_requisition">
-	<span><code>prototype.rc_property_parse_requisition</code></span>
-</h3>
-
-
-<pre class="javascript-prototype">
-function prototype.rc_property_parse_requisition(pspec: <a title="GObject.ParamSpec" href="https://developer.gnome.org/gobject/unstable/gobject-GParamSpec.html#GParamSpec">GObject.ParamSpec</a>, gstring: <a title="GLib.String" href="https://developer.gnome.org/glib/unstable/glib-Strings.html#GString">GLib.String</a>, property_value: <a title="GObject.Value" href="https://developer.gnome.org/gobject/unstable/gobject-Generic-values.html#GValue">GObject.Value</a>): {
-    // javascript wrapper for 'gtk_rc_property_parse_requisition'
-}</pre>
+<a title="bool" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/bool">bool</a>
+Gtk.Global.RcPropertyParseRequisition (<a title="GObject.ParamSpec" href="https://developer.gnome.org/gobject/unstable/gobject-GParamSpec.html#GParamSpec">GObject.ParamSpec</a>,
+                                       <a title="GLib.String" href="https://developer.gnome.org/glib/unstable/glib-Strings.html#GString">GLib.String</a>,
+                                       <a title="GObject.Value" href="https://developer.gnome.org/gobject/unstable/gobject-Generic-values.html#GValue">GObject.Value</a>)</pre>
 
 <p>A <a href="https://developer.gnome.org/gtk3/GtkStyle.html#GtkRcPropertyParser">Gtk.RcPropertyParser</a> for use with <a href="https://developer.gnome.org/gtk3/GtkSettings.html#gtk-settings-install-property-parser">gtk_settings_install_property_parser (not introspectable)</a>
 or <a href="https://developer.gnome.org/gtk3/GtkWidget.html#gtk-widget-class-install-style-property-parser">gtk_widget_class_install_style_property_parser (not introspectable)</a> which parses a
@@ -1730,9 +611,6 @@ requisition in the form
 <div class="symbol-detail">
 	<div>
 		<i><em><code>pspec</code></em></i>
-					(
-						<a title="GObject.ParamSpec" href="https://developer.gnome.org/gobject/unstable/gobject-GParamSpec.html#GParamSpec">GObject.ParamSpec</a>
-						)
 				–
 	</div>
 			<p>a <a href="https://developer.gnome.org/gobject/unstable/gobject-GParamSpec.html#GParamSpec">GObject.ParamSpec</a></p>
@@ -1743,9 +621,6 @@ requisition in the form
 <div class="symbol-detail">
 	<div>
 		<i><em><code>gstring</code></em></i>
-					(
-						<a title="GLib.String" href="https://developer.gnome.org/glib/unstable/glib-Strings.html#GString">GLib.String</a>
-						)
 				–
 	</div>
 			<p>the <a href="https://developer.gnome.org/glib/unstable/glib-Strings.html#GString">GLib.String</a> to be parsed</p>
@@ -1756,9 +631,6 @@ requisition in the form
 <div class="symbol-detail">
 	<div>
 		<i><em><code>property_value</code></em></i>
-					(
-						<a title="GObject.Value" href="https://developer.gnome.org/gobject/unstable/gobject-Generic-values.html#GValue">GObject.Value</a>
-						)
 				–
 	</div>
 			<p>a <a href="https://developer.gnome.org/gobject/unstable/gobject-Generic-values.html#GValue">GObject.Value</a> which must hold boxed values.</p>
@@ -1771,96 +643,9 @@ requisition in the form
 		<div class="symbol-detail">
 			<div>
 				<b>Returns</b>
-									(
-					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
-										)
 								–
 			</div>
-							<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if <em>gstring</em> could be parsed and <em>property_value</em>
-has been set to the resulting <a href="gtkwidget-h.html#GtkRequisition">Gtk.Requisition</a>.</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_rc_property_parse_requisition">
-	<span><code>Gtk.rc_property_parse_requisition</code></span>
-</h3>
-
-
-<pre class="python-prototype">
-def Gtk.rc_property_parse_requisition (pspec, gstring, property_value):
-    #python wrapper for 'gtk_rc_property_parse_requisition'</pre>
-
-<p>A <a href="https://developer.gnome.org/gtk3/GtkStyle.html#GtkRcPropertyParser">Gtk.RcPropertyParser</a> for use with <a href="https://developer.gnome.org/gtk3/GtkSettings.html#gtk-settings-install-property-parser">gtk_settings_install_property_parser (not introspectable)</a>
-or <a href="https://developer.gnome.org/gtk3/GtkWidget.html#gtk-widget-class-install-style-property-parser">gtk_widget_class_install_style_property_parser (not introspectable)</a> which parses a
-requisition in the form
-<code>"{ width, height }"</code> for integers width and height.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>pspec</code></em></i>
-					(
-						<a title="GObject.ParamSpec" href="https://developer.gnome.org/gobject/unstable/gobject-GParamSpec.html#GParamSpec">GObject.ParamSpec</a>
-						)
-				–
-	</div>
-			<p>a <a href="https://developer.gnome.org/gobject/unstable/gobject-GParamSpec.html#GParamSpec">GObject.ParamSpec</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>gstring</code></em></i>
-					(
-						<a title="GLib.String" href="https://developer.gnome.org/glib/unstable/glib-Strings.html#GString">GLib.String</a>
-						)
-				–
-	</div>
-			<p>the <a href="https://developer.gnome.org/glib/unstable/glib-Strings.html#GString">GLib.String</a> to be parsed</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>property_value</code></em></i>
-					(
-						<a title="GObject.Value" href="https://developer.gnome.org/gobject/unstable/gobject-Generic-values.html#GValue">GObject.Value</a>
-						)
-				–
-	</div>
-			<p>a <a href="https://developer.gnome.org/gobject/unstable/gobject-Generic-values.html#GValue">GObject.Value</a> which must hold boxed values.</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
-										)
-								–
-			</div>
-							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if <em>gstring</em> could be parsed and <em>property_value</em>
+							<p><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/true">true</a> if <em>gstring</em> could be parsed and <em>property_value</em>
 has been set to the resulting <a href="gtkwidget-h.html#GtkRequisition">Gtk.Requisition</a>.</p>
 
 					</div>
@@ -1878,97 +663,23 @@ has been set to the resulting <a href="gtkwidget-h.html#GtkRequisition">Gtk.Requ
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_rc_property_parse_border">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h3 data-hotdoc-id="gtk_rc_property_parse_border">
-	<span><code>gtk_rc_property_parse_border</code></span>
+	<span><code>Gtk.Global.RcPropertyParseBorder</code></span>
 </h3>
 
 
 
 
 <pre class="c-prototype">
-<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
-gtk_rc_property_parse_border (const <a title="GParamSpec" href="https://developer.gnome.org/gobject/unstable/gobject-GParamSpec.html#GParamSpec">GParamSpec</a> * pspec,
-                              const <a title="GString" href="https://developer.gnome.org/glib/unstable/glib-Strings.html#GString">GString</a> * gstring,
-                              <a title="GValue" href="https://developer.gnome.org/gobject/unstable/gobject-Generic-values.html#GValue">GValue</a> * property_value)</pre>
-
-<p>A <a href="https://developer.gnome.org/gtk3/GtkStyle.html#GtkRcPropertyParser">GtkRcPropertyParser</a> for use with <a href="https://developer.gnome.org/gtk3/GtkSettings.html#gtk-settings-install-property-parser">gtk_settings_install_property_parser</a>
-or <a href="https://developer.gnome.org/gtk3/GtkWidget.html#gtk-widget-class-install-style-property-parser">gtk_widget_class_install_style_property_parser</a> which parses
-borders in the form
-<code>"{ left, right, top, bottom }"</code> for integers
-left, right, top and bottom.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>pspec</code></em></i>
-				–
-	</div>
-			<p>a <a href="https://developer.gnome.org/gobject/unstable/gobject-GParamSpec.html#GParamSpec">GParamSpec</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>gstring</code></em></i>
-				–
-	</div>
-			<p>the <a href="https://developer.gnome.org/glib/unstable/glib-Strings.html#GString">GString</a> to be parsed</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>property_value</code></em></i>
-				–
-	</div>
-			<p>a <a href="https://developer.gnome.org/gobject/unstable/gobject-Generic-values.html#GValue">GValue</a> which must hold boxed values.</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-								–
-			</div>
-							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if <em>gstring</em> could be parsed and <em>property_value</em>
-has been set to the resulting <a href="gtkstylecontext-h.html#GtkBorder">GtkBorder</a>.</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_rc_property_parse_border">
-	<span><code>prototype.rc_property_parse_border</code></span>
-</h3>
-
-
-<pre class="javascript-prototype">
-function prototype.rc_property_parse_border(pspec: <a title="GObject.ParamSpec" href="https://developer.gnome.org/gobject/unstable/gobject-GParamSpec.html#GParamSpec">GObject.ParamSpec</a>, gstring: <a title="GLib.String" href="https://developer.gnome.org/glib/unstable/glib-Strings.html#GString">GLib.String</a>, property_value: <a title="GObject.Value" href="https://developer.gnome.org/gobject/unstable/gobject-Generic-values.html#GValue">GObject.Value</a>): {
-    // javascript wrapper for 'gtk_rc_property_parse_border'
-}</pre>
+<a title="bool" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/bool">bool</a>
+Gtk.Global.RcPropertyParseBorder (<a title="GObject.ParamSpec" href="https://developer.gnome.org/gobject/unstable/gobject-GParamSpec.html#GParamSpec">GObject.ParamSpec</a>,
+                                  <a title="GLib.String" href="https://developer.gnome.org/glib/unstable/glib-Strings.html#GString">GLib.String</a>,
+                                  <a title="GObject.Value" href="https://developer.gnome.org/gobject/unstable/gobject-Generic-values.html#GValue">GObject.Value</a>)</pre>
 
 <p>A <a href="https://developer.gnome.org/gtk3/GtkStyle.html#GtkRcPropertyParser">Gtk.RcPropertyParser</a> for use with <a href="https://developer.gnome.org/gtk3/GtkSettings.html#gtk-settings-install-property-parser">gtk_settings_install_property_parser (not introspectable)</a>
 or <a href="https://developer.gnome.org/gtk3/GtkWidget.html#gtk-widget-class-install-style-property-parser">gtk_widget_class_install_style_property_parser (not introspectable)</a> which parses
@@ -1984,9 +695,6 @@ left, right, top and bottom.</p>
 <div class="symbol-detail">
 	<div>
 		<i><em><code>pspec</code></em></i>
-					(
-						<a title="GObject.ParamSpec" href="https://developer.gnome.org/gobject/unstable/gobject-GParamSpec.html#GParamSpec">GObject.ParamSpec</a>
-						)
 				–
 	</div>
 			<p>a <a href="https://developer.gnome.org/gobject/unstable/gobject-GParamSpec.html#GParamSpec">GObject.ParamSpec</a></p>
@@ -1997,9 +705,6 @@ left, right, top and bottom.</p>
 <div class="symbol-detail">
 	<div>
 		<i><em><code>gstring</code></em></i>
-					(
-						<a title="GLib.String" href="https://developer.gnome.org/glib/unstable/glib-Strings.html#GString">GLib.String</a>
-						)
 				–
 	</div>
 			<p>the <a href="https://developer.gnome.org/glib/unstable/glib-Strings.html#GString">GLib.String</a> to be parsed</p>
@@ -2010,9 +715,6 @@ left, right, top and bottom.</p>
 <div class="symbol-detail">
 	<div>
 		<i><em><code>property_value</code></em></i>
-					(
-						<a title="GObject.Value" href="https://developer.gnome.org/gobject/unstable/gobject-Generic-values.html#GValue">GObject.Value</a>
-						)
 				–
 	</div>
 			<p>a <a href="https://developer.gnome.org/gobject/unstable/gobject-Generic-values.html#GValue">GObject.Value</a> which must hold boxed values.</p>
@@ -2025,97 +727,9 @@ left, right, top and bottom.</p>
 		<div class="symbol-detail">
 			<div>
 				<b>Returns</b>
-									(
-					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
-										)
 								–
 			</div>
-							<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if <em>gstring</em> could be parsed and <em>property_value</em>
-has been set to the resulting <a href="gtkstylecontext-h.html#GtkBorder">Gtk.Border</a>.</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_rc_property_parse_border">
-	<span><code>Gtk.rc_property_parse_border</code></span>
-</h3>
-
-
-<pre class="python-prototype">
-def Gtk.rc_property_parse_border (pspec, gstring, property_value):
-    #python wrapper for 'gtk_rc_property_parse_border'</pre>
-
-<p>A <a href="https://developer.gnome.org/gtk3/GtkStyle.html#GtkRcPropertyParser">Gtk.RcPropertyParser</a> for use with <a href="https://developer.gnome.org/gtk3/GtkSettings.html#gtk-settings-install-property-parser">gtk_settings_install_property_parser (not introspectable)</a>
-or <a href="https://developer.gnome.org/gtk3/GtkWidget.html#gtk-widget-class-install-style-property-parser">gtk_widget_class_install_style_property_parser (not introspectable)</a> which parses
-borders in the form
-<code>"{ left, right, top, bottom }"</code> for integers
-left, right, top and bottom.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>pspec</code></em></i>
-					(
-						<a title="GObject.ParamSpec" href="https://developer.gnome.org/gobject/unstable/gobject-GParamSpec.html#GParamSpec">GObject.ParamSpec</a>
-						)
-				–
-	</div>
-			<p>a <a href="https://developer.gnome.org/gobject/unstable/gobject-GParamSpec.html#GParamSpec">GObject.ParamSpec</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>gstring</code></em></i>
-					(
-						<a title="GLib.String" href="https://developer.gnome.org/glib/unstable/glib-Strings.html#GString">GLib.String</a>
-						)
-				–
-	</div>
-			<p>the <a href="https://developer.gnome.org/glib/unstable/glib-Strings.html#GString">GLib.String</a> to be parsed</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>property_value</code></em></i>
-					(
-						<a title="GObject.Value" href="https://developer.gnome.org/gobject/unstable/gobject-Generic-values.html#GValue">GObject.Value</a>
-						)
-				–
-	</div>
-			<p>a <a href="https://developer.gnome.org/gobject/unstable/gobject-Generic-values.html#GValue">GObject.Value</a> which must hold boxed values.</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
-										)
-								–
-			</div>
-							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if <em>gstring</em> could be parsed and <em>property_value</em>
+							<p><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/true">true</a> if <em>gstring</em> could be parsed and <em>property_value</em>
 has been set to the resulting <a href="gtkstylecontext-h.html#GtkBorder">Gtk.Border</a>.</p>
 
 					</div>
@@ -2135,134 +749,18 @@ has been set to the resulting <a href="gtkstylecontext-h.html#GtkBorder">Gtk.Bor
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="GtkSettingsValue">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
-<h3 data-hotdoc-id="GtkSettingsValue">
-	<span><code>GtkSettingsValue</code></span>
-</h3>
+<h2 data-hotdoc-id="GtkSettingsValue">
+	<span><code>Gtk.SettingsValue</code></span>
+</h2>
 
 
 
 
-
-	<div class="members-container">
-		<h4>Fields</h4>
-					
-<div class="symbol-detail" data-hotdoc-id="GtkSettingsValue.origin">
-	<div>
-		<i><em><code>origin</code></em></i>
-		(<a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> *)
-		–
-	</div>
-			<p>Origin should be something like “filename:linenumber” for
-rc files, or e.g. “XProperty” for other sources.</p>
-
-	</div>
-
-					
-<div class="symbol-detail" data-hotdoc-id="GtkSettingsValue.value">
-	<div>
-		<i><em><code>value</code></em></i>
-		(<a title="GValue" href="https://developer.gnome.org/gobject/unstable/gobject-Generic-values.html#GValue">GValue</a>)
-		–
-	</div>
-			<p>Valid types are LONG, DOUBLE and STRING corresponding to
-the token parsed, or a GSTRING holding an unparsed statement</p>
-
-	</div>
-
-			</div>
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h3>
-	Gtk.SettingsValue
-</h3>
-
-
-
-
-
-	<div class="members-container">
-		<h4>Attributes</h4>
-					
-<div class="symbol-detail" data-hotdoc-id="GtkSettingsValue.origin">
-	<div>
-		<i><em><code>SettingsValue.origin</code></em></i>
-		(<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)
-		–
-	</div>
-			<p>Origin should be something like “filename:linenumber” for
-rc files, or e.g. “XProperty” for other sources.</p>
-
-	</div>
-
-					
-<div class="symbol-detail" data-hotdoc-id="GtkSettingsValue.value">
-	<div>
-		<i><em><code>SettingsValue.value</code></em></i>
-		(<a title="GObject.Value" href="https://developer.gnome.org/gobject/unstable/gobject-Generic-values.html#GValue">GObject.Value</a>)
-		–
-	</div>
-			<p>Valid types are LONG, DOUBLE and STRING corresponding to
-the token parsed, or a GSTRING holding an unparsed statement</p>
-
-	</div>
-
-			</div>
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3>
-	Gtk.SettingsValue
-</h3>
-
-
-
-
-
-	<div class="members-container">
-		<h4>Attributes</h4>
-					
-<div class="symbol-detail" data-hotdoc-id="GtkSettingsValue.origin">
-	<div>
-		<i><em><code>SettingsValue.origin</code></em></i>
-		(<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>)
-		–
-	</div>
-			<p>Origin should be something like “filename:linenumber” for
-rc files, or e.g. “XProperty” for other sources.</p>
-
-	</div>
-
-					
-<div class="symbol-detail" data-hotdoc-id="GtkSettingsValue.value">
-	<div>
-		<i><em><code>SettingsValue.value</code></em></i>
-		(<a title="GObject.Value" href="https://developer.gnome.org/gobject/unstable/gobject-Generic-values.html#GValue">GObject.Value</a>)
-		–
-	</div>
-			<p>Valid types are LONG, DOUBLE and STRING corresponding to
-the token parsed, or a GSTRING holding an unparsed statement</p>
-
-	</div>
-
-			</div>
 
 
 

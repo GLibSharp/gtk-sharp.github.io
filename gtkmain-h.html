@@ -89,7 +89,7 @@ $('body').removeClass('no-script');
 </nav>
 
 <main>
-<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="gtkmain-h.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['c', 'javascript', 'python']" data-hotdoc-meta-gi-language="c">
+<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="gtkmain-h.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['csharp']" data-hotdoc-meta-gi-language="c">
 <script src="assets/js/utils.js"></script>
 
 <div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
@@ -103,8 +103,8 @@ $('body').removeClass('no-script');
         <h1 id="main-loop-and-events-page">Main loop and Events</h1>
 <p>Before using GTK+, you need to initialize it; initialization connects to the
 window system display, and parses some standard command line arguments. The
-<a href="gtkmain-h.html#gtk_init" data-gi-href-javascript="gtkmain-h.html#gtk_init" data-gi-title-javascript="prototype.init" data-gi-href-python="gtkmain-h.html#gtk_init" data-gi-title-python="Gtk.init">gtk_init</a> macro initializes GTK+. <a href="gtkmain-h.html#gtk_init" data-gi-href-javascript="gtkmain-h.html#gtk_init" data-gi-title-javascript="prototype.init" data-gi-href-python="gtkmain-h.html#gtk_init" data-gi-title-python="Gtk.init">gtk_init</a> exits the application if errors
-occur; to avoid this, use <a href="gtkmain-h.html#gtk_init_check" data-gi-href-javascript="gtkmain-h.html#gtk_init_check" data-gi-title-javascript="prototype.init_check" data-gi-href-python="gtkmain-h.html#gtk_init_check" data-gi-title-python="Gtk.init_check">gtk_init_check</a>. <a href="gtkmain-h.html#gtk_init_check" data-gi-href-javascript="gtkmain-h.html#gtk_init_check" data-gi-title-javascript="prototype.init_check" data-gi-href-python="gtkmain-h.html#gtk_init_check" data-gi-title-python="Gtk.init_check">gtk_init_check</a> allows you to
+<a href="gtkmain-h.html#gtk_init" data-gi-href-csharp="gtkmain-h.html#gtk_init" data-gi-title-csharp="Gtk.Global.Init">gtk_init</a> macro initializes GTK+. <a href="gtkmain-h.html#gtk_init" data-gi-href-csharp="gtkmain-h.html#gtk_init" data-gi-title-csharp="Gtk.Global.Init">gtk_init</a> exits the application if errors
+occur; to avoid this, use <a href="gtkmain-h.html#gtk_init_check" data-gi-href-csharp="gtkmain-h.html#gtk_init_check" data-gi-title-csharp="Gtk.Global.InitCheck">gtk_init_check</a>. <a href="gtkmain-h.html#gtk_init_check" data-gi-href-csharp="gtkmain-h.html#gtk_init_check" data-gi-title-csharp="Gtk.Global.InitCheck">gtk_init_check</a> allows you to
 recover from a failed GTK+ initialization - you might start up your
 application in text mode instead.</p>
 <p>Like all GUI toolkits, GTK+ uses an event-driven programming model. When the
@@ -119,7 +119,7 @@ with <a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#
 “callbacks”.</p>
 <p>When your callbacks are invoked, you would typically take some action - for
 example, when an Open button is clicked you might display a
-<a href="gtkfilechooserdialog-h.html#GtkFileChooserDialog" data-gi-href-javascript="gtkfilechooserdialog-h.html#GtkFileChooserDialog" data-gi-title-javascript="Gtk.FileChooserDialog" data-gi-href-python="gtkfilechooserdialog-h.html#GtkFileChooserDialog" data-gi-title-python="Gtk.FileChooserDialog">GtkFileChooserDialog</a>. After a callback finishes, GTK+ will return to the
+<a href="gtkfilechooserdialog-h.html#GtkFileChooserDialog" data-gi-href-csharp="gtkfilechooserdialog-h.html#GtkFileChooserDialog" data-gi-title-csharp="Gtk.FileChooserDialog">GtkFileChooserDialog</a>. After a callback finishes, GTK+ will return to the
 main loop and await more user input.</p>
 <h2 id="typical-main-function-for-a-gtk-application">Typical main function for a GTK+ application</h2>
 <pre><code class="language-[&lt;!--"> int
@@ -149,7 +149,7 @@ main loop and await more user input.</p>
    return 0;
  }
 </code></pre>
-<p>It’s OK to use the GLib main loop directly instead of <a href="gtkmain-h.html#gtk_main" data-gi-href-javascript="gtkmain-h.html#gtk_main" data-gi-title-javascript="prototype.main" data-gi-href-python="gtkmain-h.html#gtk_main" data-gi-title-python="Gtk.main">gtk_main</a>, though it
+<p>It’s OK to use the GLib main loop directly instead of <a href="gtkmain-h.html#gtk_main" data-gi-href-csharp="gtkmain-h.html#gtk_main" data-gi-title-csharp="Gtk.Global.Main">gtk_main</a>, though it
 involves slightly more typing. See <a href="https://developer.gnome.org/glib/unstable/glib-The-Main-Event-Loop.html#GMainLoop">GMainLoop</a> in the GLib documentation.</p>
 
     </div>
@@ -161,20 +161,20 @@ involves slightly more typing. See <a href="https://developer.gnome.org/glib/uns
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_grab_add">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h4 data-hotdoc-id="gtk_grab_add">
-	<span><code>gtk_grab_add</code></span>
+	<span><code>Gtk.Widget.GrabAdd</code></span>
 </h4>
 
 
 
 
 <pre class="c-prototype">
-gtk_grab_add (<a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> * widget)</pre>
+Gtk.Widget.GrabAdd ()</pre>
 
 <p>Makes <em>widget</em> the current grabbed widget.</p>
 <p>This means that interaction with other widgets in the same
@@ -185,110 +185,6 @@ grabbed widget and this function does nothing.</p>
 
 
 
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-				–
-	</div>
-			<p>The widget that grabs keyboard and pointer events</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_grab_add">
-	<span><code>Gtk.prototype.grab_add</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.grab_add(): {
-    // javascript wrapper for 'gtk_grab_add'
-}</pre>
-
-<p>Makes <em>widget</em> the current grabbed widget.</p>
-<p>This means that interaction with other widgets in the same
-application is blocked and mouse as well as keyboard events
-are delivered to this widget.</p>
-<p>If <em>widget</em> is not sensitive, it is not set as the current
-grabbed widget and this function does nothing.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
-				–
-	</div>
-			<p>The widget that grabs keyboard and pointer events</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_grab_add">
-	<span><code>Gtk.Widget.grab_add</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.Widget.grab_add (self):
-    #python wrapper for 'gtk_grab_add'</pre>
-
-<p>Makes <em>widget</em> the current grabbed widget.</p>
-<p>This means that interaction with other widgets in the same
-application is blocked and mouse as well as keyboard events
-are delivered to this widget.</p>
-<p>If <em>widget</em> is not sensitive, it is not set as the current
-grabbed widget and this function does nothing.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
-				–
-	</div>
-			<p>The widget that grabs keyboard and pointer events</p>
-
-	</div>
-
-			</div>
 
 
 
@@ -302,125 +198,27 @@ grabbed widget and this function does nothing.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_grab_remove">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h4 data-hotdoc-id="gtk_grab_remove">
-	<span><code>gtk_grab_remove</code></span>
+	<span><code>Gtk.Widget.GrabRemove</code></span>
 </h4>
 
 
 
 
 <pre class="c-prototype">
-gtk_grab_remove (<a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> * widget)</pre>
+Gtk.Widget.GrabRemove ()</pre>
 
 <p>Removes the grab from the given widget.</p>
-<p>You have to pair calls to <a href="gtkmain-h.html#gtk_grab_add">gtk_grab_add</a> and <a href="gtkmain-h.html#gtk_grab_remove">gtk_grab_remove</a>.</p>
+<p>You have to pair calls to <a href="gtkmain-h.html#gtk_grab_add">Gtk.Widget.GrabAdd</a> and <a href="gtkmain-h.html#gtk_grab_remove">Gtk.Widget.GrabRemove</a>.</p>
 <p>If <em>widget</em> does not have the grab, this function does nothing.</p>
 
 
 
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-				–
-	</div>
-			<p>The widget which gives up the grab</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_grab_remove">
-	<span><code>Gtk.prototype.grab_remove</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.grab_remove(): {
-    // javascript wrapper for 'gtk_grab_remove'
-}</pre>
-
-<p>Removes the grab from the given widget.</p>
-<p>You have to pair calls to <a href="gtkmain-h.html#gtk_grab_add">Gtk.prototype.grab_add</a> and <a href="gtkmain-h.html#gtk_grab_remove">Gtk.prototype.grab_remove</a>.</p>
-<p>If <em>widget</em> does not have the grab, this function does nothing.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
-				–
-	</div>
-			<p>The widget which gives up the grab</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_grab_remove">
-	<span><code>Gtk.Widget.grab_remove</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.Widget.grab_remove (self):
-    #python wrapper for 'gtk_grab_remove'</pre>
-
-<p>Removes the grab from the given widget.</p>
-<p>You have to pair calls to <a href="gtkmain-h.html#gtk_grab_add">Gtk.Widget.grab_add</a> and <a href="gtkmain-h.html#gtk_grab_remove">Gtk.Widget.grab_remove</a>.</p>
-<p>If <em>widget</em> does not have the grab, this function does nothing.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
-				–
-	</div>
-			<p>The widget which gives up the grab</p>
-
-	</div>
-
-			</div>
 
 
 
@@ -438,83 +236,22 @@ def Gtk.Widget.grab_remove (self):
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_disable_setlocale">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h3 data-hotdoc-id="gtk_disable_setlocale">
-	<span><code>gtk_disable_setlocale</code></span>
+	<span><code>Gtk.Global.DisableSetlocale</code></span>
 </h3>
 
 
 
 
 <pre class="c-prototype">
-gtk_disable_setlocale ()</pre>
+Gtk.Global.DisableSetlocale ()</pre>
 
-<p>Prevents <a href="gtkmain-h.html#gtk_init">gtk_init</a>, <a href="gtkmain-h.html#gtk_init_check">gtk_init_check</a> and
-<a href="https://developer.gnome.org/gtk3/gtk3-General.html#gtk-parse-args">gtk_parse_args</a> from automatically
-calling <code>setlocale (LC_ALL, "")</code>. You would
-want to use this function if you wanted to set the locale for
-your program to something other than the user’s locale, or if
-you wanted to set different values for different locale categories.</p>
-<p>Most programs should not need to call this function.</p>
-
-
-
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_disable_setlocale">
-	<span><code>prototype.disable_setlocale</code></span>
-</h3>
-
-
-<pre class="javascript-prototype">
-function prototype.disable_setlocale(): {
-    // javascript wrapper for 'gtk_disable_setlocale'
-}</pre>
-
-<p>Prevents <a href="gtkmain-h.html#gtk_init">prototype.init</a>, <a href="gtkmain-h.html#gtk_init_check">prototype.init_check</a> and
-<a href="https://developer.gnome.org/gtk3/gtk3-General.html#gtk-parse-args">gtk_parse_args (not introspectable)</a> from automatically
-calling <code>setlocale (LC_ALL, "")</code>. You would
-want to use this function if you wanted to set the locale for
-your program to something other than the user’s locale, or if
-you wanted to set different values for different locale categories.</p>
-<p>Most programs should not need to call this function.</p>
-
-
-
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_disable_setlocale">
-	<span><code>Gtk.disable_setlocale</code></span>
-</h3>
-
-
-<pre class="python-prototype">
-def Gtk.disable_setlocale ():
-    #python wrapper for 'gtk_disable_setlocale'</pre>
-
-<p>Prevents <a href="gtkmain-h.html#gtk_init">Gtk.init</a>, <a href="gtkmain-h.html#gtk_init_check">Gtk.init_check</a> and
+<p>Prevents <a href="gtkmain-h.html#gtk_init">Gtk.Global.Init</a>, <a href="gtkmain-h.html#gtk_init_check">Gtk.Global.InitCheck</a> and
 <a href="https://developer.gnome.org/gtk3/gtk3-General.html#gtk-parse-args">gtk_parse_args (not introspectable)</a> from automatically
 calling <code>setlocale (LC_ALL, "")</code>. You would
 want to use this function if you wanted to set the locale for
@@ -537,77 +274,28 @@ you wanted to set different values for different locale categories.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_get_default_language">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h3 data-hotdoc-id="gtk_get_default_language">
-	<span><code>gtk_get_default_language</code></span>
+	<span><code>Gtk.Global.GetDefaultLanguage</code></span>
 </h3>
 
 
 
 
 <pre class="c-prototype">
-<a title="PangoLanguage" href="https://developer.gnome.org/pango/unstable/pango-Scripts-and-Languages.html#PangoLanguage-struct">PangoLanguage</a> *
-gtk_get_default_language ()</pre>
-
-<p>Returns the <a href="https://developer.gnome.org/pango/unstable/pango-Scripts-and-Languages.html#PangoLanguage-struct">PangoLanguage</a> for the default language currently in
-effect. (Note that this can change over the life of an
-application.) The default language is derived from the current
-locale. It determines, for example, whether GTK+ uses the
-right-to-left or left-to-right text direction.</p>
-<p>This function is equivalent to <a href="https://developer.gnome.org/pango/unstable/pango-Scripts-and-Languages.html#pango-language-get-default">pango_language_get_default</a>.
-See that function for details.</p>
-
-
-
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					
-										
-<span class="annotation">[<abbr title="Don't free data after the code is done"><span class="acronym">transfer: none</span></abbr>]</span>
-
-										)
-								–
-			</div>
-							<p>the default language as a <a href="https://developer.gnome.org/pango/unstable/pango-Scripts-and-Languages.html#PangoLanguage-struct">PangoLanguage</a>,
-must not be freed</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_get_default_language">
-	<span><code>prototype.get_default_language</code></span>
-</h3>
-
-
-<pre class="javascript-prototype">
-function prototype.get_default_language(): {
-    // javascript wrapper for 'gtk_get_default_language'
-}</pre>
+<a title="Pango.Language" href="https://developer.gnome.org/pango/unstable/pango-Scripts-and-Languages.html#PangoLanguage-struct">Pango.Language</a>
+Gtk.Global.GetDefaultLanguage ()</pre>
 
 <p>Returns the <a href="https://developer.gnome.org/pango/unstable/pango-Scripts-and-Languages.html#PangoLanguage-struct">Pango.Language</a> for the default language currently in
 effect. (Note that this can change over the life of an
 application.) The default language is derived from the current
 locale. It determines, for example, whether GTK+ uses the
 right-to-left or left-to-right text direction.</p>
-<p>This function is equivalent to <a href="https://developer.gnome.org/pango/unstable/pango-Scripts-and-Languages.html#pango-language-get-default">Pango.prototype.get_default</a>.
+<p>This function is equivalent to <a href="https://developer.gnome.org/pango/unstable/pango-Scripts-and-Languages.html#pango-language-get-default">Pango.Language.GetDefault</a>.
 See that function for details.</p>
 
 
@@ -617,54 +305,6 @@ See that function for details.</p>
 		<div class="symbol-detail">
 			<div>
 				<b>Returns</b>
-									(
-					<a title="Pango.Language" href="https://developer.gnome.org/pango/unstable/pango-Scripts-and-Languages.html#PangoLanguage-struct">Pango.Language</a>
-										)
-								–
-			</div>
-							<p>the default language as a <a href="https://developer.gnome.org/pango/unstable/pango-Scripts-and-Languages.html#PangoLanguage-struct">Pango.Language</a>,
-must not be freed</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_get_default_language">
-	<span><code>Gtk.get_default_language</code></span>
-</h3>
-
-
-<pre class="python-prototype">
-def Gtk.get_default_language ():
-    #python wrapper for 'gtk_get_default_language'</pre>
-
-<p>Returns the <a href="https://developer.gnome.org/pango/unstable/pango-Scripts-and-Languages.html#PangoLanguage-struct">Pango.Language</a> for the default language currently in
-effect. (Note that this can change over the life of an
-application.) The default language is derived from the current
-locale. It determines, for example, whether GTK+ uses the
-right-to-left or left-to-right text direction.</p>
-<p>This function is equivalent to <a href="https://developer.gnome.org/pango/unstable/pango-Scripts-and-Languages.html#pango-language-get-default">Pango.Language.get_default</a>.
-See that function for details.</p>
-
-
-
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Pango.Language" href="https://developer.gnome.org/pango/unstable/pango-Scripts-and-Languages.html#PangoLanguage-struct">Pango.Language</a>
-										)
 								–
 			</div>
 							<p>the default language as a <a href="https://developer.gnome.org/pango/unstable/pango-Scripts-and-Languages.html#PangoLanguage-struct">Pango.Language</a>,
@@ -685,30 +325,30 @@ must not be freed</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.12;" id="gtk_get_locale_direction">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h3 data-hotdoc-id="gtk_get_locale_direction">
-	<span><code>gtk_get_locale_direction</code></span>
+	<span><code>Gtk.Global.GetLocaleDirection</code></span>
 </h3>
 
 
 
 
 <pre class="c-prototype">
-<a title="GtkTextDirection" href="gtkwidget-h.html#GtkTextDirection">GtkTextDirection</a>
-gtk_get_locale_direction ()</pre>
+<a title="Gtk.TextDirection" href="gtkwidget-h.html#GtkTextDirection">Gtk.TextDirection</a>
+Gtk.Global.GetLocaleDirection ()</pre>
 
 <p>Get the direction of the current locale. This is the expected
 reading direction for text and UI.</p>
 <p>This function depends on the current locale being set with
-setlocale and will default to setting the <a href="gtkwidget-h.html#GTK_TEXT_DIR_LTR">GTK_TEXT_DIR_LTR</a>
-direction otherwise. <a href="gtkwidget-h.html#GTK_TEXT_DIR_NONE">GTK_TEXT_DIR_NONE</a> will never be returned.</p>
+setlocale and will default to setting the <a href="gtkwidget-h.html#GTK_TEXT_DIR_LTR">Gtk.TextDirection.Ltr</a>
+direction otherwise. <a href="gtkwidget-h.html#GTK_TEXT_DIR_NONE">Gtk.TextDirection.None</a> will never be returned.</p>
 <p>GTK+ sets the default text direction according to the locale
-during <a href="gtkmain-h.html#gtk_init">gtk_init</a>, and you should normally use
-<a href="gtkwidget-h.html#gtk_widget_get_direction">gtk_widget_get_direction</a> or <a href="gtkwidget-h.html#gtk_widget_get_default_direction">gtk_widget_get_default_direction</a>
+during <a href="gtkmain-h.html#gtk_init">Gtk.Global.Init</a>, and you should normally use
+<a href="gtkwidget-h.html#gtk_widget_get_direction">Gtk.Widget.GetDirection</a> or <a href="gtkwidget-h.html#gtk_widget_get_default_direction">Gtk.Widget.GetDefaultDirection</a>
 to obtain the current direcion.</p>
 <p>This function is only needed rare cases when the locale is
 changed after GTK+ has already been initialized. In this case,
@@ -725,119 +365,6 @@ you can use it to update the default text direction as follows:</p>
 		<div class="symbol-detail">
 			<div>
 				<b>Returns</b>
-								–
-			</div>
-							<p>the <a href="gtkwidget-h.html#GtkTextDirection">GtkTextDirection</a> of the current locale</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.12
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_get_locale_direction">
-	<span><code>prototype.get_locale_direction</code></span>
-</h3>
-
-
-<pre class="javascript-prototype">
-function prototype.get_locale_direction(): {
-    // javascript wrapper for 'gtk_get_locale_direction'
-}</pre>
-
-<p>Get the direction of the current locale. This is the expected
-reading direction for text and UI.</p>
-<p>This function depends on the current locale being set with
-setlocale and will default to setting the <a href="gtkwidget-h.html#GTK_TEXT_DIR_LTR">Gtk.TextDirection.LTR</a>
-direction otherwise. <a href="gtkwidget-h.html#GTK_TEXT_DIR_NONE">Gtk.TextDirection.NONE</a> will never be returned.</p>
-<p>GTK+ sets the default text direction according to the locale
-during <a href="gtkmain-h.html#gtk_init">prototype.init</a>, and you should normally use
-<a href="gtkwidget-h.html#gtk_widget_get_direction">Gtk.prototype.get_direction</a> or <a href="gtkwidget-h.html#gtk_widget_get_default_direction">Gtk.prototype.get_default_direction</a>
-to obtain the current direcion.</p>
-<p>This function is only needed rare cases when the locale is
-changed after GTK+ has already been initialized. In this case,
-you can use it to update the default text direction as follows:</p>
-<pre><code class="language-[&lt;!--"> setlocale (LC_ALL, new_locale);
- direction = gtk_get_locale_direction ();
- gtk_widget_set_default_direction (direction);
-</code></pre>
-
-
-
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Gtk.TextDirection" href="gtkwidget-h.html#GtkTextDirection">Gtk.TextDirection</a>
-										)
-								–
-			</div>
-							<p>the <a href="gtkwidget-h.html#GtkTextDirection">Gtk.TextDirection</a> of the current locale</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.12
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_get_locale_direction">
-	<span><code>Gtk.get_locale_direction</code></span>
-</h3>
-
-
-<pre class="python-prototype">
-def Gtk.get_locale_direction ():
-    #python wrapper for 'gtk_get_locale_direction'</pre>
-
-<p>Get the direction of the current locale. This is the expected
-reading direction for text and UI.</p>
-<p>This function depends on the current locale being set with
-setlocale and will default to setting the <a href="gtkwidget-h.html#GTK_TEXT_DIR_LTR">Gtk.TextDirection.LTR</a>
-direction otherwise. <a href="gtkwidget-h.html#GTK_TEXT_DIR_NONE">Gtk.TextDirection.NONE</a> will never be returned.</p>
-<p>GTK+ sets the default text direction according to the locale
-during <a href="gtkmain-h.html#gtk_init">Gtk.init</a>, and you should normally use
-<a href="gtkwidget-h.html#gtk_widget_get_direction">Gtk.Widget.get_direction</a> or <a href="gtkwidget-h.html#gtk_widget_get_default_direction">Gtk.Widget.get_default_direction</a>
-to obtain the current direcion.</p>
-<p>This function is only needed rare cases when the locale is
-changed after GTK+ has already been initialized. In this case,
-you can use it to update the default text direction as follows:</p>
-<pre><code class="language-[&lt;!--"> setlocale (LC_ALL, new_locale);
- direction = gtk_get_locale_direction ();
- gtk_widget_set_default_direction (direction);
-</code></pre>
-
-
-
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Gtk.TextDirection" href="gtkwidget-h.html#GtkTextDirection">Gtk.TextDirection</a>
-										)
 								–
 			</div>
 							<p>the <a href="gtkwidget-h.html#GtkTextDirection">Gtk.TextDirection</a> of the current locale</p>
@@ -860,114 +387,35 @@ you can use it to update the default text direction as follows:</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_init">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h3 data-hotdoc-id="gtk_init">
-	<span><code>gtk_init</code></span>
+	<span><code>Gtk.Global.Init</code></span>
 </h3>
 
 
 
 
 <pre class="c-prototype">
-gtk_init ()</pre>
+Gtk.Global.Init ()</pre>
 
 <p>Call this function before using any other GTK+ functions in your GUI
 applications.  It will initialize everything needed to operate the
 toolkit and parses some standard command line options.</p>
-<p>If you are using <a href="gtkapplication-h.html#GtkApplication">GtkApplication</a>, you don't have to call <a href="gtkmain-h.html#gtk_init">gtk_init</a>
-or <a href="gtkmain-h.html#gtk_init_check">gtk_init_check</a>; the GtkApplication::startup handler
+<p>If you are using <a href="gtkapplication-h.html#GtkApplication">Gtk.Application</a>, you don't have to call <a href="gtkmain-h.html#gtk_init">Gtk.Global.Init</a>
+or <a href="gtkmain-h.html#gtk_init_check">Gtk.Global.InitCheck</a>; the GtkApplication::startup handler
 does it for you.</p>
 <p>This function will terminate your program if it was unable to
 initialize the windowing system for some reason. If you want
 your program to fall back to a textual interface you want to
-call <a href="gtkmain-h.html#gtk_init_check">gtk_init_check</a> instead.</p>
+call <a href="gtkmain-h.html#gtk_init_check">Gtk.Global.InitCheck</a> instead.</p>
 <p>Since 2.18, GTK+ calls <code>signal (SIGPIPE, SIG_IGN)</code>
 during initialization, to ignore SIGPIPE signals, since these are
 almost never wanted in graphical applications. If you do need to
-handle SIGPIPE for some reason, reset the handler after <a href="gtkmain-h.html#gtk_init">gtk_init</a>,
-but notice that other libraries (e.g. libdbus or gvfs) might do
-similar things.</p>
-
-
-
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_init">
-	<span><code>prototype.init</code></span>
-</h3>
-
-
-<pre class="javascript-prototype">
-function prototype.init(): {
-    // javascript wrapper for 'gtk_init'
-}</pre>
-
-<p>Call this function before using any other GTK+ functions in your GUI
-applications.  It will initialize everything needed to operate the
-toolkit and parses some standard command line options.</p>
-<p>If you are using <a href="gtkapplication-h.html#GtkApplication">Gtk.Application</a>, you don't have to call <a href="gtkmain-h.html#gtk_init">prototype.init</a>
-or <a href="gtkmain-h.html#gtk_init_check">prototype.init_check</a>; the GtkApplication::startup handler
-does it for you.</p>
-<p>This function will terminate your program if it was unable to
-initialize the windowing system for some reason. If you want
-your program to fall back to a textual interface you want to
-call <a href="gtkmain-h.html#gtk_init_check">prototype.init_check</a> instead.</p>
-<p>Since 2.18, GTK+ calls <code>signal (SIGPIPE, SIG_IGN)</code>
-during initialization, to ignore SIGPIPE signals, since these are
-almost never wanted in graphical applications. If you do need to
-handle SIGPIPE for some reason, reset the handler after <a href="gtkmain-h.html#gtk_init">prototype.init</a>,
-but notice that other libraries (e.g. libdbus or gvfs) might do
-similar things.</p>
-
-
-
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_init">
-	<span><code>Gtk.init</code></span>
-</h3>
-
-
-<pre class="python-prototype">
-def Gtk.init ():
-    #python wrapper for 'gtk_init'</pre>
-
-<p>Call this function before using any other GTK+ functions in your GUI
-applications.  It will initialize everything needed to operate the
-toolkit and parses some standard command line options.</p>
-<p>If you are using <a href="gtkapplication-h.html#GtkApplication">Gtk.Application</a>, you don't have to call <a href="gtkmain-h.html#gtk_init">Gtk.init</a>
-or <a href="gtkmain-h.html#gtk_init_check">Gtk.init_check</a>; the GtkApplication::startup handler
-does it for you.</p>
-<p>This function will terminate your program if it was unable to
-initialize the windowing system for some reason. If you want
-your program to fall back to a textual interface you want to
-call <a href="gtkmain-h.html#gtk_init_check">Gtk.init_check</a> instead.</p>
-<p>Since 2.18, GTK+ calls <code>signal (SIGPIPE, SIG_IGN)</code>
-during initialization, to ignore SIGPIPE signals, since these are
-almost never wanted in graphical applications. If you do need to
-handle SIGPIPE for some reason, reset the handler after <a href="gtkmain-h.html#gtk_init">Gtk.init</a>,
+handle SIGPIPE for some reason, reset the handler after <a href="gtkmain-h.html#gtk_init">Gtk.Global.Init</a>,
 but notice that other libraries (e.g. libdbus or gvfs) might do
 similar things.</p>
 
@@ -986,25 +434,25 @@ similar things.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_init_check">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h3 data-hotdoc-id="gtk_init_check">
-	<span><code>gtk_init_check</code></span>
+	<span><code>Gtk.Global.InitCheck</code></span>
 </h3>
 
 
 
 
 <pre class="c-prototype">
-<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
-gtk_init_check ()</pre>
+<a title="bool" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/bool">bool</a>
+Gtk.Global.InitCheck ()</pre>
 
-<p>This function does the same work as <a href="gtkmain-h.html#gtk_init">gtk_init</a> with only a single
+<p>This function does the same work as <a href="gtkmain-h.html#gtk_init">Gtk.Global.Init</a> with only a single
 change: It does not terminate the program if the windowing system
-can’t be initialized. Instead it returns <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS">FALSE</a> on failure.</p>
+can’t be initialized. Instead it returns <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/false">false</a> on failure.</p>
 <p>This way the application can fall back to some other means of
 communication with the user - for example a curses or command line
 interface.</p>
@@ -1018,97 +466,8 @@ interface.</p>
 				<b>Returns</b>
 								–
 			</div>
-							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if the windowing system has been successfully
-initialized, <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS">FALSE</a> otherwise</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_init_check">
-	<span><code>prototype.init_check</code></span>
-</h3>
-
-
-<pre class="javascript-prototype">
-function prototype.init_check(): {
-    // javascript wrapper for 'gtk_init_check'
-}</pre>
-
-<p>This function does the same work as <a href="gtkmain-h.html#gtk_init">prototype.init</a> with only a single
-change: It does not terminate the program if the windowing system
-can’t be initialized. Instead it returns <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">false</a> on failure.</p>
-<p>This way the application can fall back to some other means of
-communication with the user - for example a curses or command line
-interface.</p>
-
-
-
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
-										)
-								–
-			</div>
-							<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if the windowing system has been successfully
-initialized, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">false</a> otherwise</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_init_check">
-	<span><code>Gtk.init_check</code></span>
-</h3>
-
-
-<pre class="python-prototype">
-def Gtk.init_check ():
-    #python wrapper for 'gtk_init_check'</pre>
-
-<p>This function does the same work as <a href="gtkmain-h.html#gtk_init">Gtk.init</a> with only a single
-change: It does not terminate the program if the windowing system
-can’t be initialized. Instead it returns <a href="https://docs.python.org/3/library/constants.html#False">False</a> on failure.</p>
-<p>This way the application can fall back to some other means of
-communication with the user - for example a curses or command line
-interface.</p>
-
-
-
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
-										)
-								–
-			</div>
-							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if the windowing system has been successfully
-initialized, <a href="https://docs.python.org/3/library/constants.html#False">False</a> otherwise</p>
+							<p><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/true">true</a> if the windowing system has been successfully
+initialized, <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/false">false</a> otherwise</p>
 
 					</div>
 	</div>
@@ -1125,21 +484,21 @@ initialized, <a href="https://docs.python.org/3/library/constants.html#False">Fa
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_events_pending">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h3 data-hotdoc-id="gtk_events_pending">
-	<span><code>gtk_events_pending</code></span>
+	<span><code>Gtk.Global.EventsPending</code></span>
 </h3>
 
 
 
 
 <pre class="c-prototype">
-<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
-gtk_events_pending ()</pre>
+<a title="bool" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/bool">bool</a>
+Gtk.Global.EventsPending ()</pre>
 
 <p>Checks if any events are pending.</p>
 <p>This can be used to update the UI and invoke timeouts etc.
@@ -1162,104 +521,7 @@ while doing some time intensive computation.</p>
 				<b>Returns</b>
 								–
 			</div>
-							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if any events are pending, <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS">FALSE</a> otherwise</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_events_pending">
-	<span><code>prototype.events_pending</code></span>
-</h3>
-
-
-<pre class="javascript-prototype">
-function prototype.events_pending(): {
-    // javascript wrapper for 'gtk_events_pending'
-}</pre>
-
-<p>Checks if any events are pending.</p>
-<p>This can be used to update the UI and invoke timeouts etc.
-while doing some time intensive computation.</p>
-<h2>Updating the UI during a long computation</h2>
-<pre><code class="language-[&lt;!--">  // computation going on...
-
-  while (gtk_events_pending ())
-    gtk_main_iteration ();
-
-  // ...computation continued
-</code></pre>
-
-
-
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
-										)
-								–
-			</div>
-							<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if any events are pending, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">false</a> otherwise</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_events_pending">
-	<span><code>Gtk.events_pending</code></span>
-</h3>
-
-
-<pre class="python-prototype">
-def Gtk.events_pending ():
-    #python wrapper for 'gtk_events_pending'</pre>
-
-<p>Checks if any events are pending.</p>
-<p>This can be used to update the UI and invoke timeouts etc.
-while doing some time intensive computation.</p>
-<h2>Updating the UI during a long computation</h2>
-<pre><code class="language-[&lt;!--">  // computation going on...
-
-  while (gtk_events_pending ())
-    gtk_main_iteration ();
-
-  // ...computation continued
-</code></pre>
-
-
-
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
-										)
-								–
-			</div>
-							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if any events are pending, <a href="https://docs.python.org/3/library/constants.html#False">False</a> otherwise</p>
+							<p><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/true">true</a> if any events are pending, <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/false">false</a> otherwise</p>
 
 					</div>
 	</div>
@@ -1276,76 +538,23 @@ while doing some time intensive computation.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_main">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h3 data-hotdoc-id="gtk_main">
-	<span><code>gtk_main</code></span>
+	<span><code>Gtk.Global.Main</code></span>
 </h3>
 
 
 
 
 <pre class="c-prototype">
-gtk_main ()</pre>
+Gtk.Global.Main ()</pre>
 
-<p>Runs the main loop until <a href="gtkmain-h.html#gtk_main_quit">gtk_main_quit</a> is called.</p>
-<p>You can nest calls to <a href="gtkmain-h.html#gtk_main">gtk_main</a>. In that case <a href="gtkmain-h.html#gtk_main_quit">gtk_main_quit</a>
-will make the innermost invocation of the main loop return.</p>
-
-
-
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_main">
-	<span><code>prototype.main</code></span>
-</h3>
-
-
-<pre class="javascript-prototype">
-function prototype.main(): {
-    // javascript wrapper for 'gtk_main'
-}</pre>
-
-<p>Runs the main loop until <a href="gtkmain-h.html#gtk_main_quit">prototype.main_quit</a> is called.</p>
-<p>You can nest calls to <a href="gtkmain-h.html#gtk_main">prototype.main</a>. In that case <a href="gtkmain-h.html#gtk_main_quit">prototype.main_quit</a>
-will make the innermost invocation of the main loop return.</p>
-
-
-
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_main">
-	<span><code>Gtk.main</code></span>
-</h3>
-
-
-<pre class="python-prototype">
-def Gtk.main ():
-    #python wrapper for 'gtk_main'</pre>
-
-<p>Runs the main loop until <a href="gtkmain-h.html#gtk_main_quit">Gtk.main_quit</a> is called.</p>
-<p>You can nest calls to <a href="gtkmain-h.html#gtk_main">Gtk.main</a>. In that case <a href="gtkmain-h.html#gtk_main_quit">Gtk.main_quit</a>
+<p>Runs the main loop until <a href="gtkmain-h.html#gtk_main_quit">Gtk.Global.MainQuit</a> is called.</p>
+<p>You can nest calls to <a href="gtkmain-h.html#gtk_main">Gtk.Global.Main</a>. In that case <a href="gtkmain-h.html#gtk_main_quit">Gtk.Global.MainQuit</a>
 will make the innermost invocation of the main loop return.</p>
 
 
@@ -1363,21 +572,21 @@ will make the innermost invocation of the main loop return.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_main_level">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h3 data-hotdoc-id="gtk_main_level">
-	<span><code>gtk_main_level</code></span>
+	<span><code>Gtk.Global.MainLevel</code></span>
 </h3>
 
 
 
 
 <pre class="c-prototype">
-<a title="guint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint">guint</a>
-gtk_main_level ()</pre>
+<a title="uint" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/uint">uint</a>
+Gtk.Global.MainLevel ()</pre>
 
 <p>Asks for the current nesting level of the main loop.</p>
 
@@ -1388,85 +597,6 @@ gtk_main_level ()</pre>
 		<div class="symbol-detail">
 			<div>
 				<b>Returns</b>
-								–
-			</div>
-							<p>the nesting level of the current invocation
-of the main loop</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_main_level">
-	<span><code>prototype.main_level</code></span>
-</h3>
-
-
-<pre class="javascript-prototype">
-function prototype.main_level(): {
-    // javascript wrapper for 'gtk_main_level'
-}</pre>
-
-<p>Asks for the current nesting level of the main loop.</p>
-
-
-
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
-										)
-								–
-			</div>
-							<p>the nesting level of the current invocation
-of the main loop</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_main_level">
-	<span><code>Gtk.main_level</code></span>
-</h3>
-
-
-<pre class="python-prototype">
-def Gtk.main_level ():
-    #python wrapper for 'gtk_main_level'</pre>
-
-<p>Asks for the current nesting level of the main loop.</p>
-
-
-
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
-										)
 								–
 			</div>
 							<p>the nesting level of the current invocation
@@ -1487,71 +617,20 @@ of the main loop</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_main_quit">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h3 data-hotdoc-id="gtk_main_quit">
-	<span><code>gtk_main_quit</code></span>
+	<span><code>Gtk.Global.MainQuit</code></span>
 </h3>
 
 
 
 
 <pre class="c-prototype">
-gtk_main_quit ()</pre>
-
-<p>Makes the innermost invocation of the main loop return
-when it regains control.</p>
-
-
-
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_main_quit">
-	<span><code>prototype.main_quit</code></span>
-</h3>
-
-
-<pre class="javascript-prototype">
-function prototype.main_quit(): {
-    // javascript wrapper for 'gtk_main_quit'
-}</pre>
-
-<p>Makes the innermost invocation of the main loop return
-when it regains control.</p>
-
-
-
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_main_quit">
-	<span><code>Gtk.main_quit</code></span>
-</h3>
-
-
-<pre class="python-prototype">
-def Gtk.main_quit ():
-    #python wrapper for 'gtk_main_quit'</pre>
+Gtk.Global.MainQuit ()</pre>
 
 <p>Makes the innermost invocation of the main loop return
 when it regains control.</p>
@@ -1571,27 +650,27 @@ when it regains control.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_main_iteration">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h3 data-hotdoc-id="gtk_main_iteration">
-	<span><code>gtk_main_iteration</code></span>
+	<span><code>Gtk.Global.MainIteration</code></span>
 </h3>
 
 
 
 
 <pre class="c-prototype">
-<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
-gtk_main_iteration ()</pre>
+<a title="bool" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/bool">bool</a>
+Gtk.Global.MainIteration ()</pre>
 
 <p>Runs a single iteration of the mainloop.</p>
 <p>If no events are waiting to be processed GTK+ will block
 until the next event is noticed. If you don’t want to block
-look at <a href="gtkmain-h.html#gtk_main_iteration_do">gtk_main_iteration_do</a> or check if any events are
-pending with <a href="gtkmain-h.html#gtk_events_pending">gtk_events_pending</a> first.</p>
+look at <a href="gtkmain-h.html#gtk_main_iteration_do">Gtk.Global.MainIterationDo</a> or check if any events are
+pending with <a href="gtkmain-h.html#gtk_events_pending">Gtk.Global.EventsPending</a> first.</p>
 
 
 
@@ -1602,94 +681,7 @@ pending with <a href="gtkmain-h.html#gtk_events_pending">gtk_events_pending</a> 
 				<b>Returns</b>
 								–
 			</div>
-							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if <a href="gtkmain-h.html#gtk_main_quit">gtk_main_quit</a> has been called for the
-innermost mainloop</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_main_iteration">
-	<span><code>prototype.main_iteration</code></span>
-</h3>
-
-
-<pre class="javascript-prototype">
-function prototype.main_iteration(): {
-    // javascript wrapper for 'gtk_main_iteration'
-}</pre>
-
-<p>Runs a single iteration of the mainloop.</p>
-<p>If no events are waiting to be processed GTK+ will block
-until the next event is noticed. If you don’t want to block
-look at <a href="gtkmain-h.html#gtk_main_iteration_do">prototype.main_iteration_do</a> or check if any events are
-pending with <a href="gtkmain-h.html#gtk_events_pending">prototype.events_pending</a> first.</p>
-
-
-
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
-										)
-								–
-			</div>
-							<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if <a href="gtkmain-h.html#gtk_main_quit">prototype.main_quit</a> has been called for the
-innermost mainloop</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_main_iteration">
-	<span><code>Gtk.main_iteration</code></span>
-</h3>
-
-
-<pre class="python-prototype">
-def Gtk.main_iteration ():
-    #python wrapper for 'gtk_main_iteration'</pre>
-
-<p>Runs a single iteration of the mainloop.</p>
-<p>If no events are waiting to be processed GTK+ will block
-until the next event is noticed. If you don’t want to block
-look at <a href="gtkmain-h.html#gtk_main_iteration_do">Gtk.main_iteration_do</a> or check if any events are
-pending with <a href="gtkmain-h.html#gtk_events_pending">Gtk.events_pending</a> first.</p>
-
-
-
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
-										)
-								–
-			</div>
-							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if <a href="gtkmain-h.html#gtk_main_quit">Gtk.main_quit</a> has been called for the
+							<p><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/true">true</a> if <a href="gtkmain-h.html#gtk_main_quit">Gtk.Global.MainQuit</a> has been called for the
 innermost mainloop</p>
 
 					</div>
@@ -1707,21 +699,21 @@ innermost mainloop</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_main_iteration_do">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h3 data-hotdoc-id="gtk_main_iteration_do">
-	<span><code>gtk_main_iteration_do</code></span>
+	<span><code>Gtk.Global.MainIterationDo</code></span>
 </h3>
 
 
 
 
 <pre class="c-prototype">
-<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
-gtk_main_iteration_do (<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a> blocking)</pre>
+<a title="bool" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/bool">bool</a>
+Gtk.Global.MainIterationDo (<a title="bool" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/bool">bool</a>)</pre>
 
 <p>Runs a single iteration of the mainloop.
 If no events are available either return or block depending on
@@ -1737,7 +729,7 @@ the value of <em>blocking</em>.</p>
 		<i><em><code>blocking</code></em></i>
 				–
 	</div>
-			<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if you want GTK+ to block if no events are pending</p>
+			<p><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/true">true</a> if you want GTK+ to block if no events are pending</p>
 
 	</div>
 
@@ -1749,122 +741,7 @@ the value of <em>blocking</em>.</p>
 				<b>Returns</b>
 								–
 			</div>
-							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if <a href="gtkmain-h.html#gtk_main_quit">gtk_main_quit</a> has been called for the
-innermost mainloop</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_main_iteration_do">
-	<span><code>prototype.main_iteration_do</code></span>
-</h3>
-
-
-<pre class="javascript-prototype">
-function prototype.main_iteration_do(blocking: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
-    // javascript wrapper for 'gtk_main_iteration_do'
-}</pre>
-
-<p>Runs a single iteration of the mainloop.
-If no events are available either return or block depending on
-the value of <em>blocking</em>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>blocking</code></em></i>
-					(
-						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
-						)
-				–
-	</div>
-			<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if you want GTK+ to block if no events are pending</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
-										)
-								–
-			</div>
-							<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if <a href="gtkmain-h.html#gtk_main_quit">prototype.main_quit</a> has been called for the
-innermost mainloop</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_main_iteration_do">
-	<span><code>Gtk.main_iteration_do</code></span>
-</h3>
-
-
-<pre class="python-prototype">
-def Gtk.main_iteration_do (blocking):
-    #python wrapper for 'gtk_main_iteration_do'</pre>
-
-<p>Runs a single iteration of the mainloop.
-If no events are available either return or block depending on
-the value of <em>blocking</em>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>blocking</code></em></i>
-					(
-						<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
-						)
-				–
-	</div>
-			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if you want GTK+ to block if no events are pending</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
-										)
-								–
-			</div>
-							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if <a href="gtkmain-h.html#gtk_main_quit">Gtk.main_quit</a> has been called for the
+							<p><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/true">true</a> if <a href="gtkmain-h.html#gtk_main_quit">Gtk.Global.MainQuit</a> has been called for the
 innermost mainloop</p>
 
 					</div>
@@ -1882,20 +759,20 @@ innermost mainloop</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_main_do_event">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h3 data-hotdoc-id="gtk_main_do_event">
-	<span><code>gtk_main_do_event</code></span>
+	<span><code>Gtk.Global.MainDoEvent</code></span>
 </h3>
 
 
 
 
 <pre class="c-prototype">
-gtk_main_do_event (GdkEvent* event)</pre>
+Gtk.Global.MainDoEvent (Gdk.Event)</pre>
 
 <p>Processes a single GDK event.</p>
 <p>This is public only to allow filtering of events between GDK and GTK+.
@@ -1916,7 +793,7 @@ the event is thrown away unless it belongs to a INCR transaction.</p>
 </li>
 <li>
 <p>Then the event is pushed onto a stack so you can query the currently
-handled event with <a href="gtkmain-h.html#gtk_get_current_event">gtk_get_current_event</a>.</p>
+handled event with <a href="gtkmain-h.html#gtk_get_current_event">Gtk.Global.GetCurrentEvent</a>.</p>
 </li>
 <li>
 <p>The event is sent to a widget. If a grab is active all events for widgets
@@ -1946,165 +823,6 @@ of that would be.</li>
 <div class="symbol-detail">
 	<div>
 		<i><em><code>event</code></em></i>
-				–
-	</div>
-			<p>An event to process (normally passed by GDK)</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_main_do_event">
-	<span><code>prototype.main_do_event</code></span>
-</h3>
-
-
-<pre class="javascript-prototype">
-function prototype.main_do_event(event: Gdk.Event): {
-    // javascript wrapper for 'gtk_main_do_event'
-}</pre>
-
-<p>Processes a single GDK event.</p>
-<p>This is public only to allow filtering of events between GDK and GTK+.
-You will not usually need to call this function directly.</p>
-<p>While you should not call this function directly, you might want to
-know how exactly events are handled. So here is what this function
-does with the event:</p>
-<ol>
-<li>
-<p>Compress enter/leave notify events. If the event passed build an
-enter/leave pair together with the next event (peeked from GDK), both
-events are thrown away. This is to avoid a backlog of (de-)highlighting
-widgets crossed by the pointer.</p>
-</li>
-<li>
-<p>Find the widget which got the event. If the widget can’t be determined
-the event is thrown away unless it belongs to a INCR transaction.</p>
-</li>
-<li>
-<p>Then the event is pushed onto a stack so you can query the currently
-handled event with <a href="gtkmain-h.html#gtk_get_current_event">prototype.get_current_event</a>.</p>
-</li>
-<li>
-<p>The event is sent to a widget. If a grab is active all events for widgets
-that are not in the contained in the grab widget are sent to the latter
-with a few exceptions:</p>
-<ul>
-<li>Deletion and destruction events are still sent to the event widget for
-obvious reasons.</li>
-<li>Events which directly relate to the visual representation of the event
-widget.</li>
-<li>Leave events are delivered to the event widget if there was an enter
-event delivered to it before without the paired leave event.</li>
-<li>Drag events are not redirected because it is unclear what the semantics
-of that would be.</li>
-</ul>
-</li>
-<li>
-<p>After finishing the delivery the event is popped from the event stack.</p>
-</li>
-</ol>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>event</code></em></i>
-					(
-						Gdk.Event
-						)
-				–
-	</div>
-			<p>An event to process (normally passed by GDK)</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_main_do_event">
-	<span><code>Gtk.main_do_event</code></span>
-</h3>
-
-
-<pre class="python-prototype">
-def Gtk.main_do_event (event):
-    #python wrapper for 'gtk_main_do_event'</pre>
-
-<p>Processes a single GDK event.</p>
-<p>This is public only to allow filtering of events between GDK and GTK+.
-You will not usually need to call this function directly.</p>
-<p>While you should not call this function directly, you might want to
-know how exactly events are handled. So here is what this function
-does with the event:</p>
-<ol>
-<li>
-<p>Compress enter/leave notify events. If the event passed build an
-enter/leave pair together with the next event (peeked from GDK), both
-events are thrown away. This is to avoid a backlog of (de-)highlighting
-widgets crossed by the pointer.</p>
-</li>
-<li>
-<p>Find the widget which got the event. If the widget can’t be determined
-the event is thrown away unless it belongs to a INCR transaction.</p>
-</li>
-<li>
-<p>Then the event is pushed onto a stack so you can query the currently
-handled event with <a href="gtkmain-h.html#gtk_get_current_event">Gtk.get_current_event</a>.</p>
-</li>
-<li>
-<p>The event is sent to a widget. If a grab is active all events for widgets
-that are not in the contained in the grab widget are sent to the latter
-with a few exceptions:</p>
-<ul>
-<li>Deletion and destruction events are still sent to the event widget for
-obvious reasons.</li>
-<li>Events which directly relate to the visual representation of the event
-widget.</li>
-<li>Leave events are delivered to the event widget if there was an enter
-event delivered to it before without the paired leave event.</li>
-<li>Drag events are not redirected because it is unclear what the semantics
-of that would be.</li>
-</ul>
-</li>
-<li>
-<p>After finishing the delivery the event is popped from the event stack.</p>
-</li>
-</ol>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>event</code></em></i>
-					(
-						Gdk.Event
-						)
 				–
 	</div>
 			<p>An event to process (normally passed by GDK)</p>
@@ -2125,23 +843,23 @@ of that would be.</li>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_true">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h3 data-hotdoc-id="gtk_true">
-	<span><code>gtk_true</code></span>
+	<span><code>Gtk.Global.True</code></span>
 </h3>
 
 
 
 
 <pre class="c-prototype">
-<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
-gtk_true ()</pre>
+<a title="bool" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/bool">bool</a>
+Gtk.Global.True ()</pre>
 
-<p>All this function does it to return <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a>.</p>
+<p>All this function does it to return <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/true">true</a>.</p>
 <p>This can be useful for example if you want to inhibit the deletion
 of a window. Of course you should not do this as the user expects
 a reaction from clicking the close icon of the window...</p>
@@ -2188,156 +906,7 @@ a reaction from clicking the close icon of the window...</p>
 				<b>Returns</b>
 								–
 			</div>
-							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a></p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_true">
-	<span><code>prototype.true</code></span>
-</h3>
-
-
-<pre class="javascript-prototype">
-function prototype.true(): {
-    // javascript wrapper for 'gtk_true'
-}</pre>
-
-<p>All this function does it to return <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a>.</p>
-<p>This can be useful for example if you want to inhibit the deletion
-of a window. Of course you should not do this as the user expects
-a reaction from clicking the close icon of the window...</p>
-<h2>A persistent window</h2>
-<pre><code class="language-[&lt;!--"> #include &lt;gtk/gtk.h&gt;
-
- int
- main (int argc, char **argv)
- {
-   GtkWidget *win, *but;
-   const char *text = "Close yourself. I mean it!";
-
-   gtk_init (&amp;argc, &amp;argv);
-
-   win = gtk_window_new (GTK_WINDOW_TOPLEVEL);
-   g_signal_connect (win,
-                     "delete-event",
-                     G_CALLBACK (gtk_true),
-                     NULL);
-   g_signal_connect (win, "destroy",
-                     G_CALLBACK (gtk_main_quit),
-                     NULL);
-
-   but = gtk_button_new_with_label (text);
-   g_signal_connect_swapped (but, "clicked",
-                             G_CALLBACK (gtk_object_destroy),
-                             win);
-   gtk_container_add (GTK_CONTAINER (win), but);
-
-   gtk_widget_show (win);
-
-   gtk_main ();
-
-   return 0;
- }
-</code></pre>
-
-
-
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
-										)
-								–
-			</div>
-							<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a></p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_true">
-	<span><code>Gtk.true</code></span>
-</h3>
-
-
-<pre class="python-prototype">
-def Gtk.true ():
-    #python wrapper for 'gtk_true'</pre>
-
-<p>All this function does it to return <a href="https://docs.python.org/3/library/constants.html#True">True</a>.</p>
-<p>This can be useful for example if you want to inhibit the deletion
-of a window. Of course you should not do this as the user expects
-a reaction from clicking the close icon of the window...</p>
-<h2>A persistent window</h2>
-<pre><code class="language-[&lt;!--"> #include &lt;gtk/gtk.h&gt;
-
- int
- main (int argc, char **argv)
- {
-   GtkWidget *win, *but;
-   const char *text = "Close yourself. I mean it!";
-
-   gtk_init (&amp;argc, &amp;argv);
-
-   win = gtk_window_new (GTK_WINDOW_TOPLEVEL);
-   g_signal_connect (win,
-                     "delete-event",
-                     G_CALLBACK (gtk_true),
-                     NULL);
-   g_signal_connect (win, "destroy",
-                     G_CALLBACK (gtk_main_quit),
-                     NULL);
-
-   but = gtk_button_new_with_label (text);
-   g_signal_connect_swapped (but, "clicked",
-                             G_CALLBACK (gtk_object_destroy),
-                             win);
-   gtk_container_add (GTK_CONTAINER (win), but);
-
-   gtk_widget_show (win);
-
-   gtk_main ();
-
-   return 0;
- }
-</code></pre>
-
-
-
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
-										)
-								–
-			</div>
-							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a></p>
+							<p><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/true">true</a></p>
 
 					</div>
 	</div>
@@ -2354,24 +923,24 @@ a reaction from clicking the close icon of the window...</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_false">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h3 data-hotdoc-id="gtk_false">
-	<span><code>gtk_false</code></span>
+	<span><code>Gtk.Global.False</code></span>
 </h3>
 
 
 
 
 <pre class="c-prototype">
-<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
-gtk_false ()</pre>
+<a title="bool" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/bool">bool</a>
+Gtk.Global.False ()</pre>
 
-<p>Analogical to <a href="gtkmain-h.html#gtk_true">gtk_true</a>, this function does nothing
-but always returns <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS">FALSE</a>.</p>
+<p>Analogical to <a href="gtkmain-h.html#gtk_true">Gtk.Global.True</a>, this function does nothing
+but always returns <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/false">false</a>.</p>
 
 
 
@@ -2382,86 +951,7 @@ but always returns <a href="https://developer.gnome.org/glib/unstable/glib-Stand
 				<b>Returns</b>
 								–
 			</div>
-							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS">FALSE</a></p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_false">
-	<span><code>prototype.false</code></span>
-</h3>
-
-
-<pre class="javascript-prototype">
-function prototype.false(): {
-    // javascript wrapper for 'gtk_false'
-}</pre>
-
-<p>Analogical to <a href="gtkmain-h.html#gtk_true">prototype.true</a>, this function does nothing
-but always returns <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">false</a>.</p>
-
-
-
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
-										)
-								–
-			</div>
-							<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">false</a></p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_false">
-	<span><code>Gtk.false</code></span>
-</h3>
-
-
-<pre class="python-prototype">
-def Gtk.false ():
-    #python wrapper for 'gtk_false'</pre>
-
-<p>Analogical to <a href="gtkmain-h.html#gtk_true">Gtk.true</a>, this function does nothing
-but always returns <a href="https://docs.python.org/3/library/constants.html#False">False</a>.</p>
-
-
-
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
-										)
-								–
-			</div>
-							<p><a href="https://docs.python.org/3/library/constants.html#False">False</a></p>
+							<p><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/false">false</a></p>
 
 					</div>
 	</div>
@@ -2478,21 +968,21 @@ but always returns <a href="https://docs.python.org/3/library/constants.html#Fal
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_grab_get_current">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h3 data-hotdoc-id="gtk_grab_get_current">
-	<span><code>gtk_grab_get_current</code></span>
+	<span><code>Gtk.Global.GrabGetCurrent</code></span>
 </h3>
 
 
 
 
 <pre class="c-prototype">
-<a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> *
-gtk_grab_get_current ()</pre>
+<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
+Gtk.Global.GrabGetCurrent ()</pre>
 
 <p>Queries the current grab of the default window group.</p>
 
@@ -2503,96 +993,10 @@ gtk_grab_get_current ()</pre>
 		<div class="symbol-detail">
 			<div>
 				<b>Returns</b>
-									(
-					
-										
-<span class="annotation">[<abbr title="Don't free data after the code is done"><span class="acronym">transfer: none</span></abbr>]</span>
-<span class="annotation">[<abbr title="NULL may be passed to the value"><span class="acronym">nullable</span></abbr>]</span>
-
-										)
 								–
 			</div>
 							<p>The widget which currently
-has the grab or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> if no grab is active</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_grab_get_current">
-	<span><code>prototype.grab_get_current</code></span>
-</h3>
-
-
-<pre class="javascript-prototype">
-function prototype.grab_get_current(): {
-    // javascript wrapper for 'gtk_grab_get_current'
-}</pre>
-
-<p>Queries the current grab of the default window group.</p>
-
-
-
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-										)
-								–
-			</div>
-							<p>The widget which currently
-has the grab or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a> if no grab is active</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_grab_get_current">
-	<span><code>Gtk.grab_get_current</code></span>
-</h3>
-
-
-<pre class="python-prototype">
-def Gtk.grab_get_current ():
-    #python wrapper for 'gtk_grab_get_current'</pre>
-
-<p>Queries the current grab of the default window group.</p>
-
-
-
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-										)
-								–
-			</div>
-							<p>The widget which currently
-has the grab or <a href="https://docs.python.org/3/library/constants.html#None">None</a> if no grab is active</p>
+has the grab or <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/null">null</a> if no grab is active</p>
 
 					</div>
 	</div>
@@ -2609,26 +1013,26 @@ has the grab or <a href="https://docs.python.org/3/library/constants.html#None">
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_device_grab_add">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h3 data-hotdoc-id="gtk_device_grab_add">
-	<span><code>gtk_device_grab_add</code></span>
+	<span><code>Gtk.Global.DeviceGrabAdd</code></span>
 </h3>
 
 
 
 
 <pre class="c-prototype">
-gtk_device_grab_add (<a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> * widget,
-                     <a title="GdkDevice" href="https://developer.gnome.org/gdk3/GdkDevice.html#GdkDevice-struct">GdkDevice</a> * device,
-                     <a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a> block_others)</pre>
+Gtk.Global.DeviceGrabAdd (<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>,
+                          <a title="Gdk.Device" href="https://developer.gnome.org/gdk3/GdkDevice.html#GdkDevice-struct">Gdk.Device</a>,
+                          <a title="bool" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/bool">bool</a>)</pre>
 
 <p>Adds a GTK+ grab on <em>device</em>, so all the events on <em>device</em> and its
 associated pointer or keyboard (if any) are delivered to <em>widget</em>.
-If the <em>block_others</em> parameter is <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a>, any other devices will be
+If the <em>block_others</em> parameter is <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/true">true</a>, any other devices will be
 unable to interact with <em>widget</em> during the grab.</p>
 
 
@@ -2639,73 +1043,6 @@ unable to interact with <em>widget</em> during the grab.</p>
 <div class="symbol-detail">
 	<div>
 		<i><em><code>widget</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkwidget-h.html#GtkWidget">GtkWidget</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>device</code></em></i>
-				–
-	</div>
-			<p>a <a href="https://developer.gnome.org/gdk3/GdkDevice.html#GdkDevice-struct">GdkDevice</a> to grab on.</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>block_others</code></em></i>
-				–
-	</div>
-			<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> to prevent other devices to interact with <em>widget</em>.</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.0
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_device_grab_add">
-	<span><code>prototype.device_grab_add</code></span>
-</h3>
-
-
-<pre class="javascript-prototype">
-function prototype.device_grab_add(widget: <a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>, device: <a title="Gdk.Device" href="https://developer.gnome.org/gdk3/GdkDevice.html#GdkDevice-struct">Gdk.Device</a>, block_others: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
-    // javascript wrapper for 'gtk_device_grab_add'
-}</pre>
-
-<p>Adds a GTK+ grab on <em>device</em>, so all the events on <em>device</em> and its
-associated pointer or keyboard (if any) are delivered to <em>widget</em>.
-If the <em>block_others</em> parameter is <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a>, any other devices will be
-unable to interact with <em>widget</em> during the grab.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
 				–
 	</div>
 			<p>a <a href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a></p>
@@ -2716,9 +1053,6 @@ unable to interact with <em>widget</em> during the grab.</p>
 <div class="symbol-detail">
 	<div>
 		<i><em><code>device</code></em></i>
-					(
-						<a title="Gdk.Device" href="https://developer.gnome.org/gdk3/GdkDevice.html#GdkDevice-struct">Gdk.Device</a>
-						)
 				–
 	</div>
 			<p>a <a href="https://developer.gnome.org/gdk3/GdkDevice.html#GdkDevice-struct">Gdk.Device</a> to grab on.</p>
@@ -2729,84 +1063,9 @@ unable to interact with <em>widget</em> during the grab.</p>
 <div class="symbol-detail">
 	<div>
 		<i><em><code>block_others</code></em></i>
-					(
-						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
-						)
 				–
 	</div>
-			<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> to prevent other devices to interact with <em>widget</em>.</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.0
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_device_grab_add">
-	<span><code>Gtk.device_grab_add</code></span>
-</h3>
-
-
-<pre class="python-prototype">
-def Gtk.device_grab_add (widget, device, block_others):
-    #python wrapper for 'gtk_device_grab_add'</pre>
-
-<p>Adds a GTK+ grab on <em>device</em>, so all the events on <em>device</em> and its
-associated pointer or keyboard (if any) are delivered to <em>widget</em>.
-If the <em>block_others</em> parameter is <a href="https://docs.python.org/3/library/constants.html#True">True</a>, any other devices will be
-unable to interact with <em>widget</em> during the grab.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>device</code></em></i>
-					(
-						<a title="Gdk.Device" href="https://developer.gnome.org/gdk3/GdkDevice.html#GdkDevice-struct">Gdk.Device</a>
-						)
-				–
-	</div>
-			<p>a <a href="https://developer.gnome.org/gdk3/GdkDevice.html#GdkDevice-struct">Gdk.Device</a> to grab on.</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>block_others</code></em></i>
-					(
-						<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
-						)
-				–
-	</div>
-			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> to prevent other devices to interact with <em>widget</em>.</p>
+			<p><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/true">true</a> to prevent other devices to interact with <em>widget</em>.</p>
 
 	</div>
 
@@ -2827,25 +1086,25 @@ unable to interact with <em>widget</em> during the grab.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_device_grab_remove">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h3 data-hotdoc-id="gtk_device_grab_remove">
-	<span><code>gtk_device_grab_remove</code></span>
+	<span><code>Gtk.Global.DeviceGrabRemove</code></span>
 </h3>
 
 
 
 
 <pre class="c-prototype">
-gtk_device_grab_remove (<a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> * widget,
-                        <a title="GdkDevice" href="https://developer.gnome.org/gdk3/GdkDevice.html#GdkDevice-struct">GdkDevice</a> * device)</pre>
+Gtk.Global.DeviceGrabRemove (<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>,
+                             <a title="Gdk.Device" href="https://developer.gnome.org/gdk3/GdkDevice.html#GdkDevice-struct">Gdk.Device</a>)</pre>
 
 <p>Removes a device grab from the given widget.</p>
-<p>You have to pair calls to <a href="gtkmain-h.html#gtk_device_grab_add">gtk_device_grab_add</a> and
-<a href="gtkmain-h.html#gtk_device_grab_remove">gtk_device_grab_remove</a>.</p>
+<p>You have to pair calls to <a href="gtkmain-h.html#gtk_device_grab_add">Gtk.Global.DeviceGrabAdd</a> and
+<a href="gtkmain-h.html#gtk_device_grab_remove">Gtk.Global.DeviceGrabRemove</a>.</p>
 
 
 
@@ -2855,62 +1114,6 @@ gtk_device_grab_remove (<a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">G
 <div class="symbol-detail">
 	<div>
 		<i><em><code>widget</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkwidget-h.html#GtkWidget">GtkWidget</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>device</code></em></i>
-				–
-	</div>
-			<p>a <a href="https://developer.gnome.org/gdk3/GdkDevice.html#GdkDevice-struct">GdkDevice</a></p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.0
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_device_grab_remove">
-	<span><code>prototype.device_grab_remove</code></span>
-</h3>
-
-
-<pre class="javascript-prototype">
-function prototype.device_grab_remove(widget: <a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>, device: <a title="Gdk.Device" href="https://developer.gnome.org/gdk3/GdkDevice.html#GdkDevice-struct">Gdk.Device</a>): {
-    // javascript wrapper for 'gtk_device_grab_remove'
-}</pre>
-
-<p>Removes a device grab from the given widget.</p>
-<p>You have to pair calls to <a href="gtkmain-h.html#gtk_device_grab_add">prototype.device_grab_add</a> and
-<a href="gtkmain-h.html#gtk_device_grab_remove">prototype.device_grab_remove</a>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
 				–
 	</div>
 			<p>a <a href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a></p>
@@ -2921,67 +1124,6 @@ function prototype.device_grab_remove(widget: <a title="Gtk.Widget" href="gtkwid
 <div class="symbol-detail">
 	<div>
 		<i><em><code>device</code></em></i>
-					(
-						<a title="Gdk.Device" href="https://developer.gnome.org/gdk3/GdkDevice.html#GdkDevice-struct">Gdk.Device</a>
-						)
-				–
-	</div>
-			<p>a <a href="https://developer.gnome.org/gdk3/GdkDevice.html#GdkDevice-struct">Gdk.Device</a></p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.0
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_device_grab_remove">
-	<span><code>Gtk.device_grab_remove</code></span>
-</h3>
-
-
-<pre class="python-prototype">
-def Gtk.device_grab_remove (widget, device):
-    #python wrapper for 'gtk_device_grab_remove'</pre>
-
-<p>Removes a device grab from the given widget.</p>
-<p>You have to pair calls to <a href="gtkmain-h.html#gtk_device_grab_add">Gtk.device_grab_add</a> and
-<a href="gtkmain-h.html#gtk_device_grab_remove">Gtk.device_grab_remove</a>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>device</code></em></i>
-					(
-						<a title="Gdk.Device" href="https://developer.gnome.org/gdk3/GdkDevice.html#GdkDevice-struct">Gdk.Device</a>
-						)
 				–
 	</div>
 			<p>a <a href="https://developer.gnome.org/gdk3/GdkDevice.html#GdkDevice-struct">Gdk.Device</a></p>
@@ -3005,72 +1147,24 @@ def Gtk.device_grab_remove (widget, device):
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_get_current_event">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h3 data-hotdoc-id="gtk_get_current_event">
-	<span><code>gtk_get_current_event</code></span>
+	<span><code>Gtk.Global.GetCurrentEvent</code></span>
 </h3>
 
 
 
 
 <pre class="c-prototype">
-GdkEvent*
-gtk_get_current_event ()</pre>
+Gdk.Event
+Gtk.Global.GetCurrentEvent ()</pre>
 
 <p>Obtains a copy of the event currently being processed by GTK+.</p>
-<p>For example, if you are handling a <a href="https://developer.gnome.org/gtk3/GtkButton.html#GtkButton-clicked">clicked</a> signal,
-the current event will be the <a href="https://developer.gnome.org/gdk3/gdk3-Event-Structures.html#GdkEventButton">GdkEventButton</a> that triggered
-the ::clicked signal.</p>
-
-
-
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					
-										
-<span class="annotation">[<abbr title="Free data after the code is done"><span class="acronym">transfer: full</span></abbr>]</span>
-<span class="annotation">[<abbr title="NULL may be passed to the value"><span class="acronym">nullable</span></abbr>]</span>
-
-										)
-								–
-			</div>
-							<p>a copy of the current event, or
-<a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> if there is no current event. The returned event must be
-freed with <a href="https://developer.gnome.org/gdk3/gdk3-Events.html#gdk-event-free">gdk_event_free</a>.</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_get_current_event">
-	<span><code>prototype.get_current_event</code></span>
-</h3>
-
-
-<pre class="javascript-prototype">
-function prototype.get_current_event(): {
-    // javascript wrapper for 'gtk_get_current_event'
-}</pre>
-
-<p>Obtains a copy of the event currently being processed by GTK+.</p>
-<p>For example, if you are handling a <a href="https://developer.gnome.org/gtk3/GtkButton.html#GtkButton-clicked">clicked</a> signal,
+<p>For example, if you are handling a <a href="https://developer.gnome.org/gtk3/GtkButton.html#GtkButton-clicked">Clicked</a> signal,
 the current event will be the <a href="https://developer.gnome.org/gdk3/gdk3-Event-Structures.html#GdkEventButton">Gdk.EventButton</a> that triggered
 the ::clicked signal.</p>
 
@@ -3081,57 +1175,11 @@ the ::clicked signal.</p>
 		<div class="symbol-detail">
 			<div>
 				<b>Returns</b>
-									(
-					Gdk.Event
-										)
 								–
 			</div>
 							<p>a copy of the current event, or
-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a> if there is no current event. The returned event must be
-freed with <a href="https://developer.gnome.org/gdk3/gdk3-Events.html#gdk-event-free">Gdk.prototype.free</a>.</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_get_current_event">
-	<span><code>Gtk.get_current_event</code></span>
-</h3>
-
-
-<pre class="python-prototype">
-def Gtk.get_current_event ():
-    #python wrapper for 'gtk_get_current_event'</pre>
-
-<p>Obtains a copy of the event currently being processed by GTK+.</p>
-<p>For example, if you are handling a <a href="https://developer.gnome.org/gtk3/GtkButton.html#GtkButton-clicked">clicked</a> signal,
-the current event will be the <a href="https://developer.gnome.org/gdk3/gdk3-Event-Structures.html#GdkEventButton">Gdk.EventButton</a> that triggered
-the ::clicked signal.</p>
-
-
-
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					Gdk.Event
-										)
-								–
-			</div>
-							<p>a copy of the current event, or
-<a href="https://docs.python.org/3/library/constants.html#None">None</a> if there is no current event. The returned event must be
-freed with <a href="https://developer.gnome.org/gdk3/gdk3-Events.html#gdk-event-free">Gdk.Event.free</a>.</p>
+<a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/null">null</a> if there is no current event. The returned event must be
+freed with <a href="https://developer.gnome.org/gdk3/gdk3-Events.html#gdk-event-free">Gdk.Event.Free</a>.</p>
 
 					</div>
 	</div>
@@ -3148,24 +1196,24 @@ freed with <a href="https://developer.gnome.org/gdk3/gdk3-Events.html#gdk-event-
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_get_current_event_time">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h3 data-hotdoc-id="gtk_get_current_event_time">
-	<span><code>gtk_get_current_event_time</code></span>
+	<span><code>Gtk.Global.GetCurrentEventTime</code></span>
 </h3>
 
 
 
 
 <pre class="c-prototype">
-<a title="guint32" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint32">guint32</a>
-gtk_get_current_event_time ()</pre>
+<a title="uint" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/uint">uint</a>
+Gtk.Global.GetCurrentEventTime ()</pre>
 
 <p>If there is a current event and it has a timestamp,
-return that timestamp, otherwise return <a href="https://developer.gnome.org/gdk3/gdk3-Events.html#GDK-CURRENT-TIME:CAPS">GDK_CURRENT_TIME</a>.</p>
+return that timestamp, otherwise return <a href="https://developer.gnome.org/gdk3/gdk3-Events.html#GDK-CURRENT-TIME:CAPS">Gdk.Constants.CURRENT_TIME</a>.</p>
 
 
 
@@ -3177,88 +1225,7 @@ return that timestamp, otherwise return <a href="https://developer.gnome.org/gdk
 								–
 			</div>
 							<p>the timestamp from the current event,
-or <a href="https://developer.gnome.org/gdk3/gdk3-Events.html#GDK-CURRENT-TIME:CAPS">GDK_CURRENT_TIME</a>.</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_get_current_event_time">
-	<span><code>prototype.get_current_event_time</code></span>
-</h3>
-
-
-<pre class="javascript-prototype">
-function prototype.get_current_event_time(): {
-    // javascript wrapper for 'gtk_get_current_event_time'
-}</pre>
-
-<p>If there is a current event and it has a timestamp,
-return that timestamp, otherwise return <a href="https://developer.gnome.org/gdk3/gdk3-Events.html#GDK-CURRENT-TIME:CAPS">Gdk.CURRENT_TIME</a>.</p>
-
-
-
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
-										)
-								–
-			</div>
-							<p>the timestamp from the current event,
-or <a href="https://developer.gnome.org/gdk3/gdk3-Events.html#GDK-CURRENT-TIME:CAPS">Gdk.CURRENT_TIME</a>.</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_get_current_event_time">
-	<span><code>Gtk.get_current_event_time</code></span>
-</h3>
-
-
-<pre class="python-prototype">
-def Gtk.get_current_event_time ():
-    #python wrapper for 'gtk_get_current_event_time'</pre>
-
-<p>If there is a current event and it has a timestamp,
-return that timestamp, otherwise return <a href="https://developer.gnome.org/gdk3/gdk3-Events.html#GDK-CURRENT-TIME:CAPS">Gdk.CURRENT_TIME</a>.</p>
-
-
-
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
-										)
-								–
-			</div>
-							<p>the timestamp from the current event,
-or <a href="https://developer.gnome.org/gdk3/gdk3-Events.html#GDK-CURRENT-TIME:CAPS">Gdk.CURRENT_TIME</a>.</p>
+or <a href="https://developer.gnome.org/gdk3/gdk3-Events.html#GDK-CURRENT-TIME:CAPS">Gdk.Constants.CURRENT_TIME</a>.</p>
 
 					</div>
 	</div>
@@ -3275,25 +1242,25 @@ or <a href="https://developer.gnome.org/gdk3/gdk3-Events.html#GDK-CURRENT-TIME:C
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_get_current_event_state">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h3 data-hotdoc-id="gtk_get_current_event_state">
-	<span><code>gtk_get_current_event_state</code></span>
+	<span><code>Gtk.Global.GetCurrentEventState</code></span>
 </h3>
 
 
 
 
 <pre class="c-prototype">
-<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
-gtk_get_current_event_state (<a title="GdkModifierType" href="https://developer.gnome.org/gdk3/gdk3-Windows.html#GdkModifierType">GdkModifierType</a> * state)</pre>
+<a title="bool" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/bool">bool</a>
+Gtk.Global.GetCurrentEventState (<a title="out" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/out">out</a>  <a title="Gdk.ModifierType" href="https://developer.gnome.org/gdk3/gdk3-Windows.html#GdkModifierType">Gdk.ModifierType</a>)</pre>
 
 <p>If there is a current event and it has a state field, place
-that state field in <em>state</em> and return <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a>, otherwise return
-<a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS">FALSE</a>.</p>
+that state field in <em>state</em> and return <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/true">true</a>, otherwise return
+<a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/false">false</a>.</p>
 
 
 
@@ -3303,11 +1270,6 @@ that state field in <em>state</em> and return <a href="https://developer.gnome.o
 <div class="symbol-detail">
 	<div>
 		<i><em><code>state</code></em></i>
-					(
-						
-<span class="annotation">[<abbr title="Parameter for returning results"><span class="acronym">out</span></abbr>]</span>
-
-						)
 				–
 	</div>
 			<p>a location to store the state of the current event</p>
@@ -3322,126 +1284,11 @@ that state field in <em>state</em> and return <a href="https://developer.gnome.o
 				<b>Returns</b>
 								–
 			</div>
-							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if there was a current event and it
+							<p><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/true">true</a> if there was a current event and it
 had a state field</p>
 
 					</div>
 	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_get_current_event_state">
-	<span><code>prototype.get_current_event_state</code></span>
-</h3>
-
-
-<pre class="javascript-prototype">
-function prototype.get_current_event_state(): {
-    // javascript wrapper for 'gtk_get_current_event_state'
-}</pre>
-
-<p>If there is a current event and it has a state field, place
-that state field in <em>state</em> and return <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a>, otherwise return
-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">false</a>.</p>
-
-
-
-
-		<div class="return-values-container">
-		<p><b>Returns a tuple made of:</b></p>
-				
-<div class="symbol-detail">
-	<div>
-									(
-			<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
-						)
-				–
-	</div>
-			<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if there was a current event and it
-had a state field</p>
-
-	</div>
-
-				
-<div class="symbol-detail">
-	<div>
-				<i><em><code>state</code></em></i>
-									(
-			<a title="Gdk.ModifierType" href="https://developer.gnome.org/gdk3/gdk3-Windows.html#GdkModifierType">Gdk.ModifierType</a>
-						)
-				–
-	</div>
-			<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if there was a current event and it
-had a state field</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_get_current_event_state">
-	<span><code>Gtk.get_current_event_state</code></span>
-</h3>
-
-
-<pre class="python-prototype">
-def Gtk.get_current_event_state ():
-    #python wrapper for 'gtk_get_current_event_state'</pre>
-
-<p>If there is a current event and it has a state field, place
-that state field in <em>state</em> and return <a href="https://docs.python.org/3/library/constants.html#True">True</a>, otherwise return
-<a href="https://docs.python.org/3/library/constants.html#False">False</a>.</p>
-
-
-
-
-		<div class="return-values-container">
-		<p><b>Returns a tuple made of:</b></p>
-				
-<div class="symbol-detail">
-	<div>
-									(
-			<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
-						)
-				–
-	</div>
-			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if there was a current event and it
-had a state field</p>
-
-	</div>
-
-				
-<div class="symbol-detail">
-	<div>
-				<i><em><code>state</code></em></i>
-									(
-			<a title="Gdk.ModifierType" href="https://developer.gnome.org/gdk3/gdk3-Windows.html#GdkModifierType">Gdk.ModifierType</a>
-						)
-				–
-	</div>
-			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if there was a current event and it
-had a state field</p>
-
-	</div>
-
-			</div>
 
 
 
@@ -3455,24 +1302,24 @@ had a state field</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_get_current_event_device">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h3 data-hotdoc-id="gtk_get_current_event_device">
-	<span><code>gtk_get_current_event_device</code></span>
+	<span><code>Gtk.Global.GetCurrentEventDevice</code></span>
 </h3>
 
 
 
 
 <pre class="c-prototype">
-<a title="GdkDevice" href="https://developer.gnome.org/gdk3/GdkDevice.html#GdkDevice-struct">GdkDevice</a> *
-gtk_get_current_event_device ()</pre>
+<a title="Gdk.Device" href="https://developer.gnome.org/gdk3/GdkDevice.html#GdkDevice-struct">Gdk.Device</a>
+Gtk.Global.GetCurrentEventDevice ()</pre>
 
 <p>If there is a current event and it has a device, return that
-device, otherwise return <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a>.</p>
+device, otherwise return <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
 
 
 
@@ -3481,95 +1328,9 @@ device, otherwise return <a href="https://developer.gnome.org/glib/unstable/glib
 		<div class="symbol-detail">
 			<div>
 				<b>Returns</b>
-									(
-					
-										
-<span class="annotation">[<abbr title="Don't free data after the code is done"><span class="acronym">transfer: none</span></abbr>]</span>
-<span class="annotation">[<abbr title="NULL may be passed to the value"><span class="acronym">nullable</span></abbr>]</span>
-
-										)
 								–
 			</div>
-							<p>a <a href="https://developer.gnome.org/gdk3/GdkDevice.html#GdkDevice-struct">GdkDevice</a>, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_get_current_event_device">
-	<span><code>prototype.get_current_event_device</code></span>
-</h3>
-
-
-<pre class="javascript-prototype">
-function prototype.get_current_event_device(): {
-    // javascript wrapper for 'gtk_get_current_event_device'
-}</pre>
-
-<p>If there is a current event and it has a device, return that
-device, otherwise return <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a>.</p>
-
-
-
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Gdk.Device" href="https://developer.gnome.org/gdk3/GdkDevice.html#GdkDevice-struct">Gdk.Device</a>
-										)
-								–
-			</div>
-							<p>a <a href="https://developer.gnome.org/gdk3/GdkDevice.html#GdkDevice-struct">Gdk.Device</a>, or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_get_current_event_device">
-	<span><code>Gtk.get_current_event_device</code></span>
-</h3>
-
-
-<pre class="python-prototype">
-def Gtk.get_current_event_device ():
-    #python wrapper for 'gtk_get_current_event_device'</pre>
-
-<p>If there is a current event and it has a device, return that
-device, otherwise return <a href="https://docs.python.org/3/library/constants.html#None">None</a>.</p>
-
-
-
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Gdk.Device" href="https://developer.gnome.org/gdk3/GdkDevice.html#GdkDevice-struct">Gdk.Device</a>
-										)
-								–
-			</div>
-							<p>a <a href="https://developer.gnome.org/gdk3/GdkDevice.html#GdkDevice-struct">Gdk.Device</a>, or <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
+							<p>a <a href="https://developer.gnome.org/gdk3/GdkDevice.html#GdkDevice-struct">Gdk.Device</a>, or <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/null">null</a></p>
 
 					</div>
 	</div>
@@ -3586,24 +1347,24 @@ device, otherwise return <a href="https://docs.python.org/3/library/constants.ht
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_get_event_widget">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h3 data-hotdoc-id="gtk_get_event_widget">
-	<span><code>gtk_get_event_widget</code></span>
+	<span><code>Gtk.Global.GetEventWidget</code></span>
 </h3>
 
 
 
 
 <pre class="c-prototype">
-<a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> *
-gtk_get_event_widget (const GdkEvent* event)</pre>
+<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
+Gtk.Global.GetEventWidget (Gdk.Event)</pre>
 
-<p>If <em>event</em> is <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> or the event was not associated with any widget,
-returns <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a>, otherwise returns the widget that received the event
+<p>If <em>event</em> is <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/null">null</a> or the event was not associated with any widget,
+returns <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/null">null</a>, otherwise returns the widget that received the event
 originally.</p>
 
 
@@ -3626,132 +1387,10 @@ originally.</p>
 		<div class="symbol-detail">
 			<div>
 				<b>Returns</b>
-									(
-					
-										
-<span class="annotation">[<abbr title="Don't free data after the code is done"><span class="acronym">transfer: none</span></abbr>]</span>
-<span class="annotation">[<abbr title="NULL may be passed to the value"><span class="acronym">nullable</span></abbr>]</span>
-
-										)
 								–
 			</div>
 							<p>the widget that originally
-received <em>event</em>, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_get_event_widget">
-	<span><code>prototype.get_event_widget</code></span>
-</h3>
-
-
-<pre class="javascript-prototype">
-function prototype.get_event_widget(event: Gdk.Event): {
-    // javascript wrapper for 'gtk_get_event_widget'
-}</pre>
-
-<p>If <em>event</em> is <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a> or the event was not associated with any widget,
-returns <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a>, otherwise returns the widget that received the event
-originally.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>event</code></em></i>
-					(
-						Gdk.Event
-						)
-				–
-	</div>
-			<p>a GdkEvent</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-										)
-								–
-			</div>
-							<p>the widget that originally
-received <em>event</em>, or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_get_event_widget">
-	<span><code>Gtk.get_event_widget</code></span>
-</h3>
-
-
-<pre class="python-prototype">
-def Gtk.get_event_widget (event):
-    #python wrapper for 'gtk_get_event_widget'</pre>
-
-<p>If <em>event</em> is <a href="https://docs.python.org/3/library/constants.html#None">None</a> or the event was not associated with any widget,
-returns <a href="https://docs.python.org/3/library/constants.html#None">None</a>, otherwise returns the widget that received the event
-originally.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>event</code></em></i>
-					(
-						Gdk.Event
-						)
-				–
-	</div>
-			<p>a GdkEvent</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-										)
-								–
-			</div>
-							<p>the widget that originally
-received <em>event</em>, or <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
+received <em>event</em>, or <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/null">null</a></p>
 
 					</div>
 	</div>
@@ -3768,24 +1407,24 @@ received <em>event</em>, or <a href="https://docs.python.org/3/library/constants
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.92;" id="gtk_get_event_target">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h3 data-hotdoc-id="gtk_get_event_target">
-	<span><code>gtk_get_event_target</code></span>
+	<span><code>Gtk.Global.GetEventTarget</code></span>
 </h3>
 
 
 
 
 <pre class="c-prototype">
-<a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> *
-gtk_get_event_target (const GdkEvent* event)</pre>
+<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
+Gtk.Global.GetEventTarget (Gdk.Event)</pre>
 
-<p>If <em>event</em> is <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> or the event was not associated with any widget,
-returns <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a>, otherwise returns the widget that is the deepmost
+<p>If <em>event</em> is <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/null">null</a> or the event was not associated with any widget,
+returns <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/null">null</a>, otherwise returns the widget that is the deepmost
 receiver of the event.</p>
 
 
@@ -3808,135 +1447,9 @@ receiver of the event.</p>
 		<div class="symbol-detail">
 			<div>
 				<b>Returns</b>
-									(
-					
-										
-<span class="annotation">[<abbr title="Don't free data after the code is done"><span class="acronym">transfer: none</span></abbr>]</span>
-<span class="annotation">[<abbr title="NULL may be passed to the value"><span class="acronym">nullable</span></abbr>]</span>
-
-										)
 								–
 			</div>
-							<p>the target widget, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.92
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_get_event_target">
-	<span><code>prototype.get_event_target</code></span>
-</h3>
-
-
-<pre class="javascript-prototype">
-function prototype.get_event_target(event: Gdk.Event): {
-    // javascript wrapper for 'gtk_get_event_target'
-}</pre>
-
-<p>If <em>event</em> is <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a> or the event was not associated with any widget,
-returns <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a>, otherwise returns the widget that is the deepmost
-receiver of the event.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>event</code></em></i>
-					(
-						Gdk.Event
-						)
-				–
-	</div>
-			<p>a GdkEvent</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-										)
-								–
-			</div>
-							<p>the target widget, or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.92
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_get_event_target">
-	<span><code>Gtk.get_event_target</code></span>
-</h3>
-
-
-<pre class="python-prototype">
-def Gtk.get_event_target (event):
-    #python wrapper for 'gtk_get_event_target'</pre>
-
-<p>If <em>event</em> is <a href="https://docs.python.org/3/library/constants.html#None">None</a> or the event was not associated with any widget,
-returns <a href="https://docs.python.org/3/library/constants.html#None">None</a>, otherwise returns the widget that is the deepmost
-receiver of the event.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>event</code></em></i>
-					(
-						Gdk.Event
-						)
-				–
-	</div>
-			<p>a GdkEvent</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-										)
-								–
-			</div>
-							<p>the target widget, or <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
+							<p>the target widget, or <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/null">null</a></p>
 
 					</div>
 	</div>
@@ -3956,25 +1469,25 @@ receiver of the event.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.92;" id="gtk_get_event_target_with_type">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h3 data-hotdoc-id="gtk_get_event_target_with_type">
-	<span><code>gtk_get_event_target_with_type</code></span>
+	<span><code>Gtk.Global.GetEventTargetWithType</code></span>
 </h3>
 
 
 
 
 <pre class="c-prototype">
-<a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> *
-gtk_get_event_target_with_type (GdkEvent* event,
-                                <a title="GType" href="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#GType">GType</a> type)</pre>
+<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
+Gtk.Global.GetEventTargetWithType (Gdk.Event,
+                                   GType)</pre>
 
-<p>If <em>event</em> is <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> or the event was not associated with any widget,
-returns <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a>, otherwise returns first widget found from the event
+<p>If <em>event</em> is <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/null">null</a> or the event was not associated with any widget,
+returns <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/null">null</a>, otherwise returns first widget found from the event
 target to the toplevel that matches <em>type</em>.</p>
 
 
@@ -4007,164 +1520,10 @@ target to the toplevel that matches <em>type</em>.</p>
 		<div class="symbol-detail">
 			<div>
 				<b>Returns</b>
-									(
-					
-										
-<span class="annotation">[<abbr title="Don't free data after the code is done"><span class="acronym">transfer: none</span></abbr>]</span>
-<span class="annotation">[<abbr title="NULL may be passed to the value"><span class="acronym">nullable</span></abbr>]</span>
-
-										)
 								–
 			</div>
 							<p>the widget in the target stack
-with the given type, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.92
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_get_event_target_with_type">
-	<span><code>prototype.get_event_target_with_type</code></span>
-</h3>
-
-
-<pre class="javascript-prototype">
-function prototype.get_event_target_with_type(event: Gdk.Event, type: <a title="GObject.Type" href="https://developer.gnome.org/gobject/stable/gobject-Type-Information.html#GType">GObject.Type</a>): {
-    // javascript wrapper for 'gtk_get_event_target_with_type'
-}</pre>
-
-<p>If <em>event</em> is <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a> or the event was not associated with any widget,
-returns <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a>, otherwise returns first widget found from the event
-target to the toplevel that matches <em>type</em>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>event</code></em></i>
-					(
-						Gdk.Event
-						)
-				–
-	</div>
-			<p>a GdkEvent</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>type</code></em></i>
-					(
-						<a title="GObject.Type" href="https://developer.gnome.org/gobject/stable/gobject-Type-Information.html#GType">GObject.Type</a>
-						)
-				–
-	</div>
-			<p>the type to look for</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-										)
-								–
-			</div>
-							<p>the widget in the target stack
-with the given type, or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.92
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_get_event_target_with_type">
-	<span><code>Gtk.get_event_target_with_type</code></span>
-</h3>
-
-
-<pre class="python-prototype">
-def Gtk.get_event_target_with_type (event, type):
-    #python wrapper for 'gtk_get_event_target_with_type'</pre>
-
-<p>If <em>event</em> is <a href="https://docs.python.org/3/library/constants.html#None">None</a> or the event was not associated with any widget,
-returns <a href="https://docs.python.org/3/library/constants.html#None">None</a>, otherwise returns first widget found from the event
-target to the toplevel that matches <em>type</em>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>event</code></em></i>
-					(
-						Gdk.Event
-						)
-				–
-	</div>
-			<p>a GdkEvent</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>type</code></em></i>
-					(
-						<a title="GObject.Type" href="https://developer.gnome.org/gobject/stable/gobject-Type-Information.html#GType">GObject.Type</a>
-						)
-				–
-	</div>
-			<p>the type to look for</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-										)
-								–
-			</div>
-							<p>the widget in the target stack
-with the given type, or <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
+with the given type, or <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/null">null</a></p>
 
 					</div>
 	</div>
@@ -4184,37 +1543,37 @@ with the given type, or <a href="https://docs.python.org/3/library/constants.htm
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_propagate_event">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h3 data-hotdoc-id="gtk_propagate_event">
-	<span><code>gtk_propagate_event</code></span>
+	<span><code>Gtk.Global.PropagateEvent</code></span>
 </h3>
 
 
 
 
 <pre class="c-prototype">
-gtk_propagate_event (<a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> * widget,
-                     GdkEvent* event)</pre>
+Gtk.Global.PropagateEvent (<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>,
+                           Gdk.Event)</pre>
 
 <p>Sends an event to a widget, propagating the event to parent widgets
 if the event remains unhandled. This function will emit the event
 through all the hierarchy of <em>widget</em> through all propagation phases.</p>
-<p>Events received by GTK+ from GDK normally begin in <a href="gtkmain-h.html#gtk_main_do_event">gtk_main_do_event</a>.
+<p>Events received by GTK+ from GDK normally begin in <a href="gtkmain-h.html#gtk_main_do_event">Gtk.Global.MainDoEvent</a>.
 Depending on the type of event, existence of modal dialogs, grabs, etc.,
 the event may be propagated; if so, this function is used.</p>
-<p><a href="gtkmain-h.html#gtk_propagate_event">gtk_propagate_event</a> calls <a href="gtkwidget-h.html#gtk_widget_event">gtk_widget_event</a> on each widget it
-decides to send the event to. So <a href="gtkwidget-h.html#gtk_widget_event">gtk_widget_event</a> is the lowest-level
-function; it simply emits the <a href="https://developer.gnome.org/gtk3/GtkWidget.html#GtkWidget-event">event</a> and possibly an
-event-specific signal on a widget. <a href="gtkmain-h.html#gtk_propagate_event">gtk_propagate_event</a> is a bit
-higher-level, and <a href="gtkmain-h.html#gtk_main_do_event">gtk_main_do_event</a> is the highest level.</p>
+<p><a href="gtkmain-h.html#gtk_propagate_event">Gtk.Global.PropagateEvent</a> calls <a href="gtkwidget-h.html#gtk_widget_event">Gtk.Widget.Event</a> on each widget it
+decides to send the event to. So <a href="gtkwidget-h.html#gtk_widget_event">Gtk.Widget.Event</a> is the lowest-level
+function; it simply emits the <a href="https://developer.gnome.org/gtk3/GtkWidget.html#GtkWidget-event">Event</a> and possibly an
+event-specific signal on a widget. <a href="gtkmain-h.html#gtk_propagate_event">Gtk.Global.PropagateEvent</a> is a bit
+higher-level, and <a href="gtkmain-h.html#gtk_main_do_event">Gtk.Global.MainDoEvent</a> is the highest level.</p>
 <p>All that said, you most likely don’t want to use any of these
 functions; synthesizing events is rarely needed. There are almost
 certainly better ways to achieve your goals. For example, use
-<a href="gtkwidget-h.html#gtk_widget_queue_draw">gtk_widget_queue_draw</a> instead
+<a href="gtkwidget-h.html#gtk_widget_queue_draw">Gtk.Widget.QueueDraw</a> instead
 of making up expose events.</p>
 
 
@@ -4225,72 +1584,6 @@ of making up expose events.</p>
 <div class="symbol-detail">
 	<div>
 		<i><em><code>widget</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkwidget-h.html#GtkWidget">GtkWidget</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>event</code></em></i>
-				–
-	</div>
-			<p>an event</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_propagate_event">
-	<span><code>prototype.propagate_event</code></span>
-</h3>
-
-
-<pre class="javascript-prototype">
-function prototype.propagate_event(widget: <a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>, event: Gdk.Event): {
-    // javascript wrapper for 'gtk_propagate_event'
-}</pre>
-
-<p>Sends an event to a widget, propagating the event to parent widgets
-if the event remains unhandled. This function will emit the event
-through all the hierarchy of <em>widget</em> through all propagation phases.</p>
-<p>Events received by GTK+ from GDK normally begin in <a href="gtkmain-h.html#gtk_main_do_event">prototype.main_do_event</a>.
-Depending on the type of event, existence of modal dialogs, grabs, etc.,
-the event may be propagated; if so, this function is used.</p>
-<p><a href="gtkmain-h.html#gtk_propagate_event">prototype.propagate_event</a> calls <a href="gtkwidget-h.html#gtk_widget_event">Gtk.prototype.event</a> on each widget it
-decides to send the event to. So <a href="gtkwidget-h.html#gtk_widget_event">Gtk.prototype.event</a> is the lowest-level
-function; it simply emits the <a href="https://developer.gnome.org/gtk3/GtkWidget.html#GtkWidget-event">event</a> and possibly an
-event-specific signal on a widget. <a href="gtkmain-h.html#gtk_propagate_event">prototype.propagate_event</a> is a bit
-higher-level, and <a href="gtkmain-h.html#gtk_main_do_event">prototype.main_do_event</a> is the highest level.</p>
-<p>All that said, you most likely don’t want to use any of these
-functions; synthesizing events is rarely needed. There are almost
-certainly better ways to achieve your goals. For example, use
-<a href="gtkwidget-h.html#gtk_widget_queue_draw">Gtk.prototype.queue_draw</a> instead
-of making up expose events.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
 				–
 	</div>
 			<p>a <a href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a></p>
@@ -4301,77 +1594,6 @@ of making up expose events.</p>
 <div class="symbol-detail">
 	<div>
 		<i><em><code>event</code></em></i>
-					(
-						Gdk.Event
-						)
-				–
-	</div>
-			<p>an event</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_propagate_event">
-	<span><code>Gtk.propagate_event</code></span>
-</h3>
-
-
-<pre class="python-prototype">
-def Gtk.propagate_event (widget, event):
-    #python wrapper for 'gtk_propagate_event'</pre>
-
-<p>Sends an event to a widget, propagating the event to parent widgets
-if the event remains unhandled. This function will emit the event
-through all the hierarchy of <em>widget</em> through all propagation phases.</p>
-<p>Events received by GTK+ from GDK normally begin in <a href="gtkmain-h.html#gtk_main_do_event">Gtk.main_do_event</a>.
-Depending on the type of event, existence of modal dialogs, grabs, etc.,
-the event may be propagated; if so, this function is used.</p>
-<p><a href="gtkmain-h.html#gtk_propagate_event">Gtk.propagate_event</a> calls <a href="gtkwidget-h.html#gtk_widget_event">Gtk.Widget.event</a> on each widget it
-decides to send the event to. So <a href="gtkwidget-h.html#gtk_widget_event">Gtk.Widget.event</a> is the lowest-level
-function; it simply emits the <a href="https://developer.gnome.org/gtk3/GtkWidget.html#GtkWidget-event">event</a> and possibly an
-event-specific signal on a widget. <a href="gtkmain-h.html#gtk_propagate_event">Gtk.propagate_event</a> is a bit
-higher-level, and <a href="gtkmain-h.html#gtk_main_do_event">Gtk.main_do_event</a> is the highest level.</p>
-<p>All that said, you most likely don’t want to use any of these
-functions; synthesizing events is rarely needed. There are almost
-certainly better ways to achieve your goals. For example, use
-<a href="gtkwidget-h.html#gtk_widget_queue_draw">Gtk.Widget.queue_draw</a> instead
-of making up expose events.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-					(
-						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>event</code></em></i>
-					(
-						Gdk.Event
-						)
 				–
 	</div>
 			<p>an event</p>
@@ -4394,59 +1616,19 @@ of making up expose events.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="GTK_PRIORITY_RESIZE">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h3 data-hotdoc-id="GTK_PRIORITY_RESIZE">
-	<span><code>GTK_PRIORITY_RESIZE</code></span>
-</h3>
-
-
-<pre class="raw_code">
-#define GTK_PRIORITY_RESIZE (G_PRIORITY_HIGH_IDLE + 10)
-</pre>
-
-<p>Use this priority for functionality related to size allocation.</p>
-<p>It is used internally by GTK+ to compute the sizes of widgets.
-This priority is higher than <a href="https://developer.gnome.org/gdk3/gdk3-Events.html#GDK-PRIORITY-REDRAW:CAPS">GDK_PRIORITY_REDRAW</a> to avoid
-resizing a widget which was just redrawn.</p>
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h3 data-hotdoc-id="GTK_PRIORITY_RESIZE">
-	<span><code>Gtk.PRIORITY_RESIZE</code></span>
+	<span><code>Gtk.Constants.PRIORITY_RESIZE</code></span>
 </h3>
 
 
 <p>Use this priority for functionality related to size allocation.</p>
 <p>It is used internally by GTK+ to compute the sizes of widgets.
-This priority is higher than <a href="https://developer.gnome.org/gdk3/gdk3-Events.html#GDK-PRIORITY-REDRAW:CAPS">Gdk.PRIORITY_REDRAW</a> to avoid
-resizing a widget which was just redrawn.</p>
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="GTK_PRIORITY_RESIZE">
-	<span><code>Gtk.PRIORITY_RESIZE</code></span>
-</h3>
-
-
-<p>Use this priority for functionality related to size allocation.</p>
-<p>It is used internally by GTK+ to compute the sizes of widgets.
-This priority is higher than <a href="https://developer.gnome.org/gdk3/gdk3-Events.html#GDK-PRIORITY-REDRAW:CAPS">Gdk.PRIORITY_REDRAW</a> to avoid
+This priority is higher than <a href="https://developer.gnome.org/gdk3/gdk3-Events.html#GDK-PRIORITY-REDRAW:CAPS">Gdk.Constants.PRIORITY_REDRAW</a> to avoid
 resizing a widget which was just redrawn.</p>
 
 
@@ -4461,68 +1643,7 @@ resizing a widget which was just redrawn.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="GtkModuleInitFunc">
 	
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h3 data-hotdoc-id="GtkModuleInitFunc">
-	<span><code>GtkModuleInitFunc</code></span>
-</h3>
-
-
-
-
-<pre class="c-prototype">
-(*GtkModuleInitFunc) (<a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> * argc,
-                      <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> *** argv)</pre>
-
-<p>Each GTK+ module must have a function gtk_module_init with this prototype.
-This function is called after loading the module.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>argc</code></em></i>
-					(
-						
-<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
-
-						)
-				–
-	</div>
-			<p>GTK+ always passes <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> for this argument</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>argv</code></em></i>
-					(
-						
-<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
-<span class="annotation">[<abbr title="Parameter points to an array of items"><span class="acronym">array</span></abbr> length=argc]</span>
-
-						)
-				–
-	</div>
-			<p>GTK+ always passes <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> for this argument</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
@@ -4535,8 +1656,8 @@ This function is called after loading the module.</p>
 
 
 <pre class="c-prototype">
-(*Gtk.ModuleInitFunc) (<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>,
-                       [ <a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a> ])</pre>
+(*Gtk.ModuleInitFunc) (<a title="int" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/int">int</a>,
+                       <a title="string" href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/string">string</a> [])</pre>
 
 <p>Each GTK+ module must have a function gtk_module_init with this prototype.
 This function is called after loading the module.</p>
@@ -4549,12 +1670,9 @@ This function is called after loading the module.</p>
 <div class="symbol-detail">
 	<div>
 		<i><em><code>argc</code></em></i>
-					(
-						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
-						)
 				–
 	</div>
-			<p>GTK+ always passes <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a> for this argument</p>
+			<p>GTK+ always passes <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/null">null</a> for this argument</p>
 
 	</div>
 
@@ -4562,68 +1680,9 @@ This function is called after loading the module.</p>
 <div class="symbol-detail">
 	<div>
 		<i><em><code>argv</code></em></i>
-					(
-						[ <a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a> ]
-						)
 				–
 	</div>
-			<p>GTK+ always passes <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a> for this argument</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="GtkModuleInitFunc">
-	<span><code>Gtk.ModuleInitFunc</code></span>
-</h3>
-
-
-
-
-<pre class="c-prototype">
-(*Gtk.ModuleInitFunc) (<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>,
-                       [ <a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a> ])</pre>
-
-<p>Each GTK+ module must have a function gtk_module_init with this prototype.
-This function is called after loading the module.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>argc</code></em></i>
-					(
-						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
-						)
-				–
-	</div>
-			<p>GTK+ always passes <a href="https://docs.python.org/3/library/constants.html#None">None</a> for this argument</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>argv</code></em></i>
-					(
-						[ <a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a> ]
-						)
-				–
-	</div>
-			<p>GTK+ always passes <a href="https://docs.python.org/3/library/constants.html#None">None</a> for this argument</p>
+			<p>GTK+ always passes <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/null">null</a> for this argument</p>
 
 	</div>
 
@@ -4641,49 +1700,7 @@ This function is called after loading the module.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="since:2.2;" id="GtkModuleDisplayInitFunc">
 	
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h3 data-hotdoc-id="GtkModuleDisplayInitFunc">
-	<span><code>GtkModuleDisplayInitFunc</code></span>
-</h3>
-
-
-
-
-<pre class="c-prototype">
-(*GtkModuleDisplayInitFunc) (<a title="GdkDisplay" href="https://developer.gnome.org/gdk3/GdkDisplay.html#GdkDisplay-struct">GdkDisplay</a> * display)</pre>
-
-<p>A multihead-aware GTK+ module may have a gtk_module_display_init function
-with this prototype. GTK+ calls this function for each opened display.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>display</code></em></i>
-				–
-	</div>
-			<p>an open <a href="https://developer.gnome.org/gdk3/GdkDisplay.html#GdkDisplay-struct">GdkDisplay</a></p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.2
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
@@ -4709,54 +1726,6 @@ with this prototype. GTK+ calls this function for each opened display.</p>
 <div class="symbol-detail">
 	<div>
 		<i><em><code>display</code></em></i>
-					(
-						<a title="Gdk.Display" href="https://developer.gnome.org/gdk3/GdkDisplay.html#GdkDisplay-struct">Gdk.Display</a>
-						)
-				–
-	</div>
-			<p>an open <a href="https://developer.gnome.org/gdk3/GdkDisplay.html#GdkDisplay-struct">Gdk.Display</a></p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.2
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="GtkModuleDisplayInitFunc">
-	<span><code>Gtk.ModuleDisplayInitFunc</code></span>
-</h3>
-
-
-
-
-<pre class="c-prototype">
-(*Gtk.ModuleDisplayInitFunc) (<a title="Gdk.Display" href="https://developer.gnome.org/gdk3/GdkDisplay.html#GdkDisplay-struct">Gdk.Display</a>)</pre>
-
-<p>A multihead-aware GTK+ module may have a gtk_module_display_init function
-with this prototype. GTK+ calls this function for each opened display.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>display</code></em></i>
-					(
-						<a title="Gdk.Display" href="https://developer.gnome.org/gdk3/GdkDisplay.html#GdkDisplay-struct">Gdk.Display</a>
-						)
 				–
 	</div>
 			<p>an open <a href="https://developer.gnome.org/gdk3/GdkDisplay.html#GdkDisplay-struct">Gdk.Display</a></p>

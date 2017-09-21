@@ -89,7 +89,7 @@ $('body').removeClass('no-script');
 </nav>
 
 <main>
-<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="gtkapplicationwindow-h.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['c', 'javascript', 'python']" data-hotdoc-meta-gi-language="c">
+<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="gtkapplicationwindow-h.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['csharp']" data-hotdoc-meta-gi-language="c">
 <script src="assets/js/utils.js"></script>
 
 <div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
@@ -101,22 +101,22 @@ $('body').removeClass('no-script');
 	<div id="main">
 				    <div id="page-description" data-hotdoc-source="gtkapplicationwindow.h.markdown" data-hotdoc-role="main">
         <h1 id="gtkapplicationwindow-page">GtkApplicationWindow</h1>
-<p><a href="gtkapplicationwindow-h.html#GtkApplicationWindow" data-gi-href-javascript="gtkapplicationwindow-h.html#GtkApplicationWindow" data-gi-title-javascript="Gtk.ApplicationWindow" data-gi-href-python="gtkapplicationwindow-h.html#GtkApplicationWindow" data-gi-title-python="Gtk.ApplicationWindow">GtkApplicationWindow</a> is a <a href="gtkwindow-h.html#GtkWindow" data-gi-href-javascript="gtkwindow-h.html#GtkWindow" data-gi-title-javascript="Gtk.Window" data-gi-href-python="gtkwindow-h.html#GtkWindow" data-gi-title-python="Gtk.Window">GtkWindow</a> subclass that offers some
-extra functionality for better integration with <a href="gtkapplication-h.html#GtkApplication" data-gi-href-javascript="gtkapplication-h.html#GtkApplication" data-gi-title-javascript="Gtk.Application" data-gi-href-python="gtkapplication-h.html#GtkApplication" data-gi-title-python="Gtk.Application">GtkApplication</a>
+<p><a href="gtkapplicationwindow-h.html#GtkApplicationWindow" data-gi-href-csharp="gtkapplicationwindow-h.html#GtkApplicationWindow" data-gi-title-csharp="Gtk.ApplicationWindow">GtkApplicationWindow</a> is a <a href="gtkwindow-h.html#GtkWindow" data-gi-href-csharp="gtkwindow-h.html#GtkWindow" data-gi-title-csharp="Gtk.Window">GtkWindow</a> subclass that offers some
+extra functionality for better integration with <a href="gtkapplication-h.html#GtkApplication" data-gi-href-csharp="gtkapplication-h.html#GtkApplication" data-gi-title-csharp="Gtk.Application">GtkApplication</a>
 features.  Notably, it can handle both the application menu as well
-as the menubar. See <a href="gtkapplication-h.html#gtk_application_set_app_menu" data-gi-href-javascript="gtkapplication-h.html#gtk_application_set_app_menu" data-gi-title-javascript="Gtk.prototype.set_app_menu" data-gi-href-python="gtkapplication-h.html#gtk_application_set_app_menu" data-gi-title-python="Gtk.Application.set_app_menu">gtk_application_set_app_menu</a> and
-<a href="gtkapplication-h.html#gtk_application_set_menubar" data-gi-href-javascript="gtkapplication-h.html#gtk_application_set_menubar" data-gi-title-javascript="Gtk.prototype.set_menubar" data-gi-href-python="gtkapplication-h.html#gtk_application_set_menubar" data-gi-title-python="Gtk.Application.set_menubar">gtk_application_set_menubar</a>.</p>
-<p>This class implements the <a href="https://developer.gnome.org/gio/unstable/GActionGroup.html#GActionGroup-struct" data-gi-href-javascript="https://developer.gnome.org/gio/unstable/GActionGroup.html#GActionGroup-struct" data-gi-title-javascript="Gio.ActionGroup" data-gi-href-python="https://developer.gnome.org/gio/unstable/GActionGroup.html#GActionGroup-struct" data-gi-title-python="Gio.ActionGroup">GActionGroup</a> and <a href="https://developer.gnome.org/gio/unstable/GActionMap.html#GActionMap-struct" data-gi-href-javascript="https://developer.gnome.org/gio/unstable/GActionMap.html#GActionMap-struct" data-gi-title-javascript="Gio.ActionMap" data-gi-href-python="https://developer.gnome.org/gio/unstable/GActionMap.html#GActionMap-struct" data-gi-title-python="Gio.ActionMap">GActionMap</a> interfaces,
+as the menubar. See <a href="gtkapplication-h.html#gtk_application_set_app_menu" data-gi-href-csharp="gtkapplication-h.html#gtk_application_set_app_menu" data-gi-title-csharp="Gtk.Application.SetAppMenu">gtk_application_set_app_menu</a> and
+<a href="gtkapplication-h.html#gtk_application_set_menubar" data-gi-href-csharp="gtkapplication-h.html#gtk_application_set_menubar" data-gi-title-csharp="Gtk.Application.SetMenubar">gtk_application_set_menubar</a>.</p>
+<p>This class implements the <a href="https://developer.gnome.org/gio/unstable/GActionGroup.html#GActionGroup-struct" data-gi-href-csharp="https://developer.gnome.org/gio/unstable/GActionGroup.html#GActionGroup-struct" data-gi-title-csharp="Gio.IActionGroup">GActionGroup</a> and <a href="https://developer.gnome.org/gio/unstable/GActionMap.html#GActionMap-struct" data-gi-href-csharp="https://developer.gnome.org/gio/unstable/GActionMap.html#GActionMap-struct" data-gi-title-csharp="Gio.IActionMap">GActionMap</a> interfaces,
 to let you add window-specific actions that will be exported by the
-associated <a href="gtkapplication-h.html#GtkApplication" data-gi-href-javascript="gtkapplication-h.html#GtkApplication" data-gi-title-javascript="Gtk.Application" data-gi-href-python="gtkapplication-h.html#GtkApplication" data-gi-title-python="Gtk.Application">GtkApplication</a>, together with its application-wide
+associated <a href="gtkapplication-h.html#GtkApplication" data-gi-href-csharp="gtkapplication-h.html#GtkApplication" data-gi-title-csharp="Gtk.Application">GtkApplication</a>, together with its application-wide
 actions.  Window-specific actions are prefixed with the “win.”
 prefix and application-wide actions are prefixed with the “app.”
 prefix.  Actions must be addressed with the prefixed name when
-referring to them from a <a href="https://developer.gnome.org/gio/unstable/GMenuModel.html#GMenuModel-struct" data-gi-href-javascript="https://developer.gnome.org/gio/unstable/GMenuModel.html#GMenuModel-struct" data-gi-title-javascript="Gio.MenuModel" data-gi-href-python="https://developer.gnome.org/gio/unstable/GMenuModel.html#GMenuModel-struct" data-gi-title-python="Gio.MenuModel">GMenuModel</a>.</p>
-<p>Note that widgets that are placed inside a <a href="gtkapplicationwindow-h.html#GtkApplicationWindow" data-gi-href-javascript="gtkapplicationwindow-h.html#GtkApplicationWindow" data-gi-title-javascript="Gtk.ApplicationWindow" data-gi-href-python="gtkapplicationwindow-h.html#GtkApplicationWindow" data-gi-title-python="Gtk.ApplicationWindow">GtkApplicationWindow</a>
+referring to them from a <a href="https://developer.gnome.org/gio/unstable/GMenuModel.html#GMenuModel-struct" data-gi-href-csharp="https://developer.gnome.org/gio/unstable/GMenuModel.html#GMenuModel-struct" data-gi-title-csharp="Gio.MenuModel">GMenuModel</a>.</p>
+<p>Note that widgets that are placed inside a <a href="gtkapplicationwindow-h.html#GtkApplicationWindow" data-gi-href-csharp="gtkapplicationwindow-h.html#GtkApplicationWindow" data-gi-title-csharp="Gtk.ApplicationWindow">GtkApplicationWindow</a>
 can also activate these actions, if they implement the
-<a href="gtkactionable-h.html#GtkActionable" data-gi-href-javascript="gtkactionable-h.html#GtkActionable" data-gi-title-javascript="Gtk.Actionable" data-gi-href-python="gtkactionable-h.html#GtkActionable" data-gi-title-python="Gtk.Actionable">GtkActionable</a> interface.</p>
-<p>As with <a href="gtkapplication-h.html#GtkApplication" data-gi-href-javascript="gtkapplication-h.html#GtkApplication" data-gi-title-javascript="Gtk.Application" data-gi-href-python="gtkapplication-h.html#GtkApplication" data-gi-title-python="Gtk.Application">GtkApplication</a>, the GDK lock will be acquired when
+<a href="gtkactionable-h.html#GtkActionable" data-gi-href-csharp="gtkactionable-h.html#GtkActionable" data-gi-title-csharp="Gtk.IActionable">GtkActionable</a> interface.</p>
+<p>As with <a href="gtkapplication-h.html#GtkApplication" data-gi-href-csharp="gtkapplication-h.html#GtkApplication" data-gi-title-csharp="Gtk.Application">GtkApplication</a>, the GDK lock will be acquired when
 processing actions arriving from other processes and should therefore
 be held when activating actions locally (if GDK threads are enabled).</p>
 <p>The settings <a href="https://developer.gnome.org/gtk3/GtkSettings.html#GtkSettings--gtk-shell-shows-app-menu">GtkSettings:gtk-shell-shows-app-menu</a> and
@@ -127,7 +127,7 @@ For instance, on OS X, both menus will be displayed remotely;
 on Windows neither will be. gnome-shell (starting with version 3.4)
 will display the application menu, but not the menubar.</p>
 <p>If the desktop environment does not display the menubar, then
-<a href="gtkapplicationwindow-h.html#GtkApplicationWindow" data-gi-href-javascript="gtkapplicationwindow-h.html#GtkApplicationWindow" data-gi-title-javascript="Gtk.ApplicationWindow" data-gi-href-python="gtkapplicationwindow-h.html#GtkApplicationWindow" data-gi-title-python="Gtk.ApplicationWindow">GtkApplicationWindow</a> will automatically show a <a href="gtkmenubar-h.html#GtkMenuBar" data-gi-href-javascript="gtkmenubar-h.html#GtkMenuBar" data-gi-title-javascript="Gtk.MenuBar" data-gi-href-python="gtkmenubar-h.html#GtkMenuBar" data-gi-title-python="Gtk.MenuBar">GtkMenuBar</a> for it.
+<a href="gtkapplicationwindow-h.html#GtkApplicationWindow" data-gi-href-csharp="gtkapplicationwindow-h.html#GtkApplicationWindow" data-gi-title-csharp="Gtk.ApplicationWindow">GtkApplicationWindow</a> will automatically show a <a href="gtkmenubar-h.html#GtkMenuBar" data-gi-href-csharp="gtkmenubar-h.html#GtkMenuBar" data-gi-title-csharp="Gtk.MenuBar">GtkMenuBar</a> for it.
 This behaviour can be overridden with the <a href="https://developer.gnome.org/gtk3/GtkApplicationWindow.html#GtkApplicationWindow--show-menubar">GtkApplicationWindow:show-menubar</a>
 property. If the desktop environment does not display the application
 menu, then it will automatically be included in the menubar or in the
@@ -157,18 +157,18 @@ windows client-side decorations.</p>
 </code></pre>
 <h2 id="handling-fallback-yourself">Handling fallback yourself</h2>
 <p><a href="https://git.gnome.org/browse/gtk+/tree/examples/sunny.c">A simple example</a></p>
-<p>The XML format understood by <a href="gtkbuilder-h.html#GtkBuilder" data-gi-href-javascript="gtkbuilder-h.html#GtkBuilder" data-gi-title-javascript="Gtk.Builder" data-gi-href-python="gtkbuilder-h.html#GtkBuilder" data-gi-title-python="Gtk.Builder">GtkBuilder</a> for <a href="https://developer.gnome.org/gio/unstable/GMenuModel.html#GMenuModel-struct" data-gi-href-javascript="https://developer.gnome.org/gio/unstable/GMenuModel.html#GMenuModel-struct" data-gi-title-javascript="Gio.MenuModel" data-gi-href-python="https://developer.gnome.org/gio/unstable/GMenuModel.html#GMenuModel-struct" data-gi-title-python="Gio.MenuModel">GMenuModel</a> consists
+<p>The XML format understood by <a href="gtkbuilder-h.html#GtkBuilder" data-gi-href-csharp="gtkbuilder-h.html#GtkBuilder" data-gi-title-csharp="Gtk.Builder">GtkBuilder</a> for <a href="https://developer.gnome.org/gio/unstable/GMenuModel.html#GMenuModel-struct" data-gi-href-csharp="https://developer.gnome.org/gio/unstable/GMenuModel.html#GMenuModel-struct" data-gi-title-csharp="Gio.MenuModel">GMenuModel</a> consists
 of a toplevel <code>&lt;menu&gt;</code> element, which contains one or more <code>&lt;item&gt;</code>
 elements. Each <code>&lt;item&gt;</code> element contains <code>&lt;attribute&gt;</code> and <code>&lt;link&gt;</code>
 elements with a mandatory name attribute. <code>&lt;link&gt;</code> elements have the
 same content model as <code>&lt;menu&gt;</code>. Instead of <code>&lt;link name="submenu&gt;</code> or
 <code>&lt;link name="section"&gt;</code>, you can use <code>&lt;submenu&gt;</code> or <code>&lt;section&gt;</code>
 elements.</p>
-<p>Attribute values can be translated using gettext, like other <a href="gtkbuilder-h.html#GtkBuilder" data-gi-href-javascript="gtkbuilder-h.html#GtkBuilder" data-gi-title-javascript="Gtk.Builder" data-gi-href-python="gtkbuilder-h.html#GtkBuilder" data-gi-title-python="Gtk.Builder">GtkBuilder</a>
+<p>Attribute values can be translated using gettext, like other <a href="gtkbuilder-h.html#GtkBuilder" data-gi-href-csharp="gtkbuilder-h.html#GtkBuilder" data-gi-title-csharp="Gtk.Builder">GtkBuilder</a>
 content. <code>&lt;attribute&gt;</code> elements can be marked for translation with a
 <code>translatable="yes"</code> attribute. It is also possible to specify message
 context and translator comments, using the context and comments attributes.
-To make use of this, the <a href="gtkbuilder-h.html#GtkBuilder" data-gi-href-javascript="gtkbuilder-h.html#GtkBuilder" data-gi-title-javascript="Gtk.Builder" data-gi-href-python="gtkbuilder-h.html#GtkBuilder" data-gi-title-python="Gtk.Builder">GtkBuilder</a> must have been given the gettext
+To make use of this, the <a href="gtkbuilder-h.html#GtkBuilder" data-gi-href-csharp="gtkbuilder-h.html#GtkBuilder" data-gi-title-csharp="Gtk.Builder">GtkBuilder</a> must have been given the gettext
 domain to use.</p>
 <p>The following attributes are used when constructing menu items:</p>
 <ul>
@@ -186,7 +186,7 @@ Possible values include "action-disabled", "action-missing", "macos-menubar".</l
 <li>"label": a user-visible string to use as section heading</li>
 <li>"display-hint": a string used to determine special formatting for the section.
 Possible values include "horizontal-buttons".</li>
-<li>"text-direction": a string used to determine the <a href="gtkwidget-h.html#GtkTextDirection" data-gi-href-javascript="gtkwidget-h.html#GtkTextDirection" data-gi-title-javascript="Gtk.TextDirection" data-gi-href-python="gtkwidget-h.html#GtkTextDirection" data-gi-title-python="Gtk.TextDirection">GtkTextDirection</a> to use
+<li>"text-direction": a string used to determine the <a href="gtkwidget-h.html#GtkTextDirection" data-gi-href-csharp="gtkwidget-h.html#GtkTextDirection" data-gi-title-csharp="Gtk.TextDirection">GtkTextDirection</a> to use
 when "display-hint" is set to "horizontal-buttons". Possible values
 include "rtl", "ltr", and "none".</li>
 </ul>
@@ -203,7 +203,7 @@ include "rtl", "ltr", and "none".</li>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="GtkApplicationWindow">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
@@ -216,12 +216,12 @@ include "rtl", "ltr", and "none".</li>
 <div class="hierarchy_container">
 	<div class="hierarchy_details">
 <pre>
-<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object">GObject</a>
-    <span class="lineart">╰──</span><a title="GInitiallyUnowned" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-javascript="GObject.InitiallyUnowned" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-python="GObject.InitiallyUnowned">GInitiallyUnowned</a>
-        <span class="lineart">╰──</span><a title="GtkWidget" href="gtkwidget-h.html#GtkWidget" data-gi-href-javascript="gtkwidget-h.html#GtkWidget" data-gi-title-javascript="Gtk.Widget" data-gi-href-python="gtkwidget-h.html#GtkWidget" data-gi-title-python="Gtk.Widget">GtkWidget</a>
-            <span class="lineart">╰──</span><a title="GtkContainer" href="gtkcontainer-h.html#GtkContainer" data-gi-href-javascript="gtkcontainer-h.html#GtkContainer" data-gi-title-javascript="Gtk.Container" data-gi-href-python="gtkcontainer-h.html#GtkContainer" data-gi-title-python="Gtk.Container">GtkContainer</a>
-                <span class="lineart">╰──</span><a title="GtkBin" href="gtkbin-h.html#GtkBin" data-gi-href-javascript="gtkbin-h.html#GtkBin" data-gi-title-javascript="Gtk.Bin" data-gi-href-python="gtkbin-h.html#GtkBin" data-gi-title-python="Gtk.Bin">GtkBin</a>
-                    <span class="lineart">╰──</span><a title="GtkWindow" href="gtkwindow-h.html#GtkWindow" data-gi-href-javascript="gtkwindow-h.html#GtkWindow" data-gi-title-javascript="Gtk.Window" data-gi-href-python="gtkwindow-h.html#GtkWindow" data-gi-title-python="Gtk.Window">GtkWindow</a>
+<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-csharp="http://docs.go-mono.com/?link=T%3aGLib.Object" data-gi-title-csharp="GLib.Object">GObject</a>
+    <span class="lineart">╰──</span><a title="GInitiallyUnowned" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-href-csharp="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-csharp="GObject.InitiallyUnowned">GInitiallyUnowned</a>
+        <span class="lineart">╰──</span><a title="GtkWidget" href="gtkwidget-h.html#GtkWidget" data-gi-href-csharp="gtkwidget-h.html#GtkWidget" data-gi-title-csharp="Gtk.Widget">GtkWidget</a>
+            <span class="lineart">╰──</span><a title="GtkContainer" href="gtkcontainer-h.html#GtkContainer" data-gi-href-csharp="gtkcontainer-h.html#GtkContainer" data-gi-title-csharp="Gtk.Container">GtkContainer</a>
+                <span class="lineart">╰──</span><a title="GtkBin" href="gtkbin-h.html#GtkBin" data-gi-href-csharp="gtkbin-h.html#GtkBin" data-gi-title-csharp="Gtk.Bin">GtkBin</a>
+                    <span class="lineart">╰──</span><a title="GtkWindow" href="gtkwindow-h.html#GtkWindow" data-gi-href-csharp="gtkwindow-h.html#GtkWindow" data-gi-title-csharp="Gtk.Window">GtkWindow</a>
                         <span class="lineart">╰──</span>GtkApplicationWindow
 </pre>
 
@@ -229,229 +229,7 @@ include "rtl", "ltr", and "none".</li>
 
 </div>
 
-<div class="interfaces_container">
-	
-<p><b>Implemented interfaces:</b>
-    AtkImplementorIface, <a title="GActionGroup" href="https://developer.gnome.org/gio/unstable/GActionGroup.html#GActionGroup-struct" data-gi-href-javascript="https://developer.gnome.org/gio/unstable/GActionGroup.html#GActionGroup-struct" data-gi-title-javascript="Gio.ActionGroup" data-gi-href-python="https://developer.gnome.org/gio/unstable/GActionGroup.html#GActionGroup-struct" data-gi-title-python="Gio.ActionGroup">GActionGroup</a>, <a title="GActionMap" href="https://developer.gnome.org/gio/unstable/GActionMap.html#GActionMap-struct" data-gi-href-javascript="https://developer.gnome.org/gio/unstable/GActionMap.html#GActionMap-struct" data-gi-title-javascript="Gio.ActionMap" data-gi-href-python="https://developer.gnome.org/gio/unstable/GActionMap.html#GActionMap-struct" data-gi-title-python="Gio.ActionMap">GActionMap</a>, <a title="GtkBuildable" href="gtkbuildable-h.html#GtkBuildable" data-gi-href-javascript="gtkbuildable-h.html#GtkBuildable" data-gi-title-javascript="Gtk.Buildable" data-gi-href-python="gtkbuildable-h.html#GtkBuildable" data-gi-title-python="Gtk.Buildable">GtkBuildable</a>
-</p>
 
-</div>
-
-
-
-
-	<div class="members-container">
-		<h3>Members</h3>
-					
-<div class="symbol-detail" data-hotdoc-id="GtkApplicationWindow.parent_instance">
-	<div>
-		<i><em><code>parent_instance</code></em></i>
-		(<a title="GtkWindow" href="gtkwindow-h.html#GtkWindow" data-gi-href-javascript="gtkwindow-h.html#GtkWindow" data-gi-title-javascript="Gtk.Window" data-gi-href-python="gtkwindow-h.html#GtkWindow" data-gi-title-python="Gtk.Window">GtkWindow</a>)
-		–
-	</div>
-			<i>No description available</i>
-	</div>
-
-			</div>
-
-
-<h3>Class structure</h3>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="GtkApplicationWindowClass">
-	<span><code>GtkApplicationWindowClass</code></span>
-</h4>
-
-
-
-
-
-	<div class="members-container">
-		<h5>Fields</h5>
-					
-<div class="symbol-detail" data-hotdoc-id="GtkApplicationWindowClass.parent_class">
-	<div>
-		<i><em><code>parent_class</code></em></i>
-		(<a title="GtkWindowClass" href="GtkWindowClass">GtkWindowClass</a>)
-		–
-	</div>
-			<i>No description available</i>
-	</div>
-
-			</div>
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h3>
-	Gtk.ApplicationWindowClass
-</h3>
-
-
-
-
-
-	<div class="members-container">
-		<h5>Attributes</h5>
-					
-<div class="symbol-detail" data-hotdoc-id="GtkApplicationWindowClass.parent_class">
-	<div>
-		<i><em><code>ApplicationWindowClass.parent_class</code></em></i>
-		(<a title="Gtk.WindowClass" href="GtkWindowClass">Gtk.WindowClass</a>)
-		–
-	</div>
-			<i>No description available</i>
-	</div>
-
-			</div>
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3>
-	Gtk.ApplicationWindowClass
-</h3>
-
-
-
-
-
-	<div class="members-container">
-		<h5>Attributes</h5>
-					
-<div class="symbol-detail" data-hotdoc-id="GtkApplicationWindowClass.parent_class">
-	<div>
-		<i><em><code>ApplicationWindowClass.parent_class</code></em></i>
-		(<a title="Gtk.WindowClass" href="GtkWindowClass">Gtk.WindowClass</a>)
-		–
-	</div>
-			<i>No description available</i>
-	</div>
-
-			</div>
-
-
-
-        </div>
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h2 data-hotdoc-id="GtkApplicationWindow">
-	<span><code>GtkApplicationWindow</code></span>
-</h2>
-
-
-<div class="hierarchy_container">
-	<div class="hierarchy_details">
-<pre>
-<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object">GObject</a>
-    <span class="lineart">╰──</span><a title="GInitiallyUnowned" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-javascript="GObject.InitiallyUnowned" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-python="GObject.InitiallyUnowned">GInitiallyUnowned</a>
-        <span class="lineart">╰──</span><a title="GtkWidget" href="gtkwidget-h.html#GtkWidget" data-gi-href-javascript="gtkwidget-h.html#GtkWidget" data-gi-title-javascript="Gtk.Widget" data-gi-href-python="gtkwidget-h.html#GtkWidget" data-gi-title-python="Gtk.Widget">GtkWidget</a>
-            <span class="lineart">╰──</span><a title="GtkContainer" href="gtkcontainer-h.html#GtkContainer" data-gi-href-javascript="gtkcontainer-h.html#GtkContainer" data-gi-title-javascript="Gtk.Container" data-gi-href-python="gtkcontainer-h.html#GtkContainer" data-gi-title-python="Gtk.Container">GtkContainer</a>
-                <span class="lineart">╰──</span><a title="GtkBin" href="gtkbin-h.html#GtkBin" data-gi-href-javascript="gtkbin-h.html#GtkBin" data-gi-title-javascript="Gtk.Bin" data-gi-href-python="gtkbin-h.html#GtkBin" data-gi-title-python="Gtk.Bin">GtkBin</a>
-                    <span class="lineart">╰──</span><a title="GtkWindow" href="gtkwindow-h.html#GtkWindow" data-gi-href-javascript="gtkwindow-h.html#GtkWindow" data-gi-title-javascript="Gtk.Window" data-gi-href-python="gtkwindow-h.html#GtkWindow" data-gi-title-python="Gtk.Window">GtkWindow</a>
-                        <span class="lineart">╰──</span>GtkApplicationWindow
-</pre>
-
-</div>
-
-</div>
-
-<div class="interfaces_container">
-	
-<p><b>Implemented interfaces:</b>
-    AtkImplementorIface, <a title="GActionGroup" href="https://developer.gnome.org/gio/unstable/GActionGroup.html#GActionGroup-struct" data-gi-href-javascript="https://developer.gnome.org/gio/unstable/GActionGroup.html#GActionGroup-struct" data-gi-title-javascript="Gio.ActionGroup" data-gi-href-python="https://developer.gnome.org/gio/unstable/GActionGroup.html#GActionGroup-struct" data-gi-title-python="Gio.ActionGroup">GActionGroup</a>, <a title="GActionMap" href="https://developer.gnome.org/gio/unstable/GActionMap.html#GActionMap-struct" data-gi-href-javascript="https://developer.gnome.org/gio/unstable/GActionMap.html#GActionMap-struct" data-gi-title-javascript="Gio.ActionMap" data-gi-href-python="https://developer.gnome.org/gio/unstable/GActionMap.html#GActionMap-struct" data-gi-title-python="Gio.ActionMap">GActionMap</a>, <a title="GtkBuildable" href="gtkbuildable-h.html#GtkBuildable" data-gi-href-javascript="gtkbuildable-h.html#GtkBuildable" data-gi-title-javascript="Gtk.Buildable" data-gi-href-python="gtkbuildable-h.html#GtkBuildable" data-gi-title-python="Gtk.Buildable">GtkBuildable</a>
-</p>
-
-</div>
-
-
-
-
-	<div class="members-container">
-		<h3>Members</h3>
-					
-<div class="symbol-detail" data-hotdoc-id="GtkApplicationWindow.parent_instance">
-	<div>
-		<i><em><code>parent_instance</code></em></i>
-		(<a title="GtkWindow" href="gtkwindow-h.html#GtkWindow" data-gi-href-javascript="gtkwindow-h.html#GtkWindow" data-gi-title-javascript="Gtk.Window" data-gi-href-python="gtkwindow-h.html#GtkWindow" data-gi-title-python="Gtk.Window">GtkWindow</a>)
-		–
-	</div>
-			<i>No description available</i>
-	</div>
-
-			</div>
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h2 data-hotdoc-id="GtkApplicationWindow">
-	<span><code>GtkApplicationWindow</code></span>
-</h2>
-
-
-<div class="hierarchy_container">
-	<div class="hierarchy_details">
-<pre>
-<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object">GObject</a>
-    <span class="lineart">╰──</span><a title="GInitiallyUnowned" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-javascript="GObject.InitiallyUnowned" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-python="GObject.InitiallyUnowned">GInitiallyUnowned</a>
-        <span class="lineart">╰──</span><a title="GtkWidget" href="gtkwidget-h.html#GtkWidget" data-gi-href-javascript="gtkwidget-h.html#GtkWidget" data-gi-title-javascript="Gtk.Widget" data-gi-href-python="gtkwidget-h.html#GtkWidget" data-gi-title-python="Gtk.Widget">GtkWidget</a>
-            <span class="lineart">╰──</span><a title="GtkContainer" href="gtkcontainer-h.html#GtkContainer" data-gi-href-javascript="gtkcontainer-h.html#GtkContainer" data-gi-title-javascript="Gtk.Container" data-gi-href-python="gtkcontainer-h.html#GtkContainer" data-gi-title-python="Gtk.Container">GtkContainer</a>
-                <span class="lineart">╰──</span><a title="GtkBin" href="gtkbin-h.html#GtkBin" data-gi-href-javascript="gtkbin-h.html#GtkBin" data-gi-title-javascript="Gtk.Bin" data-gi-href-python="gtkbin-h.html#GtkBin" data-gi-title-python="Gtk.Bin">GtkBin</a>
-                    <span class="lineart">╰──</span><a title="GtkWindow" href="gtkwindow-h.html#GtkWindow" data-gi-href-javascript="gtkwindow-h.html#GtkWindow" data-gi-title-javascript="Gtk.Window" data-gi-href-python="gtkwindow-h.html#GtkWindow" data-gi-title-python="Gtk.Window">GtkWindow</a>
-                        <span class="lineart">╰──</span>GtkApplicationWindow
-</pre>
-
-</div>
-
-</div>
-
-<div class="interfaces_container">
-	
-<p><b>Implemented interfaces:</b>
-    AtkImplementorIface, <a title="GActionGroup" href="https://developer.gnome.org/gio/unstable/GActionGroup.html#GActionGroup-struct" data-gi-href-javascript="https://developer.gnome.org/gio/unstable/GActionGroup.html#GActionGroup-struct" data-gi-title-javascript="Gio.ActionGroup" data-gi-href-python="https://developer.gnome.org/gio/unstable/GActionGroup.html#GActionGroup-struct" data-gi-title-python="Gio.ActionGroup">GActionGroup</a>, <a title="GActionMap" href="https://developer.gnome.org/gio/unstable/GActionMap.html#GActionMap-struct" data-gi-href-javascript="https://developer.gnome.org/gio/unstable/GActionMap.html#GActionMap-struct" data-gi-title-javascript="Gio.ActionMap" data-gi-href-python="https://developer.gnome.org/gio/unstable/GActionMap.html#GActionMap-struct" data-gi-title-python="Gio.ActionMap">GActionMap</a>, <a title="GtkBuildable" href="gtkbuildable-h.html#GtkBuildable" data-gi-href-javascript="gtkbuildable-h.html#GtkBuildable" data-gi-title-javascript="Gtk.Buildable" data-gi-href-python="gtkbuildable-h.html#GtkBuildable" data-gi-title-python="Gtk.Buildable">GtkBuildable</a>
-</p>
-
-</div>
-
-
-
-
-	<div class="members-container">
-		<h3>Members</h3>
-					
-<div class="symbol-detail" data-hotdoc-id="GtkApplicationWindow.parent_instance">
-	<div>
-		<i><em><code>parent_instance</code></em></i>
-		(<a title="GtkWindow" href="gtkwindow-h.html#GtkWindow" data-gi-href-javascript="gtkwindow-h.html#GtkWindow" data-gi-title-javascript="Gtk.Window" data-gi-href-python="gtkwindow-h.html#GtkWindow" data-gi-title-python="Gtk.Window">GtkWindow</a>)
-		–
-	</div>
-			<i>No description available</i>
-	</div>
-
-			</div>
 
 
 
@@ -465,73 +243,21 @@ include "rtl", "ltr", and "none".</li>
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.4;" id="gtk_application_window_new">
 	
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-csharp">
             
 
 
 
 <h4 data-hotdoc-id="gtk_application_window_new">
-	<span><code>gtk_application_window_new</code></span>
+	<span><code>Gtk.ApplicationWindow</code></span>
 </h4>
 
 
 
 
 <pre class="c-prototype">
-<a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> *
-gtk_application_window_new (<a title="GtkApplication" href="gtkapplication-h.html#GtkApplication">GtkApplication</a> * application)</pre>
-
-<p>Creates a new <a href="gtkapplicationwindow-h.html#GtkApplicationWindow">GtkApplicationWindow</a>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>application</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkapplication-h.html#GtkApplication">GtkApplication</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-								–
-			</div>
-							<p>a newly created <a href="gtkapplicationwindow-h.html#GtkApplicationWindow">GtkApplicationWindow</a></p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.4
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_application_window_new">
-	<span><code>Gtk.prototype.new</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.new(application: <a title="Gtk.Application" href="gtkapplication-h.html#GtkApplication">Gtk.Application</a>): {
-    // javascript wrapper for 'gtk_application_window_new'
-}</pre>
+<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
+Gtk.ApplicationWindow (<a title="Gtk.Application" href="gtkapplication-h.html#GtkApplication">Gtk.Application</a>)</pre>
 
 <p>Creates a new <a href="gtkapplicationwindow-h.html#GtkApplicationWindow">Gtk.ApplicationWindow</a>.</p>
 
@@ -543,9 +269,6 @@ function Gtk.prototype.new(application: <a title="Gtk.Application" href="gtkappl
 <div class="symbol-detail">
 	<div>
 		<i><em><code>application</code></em></i>
-					(
-						<a title="Gtk.Application" href="gtkapplication-h.html#GtkApplication">Gtk.Application</a>
-						)
 				–
 	</div>
 			<p>a <a href="gtkapplication-h.html#GtkApplication">Gtk.Application</a></p>
@@ -558,66 +281,6 @@ function Gtk.prototype.new(application: <a title="Gtk.Application" href="gtkappl
 		<div class="symbol-detail">
 			<div>
 				<b>Returns</b>
-									(
-					<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-										)
-								–
-			</div>
-							<p>a newly created <a href="gtkapplicationwindow-h.html#GtkApplicationWindow">Gtk.ApplicationWindow</a></p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.4
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_application_window_new">
-	<span><code>Gtk.ApplicationWindow.new</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.ApplicationWindow.new (application):
-    #python wrapper for 'gtk_application_window_new'</pre>
-
-<p>Creates a new <a href="gtkapplicationwindow-h.html#GtkApplicationWindow">Gtk.ApplicationWindow</a>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>application</code></em></i>
-					(
-						<a title="Gtk.Application" href="gtkapplication-h.html#GtkApplication">Gtk.Application</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkapplication-h.html#GtkApplication">Gtk.Application</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
-										)
 								–
 			</div>
 							<p>a newly created <a href="gtkapplicationwindow-h.html#GtkApplicationWindow">Gtk.ApplicationWindow</a></p>
@@ -642,174 +305,6 @@ def Gtk.ApplicationWindow.new (application):
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.4;" id="gtk_application_window_set_show_menubar">
 	
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_application_window_set_show_menubar">
-	<span><code>gtk_application_window_set_show_menubar</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-gtk_application_window_set_show_menubar (<a title="GtkApplicationWindow" href="gtkapplicationwindow-h.html#GtkApplicationWindow">GtkApplicationWindow</a> * window,
-                                         <a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a> show_menubar)</pre>
-
-<p>Sets whether the window will display a menubar for the app menu
-and menubar as needed.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>window</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkapplicationwindow-h.html#GtkApplicationWindow">GtkApplicationWindow</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>show_menubar</code></em></i>
-				–
-	</div>
-			<p>whether to show a menubar when needed</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.4
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_application_window_set_show_menubar">
-	<span><code>Gtk.prototype.set_show_menubar</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.set_show_menubar(show_menubar: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
-    // javascript wrapper for 'gtk_application_window_set_show_menubar'
-}</pre>
-
-<p>Sets whether the window will display a menubar for the app menu
-and menubar as needed.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>window</code></em></i>
-					(
-						<a title="Gtk.ApplicationWindow" href="gtkapplicationwindow-h.html#GtkApplicationWindow">Gtk.ApplicationWindow</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkapplicationwindow-h.html#GtkApplicationWindow">Gtk.ApplicationWindow</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>show_menubar</code></em></i>
-					(
-						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
-						)
-				–
-	</div>
-			<p>whether to show a menubar when needed</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.4
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_application_window_set_show_menubar">
-	<span><code>Gtk.ApplicationWindow.set_show_menubar</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.ApplicationWindow.set_show_menubar (self, show_menubar):
-    #python wrapper for 'gtk_application_window_set_show_menubar'</pre>
-
-<p>Sets whether the window will display a menubar for the app menu
-and menubar as needed.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>window</code></em></i>
-					(
-						<a title="Gtk.ApplicationWindow" href="gtkapplicationwindow-h.html#GtkApplicationWindow">Gtk.ApplicationWindow</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkapplicationwindow-h.html#GtkApplicationWindow">Gtk.ApplicationWindow</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>show_menubar</code></em></i>
-					(
-						<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
-						)
-				–
-	</div>
-			<p>whether to show a menubar when needed</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.4
-		</p>
-
-
-        </div>
 
 </div>
 
@@ -817,177 +312,6 @@ and menubar as needed.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.4;" id="gtk_application_window_get_show_menubar">
 	
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_application_window_get_show_menubar">
-	<span><code>gtk_application_window_get_show_menubar</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
-gtk_application_window_get_show_menubar (<a title="GtkApplicationWindow" href="gtkapplicationwindow-h.html#GtkApplicationWindow">GtkApplicationWindow</a> * window)</pre>
-
-<p>Returns whether the window will display a menubar for the app menu
-and menubar as needed.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>window</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkapplicationwindow-h.html#GtkApplicationWindow">GtkApplicationWindow</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-								–
-			</div>
-							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if <em>window</em> will display a menubar when needed</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.4
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_application_window_get_show_menubar">
-	<span><code>Gtk.prototype.get_show_menubar</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.get_show_menubar(): {
-    // javascript wrapper for 'gtk_application_window_get_show_menubar'
-}</pre>
-
-<p>Returns whether the window will display a menubar for the app menu
-and menubar as needed.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>window</code></em></i>
-					(
-						<a title="Gtk.ApplicationWindow" href="gtkapplicationwindow-h.html#GtkApplicationWindow">Gtk.ApplicationWindow</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkapplicationwindow-h.html#GtkApplicationWindow">Gtk.ApplicationWindow</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
-										)
-								–
-			</div>
-							<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if <em>window</em> will display a menubar when needed</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.4
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_application_window_get_show_menubar">
-	<span><code>Gtk.ApplicationWindow.get_show_menubar</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.ApplicationWindow.get_show_menubar (self):
-    #python wrapper for 'gtk_application_window_get_show_menubar'</pre>
-
-<p>Returns whether the window will display a menubar for the app menu
-and menubar as needed.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>window</code></em></i>
-					(
-						<a title="Gtk.ApplicationWindow" href="gtkapplicationwindow-h.html#GtkApplicationWindow">Gtk.ApplicationWindow</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkapplicationwindow-h.html#GtkApplicationWindow">Gtk.ApplicationWindow</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
-										)
-								–
-			</div>
-							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if <em>window</em> will display a menubar when needed</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.4
-		</p>
-
-
-        </div>
 
 </div>
 
@@ -995,180 +319,6 @@ and menubar as needed.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.6;" id="gtk_application_window_get_id">
 	
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_application_window_get_id">
-	<span><code>gtk_application_window_get_id</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-<a title="guint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint">guint</a>
-gtk_application_window_get_id (<a title="GtkApplicationWindow" href="gtkapplicationwindow-h.html#GtkApplicationWindow">GtkApplicationWindow</a> * window)</pre>
-
-<p>Returns the unique ID of the window. If the window has not yet been added to
-a <a href="gtkapplication-h.html#GtkApplication">GtkApplication</a>, returns <code>0</code>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>window</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkapplicationwindow-h.html#GtkApplicationWindow">GtkApplicationWindow</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-								–
-			</div>
-							<p>the unique ID for <em>window</em>, or <code>0</code> if the window
-has not yet been added to a <a href="gtkapplication-h.html#GtkApplication">GtkApplication</a></p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.6
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_application_window_get_id">
-	<span><code>Gtk.prototype.get_id</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.get_id(): {
-    // javascript wrapper for 'gtk_application_window_get_id'
-}</pre>
-
-<p>Returns the unique ID of the window. If the window has not yet been added to
-a <a href="gtkapplication-h.html#GtkApplication">Gtk.Application</a>, returns <code>0</code>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>window</code></em></i>
-					(
-						<a title="Gtk.ApplicationWindow" href="gtkapplicationwindow-h.html#GtkApplicationWindow">Gtk.ApplicationWindow</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkapplicationwindow-h.html#GtkApplicationWindow">Gtk.ApplicationWindow</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
-										)
-								–
-			</div>
-							<p>the unique ID for <em>window</em>, or <code>0</code> if the window
-has not yet been added to a <a href="gtkapplication-h.html#GtkApplication">Gtk.Application</a></p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.6
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_application_window_get_id">
-	<span><code>Gtk.ApplicationWindow.get_id</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.ApplicationWindow.get_id (self):
-    #python wrapper for 'gtk_application_window_get_id'</pre>
-
-<p>Returns the unique ID of the window. If the window has not yet been added to
-a <a href="gtkapplication-h.html#GtkApplication">Gtk.Application</a>, returns <code>0</code>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>window</code></em></i>
-					(
-						<a title="Gtk.ApplicationWindow" href="gtkapplicationwindow-h.html#GtkApplicationWindow">Gtk.ApplicationWindow</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkapplicationwindow-h.html#GtkApplicationWindow">Gtk.ApplicationWindow</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
-										)
-								–
-			</div>
-							<p>the unique ID for <em>window</em>, or <code>0</code> if the window
-has not yet been added to a <a href="gtkapplication-h.html#GtkApplication">Gtk.Application</a></p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.6
-		</p>
-
-
-        </div>
 
 </div>
 
@@ -1176,185 +326,6 @@ has not yet been added to a <a href="gtkapplication-h.html#GtkApplication">Gtk.A
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.20;" id="gtk_application_window_set_help_overlay">
 	
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_application_window_set_help_overlay">
-	<span><code>gtk_application_window_set_help_overlay</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-gtk_application_window_set_help_overlay (<a title="GtkApplicationWindow" href="gtkapplicationwindow-h.html#GtkApplicationWindow">GtkApplicationWindow</a> * window,
-                                         <a title="GtkShortcutsWindow" href="gtkshortcutswindow-h.html#GtkShortcutsWindow">GtkShortcutsWindow</a> * help_overlay)</pre>
-
-<p>Associates a shortcuts window with the application window, and
-sets up an action with the name win.show-help-overlay to present
-it.</p>
-<p><em>window</em> takes resposibility for destroying <em>help_overlay</em>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>window</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkapplicationwindow-h.html#GtkApplicationWindow">GtkApplicationWindow</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>help_overlay</code></em></i>
-					(
-						
-<span class="annotation">[<abbr title="NULL may be passed to the value"><span class="acronym">nullable</span></abbr>]</span>
-
-						)
-				–
-	</div>
-			<p>a <a href="gtkshortcutswindow-h.html#GtkShortcutsWindow">GtkShortcutsWindow</a></p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.20
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_application_window_set_help_overlay">
-	<span><code>Gtk.prototype.set_help_overlay</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.set_help_overlay(help_overlay: <a title="Gtk.ShortcutsWindow" href="gtkshortcutswindow-h.html#GtkShortcutsWindow">Gtk.ShortcutsWindow</a>): {
-    // javascript wrapper for 'gtk_application_window_set_help_overlay'
-}</pre>
-
-<p>Associates a shortcuts window with the application window, and
-sets up an action with the name win.show-help-overlay to present
-it.</p>
-<p><em>window</em> takes resposibility for destroying <em>help_overlay</em>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>window</code></em></i>
-					(
-						<a title="Gtk.ApplicationWindow" href="gtkapplicationwindow-h.html#GtkApplicationWindow">Gtk.ApplicationWindow</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkapplicationwindow-h.html#GtkApplicationWindow">Gtk.ApplicationWindow</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>help_overlay</code></em></i>
-					(
-						<a title="Gtk.ShortcutsWindow" href="gtkshortcutswindow-h.html#GtkShortcutsWindow">Gtk.ShortcutsWindow</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkshortcutswindow-h.html#GtkShortcutsWindow">Gtk.ShortcutsWindow</a></p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.20
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_application_window_set_help_overlay">
-	<span><code>Gtk.ApplicationWindow.set_help_overlay</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.ApplicationWindow.set_help_overlay (self, help_overlay):
-    #python wrapper for 'gtk_application_window_set_help_overlay'</pre>
-
-<p>Associates a shortcuts window with the application window, and
-sets up an action with the name win.show-help-overlay to present
-it.</p>
-<p><em>window</em> takes resposibility for destroying <em>help_overlay</em>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>window</code></em></i>
-					(
-						<a title="Gtk.ApplicationWindow" href="gtkapplicationwindow-h.html#GtkApplicationWindow">Gtk.ApplicationWindow</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkapplicationwindow-h.html#GtkApplicationWindow">Gtk.ApplicationWindow</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>help_overlay</code></em></i>
-					(
-						<a title="Gtk.ShortcutsWindow" href="gtkshortcutswindow-h.html#GtkShortcutsWindow">Gtk.ShortcutsWindow</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkshortcutswindow-h.html#GtkShortcutsWindow">Gtk.ShortcutsWindow</a></p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.20
-		</p>
-
-
-        </div>
 
 </div>
 
@@ -1362,184 +333,6 @@ it.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.20;" id="gtk_application_window_get_help_overlay">
 	
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_application_window_get_help_overlay">
-	<span><code>gtk_application_window_get_help_overlay</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-<a title="GtkShortcutsWindow" href="gtkshortcutswindow-h.html#GtkShortcutsWindow">GtkShortcutsWindow</a> *
-gtk_application_window_get_help_overlay (<a title="GtkApplicationWindow" href="gtkapplicationwindow-h.html#GtkApplicationWindow">GtkApplicationWindow</a> * window)</pre>
-
-<p>Gets the <a href="gtkshortcutswindow-h.html#GtkShortcutsWindow">GtkShortcutsWindow</a> that has been set up with
-a prior call to <a href="gtkapplicationwindow-h.html#gtk_application_window_set_help_overlay">gtk_application_window_set_help_overlay</a>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>window</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkapplicationwindow-h.html#GtkApplicationWindow">GtkApplicationWindow</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					
-										
-<span class="annotation">[<abbr title="Don't free data after the code is done"><span class="acronym">transfer: none</span></abbr>]</span>
-<span class="annotation">[<abbr title="NULL may be passed to the value"><span class="acronym">nullable</span></abbr>]</span>
-
-										)
-								–
-			</div>
-							<p>the help overlay associated with <em>window</em>, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.20
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-javascript">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_application_window_get_help_overlay">
-	<span><code>Gtk.prototype.get_help_overlay</code></span>
-</h4>
-
-
-<pre class="javascript-prototype">
-function Gtk.prototype.get_help_overlay(): {
-    // javascript wrapper for 'gtk_application_window_get_help_overlay'
-}</pre>
-
-<p>Gets the <a href="gtkshortcutswindow-h.html#GtkShortcutsWindow">Gtk.ShortcutsWindow</a> that has been set up with
-a prior call to <a href="gtkapplicationwindow-h.html#gtk_application_window_set_help_overlay">Gtk.prototype.set_help_overlay</a>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>window</code></em></i>
-					(
-						<a title="Gtk.ApplicationWindow" href="gtkapplicationwindow-h.html#GtkApplicationWindow">Gtk.ApplicationWindow</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkapplicationwindow-h.html#GtkApplicationWindow">Gtk.ApplicationWindow</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Gtk.ShortcutsWindow" href="gtkshortcutswindow-h.html#GtkShortcutsWindow">Gtk.ShortcutsWindow</a>
-										)
-								–
-			</div>
-							<p>the help overlay associated with <em>window</em>, or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.20
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_application_window_get_help_overlay">
-	<span><code>Gtk.ApplicationWindow.get_help_overlay</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.ApplicationWindow.get_help_overlay (self):
-    #python wrapper for 'gtk_application_window_get_help_overlay'</pre>
-
-<p>Gets the <a href="gtkshortcutswindow-h.html#GtkShortcutsWindow">Gtk.ShortcutsWindow</a> that has been set up with
-a prior call to <a href="gtkapplicationwindow-h.html#gtk_application_window_set_help_overlay">Gtk.ApplicationWindow.set_help_overlay</a>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>window</code></em></i>
-					(
-						<a title="Gtk.ApplicationWindow" href="gtkapplicationwindow-h.html#GtkApplicationWindow">Gtk.ApplicationWindow</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkapplicationwindow-h.html#GtkApplicationWindow">Gtk.ApplicationWindow</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Gtk.ShortcutsWindow" href="gtkshortcutswindow-h.html#GtkShortcutsWindow">Gtk.ShortcutsWindow</a>
-										)
-								–
-			</div>
-							<p>the help overlay associated with <em>window</em>, or <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.20
-		</p>
-
-
-        </div>
 
 </div>
 
