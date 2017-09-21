@@ -1,0 +1,2776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<base href=".">
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>GtkCellView</title>
+
+<link rel="stylesheet" href="assets/css/custom_bootstrap.css" type="text/css">
+<link rel="stylesheet" href="assets/css/bootstrap-toc.min.css" type="text/css">
+<link rel="stylesheet" href="assets/css/frontend.css" type="text/css">
+<link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
+
+<link rel="stylesheet" href="assets/css/prism.css" type="text/css">
+
+<script src="assets/js/mustache.min.js"></script>
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/scrollspy.js"></script>
+<script src="assets/js/bootstrap.js"></script>
+<script src="assets/js/typeahead.jquery.min.js"></script>
+<script src="assets/js/search.js"></script>
+<script src="assets/js/isotope.pkgd.min.js"></script>
+<script src="assets/js/compare-versions.js"></script>
+<script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="assets/js/bootstrap-toc.min.js"></script>
+<script src="assets/js/jquery.touchSwipe.min.js"></script>
+<script src="assets/js/anchor.min.js"></script>
+<script src="assets/js/tag_filtering.js"></script>
+<script src="assets/js/language_switching.js"></script>
+
+<script src="assets/js/lines_around_headings.js"></script>
+
+<script src="assets/js/prism-core.js"></script>
+<script src="assets/js/prism-autoloader.js"></script>
+<script src="assets/js/prism_autoloader_path_override.js"></script>
+<script src="assets/js/trie.js"></script>
+
+
+</head>
+
+<body class="no-script
+" data-spy="scroll" data-target="#toc" data-offset="70">
+
+<script>
+$('body').removeClass('no-script');
+</script>
+
+<nav class="navbar navbar-fixed-top navbar-default" id="topnav">
+	<div class="container-fluid">
+		<div class="navbar-right">
+			<a id="toc-toggle">
+				<span class="glyphicon glyphicon-menu-right"></span>
+				<span class="glyphicon glyphicon-menu-left"></span>
+			</a>
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-wrapper" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<form action="" class="navbar-form pull-right" id="navbar-search-form">
+                               <div class="form-group has-feedback">
+                                       <input type="text" class="form-control input-sm" name="search" id="sidenav-lookup-field" placeholder="search" disabled>
+				       <span class="glyphicon glyphicon-search form-control-feedback" id="search-mgn-glass"></span>
+                               </div>
+                        </form>
+		</div>
+		<div class="navbar-header">
+			<a id="sidenav-toggle">
+				<span class="glyphicon glyphicon-menu-right"></span>
+				<span class="glyphicon glyphicon-menu-left"></span>
+			</a>
+			<a id="home-link" href="index.html" class="hotdoc-navbar-brand">
+				<img src="assets/images/home.svg" alt="Home">
+			</a>
+		</div>
+		<div class="navbar-collapse collapse" id="navbar-wrapper">
+			<ul class="nav navbar-nav" id="menu">
+							</ul>
+			<div class="hidden-xs hidden-sm navbar-text navbar-center">
+							</div>
+		</div>
+	</div>
+</nav>
+
+<main>
+<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="gtkcellview-h.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['c', 'javascript', 'python']" data-hotdoc-meta-gi-language="c">
+<script src="assets/js/utils.js"></script>
+
+<div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
+	<script src="assets/js/navigation.js"></script>
+	<script src="assets/js/sitemap.js"></script>
+</div>
+
+<div id="body">
+	<div id="main">
+				    <div id="page-description" data-hotdoc-source="gtkcellview.h.markdown" data-hotdoc-role="main">
+        <h1 id="gtkcellview-page">GtkCellView</h1>
+<p>A <a href="gtkcellview-h.html#GtkCellView" data-gi-href-javascript="gtkcellview-h.html#GtkCellView" data-gi-title-javascript="Gtk.CellView" data-gi-href-python="gtkcellview-h.html#GtkCellView" data-gi-title-python="Gtk.CellView">GtkCellView</a> displays a single row of a <a href="gtktreemodel-h.html#GtkTreeModel" data-gi-href-javascript="gtktreemodel-h.html#GtkTreeModel" data-gi-title-javascript="Gtk.TreeModel" data-gi-href-python="gtktreemodel-h.html#GtkTreeModel" data-gi-title-python="Gtk.TreeModel">GtkTreeModel</a> using a <a href="gtkcellarea-h.html#GtkCellArea" data-gi-href-javascript="gtkcellarea-h.html#GtkCellArea" data-gi-title-javascript="Gtk.CellArea" data-gi-href-python="gtkcellarea-h.html#GtkCellArea" data-gi-title-python="Gtk.CellArea">GtkCellArea</a>
+and <a href="gtkcellareacontext-h.html#GtkCellAreaContext" data-gi-href-javascript="gtkcellareacontext-h.html#GtkCellAreaContext" data-gi-title-javascript="Gtk.CellAreaContext" data-gi-href-python="gtkcellareacontext-h.html#GtkCellAreaContext" data-gi-title-python="Gtk.CellAreaContext">GtkCellAreaContext</a>. A <a href="gtkcellareacontext-h.html#GtkCellAreaContext" data-gi-href-javascript="gtkcellareacontext-h.html#GtkCellAreaContext" data-gi-title-javascript="Gtk.CellAreaContext" data-gi-href-python="gtkcellareacontext-h.html#GtkCellAreaContext" data-gi-title-python="Gtk.CellAreaContext">GtkCellAreaContext</a> can be provided to the
+<a href="gtkcellview-h.html#GtkCellView" data-gi-href-javascript="gtkcellview-h.html#GtkCellView" data-gi-title-javascript="Gtk.CellView" data-gi-href-python="gtkcellview-h.html#GtkCellView" data-gi-title-python="Gtk.CellView">GtkCellView</a> at construction time in order to keep the cellview in context
+of a group of cell views, this ensures that the renderers displayed will
+be properly aligned with eachother (like the aligned cells in the menus
+of <a href="gtkcombobox-h.html#GtkComboBox" data-gi-href-javascript="gtkcombobox-h.html#GtkComboBox" data-gi-title-javascript="Gtk.ComboBox" data-gi-href-python="gtkcombobox-h.html#GtkComboBox" data-gi-title-python="Gtk.ComboBox">GtkComboBox</a>).</p>
+<p><a href="gtkcellview-h.html#GtkCellView" data-gi-href-javascript="gtkcellview-h.html#GtkCellView" data-gi-title-javascript="Gtk.CellView" data-gi-href-python="gtkcellview-h.html#GtkCellView" data-gi-title-python="Gtk.CellView">GtkCellView</a> is <a href="gtkorientable-h.html#GtkOrientable" data-gi-href-javascript="gtkorientable-h.html#GtkOrientable" data-gi-title-javascript="Gtk.Orientable" data-gi-href-python="gtkorientable-h.html#GtkOrientable" data-gi-title-python="Gtk.Orientable">GtkOrientable</a> in order to decide in which orientation
+the underlying <a href="gtkcellareacontext-h.html#GtkCellAreaContext" data-gi-href-javascript="gtkcellareacontext-h.html#GtkCellAreaContext" data-gi-title-javascript="Gtk.CellAreaContext" data-gi-href-python="gtkcellareacontext-h.html#GtkCellAreaContext" data-gi-title-python="Gtk.CellAreaContext">GtkCellAreaContext</a> should be allocated. Taking the <a href="gtkcombobox-h.html#GtkComboBox" data-gi-href-javascript="gtkcombobox-h.html#GtkComboBox" data-gi-title-javascript="Gtk.ComboBox" data-gi-href-python="gtkcombobox-h.html#GtkComboBox" data-gi-title-python="Gtk.ComboBox">GtkComboBox</a>
+menu as an example, cellviews should be oriented horizontally if the menus are
+listed top-to-bottom and thus all share the same width but may have separate
+individual heights (left-to-right menus should be allocated vertically since
+they all share the same height but may have variable widths).</p>
+<h1 id="css-nodes">CSS nodes</h1>
+<p>GtkCellView has a single CSS node with name cellview.</p>
+
+    </div>
+        
+        
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="GtkCellView">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h2 data-hotdoc-id="GtkCellView">
+	<span><code>GtkCellView</code></span>
+</h2>
+
+
+<div class="hierarchy_container">
+	<div class="hierarchy_details">
+<pre>
+<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object">GObject</a>
+    <span class="lineart">╰──</span><a title="GInitiallyUnowned" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-javascript="GObject.InitiallyUnowned" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-python="GObject.InitiallyUnowned">GInitiallyUnowned</a>
+        <span class="lineart">╰──</span><a title="GtkWidget" href="gtkwidget-h.html#GtkWidget" data-gi-href-javascript="gtkwidget-h.html#GtkWidget" data-gi-title-javascript="Gtk.Widget" data-gi-href-python="gtkwidget-h.html#GtkWidget" data-gi-title-python="Gtk.Widget">GtkWidget</a>
+            <span class="lineart">╰──</span>GtkCellView
+</pre>
+
+</div>
+
+</div>
+
+<div class="interfaces_container">
+	
+<p><b>Implemented interfaces:</b>
+    AtkImplementorIface, <a title="GtkBuildable" href="gtkbuildable-h.html#GtkBuildable" data-gi-href-javascript="gtkbuildable-h.html#GtkBuildable" data-gi-title-javascript="Gtk.Buildable" data-gi-href-python="gtkbuildable-h.html#GtkBuildable" data-gi-title-python="Gtk.Buildable">GtkBuildable</a>, <a title="GtkCellLayout" href="gtkcelllayout-h.html#GtkCellLayout" data-gi-href-javascript="gtkcelllayout-h.html#GtkCellLayout" data-gi-title-javascript="Gtk.CellLayout" data-gi-href-python="gtkcelllayout-h.html#GtkCellLayout" data-gi-title-python="Gtk.CellLayout">GtkCellLayout</a>, <a title="GtkOrientable" href="gtkorientable-h.html#GtkOrientable" data-gi-href-javascript="gtkorientable-h.html#GtkOrientable" data-gi-title-javascript="Gtk.Orientable" data-gi-href-python="gtkorientable-h.html#GtkOrientable" data-gi-title-python="Gtk.Orientable">GtkOrientable</a>
+</p>
+
+</div>
+
+
+
+
+	<div class="members-container">
+		<h3>Members</h3>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkCellView.parent_instance">
+	<div>
+		<i><em><code>parent_instance</code></em></i>
+		(<a title="GtkWidget" href="gtkwidget-h.html#GtkWidget" data-gi-href-javascript="gtkwidget-h.html#GtkWidget" data-gi-title-javascript="Gtk.Widget" data-gi-href-python="gtkwidget-h.html#GtkWidget" data-gi-title-python="Gtk.Widget">GtkWidget</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+<h3>Class structure</h3>
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="GtkCellViewClass">
+	<span><code>GtkCellViewClass</code></span>
+</h4>
+
+
+
+
+
+	<div class="members-container">
+		<h5>Fields</h5>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkCellViewClass.parent_class">
+	<div>
+		<i><em><code>parent_class</code></em></i>
+		(<a title="GtkWidgetClass" href="GtkWidgetClass">GtkWidgetClass</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h3>
+	Gtk.CellViewClass
+</h3>
+
+
+
+
+
+	<div class="members-container">
+		<h5>Attributes</h5>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkCellViewClass.parent_class">
+	<div>
+		<i><em><code>CellViewClass.parent_class</code></em></i>
+		(<a title="Gtk.WidgetClass" href="GtkWidgetClass">Gtk.WidgetClass</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3>
+	Gtk.CellViewClass
+</h3>
+
+
+
+
+
+	<div class="members-container">
+		<h5>Attributes</h5>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkCellViewClass.parent_class">
+	<div>
+		<i><em><code>CellViewClass.parent_class</code></em></i>
+		(<a title="Gtk.WidgetClass" href="GtkWidgetClass">Gtk.WidgetClass</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h2 data-hotdoc-id="GtkCellView">
+	<span><code>GtkCellView</code></span>
+</h2>
+
+
+<div class="hierarchy_container">
+	<div class="hierarchy_details">
+<pre>
+<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object">GObject</a>
+    <span class="lineart">╰──</span><a title="GInitiallyUnowned" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-javascript="GObject.InitiallyUnowned" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-python="GObject.InitiallyUnowned">GInitiallyUnowned</a>
+        <span class="lineart">╰──</span><a title="GtkWidget" href="gtkwidget-h.html#GtkWidget" data-gi-href-javascript="gtkwidget-h.html#GtkWidget" data-gi-title-javascript="Gtk.Widget" data-gi-href-python="gtkwidget-h.html#GtkWidget" data-gi-title-python="Gtk.Widget">GtkWidget</a>
+            <span class="lineart">╰──</span>GtkCellView
+</pre>
+
+</div>
+
+</div>
+
+<div class="interfaces_container">
+	
+<p><b>Implemented interfaces:</b>
+    AtkImplementorIface, <a title="GtkBuildable" href="gtkbuildable-h.html#GtkBuildable" data-gi-href-javascript="gtkbuildable-h.html#GtkBuildable" data-gi-title-javascript="Gtk.Buildable" data-gi-href-python="gtkbuildable-h.html#GtkBuildable" data-gi-title-python="Gtk.Buildable">GtkBuildable</a>, <a title="GtkCellLayout" href="gtkcelllayout-h.html#GtkCellLayout" data-gi-href-javascript="gtkcelllayout-h.html#GtkCellLayout" data-gi-title-javascript="Gtk.CellLayout" data-gi-href-python="gtkcelllayout-h.html#GtkCellLayout" data-gi-title-python="Gtk.CellLayout">GtkCellLayout</a>, <a title="GtkOrientable" href="gtkorientable-h.html#GtkOrientable" data-gi-href-javascript="gtkorientable-h.html#GtkOrientable" data-gi-title-javascript="Gtk.Orientable" data-gi-href-python="gtkorientable-h.html#GtkOrientable" data-gi-title-python="Gtk.Orientable">GtkOrientable</a>
+</p>
+
+</div>
+
+
+
+
+	<div class="members-container">
+		<h3>Members</h3>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkCellView.parent_instance">
+	<div>
+		<i><em><code>parent_instance</code></em></i>
+		(<a title="GtkWidget" href="gtkwidget-h.html#GtkWidget" data-gi-href-javascript="gtkwidget-h.html#GtkWidget" data-gi-title-javascript="Gtk.Widget" data-gi-href-python="gtkwidget-h.html#GtkWidget" data-gi-title-python="Gtk.Widget">GtkWidget</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h2 data-hotdoc-id="GtkCellView">
+	<span><code>GtkCellView</code></span>
+</h2>
+
+
+<div class="hierarchy_container">
+	<div class="hierarchy_details">
+<pre>
+<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object">GObject</a>
+    <span class="lineart">╰──</span><a title="GInitiallyUnowned" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-javascript="GObject.InitiallyUnowned" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-python="GObject.InitiallyUnowned">GInitiallyUnowned</a>
+        <span class="lineart">╰──</span><a title="GtkWidget" href="gtkwidget-h.html#GtkWidget" data-gi-href-javascript="gtkwidget-h.html#GtkWidget" data-gi-title-javascript="Gtk.Widget" data-gi-href-python="gtkwidget-h.html#GtkWidget" data-gi-title-python="Gtk.Widget">GtkWidget</a>
+            <span class="lineart">╰──</span>GtkCellView
+</pre>
+
+</div>
+
+</div>
+
+<div class="interfaces_container">
+	
+<p><b>Implemented interfaces:</b>
+    AtkImplementorIface, <a title="GtkBuildable" href="gtkbuildable-h.html#GtkBuildable" data-gi-href-javascript="gtkbuildable-h.html#GtkBuildable" data-gi-title-javascript="Gtk.Buildable" data-gi-href-python="gtkbuildable-h.html#GtkBuildable" data-gi-title-python="Gtk.Buildable">GtkBuildable</a>, <a title="GtkCellLayout" href="gtkcelllayout-h.html#GtkCellLayout" data-gi-href-javascript="gtkcelllayout-h.html#GtkCellLayout" data-gi-title-javascript="Gtk.CellLayout" data-gi-href-python="gtkcelllayout-h.html#GtkCellLayout" data-gi-title-python="Gtk.CellLayout">GtkCellLayout</a>, <a title="GtkOrientable" href="gtkorientable-h.html#GtkOrientable" data-gi-href-javascript="gtkorientable-h.html#GtkOrientable" data-gi-title-javascript="Gtk.Orientable" data-gi-href-python="gtkorientable-h.html#GtkOrientable" data-gi-title-python="Gtk.Orientable">GtkOrientable</a>
+</p>
+
+</div>
+
+
+
+
+	<div class="members-container">
+		<h3>Members</h3>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkCellView.parent_instance">
+	<div>
+		<i><em><code>parent_instance</code></em></i>
+		(<a title="GtkWidget" href="gtkwidget-h.html#GtkWidget" data-gi-href-javascript="gtkwidget-h.html#GtkWidget" data-gi-title-javascript="Gtk.Widget" data-gi-href-python="gtkwidget-h.html#GtkWidget" data-gi-title-python="Gtk.Widget">GtkWidget</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+
+</div>
+
+
+            <h3 class="symbol_section">Constructors</h3>
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.6;" id="gtk_cell_view_new">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_view_new">
+	<span><code>gtk_cell_view_new</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> *
+gtk_cell_view_new ()</pre>
+
+<p>Creates a new <a href="gtkcellview-h.html#GtkCellView">GtkCellView</a> widget.</p>
+
+
+
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>A newly created <a href="gtkcellview-h.html#GtkCellView">GtkCellView</a> widget.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.6
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_view_new">
+	<span><code>Gtk.prototype.new</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.new(): {
+    // javascript wrapper for 'gtk_cell_view_new'
+}</pre>
+
+<p>Creates a new <a href="gtkcellview-h.html#GtkCellView">Gtk.CellView</a> widget.</p>
+
+
+
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>A newly created <a href="gtkcellview-h.html#GtkCellView">Gtk.CellView</a> widget.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.6
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_view_new">
+	<span><code>Gtk.CellView.new</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.CellView.new ():
+    #python wrapper for 'gtk_cell_view_new'</pre>
+
+<p>Creates a new <a href="gtkcellview-h.html#GtkCellView">Gtk.CellView</a> widget.</p>
+
+
+
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>A newly created <a href="gtkcellview-h.html#GtkCellView">Gtk.CellView</a> widget.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.6
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.6;" id="gtk_cell_view_new_with_context">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_view_new_with_context">
+	<span><code>gtk_cell_view_new_with_context</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> *
+gtk_cell_view_new_with_context (<a title="GtkCellArea" href="gtkcellarea-h.html#GtkCellArea">GtkCellArea</a> * area,
+                                <a title="GtkCellAreaContext" href="gtkcellareacontext-h.html#GtkCellAreaContext">GtkCellAreaContext</a> * context)</pre>
+
+<p>Creates a new <a href="gtkcellview-h.html#GtkCellView">GtkCellView</a> widget with a specific <a href="gtkcellarea-h.html#GtkCellArea">GtkCellArea</a>
+to layout cells and a specific <a href="gtkcellareacontext-h.html#GtkCellAreaContext">GtkCellAreaContext</a>.</p>
+<p>Specifying the same context for a handfull of cells lets
+the underlying area synchronize the geometry for those cells,
+in this way alignments with cellviews for other rows are
+possible.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>area</code></em></i>
+				–
+	</div>
+			<p>the <a href="gtkcellarea-h.html#GtkCellArea">GtkCellArea</a> to layout cells</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+				–
+	</div>
+			<p>the <a href="gtkcellareacontext-h.html#GtkCellAreaContext">GtkCellAreaContext</a> in which to calculate cell geometry</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>A newly created <a href="gtkcellview-h.html#GtkCellView">GtkCellView</a> widget.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.6
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_view_new_with_context">
+	<span><code>Gtk.prototype.new_with_context</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.new_with_context(area: <a title="Gtk.CellArea" href="gtkcellarea-h.html#GtkCellArea">Gtk.CellArea</a>, context: <a title="Gtk.CellAreaContext" href="gtkcellareacontext-h.html#GtkCellAreaContext">Gtk.CellAreaContext</a>): {
+    // javascript wrapper for 'gtk_cell_view_new_with_context'
+}</pre>
+
+<p>Creates a new <a href="gtkcellview-h.html#GtkCellView">Gtk.CellView</a> widget with a specific <a href="gtkcellarea-h.html#GtkCellArea">Gtk.CellArea</a>
+to layout cells and a specific <a href="gtkcellareacontext-h.html#GtkCellAreaContext">Gtk.CellAreaContext</a>.</p>
+<p>Specifying the same context for a handfull of cells lets
+the underlying area synchronize the geometry for those cells,
+in this way alignments with cellviews for other rows are
+possible.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>area</code></em></i>
+					(
+						<a title="Gtk.CellArea" href="gtkcellarea-h.html#GtkCellArea">Gtk.CellArea</a>
+						)
+				–
+	</div>
+			<p>the <a href="gtkcellarea-h.html#GtkCellArea">Gtk.CellArea</a> to layout cells</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+					(
+						<a title="Gtk.CellAreaContext" href="gtkcellareacontext-h.html#GtkCellAreaContext">Gtk.CellAreaContext</a>
+						)
+				–
+	</div>
+			<p>the <a href="gtkcellareacontext-h.html#GtkCellAreaContext">Gtk.CellAreaContext</a> in which to calculate cell geometry</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>A newly created <a href="gtkcellview-h.html#GtkCellView">Gtk.CellView</a> widget.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.6
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_view_new_with_context">
+	<span><code>Gtk.CellView.new_with_context</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.CellView.new_with_context (area, context):
+    #python wrapper for 'gtk_cell_view_new_with_context'</pre>
+
+<p>Creates a new <a href="gtkcellview-h.html#GtkCellView">Gtk.CellView</a> widget with a specific <a href="gtkcellarea-h.html#GtkCellArea">Gtk.CellArea</a>
+to layout cells and a specific <a href="gtkcellareacontext-h.html#GtkCellAreaContext">Gtk.CellAreaContext</a>.</p>
+<p>Specifying the same context for a handfull of cells lets
+the underlying area synchronize the geometry for those cells,
+in this way alignments with cellviews for other rows are
+possible.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>area</code></em></i>
+					(
+						<a title="Gtk.CellArea" href="gtkcellarea-h.html#GtkCellArea">Gtk.CellArea</a>
+						)
+				–
+	</div>
+			<p>the <a href="gtkcellarea-h.html#GtkCellArea">Gtk.CellArea</a> to layout cells</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+					(
+						<a title="Gtk.CellAreaContext" href="gtkcellareacontext-h.html#GtkCellAreaContext">Gtk.CellAreaContext</a>
+						)
+				–
+	</div>
+			<p>the <a href="gtkcellareacontext-h.html#GtkCellAreaContext">Gtk.CellAreaContext</a> in which to calculate cell geometry</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>A newly created <a href="gtkcellview-h.html#GtkCellView">Gtk.CellView</a> widget.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.6
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.6;" id="gtk_cell_view_new_with_text">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_view_new_with_text">
+	<span><code>gtk_cell_view_new_with_text</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> *
+gtk_cell_view_new_with_text (const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * text)</pre>
+
+<p>Creates a new <a href="gtkcellview-h.html#GtkCellView">GtkCellView</a> widget, adds a <a href="gtkcellrenderertext-h.html#GtkCellRendererText">GtkCellRendererText</a>
+to it, and makes it show <em>text</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>text</code></em></i>
+				–
+	</div>
+			<p>the text to display in the cell view</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>A newly created <a href="gtkcellview-h.html#GtkCellView">GtkCellView</a> widget.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.6
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_view_new_with_text">
+	<span><code>Gtk.prototype.new_with_text</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.new_with_text(text: <a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>): {
+    // javascript wrapper for 'gtk_cell_view_new_with_text'
+}</pre>
+
+<p>Creates a new <a href="gtkcellview-h.html#GtkCellView">Gtk.CellView</a> widget, adds a <a href="gtkcellrenderertext-h.html#GtkCellRendererText">Gtk.CellRendererText</a>
+to it, and makes it show <em>text</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>text</code></em></i>
+					(
+						<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
+						)
+				–
+	</div>
+			<p>the text to display in the cell view</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>A newly created <a href="gtkcellview-h.html#GtkCellView">Gtk.CellView</a> widget.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.6
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_view_new_with_text">
+	<span><code>Gtk.CellView.new_with_text</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.CellView.new_with_text (text):
+    #python wrapper for 'gtk_cell_view_new_with_text'</pre>
+
+<p>Creates a new <a href="gtkcellview-h.html#GtkCellView">Gtk.CellView</a> widget, adds a <a href="gtkcellrenderertext-h.html#GtkCellRendererText">Gtk.CellRendererText</a>
+to it, and makes it show <em>text</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>text</code></em></i>
+					(
+						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
+						)
+				–
+	</div>
+			<p>the text to display in the cell view</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>A newly created <a href="gtkcellview-h.html#GtkCellView">Gtk.CellView</a> widget.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.6
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.6;" id="gtk_cell_view_new_with_markup">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_view_new_with_markup">
+	<span><code>gtk_cell_view_new_with_markup</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> *
+gtk_cell_view_new_with_markup (const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * markup)</pre>
+
+<p>Creates a new <a href="gtkcellview-h.html#GtkCellView">GtkCellView</a> widget, adds a <a href="gtkcellrenderertext-h.html#GtkCellRendererText">GtkCellRendererText</a>
+to it, and makes it show <em>markup</em>. The text can be
+marked up with the [Pango text markup language][PangoMarkupFormat].</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>markup</code></em></i>
+				–
+	</div>
+			<p>the text to display in the cell view</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>A newly created <a href="gtkcellview-h.html#GtkCellView">GtkCellView</a> widget.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.6
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_view_new_with_markup">
+	<span><code>Gtk.prototype.new_with_markup</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.new_with_markup(markup: <a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>): {
+    // javascript wrapper for 'gtk_cell_view_new_with_markup'
+}</pre>
+
+<p>Creates a new <a href="gtkcellview-h.html#GtkCellView">Gtk.CellView</a> widget, adds a <a href="gtkcellrenderertext-h.html#GtkCellRendererText">Gtk.CellRendererText</a>
+to it, and makes it show <em>markup</em>. The text can be
+marked up with the [Pango text markup language][PangoMarkupFormat].</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>markup</code></em></i>
+					(
+						<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
+						)
+				–
+	</div>
+			<p>the text to display in the cell view</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>A newly created <a href="gtkcellview-h.html#GtkCellView">Gtk.CellView</a> widget.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.6
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_view_new_with_markup">
+	<span><code>Gtk.CellView.new_with_markup</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.CellView.new_with_markup (markup):
+    #python wrapper for 'gtk_cell_view_new_with_markup'</pre>
+
+<p>Creates a new <a href="gtkcellview-h.html#GtkCellView">Gtk.CellView</a> widget, adds a <a href="gtkcellrenderertext-h.html#GtkCellRendererText">Gtk.CellRendererText</a>
+to it, and makes it show <em>markup</em>. The text can be
+marked up with the [Pango text markup language][PangoMarkupFormat].</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>markup</code></em></i>
+					(
+						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
+						)
+				–
+	</div>
+			<p>the text to display in the cell view</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>A newly created <a href="gtkcellview-h.html#GtkCellView">Gtk.CellView</a> widget.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.6
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.6;" id="gtk_cell_view_new_with_pixbuf">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_view_new_with_pixbuf">
+	<span><code>gtk_cell_view_new_with_pixbuf</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> *
+gtk_cell_view_new_with_pixbuf (<a title="GdkPixbuf" href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf</a> * pixbuf)</pre>
+
+<p>Creates a new <a href="gtkcellview-h.html#GtkCellView">GtkCellView</a> widget, adds a <a href="gtkcellrendererpixbuf-h.html#GtkCellRendererPixbuf">GtkCellRendererPixbuf</a>
+to it, and makes it show <em>pixbuf</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>pixbuf</code></em></i>
+				–
+	</div>
+			<p>the image to display in the cell view</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>A newly created <a href="gtkcellview-h.html#GtkCellView">GtkCellView</a> widget.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.6
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_view_new_with_pixbuf">
+	<span><code>Gtk.prototype.new_with_pixbuf</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.new_with_pixbuf(pixbuf: <a title="GdkPixbuf.Pixbuf" href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf.Pixbuf</a>): {
+    // javascript wrapper for 'gtk_cell_view_new_with_pixbuf'
+}</pre>
+
+<p>Creates a new <a href="gtkcellview-h.html#GtkCellView">Gtk.CellView</a> widget, adds a <a href="gtkcellrendererpixbuf-h.html#GtkCellRendererPixbuf">Gtk.CellRendererPixbuf</a>
+to it, and makes it show <em>pixbuf</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>pixbuf</code></em></i>
+					(
+						<a title="GdkPixbuf.Pixbuf" href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf.Pixbuf</a>
+						)
+				–
+	</div>
+			<p>the image to display in the cell view</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>A newly created <a href="gtkcellview-h.html#GtkCellView">Gtk.CellView</a> widget.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.6
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_view_new_with_pixbuf">
+	<span><code>Gtk.CellView.new_with_pixbuf</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.CellView.new_with_pixbuf (pixbuf):
+    #python wrapper for 'gtk_cell_view_new_with_pixbuf'</pre>
+
+<p>Creates a new <a href="gtkcellview-h.html#GtkCellView">Gtk.CellView</a> widget, adds a <a href="gtkcellrendererpixbuf-h.html#GtkCellRendererPixbuf">Gtk.CellRendererPixbuf</a>
+to it, and makes it show <em>pixbuf</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>pixbuf</code></em></i>
+					(
+						<a title="GdkPixbuf.Pixbuf" href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf.Pixbuf</a>
+						)
+				–
+	</div>
+			<p>the image to display in the cell view</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>A newly created <a href="gtkcellview-h.html#GtkCellView">Gtk.CellView</a> widget.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.6
+		</p>
+
+
+        </div>
+
+</div>
+
+
+            <h3 class="symbol_section">Methods</h3>
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.6;" id="gtk_cell_view_set_model">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_view_set_model">
+	<span><code>gtk_cell_view_set_model</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_cell_view_set_model (<a title="GtkCellView" href="gtkcellview-h.html#GtkCellView">GtkCellView</a> * cell_view,
+                         <a title="GtkTreeModel" href="gtktreemodel-h.html#GtkTreeModel">GtkTreeModel</a> * model)</pre>
+
+<p>Sets the model for <em>cell_view</em>.  If <em>cell_view</em> already has a model
+set, it will remove it before setting the new model.  If <em>model</em> is
+<a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a>, then it will unset the old model.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell_view</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkcellview-h.html#GtkCellView">GtkCellView</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>model</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>a <a href="gtktreemodel-h.html#GtkTreeModel">GtkTreeModel</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.6
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_view_set_model">
+	<span><code>Gtk.prototype.set_model</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_model(model: <a title="Gtk.TreeModel" href="gtktreemodel-h.html#GtkTreeModel">Gtk.TreeModel</a>): {
+    // javascript wrapper for 'gtk_cell_view_set_model'
+}</pre>
+
+<p>Sets the model for <em>cell_view</em>.  If <em>cell_view</em> already has a model
+set, it will remove it before setting the new model.  If <em>model</em> is
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a>, then it will unset the old model.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell_view</code></em></i>
+					(
+						<a title="Gtk.CellView" href="gtkcellview-h.html#GtkCellView">Gtk.CellView</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkcellview-h.html#GtkCellView">Gtk.CellView</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>model</code></em></i>
+					(
+						<a title="Gtk.TreeModel" href="gtktreemodel-h.html#GtkTreeModel">Gtk.TreeModel</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtktreemodel-h.html#GtkTreeModel">Gtk.TreeModel</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.6
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_view_set_model">
+	<span><code>Gtk.CellView.set_model</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.CellView.set_model (self, model):
+    #python wrapper for 'gtk_cell_view_set_model'</pre>
+
+<p>Sets the model for <em>cell_view</em>.  If <em>cell_view</em> already has a model
+set, it will remove it before setting the new model.  If <em>model</em> is
+<a href="https://docs.python.org/3/library/constants.html#None">None</a>, then it will unset the old model.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell_view</code></em></i>
+					(
+						<a title="Gtk.CellView" href="gtkcellview-h.html#GtkCellView">Gtk.CellView</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkcellview-h.html#GtkCellView">Gtk.CellView</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>model</code></em></i>
+					(
+						<a title="Gtk.TreeModel" href="gtktreemodel-h.html#GtkTreeModel">Gtk.TreeModel</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtktreemodel-h.html#GtkTreeModel">Gtk.TreeModel</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.6
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.16;" id="gtk_cell_view_get_model">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_view_get_model">
+	<span><code>gtk_cell_view_get_model</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkTreeModel" href="gtktreemodel-h.html#GtkTreeModel">GtkTreeModel</a> *
+gtk_cell_view_get_model (<a title="GtkCellView" href="gtkcellview-h.html#GtkCellView">GtkCellView</a> * cell_view)</pre>
+
+<p>Returns the model for <em>cell_view</em>. If no model is used <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> is
+returned.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell_view</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkcellview-h.html#GtkCellView">GtkCellView</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					
+										
+<span class="annotation">[<abbr title="NULL may be passed to the value"><span class="acronym">nullable</span></abbr>]</span>
+<span class="annotation">[<abbr title="Don't free data after the code is done"><span class="acronym">transfer: none</span></abbr>]</span>
+
+										)
+								–
+			</div>
+							<p>a <a href="gtktreemodel-h.html#GtkTreeModel">GtkTreeModel</a> used or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.16
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_view_get_model">
+	<span><code>Gtk.prototype.get_model</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_model(): {
+    // javascript wrapper for 'gtk_cell_view_get_model'
+}</pre>
+
+<p>Returns the model for <em>cell_view</em>. If no model is used <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a> is
+returned.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell_view</code></em></i>
+					(
+						<a title="Gtk.CellView" href="gtkcellview-h.html#GtkCellView">Gtk.CellView</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkcellview-h.html#GtkCellView">Gtk.CellView</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.TreeModel" href="gtktreemodel-h.html#GtkTreeModel">Gtk.TreeModel</a>
+										)
+								–
+			</div>
+							<p>a <a href="gtktreemodel-h.html#GtkTreeModel">Gtk.TreeModel</a> used or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.16
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_view_get_model">
+	<span><code>Gtk.CellView.get_model</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.CellView.get_model (self):
+    #python wrapper for 'gtk_cell_view_get_model'</pre>
+
+<p>Returns the model for <em>cell_view</em>. If no model is used <a href="https://docs.python.org/3/library/constants.html#None">None</a> is
+returned.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell_view</code></em></i>
+					(
+						<a title="Gtk.CellView" href="gtkcellview-h.html#GtkCellView">Gtk.CellView</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkcellview-h.html#GtkCellView">Gtk.CellView</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.TreeModel" href="gtktreemodel-h.html#GtkTreeModel">Gtk.TreeModel</a>
+										)
+								–
+			</div>
+							<p>a <a href="gtktreemodel-h.html#GtkTreeModel">Gtk.TreeModel</a> used or <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.16
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.6;" id="gtk_cell_view_set_displayed_row">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_view_set_displayed_row">
+	<span><code>gtk_cell_view_set_displayed_row</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_cell_view_set_displayed_row (<a title="GtkCellView" href="gtkcellview-h.html#GtkCellView">GtkCellView</a> * cell_view,
+                                 <a title="GtkTreePath" href="gtktreemodel-h.html#GtkTreePath">GtkTreePath</a> * path)</pre>
+
+<p>Sets the row of the model that is currently displayed
+by the <a href="gtkcellview-h.html#GtkCellView">GtkCellView</a>. If the path is unset, then the
+contents of the cellview “stick” at their last value;
+this is not normally a desired result, but may be
+a needed intermediate state if say, the model for
+the <a href="gtkcellview-h.html#GtkCellView">GtkCellView</a> becomes temporarily empty.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell_view</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkcellview-h.html#GtkCellView">GtkCellView</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>path</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>a <a href="gtktreemodel-h.html#GtkTreePath">GtkTreePath</a> or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> to unset.</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.6
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_view_set_displayed_row">
+	<span><code>Gtk.prototype.set_displayed_row</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_displayed_row(path: <a title="Gtk.TreePath" href="gtktreemodel-h.html#GtkTreePath">Gtk.TreePath</a>): {
+    // javascript wrapper for 'gtk_cell_view_set_displayed_row'
+}</pre>
+
+<p>Sets the row of the model that is currently displayed
+by the <a href="gtkcellview-h.html#GtkCellView">Gtk.CellView</a>. If the path is unset, then the
+contents of the cellview “stick” at their last value;
+this is not normally a desired result, but may be
+a needed intermediate state if say, the model for
+the <a href="gtkcellview-h.html#GtkCellView">Gtk.CellView</a> becomes temporarily empty.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell_view</code></em></i>
+					(
+						<a title="Gtk.CellView" href="gtkcellview-h.html#GtkCellView">Gtk.CellView</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkcellview-h.html#GtkCellView">Gtk.CellView</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>path</code></em></i>
+					(
+						<a title="Gtk.TreePath" href="gtktreemodel-h.html#GtkTreePath">Gtk.TreePath</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtktreemodel-h.html#GtkTreePath">Gtk.TreePath</a> or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a> to unset.</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.6
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_view_set_displayed_row">
+	<span><code>Gtk.CellView.set_displayed_row</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.CellView.set_displayed_row (self, path):
+    #python wrapper for 'gtk_cell_view_set_displayed_row'</pre>
+
+<p>Sets the row of the model that is currently displayed
+by the <a href="gtkcellview-h.html#GtkCellView">Gtk.CellView</a>. If the path is unset, then the
+contents of the cellview “stick” at their last value;
+this is not normally a desired result, but may be
+a needed intermediate state if say, the model for
+the <a href="gtkcellview-h.html#GtkCellView">Gtk.CellView</a> becomes temporarily empty.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell_view</code></em></i>
+					(
+						<a title="Gtk.CellView" href="gtkcellview-h.html#GtkCellView">Gtk.CellView</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkcellview-h.html#GtkCellView">Gtk.CellView</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>path</code></em></i>
+					(
+						<a title="Gtk.TreePath" href="gtktreemodel-h.html#GtkTreePath">Gtk.TreePath</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtktreemodel-h.html#GtkTreePath">Gtk.TreePath</a> or <a href="https://docs.python.org/3/library/constants.html#None">None</a> to unset.</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.6
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.6;" id="gtk_cell_view_get_displayed_row">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_view_get_displayed_row">
+	<span><code>gtk_cell_view_get_displayed_row</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkTreePath" href="gtktreemodel-h.html#GtkTreePath">GtkTreePath</a> *
+gtk_cell_view_get_displayed_row (<a title="GtkCellView" href="gtkcellview-h.html#GtkCellView">GtkCellView</a> * cell_view)</pre>
+
+<p>Returns a <a href="gtktreemodel-h.html#GtkTreePath">GtkTreePath</a> referring to the currently
+displayed row. If no row is currently displayed,
+<a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> is returned.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell_view</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkcellview-h.html#GtkCellView">GtkCellView</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					
+										
+<span class="annotation">[<abbr title="NULL may be passed to the value"><span class="acronym">nullable</span></abbr>]</span>
+<span class="annotation">[<abbr title="Free data after the code is done"><span class="acronym">transfer: full</span></abbr>]</span>
+
+										)
+								–
+			</div>
+							<p>the currently displayed row or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.6
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_view_get_displayed_row">
+	<span><code>Gtk.prototype.get_displayed_row</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_displayed_row(): {
+    // javascript wrapper for 'gtk_cell_view_get_displayed_row'
+}</pre>
+
+<p>Returns a <a href="gtktreemodel-h.html#GtkTreePath">Gtk.TreePath</a> referring to the currently
+displayed row. If no row is currently displayed,
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a> is returned.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell_view</code></em></i>
+					(
+						<a title="Gtk.CellView" href="gtkcellview-h.html#GtkCellView">Gtk.CellView</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkcellview-h.html#GtkCellView">Gtk.CellView</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.TreePath" href="gtktreemodel-h.html#GtkTreePath">Gtk.TreePath</a>
+										)
+								–
+			</div>
+							<p>the currently displayed row or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.6
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_view_get_displayed_row">
+	<span><code>Gtk.CellView.get_displayed_row</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.CellView.get_displayed_row (self):
+    #python wrapper for 'gtk_cell_view_get_displayed_row'</pre>
+
+<p>Returns a <a href="gtktreemodel-h.html#GtkTreePath">Gtk.TreePath</a> referring to the currently
+displayed row. If no row is currently displayed,
+<a href="https://docs.python.org/3/library/constants.html#None">None</a> is returned.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell_view</code></em></i>
+					(
+						<a title="Gtk.CellView" href="gtkcellview-h.html#GtkCellView">Gtk.CellView</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkcellview-h.html#GtkCellView">Gtk.CellView</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.TreePath" href="gtktreemodel-h.html#GtkTreePath">Gtk.TreePath</a>
+										)
+								–
+			</div>
+							<p>the currently displayed row or <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.6
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_cell_view_set_draw_sensitive">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_view_set_draw_sensitive">
+	<span><code>gtk_cell_view_set_draw_sensitive</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_cell_view_set_draw_sensitive (<a title="GtkCellView" href="gtkcellview-h.html#GtkCellView">GtkCellView</a> * cell_view,
+                                  <a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a> draw_sensitive)</pre>
+
+<p>Sets whether <em>cell_view</em> should draw all of its
+cells in a sensitive state, this is used by <a href="gtkcombobox-h.html#GtkComboBox">GtkComboBox</a> menus
+to ensure that rows with insensitive cells that contain
+children appear sensitive in the parent menu item.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell_view</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkcellview-h.html#GtkCellView">GtkCellView</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>draw_sensitive</code></em></i>
+				–
+	</div>
+			<p>whether to draw all cells in a sensitive state.</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_view_set_draw_sensitive">
+	<span><code>Gtk.prototype.set_draw_sensitive</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_draw_sensitive(draw_sensitive: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_cell_view_set_draw_sensitive'
+}</pre>
+
+<p>Sets whether <em>cell_view</em> should draw all of its
+cells in a sensitive state, this is used by <a href="gtkcombobox-h.html#GtkComboBox">Gtk.ComboBox</a> menus
+to ensure that rows with insensitive cells that contain
+children appear sensitive in the parent menu item.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell_view</code></em></i>
+					(
+						<a title="Gtk.CellView" href="gtkcellview-h.html#GtkCellView">Gtk.CellView</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkcellview-h.html#GtkCellView">Gtk.CellView</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>draw_sensitive</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>whether to draw all cells in a sensitive state.</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_view_set_draw_sensitive">
+	<span><code>Gtk.CellView.set_draw_sensitive</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.CellView.set_draw_sensitive (self, draw_sensitive):
+    #python wrapper for 'gtk_cell_view_set_draw_sensitive'</pre>
+
+<p>Sets whether <em>cell_view</em> should draw all of its
+cells in a sensitive state, this is used by <a href="gtkcombobox-h.html#GtkComboBox">Gtk.ComboBox</a> menus
+to ensure that rows with insensitive cells that contain
+children appear sensitive in the parent menu item.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell_view</code></em></i>
+					(
+						<a title="Gtk.CellView" href="gtkcellview-h.html#GtkCellView">Gtk.CellView</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkcellview-h.html#GtkCellView">Gtk.CellView</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>draw_sensitive</code></em></i>
+					(
+						<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+						)
+				–
+	</div>
+			<p>whether to draw all cells in a sensitive state.</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_cell_view_get_draw_sensitive">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_view_get_draw_sensitive">
+	<span><code>gtk_cell_view_get_draw_sensitive</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_cell_view_get_draw_sensitive (<a title="GtkCellView" href="gtkcellview-h.html#GtkCellView">GtkCellView</a> * cell_view)</pre>
+
+<p>Gets whether <em>cell_view</em> is configured to draw all of its
+cells in a sensitive state.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell_view</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkcellview-h.html#GtkCellView">GtkCellView</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>whether <em>cell_view</em> draws all of its
+cells in a sensitive state</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_view_get_draw_sensitive">
+	<span><code>Gtk.prototype.get_draw_sensitive</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_draw_sensitive(): {
+    // javascript wrapper for 'gtk_cell_view_get_draw_sensitive'
+}</pre>
+
+<p>Gets whether <em>cell_view</em> is configured to draw all of its
+cells in a sensitive state.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell_view</code></em></i>
+					(
+						<a title="Gtk.CellView" href="gtkcellview-h.html#GtkCellView">Gtk.CellView</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkcellview-h.html#GtkCellView">Gtk.CellView</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p>whether <em>cell_view</em> draws all of its
+cells in a sensitive state</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_view_get_draw_sensitive">
+	<span><code>Gtk.CellView.get_draw_sensitive</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.CellView.get_draw_sensitive (self):
+    #python wrapper for 'gtk_cell_view_get_draw_sensitive'</pre>
+
+<p>Gets whether <em>cell_view</em> is configured to draw all of its
+cells in a sensitive state.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell_view</code></em></i>
+					(
+						<a title="Gtk.CellView" href="gtkcellview-h.html#GtkCellView">Gtk.CellView</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkcellview-h.html#GtkCellView">Gtk.CellView</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+										)
+								–
+			</div>
+							<p>whether <em>cell_view</em> draws all of its
+cells in a sensitive state</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_cell_view_set_fit_model">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_view_set_fit_model">
+	<span><code>gtk_cell_view_set_fit_model</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_cell_view_set_fit_model (<a title="GtkCellView" href="gtkcellview-h.html#GtkCellView">GtkCellView</a> * cell_view,
+                             <a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a> fit_model)</pre>
+
+<p>Sets whether <em>cell_view</em> should request space to fit the entire <a href="gtktreemodel-h.html#GtkTreeModel">GtkTreeModel</a>.</p>
+<p>This is used by <a href="gtkcombobox-h.html#GtkComboBox">GtkComboBox</a> to ensure that the cell view displayed on
+the combo box’s button always gets enough space and does not resize
+when selection changes.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell_view</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkcellview-h.html#GtkCellView">GtkCellView</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>fit_model</code></em></i>
+				–
+	</div>
+			<p>whether <em>cell_view</em> should request space for the whole model.</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_view_set_fit_model">
+	<span><code>Gtk.prototype.set_fit_model</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_fit_model(fit_model: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_cell_view_set_fit_model'
+}</pre>
+
+<p>Sets whether <em>cell_view</em> should request space to fit the entire <a href="gtktreemodel-h.html#GtkTreeModel">Gtk.TreeModel</a>.</p>
+<p>This is used by <a href="gtkcombobox-h.html#GtkComboBox">Gtk.ComboBox</a> to ensure that the cell view displayed on
+the combo box’s button always gets enough space and does not resize
+when selection changes.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell_view</code></em></i>
+					(
+						<a title="Gtk.CellView" href="gtkcellview-h.html#GtkCellView">Gtk.CellView</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkcellview-h.html#GtkCellView">Gtk.CellView</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>fit_model</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>whether <em>cell_view</em> should request space for the whole model.</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_view_set_fit_model">
+	<span><code>Gtk.CellView.set_fit_model</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.CellView.set_fit_model (self, fit_model):
+    #python wrapper for 'gtk_cell_view_set_fit_model'</pre>
+
+<p>Sets whether <em>cell_view</em> should request space to fit the entire <a href="gtktreemodel-h.html#GtkTreeModel">Gtk.TreeModel</a>.</p>
+<p>This is used by <a href="gtkcombobox-h.html#GtkComboBox">Gtk.ComboBox</a> to ensure that the cell view displayed on
+the combo box’s button always gets enough space and does not resize
+when selection changes.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell_view</code></em></i>
+					(
+						<a title="Gtk.CellView" href="gtkcellview-h.html#GtkCellView">Gtk.CellView</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkcellview-h.html#GtkCellView">Gtk.CellView</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>fit_model</code></em></i>
+					(
+						<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+						)
+				–
+	</div>
+			<p>whether <em>cell_view</em> should request space for the whole model.</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_cell_view_get_fit_model">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_view_get_fit_model">
+	<span><code>gtk_cell_view_get_fit_model</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_cell_view_get_fit_model (<a title="GtkCellView" href="gtkcellview-h.html#GtkCellView">GtkCellView</a> * cell_view)</pre>
+
+<p>Gets whether <em>cell_view</em> is configured to request space
+to fit the entire <a href="gtktreemodel-h.html#GtkTreeModel">GtkTreeModel</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell_view</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkcellview-h.html#GtkCellView">GtkCellView</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>whether <em>cell_view</em> requests space to fit
+the entire <a href="gtktreemodel-h.html#GtkTreeModel">GtkTreeModel</a>.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_view_get_fit_model">
+	<span><code>Gtk.prototype.get_fit_model</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_fit_model(): {
+    // javascript wrapper for 'gtk_cell_view_get_fit_model'
+}</pre>
+
+<p>Gets whether <em>cell_view</em> is configured to request space
+to fit the entire <a href="gtktreemodel-h.html#GtkTreeModel">Gtk.TreeModel</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell_view</code></em></i>
+					(
+						<a title="Gtk.CellView" href="gtkcellview-h.html#GtkCellView">Gtk.CellView</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkcellview-h.html#GtkCellView">Gtk.CellView</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p>whether <em>cell_view</em> requests space to fit
+the entire <a href="gtktreemodel-h.html#GtkTreeModel">Gtk.TreeModel</a>.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_view_get_fit_model">
+	<span><code>Gtk.CellView.get_fit_model</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.CellView.get_fit_model (self):
+    #python wrapper for 'gtk_cell_view_get_fit_model'</pre>
+
+<p>Gets whether <em>cell_view</em> is configured to request space
+to fit the entire <a href="gtktreemodel-h.html#GtkTreeModel">Gtk.TreeModel</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell_view</code></em></i>
+					(
+						<a title="Gtk.CellView" href="gtkcellview-h.html#GtkCellView">Gtk.CellView</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkcellview-h.html#GtkCellView">Gtk.CellView</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+										)
+								–
+			</div>
+							<p>whether <em>cell_view</em> requests space to fit
+the entire <a href="gtktreemodel-h.html#GtkTreeModel">Gtk.TreeModel</a>.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+
+</div>
+
+
+
+
+
+
+		
+	</div>
+	<div id="search_results">
+		<p>The results of the search are</p>
+	</div>
+	<hr>
+	<div id="footer">
+		    
+
+	</div>
+</div>
+
+<div id="toc-column">
+	
+		<div class="edit-button">
+		
+
+	</div>
+		<div id="toc-wrapper">
+		<nav id="toc"></nav>
+	</div>
+</div>
+</div>
+</main>
+
+</body>
+
+<script src="assets/js/navbar_offset_scroller.js"></script>
+</html>

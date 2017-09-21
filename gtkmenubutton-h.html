@@ -1,0 +1,3070 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<base href=".">
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>GtkMenuButton</title>
+
+<link rel="stylesheet" href="assets/css/custom_bootstrap.css" type="text/css">
+<link rel="stylesheet" href="assets/css/bootstrap-toc.min.css" type="text/css">
+<link rel="stylesheet" href="assets/css/frontend.css" type="text/css">
+<link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
+
+<link rel="stylesheet" href="assets/css/prism.css" type="text/css">
+
+<script src="assets/js/mustache.min.js"></script>
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/scrollspy.js"></script>
+<script src="assets/js/bootstrap.js"></script>
+<script src="assets/js/typeahead.jquery.min.js"></script>
+<script src="assets/js/search.js"></script>
+<script src="assets/js/isotope.pkgd.min.js"></script>
+<script src="assets/js/compare-versions.js"></script>
+<script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="assets/js/bootstrap-toc.min.js"></script>
+<script src="assets/js/jquery.touchSwipe.min.js"></script>
+<script src="assets/js/anchor.min.js"></script>
+<script src="assets/js/tag_filtering.js"></script>
+<script src="assets/js/language_switching.js"></script>
+
+<script src="assets/js/lines_around_headings.js"></script>
+
+<script src="assets/js/prism-core.js"></script>
+<script src="assets/js/prism-autoloader.js"></script>
+<script src="assets/js/prism_autoloader_path_override.js"></script>
+<script src="assets/js/trie.js"></script>
+
+
+</head>
+
+<body class="no-script
+" data-spy="scroll" data-target="#toc" data-offset="70">
+
+<script>
+$('body').removeClass('no-script');
+</script>
+
+<nav class="navbar navbar-fixed-top navbar-default" id="topnav">
+	<div class="container-fluid">
+		<div class="navbar-right">
+			<a id="toc-toggle">
+				<span class="glyphicon glyphicon-menu-right"></span>
+				<span class="glyphicon glyphicon-menu-left"></span>
+			</a>
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-wrapper" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<form action="" class="navbar-form pull-right" id="navbar-search-form">
+                               <div class="form-group has-feedback">
+                                       <input type="text" class="form-control input-sm" name="search" id="sidenav-lookup-field" placeholder="search" disabled>
+				       <span class="glyphicon glyphicon-search form-control-feedback" id="search-mgn-glass"></span>
+                               </div>
+                        </form>
+		</div>
+		<div class="navbar-header">
+			<a id="sidenav-toggle">
+				<span class="glyphicon glyphicon-menu-right"></span>
+				<span class="glyphicon glyphicon-menu-left"></span>
+			</a>
+			<a id="home-link" href="index.html" class="hotdoc-navbar-brand">
+				<img src="assets/images/home.svg" alt="Home">
+			</a>
+		</div>
+		<div class="navbar-collapse collapse" id="navbar-wrapper">
+			<ul class="nav navbar-nav" id="menu">
+							</ul>
+			<div class="hidden-xs hidden-sm navbar-text navbar-center">
+							</div>
+		</div>
+	</div>
+</nav>
+
+<main>
+<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="gtkmenubutton-h.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['c', 'javascript', 'python']" data-hotdoc-meta-gi-language="c">
+<script src="assets/js/utils.js"></script>
+
+<div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
+	<script src="assets/js/navigation.js"></script>
+	<script src="assets/js/sitemap.js"></script>
+</div>
+
+<div id="body">
+	<div id="main">
+				    <div id="page-description" data-hotdoc-source="gtkmenubutton.h.markdown" data-hotdoc-role="main">
+        <h1 id="gtkmenubutton-page">GtkMenuButton</h1>
+<p>The <a href="gtkmenubutton-h.html#GtkMenuButton" data-gi-href-javascript="gtkmenubutton-h.html#GtkMenuButton" data-gi-title-javascript="Gtk.MenuButton" data-gi-href-python="gtkmenubutton-h.html#GtkMenuButton" data-gi-title-python="Gtk.MenuButton">GtkMenuButton</a> widget is used to display a popup when clicked on.
+This popup can be provided either as a <a href="gtkmenu-h.html#GtkMenu" data-gi-href-javascript="gtkmenu-h.html#GtkMenu" data-gi-title-javascript="Gtk.Menu" data-gi-href-python="gtkmenu-h.html#GtkMenu" data-gi-title-python="Gtk.Menu">GtkMenu</a>, a <a href="gtkpopover-h.html#GtkPopover" data-gi-href-javascript="gtkpopover-h.html#GtkPopover" data-gi-title-javascript="Gtk.Popover" data-gi-href-python="gtkpopover-h.html#GtkPopover" data-gi-title-python="Gtk.Popover">GtkPopover</a> or an
+abstract <a href="https://developer.gnome.org/gio/unstable/GMenuModel.html#GMenuModel-struct" data-gi-href-javascript="https://developer.gnome.org/gio/unstable/GMenuModel.html#GMenuModel-struct" data-gi-title-javascript="Gio.MenuModel" data-gi-href-python="https://developer.gnome.org/gio/unstable/GMenuModel.html#GMenuModel-struct" data-gi-title-python="Gio.MenuModel">GMenuModel</a>.</p>
+<p>The <a href="gtkmenubutton-h.html#GtkMenuButton" data-gi-href-javascript="gtkmenubutton-h.html#GtkMenuButton" data-gi-title-javascript="Gtk.MenuButton" data-gi-href-python="gtkmenubutton-h.html#GtkMenuButton" data-gi-title-python="Gtk.MenuButton">GtkMenuButton</a> widget can hold any valid child widget. That is, it
+can hold almost any other standard <a href="gtkwidget-h.html#GtkWidget" data-gi-href-javascript="gtkwidget-h.html#GtkWidget" data-gi-title-javascript="Gtk.Widget" data-gi-href-python="gtkwidget-h.html#GtkWidget" data-gi-title-python="Gtk.Widget">GtkWidget</a>. The most commonly used
+child is <a href="gtkimage-h.html#GtkImage" data-gi-href-javascript="gtkimage-h.html#GtkImage" data-gi-title-javascript="Gtk.Image" data-gi-href-python="gtkimage-h.html#GtkImage" data-gi-title-python="Gtk.Image">GtkImage</a>. If no widget is explicitely added to the <a href="gtkmenubutton-h.html#GtkMenuButton" data-gi-href-javascript="gtkmenubutton-h.html#GtkMenuButton" data-gi-title-javascript="Gtk.MenuButton" data-gi-href-python="gtkmenubutton-h.html#GtkMenuButton" data-gi-title-python="Gtk.MenuButton">GtkMenuButton</a>,
+a <a href="gtkimage-h.html#GtkImage" data-gi-href-javascript="gtkimage-h.html#GtkImage" data-gi-title-javascript="Gtk.Image" data-gi-href-python="gtkimage-h.html#GtkImage" data-gi-title-python="Gtk.Image">GtkImage</a> is automatically created, using an arrow image oriented
+according to <a href="https://developer.gnome.org/gtk3/GtkMenuButton.html#GtkMenuButton--direction">GtkMenuButton:direction</a> or the generic "view-context-menu"
+icon if the direction is not set.</p>
+<p>The positioning of the popup is determined by the <a href="https://developer.gnome.org/gtk3/GtkMenuButton.html#GtkMenuButton--direction">GtkMenuButton:direction</a>
+property of the menu button.</p>
+<p>For menus, the <a href="https://developer.gnome.org/gtk3/GtkWidget.html#GtkWidget--halign">GtkWidget:halign</a> and <a href="https://developer.gnome.org/gtk3/GtkWidget.html#GtkWidget--valign">GtkWidget:valign</a> properties of the
+menu are also taken into account. For example, when the direction is
+<a href="gtkmenubutton-h.html#GTK_ARROW_DOWN" data-gi-href-javascript="gtkmenubutton-h.html#GTK_ARROW_DOWN" data-gi-title-javascript="Gtk.ArrowType.DOWN" data-gi-href-python="gtkmenubutton-h.html#GTK_ARROW_DOWN" data-gi-title-python="Gtk.ArrowType.DOWN">GTK_ARROW_DOWN</a> and the horizontal alignment is <a href="gtkwidget-h.html#GTK_ALIGN_START" data-gi-href-javascript="gtkwidget-h.html#GTK_ALIGN_START" data-gi-title-javascript="Gtk.Align.START" data-gi-href-python="gtkwidget-h.html#GTK_ALIGN_START" data-gi-title-python="Gtk.Align.START">GTK_ALIGN_START</a>, the
+menu will be positioned below the button, with the starting edge
+(depending on the text direction) of the menu aligned with the starting
+edge of the button. If there is not enough space below the button, the
+menu is popped up above the button instead. If the alignment would move
+part of the menu offscreen, it is “pushed in”.</p>
+<h2 id="direction-down">Direction = Down</h2>
+<ul>
+<li>
+<p>halign = start</p>
+<p><img src="down-start.png" alt="" id></p>
+</li>
+<li>
+<p>halign = center</p>
+<p><img src="down-center.png" alt="" id></p>
+</li>
+<li>
+<p>halign = end</p>
+<p><img src="down-end.png" alt="" id></p>
+</li>
+</ul>
+<h2 id="direction-up">Direction = Up</h2>
+<ul>
+<li>
+<p>halign = start</p>
+<p><img src="up-start.png" alt="" id></p>
+</li>
+<li>
+<p>halign = center</p>
+<p><img src="up-center.png" alt="" id></p>
+</li>
+<li>
+<p>halign = end</p>
+<p><img src="up-end.png" alt="" id></p>
+</li>
+</ul>
+<h2 id="direction-left">Direction = Left</h2>
+<ul>
+<li>
+<p>valign = start</p>
+<p><img src="left-start.png" alt="" id></p>
+</li>
+<li>
+<p>valign = center</p>
+<p><img src="left-center.png" alt="" id></p>
+</li>
+<li>
+<p>valign = end</p>
+<p><img src="left-end.png" alt="" id></p>
+</li>
+</ul>
+<h2 id="direction-right">Direction = Right</h2>
+<ul>
+<li>
+<p>valign = start</p>
+<p><img src="right-start.png" alt="" id></p>
+</li>
+<li>
+<p>valign = center</p>
+<p><img src="right-center.png" alt="" id></p>
+</li>
+<li>
+<p>valign = end</p>
+<p><img src="right-end.png" alt="" id></p>
+</li>
+</ul>
+<h1 id="css-nodes">CSS nodes</h1>
+<p>GtkMenuButton has a single CSS node with name button. To differentiate
+it from a plain <a href="gtkbutton-h.html#GtkButton" data-gi-href-javascript="gtkbutton-h.html#GtkButton" data-gi-title-javascript="Gtk.Button" data-gi-href-python="gtkbutton-h.html#GtkButton" data-gi-title-python="Gtk.Button">GtkButton</a>, it gets the .popup style class.</p>
+
+    </div>
+        
+        
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="GtkMenuButton">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h2 data-hotdoc-id="GtkMenuButton">
+	<span><code>GtkMenuButton</code></span>
+</h2>
+
+
+<div class="hierarchy_container">
+	<div class="hierarchy_details">
+<pre>
+<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object">GObject</a>
+    <span class="lineart">╰──</span><a title="GInitiallyUnowned" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-javascript="GObject.InitiallyUnowned" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-python="GObject.InitiallyUnowned">GInitiallyUnowned</a>
+        <span class="lineart">╰──</span><a title="GtkWidget" href="gtkwidget-h.html#GtkWidget" data-gi-href-javascript="gtkwidget-h.html#GtkWidget" data-gi-title-javascript="Gtk.Widget" data-gi-href-python="gtkwidget-h.html#GtkWidget" data-gi-title-python="Gtk.Widget">GtkWidget</a>
+            <span class="lineart">╰──</span><a title="GtkContainer" href="gtkcontainer-h.html#GtkContainer" data-gi-href-javascript="gtkcontainer-h.html#GtkContainer" data-gi-title-javascript="Gtk.Container" data-gi-href-python="gtkcontainer-h.html#GtkContainer" data-gi-title-python="Gtk.Container">GtkContainer</a>
+                <span class="lineart">╰──</span><a title="GtkBin" href="gtkbin-h.html#GtkBin" data-gi-href-javascript="gtkbin-h.html#GtkBin" data-gi-title-javascript="Gtk.Bin" data-gi-href-python="gtkbin-h.html#GtkBin" data-gi-title-python="Gtk.Bin">GtkBin</a>
+                    <span class="lineart">╰──</span><a title="GtkButton" href="gtkbutton-h.html#GtkButton" data-gi-href-javascript="gtkbutton-h.html#GtkButton" data-gi-title-javascript="Gtk.Button" data-gi-href-python="gtkbutton-h.html#GtkButton" data-gi-title-python="Gtk.Button">GtkButton</a>
+                        <span class="lineart">╰──</span><a title="GtkToggleButton" href="gtktogglebutton-h.html#GtkToggleButton" data-gi-href-javascript="gtktogglebutton-h.html#GtkToggleButton" data-gi-title-javascript="Gtk.ToggleButton" data-gi-href-python="gtktogglebutton-h.html#GtkToggleButton" data-gi-title-python="Gtk.ToggleButton">GtkToggleButton</a>
+                            <span class="lineart">╰──</span>GtkMenuButton
+</pre>
+
+</div>
+
+</div>
+
+<div class="interfaces_container">
+	
+<p><b>Implemented interfaces:</b>
+    AtkImplementorIface, <a title="GtkActionable" href="gtkactionable-h.html#GtkActionable" data-gi-href-javascript="gtkactionable-h.html#GtkActionable" data-gi-title-javascript="Gtk.Actionable" data-gi-href-python="gtkactionable-h.html#GtkActionable" data-gi-title-python="Gtk.Actionable">GtkActionable</a>, <a title="GtkBuildable" href="gtkbuildable-h.html#GtkBuildable" data-gi-href-javascript="gtkbuildable-h.html#GtkBuildable" data-gi-title-javascript="Gtk.Buildable" data-gi-href-python="gtkbuildable-h.html#GtkBuildable" data-gi-title-python="Gtk.Buildable">GtkBuildable</a>
+</p>
+
+</div>
+
+
+
+
+	<div class="members-container">
+		<h3>Members</h3>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkMenuButton.parent">
+	<div>
+		<i><em><code>parent</code></em></i>
+		(<a title="GtkToggleButton" href="gtktogglebutton-h.html#GtkToggleButton" data-gi-href-javascript="gtktogglebutton-h.html#GtkToggleButton" data-gi-title-javascript="Gtk.ToggleButton" data-gi-href-python="gtktogglebutton-h.html#GtkToggleButton" data-gi-title-python="Gtk.ToggleButton">GtkToggleButton</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+<h3>Class structure</h3>
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="GtkMenuButtonClass">
+	<span><code>GtkMenuButtonClass</code></span>
+</h4>
+
+
+
+
+
+	<div class="members-container">
+		<h5>Fields</h5>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkMenuButtonClass.parent_class">
+	<div>
+		<i><em><code>parent_class</code></em></i>
+		(<a title="GtkToggleButtonClass" href="GtkToggleButtonClass">GtkToggleButtonClass</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h3>
+	Gtk.MenuButtonClass
+</h3>
+
+
+
+
+
+	<div class="members-container">
+		<h5>Attributes</h5>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkMenuButtonClass.parent_class">
+	<div>
+		<i><em><code>MenuButtonClass.parent_class</code></em></i>
+		(<a title="Gtk.ToggleButtonClass" href="GtkToggleButtonClass">Gtk.ToggleButtonClass</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3>
+	Gtk.MenuButtonClass
+</h3>
+
+
+
+
+
+	<div class="members-container">
+		<h5>Attributes</h5>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkMenuButtonClass.parent_class">
+	<div>
+		<i><em><code>MenuButtonClass.parent_class</code></em></i>
+		(<a title="Gtk.ToggleButtonClass" href="GtkToggleButtonClass">Gtk.ToggleButtonClass</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h2 data-hotdoc-id="GtkMenuButton">
+	<span><code>GtkMenuButton</code></span>
+</h2>
+
+
+<div class="hierarchy_container">
+	<div class="hierarchy_details">
+<pre>
+<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object">GObject</a>
+    <span class="lineart">╰──</span><a title="GInitiallyUnowned" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-javascript="GObject.InitiallyUnowned" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-python="GObject.InitiallyUnowned">GInitiallyUnowned</a>
+        <span class="lineart">╰──</span><a title="GtkWidget" href="gtkwidget-h.html#GtkWidget" data-gi-href-javascript="gtkwidget-h.html#GtkWidget" data-gi-title-javascript="Gtk.Widget" data-gi-href-python="gtkwidget-h.html#GtkWidget" data-gi-title-python="Gtk.Widget">GtkWidget</a>
+            <span class="lineart">╰──</span><a title="GtkContainer" href="gtkcontainer-h.html#GtkContainer" data-gi-href-javascript="gtkcontainer-h.html#GtkContainer" data-gi-title-javascript="Gtk.Container" data-gi-href-python="gtkcontainer-h.html#GtkContainer" data-gi-title-python="Gtk.Container">GtkContainer</a>
+                <span class="lineart">╰──</span><a title="GtkBin" href="gtkbin-h.html#GtkBin" data-gi-href-javascript="gtkbin-h.html#GtkBin" data-gi-title-javascript="Gtk.Bin" data-gi-href-python="gtkbin-h.html#GtkBin" data-gi-title-python="Gtk.Bin">GtkBin</a>
+                    <span class="lineart">╰──</span><a title="GtkButton" href="gtkbutton-h.html#GtkButton" data-gi-href-javascript="gtkbutton-h.html#GtkButton" data-gi-title-javascript="Gtk.Button" data-gi-href-python="gtkbutton-h.html#GtkButton" data-gi-title-python="Gtk.Button">GtkButton</a>
+                        <span class="lineart">╰──</span><a title="GtkToggleButton" href="gtktogglebutton-h.html#GtkToggleButton" data-gi-href-javascript="gtktogglebutton-h.html#GtkToggleButton" data-gi-title-javascript="Gtk.ToggleButton" data-gi-href-python="gtktogglebutton-h.html#GtkToggleButton" data-gi-title-python="Gtk.ToggleButton">GtkToggleButton</a>
+                            <span class="lineart">╰──</span>GtkMenuButton
+</pre>
+
+</div>
+
+</div>
+
+<div class="interfaces_container">
+	
+<p><b>Implemented interfaces:</b>
+    AtkImplementorIface, <a title="GtkActionable" href="gtkactionable-h.html#GtkActionable" data-gi-href-javascript="gtkactionable-h.html#GtkActionable" data-gi-title-javascript="Gtk.Actionable" data-gi-href-python="gtkactionable-h.html#GtkActionable" data-gi-title-python="Gtk.Actionable">GtkActionable</a>, <a title="GtkBuildable" href="gtkbuildable-h.html#GtkBuildable" data-gi-href-javascript="gtkbuildable-h.html#GtkBuildable" data-gi-title-javascript="Gtk.Buildable" data-gi-href-python="gtkbuildable-h.html#GtkBuildable" data-gi-title-python="Gtk.Buildable">GtkBuildable</a>
+</p>
+
+</div>
+
+
+
+
+	<div class="members-container">
+		<h3>Members</h3>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkMenuButton.parent">
+	<div>
+		<i><em><code>parent</code></em></i>
+		(<a title="GtkToggleButton" href="gtktogglebutton-h.html#GtkToggleButton" data-gi-href-javascript="gtktogglebutton-h.html#GtkToggleButton" data-gi-title-javascript="Gtk.ToggleButton" data-gi-href-python="gtktogglebutton-h.html#GtkToggleButton" data-gi-title-python="Gtk.ToggleButton">GtkToggleButton</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h2 data-hotdoc-id="GtkMenuButton">
+	<span><code>GtkMenuButton</code></span>
+</h2>
+
+
+<div class="hierarchy_container">
+	<div class="hierarchy_details">
+<pre>
+<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object">GObject</a>
+    <span class="lineart">╰──</span><a title="GInitiallyUnowned" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-javascript="GObject.InitiallyUnowned" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-python="GObject.InitiallyUnowned">GInitiallyUnowned</a>
+        <span class="lineart">╰──</span><a title="GtkWidget" href="gtkwidget-h.html#GtkWidget" data-gi-href-javascript="gtkwidget-h.html#GtkWidget" data-gi-title-javascript="Gtk.Widget" data-gi-href-python="gtkwidget-h.html#GtkWidget" data-gi-title-python="Gtk.Widget">GtkWidget</a>
+            <span class="lineart">╰──</span><a title="GtkContainer" href="gtkcontainer-h.html#GtkContainer" data-gi-href-javascript="gtkcontainer-h.html#GtkContainer" data-gi-title-javascript="Gtk.Container" data-gi-href-python="gtkcontainer-h.html#GtkContainer" data-gi-title-python="Gtk.Container">GtkContainer</a>
+                <span class="lineart">╰──</span><a title="GtkBin" href="gtkbin-h.html#GtkBin" data-gi-href-javascript="gtkbin-h.html#GtkBin" data-gi-title-javascript="Gtk.Bin" data-gi-href-python="gtkbin-h.html#GtkBin" data-gi-title-python="Gtk.Bin">GtkBin</a>
+                    <span class="lineart">╰──</span><a title="GtkButton" href="gtkbutton-h.html#GtkButton" data-gi-href-javascript="gtkbutton-h.html#GtkButton" data-gi-title-javascript="Gtk.Button" data-gi-href-python="gtkbutton-h.html#GtkButton" data-gi-title-python="Gtk.Button">GtkButton</a>
+                        <span class="lineart">╰──</span><a title="GtkToggleButton" href="gtktogglebutton-h.html#GtkToggleButton" data-gi-href-javascript="gtktogglebutton-h.html#GtkToggleButton" data-gi-title-javascript="Gtk.ToggleButton" data-gi-href-python="gtktogglebutton-h.html#GtkToggleButton" data-gi-title-python="Gtk.ToggleButton">GtkToggleButton</a>
+                            <span class="lineart">╰──</span>GtkMenuButton
+</pre>
+
+</div>
+
+</div>
+
+<div class="interfaces_container">
+	
+<p><b>Implemented interfaces:</b>
+    AtkImplementorIface, <a title="GtkActionable" href="gtkactionable-h.html#GtkActionable" data-gi-href-javascript="gtkactionable-h.html#GtkActionable" data-gi-title-javascript="Gtk.Actionable" data-gi-href-python="gtkactionable-h.html#GtkActionable" data-gi-title-python="Gtk.Actionable">GtkActionable</a>, <a title="GtkBuildable" href="gtkbuildable-h.html#GtkBuildable" data-gi-href-javascript="gtkbuildable-h.html#GtkBuildable" data-gi-title-javascript="Gtk.Buildable" data-gi-href-python="gtkbuildable-h.html#GtkBuildable" data-gi-title-python="Gtk.Buildable">GtkBuildable</a>
+</p>
+
+</div>
+
+
+
+
+	<div class="members-container">
+		<h3>Members</h3>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkMenuButton.parent">
+	<div>
+		<i><em><code>parent</code></em></i>
+		(<a title="GtkToggleButton" href="gtktogglebutton-h.html#GtkToggleButton" data-gi-href-javascript="gtktogglebutton-h.html#GtkToggleButton" data-gi-title-javascript="Gtk.ToggleButton" data-gi-href-python="gtktogglebutton-h.html#GtkToggleButton" data-gi-title-python="Gtk.ToggleButton">GtkToggleButton</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+
+</div>
+
+
+            <h3 class="symbol_section">Constructors</h3>
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.6;" id="gtk_menu_button_new">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_button_new">
+	<span><code>gtk_menu_button_new</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> *
+gtk_menu_button_new ()</pre>
+
+<p>Creates a new <a href="gtkmenubutton-h.html#GtkMenuButton">GtkMenuButton</a> widget with downwards-pointing
+arrow as the only child. You can replace the child widget
+with another <a href="gtkwidget-h.html#GtkWidget">GtkWidget</a> should you wish to.</p>
+
+
+
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>The newly created <a href="gtkmenubutton-h.html#GtkMenuButton">GtkMenuButton</a> widget</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.6
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_button_new">
+	<span><code>Gtk.prototype.new</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.new(): {
+    // javascript wrapper for 'gtk_menu_button_new'
+}</pre>
+
+<p>Creates a new <a href="gtkmenubutton-h.html#GtkMenuButton">Gtk.MenuButton</a> widget with downwards-pointing
+arrow as the only child. You can replace the child widget
+with another <a href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a> should you wish to.</p>
+
+
+
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>The newly created <a href="gtkmenubutton-h.html#GtkMenuButton">Gtk.MenuButton</a> widget</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.6
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_button_new">
+	<span><code>Gtk.MenuButton.new</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.MenuButton.new ():
+    #python wrapper for 'gtk_menu_button_new'</pre>
+
+<p>Creates a new <a href="gtkmenubutton-h.html#GtkMenuButton">Gtk.MenuButton</a> widget with downwards-pointing
+arrow as the only child. You can replace the child widget
+with another <a href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a> should you wish to.</p>
+
+
+
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>The newly created <a href="gtkmenubutton-h.html#GtkMenuButton">Gtk.MenuButton</a> widget</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.6
+		</p>
+
+
+        </div>
+
+</div>
+
+
+            <h3 class="symbol_section">Methods</h3>
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.6;" id="gtk_menu_button_set_popup">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_button_set_popup">
+	<span><code>gtk_menu_button_set_popup</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_menu_button_set_popup (<a title="GtkMenuButton" href="gtkmenubutton-h.html#GtkMenuButton">GtkMenuButton</a> * menu_button,
+                           <a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> * menu)</pre>
+
+<p>Sets the <a href="gtkmenu-h.html#GtkMenu">GtkMenu</a> that will be popped up when the button is clicked,
+or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> to disable the button. If <a href="https://developer.gnome.org/gtk3/GtkMenuButton.html#GtkMenuButton--menu-model">menu-model</a> or
+<a href="https://developer.gnome.org/gtk3/GtkMenuButton.html#GtkMenuButton--popover">popover</a> are set, they will be set to <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_button</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkmenubutton-h.html#GtkMenuButton">GtkMenuButton</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>a <a href="gtkmenu-h.html#GtkMenu">GtkMenu</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.6
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_button_set_popup">
+	<span><code>Gtk.prototype.set_popup</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_popup(menu: <a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>): {
+    // javascript wrapper for 'gtk_menu_button_set_popup'
+}</pre>
+
+<p>Sets the <a href="gtkmenu-h.html#GtkMenu">Gtk.Menu</a> that will be popped up when the button is clicked,
+or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a> to disable the button. If <a href="https://developer.gnome.org/gtk3/GtkMenuButton.html#GtkMenuButton--menu-model">menu-model</a> or
+<a href="https://developer.gnome.org/gtk3/GtkMenuButton.html#GtkMenuButton--popover">popover</a> are set, they will be set to <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_button</code></em></i>
+					(
+						<a title="Gtk.MenuButton" href="gtkmenubutton-h.html#GtkMenuButton">Gtk.MenuButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkmenubutton-h.html#GtkMenuButton">Gtk.MenuButton</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu</code></em></i>
+					(
+						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkmenu-h.html#GtkMenu">Gtk.Menu</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.6
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_button_set_popup">
+	<span><code>Gtk.MenuButton.set_popup</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.MenuButton.set_popup (self, menu):
+    #python wrapper for 'gtk_menu_button_set_popup'</pre>
+
+<p>Sets the <a href="gtkmenu-h.html#GtkMenu">Gtk.Menu</a> that will be popped up when the button is clicked,
+or <a href="https://docs.python.org/3/library/constants.html#None">None</a> to disable the button. If <a href="https://developer.gnome.org/gtk3/GtkMenuButton.html#GtkMenuButton--menu-model">menu-model</a> or
+<a href="https://developer.gnome.org/gtk3/GtkMenuButton.html#GtkMenuButton--popover">popover</a> are set, they will be set to <a href="https://docs.python.org/3/library/constants.html#None">None</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_button</code></em></i>
+					(
+						<a title="Gtk.MenuButton" href="gtkmenubutton-h.html#GtkMenuButton">Gtk.MenuButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkmenubutton-h.html#GtkMenuButton">Gtk.MenuButton</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu</code></em></i>
+					(
+						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkmenu-h.html#GtkMenu">Gtk.Menu</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.6
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.6;" id="gtk_menu_button_get_popup">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_button_get_popup">
+	<span><code>gtk_menu_button_get_popup</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkMenu" href="gtkmenu-h.html#GtkMenu">GtkMenu</a> *
+gtk_menu_button_get_popup (<a title="GtkMenuButton" href="gtkmenubutton-h.html#GtkMenuButton">GtkMenuButton</a> * menu_button)</pre>
+
+<p>Returns the <a href="gtkmenu-h.html#GtkMenu">GtkMenu</a> that pops out of the button.
+If the button does not use a <a href="gtkmenu-h.html#GtkMenu">GtkMenu</a>, this function
+returns <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_button</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkmenubutton-h.html#GtkMenuButton">GtkMenuButton</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					
+										
+<span class="annotation">[<abbr title="NULL may be passed to the value"><span class="acronym">nullable</span></abbr>]</span>
+<span class="annotation">[<abbr title="Don't free data after the code is done"><span class="acronym">transfer: none</span></abbr>]</span>
+
+										)
+								–
+			</div>
+							<p>a <a href="gtkmenu-h.html#GtkMenu">GtkMenu</a> or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.6
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_button_get_popup">
+	<span><code>Gtk.prototype.get_popup</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_popup(): {
+    // javascript wrapper for 'gtk_menu_button_get_popup'
+}</pre>
+
+<p>Returns the <a href="gtkmenu-h.html#GtkMenu">Gtk.Menu</a> that pops out of the button.
+If the button does not use a <a href="gtkmenu-h.html#GtkMenu">Gtk.Menu</a>, this function
+returns <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_button</code></em></i>
+					(
+						<a title="Gtk.MenuButton" href="gtkmenubutton-h.html#GtkMenuButton">Gtk.MenuButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkmenubutton-h.html#GtkMenuButton">Gtk.MenuButton</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Menu" href="gtkmenu-h.html#GtkMenu">Gtk.Menu</a>
+										)
+								–
+			</div>
+							<p>a <a href="gtkmenu-h.html#GtkMenu">Gtk.Menu</a> or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.6
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_button_get_popup">
+	<span><code>Gtk.MenuButton.get_popup</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.MenuButton.get_popup (self):
+    #python wrapper for 'gtk_menu_button_get_popup'</pre>
+
+<p>Returns the <a href="gtkmenu-h.html#GtkMenu">Gtk.Menu</a> that pops out of the button.
+If the button does not use a <a href="gtkmenu-h.html#GtkMenu">Gtk.Menu</a>, this function
+returns <a href="https://docs.python.org/3/library/constants.html#None">None</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_button</code></em></i>
+					(
+						<a title="Gtk.MenuButton" href="gtkmenubutton-h.html#GtkMenuButton">Gtk.MenuButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkmenubutton-h.html#GtkMenuButton">Gtk.MenuButton</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Menu" href="gtkmenu-h.html#GtkMenu">Gtk.Menu</a>
+										)
+								–
+			</div>
+							<p>a <a href="gtkmenu-h.html#GtkMenu">Gtk.Menu</a> or <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.6
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.12;" id="gtk_menu_button_set_popover">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_button_set_popover">
+	<span><code>gtk_menu_button_set_popover</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_menu_button_set_popover (<a title="GtkMenuButton" href="gtkmenubutton-h.html#GtkMenuButton">GtkMenuButton</a> * menu_button,
+                             <a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> * popover)</pre>
+
+<p>Sets the <a href="gtkpopover-h.html#GtkPopover">GtkPopover</a> that will be popped up when the button is
+clicked, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> to disable the button. If <a href="https://developer.gnome.org/gtk3/GtkMenuButton.html#GtkMenuButton--menu-model">menu-model</a>
+or <a href="https://developer.gnome.org/gtk3/GtkMenuButton.html#GtkMenuButton--popup">popup</a> are set, they will be set to <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_button</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkmenubutton-h.html#GtkMenuButton">GtkMenuButton</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>popover</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>a <a href="gtkpopover-h.html#GtkPopover">GtkPopover</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.12
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_button_set_popover">
+	<span><code>Gtk.prototype.set_popover</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_popover(popover: <a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>): {
+    // javascript wrapper for 'gtk_menu_button_set_popover'
+}</pre>
+
+<p>Sets the <a href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a> that will be popped up when the button is
+clicked, or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a> to disable the button. If <a href="https://developer.gnome.org/gtk3/GtkMenuButton.html#GtkMenuButton--menu-model">menu-model</a>
+or <a href="https://developer.gnome.org/gtk3/GtkMenuButton.html#GtkMenuButton--popup">popup</a> are set, they will be set to <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_button</code></em></i>
+					(
+						<a title="Gtk.MenuButton" href="gtkmenubutton-h.html#GtkMenuButton">Gtk.MenuButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkmenubutton-h.html#GtkMenuButton">Gtk.MenuButton</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>popover</code></em></i>
+					(
+						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.12
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_button_set_popover">
+	<span><code>Gtk.MenuButton.set_popover</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.MenuButton.set_popover (self, popover):
+    #python wrapper for 'gtk_menu_button_set_popover'</pre>
+
+<p>Sets the <a href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a> that will be popped up when the button is
+clicked, or <a href="https://docs.python.org/3/library/constants.html#None">None</a> to disable the button. If <a href="https://developer.gnome.org/gtk3/GtkMenuButton.html#GtkMenuButton--menu-model">menu-model</a>
+or <a href="https://developer.gnome.org/gtk3/GtkMenuButton.html#GtkMenuButton--popup">popup</a> are set, they will be set to <a href="https://docs.python.org/3/library/constants.html#None">None</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_button</code></em></i>
+					(
+						<a title="Gtk.MenuButton" href="gtkmenubutton-h.html#GtkMenuButton">Gtk.MenuButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkmenubutton-h.html#GtkMenuButton">Gtk.MenuButton</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>popover</code></em></i>
+					(
+						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.12
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.12;" id="gtk_menu_button_get_popover">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_button_get_popover">
+	<span><code>gtk_menu_button_get_popover</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkPopover" href="gtkpopover-h.html#GtkPopover">GtkPopover</a> *
+gtk_menu_button_get_popover (<a title="GtkMenuButton" href="gtkmenubutton-h.html#GtkMenuButton">GtkMenuButton</a> * menu_button)</pre>
+
+<p>Returns the <a href="gtkpopover-h.html#GtkPopover">GtkPopover</a> that pops out of the button.
+If the button is not using a <a href="gtkpopover-h.html#GtkPopover">GtkPopover</a>, this function
+returns <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_button</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkmenubutton-h.html#GtkMenuButton">GtkMenuButton</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					
+										
+<span class="annotation">[<abbr title="NULL may be passed to the value"><span class="acronym">nullable</span></abbr>]</span>
+<span class="annotation">[<abbr title="Don't free data after the code is done"><span class="acronym">transfer: none</span></abbr>]</span>
+
+										)
+								–
+			</div>
+							<p>a <a href="gtkpopover-h.html#GtkPopover">GtkPopover</a> or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.12
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_button_get_popover">
+	<span><code>Gtk.prototype.get_popover</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_popover(): {
+    // javascript wrapper for 'gtk_menu_button_get_popover'
+}</pre>
+
+<p>Returns the <a href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a> that pops out of the button.
+If the button is not using a <a href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a>, this function
+returns <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_button</code></em></i>
+					(
+						<a title="Gtk.MenuButton" href="gtkmenubutton-h.html#GtkMenuButton">Gtk.MenuButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkmenubutton-h.html#GtkMenuButton">Gtk.MenuButton</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Popover" href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a>
+										)
+								–
+			</div>
+							<p>a <a href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a> or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.12
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_button_get_popover">
+	<span><code>Gtk.MenuButton.get_popover</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.MenuButton.get_popover (self):
+    #python wrapper for 'gtk_menu_button_get_popover'</pre>
+
+<p>Returns the <a href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a> that pops out of the button.
+If the button is not using a <a href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a>, this function
+returns <a href="https://docs.python.org/3/library/constants.html#None">None</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_button</code></em></i>
+					(
+						<a title="Gtk.MenuButton" href="gtkmenubutton-h.html#GtkMenuButton">Gtk.MenuButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkmenubutton-h.html#GtkMenuButton">Gtk.MenuButton</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Popover" href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a>
+										)
+								–
+			</div>
+							<p>a <a href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a> or <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.12
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.6;" id="gtk_menu_button_set_menu_model">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_button_set_menu_model">
+	<span><code>gtk_menu_button_set_menu_model</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_menu_button_set_menu_model (<a title="GtkMenuButton" href="gtkmenubutton-h.html#GtkMenuButton">GtkMenuButton</a> * menu_button,
+                                <a title="GMenuModel" href="https://developer.gnome.org/gio/unstable/GMenuModel.html#GMenuModel-struct">GMenuModel</a> * menu_model)</pre>
+
+<p>Sets the <a href="https://developer.gnome.org/gio/unstable/GMenuModel.html#GMenuModel-struct">GMenuModel</a> from which the popup will be constructed,
+or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> to disable the button.</p>
+<p>Depending on the value of <a href="https://developer.gnome.org/gtk3/GtkMenuButton.html#GtkMenuButton--use-popover">use-popover</a>, either a
+<a href="gtkmenu-h.html#GtkMenu">GtkMenu</a> will be created with <a href="gtkmenu-h.html#gtk_menu_new_from_model">gtk_menu_new_from_model</a>, or a
+<a href="gtkpopover-h.html#GtkPopover">GtkPopover</a> with <a href="gtkpopover-h.html#gtk_popover_new_from_model">gtk_popover_new_from_model</a>. In either case,
+actions will be connected as documented for these functions.</p>
+<p>If <a href="https://developer.gnome.org/gtk3/GtkMenuButton.html#GtkMenuButton--popup">popup</a> or <a href="https://developer.gnome.org/gtk3/GtkMenuButton.html#GtkMenuButton--popover">popover</a> are already set,
+their content will be lost and replaced by the newly created popup.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_button</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkmenubutton-h.html#GtkMenuButton">GtkMenuButton</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_model</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/gio/unstable/GMenuModel.html#GMenuModel-struct">GMenuModel</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.6
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_button_set_menu_model">
+	<span><code>Gtk.prototype.set_menu_model</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_menu_model(menu_model: <a title="Gio.MenuModel" href="https://developer.gnome.org/gio/unstable/GMenuModel.html#GMenuModel-struct">Gio.MenuModel</a>): {
+    // javascript wrapper for 'gtk_menu_button_set_menu_model'
+}</pre>
+
+<p>Sets the <a href="https://developer.gnome.org/gio/unstable/GMenuModel.html#GMenuModel-struct">Gio.MenuModel</a> from which the popup will be constructed,
+or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a> to disable the button.</p>
+<p>Depending on the value of <a href="https://developer.gnome.org/gtk3/GtkMenuButton.html#GtkMenuButton--use-popover">use-popover</a>, either a
+<a href="gtkmenu-h.html#GtkMenu">Gtk.Menu</a> will be created with <a href="gtkmenu-h.html#gtk_menu_new_from_model">Gtk.prototype.new_from_model</a>, or a
+<a href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a> with <a href="gtkpopover-h.html#gtk_popover_new_from_model">Gtk.prototype.new_from_model</a>. In either case,
+actions will be connected as documented for these functions.</p>
+<p>If <a href="https://developer.gnome.org/gtk3/GtkMenuButton.html#GtkMenuButton--popup">popup</a> or <a href="https://developer.gnome.org/gtk3/GtkMenuButton.html#GtkMenuButton--popover">popover</a> are already set,
+their content will be lost and replaced by the newly created popup.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_button</code></em></i>
+					(
+						<a title="Gtk.MenuButton" href="gtkmenubutton-h.html#GtkMenuButton">Gtk.MenuButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkmenubutton-h.html#GtkMenuButton">Gtk.MenuButton</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_model</code></em></i>
+					(
+						<a title="Gio.MenuModel" href="https://developer.gnome.org/gio/unstable/GMenuModel.html#GMenuModel-struct">Gio.MenuModel</a>
+						)
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/gio/unstable/GMenuModel.html#GMenuModel-struct">Gio.MenuModel</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.6
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_button_set_menu_model">
+	<span><code>Gtk.MenuButton.set_menu_model</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.MenuButton.set_menu_model (self, menu_model):
+    #python wrapper for 'gtk_menu_button_set_menu_model'</pre>
+
+<p>Sets the <a href="https://developer.gnome.org/gio/unstable/GMenuModel.html#GMenuModel-struct">Gio.MenuModel</a> from which the popup will be constructed,
+or <a href="https://docs.python.org/3/library/constants.html#None">None</a> to disable the button.</p>
+<p>Depending on the value of <a href="https://developer.gnome.org/gtk3/GtkMenuButton.html#GtkMenuButton--use-popover">use-popover</a>, either a
+<a href="gtkmenu-h.html#GtkMenu">Gtk.Menu</a> will be created with <a href="gtkmenu-h.html#gtk_menu_new_from_model">Gtk.Menu.new_from_model</a>, or a
+<a href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a> with <a href="gtkpopover-h.html#gtk_popover_new_from_model">Gtk.Popover.new_from_model</a>. In either case,
+actions will be connected as documented for these functions.</p>
+<p>If <a href="https://developer.gnome.org/gtk3/GtkMenuButton.html#GtkMenuButton--popup">popup</a> or <a href="https://developer.gnome.org/gtk3/GtkMenuButton.html#GtkMenuButton--popover">popover</a> are already set,
+their content will be lost and replaced by the newly created popup.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_button</code></em></i>
+					(
+						<a title="Gtk.MenuButton" href="gtkmenubutton-h.html#GtkMenuButton">Gtk.MenuButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkmenubutton-h.html#GtkMenuButton">Gtk.MenuButton</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_model</code></em></i>
+					(
+						<a title="Gio.MenuModel" href="https://developer.gnome.org/gio/unstable/GMenuModel.html#GMenuModel-struct">Gio.MenuModel</a>
+						)
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/gio/unstable/GMenuModel.html#GMenuModel-struct">Gio.MenuModel</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.6
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.6;" id="gtk_menu_button_get_menu_model">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_button_get_menu_model">
+	<span><code>gtk_menu_button_get_menu_model</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GMenuModel" href="https://developer.gnome.org/gio/unstable/GMenuModel.html#GMenuModel-struct">GMenuModel</a> *
+gtk_menu_button_get_menu_model (<a title="GtkMenuButton" href="gtkmenubutton-h.html#GtkMenuButton">GtkMenuButton</a> * menu_button)</pre>
+
+<p>Returns the <a href="https://developer.gnome.org/gio/unstable/GMenuModel.html#GMenuModel-struct">GMenuModel</a> used to generate the popup.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_button</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkmenubutton-h.html#GtkMenuButton">GtkMenuButton</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					
+										
+<span class="annotation">[<abbr title="NULL may be passed to the value"><span class="acronym">nullable</span></abbr>]</span>
+<span class="annotation">[<abbr title="Don't free data after the code is done"><span class="acronym">transfer: none</span></abbr>]</span>
+
+										)
+								–
+			</div>
+							<p>a <a href="https://developer.gnome.org/gio/unstable/GMenuModel.html#GMenuModel-struct">GMenuModel</a> or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.6
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_button_get_menu_model">
+	<span><code>Gtk.prototype.get_menu_model</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_menu_model(): {
+    // javascript wrapper for 'gtk_menu_button_get_menu_model'
+}</pre>
+
+<p>Returns the <a href="https://developer.gnome.org/gio/unstable/GMenuModel.html#GMenuModel-struct">Gio.MenuModel</a> used to generate the popup.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_button</code></em></i>
+					(
+						<a title="Gtk.MenuButton" href="gtkmenubutton-h.html#GtkMenuButton">Gtk.MenuButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkmenubutton-h.html#GtkMenuButton">Gtk.MenuButton</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gio.MenuModel" href="https://developer.gnome.org/gio/unstable/GMenuModel.html#GMenuModel-struct">Gio.MenuModel</a>
+										)
+								–
+			</div>
+							<p>a <a href="https://developer.gnome.org/gio/unstable/GMenuModel.html#GMenuModel-struct">Gio.MenuModel</a> or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.6
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_button_get_menu_model">
+	<span><code>Gtk.MenuButton.get_menu_model</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.MenuButton.get_menu_model (self):
+    #python wrapper for 'gtk_menu_button_get_menu_model'</pre>
+
+<p>Returns the <a href="https://developer.gnome.org/gio/unstable/GMenuModel.html#GMenuModel-struct">Gio.MenuModel</a> used to generate the popup.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_button</code></em></i>
+					(
+						<a title="Gtk.MenuButton" href="gtkmenubutton-h.html#GtkMenuButton">Gtk.MenuButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkmenubutton-h.html#GtkMenuButton">Gtk.MenuButton</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gio.MenuModel" href="https://developer.gnome.org/gio/unstable/GMenuModel.html#GMenuModel-struct">Gio.MenuModel</a>
+										)
+								–
+			</div>
+							<p>a <a href="https://developer.gnome.org/gio/unstable/GMenuModel.html#GMenuModel-struct">Gio.MenuModel</a> or <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.6
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.12;" id="gtk_menu_button_set_use_popover">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_button_set_use_popover">
+	<span><code>gtk_menu_button_set_use_popover</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_menu_button_set_use_popover (<a title="GtkMenuButton" href="gtkmenubutton-h.html#GtkMenuButton">GtkMenuButton</a> * menu_button,
+                                 <a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a> use_popover)</pre>
+
+<p>Sets whether to construct a <a href="gtkpopover-h.html#GtkPopover">GtkPopover</a> instead of <a href="gtkmenu-h.html#GtkMenu">GtkMenu</a>
+when <a href="gtkmenubutton-h.html#gtk_menu_button_set_menu_model">gtk_menu_button_set_menu_model</a> is called. Note that
+this property is only consulted when a new menu model is set.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_button</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkmenubutton-h.html#GtkMenuButton">GtkMenuButton</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>use_popover</code></em></i>
+				–
+	</div>
+			<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> to construct a popover from the menu model</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.12
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_button_set_use_popover">
+	<span><code>Gtk.prototype.set_use_popover</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_use_popover(use_popover: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_menu_button_set_use_popover'
+}</pre>
+
+<p>Sets whether to construct a <a href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a> instead of <a href="gtkmenu-h.html#GtkMenu">Gtk.Menu</a>
+when <a href="gtkmenubutton-h.html#gtk_menu_button_set_menu_model">Gtk.prototype.set_menu_model</a> is called. Note that
+this property is only consulted when a new menu model is set.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_button</code></em></i>
+					(
+						<a title="Gtk.MenuButton" href="gtkmenubutton-h.html#GtkMenuButton">Gtk.MenuButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkmenubutton-h.html#GtkMenuButton">Gtk.MenuButton</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>use_popover</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> to construct a popover from the menu model</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.12
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_button_set_use_popover">
+	<span><code>Gtk.MenuButton.set_use_popover</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.MenuButton.set_use_popover (self, use_popover):
+    #python wrapper for 'gtk_menu_button_set_use_popover'</pre>
+
+<p>Sets whether to construct a <a href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a> instead of <a href="gtkmenu-h.html#GtkMenu">Gtk.Menu</a>
+when <a href="gtkmenubutton-h.html#gtk_menu_button_set_menu_model">Gtk.MenuButton.set_menu_model</a> is called. Note that
+this property is only consulted when a new menu model is set.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_button</code></em></i>
+					(
+						<a title="Gtk.MenuButton" href="gtkmenubutton-h.html#GtkMenuButton">Gtk.MenuButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkmenubutton-h.html#GtkMenuButton">Gtk.MenuButton</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>use_popover</code></em></i>
+					(
+						<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+						)
+				–
+	</div>
+			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> to construct a popover from the menu model</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.12
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.12;" id="gtk_menu_button_get_use_popover">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_button_get_use_popover">
+	<span><code>gtk_menu_button_get_use_popover</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_menu_button_get_use_popover (<a title="GtkMenuButton" href="gtkmenubutton-h.html#GtkMenuButton">GtkMenuButton</a> * menu_button)</pre>
+
+<p>Returns whether a <a href="gtkpopover-h.html#GtkPopover">GtkPopover</a> or a <a href="gtkmenu-h.html#GtkMenu">GtkMenu</a> will be constructed
+from the menu model.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_button</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkmenubutton-h.html#GtkMenuButton">GtkMenuButton</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if using a <a href="gtkpopover-h.html#GtkPopover">GtkPopover</a></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.12
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_button_get_use_popover">
+	<span><code>Gtk.prototype.get_use_popover</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_use_popover(): {
+    // javascript wrapper for 'gtk_menu_button_get_use_popover'
+}</pre>
+
+<p>Returns whether a <a href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a> or a <a href="gtkmenu-h.html#GtkMenu">Gtk.Menu</a> will be constructed
+from the menu model.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_button</code></em></i>
+					(
+						<a title="Gtk.MenuButton" href="gtkmenubutton-h.html#GtkMenuButton">Gtk.MenuButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkmenubutton-h.html#GtkMenuButton">Gtk.MenuButton</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if using a <a href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.12
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_button_get_use_popover">
+	<span><code>Gtk.MenuButton.get_use_popover</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.MenuButton.get_use_popover (self):
+    #python wrapper for 'gtk_menu_button_get_use_popover'</pre>
+
+<p>Returns whether a <a href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a> or a <a href="gtkmenu-h.html#GtkMenu">Gtk.Menu</a> will be constructed
+from the menu model.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_button</code></em></i>
+					(
+						<a title="Gtk.MenuButton" href="gtkmenubutton-h.html#GtkMenuButton">Gtk.MenuButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkmenubutton-h.html#GtkMenuButton">Gtk.MenuButton</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+										)
+								–
+			</div>
+							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if using a <a href="gtkpopover-h.html#GtkPopover">Gtk.Popover</a></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.12
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.6;" id="gtk_menu_button_set_direction">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_button_set_direction">
+	<span><code>gtk_menu_button_set_direction</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_menu_button_set_direction (<a title="GtkMenuButton" href="gtkmenubutton-h.html#GtkMenuButton">GtkMenuButton</a> * menu_button,
+                               <a title="GtkArrowType" href="gtkmenubutton-h.html#GtkArrowType">GtkArrowType</a> direction)</pre>
+
+<p>Sets the direction in which the popup will be popped up, as
+well as changing the arrow’s direction. The child will not
+be changed to an arrow if it was customized.</p>
+<p>If the does not fit in the available space in the given direction,
+GTK+ will its best to keep it inside the screen and fully visible.</p>
+<p>If you pass <a href="gtkmenubutton-h.html#GTK_ARROW_NONE">GTK_ARROW_NONE</a> for a <em>direction</em>, the popup will behave
+as if you passed <a href="gtkmenubutton-h.html#GTK_ARROW_DOWN">GTK_ARROW_DOWN</a> (although you won’t see any arrows).</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_button</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkmenubutton-h.html#GtkMenuButton">GtkMenuButton</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>direction</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkmenubutton-h.html#GtkArrowType">GtkArrowType</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.6
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_button_set_direction">
+	<span><code>Gtk.prototype.set_direction</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_direction(direction: <a title="Gtk.ArrowType" href="gtkmenubutton-h.html#GtkArrowType">Gtk.ArrowType</a>): {
+    // javascript wrapper for 'gtk_menu_button_set_direction'
+}</pre>
+
+<p>Sets the direction in which the popup will be popped up, as
+well as changing the arrow’s direction. The child will not
+be changed to an arrow if it was customized.</p>
+<p>If the does not fit in the available space in the given direction,
+GTK+ will its best to keep it inside the screen and fully visible.</p>
+<p>If you pass <a href="gtkmenubutton-h.html#GTK_ARROW_NONE">Gtk.ArrowType.NONE</a> for a <em>direction</em>, the popup will behave
+as if you passed <a href="gtkmenubutton-h.html#GTK_ARROW_DOWN">Gtk.ArrowType.DOWN</a> (although you won’t see any arrows).</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_button</code></em></i>
+					(
+						<a title="Gtk.MenuButton" href="gtkmenubutton-h.html#GtkMenuButton">Gtk.MenuButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkmenubutton-h.html#GtkMenuButton">Gtk.MenuButton</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>direction</code></em></i>
+					(
+						<a title="Gtk.ArrowType" href="gtkmenubutton-h.html#GtkArrowType">Gtk.ArrowType</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkmenubutton-h.html#GtkArrowType">Gtk.ArrowType</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.6
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_button_set_direction">
+	<span><code>Gtk.MenuButton.set_direction</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.MenuButton.set_direction (self, direction):
+    #python wrapper for 'gtk_menu_button_set_direction'</pre>
+
+<p>Sets the direction in which the popup will be popped up, as
+well as changing the arrow’s direction. The child will not
+be changed to an arrow if it was customized.</p>
+<p>If the does not fit in the available space in the given direction,
+GTK+ will its best to keep it inside the screen and fully visible.</p>
+<p>If you pass <a href="gtkmenubutton-h.html#GTK_ARROW_NONE">Gtk.ArrowType.NONE</a> for a <em>direction</em>, the popup will behave
+as if you passed <a href="gtkmenubutton-h.html#GTK_ARROW_DOWN">Gtk.ArrowType.DOWN</a> (although you won’t see any arrows).</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_button</code></em></i>
+					(
+						<a title="Gtk.MenuButton" href="gtkmenubutton-h.html#GtkMenuButton">Gtk.MenuButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkmenubutton-h.html#GtkMenuButton">Gtk.MenuButton</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>direction</code></em></i>
+					(
+						<a title="Gtk.ArrowType" href="gtkmenubutton-h.html#GtkArrowType">Gtk.ArrowType</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkmenubutton-h.html#GtkArrowType">Gtk.ArrowType</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.6
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.6;" id="gtk_menu_button_get_direction">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_button_get_direction">
+	<span><code>gtk_menu_button_get_direction</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkArrowType" href="gtkmenubutton-h.html#GtkArrowType">GtkArrowType</a>
+gtk_menu_button_get_direction (<a title="GtkMenuButton" href="gtkmenubutton-h.html#GtkMenuButton">GtkMenuButton</a> * menu_button)</pre>
+
+<p>Returns the direction the popup will be pointing at when popped up.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_button</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkmenubutton-h.html#GtkMenuButton">GtkMenuButton</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>a <a href="gtkmenubutton-h.html#GtkArrowType">GtkArrowType</a> value</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.6
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_button_get_direction">
+	<span><code>Gtk.prototype.get_direction</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_direction(): {
+    // javascript wrapper for 'gtk_menu_button_get_direction'
+}</pre>
+
+<p>Returns the direction the popup will be pointing at when popped up.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_button</code></em></i>
+					(
+						<a title="Gtk.MenuButton" href="gtkmenubutton-h.html#GtkMenuButton">Gtk.MenuButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkmenubutton-h.html#GtkMenuButton">Gtk.MenuButton</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.ArrowType" href="gtkmenubutton-h.html#GtkArrowType">Gtk.ArrowType</a>
+										)
+								–
+			</div>
+							<p>a <a href="gtkmenubutton-h.html#GtkArrowType">Gtk.ArrowType</a> value</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.6
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_button_get_direction">
+	<span><code>Gtk.MenuButton.get_direction</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.MenuButton.get_direction (self):
+    #python wrapper for 'gtk_menu_button_get_direction'</pre>
+
+<p>Returns the direction the popup will be pointing at when popped up.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_button</code></em></i>
+					(
+						<a title="Gtk.MenuButton" href="gtkmenubutton-h.html#GtkMenuButton">Gtk.MenuButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkmenubutton-h.html#GtkMenuButton">Gtk.MenuButton</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.ArrowType" href="gtkmenubutton-h.html#GtkArrowType">Gtk.ArrowType</a>
+										)
+								–
+			</div>
+							<p>a <a href="gtkmenubutton-h.html#GtkArrowType">Gtk.ArrowType</a> value</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.6
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.6;" id="gtk_menu_button_set_align_widget">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_button_set_align_widget">
+	<span><code>gtk_menu_button_set_align_widget</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_menu_button_set_align_widget (<a title="GtkMenuButton" href="gtkmenubutton-h.html#GtkMenuButton">GtkMenuButton</a> * menu_button,
+                                  <a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> * align_widget)</pre>
+
+<p>Sets the <a href="gtkwidget-h.html#GtkWidget">GtkWidget</a> to use to line the menu with when popped up.
+Note that the <em>align_widget</em> must contain the <a href="gtkmenubutton-h.html#GtkMenuButton">GtkMenuButton</a> itself.</p>
+<p>Setting it to <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> means that the menu will be aligned with the
+button itself.</p>
+<p>Note that this property is only used with menus currently,
+and not for popovers.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_button</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkmenubutton-h.html#GtkMenuButton">GtkMenuButton</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>align_widget</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>a <a href="gtkwidget-h.html#GtkWidget">GtkWidget</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.6
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_button_set_align_widget">
+	<span><code>Gtk.prototype.set_align_widget</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_align_widget(align_widget: <a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>): {
+    // javascript wrapper for 'gtk_menu_button_set_align_widget'
+}</pre>
+
+<p>Sets the <a href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a> to use to line the menu with when popped up.
+Note that the <em>align_widget</em> must contain the <a href="gtkmenubutton-h.html#GtkMenuButton">Gtk.MenuButton</a> itself.</p>
+<p>Setting it to <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a> means that the menu will be aligned with the
+button itself.</p>
+<p>Note that this property is only used with menus currently,
+and not for popovers.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_button</code></em></i>
+					(
+						<a title="Gtk.MenuButton" href="gtkmenubutton-h.html#GtkMenuButton">Gtk.MenuButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkmenubutton-h.html#GtkMenuButton">Gtk.MenuButton</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>align_widget</code></em></i>
+					(
+						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.6
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_button_set_align_widget">
+	<span><code>Gtk.MenuButton.set_align_widget</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.MenuButton.set_align_widget (self, align_widget):
+    #python wrapper for 'gtk_menu_button_set_align_widget'</pre>
+
+<p>Sets the <a href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a> to use to line the menu with when popped up.
+Note that the <em>align_widget</em> must contain the <a href="gtkmenubutton-h.html#GtkMenuButton">Gtk.MenuButton</a> itself.</p>
+<p>Setting it to <a href="https://docs.python.org/3/library/constants.html#None">None</a> means that the menu will be aligned with the
+button itself.</p>
+<p>Note that this property is only used with menus currently,
+and not for popovers.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_button</code></em></i>
+					(
+						<a title="Gtk.MenuButton" href="gtkmenubutton-h.html#GtkMenuButton">Gtk.MenuButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkmenubutton-h.html#GtkMenuButton">Gtk.MenuButton</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>align_widget</code></em></i>
+					(
+						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.6
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.6;" id="gtk_menu_button_get_align_widget">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_button_get_align_widget">
+	<span><code>gtk_menu_button_get_align_widget</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> *
+gtk_menu_button_get_align_widget (<a title="GtkMenuButton" href="gtkmenubutton-h.html#GtkMenuButton">GtkMenuButton</a> * menu_button)</pre>
+
+<p>Returns the parent <a href="gtkwidget-h.html#GtkWidget">GtkWidget</a> to use to line up with menu.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_button</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkmenubutton-h.html#GtkMenuButton">GtkMenuButton</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					
+										
+<span class="annotation">[<abbr title="NULL may be passed to the value"><span class="acronym">nullable</span></abbr>]</span>
+<span class="annotation">[<abbr title="Don't free data after the code is done"><span class="acronym">transfer: none</span></abbr>]</span>
+
+										)
+								–
+			</div>
+							<p>a <a href="gtkwidget-h.html#GtkWidget">GtkWidget</a> value or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.6
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_button_get_align_widget">
+	<span><code>Gtk.prototype.get_align_widget</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_align_widget(): {
+    // javascript wrapper for 'gtk_menu_button_get_align_widget'
+}</pre>
+
+<p>Returns the parent <a href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a> to use to line up with menu.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_button</code></em></i>
+					(
+						<a title="Gtk.MenuButton" href="gtkmenubutton-h.html#GtkMenuButton">Gtk.MenuButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkmenubutton-h.html#GtkMenuButton">Gtk.MenuButton</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>a <a href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a> value or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.6
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_button_get_align_widget">
+	<span><code>Gtk.MenuButton.get_align_widget</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.MenuButton.get_align_widget (self):
+    #python wrapper for 'gtk_menu_button_get_align_widget'</pre>
+
+<p>Returns the parent <a href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a> to use to line up with menu.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_button</code></em></i>
+					(
+						<a title="Gtk.MenuButton" href="gtkmenubutton-h.html#GtkMenuButton">Gtk.MenuButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkmenubutton-h.html#GtkMenuButton">Gtk.MenuButton</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>a <a href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a> value or <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.6
+		</p>
+
+
+        </div>
+
+</div>
+
+
+        
+
+            <h2 class="symbol_section">Enumerations</h2>
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="GtkArrowType">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h3 data-hotdoc-id="GtkArrowType">
+	<span><code>GtkArrowType</code></span>
+</h3>
+
+
+<p>Used to indicate the direction in which an arrow should point.</p>
+
+
+
+
+	<div class="members-container">
+		<h4>Members</h4>
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_ARROW_UP">
+	<div>
+		<i><em><code>GTK_ARROW_UP</code></em></i>
+		(<span class="value">0</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_ARROW_DOWN">
+	<div>
+		<i><em><code>GTK_ARROW_DOWN</code></em></i>
+		(<span class="value">1</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_ARROW_LEFT">
+	<div>
+		<i><em><code>GTK_ARROW_LEFT</code></em></i>
+		(<span class="value">2</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_ARROW_RIGHT">
+	<div>
+		<i><em><code>GTK_ARROW_RIGHT</code></em></i>
+		(<span class="value">3</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_ARROW_NONE">
+	<div>
+		<i><em><code>GTK_ARROW_NONE</code></em></i>
+		(<span class="value">4</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h3 data-hotdoc-id="GtkArrowType">
+	<span><code>Gtk.ArrowType</code></span>
+</h3>
+
+
+<p>Used to indicate the direction in which an arrow should point.</p>
+
+
+
+
+	<div class="members-container">
+		<h4>Members</h4>
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_ARROW_UP">
+	<div>
+		<i><em><code>Gtk.ArrowType.UP</code></em></i>
+		(<span class="value">0</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_ARROW_DOWN">
+	<div>
+		<i><em><code>Gtk.ArrowType.DOWN</code></em></i>
+		(<span class="value">1</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_ARROW_LEFT">
+	<div>
+		<i><em><code>Gtk.ArrowType.LEFT</code></em></i>
+		(<span class="value">2</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_ARROW_RIGHT">
+	<div>
+		<i><em><code>Gtk.ArrowType.RIGHT</code></em></i>
+		(<span class="value">3</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_ARROW_NONE">
+	<div>
+		<i><em><code>Gtk.ArrowType.NONE</code></em></i>
+		(<span class="value">4</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="GtkArrowType">
+	<span><code>Gtk.ArrowType</code></span>
+</h3>
+
+
+<p>Used to indicate the direction in which an arrow should point.</p>
+
+
+
+
+	<div class="members-container">
+		<h4>Members</h4>
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_ARROW_UP">
+	<div>
+		<i><em><code>Gtk.ArrowType.UP</code></em></i>
+		(<span class="value">0</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_ARROW_DOWN">
+	<div>
+		<i><em><code>Gtk.ArrowType.DOWN</code></em></i>
+		(<span class="value">1</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_ARROW_LEFT">
+	<div>
+		<i><em><code>Gtk.ArrowType.LEFT</code></em></i>
+		(<span class="value">2</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_ARROW_RIGHT">
+	<div>
+		<i><em><code>Gtk.ArrowType.RIGHT</code></em></i>
+		(<span class="value">3</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_ARROW_NONE">
+	<div>
+		<i><em><code>Gtk.ArrowType.NONE</code></em></i>
+		(<span class="value">4</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+
+</div>
+
+
+
+
+
+
+		
+	</div>
+	<div id="search_results">
+		<p>The results of the search are</p>
+	</div>
+	<hr>
+	<div id="footer">
+		    
+
+	</div>
+</div>
+
+<div id="toc-column">
+	
+		<div class="edit-button">
+		
+
+	</div>
+		<div id="toc-wrapper">
+		<nav id="toc"></nav>
+	</div>
+</div>
+</div>
+</main>
+
+</body>
+
+<script src="assets/js/navbar_offset_scroller.js"></script>
+</html>

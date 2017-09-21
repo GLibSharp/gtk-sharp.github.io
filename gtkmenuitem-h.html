@@ -1,0 +1,3467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<base href=".">
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>GtkMenuItem</title>
+
+<link rel="stylesheet" href="assets/css/custom_bootstrap.css" type="text/css">
+<link rel="stylesheet" href="assets/css/bootstrap-toc.min.css" type="text/css">
+<link rel="stylesheet" href="assets/css/frontend.css" type="text/css">
+<link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
+
+<link rel="stylesheet" href="assets/css/prism.css" type="text/css">
+
+<script src="assets/js/mustache.min.js"></script>
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/scrollspy.js"></script>
+<script src="assets/js/bootstrap.js"></script>
+<script src="assets/js/typeahead.jquery.min.js"></script>
+<script src="assets/js/search.js"></script>
+<script src="assets/js/isotope.pkgd.min.js"></script>
+<script src="assets/js/compare-versions.js"></script>
+<script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="assets/js/bootstrap-toc.min.js"></script>
+<script src="assets/js/jquery.touchSwipe.min.js"></script>
+<script src="assets/js/anchor.min.js"></script>
+<script src="assets/js/tag_filtering.js"></script>
+<script src="assets/js/language_switching.js"></script>
+
+<script src="assets/js/lines_around_headings.js"></script>
+
+<script src="assets/js/prism-core.js"></script>
+<script src="assets/js/prism-autoloader.js"></script>
+<script src="assets/js/prism_autoloader_path_override.js"></script>
+<script src="assets/js/trie.js"></script>
+
+
+</head>
+
+<body class="no-script
+" data-spy="scroll" data-target="#toc" data-offset="70">
+
+<script>
+$('body').removeClass('no-script');
+</script>
+
+<nav class="navbar navbar-fixed-top navbar-default" id="topnav">
+	<div class="container-fluid">
+		<div class="navbar-right">
+			<a id="toc-toggle">
+				<span class="glyphicon glyphicon-menu-right"></span>
+				<span class="glyphicon glyphicon-menu-left"></span>
+			</a>
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-wrapper" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<form action="" class="navbar-form pull-right" id="navbar-search-form">
+                               <div class="form-group has-feedback">
+                                       <input type="text" class="form-control input-sm" name="search" id="sidenav-lookup-field" placeholder="search" disabled>
+				       <span class="glyphicon glyphicon-search form-control-feedback" id="search-mgn-glass"></span>
+                               </div>
+                        </form>
+		</div>
+		<div class="navbar-header">
+			<a id="sidenav-toggle">
+				<span class="glyphicon glyphicon-menu-right"></span>
+				<span class="glyphicon glyphicon-menu-left"></span>
+			</a>
+			<a id="home-link" href="index.html" class="hotdoc-navbar-brand">
+				<img src="assets/images/home.svg" alt="Home">
+			</a>
+		</div>
+		<div class="navbar-collapse collapse" id="navbar-wrapper">
+			<ul class="nav navbar-nav" id="menu">
+							</ul>
+			<div class="hidden-xs hidden-sm navbar-text navbar-center">
+							</div>
+		</div>
+	</div>
+</nav>
+
+<main>
+<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="gtkmenuitem-h.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['c', 'javascript', 'python']" data-hotdoc-meta-gi-language="c">
+<script src="assets/js/utils.js"></script>
+
+<div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
+	<script src="assets/js/navigation.js"></script>
+	<script src="assets/js/sitemap.js"></script>
+</div>
+
+<div id="body">
+	<div id="main">
+				    <div id="page-description" data-hotdoc-source="gtkmenuitem.h.markdown" data-hotdoc-role="main">
+        <h1 id="gtkmenuitem-page">GtkMenuItem</h1>
+<p>The <a href="gtkmenuitem-h.html#GtkMenuItem" data-gi-href-javascript="gtkmenuitem-h.html#GtkMenuItem" data-gi-title-javascript="Gtk.MenuItem" data-gi-href-python="gtkmenuitem-h.html#GtkMenuItem" data-gi-title-python="Gtk.MenuItem">GtkMenuItem</a> widget and the derived widgets are the only valid
+children for menus. Their function is to correctly handle highlighting,
+alignment, events and submenus.</p>
+<p>As a GtkMenuItem derives from <a href="gtkbin-h.html#GtkBin" data-gi-href-javascript="gtkbin-h.html#GtkBin" data-gi-title-javascript="Gtk.Bin" data-gi-href-python="gtkbin-h.html#GtkBin" data-gi-title-python="Gtk.Bin">GtkBin</a> it can hold any valid child widget,
+although only a few are really useful.</p>
+<p>By default, a GtkMenuItem sets a <a href="gtkaccellabel-h.html#GtkAccelLabel" data-gi-href-javascript="gtkaccellabel-h.html#GtkAccelLabel" data-gi-title-javascript="Gtk.AccelLabel" data-gi-href-python="gtkaccellabel-h.html#GtkAccelLabel" data-gi-title-python="Gtk.AccelLabel">GtkAccelLabel</a> as its child.
+GtkMenuItem has direct functions to set the label and its mnemonic.
+For more advanced label settings, you can fetch the child widget from the GtkBin.</p>
+<p>An example for setting markup and accelerator on a MenuItem:</p>
+<pre><code class="language-[&lt;!--"> GtkWidget *child = gtk_bin_get_child (GTK_BIN (menu_item));
+ gtk_label_set_markup (GTK_LABEL (child), "&lt;i&gt;new label&lt;/i&gt; with &lt;b&gt;markup&lt;/b&gt;");
+ gtk_accel_label_set_accel (GTK_ACCEL_LABEL (child), GDK_KEY_1, 0);
+</code></pre>
+<h1 id="gtkmenuitem-as-gtkbuildable">GtkMenuItem as GtkBuildable</h1>
+<p>The GtkMenuItem implementation of the <a href="gtkbuildable-h.html#GtkBuildable" data-gi-href-javascript="gtkbuildable-h.html#GtkBuildable" data-gi-title-javascript="Gtk.Buildable" data-gi-href-python="gtkbuildable-h.html#GtkBuildable" data-gi-title-python="Gtk.Buildable">GtkBuildable</a> interface supports
+adding a submenu by specifying “submenu” as the “type” attribute of
+a <child> element.</child></p>
+<p>An example of UI definition fragment with submenus:</p>
+<pre><code class="language-["> &lt;object class="GtkMenuItem"&gt;
+   &lt;child type="submenu"&gt;
+     &lt;object class="GtkMenu"/&gt;
+   &lt;/child&gt;
+ &lt;/object&gt;
+</code></pre>
+<h1 id="css-nodes">CSS nodes</h1>
+<pre><code class="language-[&lt;!--"> menuitem
+ ├── &lt;child&gt;
+ ╰── [arrow.right]
+</code></pre>
+<p>GtkMenuItem has a single CSS node with name menuitem. If the menuitem
+has a submenu, it gets another CSS node with name arrow, which has
+the .left or .right style class.</p>
+
+    </div>
+        
+        
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="GtkMenuItem">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h2 data-hotdoc-id="GtkMenuItem">
+	<span><code>GtkMenuItem</code></span>
+</h2>
+
+
+<div class="hierarchy_container">
+	<div class="hierarchy_details">
+<pre>
+<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object">GObject</a>
+    <span class="lineart">╰──</span><a title="GInitiallyUnowned" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-javascript="GObject.InitiallyUnowned" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-python="GObject.InitiallyUnowned">GInitiallyUnowned</a>
+        <span class="lineart">╰──</span><a title="GtkWidget" href="gtkwidget-h.html#GtkWidget" data-gi-href-javascript="gtkwidget-h.html#GtkWidget" data-gi-title-javascript="Gtk.Widget" data-gi-href-python="gtkwidget-h.html#GtkWidget" data-gi-title-python="Gtk.Widget">GtkWidget</a>
+            <span class="lineart">╰──</span><a title="GtkContainer" href="gtkcontainer-h.html#GtkContainer" data-gi-href-javascript="gtkcontainer-h.html#GtkContainer" data-gi-title-javascript="Gtk.Container" data-gi-href-python="gtkcontainer-h.html#GtkContainer" data-gi-title-python="Gtk.Container">GtkContainer</a>
+                <span class="lineart">╰──</span><a title="GtkBin" href="gtkbin-h.html#GtkBin" data-gi-href-javascript="gtkbin-h.html#GtkBin" data-gi-title-javascript="Gtk.Bin" data-gi-href-python="gtkbin-h.html#GtkBin" data-gi-title-python="Gtk.Bin">GtkBin</a>
+                    <span class="lineart">╰──</span>GtkMenuItem
+                        <span class="lineart">╰──</span><a title="GtkCheckMenuItem" href="https://developer.gnome.org/gtk3/GtkCheckMenuItem.html#GtkCheckMenuItem-struct" data-gi-href-javascript="https://developer.gnome.org/gtk3/GtkCheckMenuItem.html#GtkCheckMenuItem-struct" data-gi-title-javascript="Gtk.CheckMenuItem" data-gi-href-python="https://developer.gnome.org/gtk3/GtkCheckMenuItem.html#GtkCheckMenuItem-struct" data-gi-title-python="Gtk.CheckMenuItem">GtkCheckMenuItem</a>
+                        <span class="lineart">╰──</span><a title="GtkSeparatorMenuItem" href="gtkseparatormenuitem-h.html#GtkSeparatorMenuItem" data-gi-href-javascript="gtkseparatormenuitem-h.html#GtkSeparatorMenuItem" data-gi-title-javascript="Gtk.SeparatorMenuItem" data-gi-href-python="gtkseparatormenuitem-h.html#GtkSeparatorMenuItem" data-gi-title-python="Gtk.SeparatorMenuItem">GtkSeparatorMenuItem</a>
+</pre>
+
+</div>
+
+</div>
+
+<div class="interfaces_container">
+	
+<p><b>Implemented interfaces:</b>
+    AtkImplementorIface, <a title="GtkActionable" href="gtkactionable-h.html#GtkActionable" data-gi-href-javascript="gtkactionable-h.html#GtkActionable" data-gi-title-javascript="Gtk.Actionable" data-gi-href-python="gtkactionable-h.html#GtkActionable" data-gi-title-python="Gtk.Actionable">GtkActionable</a>, <a title="GtkBuildable" href="gtkbuildable-h.html#GtkBuildable" data-gi-href-javascript="gtkbuildable-h.html#GtkBuildable" data-gi-title-javascript="Gtk.Buildable" data-gi-href-python="gtkbuildable-h.html#GtkBuildable" data-gi-title-python="Gtk.Buildable">GtkBuildable</a>
+</p>
+
+</div>
+
+
+
+
+	<div class="members-container">
+		<h3>Members</h3>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkMenuItem.bin">
+	<div>
+		<i><em><code>bin</code></em></i>
+		(<a title="GtkBin" href="gtkbin-h.html#GtkBin" data-gi-href-javascript="gtkbin-h.html#GtkBin" data-gi-title-javascript="Gtk.Bin" data-gi-href-python="gtkbin-h.html#GtkBin" data-gi-title-python="Gtk.Bin">GtkBin</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+<h3>Class structure</h3>
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="GtkMenuItemClass">
+	<span><code>GtkMenuItemClass</code></span>
+</h4>
+
+
+
+
+
+	<div class="members-container">
+		<h5>Fields</h5>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkMenuItemClass.parent_class">
+	<div>
+		<i><em><code>parent_class</code></em></i>
+		(<a title="GtkBinClass" href="GtkBinClass">GtkBinClass</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GtkMenuItemClass.hide_on_activate">
+	<div>
+		<i><em><code>hide_on_activate</code></em></i>
+		(<a title="guint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint">guint</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h3>
+	Gtk.MenuItemClass
+</h3>
+
+
+
+
+
+	<div class="members-container">
+		<h5>Attributes</h5>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkMenuItemClass.parent_class">
+	<div>
+		<i><em><code>MenuItemClass.parent_class</code></em></i>
+		(<a title="Gtk.BinClass" href="GtkBinClass">Gtk.BinClass</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GtkMenuItemClass.hide_on_activate">
+	<div>
+		<i><em><code>MenuItemClass.hide_on_activate</code></em></i>
+		(<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3>
+	Gtk.MenuItemClass
+</h3>
+
+
+
+
+
+	<div class="members-container">
+		<h5>Attributes</h5>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkMenuItemClass.parent_class">
+	<div>
+		<i><em><code>MenuItemClass.parent_class</code></em></i>
+		(<a title="Gtk.BinClass" href="GtkBinClass">Gtk.BinClass</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GtkMenuItemClass.hide_on_activate">
+	<div>
+		<i><em><code>MenuItemClass.hide_on_activate</code></em></i>
+		(<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h2 data-hotdoc-id="GtkMenuItem">
+	<span><code>GtkMenuItem</code></span>
+</h2>
+
+
+<div class="hierarchy_container">
+	<div class="hierarchy_details">
+<pre>
+<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object">GObject</a>
+    <span class="lineart">╰──</span><a title="GInitiallyUnowned" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-javascript="GObject.InitiallyUnowned" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-python="GObject.InitiallyUnowned">GInitiallyUnowned</a>
+        <span class="lineart">╰──</span><a title="GtkWidget" href="gtkwidget-h.html#GtkWidget" data-gi-href-javascript="gtkwidget-h.html#GtkWidget" data-gi-title-javascript="Gtk.Widget" data-gi-href-python="gtkwidget-h.html#GtkWidget" data-gi-title-python="Gtk.Widget">GtkWidget</a>
+            <span class="lineart">╰──</span><a title="GtkContainer" href="gtkcontainer-h.html#GtkContainer" data-gi-href-javascript="gtkcontainer-h.html#GtkContainer" data-gi-title-javascript="Gtk.Container" data-gi-href-python="gtkcontainer-h.html#GtkContainer" data-gi-title-python="Gtk.Container">GtkContainer</a>
+                <span class="lineart">╰──</span><a title="GtkBin" href="gtkbin-h.html#GtkBin" data-gi-href-javascript="gtkbin-h.html#GtkBin" data-gi-title-javascript="Gtk.Bin" data-gi-href-python="gtkbin-h.html#GtkBin" data-gi-title-python="Gtk.Bin">GtkBin</a>
+                    <span class="lineart">╰──</span>GtkMenuItem
+                        <span class="lineart">╰──</span><a title="GtkCheckMenuItem" href="https://developer.gnome.org/gtk3/GtkCheckMenuItem.html#GtkCheckMenuItem-struct" data-gi-href-javascript="https://developer.gnome.org/gtk3/GtkCheckMenuItem.html#GtkCheckMenuItem-struct" data-gi-title-javascript="Gtk.CheckMenuItem" data-gi-href-python="https://developer.gnome.org/gtk3/GtkCheckMenuItem.html#GtkCheckMenuItem-struct" data-gi-title-python="Gtk.CheckMenuItem">GtkCheckMenuItem</a>
+                        <span class="lineart">╰──</span><a title="GtkSeparatorMenuItem" href="gtkseparatormenuitem-h.html#GtkSeparatorMenuItem" data-gi-href-javascript="gtkseparatormenuitem-h.html#GtkSeparatorMenuItem" data-gi-title-javascript="Gtk.SeparatorMenuItem" data-gi-href-python="gtkseparatormenuitem-h.html#GtkSeparatorMenuItem" data-gi-title-python="Gtk.SeparatorMenuItem">GtkSeparatorMenuItem</a>
+</pre>
+
+</div>
+
+</div>
+
+<div class="interfaces_container">
+	
+<p><b>Implemented interfaces:</b>
+    AtkImplementorIface, <a title="GtkActionable" href="gtkactionable-h.html#GtkActionable" data-gi-href-javascript="gtkactionable-h.html#GtkActionable" data-gi-title-javascript="Gtk.Actionable" data-gi-href-python="gtkactionable-h.html#GtkActionable" data-gi-title-python="Gtk.Actionable">GtkActionable</a>, <a title="GtkBuildable" href="gtkbuildable-h.html#GtkBuildable" data-gi-href-javascript="gtkbuildable-h.html#GtkBuildable" data-gi-title-javascript="Gtk.Buildable" data-gi-href-python="gtkbuildable-h.html#GtkBuildable" data-gi-title-python="Gtk.Buildable">GtkBuildable</a>
+</p>
+
+</div>
+
+
+
+
+	<div class="members-container">
+		<h3>Members</h3>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkMenuItem.bin">
+	<div>
+		<i><em><code>bin</code></em></i>
+		(<a title="GtkBin" href="gtkbin-h.html#GtkBin" data-gi-href-javascript="gtkbin-h.html#GtkBin" data-gi-title-javascript="Gtk.Bin" data-gi-href-python="gtkbin-h.html#GtkBin" data-gi-title-python="Gtk.Bin">GtkBin</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h2 data-hotdoc-id="GtkMenuItem">
+	<span><code>GtkMenuItem</code></span>
+</h2>
+
+
+<div class="hierarchy_container">
+	<div class="hierarchy_details">
+<pre>
+<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object">GObject</a>
+    <span class="lineart">╰──</span><a title="GInitiallyUnowned" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-javascript="GObject.InitiallyUnowned" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-python="GObject.InitiallyUnowned">GInitiallyUnowned</a>
+        <span class="lineart">╰──</span><a title="GtkWidget" href="gtkwidget-h.html#GtkWidget" data-gi-href-javascript="gtkwidget-h.html#GtkWidget" data-gi-title-javascript="Gtk.Widget" data-gi-href-python="gtkwidget-h.html#GtkWidget" data-gi-title-python="Gtk.Widget">GtkWidget</a>
+            <span class="lineart">╰──</span><a title="GtkContainer" href="gtkcontainer-h.html#GtkContainer" data-gi-href-javascript="gtkcontainer-h.html#GtkContainer" data-gi-title-javascript="Gtk.Container" data-gi-href-python="gtkcontainer-h.html#GtkContainer" data-gi-title-python="Gtk.Container">GtkContainer</a>
+                <span class="lineart">╰──</span><a title="GtkBin" href="gtkbin-h.html#GtkBin" data-gi-href-javascript="gtkbin-h.html#GtkBin" data-gi-title-javascript="Gtk.Bin" data-gi-href-python="gtkbin-h.html#GtkBin" data-gi-title-python="Gtk.Bin">GtkBin</a>
+                    <span class="lineart">╰──</span>GtkMenuItem
+                        <span class="lineart">╰──</span><a title="GtkCheckMenuItem" href="https://developer.gnome.org/gtk3/GtkCheckMenuItem.html#GtkCheckMenuItem-struct" data-gi-href-javascript="https://developer.gnome.org/gtk3/GtkCheckMenuItem.html#GtkCheckMenuItem-struct" data-gi-title-javascript="Gtk.CheckMenuItem" data-gi-href-python="https://developer.gnome.org/gtk3/GtkCheckMenuItem.html#GtkCheckMenuItem-struct" data-gi-title-python="Gtk.CheckMenuItem">GtkCheckMenuItem</a>
+                        <span class="lineart">╰──</span><a title="GtkSeparatorMenuItem" href="gtkseparatormenuitem-h.html#GtkSeparatorMenuItem" data-gi-href-javascript="gtkseparatormenuitem-h.html#GtkSeparatorMenuItem" data-gi-title-javascript="Gtk.SeparatorMenuItem" data-gi-href-python="gtkseparatormenuitem-h.html#GtkSeparatorMenuItem" data-gi-title-python="Gtk.SeparatorMenuItem">GtkSeparatorMenuItem</a>
+</pre>
+
+</div>
+
+</div>
+
+<div class="interfaces_container">
+	
+<p><b>Implemented interfaces:</b>
+    AtkImplementorIface, <a title="GtkActionable" href="gtkactionable-h.html#GtkActionable" data-gi-href-javascript="gtkactionable-h.html#GtkActionable" data-gi-title-javascript="Gtk.Actionable" data-gi-href-python="gtkactionable-h.html#GtkActionable" data-gi-title-python="Gtk.Actionable">GtkActionable</a>, <a title="GtkBuildable" href="gtkbuildable-h.html#GtkBuildable" data-gi-href-javascript="gtkbuildable-h.html#GtkBuildable" data-gi-title-javascript="Gtk.Buildable" data-gi-href-python="gtkbuildable-h.html#GtkBuildable" data-gi-title-python="Gtk.Buildable">GtkBuildable</a>
+</p>
+
+</div>
+
+
+
+
+	<div class="members-container">
+		<h3>Members</h3>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkMenuItem.bin">
+	<div>
+		<i><em><code>bin</code></em></i>
+		(<a title="GtkBin" href="gtkbin-h.html#GtkBin" data-gi-href-javascript="gtkbin-h.html#GtkBin" data-gi-title-javascript="Gtk.Bin" data-gi-href-python="gtkbin-h.html#GtkBin" data-gi-title-python="Gtk.Bin">GtkBin</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+
+</div>
+
+
+            <h3 class="symbol_section">Constructors</h3>
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_menu_item_new">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_item_new">
+	<span><code>gtk_menu_item_new</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> *
+gtk_menu_item_new ()</pre>
+
+<p>Creates a new <a href="gtkmenuitem-h.html#GtkMenuItem">GtkMenuItem</a>.</p>
+
+
+
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>the newly created <a href="gtkmenuitem-h.html#GtkMenuItem">GtkMenuItem</a></p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_item_new">
+	<span><code>Gtk.prototype.new</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.new(): {
+    // javascript wrapper for 'gtk_menu_item_new'
+}</pre>
+
+<p>Creates a new <a href="gtkmenuitem-h.html#GtkMenuItem">Gtk.MenuItem</a>.</p>
+
+
+
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>the newly created <a href="gtkmenuitem-h.html#GtkMenuItem">Gtk.MenuItem</a></p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_item_new">
+	<span><code>Gtk.MenuItem.new</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.MenuItem.new ():
+    #python wrapper for 'gtk_menu_item_new'</pre>
+
+<p>Creates a new <a href="gtkmenuitem-h.html#GtkMenuItem">Gtk.MenuItem</a>.</p>
+
+
+
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>the newly created <a href="gtkmenuitem-h.html#GtkMenuItem">Gtk.MenuItem</a></p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_menu_item_new_with_label">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_item_new_with_label">
+	<span><code>gtk_menu_item_new_with_label</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> *
+gtk_menu_item_new_with_label (const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * label)</pre>
+
+<p>Creates a new <a href="gtkmenuitem-h.html#GtkMenuItem">GtkMenuItem</a> whose child is a <a href="gtklabel-h.html#GtkLabel">GtkLabel</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>label</code></em></i>
+				–
+	</div>
+			<p>the text for the label</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>the newly created <a href="gtkmenuitem-h.html#GtkMenuItem">GtkMenuItem</a></p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_item_new_with_label">
+	<span><code>Gtk.prototype.new_with_label</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.new_with_label(label: <a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>): {
+    // javascript wrapper for 'gtk_menu_item_new_with_label'
+}</pre>
+
+<p>Creates a new <a href="gtkmenuitem-h.html#GtkMenuItem">Gtk.MenuItem</a> whose child is a <a href="gtklabel-h.html#GtkLabel">Gtk.Label</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>label</code></em></i>
+					(
+						<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
+						)
+				–
+	</div>
+			<p>the text for the label</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>the newly created <a href="gtkmenuitem-h.html#GtkMenuItem">Gtk.MenuItem</a></p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_item_new_with_label">
+	<span><code>Gtk.MenuItem.new_with_label</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.MenuItem.new_with_label (label):
+    #python wrapper for 'gtk_menu_item_new_with_label'</pre>
+
+<p>Creates a new <a href="gtkmenuitem-h.html#GtkMenuItem">Gtk.MenuItem</a> whose child is a <a href="gtklabel-h.html#GtkLabel">Gtk.Label</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>label</code></em></i>
+					(
+						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
+						)
+				–
+	</div>
+			<p>the text for the label</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>the newly created <a href="gtkmenuitem-h.html#GtkMenuItem">Gtk.MenuItem</a></p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_menu_item_new_with_mnemonic">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_item_new_with_mnemonic">
+	<span><code>gtk_menu_item_new_with_mnemonic</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> *
+gtk_menu_item_new_with_mnemonic (const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * label)</pre>
+
+<p>Creates a new <a href="gtkmenuitem-h.html#GtkMenuItem">GtkMenuItem</a> containing a label.</p>
+<p>The label will be created using <a href="gtklabel-h.html#gtk_label_new_with_mnemonic">gtk_label_new_with_mnemonic</a>,
+so underscores in <em>label</em> indicate the mnemonic for the menu item.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>label</code></em></i>
+				–
+	</div>
+			<p>The text of the button, with an underscore in front of the
+mnemonic character</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>a new <a href="gtkmenuitem-h.html#GtkMenuItem">GtkMenuItem</a></p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_item_new_with_mnemonic">
+	<span><code>Gtk.prototype.new_with_mnemonic</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.new_with_mnemonic(label: <a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>): {
+    // javascript wrapper for 'gtk_menu_item_new_with_mnemonic'
+}</pre>
+
+<p>Creates a new <a href="gtkmenuitem-h.html#GtkMenuItem">Gtk.MenuItem</a> containing a label.</p>
+<p>The label will be created using <a href="gtklabel-h.html#gtk_label_new_with_mnemonic">Gtk.prototype.new_with_mnemonic</a>,
+so underscores in <em>label</em> indicate the mnemonic for the menu item.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>label</code></em></i>
+					(
+						<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
+						)
+				–
+	</div>
+			<p>The text of the button, with an underscore in front of the
+mnemonic character</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>a new <a href="gtkmenuitem-h.html#GtkMenuItem">Gtk.MenuItem</a></p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_item_new_with_mnemonic">
+	<span><code>Gtk.MenuItem.new_with_mnemonic</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.MenuItem.new_with_mnemonic (label):
+    #python wrapper for 'gtk_menu_item_new_with_mnemonic'</pre>
+
+<p>Creates a new <a href="gtkmenuitem-h.html#GtkMenuItem">Gtk.MenuItem</a> containing a label.</p>
+<p>The label will be created using <a href="gtklabel-h.html#gtk_label_new_with_mnemonic">Gtk.Label.new_with_mnemonic</a>,
+so underscores in <em>label</em> indicate the mnemonic for the menu item.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>label</code></em></i>
+					(
+						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
+						)
+				–
+	</div>
+			<p>The text of the button, with an underscore in front of the
+mnemonic character</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>a new <a href="gtkmenuitem-h.html#GtkMenuItem">Gtk.MenuItem</a></p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+
+            <h3 class="symbol_section">Methods</h3>
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.16;" id="gtk_menu_item_get_label">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_item_get_label">
+	<span><code>gtk_menu_item_get_label</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> *
+gtk_menu_item_get_label (<a title="GtkMenuItem" href="gtkmenuitem-h.html#GtkMenuItem">GtkMenuItem</a> * menu_item)</pre>
+
+<p>Sets <em>text</em> on the <em>menu_item</em> label</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_item</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkmenuitem-h.html#GtkMenuItem">GtkMenuItem</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>The text in the <em>menu_item</em> label. This is the internal
+string used by the label, and must not be modified.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.16
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_item_get_label">
+	<span><code>Gtk.prototype.get_label</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_label(): {
+    // javascript wrapper for 'gtk_menu_item_get_label'
+}</pre>
+
+<p>Sets <em>text</em> on the <em>menu_item</em> label</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_item</code></em></i>
+					(
+						<a title="Gtk.MenuItem" href="gtkmenuitem-h.html#GtkMenuItem">Gtk.MenuItem</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkmenuitem-h.html#GtkMenuItem">Gtk.MenuItem</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
+										)
+								–
+			</div>
+							<p>The text in the <em>menu_item</em> label. This is the internal
+string used by the label, and must not be modified.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.16
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_item_get_label">
+	<span><code>Gtk.MenuItem.get_label</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.MenuItem.get_label (self):
+    #python wrapper for 'gtk_menu_item_get_label'</pre>
+
+<p>Sets <em>text</em> on the <em>menu_item</em> label</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_item</code></em></i>
+					(
+						<a title="Gtk.MenuItem" href="gtkmenuitem-h.html#GtkMenuItem">Gtk.MenuItem</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkmenuitem-h.html#GtkMenuItem">Gtk.MenuItem</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
+										)
+								–
+			</div>
+							<p>The text in the <em>menu_item</em> label. This is the internal
+string used by the label, and must not be modified.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.16
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.16;" id="gtk_menu_item_set_label">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_item_set_label">
+	<span><code>gtk_menu_item_set_label</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_menu_item_set_label (<a title="GtkMenuItem" href="gtkmenuitem-h.html#GtkMenuItem">GtkMenuItem</a> * menu_item,
+                         const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * label)</pre>
+
+<p>Sets <em>text</em> on the <em>menu_item</em> label</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_item</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkmenuitem-h.html#GtkMenuItem">GtkMenuItem</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>label</code></em></i>
+				–
+	</div>
+			<p>the text you want to set</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.16
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_item_set_label">
+	<span><code>Gtk.prototype.set_label</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_label(label: <a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>): {
+    // javascript wrapper for 'gtk_menu_item_set_label'
+}</pre>
+
+<p>Sets <em>text</em> on the <em>menu_item</em> label</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_item</code></em></i>
+					(
+						<a title="Gtk.MenuItem" href="gtkmenuitem-h.html#GtkMenuItem">Gtk.MenuItem</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkmenuitem-h.html#GtkMenuItem">Gtk.MenuItem</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>label</code></em></i>
+					(
+						<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
+						)
+				–
+	</div>
+			<p>the text you want to set</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.16
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_item_set_label">
+	<span><code>Gtk.MenuItem.set_label</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.MenuItem.set_label (self, label):
+    #python wrapper for 'gtk_menu_item_set_label'</pre>
+
+<p>Sets <em>text</em> on the <em>menu_item</em> label</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_item</code></em></i>
+					(
+						<a title="Gtk.MenuItem" href="gtkmenuitem-h.html#GtkMenuItem">Gtk.MenuItem</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkmenuitem-h.html#GtkMenuItem">Gtk.MenuItem</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>label</code></em></i>
+					(
+						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
+						)
+				–
+	</div>
+			<p>the text you want to set</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.16
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.16;" id="gtk_menu_item_get_use_underline">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_item_get_use_underline">
+	<span><code>gtk_menu_item_get_use_underline</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_menu_item_get_use_underline (<a title="GtkMenuItem" href="gtkmenuitem-h.html#GtkMenuItem">GtkMenuItem</a> * menu_item)</pre>
+
+<p>Checks if an underline in the text indicates the next character
+should be used for the mnemonic accelerator key.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_item</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkmenuitem-h.html#GtkMenuItem">GtkMenuItem</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if an embedded underline in the label
+indicates the mnemonic accelerator key.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.16
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_item_get_use_underline">
+	<span><code>Gtk.prototype.get_use_underline</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_use_underline(): {
+    // javascript wrapper for 'gtk_menu_item_get_use_underline'
+}</pre>
+
+<p>Checks if an underline in the text indicates the next character
+should be used for the mnemonic accelerator key.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_item</code></em></i>
+					(
+						<a title="Gtk.MenuItem" href="gtkmenuitem-h.html#GtkMenuItem">Gtk.MenuItem</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkmenuitem-h.html#GtkMenuItem">Gtk.MenuItem</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if an embedded underline in the label
+indicates the mnemonic accelerator key.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.16
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_item_get_use_underline">
+	<span><code>Gtk.MenuItem.get_use_underline</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.MenuItem.get_use_underline (self):
+    #python wrapper for 'gtk_menu_item_get_use_underline'</pre>
+
+<p>Checks if an underline in the text indicates the next character
+should be used for the mnemonic accelerator key.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_item</code></em></i>
+					(
+						<a title="Gtk.MenuItem" href="gtkmenuitem-h.html#GtkMenuItem">Gtk.MenuItem</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkmenuitem-h.html#GtkMenuItem">Gtk.MenuItem</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+										)
+								–
+			</div>
+							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if an embedded underline in the label
+indicates the mnemonic accelerator key.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.16
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.16;" id="gtk_menu_item_set_use_underline">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_item_set_use_underline">
+	<span><code>gtk_menu_item_set_use_underline</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_menu_item_set_use_underline (<a title="GtkMenuItem" href="gtkmenuitem-h.html#GtkMenuItem">GtkMenuItem</a> * menu_item,
+                                 <a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a> setting)</pre>
+
+<p>If true, an underline in the text indicates the next character
+should be used for the mnemonic accelerator key.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_item</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkmenuitem-h.html#GtkMenuItem">GtkMenuItem</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>setting</code></em></i>
+				–
+	</div>
+			<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if underlines in the text indicate mnemonics</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.16
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_item_set_use_underline">
+	<span><code>Gtk.prototype.set_use_underline</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_use_underline(setting: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_menu_item_set_use_underline'
+}</pre>
+
+<p>If true, an underline in the text indicates the next character
+should be used for the mnemonic accelerator key.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_item</code></em></i>
+					(
+						<a title="Gtk.MenuItem" href="gtkmenuitem-h.html#GtkMenuItem">Gtk.MenuItem</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkmenuitem-h.html#GtkMenuItem">Gtk.MenuItem</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>setting</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if underlines in the text indicate mnemonics</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.16
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_item_set_use_underline">
+	<span><code>Gtk.MenuItem.set_use_underline</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.MenuItem.set_use_underline (self, setting):
+    #python wrapper for 'gtk_menu_item_set_use_underline'</pre>
+
+<p>If true, an underline in the text indicates the next character
+should be used for the mnemonic accelerator key.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_item</code></em></i>
+					(
+						<a title="Gtk.MenuItem" href="gtkmenuitem-h.html#GtkMenuItem">Gtk.MenuItem</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkmenuitem-h.html#GtkMenuItem">Gtk.MenuItem</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>setting</code></em></i>
+					(
+						<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+						)
+				–
+	</div>
+			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if underlines in the text indicate mnemonics</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.16
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_menu_item_set_submenu">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_item_set_submenu">
+	<span><code>gtk_menu_item_set_submenu</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_menu_item_set_submenu (<a title="GtkMenuItem" href="gtkmenuitem-h.html#GtkMenuItem">GtkMenuItem</a> * menu_item,
+                           <a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> * submenu)</pre>
+
+<p>Sets or replaces the menu item’s submenu, or removes it when a <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a>
+submenu is passed.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_item</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkmenuitem-h.html#GtkMenuItem">GtkMenuItem</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>submenu</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
+<span class="annotation">[<abbr title="Override the parsed C type with given type"><span class="acronym">type</span></abbr> Gtk.Menu]</span>
+
+						)
+				–
+	</div>
+			<p>the submenu, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_item_set_submenu">
+	<span><code>Gtk.prototype.set_submenu</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_submenu(submenu: <a title="Gtk.Menu" href="gtkmenu-h.html#GtkMenu">Gtk.Menu</a>): {
+    // javascript wrapper for 'gtk_menu_item_set_submenu'
+}</pre>
+
+<p>Sets or replaces the menu item’s submenu, or removes it when a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a>
+submenu is passed.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_item</code></em></i>
+					(
+						<a title="Gtk.MenuItem" href="gtkmenuitem-h.html#GtkMenuItem">Gtk.MenuItem</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkmenuitem-h.html#GtkMenuItem">Gtk.MenuItem</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>submenu</code></em></i>
+					(
+						<a title="Gtk.Menu" href="gtkmenu-h.html#GtkMenu">Gtk.Menu</a>
+						)
+				–
+	</div>
+			<p>the submenu, or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_item_set_submenu">
+	<span><code>Gtk.MenuItem.set_submenu</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.MenuItem.set_submenu (self, submenu):
+    #python wrapper for 'gtk_menu_item_set_submenu'</pre>
+
+<p>Sets or replaces the menu item’s submenu, or removes it when a <a href="https://docs.python.org/3/library/constants.html#None">None</a>
+submenu is passed.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_item</code></em></i>
+					(
+						<a title="Gtk.MenuItem" href="gtkmenuitem-h.html#GtkMenuItem">Gtk.MenuItem</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkmenuitem-h.html#GtkMenuItem">Gtk.MenuItem</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>submenu</code></em></i>
+					(
+						<a title="Gtk.Menu" href="gtkmenu-h.html#GtkMenu">Gtk.Menu</a>
+						)
+				–
+	</div>
+			<p>the submenu, or <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_menu_item_get_submenu">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_item_get_submenu">
+	<span><code>gtk_menu_item_get_submenu</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> *
+gtk_menu_item_get_submenu (<a title="GtkMenuItem" href="gtkmenuitem-h.html#GtkMenuItem">GtkMenuItem</a> * menu_item)</pre>
+
+<p>Gets the submenu underneath this menu item, if any.
+See <a href="gtkmenuitem-h.html#gtk_menu_item_set_submenu">gtk_menu_item_set_submenu</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_item</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkmenuitem-h.html#GtkMenuItem">GtkMenuItem</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					
+										
+<span class="annotation">[<abbr title="NULL may be passed to the value"><span class="acronym">nullable</span></abbr>]</span>
+<span class="annotation">[<abbr title="Don't free data after the code is done"><span class="acronym">transfer: none</span></abbr>]</span>
+
+										)
+								–
+			</div>
+							<p>submenu for this menu item, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> if none</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_item_get_submenu">
+	<span><code>Gtk.prototype.get_submenu</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_submenu(): {
+    // javascript wrapper for 'gtk_menu_item_get_submenu'
+}</pre>
+
+<p>Gets the submenu underneath this menu item, if any.
+See <a href="gtkmenuitem-h.html#gtk_menu_item_set_submenu">Gtk.prototype.set_submenu</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_item</code></em></i>
+					(
+						<a title="Gtk.MenuItem" href="gtkmenuitem-h.html#GtkMenuItem">Gtk.MenuItem</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkmenuitem-h.html#GtkMenuItem">Gtk.MenuItem</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>submenu for this menu item, or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a> if none</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_item_get_submenu">
+	<span><code>Gtk.MenuItem.get_submenu</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.MenuItem.get_submenu (self):
+    #python wrapper for 'gtk_menu_item_get_submenu'</pre>
+
+<p>Gets the submenu underneath this menu item, if any.
+See <a href="gtkmenuitem-h.html#gtk_menu_item_set_submenu">Gtk.MenuItem.set_submenu</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_item</code></em></i>
+					(
+						<a title="Gtk.MenuItem" href="gtkmenuitem-h.html#GtkMenuItem">Gtk.MenuItem</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkmenuitem-h.html#GtkMenuItem">Gtk.MenuItem</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>submenu for this menu item, or <a href="https://docs.python.org/3/library/constants.html#None">None</a> if none</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_menu_item_set_accel_path">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_item_set_accel_path">
+	<span><code>gtk_menu_item_set_accel_path</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_menu_item_set_accel_path (<a title="GtkMenuItem" href="gtkmenuitem-h.html#GtkMenuItem">GtkMenuItem</a> * menu_item,
+                              const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * accel_path)</pre>
+
+<p>Set the accelerator path on <em>menu_item</em>, through which runtime
+changes of the menu item’s accelerator caused by the user can be
+identified and saved to persistent storage (see <a href="gtkaccelmap-h.html#gtk_accel_map_save">gtk_accel_map_save</a>
+on this). To set up a default accelerator for this menu item, call
+<a href="gtkaccelmap-h.html#gtk_accel_map_add_entry">gtk_accel_map_add_entry</a> with the same <em>accel_path</em>. See also
+<a href="gtkaccelmap-h.html#gtk_accel_map_add_entry">gtk_accel_map_add_entry</a> on the specifics of accelerator paths,
+and <a href="gtkmenu-h.html#gtk_menu_set_accel_path">gtk_menu_set_accel_path</a> for a more convenient variant of
+this function.</p>
+<p>This function is basically a convenience wrapper that handles
+calling <a href="gtkwidget-h.html#gtk_widget_set_accel_path">gtk_widget_set_accel_path</a> with the appropriate accelerator
+group for the menu item.</p>
+<p>Note that you do need to set an accelerator on the parent menu with
+<a href="gtkmenu-h.html#gtk_menu_set_accel_group">gtk_menu_set_accel_group</a> for this to work.</p>
+<p>Note that <em>accel_path</em> string will be stored in a <a href="https://developer.gnome.org/glib/unstable/glib-Quarks.html#GQuark">GQuark</a>.
+Therefore, if you pass a static string, you can save some memory
+by interning it first with <a href="https://developer.gnome.org/glib/unstable/glib-Quarks.html#g-intern-static-string">g_intern_static_string</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_item</code></em></i>
+				–
+	</div>
+			<p>a valid <a href="gtkmenuitem-h.html#GtkMenuItem">GtkMenuItem</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>accel_path</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>accelerator path, corresponding to this menu
+item’s functionality, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> to unset the current path.</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_item_set_accel_path">
+	<span><code>Gtk.prototype.set_accel_path</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_accel_path(accel_path: <a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>): {
+    // javascript wrapper for 'gtk_menu_item_set_accel_path'
+}</pre>
+
+<p>Set the accelerator path on <em>menu_item</em>, through which runtime
+changes of the menu item’s accelerator caused by the user can be
+identified and saved to persistent storage (see <a href="gtkaccelmap-h.html#gtk_accel_map_save">Gtk.prototype.save</a>
+on this). To set up a default accelerator for this menu item, call
+<a href="gtkaccelmap-h.html#gtk_accel_map_add_entry">Gtk.prototype.add_entry</a> with the same <em>accel_path</em>. See also
+<a href="gtkaccelmap-h.html#gtk_accel_map_add_entry">Gtk.prototype.add_entry</a> on the specifics of accelerator paths,
+and <a href="gtkmenu-h.html#gtk_menu_set_accel_path">Gtk.prototype.set_accel_path</a> for a more convenient variant of
+this function.</p>
+<p>This function is basically a convenience wrapper that handles
+calling <a href="gtkwidget-h.html#gtk_widget_set_accel_path">Gtk.prototype.set_accel_path</a> with the appropriate accelerator
+group for the menu item.</p>
+<p>Note that you do need to set an accelerator on the parent menu with
+<a href="gtkmenu-h.html#gtk_menu_set_accel_group">Gtk.prototype.set_accel_group</a> for this to work.</p>
+<p>Note that <em>accel_path</em> string will be stored in a <a href="https://developer.gnome.org/glib/unstable/glib-Quarks.html#GQuark">GLib.Quark</a>.
+Therefore, if you pass a static string, you can save some memory
+by interning it first with <a href="https://developer.gnome.org/glib/unstable/glib-Quarks.html#g-intern-static-string">prototype.intern_static_string</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_item</code></em></i>
+					(
+						<a title="Gtk.MenuItem" href="gtkmenuitem-h.html#GtkMenuItem">Gtk.MenuItem</a>
+						)
+				–
+	</div>
+			<p>a valid <a href="gtkmenuitem-h.html#GtkMenuItem">Gtk.MenuItem</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>accel_path</code></em></i>
+					(
+						<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
+						)
+				–
+	</div>
+			<p>accelerator path, corresponding to this menu
+item’s functionality, or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a> to unset the current path.</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_item_set_accel_path">
+	<span><code>Gtk.MenuItem.set_accel_path</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.MenuItem.set_accel_path (self, accel_path):
+    #python wrapper for 'gtk_menu_item_set_accel_path'</pre>
+
+<p>Set the accelerator path on <em>menu_item</em>, through which runtime
+changes of the menu item’s accelerator caused by the user can be
+identified and saved to persistent storage (see <a href="gtkaccelmap-h.html#gtk_accel_map_save">Gtk.AccelMap.save</a>
+on this). To set up a default accelerator for this menu item, call
+<a href="gtkaccelmap-h.html#gtk_accel_map_add_entry">Gtk.AccelMap.add_entry</a> with the same <em>accel_path</em>. See also
+<a href="gtkaccelmap-h.html#gtk_accel_map_add_entry">Gtk.AccelMap.add_entry</a> on the specifics of accelerator paths,
+and <a href="gtkmenu-h.html#gtk_menu_set_accel_path">Gtk.Menu.set_accel_path</a> for a more convenient variant of
+this function.</p>
+<p>This function is basically a convenience wrapper that handles
+calling <a href="gtkwidget-h.html#gtk_widget_set_accel_path">Gtk.Widget.set_accel_path</a> with the appropriate accelerator
+group for the menu item.</p>
+<p>Note that you do need to set an accelerator on the parent menu with
+<a href="gtkmenu-h.html#gtk_menu_set_accel_group">Gtk.Menu.set_accel_group</a> for this to work.</p>
+<p>Note that <em>accel_path</em> string will be stored in a <a href="https://developer.gnome.org/glib/unstable/glib-Quarks.html#GQuark">GLib.Quark</a>.
+Therefore, if you pass a static string, you can save some memory
+by interning it first with <a href="https://developer.gnome.org/glib/unstable/glib-Quarks.html#g-intern-static-string">GLib.intern_static_string</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_item</code></em></i>
+					(
+						<a title="Gtk.MenuItem" href="gtkmenuitem-h.html#GtkMenuItem">Gtk.MenuItem</a>
+						)
+				–
+	</div>
+			<p>a valid <a href="gtkmenuitem-h.html#GtkMenuItem">Gtk.MenuItem</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>accel_path</code></em></i>
+					(
+						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
+						)
+				–
+	</div>
+			<p>accelerator path, corresponding to this menu
+item’s functionality, or <a href="https://docs.python.org/3/library/constants.html#None">None</a> to unset the current path.</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.14;" id="gtk_menu_item_get_accel_path">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_item_get_accel_path">
+	<span><code>gtk_menu_item_get_accel_path</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> *
+gtk_menu_item_get_accel_path (<a title="GtkMenuItem" href="gtkmenuitem-h.html#GtkMenuItem">GtkMenuItem</a> * menu_item)</pre>
+
+<p>Retrieve the accelerator path that was previously set on <em>menu_item</em>.</p>
+<p>See <a href="gtkmenuitem-h.html#gtk_menu_item_set_accel_path">gtk_menu_item_set_accel_path</a> for details.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_item</code></em></i>
+				–
+	</div>
+			<p>a valid <a href="gtkmenuitem-h.html#GtkMenuItem">GtkMenuItem</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					
+										
+<span class="annotation">[<abbr title="NULL may be passed to the value"><span class="acronym">nullable</span></abbr>]</span>
+<span class="annotation">[<abbr title="Don't free data after the code is done"><span class="acronym">transfer: none</span></abbr>]</span>
+
+										)
+								–
+			</div>
+							<p>the accelerator path corresponding to
+this menu item’s functionality, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> if not set</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.14
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_item_get_accel_path">
+	<span><code>Gtk.prototype.get_accel_path</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_accel_path(): {
+    // javascript wrapper for 'gtk_menu_item_get_accel_path'
+}</pre>
+
+<p>Retrieve the accelerator path that was previously set on <em>menu_item</em>.</p>
+<p>See <a href="gtkmenuitem-h.html#gtk_menu_item_set_accel_path">Gtk.prototype.set_accel_path</a> for details.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_item</code></em></i>
+					(
+						<a title="Gtk.MenuItem" href="gtkmenuitem-h.html#GtkMenuItem">Gtk.MenuItem</a>
+						)
+				–
+	</div>
+			<p>a valid <a href="gtkmenuitem-h.html#GtkMenuItem">Gtk.MenuItem</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
+										)
+								–
+			</div>
+							<p>the accelerator path corresponding to
+this menu item’s functionality, or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a> if not set</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.14
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_item_get_accel_path">
+	<span><code>Gtk.MenuItem.get_accel_path</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.MenuItem.get_accel_path (self):
+    #python wrapper for 'gtk_menu_item_get_accel_path'</pre>
+
+<p>Retrieve the accelerator path that was previously set on <em>menu_item</em>.</p>
+<p>See <a href="gtkmenuitem-h.html#gtk_menu_item_set_accel_path">Gtk.MenuItem.set_accel_path</a> for details.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_item</code></em></i>
+					(
+						<a title="Gtk.MenuItem" href="gtkmenuitem-h.html#GtkMenuItem">Gtk.MenuItem</a>
+						)
+				–
+	</div>
+			<p>a valid <a href="gtkmenuitem-h.html#GtkMenuItem">Gtk.MenuItem</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
+										)
+								–
+			</div>
+							<p>the accelerator path corresponding to
+this menu item’s functionality, or <a href="https://docs.python.org/3/library/constants.html#None">None</a> if not set</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.14
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_menu_item_select">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_item_select">
+	<span><code>gtk_menu_item_select</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_menu_item_select (<a title="GtkMenuItem" href="gtkmenuitem-h.html#GtkMenuItem">GtkMenuItem</a> * menu_item)</pre>
+
+<p>Emits the <a href="https://developer.gnome.org/gtk3/GtkMenuItem.html#GtkMenuItem-select">select</a> signal on the given item.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_item</code></em></i>
+				–
+	</div>
+			<p>the menu item</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_item_select">
+	<span><code>Gtk.prototype.select</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.select(): {
+    // javascript wrapper for 'gtk_menu_item_select'
+}</pre>
+
+<p>Emits the <a href="https://developer.gnome.org/gtk3/GtkMenuItem.html#GtkMenuItem-select">select</a> signal on the given item.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_item</code></em></i>
+					(
+						<a title="Gtk.MenuItem" href="gtkmenuitem-h.html#GtkMenuItem">Gtk.MenuItem</a>
+						)
+				–
+	</div>
+			<p>the menu item</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_item_select">
+	<span><code>Gtk.MenuItem.select</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.MenuItem.select (self):
+    #python wrapper for 'gtk_menu_item_select'</pre>
+
+<p>Emits the <a href="https://developer.gnome.org/gtk3/GtkMenuItem.html#GtkMenuItem-select">select</a> signal on the given item.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_item</code></em></i>
+					(
+						<a title="Gtk.MenuItem" href="gtkmenuitem-h.html#GtkMenuItem">Gtk.MenuItem</a>
+						)
+				–
+	</div>
+			<p>the menu item</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_menu_item_deselect">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_item_deselect">
+	<span><code>gtk_menu_item_deselect</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_menu_item_deselect (<a title="GtkMenuItem" href="gtkmenuitem-h.html#GtkMenuItem">GtkMenuItem</a> * menu_item)</pre>
+
+<p>Emits the <a href="https://developer.gnome.org/gtk3/GtkMenuItem.html#GtkMenuItem-deselect">deselect</a> signal on the given item.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_item</code></em></i>
+				–
+	</div>
+			<p>the menu item</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_item_deselect">
+	<span><code>Gtk.prototype.deselect</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.deselect(): {
+    // javascript wrapper for 'gtk_menu_item_deselect'
+}</pre>
+
+<p>Emits the <a href="https://developer.gnome.org/gtk3/GtkMenuItem.html#GtkMenuItem-deselect">deselect</a> signal on the given item.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_item</code></em></i>
+					(
+						<a title="Gtk.MenuItem" href="gtkmenuitem-h.html#GtkMenuItem">Gtk.MenuItem</a>
+						)
+				–
+	</div>
+			<p>the menu item</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_item_deselect">
+	<span><code>Gtk.MenuItem.deselect</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.MenuItem.deselect (self):
+    #python wrapper for 'gtk_menu_item_deselect'</pre>
+
+<p>Emits the <a href="https://developer.gnome.org/gtk3/GtkMenuItem.html#GtkMenuItem-deselect">deselect</a> signal on the given item.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_item</code></em></i>
+					(
+						<a title="Gtk.MenuItem" href="gtkmenuitem-h.html#GtkMenuItem">Gtk.MenuItem</a>
+						)
+				–
+	</div>
+			<p>the menu item</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_menu_item_activate">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_item_activate">
+	<span><code>gtk_menu_item_activate</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_menu_item_activate (<a title="GtkMenuItem" href="gtkmenuitem-h.html#GtkMenuItem">GtkMenuItem</a> * menu_item)</pre>
+
+<p>Emits the <a href="https://developer.gnome.org/gtk3/GtkMenuItem.html#GtkMenuItem-activate">activate</a> signal on the given item</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_item</code></em></i>
+				–
+	</div>
+			<p>the menu item</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_item_activate">
+	<span><code>Gtk.prototype.activate</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.activate(): {
+    // javascript wrapper for 'gtk_menu_item_activate'
+}</pre>
+
+<p>Emits the <a href="https://developer.gnome.org/gtk3/GtkMenuItem.html#GtkMenuItem-activate">activate</a> signal on the given item</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_item</code></em></i>
+					(
+						<a title="Gtk.MenuItem" href="gtkmenuitem-h.html#GtkMenuItem">Gtk.MenuItem</a>
+						)
+				–
+	</div>
+			<p>the menu item</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_item_activate">
+	<span><code>Gtk.MenuItem.activate</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.MenuItem.activate (self):
+    #python wrapper for 'gtk_menu_item_activate'</pre>
+
+<p>Emits the <a href="https://developer.gnome.org/gtk3/GtkMenuItem.html#GtkMenuItem-activate">activate</a> signal on the given item</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_item</code></em></i>
+					(
+						<a title="Gtk.MenuItem" href="gtkmenuitem-h.html#GtkMenuItem">Gtk.MenuItem</a>
+						)
+				–
+	</div>
+			<p>the menu item</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_menu_item_toggle_size_request">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_item_toggle_size_request">
+	<span><code>gtk_menu_item_toggle_size_request</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_menu_item_toggle_size_request (<a title="GtkMenuItem" href="gtkmenuitem-h.html#GtkMenuItem">GtkMenuItem</a> * menu_item,
+                                   <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> * requisition)</pre>
+
+<p>Emits the <a href="https://developer.gnome.org/gtk3/GtkMenuItem.html#GtkMenuItem-toggle-size-request">toggle-size-request</a> signal on the given item.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_item</code></em></i>
+				–
+	</div>
+			<p>the menu item</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>requisition</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="Parameter for input and for returning results"><span class="acronym">inout</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>the requisition to use as signal data.</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_item_toggle_size_request">
+	<span><code>Gtk.prototype.toggle_size_request</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.toggle_size_request(requisition: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_menu_item_toggle_size_request'
+}</pre>
+
+<p>Emits the <a href="https://developer.gnome.org/gtk3/GtkMenuItem.html#GtkMenuItem-toggle-size-request">toggle-size-request</a> signal on the given item.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_item</code></em></i>
+					(
+						<a title="Gtk.MenuItem" href="gtkmenuitem-h.html#GtkMenuItem">Gtk.MenuItem</a>
+						)
+				–
+	</div>
+			<p>the menu item</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>requisition</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the requisition to use as signal data.</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_item_toggle_size_request">
+	<span><code>Gtk.MenuItem.toggle_size_request</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.MenuItem.toggle_size_request (self, requisition):
+    #python wrapper for 'gtk_menu_item_toggle_size_request'</pre>
+
+<p>Emits the <a href="https://developer.gnome.org/gtk3/GtkMenuItem.html#GtkMenuItem-toggle-size-request">toggle-size-request</a> signal on the given item.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_item</code></em></i>
+					(
+						<a title="Gtk.MenuItem" href="gtkmenuitem-h.html#GtkMenuItem">Gtk.MenuItem</a>
+						)
+				–
+	</div>
+			<p>the menu item</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>requisition</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>the requisition to use as signal data.</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_menu_item_toggle_size_allocate">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_item_toggle_size_allocate">
+	<span><code>gtk_menu_item_toggle_size_allocate</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_menu_item_toggle_size_allocate (<a title="GtkMenuItem" href="gtkmenuitem-h.html#GtkMenuItem">GtkMenuItem</a> * menu_item,
+                                    <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> allocation)</pre>
+
+<p>Emits the <a href="https://developer.gnome.org/gtk3/GtkMenuItem.html#GtkMenuItem-toggle-size-allocate">toggle-size-allocate</a> signal on the given item.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_item</code></em></i>
+				–
+	</div>
+			<p>the menu item.</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>allocation</code></em></i>
+				–
+	</div>
+			<p>the allocation to use as signal data.</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_item_toggle_size_allocate">
+	<span><code>Gtk.prototype.toggle_size_allocate</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.toggle_size_allocate(allocation: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_menu_item_toggle_size_allocate'
+}</pre>
+
+<p>Emits the <a href="https://developer.gnome.org/gtk3/GtkMenuItem.html#GtkMenuItem-toggle-size-allocate">toggle-size-allocate</a> signal on the given item.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_item</code></em></i>
+					(
+						<a title="Gtk.MenuItem" href="gtkmenuitem-h.html#GtkMenuItem">Gtk.MenuItem</a>
+						)
+				–
+	</div>
+			<p>the menu item.</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>allocation</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the allocation to use as signal data.</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_item_toggle_size_allocate">
+	<span><code>Gtk.MenuItem.toggle_size_allocate</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.MenuItem.toggle_size_allocate (self, allocation):
+    #python wrapper for 'gtk_menu_item_toggle_size_allocate'</pre>
+
+<p>Emits the <a href="https://developer.gnome.org/gtk3/GtkMenuItem.html#GtkMenuItem-toggle-size-allocate">toggle-size-allocate</a> signal on the given item.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_item</code></em></i>
+					(
+						<a title="Gtk.MenuItem" href="gtkmenuitem-h.html#GtkMenuItem">Gtk.MenuItem</a>
+						)
+				–
+	</div>
+			<p>the menu item.</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>allocation</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>the allocation to use as signal data.</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_menu_item_get_reserve_indicator">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_item_get_reserve_indicator">
+	<span><code>gtk_menu_item_get_reserve_indicator</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_menu_item_get_reserve_indicator (<a title="GtkMenuItem" href="gtkmenuitem-h.html#GtkMenuItem">GtkMenuItem</a> * menu_item)</pre>
+
+<p>Returns whether the <em>menu_item</em> reserves space for
+the submenu indicator, regardless if it has a submenu
+or not.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_item</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkmenuitem-h.html#GtkMenuItem">GtkMenuItem</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if <em>menu_item</em> always reserves space for the
+submenu indicator</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_item_get_reserve_indicator">
+	<span><code>Gtk.prototype.get_reserve_indicator</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_reserve_indicator(): {
+    // javascript wrapper for 'gtk_menu_item_get_reserve_indicator'
+}</pre>
+
+<p>Returns whether the <em>menu_item</em> reserves space for
+the submenu indicator, regardless if it has a submenu
+or not.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_item</code></em></i>
+					(
+						<a title="Gtk.MenuItem" href="gtkmenuitem-h.html#GtkMenuItem">Gtk.MenuItem</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkmenuitem-h.html#GtkMenuItem">Gtk.MenuItem</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if <em>menu_item</em> always reserves space for the
+submenu indicator</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_item_get_reserve_indicator">
+	<span><code>Gtk.MenuItem.get_reserve_indicator</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.MenuItem.get_reserve_indicator (self):
+    #python wrapper for 'gtk_menu_item_get_reserve_indicator'</pre>
+
+<p>Returns whether the <em>menu_item</em> reserves space for
+the submenu indicator, regardless if it has a submenu
+or not.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_item</code></em></i>
+					(
+						<a title="Gtk.MenuItem" href="gtkmenuitem-h.html#GtkMenuItem">Gtk.MenuItem</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkmenuitem-h.html#GtkMenuItem">Gtk.MenuItem</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+										)
+								–
+			</div>
+							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if <em>menu_item</em> always reserves space for the
+submenu indicator</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_menu_item_set_reserve_indicator">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_item_set_reserve_indicator">
+	<span><code>gtk_menu_item_set_reserve_indicator</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_menu_item_set_reserve_indicator (<a title="GtkMenuItem" href="gtkmenuitem-h.html#GtkMenuItem">GtkMenuItem</a> * menu_item,
+                                     <a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a> reserve)</pre>
+
+<p>Sets whether the <em>menu_item</em> should reserve space for
+the submenu indicator, regardless if it actually has
+a submenu or not.</p>
+<p>There should be little need for applications to call
+this functions.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_item</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkmenuitem-h.html#GtkMenuItem">GtkMenuItem</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>reserve</code></em></i>
+				–
+	</div>
+			<p>the new value</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_item_set_reserve_indicator">
+	<span><code>Gtk.prototype.set_reserve_indicator</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_reserve_indicator(reserve: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_menu_item_set_reserve_indicator'
+}</pre>
+
+<p>Sets whether the <em>menu_item</em> should reserve space for
+the submenu indicator, regardless if it actually has
+a submenu or not.</p>
+<p>There should be little need for applications to call
+this functions.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_item</code></em></i>
+					(
+						<a title="Gtk.MenuItem" href="gtkmenuitem-h.html#GtkMenuItem">Gtk.MenuItem</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkmenuitem-h.html#GtkMenuItem">Gtk.MenuItem</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>reserve</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the new value</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_item_set_reserve_indicator">
+	<span><code>Gtk.MenuItem.set_reserve_indicator</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.MenuItem.set_reserve_indicator (self, reserve):
+    #python wrapper for 'gtk_menu_item_set_reserve_indicator'</pre>
+
+<p>Sets whether the <em>menu_item</em> should reserve space for
+the submenu indicator, regardless if it actually has
+a submenu or not.</p>
+<p>There should be little need for applications to call
+this functions.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu_item</code></em></i>
+					(
+						<a title="Gtk.MenuItem" href="gtkmenuitem-h.html#GtkMenuItem">Gtk.MenuItem</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkmenuitem-h.html#GtkMenuItem">Gtk.MenuItem</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>reserve</code></em></i>
+					(
+						<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+						)
+				–
+	</div>
+			<p>the new value</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+
+</div>
+
+
+
+
+
+
+		
+	</div>
+	<div id="search_results">
+		<p>The results of the search are</p>
+	</div>
+	<hr>
+	<div id="footer">
+		    
+
+	</div>
+</div>
+
+<div id="toc-column">
+	
+		<div class="edit-button">
+		
+
+	</div>
+		<div id="toc-wrapper">
+		<nav id="toc"></nav>
+	</div>
+</div>
+</div>
+</main>
+
+</body>
+
+<script src="assets/js/navbar_offset_scroller.js"></script>
+</html>

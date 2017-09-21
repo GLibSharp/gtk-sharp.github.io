@@ -1,0 +1,1 @@
+urls_downloaded_cb({"token": "gtkinfobar.h", "urls": [{"url": "gtkinfobar-h.html#gtkinfobarh-page", "context": {"gi-language": ["default"]}}]});

@@ -1,0 +1,1402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<base href=".">
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>GtkTextTag</title>
+
+<link rel="stylesheet" href="assets/css/custom_bootstrap.css" type="text/css">
+<link rel="stylesheet" href="assets/css/bootstrap-toc.min.css" type="text/css">
+<link rel="stylesheet" href="assets/css/frontend.css" type="text/css">
+<link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
+
+<link rel="stylesheet" href="assets/css/prism.css" type="text/css">
+
+<script src="assets/js/mustache.min.js"></script>
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/scrollspy.js"></script>
+<script src="assets/js/bootstrap.js"></script>
+<script src="assets/js/typeahead.jquery.min.js"></script>
+<script src="assets/js/search.js"></script>
+<script src="assets/js/isotope.pkgd.min.js"></script>
+<script src="assets/js/compare-versions.js"></script>
+<script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="assets/js/bootstrap-toc.min.js"></script>
+<script src="assets/js/jquery.touchSwipe.min.js"></script>
+<script src="assets/js/anchor.min.js"></script>
+<script src="assets/js/tag_filtering.js"></script>
+<script src="assets/js/language_switching.js"></script>
+
+<script src="assets/js/lines_around_headings.js"></script>
+
+<script src="assets/js/prism-core.js"></script>
+<script src="assets/js/prism-autoloader.js"></script>
+<script src="assets/js/prism_autoloader_path_override.js"></script>
+<script src="assets/js/trie.js"></script>
+
+
+</head>
+
+<body class="no-script
+" data-spy="scroll" data-target="#toc" data-offset="70">
+
+<script>
+$('body').removeClass('no-script');
+</script>
+
+<nav class="navbar navbar-fixed-top navbar-default" id="topnav">
+	<div class="container-fluid">
+		<div class="navbar-right">
+			<a id="toc-toggle">
+				<span class="glyphicon glyphicon-menu-right"></span>
+				<span class="glyphicon glyphicon-menu-left"></span>
+			</a>
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-wrapper" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<form action="" class="navbar-form pull-right" id="navbar-search-form">
+                               <div class="form-group has-feedback">
+                                       <input type="text" class="form-control input-sm" name="search" id="sidenav-lookup-field" placeholder="search" disabled>
+				       <span class="glyphicon glyphicon-search form-control-feedback" id="search-mgn-glass"></span>
+                               </div>
+                        </form>
+		</div>
+		<div class="navbar-header">
+			<a id="sidenav-toggle">
+				<span class="glyphicon glyphicon-menu-right"></span>
+				<span class="glyphicon glyphicon-menu-left"></span>
+			</a>
+			<a id="home-link" href="index.html" class="hotdoc-navbar-brand">
+				<img src="assets/images/home.svg" alt="Home">
+			</a>
+		</div>
+		<div class="navbar-collapse collapse" id="navbar-wrapper">
+			<ul class="nav navbar-nav" id="menu">
+							</ul>
+			<div class="hidden-xs hidden-sm navbar-text navbar-center">
+							</div>
+		</div>
+	</div>
+</nav>
+
+<main>
+<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="gtktexttag-h.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['c', 'javascript', 'python']" data-hotdoc-meta-gi-language="c">
+<script src="assets/js/utils.js"></script>
+
+<div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
+	<script src="assets/js/navigation.js"></script>
+	<script src="assets/js/sitemap.js"></script>
+</div>
+
+<div id="body">
+	<div id="main">
+				    <div id="page-description" data-hotdoc-source="gtktexttag.h.markdown" data-hotdoc-role="main">
+        <h1 id="gtktexttag-page">GtkTextTag</h1>
+<p>You may wish to begin by reading the
+[text widget conceptual overview][TextWidget]
+which gives an overview of all the objects and
+data types related to the text widget and how they work together.</p>
+<p>Tags should be in the <a href="gtktexttagtable-h.html#GtkTextTagTable" data-gi-href-javascript="gtktexttagtable-h.html#GtkTextTagTable" data-gi-title-javascript="Gtk.TextTagTable" data-gi-href-python="gtktexttagtable-h.html#GtkTextTagTable" data-gi-title-python="Gtk.TextTagTable">GtkTextTagTable</a> for a given <a href="gtktextbuffer-h.html#GtkTextBuffer" data-gi-href-javascript="gtktextbuffer-h.html#GtkTextBuffer" data-gi-title-javascript="Gtk.TextBuffer" data-gi-href-python="gtktextbuffer-h.html#GtkTextBuffer" data-gi-title-python="Gtk.TextBuffer">GtkTextBuffer</a>
+before using them with that buffer.</p>
+<p><a href="gtktextbuffer-h.html#gtk_text_buffer_create_tag" data-gi-href-javascript="gtktextbuffer-h.html#gtk_text_buffer_create_tag" data-gi-title-javascript="gtk_text_buffer_create_tag (not introspectable)" data-gi-href-python="gtktextbuffer-h.html#gtk_text_buffer_create_tag" data-gi-title-python="gtk_text_buffer_create_tag (not introspectable)">gtk_text_buffer_create_tag</a> is the best way to create tags.
+See “gtk3-demo” for numerous examples.</p>
+<p>For each property of <a href="gtktexttag-h.html#GtkTextTag" data-gi-href-javascript="gtktexttag-h.html#GtkTextTag" data-gi-title-javascript="Gtk.TextTag" data-gi-href-python="gtktexttag-h.html#GtkTextTag" data-gi-title-python="Gtk.TextTag">GtkTextTag</a>, there is a “set” property, e.g.
+“font-set” corresponds to “font”. These “set” properties reflect
+whether a property has been set or not.
+They are maintained by GTK+ and you should not set them independently.</p>
+
+    </div>
+        
+        
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="GtkTextTag">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h2 data-hotdoc-id="GtkTextTag">
+	<span><code>GtkTextTag</code></span>
+</h2>
+
+
+<div class="hierarchy_container">
+	<div class="hierarchy_details">
+<pre>
+<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object">GObject</a>
+    <span class="lineart">╰──</span>GtkTextTag
+</pre>
+
+</div>
+
+</div>
+
+
+
+
+
+	<div class="members-container">
+		<h3>Members</h3>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkTextTag.parent_instance">
+	<div>
+		<i><em><code>parent_instance</code></em></i>
+		(<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object">GObject</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GtkTextTag.priv">
+	<div>
+		<i><em><code>priv</code></em></i>
+		(GtkTextTagPrivate*)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+<h3>Class structure</h3>
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="GtkTextTagClass">
+	<span><code>GtkTextTagClass</code></span>
+</h4>
+
+
+
+
+
+	<div class="members-container">
+		<h5>Fields</h5>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkTextTagClass.parent_class">
+	<div>
+		<i><em><code>parent_class</code></em></i>
+		(<a title="GObjectClass" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObjectClass">GObjectClass</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h3>
+	Gtk.TextTagClass
+</h3>
+
+
+
+
+
+	<div class="members-container">
+		<h5>Attributes</h5>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkTextTagClass.parent_class">
+	<div>
+		<i><em><code>TextTagClass.parent_class</code></em></i>
+		(<a title="GObject.ObjectClass" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObjectClass">GObject.ObjectClass</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3>
+	Gtk.TextTagClass
+</h3>
+
+
+
+
+
+	<div class="members-container">
+		<h5>Attributes</h5>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkTextTagClass.parent_class">
+	<div>
+		<i><em><code>TextTagClass.parent_class</code></em></i>
+		(<a title="GObject.ObjectClass" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObjectClass">GObject.ObjectClass</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h2 data-hotdoc-id="GtkTextTag">
+	<span><code>GtkTextTag</code></span>
+</h2>
+
+
+<div class="hierarchy_container">
+	<div class="hierarchy_details">
+<pre>
+<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object">GObject</a>
+    <span class="lineart">╰──</span>GtkTextTag
+</pre>
+
+</div>
+
+</div>
+
+
+
+
+
+	<div class="members-container">
+		<h3>Members</h3>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkTextTag.parent_instance">
+	<div>
+		<i><em><code>parent_instance</code></em></i>
+		(<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object">GObject</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GtkTextTag.priv">
+	<div>
+		<i><em><code>priv</code></em></i>
+		(GtkTextTagPrivate)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h2 data-hotdoc-id="GtkTextTag">
+	<span><code>GtkTextTag</code></span>
+</h2>
+
+
+<div class="hierarchy_container">
+	<div class="hierarchy_details">
+<pre>
+<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object">GObject</a>
+    <span class="lineart">╰──</span>GtkTextTag
+</pre>
+
+</div>
+
+</div>
+
+
+
+
+
+	<div class="members-container">
+		<h3>Members</h3>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkTextTag.parent_instance">
+	<div>
+		<i><em><code>parent_instance</code></em></i>
+		(<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object">GObject</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GtkTextTag.priv">
+	<div>
+		<i><em><code>priv</code></em></i>
+		(GtkTextTagPrivate)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+
+</div>
+
+
+            <h3 class="symbol_section">Constructors</h3>
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_text_tag_new">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_text_tag_new">
+	<span><code>gtk_text_tag_new</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkTextTag" href="gtktexttag-h.html#GtkTextTag">GtkTextTag</a> *
+gtk_text_tag_new (const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * name)</pre>
+
+<p>Creates a <a href="gtktexttag-h.html#GtkTextTag">GtkTextTag</a>. Configure the tag using object arguments,
+i.e. using <a href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-set">g_object_set</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>name</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>tag name, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>a new <a href="gtktexttag-h.html#GtkTextTag">GtkTextTag</a></p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_text_tag_new">
+	<span><code>Gtk.prototype.new</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.new(name: <a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>): {
+    // javascript wrapper for 'gtk_text_tag_new'
+}</pre>
+
+<p>Creates a <a href="gtktexttag-h.html#GtkTextTag">Gtk.TextTag</a>. Configure the tag using object arguments,
+i.e. using <a href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-set">g_object_set (not introspectable)</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>name</code></em></i>
+					(
+						<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
+						)
+				–
+	</div>
+			<p>tag name, or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.TextTag" href="gtktexttag-h.html#GtkTextTag">Gtk.TextTag</a>
+										)
+								–
+			</div>
+							<p>a new <a href="gtktexttag-h.html#GtkTextTag">Gtk.TextTag</a></p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_text_tag_new">
+	<span><code>Gtk.TextTag.new</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.TextTag.new (name):
+    #python wrapper for 'gtk_text_tag_new'</pre>
+
+<p>Creates a <a href="gtktexttag-h.html#GtkTextTag">Gtk.TextTag</a>. Configure the tag using object arguments,
+i.e. using <a href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-set">g_object_set (not introspectable)</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>name</code></em></i>
+					(
+						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
+						)
+				–
+	</div>
+			<p>tag name, or <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.TextTag" href="gtktexttag-h.html#GtkTextTag">Gtk.TextTag</a>
+										)
+								–
+			</div>
+							<p>a new <a href="gtktexttag-h.html#GtkTextTag">Gtk.TextTag</a></p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+
+            <h3 class="symbol_section">Methods</h3>
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_text_tag_get_priority">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_text_tag_get_priority">
+	<span><code>gtk_text_tag_get_priority</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a>
+gtk_text_tag_get_priority (<a title="GtkTextTag" href="gtktexttag-h.html#GtkTextTag">GtkTextTag</a> * tag)</pre>
+
+<p>Get the tag priority.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>tag</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtktexttag-h.html#GtkTextTag">GtkTextTag</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>The tag’s priority.</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_text_tag_get_priority">
+	<span><code>Gtk.prototype.get_priority</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_priority(): {
+    // javascript wrapper for 'gtk_text_tag_get_priority'
+}</pre>
+
+<p>Get the tag priority.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>tag</code></em></i>
+					(
+						<a title="Gtk.TextTag" href="gtktexttag-h.html#GtkTextTag">Gtk.TextTag</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtktexttag-h.html#GtkTextTag">Gtk.TextTag</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p>The tag’s priority.</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_text_tag_get_priority">
+	<span><code>Gtk.TextTag.get_priority</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.TextTag.get_priority (self):
+    #python wrapper for 'gtk_text_tag_get_priority'</pre>
+
+<p>Get the tag priority.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>tag</code></em></i>
+					(
+						<a title="Gtk.TextTag" href="gtktexttag-h.html#GtkTextTag">Gtk.TextTag</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtktexttag-h.html#GtkTextTag">Gtk.TextTag</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+										)
+								–
+			</div>
+							<p>The tag’s priority.</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_text_tag_set_priority">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_text_tag_set_priority">
+	<span><code>gtk_text_tag_set_priority</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_text_tag_set_priority (<a title="GtkTextTag" href="gtktexttag-h.html#GtkTextTag">GtkTextTag</a> * tag,
+                           <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> priority)</pre>
+
+<p>Sets the priority of a <a href="gtktexttag-h.html#GtkTextTag">GtkTextTag</a>. Valid priorities
+start at 0 and go to one less than <a href="gtktexttagtable-h.html#gtk_text_tag_table_get_size">gtk_text_tag_table_get_size</a>.
+Each tag in a table has a unique priority; setting the priority
+of one tag shifts the priorities of all the other tags in the
+table to maintain a unique priority for each tag. Higher priority
+tags “win” if two tags both set the same text attribute. When adding
+a tag to a tag table, it will be assigned the highest priority in
+the table by default; so normally the precedence of a set of tags
+is the order in which they were added to the table, or created with
+<a href="gtktextbuffer-h.html#gtk_text_buffer_create_tag">gtk_text_buffer_create_tag</a>, which adds the tag to the buffer’s table
+automatically.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>tag</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtktexttag-h.html#GtkTextTag">GtkTextTag</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>priority</code></em></i>
+				–
+	</div>
+			<p>the new priority</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_text_tag_set_priority">
+	<span><code>Gtk.prototype.set_priority</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_priority(priority: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_text_tag_set_priority'
+}</pre>
+
+<p>Sets the priority of a <a href="gtktexttag-h.html#GtkTextTag">Gtk.TextTag</a>. Valid priorities
+start at 0 and go to one less than <a href="gtktexttagtable-h.html#gtk_text_tag_table_get_size">Gtk.prototype.get_size</a>.
+Each tag in a table has a unique priority; setting the priority
+of one tag shifts the priorities of all the other tags in the
+table to maintain a unique priority for each tag. Higher priority
+tags “win” if two tags both set the same text attribute. When adding
+a tag to a tag table, it will be assigned the highest priority in
+the table by default; so normally the precedence of a set of tags
+is the order in which they were added to the table, or created with
+<a href="gtktextbuffer-h.html#gtk_text_buffer_create_tag">gtk_text_buffer_create_tag (not introspectable)</a>, which adds the tag to the buffer’s table
+automatically.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>tag</code></em></i>
+					(
+						<a title="Gtk.TextTag" href="gtktexttag-h.html#GtkTextTag">Gtk.TextTag</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtktexttag-h.html#GtkTextTag">Gtk.TextTag</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>priority</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the new priority</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_text_tag_set_priority">
+	<span><code>Gtk.TextTag.set_priority</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.TextTag.set_priority (self, priority):
+    #python wrapper for 'gtk_text_tag_set_priority'</pre>
+
+<p>Sets the priority of a <a href="gtktexttag-h.html#GtkTextTag">Gtk.TextTag</a>. Valid priorities
+start at 0 and go to one less than <a href="gtktexttagtable-h.html#gtk_text_tag_table_get_size">Gtk.TextTagTable.get_size</a>.
+Each tag in a table has a unique priority; setting the priority
+of one tag shifts the priorities of all the other tags in the
+table to maintain a unique priority for each tag. Higher priority
+tags “win” if two tags both set the same text attribute. When adding
+a tag to a tag table, it will be assigned the highest priority in
+the table by default; so normally the precedence of a set of tags
+is the order in which they were added to the table, or created with
+<a href="gtktextbuffer-h.html#gtk_text_buffer_create_tag">gtk_text_buffer_create_tag (not introspectable)</a>, which adds the tag to the buffer’s table
+automatically.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>tag</code></em></i>
+					(
+						<a title="Gtk.TextTag" href="gtktexttag-h.html#GtkTextTag">Gtk.TextTag</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtktexttag-h.html#GtkTextTag">Gtk.TextTag</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>priority</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>the new priority</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_text_tag_event">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_text_tag_event">
+	<span><code>gtk_text_tag_event</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_text_tag_event (<a title="GtkTextTag" href="gtktexttag-h.html#GtkTextTag">GtkTextTag</a> * tag,
+                    <a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a> * event_object,
+                    GdkEvent* event,
+                    const <a title="GtkTextIter" href="gtktextiter-h.html#GtkTextIter">GtkTextIter</a> * iter)</pre>
+
+<p>Emits the “event” signal on the <a href="gtktexttag-h.html#GtkTextTag">GtkTextTag</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>tag</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtktexttag-h.html#GtkTextTag">GtkTextTag</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>event_object</code></em></i>
+				–
+	</div>
+			<p>object that received the event, such as a widget</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>event</code></em></i>
+				–
+	</div>
+			<p>the event</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>iter</code></em></i>
+				–
+	</div>
+			<p>location where the event was received</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>result of signal emission (whether the event was handled)</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_text_tag_event">
+	<span><code>Gtk.prototype.event</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.event(event_object: <a title="GObject.Object" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct">GObject.Object</a>, event: Gdk.Event, iter: <a title="Gtk.TextIter" href="gtktextiter-h.html#GtkTextIter">Gtk.TextIter</a>): {
+    // javascript wrapper for 'gtk_text_tag_event'
+}</pre>
+
+<p>Emits the “event” signal on the <a href="gtktexttag-h.html#GtkTextTag">Gtk.TextTag</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>tag</code></em></i>
+					(
+						<a title="Gtk.TextTag" href="gtktexttag-h.html#GtkTextTag">Gtk.TextTag</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtktexttag-h.html#GtkTextTag">Gtk.TextTag</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>event_object</code></em></i>
+					(
+						<a title="GObject.Object" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct">GObject.Object</a>
+						)
+				–
+	</div>
+			<p>object that received the event, such as a widget</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>event</code></em></i>
+					(
+						Gdk.Event
+						)
+				–
+	</div>
+			<p>the event</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>iter</code></em></i>
+					(
+						<a title="Gtk.TextIter" href="gtktextiter-h.html#GtkTextIter">Gtk.TextIter</a>
+						)
+				–
+	</div>
+			<p>location where the event was received</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p>result of signal emission (whether the event was handled)</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_text_tag_event">
+	<span><code>Gtk.TextTag.event</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.TextTag.event (self, event_object, event, iter):
+    #python wrapper for 'gtk_text_tag_event'</pre>
+
+<p>Emits the “event” signal on the <a href="gtktexttag-h.html#GtkTextTag">Gtk.TextTag</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>tag</code></em></i>
+					(
+						<a title="Gtk.TextTag" href="gtktexttag-h.html#GtkTextTag">Gtk.TextTag</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtktexttag-h.html#GtkTextTag">Gtk.TextTag</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>event_object</code></em></i>
+					(
+						<a title="GObject.Object" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct">GObject.Object</a>
+						)
+				–
+	</div>
+			<p>object that received the event, such as a widget</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>event</code></em></i>
+					(
+						Gdk.Event
+						)
+				–
+	</div>
+			<p>the event</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>iter</code></em></i>
+					(
+						<a title="Gtk.TextIter" href="gtktextiter-h.html#GtkTextIter">Gtk.TextIter</a>
+						)
+				–
+	</div>
+			<p>location where the event was received</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+										)
+								–
+			</div>
+							<p>result of signal emission (whether the event was handled)</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.20;" id="gtk_text_tag_changed">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_text_tag_changed">
+	<span><code>gtk_text_tag_changed</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_text_tag_changed (<a title="GtkTextTag" href="gtktexttag-h.html#GtkTextTag">GtkTextTag</a> * tag,
+                      <a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a> size_changed)</pre>
+
+<p>Emits the <a href="https://developer.gnome.org/gtk3/GtkTextTagTable.html#GtkTextTagTable-tag-changed">tag-changed</a> signal on the <a href="gtktexttagtable-h.html#GtkTextTagTable">GtkTextTagTable</a> where
+the tag is included.</p>
+<p>The signal is already emitted when setting a <a href="gtktexttag-h.html#GtkTextTag">GtkTextTag</a> property. This
+function is useful for a <a href="gtktexttag-h.html#GtkTextTag">GtkTextTag</a> subclass.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>tag</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtktexttag-h.html#GtkTextTag">GtkTextTag</a>.</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>size_changed</code></em></i>
+				–
+	</div>
+			<p>whether the change affects the <a href="gtktextview-h.html#GtkTextView">GtkTextView</a> layout.</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.20
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_text_tag_changed">
+	<span><code>Gtk.prototype.changed</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.changed(size_changed: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_text_tag_changed'
+}</pre>
+
+<p>Emits the <a href="https://developer.gnome.org/gtk3/GtkTextTagTable.html#GtkTextTagTable-tag-changed">tag-changed</a> signal on the <a href="gtktexttagtable-h.html#GtkTextTagTable">Gtk.TextTagTable</a> where
+the tag is included.</p>
+<p>The signal is already emitted when setting a <a href="gtktexttag-h.html#GtkTextTag">Gtk.TextTag</a> property. This
+function is useful for a <a href="gtktexttag-h.html#GtkTextTag">Gtk.TextTag</a> subclass.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>tag</code></em></i>
+					(
+						<a title="Gtk.TextTag" href="gtktexttag-h.html#GtkTextTag">Gtk.TextTag</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtktexttag-h.html#GtkTextTag">Gtk.TextTag</a>.</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>size_changed</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>whether the change affects the <a href="gtktextview-h.html#GtkTextView">Gtk.TextView</a> layout.</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.20
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_text_tag_changed">
+	<span><code>Gtk.TextTag.changed</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.TextTag.changed (self, size_changed):
+    #python wrapper for 'gtk_text_tag_changed'</pre>
+
+<p>Emits the <a href="https://developer.gnome.org/gtk3/GtkTextTagTable.html#GtkTextTagTable-tag-changed">tag-changed</a> signal on the <a href="gtktexttagtable-h.html#GtkTextTagTable">Gtk.TextTagTable</a> where
+the tag is included.</p>
+<p>The signal is already emitted when setting a <a href="gtktexttag-h.html#GtkTextTag">Gtk.TextTag</a> property. This
+function is useful for a <a href="gtktexttag-h.html#GtkTextTag">Gtk.TextTag</a> subclass.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>tag</code></em></i>
+					(
+						<a title="Gtk.TextTag" href="gtktexttag-h.html#GtkTextTag">Gtk.TextTag</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtktexttag-h.html#GtkTextTag">Gtk.TextTag</a>.</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>size_changed</code></em></i>
+					(
+						<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+						)
+				–
+	</div>
+			<p>whether the change affects the <a href="gtktextview-h.html#GtkTextView">Gtk.TextView</a> layout.</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.20
+		</p>
+
+
+        </div>
+
+</div>
+
+
+
+
+
+
+		
+	</div>
+	<div id="search_results">
+		<p>The results of the search are</p>
+	</div>
+	<hr>
+	<div id="footer">
+		    
+
+	</div>
+</div>
+
+<div id="toc-column">
+	
+		<div class="edit-button">
+		
+
+	</div>
+		<div id="toc-wrapper">
+		<nav id="toc"></nav>
+	</div>
+</div>
+</div>
+</main>
+
+</body>
+
+<script src="assets/js/navbar_offset_scroller.js"></script>
+</html>

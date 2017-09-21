@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<base href=".">
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>GtkModelButton</title>
+
+<link rel="stylesheet" href="assets/css/custom_bootstrap.css" type="text/css">
+<link rel="stylesheet" href="assets/css/bootstrap-toc.min.css" type="text/css">
+<link rel="stylesheet" href="assets/css/frontend.css" type="text/css">
+<link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
+
+<link rel="stylesheet" href="assets/css/prism.css" type="text/css">
+
+<script src="assets/js/mustache.min.js"></script>
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/scrollspy.js"></script>
+<script src="assets/js/bootstrap.js"></script>
+<script src="assets/js/typeahead.jquery.min.js"></script>
+<script src="assets/js/search.js"></script>
+<script src="assets/js/isotope.pkgd.min.js"></script>
+<script src="assets/js/compare-versions.js"></script>
+<script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="assets/js/bootstrap-toc.min.js"></script>
+<script src="assets/js/jquery.touchSwipe.min.js"></script>
+<script src="assets/js/anchor.min.js"></script>
+<script src="assets/js/tag_filtering.js"></script>
+<script src="assets/js/language_switching.js"></script>
+
+<script src="assets/js/lines_around_headings.js"></script>
+
+<script src="assets/js/prism-core.js"></script>
+<script src="assets/js/prism-autoloader.js"></script>
+<script src="assets/js/prism_autoloader_path_override.js"></script>
+<script src="assets/js/trie.js"></script>
+
+
+</head>
+
+<body class="no-script
+" data-spy="scroll" data-target="#toc" data-offset="70">
+
+<script>
+$('body').removeClass('no-script');
+</script>
+
+<nav class="navbar navbar-fixed-top navbar-default" id="topnav">
+	<div class="container-fluid">
+		<div class="navbar-right">
+			<a id="toc-toggle">
+				<span class="glyphicon glyphicon-menu-right"></span>
+				<span class="glyphicon glyphicon-menu-left"></span>
+			</a>
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-wrapper" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<form action="" class="navbar-form pull-right" id="navbar-search-form">
+                               <div class="form-group has-feedback">
+                                       <input type="text" class="form-control input-sm" name="search" id="sidenav-lookup-field" placeholder="search" disabled>
+				       <span class="glyphicon glyphicon-search form-control-feedback" id="search-mgn-glass"></span>
+                               </div>
+                        </form>
+		</div>
+		<div class="navbar-header">
+			<a id="sidenav-toggle">
+				<span class="glyphicon glyphicon-menu-right"></span>
+				<span class="glyphicon glyphicon-menu-left"></span>
+			</a>
+			<a id="home-link" href="index.html" class="hotdoc-navbar-brand">
+				<img src="assets/images/home.svg" alt="Home">
+			</a>
+		</div>
+		<div class="navbar-collapse collapse" id="navbar-wrapper">
+			<ul class="nav navbar-nav" id="menu">
+							</ul>
+			<div class="hidden-xs hidden-sm navbar-text navbar-center">
+							</div>
+		</div>
+	</div>
+</nav>
+
+<main>
+<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="gtkmodelbutton-h.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['c', 'javascript', 'python']" data-hotdoc-meta-gi-language="c">
+<script src="assets/js/utils.js"></script>
+
+<div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
+	<script src="assets/js/navigation.js"></script>
+	<script src="assets/js/sitemap.js"></script>
+</div>
+
+<div id="body">
+	<div id="main">
+				    <div id="page-description" data-hotdoc-source="gtkmodelbutton.h.markdown" data-hotdoc-role="main">
+        <h1 id="gtkmodelbutton-page">GtkModelButton</h1>
+<p>GtkModelButton is a button class that can use a <a href="https://developer.gnome.org/gio/unstable/GAction.html#GAction-struct">GAction</a> as its model.
+In contrast to <a href="gtktogglebutton-h.html#GtkToggleButton" data-gi-href-javascript="gtktogglebutton-h.html#GtkToggleButton" data-gi-title-javascript="Gtk.ToggleButton" data-gi-href-python="gtktogglebutton-h.html#GtkToggleButton" data-gi-title-python="Gtk.ToggleButton">GtkToggleButton</a> or <a href="gtkradiobutton-h.html#GtkRadioButton" data-gi-href-javascript="gtkradiobutton-h.html#GtkRadioButton" data-gi-title-javascript="Gtk.RadioButton" data-gi-href-python="gtkradiobutton-h.html#GtkRadioButton" data-gi-title-python="Gtk.RadioButton">GtkRadioButton</a>, which can also
+be backed by a <a href="https://developer.gnome.org/gio/unstable/GAction.html#GAction-struct">GAction</a> via the <a href="https://developer.gnome.org/gtk3/GtkActionable.html#GtkActionable--action-name">GtkActionable:action-name</a> property,
+GtkModelButton will adapt its appearance according to the kind of
+action it is backed by, and appear either as a plain, check or
+radio button.</p>
+<p>Model buttons are used when popovers from a menu model with
+<a href="gtkpopover-h.html#gtk_popover_new_from_model" data-gi-href-javascript="gtkpopover-h.html#gtk_popover_new_from_model" data-gi-title-javascript="Gtk.prototype.new_from_model" data-gi-href-python="gtkpopover-h.html#gtk_popover_new_from_model" data-gi-title-python="Gtk.Popover.new_from_model">gtk_popover_new_from_model</a>; they can also be used manually in
+a <a href="gtkpopovermenu-h.html#GtkPopoverMenu" data-gi-href-javascript="gtkpopovermenu-h.html#GtkPopoverMenu" data-gi-title-javascript="Gtk.PopoverMenu" data-gi-href-python="gtkpopovermenu-h.html#GtkPopoverMenu" data-gi-title-python="Gtk.PopoverMenu">GtkPopoverMenu</a>.</p>
+<p>When the action is specified via the <a href="https://developer.gnome.org/gtk3/GtkActionable.html#GtkActionable--action-name">GtkActionable:action-name</a>
+and <a href="https://developer.gnome.org/gtk3/GtkActionable.html#GtkActionable--action-target">GtkActionable:action-target</a> properties, the role of the button
+(i.e. whether it is a plain, check or radio button) is determined by
+the type of the action and doesn't have to be explicitly specified
+with the <a href="https://developer.gnome.org/gtk3/GtkModelButton.html#GtkModelButton--role">GtkModelButton:role</a> property.</p>
+<p>The content of the button is specified by the <a href="https://developer.gnome.org/gtk3/GtkModelButton.html#GtkModelButton--text">GtkModelButton:text</a>
+and <a href="https://developer.gnome.org/gtk3/GtkModelButton.html#GtkModelButton--icon">GtkModelButton:icon</a> properties.</p>
+<p>The appearance of model buttons can be influenced with the
+<a href="https://developer.gnome.org/gtk3/GtkModelButton.html#GtkModelButton--centered">GtkModelButton:centered</a> and <a href="https://developer.gnome.org/gtk3/GtkModelButton.html#GtkModelButton--iconic">GtkModelButton:iconic</a> properties.</p>
+<p>Model buttons have built-in support for submenus in <a href="gtkpopovermenu-h.html#GtkPopoverMenu" data-gi-href-javascript="gtkpopovermenu-h.html#GtkPopoverMenu" data-gi-title-javascript="Gtk.PopoverMenu" data-gi-href-python="gtkpopovermenu-h.html#GtkPopoverMenu" data-gi-title-python="Gtk.PopoverMenu">GtkPopoverMenu</a>.
+To make a GtkModelButton that opens a submenu when activated, set
+the <a href="https://developer.gnome.org/gtk3/GtkModelButton.html#GtkModelButton--menu-name">GtkModelButton:menu-name</a> property. To make a button that goes
+back to the parent menu, you should set the <a href="https://developer.gnome.org/gtk3/GtkModelButton.html#GtkModelButton--inverted">GtkModelButton:inverted</a>
+property to place the submenu indicator at the opposite side.</p>
+<h1 id="example">Example</h1>
+<pre><code class="language-["> &lt;object class="GtkPopoverMenu"&gt;
+   &lt;child&gt;
+     &lt;object class="GtkBox"&gt;
+       &lt;property name="visible"&gt;True&lt;/property&gt;
+       &lt;property name="margin"&gt;10&lt;/property&gt;
+       &lt;child&gt;
+         &lt;object class="GtkModelButton"&gt;
+           &lt;property name="visible"&gt;True&lt;/property&gt;
+           &lt;property name="action-name"&gt;view.cut&lt;/property&gt;
+           &lt;property name="text" translatable="yes"&gt;Cut&lt;/property&gt;
+         &lt;/object&gt;
+       &lt;/child&gt;
+       &lt;child&gt;
+         &lt;object class="GtkModelButton"&gt;
+           &lt;property name="visible"&gt;True&lt;/property&gt;
+           &lt;property name="action-name"&gt;view.copy&lt;/property&gt;
+           &lt;property name="text" translatable="yes"&gt;Copy&lt;/property&gt;
+         &lt;/object&gt;
+       &lt;/child&gt;
+       &lt;child&gt;
+         &lt;object class="GtkModelButton"&gt;
+           &lt;property name="visible"&gt;True&lt;/property&gt;
+           &lt;property name="action-name"&gt;view.paste&lt;/property&gt;
+           &lt;property name="text" translatable="yes"&gt;Paste&lt;/property&gt;
+         &lt;/object&gt;
+       &lt;/child&gt;
+     &lt;/object&gt;
+   &lt;/child&gt;
+ &lt;/object&gt;
+</code></pre>
+<h1 id="css-nodes">CSS nodes</h1>
+<pre><code class="language-[&lt;!--"> modelbutton
+ ├── &lt;child&gt;
+ ╰── check
+</code></pre>
+<pre><code class="language-[&lt;!--"> modelbutton
+ ├── &lt;child&gt;
+ ╰── radio
+</code></pre>
+<pre><code class="language-[&lt;!--"> modelbutton
+ ├── &lt;child&gt;
+ ╰── arrow
+</code></pre>
+<p>GtkModelButton has a main CSS node with name modelbutton, and a subnode,
+which will have the name check, radio or arrow, depending on the role
+of the button and whether it has a menu name set.</p>
+<p>The subnode is positioned before or after the content nodes and gets the
+.left or .right style class, depending on where it is located.</p>
+<pre><code class="language-[&lt;!--"> button.model
+ ├── &lt;child&gt;
+ ╰── check
+</code></pre>
+<p>Iconic model buttons (see <a href="https://developer.gnome.org/gtk3/GtkModelButton.html#GtkModelButton--iconic">GtkModelButton:iconic</a>) change the name of
+their main node to button and add a .model style class to it. The indicator
+subnode is invisible in this case.</p>
+
+    </div>
+        
+        
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="GtkModelButton">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h2 data-hotdoc-id="GtkModelButton">
+	<span><code>GtkModelButton</code></span>
+</h2>
+
+
+<div class="hierarchy_container">
+	<div class="hierarchy_details">
+<pre>
+<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
+    <span class="lineart">╰──</span><a title="GInitiallyUnowned" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned">GInitiallyUnowned</a>
+        <span class="lineart">╰──</span><a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a>
+            <span class="lineart">╰──</span><a title="GtkContainer" href="gtkcontainer-h.html#GtkContainer">GtkContainer</a>
+                <span class="lineart">╰──</span><a title="GtkBin" href="gtkbin-h.html#GtkBin">GtkBin</a>
+                    <span class="lineart">╰──</span><a title="GtkButton" href="gtkbutton-h.html#GtkButton">GtkButton</a>
+                        <span class="lineart">╰──</span>GtkModelButton
+</pre>
+
+</div>
+
+</div>
+
+<div class="interfaces_container">
+	
+<p><b>Implemented interfaces:</b>
+    AtkImplementorIface, <a title="GtkActionable" href="gtkactionable-h.html#GtkActionable">GtkActionable</a>, <a title="GtkBuildable" href="gtkbuildable-h.html#GtkBuildable">GtkBuildable</a>
+</p>
+
+</div>
+
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h2 data-hotdoc-id="GtkModelButton">
+	<span><code>Gtk.ModelButton</code></span>
+</h2>
+
+
+<div class="hierarchy_container">
+	<div class="hierarchy_details">
+<pre>
+<a title="GObject.Object" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct">GObject.Object</a>
+    <span class="lineart">╰──</span><a title="GObject.InitiallyUnowned" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned">GObject.InitiallyUnowned</a>
+        <span class="lineart">╰──</span><a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
+            <span class="lineart">╰──</span><a title="Gtk.Container" href="gtkcontainer-h.html#GtkContainer">Gtk.Container</a>
+                <span class="lineart">╰──</span><a title="Gtk.Bin" href="gtkbin-h.html#GtkBin">Gtk.Bin</a>
+                    <span class="lineart">╰──</span><a title="Gtk.Button" href="gtkbutton-h.html#GtkButton">Gtk.Button</a>
+                        <span class="lineart">╰──</span>Gtk.ModelButton
+</pre>
+
+</div>
+
+</div>
+
+<div class="interfaces_container">
+	
+<p><b>Implemented interfaces:</b>
+    Atk.ImplementorIface, <a title="Gtk.Actionable" href="gtkactionable-h.html#GtkActionable">Gtk.Actionable</a>, <a title="Gtk.Buildable" href="gtkbuildable-h.html#GtkBuildable">Gtk.Buildable</a>
+</p>
+
+</div>
+
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h2 data-hotdoc-id="GtkModelButton">
+	<span><code>Gtk.ModelButton</code></span>
+</h2>
+
+
+<div class="hierarchy_container">
+	<div class="hierarchy_details">
+<pre>
+<a title="GObject.Object" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct">GObject.Object</a>
+    <span class="lineart">╰──</span><a title="GObject.InitiallyUnowned" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned">GObject.InitiallyUnowned</a>
+        <span class="lineart">╰──</span><a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
+            <span class="lineart">╰──</span><a title="Gtk.Container" href="gtkcontainer-h.html#GtkContainer">Gtk.Container</a>
+                <span class="lineart">╰──</span><a title="Gtk.Bin" href="gtkbin-h.html#GtkBin">Gtk.Bin</a>
+                    <span class="lineart">╰──</span><a title="Gtk.Button" href="gtkbutton-h.html#GtkButton">Gtk.Button</a>
+                        <span class="lineart">╰──</span>Gtk.ModelButton
+</pre>
+
+</div>
+
+</div>
+
+<div class="interfaces_container">
+	
+<p><b>Implemented interfaces:</b>
+    Atk.ImplementorIface, <a title="Gtk.Actionable" href="gtkactionable-h.html#GtkActionable">Gtk.Actionable</a>, <a title="Gtk.Buildable" href="gtkbuildable-h.html#GtkBuildable">Gtk.Buildable</a>
+</p>
+
+</div>
+
+
+
+
+
+
+        </div>
+
+</div>
+
+
+            <h3 class="symbol_section">Constructors</h3>
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.16;" id="gtk_model_button_new">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_model_button_new">
+	<span><code>gtk_model_button_new</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> *
+gtk_model_button_new ()</pre>
+
+<p>Creates a new GtkModelButton.</p>
+
+
+
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>the newly created <a href="gtkmodelbutton-h.html#GtkModelButton">GtkModelButton</a> widget</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.16
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_model_button_new">
+	<span><code>Gtk.prototype.new</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.new(): {
+    // javascript wrapper for 'gtk_model_button_new'
+}</pre>
+
+<p>Creates a new GtkModelButton.</p>
+
+
+
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>the newly created <a href="gtkmodelbutton-h.html#GtkModelButton">Gtk.ModelButton</a> widget</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.16
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_model_button_new">
+	<span><code>Gtk.ModelButton.new</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.ModelButton.new ():
+    #python wrapper for 'gtk_model_button_new'</pre>
+
+<p>Creates a new GtkModelButton.</p>
+
+
+
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>the newly created <a href="gtkmodelbutton-h.html#GtkModelButton">Gtk.ModelButton</a> widget</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.16
+		</p>
+
+
+        </div>
+
+</div>
+
+
+        
+
+            <h2 class="symbol_section">Enumerations</h2>
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="GtkButtonRole">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h3 data-hotdoc-id="GtkButtonRole">
+	<span><code>GtkButtonRole</code></span>
+</h3>
+
+
+<p>The role specifies the desired appearance of a <a href="gtkmodelbutton-h.html#GtkModelButton">GtkModelButton</a>.</p>
+
+
+
+
+	<div class="members-container">
+		<h4>Members</h4>
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_BUTTON_ROLE_NORMAL">
+	<div>
+		<i><em><code>GTK_BUTTON_ROLE_NORMAL</code></em></i>
+		(<span class="value">0</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_BUTTON_ROLE_CHECK">
+	<div>
+		<i><em><code>GTK_BUTTON_ROLE_CHECK</code></em></i>
+		(<span class="value">1</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_BUTTON_ROLE_RADIO">
+	<div>
+		<i><em><code>GTK_BUTTON_ROLE_RADIO</code></em></i>
+		(<span class="value">2</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h3 data-hotdoc-id="GtkButtonRole">
+	<span><code>Gtk.ButtonRole</code></span>
+</h3>
+
+
+<p>The role specifies the desired appearance of a <a href="gtkmodelbutton-h.html#GtkModelButton">Gtk.ModelButton</a>.</p>
+
+
+
+
+	<div class="members-container">
+		<h4>Members</h4>
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_BUTTON_ROLE_NORMAL">
+	<div>
+		<i><em><code>Gtk.ButtonRole.NORMAL</code></em></i>
+		(<span class="value">0</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_BUTTON_ROLE_CHECK">
+	<div>
+		<i><em><code>Gtk.ButtonRole.CHECK</code></em></i>
+		(<span class="value">1</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_BUTTON_ROLE_RADIO">
+	<div>
+		<i><em><code>Gtk.ButtonRole.RADIO</code></em></i>
+		(<span class="value">2</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="GtkButtonRole">
+	<span><code>Gtk.ButtonRole</code></span>
+</h3>
+
+
+<p>The role specifies the desired appearance of a <a href="gtkmodelbutton-h.html#GtkModelButton">Gtk.ModelButton</a>.</p>
+
+
+
+
+	<div class="members-container">
+		<h4>Members</h4>
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_BUTTON_ROLE_NORMAL">
+	<div>
+		<i><em><code>Gtk.ButtonRole.NORMAL</code></em></i>
+		(<span class="value">0</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_BUTTON_ROLE_CHECK">
+	<div>
+		<i><em><code>Gtk.ButtonRole.CHECK</code></em></i>
+		(<span class="value">1</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_BUTTON_ROLE_RADIO">
+	<div>
+		<i><em><code>Gtk.ButtonRole.RADIO</code></em></i>
+		(<span class="value">2</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+
+</div>
+
+
+
+
+
+
+		
+	</div>
+	<div id="search_results">
+		<p>The results of the search are</p>
+	</div>
+	<hr>
+	<div id="footer">
+		    
+
+	</div>
+</div>
+
+<div id="toc-column">
+	
+		<div class="edit-button">
+		
+
+	</div>
+		<div id="toc-wrapper">
+		<nav id="toc"></nav>
+	</div>
+</div>
+</div>
+</main>
+
+</body>
+
+<script src="assets/js/navbar_offset_scroller.js"></script>
+</html>

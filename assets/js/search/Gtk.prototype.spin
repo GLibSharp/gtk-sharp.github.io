@@ -1,1 +1,1 @@
-urls_downloaded_cb({"token": "Gtk.prototype.spin", "urls": [{"url": "gtkspinbutton.html#gtk_spin_button_spin", "context": {"gi-language": ["javascript"]}}, {"url": "gtkspinbutton.html#GtkSpinType", "context": {"gi-language": ["javascript"]}}]});
+urls_downloaded_cb({"token": "Gtk.prototype.spin", "urls": [{"url": "gtkspinbutton-h.html#gtk_spin_button_spin", "context": {"gi-language": ["javascript"]}}, {"url": "gtkspinbutton-h.html#GtkSpinType", "context": {"gi-language": ["javascript"]}}]});

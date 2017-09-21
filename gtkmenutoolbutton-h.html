@@ -1,0 +1,1364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<base href=".">
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>GtkMenuToolButton</title>
+
+<link rel="stylesheet" href="assets/css/custom_bootstrap.css" type="text/css">
+<link rel="stylesheet" href="assets/css/bootstrap-toc.min.css" type="text/css">
+<link rel="stylesheet" href="assets/css/frontend.css" type="text/css">
+<link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
+
+<link rel="stylesheet" href="assets/css/prism.css" type="text/css">
+
+<script src="assets/js/mustache.min.js"></script>
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/scrollspy.js"></script>
+<script src="assets/js/bootstrap.js"></script>
+<script src="assets/js/typeahead.jquery.min.js"></script>
+<script src="assets/js/search.js"></script>
+<script src="assets/js/isotope.pkgd.min.js"></script>
+<script src="assets/js/compare-versions.js"></script>
+<script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="assets/js/bootstrap-toc.min.js"></script>
+<script src="assets/js/jquery.touchSwipe.min.js"></script>
+<script src="assets/js/anchor.min.js"></script>
+<script src="assets/js/tag_filtering.js"></script>
+<script src="assets/js/language_switching.js"></script>
+
+<script src="assets/js/lines_around_headings.js"></script>
+
+<script src="assets/js/prism-core.js"></script>
+<script src="assets/js/prism-autoloader.js"></script>
+<script src="assets/js/prism_autoloader_path_override.js"></script>
+<script src="assets/js/trie.js"></script>
+
+
+</head>
+
+<body class="no-script
+" data-spy="scroll" data-target="#toc" data-offset="70">
+
+<script>
+$('body').removeClass('no-script');
+</script>
+
+<nav class="navbar navbar-fixed-top navbar-default" id="topnav">
+	<div class="container-fluid">
+		<div class="navbar-right">
+			<a id="toc-toggle">
+				<span class="glyphicon glyphicon-menu-right"></span>
+				<span class="glyphicon glyphicon-menu-left"></span>
+			</a>
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-wrapper" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<form action="" class="navbar-form pull-right" id="navbar-search-form">
+                               <div class="form-group has-feedback">
+                                       <input type="text" class="form-control input-sm" name="search" id="sidenav-lookup-field" placeholder="search" disabled>
+				       <span class="glyphicon glyphicon-search form-control-feedback" id="search-mgn-glass"></span>
+                               </div>
+                        </form>
+		</div>
+		<div class="navbar-header">
+			<a id="sidenav-toggle">
+				<span class="glyphicon glyphicon-menu-right"></span>
+				<span class="glyphicon glyphicon-menu-left"></span>
+			</a>
+			<a id="home-link" href="index.html" class="hotdoc-navbar-brand">
+				<img src="assets/images/home.svg" alt="Home">
+			</a>
+		</div>
+		<div class="navbar-collapse collapse" id="navbar-wrapper">
+			<ul class="nav navbar-nav" id="menu">
+							</ul>
+			<div class="hidden-xs hidden-sm navbar-text navbar-center">
+							</div>
+		</div>
+	</div>
+</nav>
+
+<main>
+<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="gtkmenutoolbutton-h.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['c', 'javascript', 'python']" data-hotdoc-meta-gi-language="c">
+<script src="assets/js/utils.js"></script>
+
+<div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
+	<script src="assets/js/navigation.js"></script>
+	<script src="assets/js/sitemap.js"></script>
+</div>
+
+<div id="body">
+	<div id="main">
+				    <div id="page-description" data-hotdoc-source="gtkmenutoolbutton.h.markdown" data-hotdoc-role="main">
+        <h1 id="gtkmenutoolbutton-page">GtkMenuToolButton</h1>
+<p>A <a href="gtkmenutoolbutton-h.html#GtkMenuToolButton" data-gi-href-javascript="gtkmenutoolbutton-h.html#GtkMenuToolButton" data-gi-title-javascript="Gtk.MenuToolButton" data-gi-href-python="gtkmenutoolbutton-h.html#GtkMenuToolButton" data-gi-title-python="Gtk.MenuToolButton">GtkMenuToolButton</a> is a <a href="gtktoolitem-h.html#GtkToolItem" data-gi-href-javascript="gtktoolitem-h.html#GtkToolItem" data-gi-title-javascript="Gtk.ToolItem" data-gi-href-python="gtktoolitem-h.html#GtkToolItem" data-gi-title-python="Gtk.ToolItem">GtkToolItem</a> that contains a button and
+a small additional button with an arrow. When clicked, the arrow
+button pops up a dropdown menu.</p>
+<p>Use <a href="gtkmenutoolbutton-h.html#gtk_menu_tool_button_new" data-gi-href-javascript="gtkmenutoolbutton-h.html#gtk_menu_tool_button_new" data-gi-title-javascript="Gtk.prototype.new" data-gi-href-python="gtkmenutoolbutton-h.html#gtk_menu_tool_button_new" data-gi-title-python="Gtk.MenuToolButton.new">gtk_menu_tool_button_new</a> to create a new
+<a href="gtkmenutoolbutton-h.html#GtkMenuToolButton" data-gi-href-javascript="gtkmenutoolbutton-h.html#GtkMenuToolButton" data-gi-title-javascript="Gtk.MenuToolButton" data-gi-href-python="gtkmenutoolbutton-h.html#GtkMenuToolButton" data-gi-title-python="Gtk.MenuToolButton">GtkMenuToolButton</a>.</p>
+<h1 id="gtkmenutoolbutton-as-gtkbuildable">GtkMenuToolButton as GtkBuildable</h1>
+<p>The GtkMenuToolButton implementation of the GtkBuildable interface
+supports adding a menu by specifying “menu” as the “type” attribute
+of a <child> element.</child></p>
+<p>An example for a UI definition fragment with menus:</p>
+<pre><code class="language-["> &lt;object class="GtkMenuToolButton"&gt;
+   &lt;child type="menu"&gt;
+     &lt;object class="GtkMenu"/&gt;
+   &lt;/child&gt;
+ &lt;/object&gt;
+</code></pre>
+
+    </div>
+        
+        
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="GtkMenuToolButton">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h2 data-hotdoc-id="GtkMenuToolButton">
+	<span><code>GtkMenuToolButton</code></span>
+</h2>
+
+
+<div class="hierarchy_container">
+	<div class="hierarchy_details">
+<pre>
+<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object">GObject</a>
+    <span class="lineart">╰──</span><a title="GInitiallyUnowned" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-javascript="GObject.InitiallyUnowned" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-python="GObject.InitiallyUnowned">GInitiallyUnowned</a>
+        <span class="lineart">╰──</span><a title="GtkWidget" href="gtkwidget-h.html#GtkWidget" data-gi-href-javascript="gtkwidget-h.html#GtkWidget" data-gi-title-javascript="Gtk.Widget" data-gi-href-python="gtkwidget-h.html#GtkWidget" data-gi-title-python="Gtk.Widget">GtkWidget</a>
+            <span class="lineart">╰──</span><a title="GtkContainer" href="gtkcontainer-h.html#GtkContainer" data-gi-href-javascript="gtkcontainer-h.html#GtkContainer" data-gi-title-javascript="Gtk.Container" data-gi-href-python="gtkcontainer-h.html#GtkContainer" data-gi-title-python="Gtk.Container">GtkContainer</a>
+                <span class="lineart">╰──</span><a title="GtkBin" href="gtkbin-h.html#GtkBin" data-gi-href-javascript="gtkbin-h.html#GtkBin" data-gi-title-javascript="Gtk.Bin" data-gi-href-python="gtkbin-h.html#GtkBin" data-gi-title-python="Gtk.Bin">GtkBin</a>
+                    <span class="lineart">╰──</span><a title="GtkToolItem" href="gtktoolitem-h.html#GtkToolItem" data-gi-href-javascript="gtktoolitem-h.html#GtkToolItem" data-gi-title-javascript="Gtk.ToolItem" data-gi-href-python="gtktoolitem-h.html#GtkToolItem" data-gi-title-python="Gtk.ToolItem">GtkToolItem</a>
+                        <span class="lineart">╰──</span><a title="GtkToolButton" href="gtktoolbutton-h.html#GtkToolButton" data-gi-href-javascript="gtktoolbutton-h.html#GtkToolButton" data-gi-title-javascript="Gtk.ToolButton" data-gi-href-python="gtktoolbutton-h.html#GtkToolButton" data-gi-title-python="Gtk.ToolButton">GtkToolButton</a>
+                            <span class="lineart">╰──</span>GtkMenuToolButton
+</pre>
+
+</div>
+
+</div>
+
+<div class="interfaces_container">
+	
+<p><b>Implemented interfaces:</b>
+    AtkImplementorIface, <a title="GtkActionable" href="gtkactionable-h.html#GtkActionable" data-gi-href-javascript="gtkactionable-h.html#GtkActionable" data-gi-title-javascript="Gtk.Actionable" data-gi-href-python="gtkactionable-h.html#GtkActionable" data-gi-title-python="Gtk.Actionable">GtkActionable</a>, <a title="GtkBuildable" href="gtkbuildable-h.html#GtkBuildable" data-gi-href-javascript="gtkbuildable-h.html#GtkBuildable" data-gi-title-javascript="Gtk.Buildable" data-gi-href-python="gtkbuildable-h.html#GtkBuildable" data-gi-title-python="Gtk.Buildable">GtkBuildable</a>
+</p>
+
+</div>
+
+
+
+
+	<div class="members-container">
+		<h3>Members</h3>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkMenuToolButton.parent">
+	<div>
+		<i><em><code>parent</code></em></i>
+		(<a title="GtkToolButton" href="gtktoolbutton-h.html#GtkToolButton" data-gi-href-javascript="gtktoolbutton-h.html#GtkToolButton" data-gi-title-javascript="Gtk.ToolButton" data-gi-href-python="gtktoolbutton-h.html#GtkToolButton" data-gi-title-python="Gtk.ToolButton">GtkToolButton</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+<h3>Class structure</h3>
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="GtkMenuToolButtonClass">
+	<span><code>GtkMenuToolButtonClass</code></span>
+</h4>
+
+
+
+
+
+	<div class="members-container">
+		<h5>Fields</h5>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkMenuToolButtonClass.parent_class">
+	<div>
+		<i><em><code>parent_class</code></em></i>
+		(<a title="GtkToolButtonClass" href="GtkToolButtonClass">GtkToolButtonClass</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h3>
+	Gtk.MenuToolButtonClass
+</h3>
+
+
+
+
+
+	<div class="members-container">
+		<h5>Attributes</h5>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkMenuToolButtonClass.parent_class">
+	<div>
+		<i><em><code>MenuToolButtonClass.parent_class</code></em></i>
+		(<a title="Gtk.ToolButtonClass" href="GtkToolButtonClass">Gtk.ToolButtonClass</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3>
+	Gtk.MenuToolButtonClass
+</h3>
+
+
+
+
+
+	<div class="members-container">
+		<h5>Attributes</h5>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkMenuToolButtonClass.parent_class">
+	<div>
+		<i><em><code>MenuToolButtonClass.parent_class</code></em></i>
+		(<a title="Gtk.ToolButtonClass" href="GtkToolButtonClass">Gtk.ToolButtonClass</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h2 data-hotdoc-id="GtkMenuToolButton">
+	<span><code>GtkMenuToolButton</code></span>
+</h2>
+
+
+<div class="hierarchy_container">
+	<div class="hierarchy_details">
+<pre>
+<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object">GObject</a>
+    <span class="lineart">╰──</span><a title="GInitiallyUnowned" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-javascript="GObject.InitiallyUnowned" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-python="GObject.InitiallyUnowned">GInitiallyUnowned</a>
+        <span class="lineart">╰──</span><a title="GtkWidget" href="gtkwidget-h.html#GtkWidget" data-gi-href-javascript="gtkwidget-h.html#GtkWidget" data-gi-title-javascript="Gtk.Widget" data-gi-href-python="gtkwidget-h.html#GtkWidget" data-gi-title-python="Gtk.Widget">GtkWidget</a>
+            <span class="lineart">╰──</span><a title="GtkContainer" href="gtkcontainer-h.html#GtkContainer" data-gi-href-javascript="gtkcontainer-h.html#GtkContainer" data-gi-title-javascript="Gtk.Container" data-gi-href-python="gtkcontainer-h.html#GtkContainer" data-gi-title-python="Gtk.Container">GtkContainer</a>
+                <span class="lineart">╰──</span><a title="GtkBin" href="gtkbin-h.html#GtkBin" data-gi-href-javascript="gtkbin-h.html#GtkBin" data-gi-title-javascript="Gtk.Bin" data-gi-href-python="gtkbin-h.html#GtkBin" data-gi-title-python="Gtk.Bin">GtkBin</a>
+                    <span class="lineart">╰──</span><a title="GtkToolItem" href="gtktoolitem-h.html#GtkToolItem" data-gi-href-javascript="gtktoolitem-h.html#GtkToolItem" data-gi-title-javascript="Gtk.ToolItem" data-gi-href-python="gtktoolitem-h.html#GtkToolItem" data-gi-title-python="Gtk.ToolItem">GtkToolItem</a>
+                        <span class="lineart">╰──</span><a title="GtkToolButton" href="gtktoolbutton-h.html#GtkToolButton" data-gi-href-javascript="gtktoolbutton-h.html#GtkToolButton" data-gi-title-javascript="Gtk.ToolButton" data-gi-href-python="gtktoolbutton-h.html#GtkToolButton" data-gi-title-python="Gtk.ToolButton">GtkToolButton</a>
+                            <span class="lineart">╰──</span>GtkMenuToolButton
+</pre>
+
+</div>
+
+</div>
+
+<div class="interfaces_container">
+	
+<p><b>Implemented interfaces:</b>
+    AtkImplementorIface, <a title="GtkActionable" href="gtkactionable-h.html#GtkActionable" data-gi-href-javascript="gtkactionable-h.html#GtkActionable" data-gi-title-javascript="Gtk.Actionable" data-gi-href-python="gtkactionable-h.html#GtkActionable" data-gi-title-python="Gtk.Actionable">GtkActionable</a>, <a title="GtkBuildable" href="gtkbuildable-h.html#GtkBuildable" data-gi-href-javascript="gtkbuildable-h.html#GtkBuildable" data-gi-title-javascript="Gtk.Buildable" data-gi-href-python="gtkbuildable-h.html#GtkBuildable" data-gi-title-python="Gtk.Buildable">GtkBuildable</a>
+</p>
+
+</div>
+
+
+
+
+	<div class="members-container">
+		<h3>Members</h3>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkMenuToolButton.parent">
+	<div>
+		<i><em><code>parent</code></em></i>
+		(<a title="GtkToolButton" href="gtktoolbutton-h.html#GtkToolButton" data-gi-href-javascript="gtktoolbutton-h.html#GtkToolButton" data-gi-title-javascript="Gtk.ToolButton" data-gi-href-python="gtktoolbutton-h.html#GtkToolButton" data-gi-title-python="Gtk.ToolButton">GtkToolButton</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h2 data-hotdoc-id="GtkMenuToolButton">
+	<span><code>GtkMenuToolButton</code></span>
+</h2>
+
+
+<div class="hierarchy_container">
+	<div class="hierarchy_details">
+<pre>
+<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object">GObject</a>
+    <span class="lineart">╰──</span><a title="GInitiallyUnowned" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-javascript="GObject.InitiallyUnowned" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-python="GObject.InitiallyUnowned">GInitiallyUnowned</a>
+        <span class="lineart">╰──</span><a title="GtkWidget" href="gtkwidget-h.html#GtkWidget" data-gi-href-javascript="gtkwidget-h.html#GtkWidget" data-gi-title-javascript="Gtk.Widget" data-gi-href-python="gtkwidget-h.html#GtkWidget" data-gi-title-python="Gtk.Widget">GtkWidget</a>
+            <span class="lineart">╰──</span><a title="GtkContainer" href="gtkcontainer-h.html#GtkContainer" data-gi-href-javascript="gtkcontainer-h.html#GtkContainer" data-gi-title-javascript="Gtk.Container" data-gi-href-python="gtkcontainer-h.html#GtkContainer" data-gi-title-python="Gtk.Container">GtkContainer</a>
+                <span class="lineart">╰──</span><a title="GtkBin" href="gtkbin-h.html#GtkBin" data-gi-href-javascript="gtkbin-h.html#GtkBin" data-gi-title-javascript="Gtk.Bin" data-gi-href-python="gtkbin-h.html#GtkBin" data-gi-title-python="Gtk.Bin">GtkBin</a>
+                    <span class="lineart">╰──</span><a title="GtkToolItem" href="gtktoolitem-h.html#GtkToolItem" data-gi-href-javascript="gtktoolitem-h.html#GtkToolItem" data-gi-title-javascript="Gtk.ToolItem" data-gi-href-python="gtktoolitem-h.html#GtkToolItem" data-gi-title-python="Gtk.ToolItem">GtkToolItem</a>
+                        <span class="lineart">╰──</span><a title="GtkToolButton" href="gtktoolbutton-h.html#GtkToolButton" data-gi-href-javascript="gtktoolbutton-h.html#GtkToolButton" data-gi-title-javascript="Gtk.ToolButton" data-gi-href-python="gtktoolbutton-h.html#GtkToolButton" data-gi-title-python="Gtk.ToolButton">GtkToolButton</a>
+                            <span class="lineart">╰──</span>GtkMenuToolButton
+</pre>
+
+</div>
+
+</div>
+
+<div class="interfaces_container">
+	
+<p><b>Implemented interfaces:</b>
+    AtkImplementorIface, <a title="GtkActionable" href="gtkactionable-h.html#GtkActionable" data-gi-href-javascript="gtkactionable-h.html#GtkActionable" data-gi-title-javascript="Gtk.Actionable" data-gi-href-python="gtkactionable-h.html#GtkActionable" data-gi-title-python="Gtk.Actionable">GtkActionable</a>, <a title="GtkBuildable" href="gtkbuildable-h.html#GtkBuildable" data-gi-href-javascript="gtkbuildable-h.html#GtkBuildable" data-gi-title-javascript="Gtk.Buildable" data-gi-href-python="gtkbuildable-h.html#GtkBuildable" data-gi-title-python="Gtk.Buildable">GtkBuildable</a>
+</p>
+
+</div>
+
+
+
+
+	<div class="members-container">
+		<h3>Members</h3>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkMenuToolButton.parent">
+	<div>
+		<i><em><code>parent</code></em></i>
+		(<a title="GtkToolButton" href="gtktoolbutton-h.html#GtkToolButton" data-gi-href-javascript="gtktoolbutton-h.html#GtkToolButton" data-gi-title-javascript="Gtk.ToolButton" data-gi-href-python="gtktoolbutton-h.html#GtkToolButton" data-gi-title-python="Gtk.ToolButton">GtkToolButton</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+
+</div>
+
+
+            <h3 class="symbol_section">Constructors</h3>
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.6;" id="gtk_menu_tool_button_new">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_tool_button_new">
+	<span><code>gtk_menu_tool_button_new</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkToolItem" href="gtktoolitem-h.html#GtkToolItem">GtkToolItem</a> *
+gtk_menu_tool_button_new (<a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> * icon_widget,
+                          const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * label)</pre>
+
+<p>Creates a new <a href="gtkmenutoolbutton-h.html#GtkMenuToolButton">GtkMenuToolButton</a> using <em>icon_widget</em> as icon and
+<em>label</em> as label.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>icon_widget</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>a widget that will be used as icon widget, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>label</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>a string that will be used as label, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>the new <a href="gtkmenutoolbutton-h.html#GtkMenuToolButton">GtkMenuToolButton</a></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.6
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_tool_button_new">
+	<span><code>Gtk.prototype.new</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.new(icon_widget: <a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>, label: <a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>): {
+    // javascript wrapper for 'gtk_menu_tool_button_new'
+}</pre>
+
+<p>Creates a new <a href="gtkmenutoolbutton-h.html#GtkMenuToolButton">Gtk.MenuToolButton</a> using <em>icon_widget</em> as icon and
+<em>label</em> as label.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>icon_widget</code></em></i>
+					(
+						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>a widget that will be used as icon widget, or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>label</code></em></i>
+					(
+						<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
+						)
+				–
+	</div>
+			<p>a string that will be used as label, or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.ToolItem" href="gtktoolitem-h.html#GtkToolItem">Gtk.ToolItem</a>
+										)
+								–
+			</div>
+							<p>the new <a href="gtkmenutoolbutton-h.html#GtkMenuToolButton">Gtk.MenuToolButton</a></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.6
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_tool_button_new">
+	<span><code>Gtk.MenuToolButton.new</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.MenuToolButton.new (icon_widget, label):
+    #python wrapper for 'gtk_menu_tool_button_new'</pre>
+
+<p>Creates a new <a href="gtkmenutoolbutton-h.html#GtkMenuToolButton">Gtk.MenuToolButton</a> using <em>icon_widget</em> as icon and
+<em>label</em> as label.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>icon_widget</code></em></i>
+					(
+						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>a widget that will be used as icon widget, or <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>label</code></em></i>
+					(
+						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
+						)
+				–
+	</div>
+			<p>a string that will be used as label, or <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.ToolItem" href="gtktoolitem-h.html#GtkToolItem">Gtk.ToolItem</a>
+										)
+								–
+			</div>
+							<p>the new <a href="gtkmenutoolbutton-h.html#GtkMenuToolButton">Gtk.MenuToolButton</a></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.6
+		</p>
+
+
+        </div>
+
+</div>
+
+
+            <h3 class="symbol_section">Methods</h3>
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.6;" id="gtk_menu_tool_button_set_menu">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_tool_button_set_menu">
+	<span><code>gtk_menu_tool_button_set_menu</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_menu_tool_button_set_menu (<a title="GtkMenuToolButton" href="gtkmenutoolbutton-h.html#GtkMenuToolButton">GtkMenuToolButton</a> * button,
+                               <a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> * menu)</pre>
+
+<p>Sets the <a href="gtkmenu-h.html#GtkMenu">GtkMenu</a> that is popped up when the user clicks on the arrow.
+If <em>menu</em> is NULL, the arrow button becomes insensitive.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>button</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkmenutoolbutton-h.html#GtkMenuToolButton">GtkMenuToolButton</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu</code></em></i>
+				–
+	</div>
+			<p>the <a href="gtkmenu-h.html#GtkMenu">GtkMenu</a> associated with <a href="gtkmenutoolbutton-h.html#GtkMenuToolButton">GtkMenuToolButton</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.6
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_tool_button_set_menu">
+	<span><code>Gtk.prototype.set_menu</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_menu(menu: <a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>): {
+    // javascript wrapper for 'gtk_menu_tool_button_set_menu'
+}</pre>
+
+<p>Sets the <a href="gtkmenu-h.html#GtkMenu">Gtk.Menu</a> that is popped up when the user clicks on the arrow.
+If <em>menu</em> is NULL, the arrow button becomes insensitive.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>button</code></em></i>
+					(
+						<a title="Gtk.MenuToolButton" href="gtkmenutoolbutton-h.html#GtkMenuToolButton">Gtk.MenuToolButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkmenutoolbutton-h.html#GtkMenuToolButton">Gtk.MenuToolButton</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu</code></em></i>
+					(
+						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>the <a href="gtkmenu-h.html#GtkMenu">Gtk.Menu</a> associated with <a href="gtkmenutoolbutton-h.html#GtkMenuToolButton">Gtk.MenuToolButton</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.6
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_tool_button_set_menu">
+	<span><code>Gtk.MenuToolButton.set_menu</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.MenuToolButton.set_menu (self, menu):
+    #python wrapper for 'gtk_menu_tool_button_set_menu'</pre>
+
+<p>Sets the <a href="gtkmenu-h.html#GtkMenu">Gtk.Menu</a> that is popped up when the user clicks on the arrow.
+If <em>menu</em> is NULL, the arrow button becomes insensitive.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>button</code></em></i>
+					(
+						<a title="Gtk.MenuToolButton" href="gtkmenutoolbutton-h.html#GtkMenuToolButton">Gtk.MenuToolButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkmenutoolbutton-h.html#GtkMenuToolButton">Gtk.MenuToolButton</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menu</code></em></i>
+					(
+						<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>the <a href="gtkmenu-h.html#GtkMenu">Gtk.Menu</a> associated with <a href="gtkmenutoolbutton-h.html#GtkMenuToolButton">Gtk.MenuToolButton</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.6
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.6;" id="gtk_menu_tool_button_get_menu">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_tool_button_get_menu">
+	<span><code>gtk_menu_tool_button_get_menu</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> *
+gtk_menu_tool_button_get_menu (<a title="GtkMenuToolButton" href="gtkmenutoolbutton-h.html#GtkMenuToolButton">GtkMenuToolButton</a> * button)</pre>
+
+<p>Gets the <a href="gtkmenu-h.html#GtkMenu">GtkMenu</a> associated with <a href="gtkmenutoolbutton-h.html#GtkMenuToolButton">GtkMenuToolButton</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>button</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkmenutoolbutton-h.html#GtkMenuToolButton">GtkMenuToolButton</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					
+										
+<span class="annotation">[<abbr title="Don't free data after the code is done"><span class="acronym">transfer: none</span></abbr>]</span>
+
+										)
+								–
+			</div>
+							<p>the <a href="gtkmenu-h.html#GtkMenu">GtkMenu</a> associated
+with <a href="gtkmenutoolbutton-h.html#GtkMenuToolButton">GtkMenuToolButton</a></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.6
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_tool_button_get_menu">
+	<span><code>Gtk.prototype.get_menu</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_menu(): {
+    // javascript wrapper for 'gtk_menu_tool_button_get_menu'
+}</pre>
+
+<p>Gets the <a href="gtkmenu-h.html#GtkMenu">Gtk.Menu</a> associated with <a href="gtkmenutoolbutton-h.html#GtkMenuToolButton">Gtk.MenuToolButton</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>button</code></em></i>
+					(
+						<a title="Gtk.MenuToolButton" href="gtkmenutoolbutton-h.html#GtkMenuToolButton">Gtk.MenuToolButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkmenutoolbutton-h.html#GtkMenuToolButton">Gtk.MenuToolButton</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>the <a href="gtkmenu-h.html#GtkMenu">Gtk.Menu</a> associated
+with <a href="gtkmenutoolbutton-h.html#GtkMenuToolButton">Gtk.MenuToolButton</a></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.6
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_tool_button_get_menu">
+	<span><code>Gtk.MenuToolButton.get_menu</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.MenuToolButton.get_menu (self):
+    #python wrapper for 'gtk_menu_tool_button_get_menu'</pre>
+
+<p>Gets the <a href="gtkmenu-h.html#GtkMenu">Gtk.Menu</a> associated with <a href="gtkmenutoolbutton-h.html#GtkMenuToolButton">Gtk.MenuToolButton</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>button</code></em></i>
+					(
+						<a title="Gtk.MenuToolButton" href="gtkmenutoolbutton-h.html#GtkMenuToolButton">Gtk.MenuToolButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkmenutoolbutton-h.html#GtkMenuToolButton">Gtk.MenuToolButton</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>the <a href="gtkmenu-h.html#GtkMenu">Gtk.Menu</a> associated
+with <a href="gtkmenutoolbutton-h.html#GtkMenuToolButton">Gtk.MenuToolButton</a></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.6
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.12;" id="gtk_menu_tool_button_set_arrow_tooltip_text">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_tool_button_set_arrow_tooltip_text">
+	<span><code>gtk_menu_tool_button_set_arrow_tooltip_text</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_menu_tool_button_set_arrow_tooltip_text (<a title="GtkMenuToolButton" href="gtkmenutoolbutton-h.html#GtkMenuToolButton">GtkMenuToolButton</a> * button,
+                                             const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * text)</pre>
+
+<p>Sets the tooltip text to be used as tooltip for the arrow button which
+pops up the menu.  See <a href="gtktoolitem-h.html#gtk_tool_item_set_tooltip_text">gtk_tool_item_set_tooltip_text</a> for setting a tooltip
+on the whole <a href="gtkmenutoolbutton-h.html#GtkMenuToolButton">GtkMenuToolButton</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>button</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkmenutoolbutton-h.html#GtkMenuToolButton">GtkMenuToolButton</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>text</code></em></i>
+				–
+	</div>
+			<p>text to be used as tooltip text for button’s arrow button</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.12
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_tool_button_set_arrow_tooltip_text">
+	<span><code>Gtk.prototype.set_arrow_tooltip_text</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_arrow_tooltip_text(text: <a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>): {
+    // javascript wrapper for 'gtk_menu_tool_button_set_arrow_tooltip_text'
+}</pre>
+
+<p>Sets the tooltip text to be used as tooltip for the arrow button which
+pops up the menu.  See <a href="gtktoolitem-h.html#gtk_tool_item_set_tooltip_text">Gtk.prototype.set_tooltip_text</a> for setting a tooltip
+on the whole <a href="gtkmenutoolbutton-h.html#GtkMenuToolButton">Gtk.MenuToolButton</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>button</code></em></i>
+					(
+						<a title="Gtk.MenuToolButton" href="gtkmenutoolbutton-h.html#GtkMenuToolButton">Gtk.MenuToolButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkmenutoolbutton-h.html#GtkMenuToolButton">Gtk.MenuToolButton</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>text</code></em></i>
+					(
+						<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
+						)
+				–
+	</div>
+			<p>text to be used as tooltip text for button’s arrow button</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.12
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_tool_button_set_arrow_tooltip_text">
+	<span><code>Gtk.MenuToolButton.set_arrow_tooltip_text</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.MenuToolButton.set_arrow_tooltip_text (self, text):
+    #python wrapper for 'gtk_menu_tool_button_set_arrow_tooltip_text'</pre>
+
+<p>Sets the tooltip text to be used as tooltip for the arrow button which
+pops up the menu.  See <a href="gtktoolitem-h.html#gtk_tool_item_set_tooltip_text">Gtk.ToolItem.set_tooltip_text</a> for setting a tooltip
+on the whole <a href="gtkmenutoolbutton-h.html#GtkMenuToolButton">Gtk.MenuToolButton</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>button</code></em></i>
+					(
+						<a title="Gtk.MenuToolButton" href="gtkmenutoolbutton-h.html#GtkMenuToolButton">Gtk.MenuToolButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkmenutoolbutton-h.html#GtkMenuToolButton">Gtk.MenuToolButton</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>text</code></em></i>
+					(
+						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
+						)
+				–
+	</div>
+			<p>text to be used as tooltip text for button’s arrow button</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.12
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.12;" id="gtk_menu_tool_button_set_arrow_tooltip_markup">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_tool_button_set_arrow_tooltip_markup">
+	<span><code>gtk_menu_tool_button_set_arrow_tooltip_markup</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_menu_tool_button_set_arrow_tooltip_markup (<a title="GtkMenuToolButton" href="gtkmenutoolbutton-h.html#GtkMenuToolButton">GtkMenuToolButton</a> * button,
+                                               const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * markup)</pre>
+
+<p>Sets the tooltip markup text to be used as tooltip for the arrow button
+which pops up the menu.  See <a href="gtktoolitem-h.html#gtk_tool_item_set_tooltip_text">gtk_tool_item_set_tooltip_text</a> for setting
+a tooltip on the whole <a href="gtkmenutoolbutton-h.html#GtkMenuToolButton">GtkMenuToolButton</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>button</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkmenutoolbutton-h.html#GtkMenuToolButton">GtkMenuToolButton</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>markup</code></em></i>
+				–
+	</div>
+			<p>markup text to be used as tooltip text for button’s arrow button</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.12
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_tool_button_set_arrow_tooltip_markup">
+	<span><code>Gtk.prototype.set_arrow_tooltip_markup</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_arrow_tooltip_markup(markup: <a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>): {
+    // javascript wrapper for 'gtk_menu_tool_button_set_arrow_tooltip_markup'
+}</pre>
+
+<p>Sets the tooltip markup text to be used as tooltip for the arrow button
+which pops up the menu.  See <a href="gtktoolitem-h.html#gtk_tool_item_set_tooltip_text">Gtk.prototype.set_tooltip_text</a> for setting
+a tooltip on the whole <a href="gtkmenutoolbutton-h.html#GtkMenuToolButton">Gtk.MenuToolButton</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>button</code></em></i>
+					(
+						<a title="Gtk.MenuToolButton" href="gtkmenutoolbutton-h.html#GtkMenuToolButton">Gtk.MenuToolButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkmenutoolbutton-h.html#GtkMenuToolButton">Gtk.MenuToolButton</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>markup</code></em></i>
+					(
+						<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
+						)
+				–
+	</div>
+			<p>markup text to be used as tooltip text for button’s arrow button</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.12
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_menu_tool_button_set_arrow_tooltip_markup">
+	<span><code>Gtk.MenuToolButton.set_arrow_tooltip_markup</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.MenuToolButton.set_arrow_tooltip_markup (self, markup):
+    #python wrapper for 'gtk_menu_tool_button_set_arrow_tooltip_markup'</pre>
+
+<p>Sets the tooltip markup text to be used as tooltip for the arrow button
+which pops up the menu.  See <a href="gtktoolitem-h.html#gtk_tool_item_set_tooltip_text">Gtk.ToolItem.set_tooltip_text</a> for setting
+a tooltip on the whole <a href="gtkmenutoolbutton-h.html#GtkMenuToolButton">Gtk.MenuToolButton</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>button</code></em></i>
+					(
+						<a title="Gtk.MenuToolButton" href="gtkmenutoolbutton-h.html#GtkMenuToolButton">Gtk.MenuToolButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkmenutoolbutton-h.html#GtkMenuToolButton">Gtk.MenuToolButton</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>markup</code></em></i>
+					(
+						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
+						)
+				–
+	</div>
+			<p>markup text to be used as tooltip text for button’s arrow button</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.12
+		</p>
+
+
+        </div>
+
+</div>
+
+
+
+
+
+
+		
+	</div>
+	<div id="search_results">
+		<p>The results of the search are</p>
+	</div>
+	<hr>
+	<div id="footer">
+		    
+
+	</div>
+</div>
+
+<div id="toc-column">
+	
+		<div class="edit-button">
+		
+
+	</div>
+		<div id="toc-wrapper">
+		<nav id="toc"></nav>
+	</div>
+</div>
+</div>
+</main>
+
+</body>
+
+<script src="assets/js/navbar_offset_scroller.js"></script>
+</html>

@@ -1,1 +1,1 @@
-urls_downloaded_cb({"token": "gtk.fixed.move", "urls": [{"url": "gtkfixed.html#gtk_fixed_move", "context": {"gi-language": ["python"]}}]});
+urls_downloaded_cb({"token": "gtk.fixed.move", "urls": [{"url": "gtkfixed-h.html#gtk_fixed_move", "context": {"gi-language": ["python"]}}]});

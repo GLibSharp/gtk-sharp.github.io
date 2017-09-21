@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<base href=".">
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>GtkPrintUnixDialog</title>
+
+<link rel="stylesheet" href="assets/css/custom_bootstrap.css" type="text/css">
+<link rel="stylesheet" href="assets/css/bootstrap-toc.min.css" type="text/css">
+<link rel="stylesheet" href="assets/css/frontend.css" type="text/css">
+<link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
+
+<link rel="stylesheet" href="assets/css/prism.css" type="text/css">
+
+<script src="assets/js/mustache.min.js"></script>
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/scrollspy.js"></script>
+<script src="assets/js/bootstrap.js"></script>
+<script src="assets/js/typeahead.jquery.min.js"></script>
+<script src="assets/js/search.js"></script>
+<script src="assets/js/isotope.pkgd.min.js"></script>
+<script src="assets/js/compare-versions.js"></script>
+<script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="assets/js/bootstrap-toc.min.js"></script>
+<script src="assets/js/jquery.touchSwipe.min.js"></script>
+<script src="assets/js/anchor.min.js"></script>
+<script src="assets/js/tag_filtering.js"></script>
+<script src="assets/js/language_switching.js"></script>
+
+<script src="assets/js/lines_around_headings.js"></script>
+
+<script src="assets/js/prism-core.js"></script>
+<script src="assets/js/prism-autoloader.js"></script>
+<script src="assets/js/prism_autoloader_path_override.js"></script>
+<script src="assets/js/trie.js"></script>
+
+
+</head>
+
+<body class="no-script
+" data-spy="scroll" data-target="#toc" data-offset="70">
+
+<script>
+$('body').removeClass('no-script');
+</script>
+
+<nav class="navbar navbar-fixed-top navbar-default" id="topnav">
+	<div class="container-fluid">
+		<div class="navbar-right">
+			<a id="toc-toggle">
+				<span class="glyphicon glyphicon-menu-right"></span>
+				<span class="glyphicon glyphicon-menu-left"></span>
+			</a>
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-wrapper" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<form action="" class="navbar-form pull-right" id="navbar-search-form">
+                               <div class="form-group has-feedback">
+                                       <input type="text" class="form-control input-sm" name="search" id="sidenav-lookup-field" placeholder="search" disabled>
+				       <span class="glyphicon glyphicon-search form-control-feedback" id="search-mgn-glass"></span>
+                               </div>
+                        </form>
+		</div>
+		<div class="navbar-header">
+			<a id="sidenav-toggle">
+				<span class="glyphicon glyphicon-menu-right"></span>
+				<span class="glyphicon glyphicon-menu-left"></span>
+			</a>
+			<a id="home-link" href="index.html" class="hotdoc-navbar-brand">
+				<img src="assets/images/home.svg" alt="Home">
+			</a>
+		</div>
+		<div class="navbar-collapse collapse" id="navbar-wrapper">
+			<ul class="nav navbar-nav" id="menu">
+							</ul>
+			<div class="hidden-xs hidden-sm navbar-text navbar-center">
+							</div>
+		</div>
+	</div>
+</nav>
+
+<main>
+<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="gtkprintunixdialog-h.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['c', 'javascript', 'python']" data-hotdoc-meta-gi-language="c">
+<script src="assets/js/utils.js"></script>
+
+<div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
+	<script src="assets/js/navigation.js"></script>
+	<script src="assets/js/sitemap.js"></script>
+</div>
+
+<div id="body">
+	<div id="main">
+				    <div id="page-description" data-hotdoc-source="gtkprintunixdialog.h.markdown" data-hotdoc-role="main">
+        <h1 id="gtkprintunixdialog-page">GtkPrintUnixDialog</h1>
+<p>GtkPrintUnixDialog implements a print dialog for platforms
+which don’t provide a native print dialog, like Unix. It can
+be used very much like any other GTK+ dialog, at the cost of
+the portability offered by the
+[high-level printing API][gtk3-High-level-Printing-API]</p>
+<p>In order to print something with <a href="https://developer.gnome.org/gtk3/GtkPrintUnixDialog.html#GtkPrintUnixDialog-struct">GtkPrintUnixDialog</a>, you need
+to use <a href="https://developer.gnome.org/gtk3/GtkPrintUnixDialog.html#gtk-print-unix-dialog-get-selected-printer">gtk_print_unix_dialog_get_selected_printer</a> to obtain
+a <a href="https://developer.gnome.org/gtk3/GtkPrinter.html#GtkPrinter-struct">GtkPrinter</a> object and use it to construct a <a href="https://developer.gnome.org/gtk3/GtkPrintJob.html#GtkPrintJob-struct">GtkPrintJob</a> using
+<a href="https://developer.gnome.org/gtk3/GtkPrintJob.html#gtk-print-job-new">gtk_print_job_new</a>.</p>
+<p><a href="https://developer.gnome.org/gtk3/GtkPrintUnixDialog.html#GtkPrintUnixDialog-struct">GtkPrintUnixDialog</a> uses the following response values:</p>
+<ul>
+<li>
+<a href="gtkdialog-h.html#GTK_RESPONSE_OK" data-gi-href-javascript="gtkdialog-h.html#GTK_RESPONSE_OK" data-gi-title-javascript="Gtk.ResponseType.OK" data-gi-href-python="gtkdialog-h.html#GTK_RESPONSE_OK" data-gi-title-python="Gtk.ResponseType.OK">GTK_RESPONSE_OK</a>: for the “Print” button</li>
+<li>
+<a href="gtkdialog-h.html#GTK_RESPONSE_APPLY" data-gi-href-javascript="gtkdialog-h.html#GTK_RESPONSE_APPLY" data-gi-title-javascript="Gtk.ResponseType.APPLY" data-gi-href-python="gtkdialog-h.html#GTK_RESPONSE_APPLY" data-gi-title-python="Gtk.ResponseType.APPLY">GTK_RESPONSE_APPLY</a>: for the “Preview” button</li>
+<li>
+<a href="gtkdialog-h.html#GTK_RESPONSE_CANCEL" data-gi-href-javascript="gtkdialog-h.html#GTK_RESPONSE_CANCEL" data-gi-title-javascript="Gtk.ResponseType.CANCEL" data-gi-href-python="gtkdialog-h.html#GTK_RESPONSE_CANCEL" data-gi-title-python="Gtk.ResponseType.CANCEL">GTK_RESPONSE_CANCEL</a>: for the “Cancel” button</li>
+</ul>
+<p>Printing support was added in GTK+ 2.10.</p>
+<h1 id="gtkprintunixdialog-as-gtkbuildable">GtkPrintUnixDialog as GtkBuildable</h1>
+<p>The GtkPrintUnixDialog implementation of the GtkBuildable interface exposes its
+<em>notebook</em> internal children with the name “notebook”.</p>
+<p>An example of a <a href="https://developer.gnome.org/gtk3/GtkPrintUnixDialog.html#GtkPrintUnixDialog-struct">GtkPrintUnixDialog</a> UI definition fragment:</p>
+<pre><code class="language-["> &lt;object class="GtkPrintUnixDialog" id="dialog1"&gt;
+   &lt;child internal-child="notebook"&gt;
+     &lt;object class="GtkNotebook" id="notebook"&gt;
+       &lt;child&gt;
+         &lt;object class="GtkLabel" id="tabcontent"&gt;
+         &lt;property name="label"&gt;Content on notebook tab&lt;/property&gt;
+         &lt;/object&gt;
+       &lt;/child&gt;
+       &lt;child type="tab"&gt;
+         &lt;object class="GtkLabel" id="tablabel"&gt;
+           &lt;property name="label"&gt;Tab label&lt;/property&gt;
+         &lt;/object&gt;
+         &lt;packing&gt;
+           &lt;property name="tab_expand"&gt;False&lt;/property&gt;
+           &lt;property name="tab_fill"&gt;False&lt;/property&gt;
+         &lt;/packing&gt;
+       &lt;/child&gt;
+     &lt;/object&gt;
+   &lt;/child&gt;
+ &lt;/object&gt;
+</code></pre>
+<h1 id="css-nodes">CSS nodes</h1>
+<p>GtkPrintUnixDialog has a single CSS node with name printdialog.</p>
+
+    </div>
+        
+
+
+
+
+		
+	</div>
+	<div id="search_results">
+		<p>The results of the search are</p>
+	</div>
+	<hr>
+	<div id="footer">
+		    
+
+	</div>
+</div>
+
+<div id="toc-column">
+	
+		<div class="edit-button">
+		
+
+	</div>
+		<div id="toc-wrapper">
+		<nav id="toc"></nav>
+	</div>
+</div>
+</div>
+</main>
+
+</body>
+
+<script src="assets/js/navbar_offset_scroller.js"></script>
+</html>

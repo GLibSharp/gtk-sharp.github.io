@@ -1,0 +1,6593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<base href=".">
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>GtkScrolledWindow</title>
+
+<link rel="stylesheet" href="assets/css/custom_bootstrap.css" type="text/css">
+<link rel="stylesheet" href="assets/css/bootstrap-toc.min.css" type="text/css">
+<link rel="stylesheet" href="assets/css/frontend.css" type="text/css">
+<link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
+
+<link rel="stylesheet" href="assets/css/prism.css" type="text/css">
+
+<script src="assets/js/mustache.min.js"></script>
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/scrollspy.js"></script>
+<script src="assets/js/bootstrap.js"></script>
+<script src="assets/js/typeahead.jquery.min.js"></script>
+<script src="assets/js/search.js"></script>
+<script src="assets/js/isotope.pkgd.min.js"></script>
+<script src="assets/js/compare-versions.js"></script>
+<script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="assets/js/bootstrap-toc.min.js"></script>
+<script src="assets/js/jquery.touchSwipe.min.js"></script>
+<script src="assets/js/anchor.min.js"></script>
+<script src="assets/js/tag_filtering.js"></script>
+<script src="assets/js/language_switching.js"></script>
+
+<script src="assets/js/lines_around_headings.js"></script>
+
+<script src="assets/js/prism-core.js"></script>
+<script src="assets/js/prism-autoloader.js"></script>
+<script src="assets/js/prism_autoloader_path_override.js"></script>
+<script src="assets/js/trie.js"></script>
+
+
+</head>
+
+<body class="no-script
+" data-spy="scroll" data-target="#toc" data-offset="70">
+
+<script>
+$('body').removeClass('no-script');
+</script>
+
+<nav class="navbar navbar-fixed-top navbar-default" id="topnav">
+	<div class="container-fluid">
+		<div class="navbar-right">
+			<a id="toc-toggle">
+				<span class="glyphicon glyphicon-menu-right"></span>
+				<span class="glyphicon glyphicon-menu-left"></span>
+			</a>
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-wrapper" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<form action="" class="navbar-form pull-right" id="navbar-search-form">
+                               <div class="form-group has-feedback">
+                                       <input type="text" class="form-control input-sm" name="search" id="sidenav-lookup-field" placeholder="search" disabled>
+				       <span class="glyphicon glyphicon-search form-control-feedback" id="search-mgn-glass"></span>
+                               </div>
+                        </form>
+		</div>
+		<div class="navbar-header">
+			<a id="sidenav-toggle">
+				<span class="glyphicon glyphicon-menu-right"></span>
+				<span class="glyphicon glyphicon-menu-left"></span>
+			</a>
+			<a id="home-link" href="index.html" class="hotdoc-navbar-brand">
+				<img src="assets/images/home.svg" alt="Home">
+			</a>
+		</div>
+		<div class="navbar-collapse collapse" id="navbar-wrapper">
+			<ul class="nav navbar-nav" id="menu">
+							</ul>
+			<div class="hidden-xs hidden-sm navbar-text navbar-center">
+							</div>
+		</div>
+	</div>
+</nav>
+
+<main>
+<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="gtkscrolledwindow-h.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['c', 'javascript', 'python']" data-hotdoc-meta-gi-language="c">
+<script src="assets/js/utils.js"></script>
+
+<div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
+	<script src="assets/js/navigation.js"></script>
+	<script src="assets/js/sitemap.js"></script>
+</div>
+
+<div id="body">
+	<div id="main">
+				    <div id="page-description" data-hotdoc-source="gtkscrolledwindow.h.markdown" data-hotdoc-role="main">
+        <h1 id="gtkscrolledwindow-page">GtkScrolledWindow</h1>
+<p>GtkScrolledWindow is a container that accepts a single child widget, makes
+that child scrollable using either internally added scrollbars or externally
+associated adjustments, and optionally draws a frame around the child.</p>
+<p>Widgets with native scrolling support, i.e. those whose classes implement the
+<a href="gtkscrollable-h.html#GtkScrollable" data-gi-href-javascript="gtkscrollable-h.html#GtkScrollable" data-gi-title-javascript="Gtk.Scrollable" data-gi-href-python="gtkscrollable-h.html#GtkScrollable" data-gi-title-python="Gtk.Scrollable">GtkScrollable</a> interface, are added directly. For other types of widget, the
+class <a href="gtkviewport-h.html#GtkViewport" data-gi-href-javascript="gtkviewport-h.html#GtkViewport" data-gi-title-javascript="Gtk.Viewport" data-gi-href-python="gtkviewport-h.html#GtkViewport" data-gi-title-python="Gtk.Viewport">GtkViewport</a> acts as an adaptor, giving scrollability to other widgets.
+GtkScrolledWindow’s implementation of <a href="gtkcontainer-h.html#gtk_container_add" data-gi-href-javascript="gtkcontainer-h.html#gtk_container_add" data-gi-title-javascript="Gtk.prototype.add" data-gi-href-python="gtkcontainer-h.html#gtk_container_add" data-gi-title-python="Gtk.Container.add">gtk_container_add</a> intelligently
+accounts for whether or not the added child is a <a href="gtkscrollable-h.html#GtkScrollable" data-gi-href-javascript="gtkscrollable-h.html#GtkScrollable" data-gi-title-javascript="Gtk.Scrollable" data-gi-href-python="gtkscrollable-h.html#GtkScrollable" data-gi-title-python="Gtk.Scrollable">GtkScrollable</a>. If it isn’t,
+<a href="gtkscrolledwindow-h.html#GtkScrolledWindow" data-gi-href-javascript="gtkscrolledwindow-h.html#GtkScrolledWindow" data-gi-title-javascript="Gtk.ScrolledWindow" data-gi-href-python="gtkscrolledwindow-h.html#GtkScrolledWindow" data-gi-title-python="Gtk.ScrolledWindow">GtkScrolledWindow</a> wraps the child in a <a href="gtkviewport-h.html#GtkViewport" data-gi-href-javascript="gtkviewport-h.html#GtkViewport" data-gi-title-javascript="Gtk.Viewport" data-gi-href-python="gtkviewport-h.html#GtkViewport" data-gi-title-python="Gtk.Viewport">GtkViewport</a> and adds that for you.
+Therefore, you can just add any child widget and not worry about the details.</p>
+<p>If <a href="gtkcontainer-h.html#gtk_container_add" data-gi-href-javascript="gtkcontainer-h.html#gtk_container_add" data-gi-title-javascript="Gtk.prototype.add" data-gi-href-python="gtkcontainer-h.html#gtk_container_add" data-gi-title-python="Gtk.Container.add">gtk_container_add</a> has added a <a href="gtkviewport-h.html#GtkViewport" data-gi-href-javascript="gtkviewport-h.html#GtkViewport" data-gi-title-javascript="Gtk.Viewport" data-gi-href-python="gtkviewport-h.html#GtkViewport" data-gi-title-python="Gtk.Viewport">GtkViewport</a> for you, you can remove
+both your added child widget from the <a href="gtkviewport-h.html#GtkViewport" data-gi-href-javascript="gtkviewport-h.html#GtkViewport" data-gi-title-javascript="Gtk.Viewport" data-gi-href-python="gtkviewport-h.html#GtkViewport" data-gi-title-python="Gtk.Viewport">GtkViewport</a>, and the <a href="gtkviewport-h.html#GtkViewport" data-gi-href-javascript="gtkviewport-h.html#GtkViewport" data-gi-title-javascript="Gtk.Viewport" data-gi-href-python="gtkviewport-h.html#GtkViewport" data-gi-title-python="Gtk.Viewport">GtkViewport</a>
+from the GtkScrolledWindow, with either of these calls:</p>
+<pre><code class="language-[&lt;!--"> gtk_container_remove (GTK_CONTAINER (scrolled_window),
+                       child_widget);
+ // or
+ gtk_container_remove (GTK_CONTAINER (scrolled_window),
+                       gtk_bin_get_child (GTK_BIN (scrolled_window)));
+</code></pre>
+<p>Unless GtkScrolledWindow:policy is GTK_POLICY_NEVER or GTK_POLICY_EXTERNAL,
+GtkScrolledWindow adds internal <a href="gtkscrollbar-h.html#GtkScrollbar" data-gi-href-javascript="gtkscrollbar-h.html#GtkScrollbar" data-gi-title-javascript="Gtk.Scrollbar" data-gi-href-python="gtkscrollbar-h.html#GtkScrollbar" data-gi-title-python="Gtk.Scrollbar">GtkScrollbar</a> widgets around its child. The
+scroll position of the child, and if applicable the scrollbars, is controlled
+by the <a href="https://developer.gnome.org/gtk3/GtkScrolledWindow.html#GtkScrolledWindow--hadjustment">GtkScrolledWindow:hadjustment</a> and <a href="https://developer.gnome.org/gtk3/GtkScrolledWindow.html#GtkScrolledWindow--vadjustment">GtkScrolledWindow:vadjustment</a>
+that are associated with the GtkScrolledWindow. See the docs on <a href="gtkscrollbar-h.html#GtkScrollbar" data-gi-href-javascript="gtkscrollbar-h.html#GtkScrollbar" data-gi-title-javascript="Gtk.Scrollbar" data-gi-href-python="gtkscrollbar-h.html#GtkScrollbar" data-gi-title-python="Gtk.Scrollbar">GtkScrollbar</a>
+for the details, but note that the “step_increment” and “page_increment”
+fields are only effective if the policy causes scrollbars to be present.</p>
+<p>If a GtkScrolledWindow doesn’t behave quite as you would like, or
+doesn’t have exactly the right layout, it’s very possible to set up
+your own scrolling with <a href="gtkscrollbar-h.html#GtkScrollbar" data-gi-href-javascript="gtkscrollbar-h.html#GtkScrollbar" data-gi-title-javascript="Gtk.Scrollbar" data-gi-href-python="gtkscrollbar-h.html#GtkScrollbar" data-gi-title-python="Gtk.Scrollbar">GtkScrollbar</a> and for example a <a href="gtkgrid-h.html#GtkGrid" data-gi-href-javascript="gtkgrid-h.html#GtkGrid" data-gi-title-javascript="Gtk.Grid" data-gi-href-python="gtkgrid-h.html#GtkGrid" data-gi-title-python="Gtk.Grid">GtkGrid</a>.</p>
+<h1 id="touch-support">Touch support</h1>
+<p>GtkScrolledWindow has built-in support for touch devices. When a
+touchscreen is used, swiping will move the scrolled window, and will
+expose 'kinetic' behavior. This can be turned off with the
+<a href="https://developer.gnome.org/gtk3/GtkScrolledWindow.html#GtkScrolledWindow--kinetic-scrolling">GtkScrolledWindow:kinetic-scrolling</a> property if it is undesired.</p>
+<p>GtkScrolledWindow also displays visual 'overshoot' indication when
+the content is pulled beyond the end, and this situation can be
+captured with the <a href="https://developer.gnome.org/gtk3/GtkScrolledWindow.html#GtkScrolledWindow-edge-overshot">GtkScrolledWindow::edge-overshot</a> signal.</p>
+<p>If no mouse device is present, the scrollbars will overlayed as
+narrow, auto-hiding indicators over the content. If traditional
+scrollbars are desired although no mouse is present, this behaviour
+can be turned off with the <a href="https://developer.gnome.org/gtk3/GtkScrolledWindow.html#GtkScrolledWindow--overlay-scrolling">GtkScrolledWindow:overlay-scrolling</a>
+property.</p>
+<h1 id="css-nodes">CSS nodes</h1>
+<p>GtkScrolledWindow has a main CSS node with name scrolledwindow.</p>
+<p>It uses subnodes with names overshoot and undershoot to
+draw the overflow and underflow indications. These nodes get
+the .left, .right, .top or .bottom style class added depending
+on where the indication is drawn.</p>
+<p>GtkScrolledWindow also sets the positional style classes (.left,
+.right, .top, .bottom) and style classes related to overlay
+scrolling (.overlay-indicator, .dragging, .hovering) on its scrollbars.</p>
+<p>If both scrollbars are visible, the area where they meet is drawn
+with a subnode named junction.</p>
+
+    </div>
+        
+        
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="GtkScrolledWindow">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h2 data-hotdoc-id="GtkScrolledWindow">
+	<span><code>GtkScrolledWindow</code></span>
+</h2>
+
+
+<div class="hierarchy_container">
+	<div class="hierarchy_details">
+<pre>
+<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object">GObject</a>
+    <span class="lineart">╰──</span><a title="GInitiallyUnowned" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-javascript="GObject.InitiallyUnowned" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-python="GObject.InitiallyUnowned">GInitiallyUnowned</a>
+        <span class="lineart">╰──</span><a title="GtkWidget" href="gtkwidget-h.html#GtkWidget" data-gi-href-javascript="gtkwidget-h.html#GtkWidget" data-gi-title-javascript="Gtk.Widget" data-gi-href-python="gtkwidget-h.html#GtkWidget" data-gi-title-python="Gtk.Widget">GtkWidget</a>
+            <span class="lineart">╰──</span><a title="GtkContainer" href="gtkcontainer-h.html#GtkContainer" data-gi-href-javascript="gtkcontainer-h.html#GtkContainer" data-gi-title-javascript="Gtk.Container" data-gi-href-python="gtkcontainer-h.html#GtkContainer" data-gi-title-python="Gtk.Container">GtkContainer</a>
+                <span class="lineart">╰──</span><a title="GtkBin" href="gtkbin-h.html#GtkBin" data-gi-href-javascript="gtkbin-h.html#GtkBin" data-gi-title-javascript="Gtk.Bin" data-gi-href-python="gtkbin-h.html#GtkBin" data-gi-title-python="Gtk.Bin">GtkBin</a>
+                    <span class="lineart">╰──</span>GtkScrolledWindow
+                        <span class="lineart">╰──</span><a title="GtkPlacesSidebar" href="gtkplacessidebar-h.html#GtkPlacesSidebar" data-gi-href-javascript="gtkplacessidebar-h.html#GtkPlacesSidebar" data-gi-title-javascript="Gtk.PlacesSidebar" data-gi-href-python="gtkplacessidebar-h.html#GtkPlacesSidebar" data-gi-title-python="Gtk.PlacesSidebar">GtkPlacesSidebar</a>
+</pre>
+
+</div>
+
+</div>
+
+<div class="interfaces_container">
+	
+<p><b>Implemented interfaces:</b>
+    AtkImplementorIface, <a title="GtkBuildable" href="gtkbuildable-h.html#GtkBuildable" data-gi-href-javascript="gtkbuildable-h.html#GtkBuildable" data-gi-title-javascript="Gtk.Buildable" data-gi-href-python="gtkbuildable-h.html#GtkBuildable" data-gi-title-python="Gtk.Buildable">GtkBuildable</a>
+</p>
+
+</div>
+
+
+
+
+	<div class="members-container">
+		<h3>Members</h3>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkScrolledWindow.container">
+	<div>
+		<i><em><code>container</code></em></i>
+		(<a title="GtkBin" href="gtkbin-h.html#GtkBin" data-gi-href-javascript="gtkbin-h.html#GtkBin" data-gi-title-javascript="Gtk.Bin" data-gi-href-python="gtkbin-h.html#GtkBin" data-gi-title-python="Gtk.Bin">GtkBin</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GtkScrolledWindow.priv">
+	<div>
+		<i><em><code>priv</code></em></i>
+		(GtkScrolledWindowPrivate*)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+<h3>Class structure</h3>
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="GtkScrolledWindowClass">
+	<span><code>GtkScrolledWindowClass</code></span>
+</h4>
+
+
+
+
+
+	<div class="members-container">
+		<h5>Fields</h5>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkScrolledWindowClass.parent_class">
+	<div>
+		<i><em><code>parent_class</code></em></i>
+		(<a title="GtkBinClass" href="GtkBinClass">GtkBinClass</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h3>
+	Gtk.ScrolledWindowClass
+</h3>
+
+
+
+
+
+	<div class="members-container">
+		<h5>Attributes</h5>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkScrolledWindowClass.parent_class">
+	<div>
+		<i><em><code>ScrolledWindowClass.parent_class</code></em></i>
+		(<a title="Gtk.BinClass" href="GtkBinClass">Gtk.BinClass</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3>
+	Gtk.ScrolledWindowClass
+</h3>
+
+
+
+
+
+	<div class="members-container">
+		<h5>Attributes</h5>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkScrolledWindowClass.parent_class">
+	<div>
+		<i><em><code>ScrolledWindowClass.parent_class</code></em></i>
+		(<a title="Gtk.BinClass" href="GtkBinClass">Gtk.BinClass</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h2 data-hotdoc-id="GtkScrolledWindow">
+	<span><code>GtkScrolledWindow</code></span>
+</h2>
+
+
+<div class="hierarchy_container">
+	<div class="hierarchy_details">
+<pre>
+<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object">GObject</a>
+    <span class="lineart">╰──</span><a title="GInitiallyUnowned" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-javascript="GObject.InitiallyUnowned" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-python="GObject.InitiallyUnowned">GInitiallyUnowned</a>
+        <span class="lineart">╰──</span><a title="GtkWidget" href="gtkwidget-h.html#GtkWidget" data-gi-href-javascript="gtkwidget-h.html#GtkWidget" data-gi-title-javascript="Gtk.Widget" data-gi-href-python="gtkwidget-h.html#GtkWidget" data-gi-title-python="Gtk.Widget">GtkWidget</a>
+            <span class="lineart">╰──</span><a title="GtkContainer" href="gtkcontainer-h.html#GtkContainer" data-gi-href-javascript="gtkcontainer-h.html#GtkContainer" data-gi-title-javascript="Gtk.Container" data-gi-href-python="gtkcontainer-h.html#GtkContainer" data-gi-title-python="Gtk.Container">GtkContainer</a>
+                <span class="lineart">╰──</span><a title="GtkBin" href="gtkbin-h.html#GtkBin" data-gi-href-javascript="gtkbin-h.html#GtkBin" data-gi-title-javascript="Gtk.Bin" data-gi-href-python="gtkbin-h.html#GtkBin" data-gi-title-python="Gtk.Bin">GtkBin</a>
+                    <span class="lineart">╰──</span>GtkScrolledWindow
+                        <span class="lineart">╰──</span><a title="GtkPlacesSidebar" href="gtkplacessidebar-h.html#GtkPlacesSidebar" data-gi-href-javascript="gtkplacessidebar-h.html#GtkPlacesSidebar" data-gi-title-javascript="Gtk.PlacesSidebar" data-gi-href-python="gtkplacessidebar-h.html#GtkPlacesSidebar" data-gi-title-python="Gtk.PlacesSidebar">GtkPlacesSidebar</a>
+</pre>
+
+</div>
+
+</div>
+
+<div class="interfaces_container">
+	
+<p><b>Implemented interfaces:</b>
+    AtkImplementorIface, <a title="GtkBuildable" href="gtkbuildable-h.html#GtkBuildable" data-gi-href-javascript="gtkbuildable-h.html#GtkBuildable" data-gi-title-javascript="Gtk.Buildable" data-gi-href-python="gtkbuildable-h.html#GtkBuildable" data-gi-title-python="Gtk.Buildable">GtkBuildable</a>
+</p>
+
+</div>
+
+
+
+
+	<div class="members-container">
+		<h3>Members</h3>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkScrolledWindow.container">
+	<div>
+		<i><em><code>container</code></em></i>
+		(<a title="GtkBin" href="gtkbin-h.html#GtkBin" data-gi-href-javascript="gtkbin-h.html#GtkBin" data-gi-title-javascript="Gtk.Bin" data-gi-href-python="gtkbin-h.html#GtkBin" data-gi-title-python="Gtk.Bin">GtkBin</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GtkScrolledWindow.priv">
+	<div>
+		<i><em><code>priv</code></em></i>
+		(GtkScrolledWindowPrivate)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h2 data-hotdoc-id="GtkScrolledWindow">
+	<span><code>GtkScrolledWindow</code></span>
+</h2>
+
+
+<div class="hierarchy_container">
+	<div class="hierarchy_details">
+<pre>
+<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object">GObject</a>
+    <span class="lineart">╰──</span><a title="GInitiallyUnowned" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-javascript="GObject.InitiallyUnowned" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-python="GObject.InitiallyUnowned">GInitiallyUnowned</a>
+        <span class="lineart">╰──</span><a title="GtkWidget" href="gtkwidget-h.html#GtkWidget" data-gi-href-javascript="gtkwidget-h.html#GtkWidget" data-gi-title-javascript="Gtk.Widget" data-gi-href-python="gtkwidget-h.html#GtkWidget" data-gi-title-python="Gtk.Widget">GtkWidget</a>
+            <span class="lineart">╰──</span><a title="GtkContainer" href="gtkcontainer-h.html#GtkContainer" data-gi-href-javascript="gtkcontainer-h.html#GtkContainer" data-gi-title-javascript="Gtk.Container" data-gi-href-python="gtkcontainer-h.html#GtkContainer" data-gi-title-python="Gtk.Container">GtkContainer</a>
+                <span class="lineart">╰──</span><a title="GtkBin" href="gtkbin-h.html#GtkBin" data-gi-href-javascript="gtkbin-h.html#GtkBin" data-gi-title-javascript="Gtk.Bin" data-gi-href-python="gtkbin-h.html#GtkBin" data-gi-title-python="Gtk.Bin">GtkBin</a>
+                    <span class="lineart">╰──</span>GtkScrolledWindow
+                        <span class="lineart">╰──</span><a title="GtkPlacesSidebar" href="gtkplacessidebar-h.html#GtkPlacesSidebar" data-gi-href-javascript="gtkplacessidebar-h.html#GtkPlacesSidebar" data-gi-title-javascript="Gtk.PlacesSidebar" data-gi-href-python="gtkplacessidebar-h.html#GtkPlacesSidebar" data-gi-title-python="Gtk.PlacesSidebar">GtkPlacesSidebar</a>
+</pre>
+
+</div>
+
+</div>
+
+<div class="interfaces_container">
+	
+<p><b>Implemented interfaces:</b>
+    AtkImplementorIface, <a title="GtkBuildable" href="gtkbuildable-h.html#GtkBuildable" data-gi-href-javascript="gtkbuildable-h.html#GtkBuildable" data-gi-title-javascript="Gtk.Buildable" data-gi-href-python="gtkbuildable-h.html#GtkBuildable" data-gi-title-python="Gtk.Buildable">GtkBuildable</a>
+</p>
+
+</div>
+
+
+
+
+	<div class="members-container">
+		<h3>Members</h3>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkScrolledWindow.container">
+	<div>
+		<i><em><code>container</code></em></i>
+		(<a title="GtkBin" href="gtkbin-h.html#GtkBin" data-gi-href-javascript="gtkbin-h.html#GtkBin" data-gi-title-javascript="Gtk.Bin" data-gi-href-python="gtkbin-h.html#GtkBin" data-gi-title-python="Gtk.Bin">GtkBin</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GtkScrolledWindow.priv">
+	<div>
+		<i><em><code>priv</code></em></i>
+		(GtkScrolledWindowPrivate)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+
+</div>
+
+
+            <h3 class="symbol_section">Constructors</h3>
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_scrolled_window_new">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_new">
+	<span><code>gtk_scrolled_window_new</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> *
+gtk_scrolled_window_new (<a title="GtkAdjustment" href="gtkadjustment-h.html#GtkAdjustment">GtkAdjustment</a> * hadjustment,
+                         <a title="GtkAdjustment" href="gtkadjustment-h.html#GtkAdjustment">GtkAdjustment</a> * vadjustment)</pre>
+
+<p>Creates a new scrolled window.</p>
+<p>The two arguments are the scrolled window’s adjustments; these will be
+shared with the scrollbars and the child widget to keep the bars in sync
+with the child. Usually you want to pass <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> for the adjustments, which
+will cause the scrolled window to create them for you.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>hadjustment</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>horizontal adjustment</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>vadjustment</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>vertical adjustment</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>a new scrolled window</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_new">
+	<span><code>Gtk.prototype.new</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.new(hadjustment: <a title="Gtk.Adjustment" href="gtkadjustment-h.html#GtkAdjustment">Gtk.Adjustment</a>, vadjustment: <a title="Gtk.Adjustment" href="gtkadjustment-h.html#GtkAdjustment">Gtk.Adjustment</a>): {
+    // javascript wrapper for 'gtk_scrolled_window_new'
+}</pre>
+
+<p>Creates a new scrolled window.</p>
+<p>The two arguments are the scrolled window’s adjustments; these will be
+shared with the scrollbars and the child widget to keep the bars in sync
+with the child. Usually you want to pass <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a> for the adjustments, which
+will cause the scrolled window to create them for you.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>hadjustment</code></em></i>
+					(
+						<a title="Gtk.Adjustment" href="gtkadjustment-h.html#GtkAdjustment">Gtk.Adjustment</a>
+						)
+				–
+	</div>
+			<p>horizontal adjustment</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>vadjustment</code></em></i>
+					(
+						<a title="Gtk.Adjustment" href="gtkadjustment-h.html#GtkAdjustment">Gtk.Adjustment</a>
+						)
+				–
+	</div>
+			<p>vertical adjustment</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>a new scrolled window</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_new">
+	<span><code>Gtk.ScrolledWindow.new</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.ScrolledWindow.new (hadjustment, vadjustment):
+    #python wrapper for 'gtk_scrolled_window_new'</pre>
+
+<p>Creates a new scrolled window.</p>
+<p>The two arguments are the scrolled window’s adjustments; these will be
+shared with the scrollbars and the child widget to keep the bars in sync
+with the child. Usually you want to pass <a href="https://docs.python.org/3/library/constants.html#None">None</a> for the adjustments, which
+will cause the scrolled window to create them for you.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>hadjustment</code></em></i>
+					(
+						<a title="Gtk.Adjustment" href="gtkadjustment-h.html#GtkAdjustment">Gtk.Adjustment</a>
+						)
+				–
+	</div>
+			<p>horizontal adjustment</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>vadjustment</code></em></i>
+					(
+						<a title="Gtk.Adjustment" href="gtkadjustment-h.html#GtkAdjustment">Gtk.Adjustment</a>
+						)
+				–
+	</div>
+			<p>vertical adjustment</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>a new scrolled window</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+
+            <h3 class="symbol_section">Methods</h3>
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_scrolled_window_get_hadjustment">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_get_hadjustment">
+	<span><code>gtk_scrolled_window_get_hadjustment</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkAdjustment" href="gtkadjustment-h.html#GtkAdjustment">GtkAdjustment</a> *
+gtk_scrolled_window_get_hadjustment (<a title="GtkScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">GtkScrolledWindow</a> * scrolled_window)</pre>
+
+<p>Returns the horizontal scrollbar’s adjustment, used to connect the
+horizontal scrollbar to the child widget’s horizontal scroll
+functionality.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">GtkScrolledWindow</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					
+										
+<span class="annotation">[<abbr title="Don't free data after the code is done"><span class="acronym">transfer: none</span></abbr>]</span>
+
+										)
+								–
+			</div>
+							<p>the horizontal <a href="gtkadjustment-h.html#GtkAdjustment">GtkAdjustment</a></p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_get_hadjustment">
+	<span><code>Gtk.prototype.get_hadjustment</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_hadjustment(): {
+    // javascript wrapper for 'gtk_scrolled_window_get_hadjustment'
+}</pre>
+
+<p>Returns the horizontal scrollbar’s adjustment, used to connect the
+horizontal scrollbar to the child widget’s horizontal scroll
+functionality.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+					(
+						<a title="Gtk.ScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Adjustment" href="gtkadjustment-h.html#GtkAdjustment">Gtk.Adjustment</a>
+										)
+								–
+			</div>
+							<p>the horizontal <a href="gtkadjustment-h.html#GtkAdjustment">Gtk.Adjustment</a></p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_get_hadjustment">
+	<span><code>Gtk.ScrolledWindow.get_hadjustment</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.ScrolledWindow.get_hadjustment (self):
+    #python wrapper for 'gtk_scrolled_window_get_hadjustment'</pre>
+
+<p>Returns the horizontal scrollbar’s adjustment, used to connect the
+horizontal scrollbar to the child widget’s horizontal scroll
+functionality.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+					(
+						<a title="Gtk.ScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Adjustment" href="gtkadjustment-h.html#GtkAdjustment">Gtk.Adjustment</a>
+										)
+								–
+			</div>
+							<p>the horizontal <a href="gtkadjustment-h.html#GtkAdjustment">Gtk.Adjustment</a></p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_scrolled_window_set_hadjustment">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_set_hadjustment">
+	<span><code>gtk_scrolled_window_set_hadjustment</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_scrolled_window_set_hadjustment (<a title="GtkScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">GtkScrolledWindow</a> * scrolled_window,
+                                     <a title="GtkAdjustment" href="gtkadjustment-h.html#GtkAdjustment">GtkAdjustment</a> * hadjustment)</pre>
+
+<p>Sets the <a href="gtkadjustment-h.html#GtkAdjustment">GtkAdjustment</a> for the horizontal scrollbar.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">GtkScrolledWindow</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>hadjustment</code></em></i>
+				–
+	</div>
+			<p>horizontal scroll adjustment</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_set_hadjustment">
+	<span><code>Gtk.prototype.set_hadjustment</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_hadjustment(hadjustment: <a title="Gtk.Adjustment" href="gtkadjustment-h.html#GtkAdjustment">Gtk.Adjustment</a>): {
+    // javascript wrapper for 'gtk_scrolled_window_set_hadjustment'
+}</pre>
+
+<p>Sets the <a href="gtkadjustment-h.html#GtkAdjustment">Gtk.Adjustment</a> for the horizontal scrollbar.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+					(
+						<a title="Gtk.ScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>hadjustment</code></em></i>
+					(
+						<a title="Gtk.Adjustment" href="gtkadjustment-h.html#GtkAdjustment">Gtk.Adjustment</a>
+						)
+				–
+	</div>
+			<p>horizontal scroll adjustment</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_set_hadjustment">
+	<span><code>Gtk.ScrolledWindow.set_hadjustment</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.ScrolledWindow.set_hadjustment (self, hadjustment):
+    #python wrapper for 'gtk_scrolled_window_set_hadjustment'</pre>
+
+<p>Sets the <a href="gtkadjustment-h.html#GtkAdjustment">Gtk.Adjustment</a> for the horizontal scrollbar.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+					(
+						<a title="Gtk.ScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>hadjustment</code></em></i>
+					(
+						<a title="Gtk.Adjustment" href="gtkadjustment-h.html#GtkAdjustment">Gtk.Adjustment</a>
+						)
+				–
+	</div>
+			<p>horizontal scroll adjustment</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_scrolled_window_get_vadjustment">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_get_vadjustment">
+	<span><code>gtk_scrolled_window_get_vadjustment</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkAdjustment" href="gtkadjustment-h.html#GtkAdjustment">GtkAdjustment</a> *
+gtk_scrolled_window_get_vadjustment (<a title="GtkScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">GtkScrolledWindow</a> * scrolled_window)</pre>
+
+<p>Returns the vertical scrollbar’s adjustment, used to connect the
+vertical scrollbar to the child widget’s vertical scroll functionality.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">GtkScrolledWindow</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					
+										
+<span class="annotation">[<abbr title="Don't free data after the code is done"><span class="acronym">transfer: none</span></abbr>]</span>
+
+										)
+								–
+			</div>
+							<p>the vertical <a href="gtkadjustment-h.html#GtkAdjustment">GtkAdjustment</a></p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_get_vadjustment">
+	<span><code>Gtk.prototype.get_vadjustment</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_vadjustment(): {
+    // javascript wrapper for 'gtk_scrolled_window_get_vadjustment'
+}</pre>
+
+<p>Returns the vertical scrollbar’s adjustment, used to connect the
+vertical scrollbar to the child widget’s vertical scroll functionality.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+					(
+						<a title="Gtk.ScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Adjustment" href="gtkadjustment-h.html#GtkAdjustment">Gtk.Adjustment</a>
+										)
+								–
+			</div>
+							<p>the vertical <a href="gtkadjustment-h.html#GtkAdjustment">Gtk.Adjustment</a></p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_get_vadjustment">
+	<span><code>Gtk.ScrolledWindow.get_vadjustment</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.ScrolledWindow.get_vadjustment (self):
+    #python wrapper for 'gtk_scrolled_window_get_vadjustment'</pre>
+
+<p>Returns the vertical scrollbar’s adjustment, used to connect the
+vertical scrollbar to the child widget’s vertical scroll functionality.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+					(
+						<a title="Gtk.ScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Adjustment" href="gtkadjustment-h.html#GtkAdjustment">Gtk.Adjustment</a>
+										)
+								–
+			</div>
+							<p>the vertical <a href="gtkadjustment-h.html#GtkAdjustment">Gtk.Adjustment</a></p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_scrolled_window_set_vadjustment">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_set_vadjustment">
+	<span><code>gtk_scrolled_window_set_vadjustment</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_scrolled_window_set_vadjustment (<a title="GtkScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">GtkScrolledWindow</a> * scrolled_window,
+                                     <a title="GtkAdjustment" href="gtkadjustment-h.html#GtkAdjustment">GtkAdjustment</a> * vadjustment)</pre>
+
+<p>Sets the <a href="gtkadjustment-h.html#GtkAdjustment">GtkAdjustment</a> for the vertical scrollbar.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">GtkScrolledWindow</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>vadjustment</code></em></i>
+				–
+	</div>
+			<p>vertical scroll adjustment</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_set_vadjustment">
+	<span><code>Gtk.prototype.set_vadjustment</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_vadjustment(vadjustment: <a title="Gtk.Adjustment" href="gtkadjustment-h.html#GtkAdjustment">Gtk.Adjustment</a>): {
+    // javascript wrapper for 'gtk_scrolled_window_set_vadjustment'
+}</pre>
+
+<p>Sets the <a href="gtkadjustment-h.html#GtkAdjustment">Gtk.Adjustment</a> for the vertical scrollbar.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+					(
+						<a title="Gtk.ScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>vadjustment</code></em></i>
+					(
+						<a title="Gtk.Adjustment" href="gtkadjustment-h.html#GtkAdjustment">Gtk.Adjustment</a>
+						)
+				–
+	</div>
+			<p>vertical scroll adjustment</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_set_vadjustment">
+	<span><code>Gtk.ScrolledWindow.set_vadjustment</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.ScrolledWindow.set_vadjustment (self, vadjustment):
+    #python wrapper for 'gtk_scrolled_window_set_vadjustment'</pre>
+
+<p>Sets the <a href="gtkadjustment-h.html#GtkAdjustment">Gtk.Adjustment</a> for the vertical scrollbar.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+					(
+						<a title="Gtk.ScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>vadjustment</code></em></i>
+					(
+						<a title="Gtk.Adjustment" href="gtkadjustment-h.html#GtkAdjustment">Gtk.Adjustment</a>
+						)
+				–
+	</div>
+			<p>vertical scroll adjustment</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.8;" id="gtk_scrolled_window_get_hscrollbar">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_get_hscrollbar">
+	<span><code>gtk_scrolled_window_get_hscrollbar</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> *
+gtk_scrolled_window_get_hscrollbar (<a title="GtkScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">GtkScrolledWindow</a> * scrolled_window)</pre>
+
+<p>Returns the horizontal scrollbar of <em>scrolled_window</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">GtkScrolledWindow</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					
+										
+<span class="annotation">[<abbr title="Don't free data after the code is done"><span class="acronym">transfer: none</span></abbr>]</span>
+
+										)
+								–
+			</div>
+							<p>the horizontal scrollbar of the scrolled window.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.8
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_get_hscrollbar">
+	<span><code>Gtk.prototype.get_hscrollbar</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_hscrollbar(): {
+    // javascript wrapper for 'gtk_scrolled_window_get_hscrollbar'
+}</pre>
+
+<p>Returns the horizontal scrollbar of <em>scrolled_window</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+					(
+						<a title="Gtk.ScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>the horizontal scrollbar of the scrolled window.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.8
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_get_hscrollbar">
+	<span><code>Gtk.ScrolledWindow.get_hscrollbar</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.ScrolledWindow.get_hscrollbar (self):
+    #python wrapper for 'gtk_scrolled_window_get_hscrollbar'</pre>
+
+<p>Returns the horizontal scrollbar of <em>scrolled_window</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+					(
+						<a title="Gtk.ScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>the horizontal scrollbar of the scrolled window.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.8
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.8;" id="gtk_scrolled_window_get_vscrollbar">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_get_vscrollbar">
+	<span><code>gtk_scrolled_window_get_vscrollbar</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> *
+gtk_scrolled_window_get_vscrollbar (<a title="GtkScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">GtkScrolledWindow</a> * scrolled_window)</pre>
+
+<p>Returns the vertical scrollbar of <em>scrolled_window</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">GtkScrolledWindow</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					
+										
+<span class="annotation">[<abbr title="Don't free data after the code is done"><span class="acronym">transfer: none</span></abbr>]</span>
+
+										)
+								–
+			</div>
+							<p>the vertical scrollbar of the scrolled window.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.8
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_get_vscrollbar">
+	<span><code>Gtk.prototype.get_vscrollbar</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_vscrollbar(): {
+    // javascript wrapper for 'gtk_scrolled_window_get_vscrollbar'
+}</pre>
+
+<p>Returns the vertical scrollbar of <em>scrolled_window</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+					(
+						<a title="Gtk.ScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>the vertical scrollbar of the scrolled window.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.8
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_get_vscrollbar">
+	<span><code>Gtk.ScrolledWindow.get_vscrollbar</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.ScrolledWindow.get_vscrollbar (self):
+    #python wrapper for 'gtk_scrolled_window_get_vscrollbar'</pre>
+
+<p>Returns the vertical scrollbar of <em>scrolled_window</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+					(
+						<a title="Gtk.ScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>the vertical scrollbar of the scrolled window.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.8
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_scrolled_window_get_policy">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_get_policy">
+	<span><code>gtk_scrolled_window_get_policy</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_scrolled_window_get_policy (<a title="GtkScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">GtkScrolledWindow</a> * scrolled_window,
+                                <a title="GtkPolicyType" href="gtkscrolledwindow-h.html#GtkPolicyType">GtkPolicyType</a> * hscrollbar_policy,
+                                <a title="GtkPolicyType" href="gtkscrolledwindow-h.html#GtkPolicyType">GtkPolicyType</a> * vscrollbar_policy)</pre>
+
+<p>Retrieves the current policy values for the horizontal and vertical
+scrollbars. See <a href="gtkscrolledwindow-h.html#gtk_scrolled_window_set_policy">gtk_scrolled_window_set_policy</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">GtkScrolledWindow</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>hscrollbar_policy</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="Parameter for returning results"><span class="acronym">out</span></abbr>]</span>
+<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>location to store the policy
+for the horizontal scrollbar, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>vscrollbar_policy</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="Parameter for returning results"><span class="acronym">out</span></abbr>]</span>
+<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>location to store the policy
+for the vertical scrollbar, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_get_policy">
+	<span><code>Gtk.prototype.get_policy</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_policy(): {
+    // javascript wrapper for 'gtk_scrolled_window_get_policy'
+}</pre>
+
+<p>Retrieves the current policy values for the horizontal and vertical
+scrollbars. See <a href="gtkscrolledwindow-h.html#gtk_scrolled_window_set_policy">Gtk.prototype.set_policy</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+					(
+						<a title="Gtk.ScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a></p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_get_policy">
+	<span><code>Gtk.ScrolledWindow.get_policy</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.ScrolledWindow.get_policy (self):
+    #python wrapper for 'gtk_scrolled_window_get_policy'</pre>
+
+<p>Retrieves the current policy values for the horizontal and vertical
+scrollbars. See <a href="gtkscrolledwindow-h.html#gtk_scrolled_window_set_policy">Gtk.ScrolledWindow.set_policy</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+					(
+						<a title="Gtk.ScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a></p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_scrolled_window_set_policy">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_set_policy">
+	<span><code>gtk_scrolled_window_set_policy</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_scrolled_window_set_policy (<a title="GtkScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">GtkScrolledWindow</a> * scrolled_window,
+                                <a title="GtkPolicyType" href="gtkscrolledwindow-h.html#GtkPolicyType">GtkPolicyType</a> hscrollbar_policy,
+                                <a title="GtkPolicyType" href="gtkscrolledwindow-h.html#GtkPolicyType">GtkPolicyType</a> vscrollbar_policy)</pre>
+
+<p>Sets the scrollbar policy for the horizontal and vertical scrollbars.</p>
+<p>The policy determines when the scrollbar should appear; it is a value
+from the <a href="gtkscrolledwindow-h.html#GtkPolicyType">GtkPolicyType</a> enumeration. If <a href="gtkscrolledwindow-h.html#GTK_POLICY_ALWAYS">GTK_POLICY_ALWAYS</a>, the
+scrollbar is always present; if <a href="gtkscrolledwindow-h.html#GTK_POLICY_NEVER">GTK_POLICY_NEVER</a>, the scrollbar is
+never present; if <a href="gtkscrolledwindow-h.html#GTK_POLICY_AUTOMATIC">GTK_POLICY_AUTOMATIC</a>, the scrollbar is present only
+if needed (that is, if the slider part of the bar would be smaller
+than the trough — the display is larger than the page size).</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">GtkScrolledWindow</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>hscrollbar_policy</code></em></i>
+				–
+	</div>
+			<p>policy for horizontal bar</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>vscrollbar_policy</code></em></i>
+				–
+	</div>
+			<p>policy for vertical bar</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_set_policy">
+	<span><code>Gtk.prototype.set_policy</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_policy(hscrollbar_policy: <a title="Gtk.PolicyType" href="gtkscrolledwindow-h.html#GtkPolicyType">Gtk.PolicyType</a>, vscrollbar_policy: <a title="Gtk.PolicyType" href="gtkscrolledwindow-h.html#GtkPolicyType">Gtk.PolicyType</a>): {
+    // javascript wrapper for 'gtk_scrolled_window_set_policy'
+}</pre>
+
+<p>Sets the scrollbar policy for the horizontal and vertical scrollbars.</p>
+<p>The policy determines when the scrollbar should appear; it is a value
+from the <a href="gtkscrolledwindow-h.html#GtkPolicyType">Gtk.PolicyType</a> enumeration. If <a href="gtkscrolledwindow-h.html#GTK_POLICY_ALWAYS">Gtk.PolicyType.ALWAYS</a>, the
+scrollbar is always present; if <a href="gtkscrolledwindow-h.html#GTK_POLICY_NEVER">Gtk.PolicyType.NEVER</a>, the scrollbar is
+never present; if <a href="gtkscrolledwindow-h.html#GTK_POLICY_AUTOMATIC">Gtk.PolicyType.AUTOMATIC</a>, the scrollbar is present only
+if needed (that is, if the slider part of the bar would be smaller
+than the trough — the display is larger than the page size).</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+					(
+						<a title="Gtk.ScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>hscrollbar_policy</code></em></i>
+					(
+						<a title="Gtk.PolicyType" href="gtkscrolledwindow-h.html#GtkPolicyType">Gtk.PolicyType</a>
+						)
+				–
+	</div>
+			<p>policy for horizontal bar</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>vscrollbar_policy</code></em></i>
+					(
+						<a title="Gtk.PolicyType" href="gtkscrolledwindow-h.html#GtkPolicyType">Gtk.PolicyType</a>
+						)
+				–
+	</div>
+			<p>policy for vertical bar</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_set_policy">
+	<span><code>Gtk.ScrolledWindow.set_policy</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.ScrolledWindow.set_policy (self, hscrollbar_policy, vscrollbar_policy):
+    #python wrapper for 'gtk_scrolled_window_set_policy'</pre>
+
+<p>Sets the scrollbar policy for the horizontal and vertical scrollbars.</p>
+<p>The policy determines when the scrollbar should appear; it is a value
+from the <a href="gtkscrolledwindow-h.html#GtkPolicyType">Gtk.PolicyType</a> enumeration. If <a href="gtkscrolledwindow-h.html#GTK_POLICY_ALWAYS">Gtk.PolicyType.ALWAYS</a>, the
+scrollbar is always present; if <a href="gtkscrolledwindow-h.html#GTK_POLICY_NEVER">Gtk.PolicyType.NEVER</a>, the scrollbar is
+never present; if <a href="gtkscrolledwindow-h.html#GTK_POLICY_AUTOMATIC">Gtk.PolicyType.AUTOMATIC</a>, the scrollbar is present only
+if needed (that is, if the slider part of the bar would be smaller
+than the trough — the display is larger than the page size).</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+					(
+						<a title="Gtk.ScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>hscrollbar_policy</code></em></i>
+					(
+						<a title="Gtk.PolicyType" href="gtkscrolledwindow-h.html#GtkPolicyType">Gtk.PolicyType</a>
+						)
+				–
+	</div>
+			<p>policy for horizontal bar</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>vscrollbar_policy</code></em></i>
+					(
+						<a title="Gtk.PolicyType" href="gtkscrolledwindow-h.html#GtkPolicyType">Gtk.PolicyType</a>
+						)
+				–
+	</div>
+			<p>policy for vertical bar</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_scrolled_window_get_placement">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_get_placement">
+	<span><code>gtk_scrolled_window_get_placement</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkCornerType" href="gtkscrolledwindow-h.html#GtkCornerType">GtkCornerType</a>
+gtk_scrolled_window_get_placement (<a title="GtkScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">GtkScrolledWindow</a> * scrolled_window)</pre>
+
+<p>Gets the placement of the contents with respect to the scrollbars
+for the scrolled window. See <a href="gtkscrolledwindow-h.html#gtk_scrolled_window_set_placement">gtk_scrolled_window_set_placement</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">GtkScrolledWindow</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>the current placement value.</p>
+<p>See also <a href="gtkscrolledwindow-h.html#gtk_scrolled_window_set_placement">gtk_scrolled_window_set_placement</a> and
+<a href="gtkscrolledwindow-h.html#gtk_scrolled_window_unset_placement">gtk_scrolled_window_unset_placement</a>.</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_get_placement">
+	<span><code>Gtk.prototype.get_placement</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_placement(): {
+    // javascript wrapper for 'gtk_scrolled_window_get_placement'
+}</pre>
+
+<p>Gets the placement of the contents with respect to the scrollbars
+for the scrolled window. See <a href="gtkscrolledwindow-h.html#gtk_scrolled_window_set_placement">Gtk.prototype.set_placement</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+					(
+						<a title="Gtk.ScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.CornerType" href="gtkscrolledwindow-h.html#GtkCornerType">Gtk.CornerType</a>
+										)
+								–
+			</div>
+							<p>the current placement value.</p>
+<p>See also <a href="gtkscrolledwindow-h.html#gtk_scrolled_window_set_placement">Gtk.prototype.set_placement</a> and
+<a href="gtkscrolledwindow-h.html#gtk_scrolled_window_unset_placement">Gtk.prototype.unset_placement</a>.</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_get_placement">
+	<span><code>Gtk.ScrolledWindow.get_placement</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.ScrolledWindow.get_placement (self):
+    #python wrapper for 'gtk_scrolled_window_get_placement'</pre>
+
+<p>Gets the placement of the contents with respect to the scrollbars
+for the scrolled window. See <a href="gtkscrolledwindow-h.html#gtk_scrolled_window_set_placement">Gtk.ScrolledWindow.set_placement</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+					(
+						<a title="Gtk.ScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.CornerType" href="gtkscrolledwindow-h.html#GtkCornerType">Gtk.CornerType</a>
+										)
+								–
+			</div>
+							<p>the current placement value.</p>
+<p>See also <a href="gtkscrolledwindow-h.html#gtk_scrolled_window_set_placement">Gtk.ScrolledWindow.set_placement</a> and
+<a href="gtkscrolledwindow-h.html#gtk_scrolled_window_unset_placement">Gtk.ScrolledWindow.unset_placement</a>.</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_scrolled_window_set_placement">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_set_placement">
+	<span><code>gtk_scrolled_window_set_placement</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_scrolled_window_set_placement (<a title="GtkScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">GtkScrolledWindow</a> * scrolled_window,
+                                   <a title="GtkCornerType" href="gtkscrolledwindow-h.html#GtkCornerType">GtkCornerType</a> window_placement)</pre>
+
+<p>Sets the placement of the contents with respect to the scrollbars
+for the scrolled window.</p>
+<p>The default is <a href="gtkscrolledwindow-h.html#GTK_CORNER_TOP_LEFT">GTK_CORNER_TOP_LEFT</a>, meaning the child is
+in the top left, with the scrollbars underneath and to the right.
+Other values in <a href="gtkscrolledwindow-h.html#GtkCornerType">GtkCornerType</a> are <a href="gtkscrolledwindow-h.html#GTK_CORNER_TOP_RIGHT">GTK_CORNER_TOP_RIGHT</a>,
+<a href="gtkscrolledwindow-h.html#GTK_CORNER_BOTTOM_LEFT">GTK_CORNER_BOTTOM_LEFT</a>, and <a href="gtkscrolledwindow-h.html#GTK_CORNER_BOTTOM_RIGHT">GTK_CORNER_BOTTOM_RIGHT</a>.</p>
+<p>See also <a href="gtkscrolledwindow-h.html#gtk_scrolled_window_get_placement">gtk_scrolled_window_get_placement</a> and
+<a href="gtkscrolledwindow-h.html#gtk_scrolled_window_unset_placement">gtk_scrolled_window_unset_placement</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">GtkScrolledWindow</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>window_placement</code></em></i>
+				–
+	</div>
+			<p>position of the child window</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_set_placement">
+	<span><code>Gtk.prototype.set_placement</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_placement(window_placement: <a title="Gtk.CornerType" href="gtkscrolledwindow-h.html#GtkCornerType">Gtk.CornerType</a>): {
+    // javascript wrapper for 'gtk_scrolled_window_set_placement'
+}</pre>
+
+<p>Sets the placement of the contents with respect to the scrollbars
+for the scrolled window.</p>
+<p>The default is <a href="gtkscrolledwindow-h.html#GTK_CORNER_TOP_LEFT">Gtk.CornerType.TOP_LEFT</a>, meaning the child is
+in the top left, with the scrollbars underneath and to the right.
+Other values in <a href="gtkscrolledwindow-h.html#GtkCornerType">Gtk.CornerType</a> are <a href="gtkscrolledwindow-h.html#GTK_CORNER_TOP_RIGHT">Gtk.CornerType.TOP_RIGHT</a>,
+<a href="gtkscrolledwindow-h.html#GTK_CORNER_BOTTOM_LEFT">Gtk.CornerType.BOTTOM_LEFT</a>, and <a href="gtkscrolledwindow-h.html#GTK_CORNER_BOTTOM_RIGHT">Gtk.CornerType.BOTTOM_RIGHT</a>.</p>
+<p>See also <a href="gtkscrolledwindow-h.html#gtk_scrolled_window_get_placement">Gtk.prototype.get_placement</a> and
+<a href="gtkscrolledwindow-h.html#gtk_scrolled_window_unset_placement">Gtk.prototype.unset_placement</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+					(
+						<a title="Gtk.ScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>window_placement</code></em></i>
+					(
+						<a title="Gtk.CornerType" href="gtkscrolledwindow-h.html#GtkCornerType">Gtk.CornerType</a>
+						)
+				–
+	</div>
+			<p>position of the child window</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_set_placement">
+	<span><code>Gtk.ScrolledWindow.set_placement</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.ScrolledWindow.set_placement (self, window_placement):
+    #python wrapper for 'gtk_scrolled_window_set_placement'</pre>
+
+<p>Sets the placement of the contents with respect to the scrollbars
+for the scrolled window.</p>
+<p>The default is <a href="gtkscrolledwindow-h.html#GTK_CORNER_TOP_LEFT">Gtk.CornerType.TOP_LEFT</a>, meaning the child is
+in the top left, with the scrollbars underneath and to the right.
+Other values in <a href="gtkscrolledwindow-h.html#GtkCornerType">Gtk.CornerType</a> are <a href="gtkscrolledwindow-h.html#GTK_CORNER_TOP_RIGHT">Gtk.CornerType.TOP_RIGHT</a>,
+<a href="gtkscrolledwindow-h.html#GTK_CORNER_BOTTOM_LEFT">Gtk.CornerType.BOTTOM_LEFT</a>, and <a href="gtkscrolledwindow-h.html#GTK_CORNER_BOTTOM_RIGHT">Gtk.CornerType.BOTTOM_RIGHT</a>.</p>
+<p>See also <a href="gtkscrolledwindow-h.html#gtk_scrolled_window_get_placement">Gtk.ScrolledWindow.get_placement</a> and
+<a href="gtkscrolledwindow-h.html#gtk_scrolled_window_unset_placement">Gtk.ScrolledWindow.unset_placement</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+					(
+						<a title="Gtk.ScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>window_placement</code></em></i>
+					(
+						<a title="Gtk.CornerType" href="gtkscrolledwindow-h.html#GtkCornerType">Gtk.CornerType</a>
+						)
+				–
+	</div>
+			<p>position of the child window</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_scrolled_window_unset_placement">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_unset_placement">
+	<span><code>gtk_scrolled_window_unset_placement</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_scrolled_window_unset_placement (<a title="GtkScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">GtkScrolledWindow</a> * scrolled_window)</pre>
+
+<p>Unsets the placement of the contents with respect to the scrollbars
+for the scrolled window. If no window placement is set for a scrolled
+window, it defaults to <a href="gtkscrolledwindow-h.html#GTK_CORNER_TOP_LEFT">GTK_CORNER_TOP_LEFT</a>.</p>
+<p>See also <a href="gtkscrolledwindow-h.html#gtk_scrolled_window_set_placement">gtk_scrolled_window_set_placement</a> and
+<a href="gtkscrolledwindow-h.html#gtk_scrolled_window_get_placement">gtk_scrolled_window_get_placement</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">GtkScrolledWindow</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_unset_placement">
+	<span><code>Gtk.prototype.unset_placement</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.unset_placement(): {
+    // javascript wrapper for 'gtk_scrolled_window_unset_placement'
+}</pre>
+
+<p>Unsets the placement of the contents with respect to the scrollbars
+for the scrolled window. If no window placement is set for a scrolled
+window, it defaults to <a href="gtkscrolledwindow-h.html#GTK_CORNER_TOP_LEFT">Gtk.CornerType.TOP_LEFT</a>.</p>
+<p>See also <a href="gtkscrolledwindow-h.html#gtk_scrolled_window_set_placement">Gtk.prototype.set_placement</a> and
+<a href="gtkscrolledwindow-h.html#gtk_scrolled_window_get_placement">Gtk.prototype.get_placement</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+					(
+						<a title="Gtk.ScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_unset_placement">
+	<span><code>Gtk.ScrolledWindow.unset_placement</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.ScrolledWindow.unset_placement (self):
+    #python wrapper for 'gtk_scrolled_window_unset_placement'</pre>
+
+<p>Unsets the placement of the contents with respect to the scrollbars
+for the scrolled window. If no window placement is set for a scrolled
+window, it defaults to <a href="gtkscrolledwindow-h.html#GTK_CORNER_TOP_LEFT">Gtk.CornerType.TOP_LEFT</a>.</p>
+<p>See also <a href="gtkscrolledwindow-h.html#gtk_scrolled_window_set_placement">Gtk.ScrolledWindow.set_placement</a> and
+<a href="gtkscrolledwindow-h.html#gtk_scrolled_window_get_placement">Gtk.ScrolledWindow.get_placement</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+					(
+						<a title="Gtk.ScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_scrolled_window_get_shadow_type">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_get_shadow_type">
+	<span><code>gtk_scrolled_window_get_shadow_type</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkShadowType" href="gtkenums-h.html#GtkShadowType">GtkShadowType</a>
+gtk_scrolled_window_get_shadow_type (<a title="GtkScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">GtkScrolledWindow</a> * scrolled_window)</pre>
+
+<p>Gets the shadow type of the scrolled window. See
+<a href="gtkscrolledwindow-h.html#gtk_scrolled_window_set_shadow_type">gtk_scrolled_window_set_shadow_type</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">GtkScrolledWindow</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>the current shadow type</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_get_shadow_type">
+	<span><code>Gtk.prototype.get_shadow_type</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_shadow_type(): {
+    // javascript wrapper for 'gtk_scrolled_window_get_shadow_type'
+}</pre>
+
+<p>Gets the shadow type of the scrolled window. See
+<a href="gtkscrolledwindow-h.html#gtk_scrolled_window_set_shadow_type">Gtk.prototype.set_shadow_type</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+					(
+						<a title="Gtk.ScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.ShadowType" href="gtkenums-h.html#GtkShadowType">Gtk.ShadowType</a>
+										)
+								–
+			</div>
+							<p>the current shadow type</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_get_shadow_type">
+	<span><code>Gtk.ScrolledWindow.get_shadow_type</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.ScrolledWindow.get_shadow_type (self):
+    #python wrapper for 'gtk_scrolled_window_get_shadow_type'</pre>
+
+<p>Gets the shadow type of the scrolled window. See
+<a href="gtkscrolledwindow-h.html#gtk_scrolled_window_set_shadow_type">Gtk.ScrolledWindow.set_shadow_type</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+					(
+						<a title="Gtk.ScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.ShadowType" href="gtkenums-h.html#GtkShadowType">Gtk.ShadowType</a>
+										)
+								–
+			</div>
+							<p>the current shadow type</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_scrolled_window_set_shadow_type">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_set_shadow_type">
+	<span><code>gtk_scrolled_window_set_shadow_type</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_scrolled_window_set_shadow_type (<a title="GtkScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">GtkScrolledWindow</a> * scrolled_window,
+                                     <a title="GtkShadowType" href="gtkenums-h.html#GtkShadowType">GtkShadowType</a> type)</pre>
+
+<p>Changes the type of shadow drawn around the contents of
+<em>scrolled_window</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">GtkScrolledWindow</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>type</code></em></i>
+				–
+	</div>
+			<p>kind of shadow to draw around scrolled window contents</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_set_shadow_type">
+	<span><code>Gtk.prototype.set_shadow_type</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_shadow_type(type: <a title="Gtk.ShadowType" href="gtkenums-h.html#GtkShadowType">Gtk.ShadowType</a>): {
+    // javascript wrapper for 'gtk_scrolled_window_set_shadow_type'
+}</pre>
+
+<p>Changes the type of shadow drawn around the contents of
+<em>scrolled_window</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+					(
+						<a title="Gtk.ScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>type</code></em></i>
+					(
+						<a title="Gtk.ShadowType" href="gtkenums-h.html#GtkShadowType">Gtk.ShadowType</a>
+						)
+				–
+	</div>
+			<p>kind of shadow to draw around scrolled window contents</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_set_shadow_type">
+	<span><code>Gtk.ScrolledWindow.set_shadow_type</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.ScrolledWindow.set_shadow_type (self, type):
+    #python wrapper for 'gtk_scrolled_window_set_shadow_type'</pre>
+
+<p>Changes the type of shadow drawn around the contents of
+<em>scrolled_window</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+					(
+						<a title="Gtk.ScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>type</code></em></i>
+					(
+						<a title="Gtk.ShadowType" href="gtkenums-h.html#GtkShadowType">Gtk.ShadowType</a>
+						)
+				–
+	</div>
+			<p>kind of shadow to draw around scrolled window contents</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.4;" id="gtk_scrolled_window_get_kinetic_scrolling">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_get_kinetic_scrolling">
+	<span><code>gtk_scrolled_window_get_kinetic_scrolling</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_scrolled_window_get_kinetic_scrolling (<a title="GtkScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">GtkScrolledWindow</a> * scrolled_window)</pre>
+
+<p>Returns the specified kinetic scrolling behavior.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">GtkScrolledWindow</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>the scrolling behavior flags.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.4
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_get_kinetic_scrolling">
+	<span><code>Gtk.prototype.get_kinetic_scrolling</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_kinetic_scrolling(): {
+    // javascript wrapper for 'gtk_scrolled_window_get_kinetic_scrolling'
+}</pre>
+
+<p>Returns the specified kinetic scrolling behavior.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+					(
+						<a title="Gtk.ScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p>the scrolling behavior flags.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.4
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_get_kinetic_scrolling">
+	<span><code>Gtk.ScrolledWindow.get_kinetic_scrolling</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.ScrolledWindow.get_kinetic_scrolling (self):
+    #python wrapper for 'gtk_scrolled_window_get_kinetic_scrolling'</pre>
+
+<p>Returns the specified kinetic scrolling behavior.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+					(
+						<a title="Gtk.ScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+										)
+								–
+			</div>
+							<p>the scrolling behavior flags.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.4
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.4;" id="gtk_scrolled_window_set_kinetic_scrolling">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_set_kinetic_scrolling">
+	<span><code>gtk_scrolled_window_set_kinetic_scrolling</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_scrolled_window_set_kinetic_scrolling (<a title="GtkScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">GtkScrolledWindow</a> * scrolled_window,
+                                           <a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a> kinetic_scrolling)</pre>
+
+<p>Turns kinetic scrolling on or off.
+Kinetic scrolling only applies to devices with source
+<a href="https://developer.gnome.org/gdk3/GdkDevice.html#GDK-SOURCE-TOUCHSCREEN:CAPS">GDK_SOURCE_TOUCHSCREEN</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">GtkScrolledWindow</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>kinetic_scrolling</code></em></i>
+				–
+	</div>
+			<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> to enable kinetic scrolling</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.4
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_set_kinetic_scrolling">
+	<span><code>Gtk.prototype.set_kinetic_scrolling</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_kinetic_scrolling(kinetic_scrolling: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_scrolled_window_set_kinetic_scrolling'
+}</pre>
+
+<p>Turns kinetic scrolling on or off.
+Kinetic scrolling only applies to devices with source
+<a href="https://developer.gnome.org/gdk3/GdkDevice.html#GDK-SOURCE-TOUCHSCREEN:CAPS">Gdk.InputSource.TOUCHSCREEN</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+					(
+						<a title="Gtk.ScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>kinetic_scrolling</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> to enable kinetic scrolling</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.4
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_set_kinetic_scrolling">
+	<span><code>Gtk.ScrolledWindow.set_kinetic_scrolling</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.ScrolledWindow.set_kinetic_scrolling (self, kinetic_scrolling):
+    #python wrapper for 'gtk_scrolled_window_set_kinetic_scrolling'</pre>
+
+<p>Turns kinetic scrolling on or off.
+Kinetic scrolling only applies to devices with source
+<a href="https://developer.gnome.org/gdk3/GdkDevice.html#GDK-SOURCE-TOUCHSCREEN:CAPS">Gdk.InputSource.TOUCHSCREEN</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+					(
+						<a title="Gtk.ScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>kinetic_scrolling</code></em></i>
+					(
+						<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+						)
+				–
+	</div>
+			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> to enable kinetic scrolling</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.4
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.4;" id="gtk_scrolled_window_get_capture_button_press">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_get_capture_button_press">
+	<span><code>gtk_scrolled_window_get_capture_button_press</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_scrolled_window_get_capture_button_press (<a title="GtkScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">GtkScrolledWindow</a> * scrolled_window)</pre>
+
+<p>Return whether button presses are captured during kinetic
+scrolling. See <a href="gtkscrolledwindow-h.html#gtk_scrolled_window_set_capture_button_press">gtk_scrolled_window_set_capture_button_press</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">GtkScrolledWindow</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if button presses are captured during kinetic scrolling</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.4
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_get_capture_button_press">
+	<span><code>Gtk.prototype.get_capture_button_press</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_capture_button_press(): {
+    // javascript wrapper for 'gtk_scrolled_window_get_capture_button_press'
+}</pre>
+
+<p>Return whether button presses are captured during kinetic
+scrolling. See <a href="gtkscrolledwindow-h.html#gtk_scrolled_window_set_capture_button_press">Gtk.prototype.set_capture_button_press</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+					(
+						<a title="Gtk.ScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if button presses are captured during kinetic scrolling</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.4
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_get_capture_button_press">
+	<span><code>Gtk.ScrolledWindow.get_capture_button_press</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.ScrolledWindow.get_capture_button_press (self):
+    #python wrapper for 'gtk_scrolled_window_get_capture_button_press'</pre>
+
+<p>Return whether button presses are captured during kinetic
+scrolling. See <a href="gtkscrolledwindow-h.html#gtk_scrolled_window_set_capture_button_press">Gtk.ScrolledWindow.set_capture_button_press</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+					(
+						<a title="Gtk.ScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+										)
+								–
+			</div>
+							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if button presses are captured during kinetic scrolling</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.4
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.4;" id="gtk_scrolled_window_set_capture_button_press">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_set_capture_button_press">
+	<span><code>gtk_scrolled_window_set_capture_button_press</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_scrolled_window_set_capture_button_press (<a title="GtkScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">GtkScrolledWindow</a> * scrolled_window,
+                                              <a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a> capture_button_press)</pre>
+
+<p>Changes the behaviour of <em>scrolled_window</em> with regard to the initial
+event that possibly starts kinetic scrolling. When <em>capture_button_press</em>
+is set to <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a>, the event is captured by the scrolled window, and
+then later replayed if it is meant to go to the child widget.</p>
+<p>This should be enabled if any child widgets perform non-reversible
+actions on <a href="https://developer.gnome.org/gtk3/GtkWidget.html#GtkWidget-button-press-event">button-press-event</a>. If they don't, and handle
+additionally handle <a href="https://developer.gnome.org/gtk3/GtkWidget.html#GtkWidget-grab-broken-event">grab-broken-event</a>, it might be better
+to set <em>capture_button_press</em> to <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS">FALSE</a>.</p>
+<p>This setting only has an effect if kinetic scrolling is enabled.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">GtkScrolledWindow</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>capture_button_press</code></em></i>
+				–
+	</div>
+			<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> to capture button presses</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.4
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_set_capture_button_press">
+	<span><code>Gtk.prototype.set_capture_button_press</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_capture_button_press(capture_button_press: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_scrolled_window_set_capture_button_press'
+}</pre>
+
+<p>Changes the behaviour of <em>scrolled_window</em> with regard to the initial
+event that possibly starts kinetic scrolling. When <em>capture_button_press</em>
+is set to <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a>, the event is captured by the scrolled window, and
+then later replayed if it is meant to go to the child widget.</p>
+<p>This should be enabled if any child widgets perform non-reversible
+actions on <a href="https://developer.gnome.org/gtk3/GtkWidget.html#GtkWidget-button-press-event">button-press-event</a>. If they don't, and handle
+additionally handle <a href="https://developer.gnome.org/gtk3/GtkWidget.html#GtkWidget-grab-broken-event">grab-broken-event</a>, it might be better
+to set <em>capture_button_press</em> to <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">false</a>.</p>
+<p>This setting only has an effect if kinetic scrolling is enabled.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+					(
+						<a title="Gtk.ScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>capture_button_press</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> to capture button presses</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.4
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_set_capture_button_press">
+	<span><code>Gtk.ScrolledWindow.set_capture_button_press</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.ScrolledWindow.set_capture_button_press (self, capture_button_press):
+    #python wrapper for 'gtk_scrolled_window_set_capture_button_press'</pre>
+
+<p>Changes the behaviour of <em>scrolled_window</em> with regard to the initial
+event that possibly starts kinetic scrolling. When <em>capture_button_press</em>
+is set to <a href="https://docs.python.org/3/library/constants.html#True">True</a>, the event is captured by the scrolled window, and
+then later replayed if it is meant to go to the child widget.</p>
+<p>This should be enabled if any child widgets perform non-reversible
+actions on <a href="https://developer.gnome.org/gtk3/GtkWidget.html#GtkWidget-button-press-event">button-press-event</a>. If they don't, and handle
+additionally handle <a href="https://developer.gnome.org/gtk3/GtkWidget.html#GtkWidget-grab-broken-event">grab-broken-event</a>, it might be better
+to set <em>capture_button_press</em> to <a href="https://docs.python.org/3/library/constants.html#False">False</a>.</p>
+<p>This setting only has an effect if kinetic scrolling is enabled.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+					(
+						<a title="Gtk.ScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>capture_button_press</code></em></i>
+					(
+						<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+						)
+				–
+	</div>
+			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> to capture button presses</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.4
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.16;" id="gtk_scrolled_window_get_overlay_scrolling">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_get_overlay_scrolling">
+	<span><code>gtk_scrolled_window_get_overlay_scrolling</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_scrolled_window_get_overlay_scrolling (<a title="GtkScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">GtkScrolledWindow</a> * scrolled_window)</pre>
+
+<p>Returns whether overlay scrolling is enabled for this scrolled window.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">GtkScrolledWindow</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if overlay scrolling is enabled</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.16
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_get_overlay_scrolling">
+	<span><code>Gtk.prototype.get_overlay_scrolling</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_overlay_scrolling(): {
+    // javascript wrapper for 'gtk_scrolled_window_get_overlay_scrolling'
+}</pre>
+
+<p>Returns whether overlay scrolling is enabled for this scrolled window.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+					(
+						<a title="Gtk.ScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if overlay scrolling is enabled</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.16
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_get_overlay_scrolling">
+	<span><code>Gtk.ScrolledWindow.get_overlay_scrolling</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.ScrolledWindow.get_overlay_scrolling (self):
+    #python wrapper for 'gtk_scrolled_window_get_overlay_scrolling'</pre>
+
+<p>Returns whether overlay scrolling is enabled for this scrolled window.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+					(
+						<a title="Gtk.ScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+										)
+								–
+			</div>
+							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if overlay scrolling is enabled</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.16
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.16;" id="gtk_scrolled_window_set_overlay_scrolling">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_set_overlay_scrolling">
+	<span><code>gtk_scrolled_window_set_overlay_scrolling</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_scrolled_window_set_overlay_scrolling (<a title="GtkScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">GtkScrolledWindow</a> * scrolled_window,
+                                           <a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a> overlay_scrolling)</pre>
+
+<p>Enables or disables overlay scrolling for this scrolled window.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">GtkScrolledWindow</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>overlay_scrolling</code></em></i>
+				–
+	</div>
+			<p>whether to enable overlay scrolling</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.16
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_set_overlay_scrolling">
+	<span><code>Gtk.prototype.set_overlay_scrolling</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_overlay_scrolling(overlay_scrolling: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_scrolled_window_set_overlay_scrolling'
+}</pre>
+
+<p>Enables or disables overlay scrolling for this scrolled window.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+					(
+						<a title="Gtk.ScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>overlay_scrolling</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>whether to enable overlay scrolling</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.16
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_set_overlay_scrolling">
+	<span><code>Gtk.ScrolledWindow.set_overlay_scrolling</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.ScrolledWindow.set_overlay_scrolling (self, overlay_scrolling):
+    #python wrapper for 'gtk_scrolled_window_set_overlay_scrolling'</pre>
+
+<p>Enables or disables overlay scrolling for this scrolled window.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+					(
+						<a title="Gtk.ScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>overlay_scrolling</code></em></i>
+					(
+						<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+						)
+				–
+	</div>
+			<p>whether to enable overlay scrolling</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.16
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_scrolled_window_get_min_content_width">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_get_min_content_width">
+	<span><code>gtk_scrolled_window_get_min_content_width</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a>
+gtk_scrolled_window_get_min_content_width (<a title="GtkScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">GtkScrolledWindow</a> * scrolled_window)</pre>
+
+<p>Gets the minimum content width of <em>scrolled_window</em>, or -1 if not set.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">GtkScrolledWindow</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>the minimum content width</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_get_min_content_width">
+	<span><code>Gtk.prototype.get_min_content_width</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_min_content_width(): {
+    // javascript wrapper for 'gtk_scrolled_window_get_min_content_width'
+}</pre>
+
+<p>Gets the minimum content width of <em>scrolled_window</em>, or -1 if not set.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+					(
+						<a title="Gtk.ScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p>the minimum content width</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_get_min_content_width">
+	<span><code>Gtk.ScrolledWindow.get_min_content_width</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.ScrolledWindow.get_min_content_width (self):
+    #python wrapper for 'gtk_scrolled_window_get_min_content_width'</pre>
+
+<p>Gets the minimum content width of <em>scrolled_window</em>, or -1 if not set.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+					(
+						<a title="Gtk.ScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+										)
+								–
+			</div>
+							<p>the minimum content width</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_scrolled_window_set_min_content_width">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_set_min_content_width">
+	<span><code>gtk_scrolled_window_set_min_content_width</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_scrolled_window_set_min_content_width (<a title="GtkScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">GtkScrolledWindow</a> * scrolled_window,
+                                           <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> width)</pre>
+
+<p>Sets the minimum width that <em>scrolled_window</em> should keep visible.
+Note that this can and (usually will) be smaller than the minimum
+size of the content.</p>
+<p>It is a programming error to set the minimum content width to a
+value greater than <a href="https://developer.gnome.org/gtk3/GtkScrolledWindow.html#GtkScrolledWindow--max-content-width">max-content-width</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">GtkScrolledWindow</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>width</code></em></i>
+				–
+	</div>
+			<p>the minimal content width</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_set_min_content_width">
+	<span><code>Gtk.prototype.set_min_content_width</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_min_content_width(width: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_scrolled_window_set_min_content_width'
+}</pre>
+
+<p>Sets the minimum width that <em>scrolled_window</em> should keep visible.
+Note that this can and (usually will) be smaller than the minimum
+size of the content.</p>
+<p>It is a programming error to set the minimum content width to a
+value greater than <a href="https://developer.gnome.org/gtk3/GtkScrolledWindow.html#GtkScrolledWindow--max-content-width">max-content-width</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+					(
+						<a title="Gtk.ScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>width</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the minimal content width</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_set_min_content_width">
+	<span><code>Gtk.ScrolledWindow.set_min_content_width</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.ScrolledWindow.set_min_content_width (self, width):
+    #python wrapper for 'gtk_scrolled_window_set_min_content_width'</pre>
+
+<p>Sets the minimum width that <em>scrolled_window</em> should keep visible.
+Note that this can and (usually will) be smaller than the minimum
+size of the content.</p>
+<p>It is a programming error to set the minimum content width to a
+value greater than <a href="https://developer.gnome.org/gtk3/GtkScrolledWindow.html#GtkScrolledWindow--max-content-width">max-content-width</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+					(
+						<a title="Gtk.ScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>width</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>the minimal content width</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_scrolled_window_get_min_content_height">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_get_min_content_height">
+	<span><code>gtk_scrolled_window_get_min_content_height</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a>
+gtk_scrolled_window_get_min_content_height (<a title="GtkScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">GtkScrolledWindow</a> * scrolled_window)</pre>
+
+<p>Gets the minimal content height of <em>scrolled_window</em>, or -1 if not set.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">GtkScrolledWindow</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>the minimal content height</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_get_min_content_height">
+	<span><code>Gtk.prototype.get_min_content_height</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_min_content_height(): {
+    // javascript wrapper for 'gtk_scrolled_window_get_min_content_height'
+}</pre>
+
+<p>Gets the minimal content height of <em>scrolled_window</em>, or -1 if not set.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+					(
+						<a title="Gtk.ScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p>the minimal content height</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_get_min_content_height">
+	<span><code>Gtk.ScrolledWindow.get_min_content_height</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.ScrolledWindow.get_min_content_height (self):
+    #python wrapper for 'gtk_scrolled_window_get_min_content_height'</pre>
+
+<p>Gets the minimal content height of <em>scrolled_window</em>, or -1 if not set.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+					(
+						<a title="Gtk.ScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+										)
+								–
+			</div>
+							<p>the minimal content height</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_scrolled_window_set_min_content_height">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_set_min_content_height">
+	<span><code>gtk_scrolled_window_set_min_content_height</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_scrolled_window_set_min_content_height (<a title="GtkScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">GtkScrolledWindow</a> * scrolled_window,
+                                            <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> height)</pre>
+
+<p>Sets the minimum height that <em>scrolled_window</em> should keep visible.
+Note that this can and (usually will) be smaller than the minimum
+size of the content.</p>
+<p>It is a programming error to set the minimum content height to a
+value greater than <a href="https://developer.gnome.org/gtk3/GtkScrolledWindow.html#GtkScrolledWindow--max-content-height">max-content-height</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">GtkScrolledWindow</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>height</code></em></i>
+				–
+	</div>
+			<p>the minimal content height</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_set_min_content_height">
+	<span><code>Gtk.prototype.set_min_content_height</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_min_content_height(height: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_scrolled_window_set_min_content_height'
+}</pre>
+
+<p>Sets the minimum height that <em>scrolled_window</em> should keep visible.
+Note that this can and (usually will) be smaller than the minimum
+size of the content.</p>
+<p>It is a programming error to set the minimum content height to a
+value greater than <a href="https://developer.gnome.org/gtk3/GtkScrolledWindow.html#GtkScrolledWindow--max-content-height">max-content-height</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+					(
+						<a title="Gtk.ScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>height</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the minimal content height</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_set_min_content_height">
+	<span><code>Gtk.ScrolledWindow.set_min_content_height</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.ScrolledWindow.set_min_content_height (self, height):
+    #python wrapper for 'gtk_scrolled_window_set_min_content_height'</pre>
+
+<p>Sets the minimum height that <em>scrolled_window</em> should keep visible.
+Note that this can and (usually will) be smaller than the minimum
+size of the content.</p>
+<p>It is a programming error to set the minimum content height to a
+value greater than <a href="https://developer.gnome.org/gtk3/GtkScrolledWindow.html#GtkScrolledWindow--max-content-height">max-content-height</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+					(
+						<a title="Gtk.ScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>height</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>the minimal content height</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.22;" id="gtk_scrolled_window_get_max_content_width">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_get_max_content_width">
+	<span><code>gtk_scrolled_window_get_max_content_width</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a>
+gtk_scrolled_window_get_max_content_width (<a title="GtkScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">GtkScrolledWindow</a> * scrolled_window)</pre>
+
+<p>Returns the maximum content width set.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">GtkScrolledWindow</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>the maximum content width, or -1</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.22
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_get_max_content_width">
+	<span><code>Gtk.prototype.get_max_content_width</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_max_content_width(): {
+    // javascript wrapper for 'gtk_scrolled_window_get_max_content_width'
+}</pre>
+
+<p>Returns the maximum content width set.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+					(
+						<a title="Gtk.ScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p>the maximum content width, or -1</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.22
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_get_max_content_width">
+	<span><code>Gtk.ScrolledWindow.get_max_content_width</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.ScrolledWindow.get_max_content_width (self):
+    #python wrapper for 'gtk_scrolled_window_get_max_content_width'</pre>
+
+<p>Returns the maximum content width set.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+					(
+						<a title="Gtk.ScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+										)
+								–
+			</div>
+							<p>the maximum content width, or -1</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.22
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.22;" id="gtk_scrolled_window_set_max_content_width">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_set_max_content_width">
+	<span><code>gtk_scrolled_window_set_max_content_width</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_scrolled_window_set_max_content_width (<a title="GtkScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">GtkScrolledWindow</a> * scrolled_window,
+                                           <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> width)</pre>
+
+<p>Sets the maximum width that <em>scrolled_window</em> should keep visible. The
+<em>scrolled_window</em> will grow up to this width before it starts scrolling
+the content.</p>
+<p>It is a programming error to set the maximum content width to a value
+smaller than <a href="https://developer.gnome.org/gtk3/GtkScrolledWindow.html#GtkScrolledWindow--min-content-width">min-content-width</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">GtkScrolledWindow</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>width</code></em></i>
+				–
+	</div>
+			<p>the maximum content width</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.22
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_set_max_content_width">
+	<span><code>Gtk.prototype.set_max_content_width</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_max_content_width(width: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_scrolled_window_set_max_content_width'
+}</pre>
+
+<p>Sets the maximum width that <em>scrolled_window</em> should keep visible. The
+<em>scrolled_window</em> will grow up to this width before it starts scrolling
+the content.</p>
+<p>It is a programming error to set the maximum content width to a value
+smaller than <a href="https://developer.gnome.org/gtk3/GtkScrolledWindow.html#GtkScrolledWindow--min-content-width">min-content-width</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+					(
+						<a title="Gtk.ScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>width</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the maximum content width</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.22
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_set_max_content_width">
+	<span><code>Gtk.ScrolledWindow.set_max_content_width</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.ScrolledWindow.set_max_content_width (self, width):
+    #python wrapper for 'gtk_scrolled_window_set_max_content_width'</pre>
+
+<p>Sets the maximum width that <em>scrolled_window</em> should keep visible. The
+<em>scrolled_window</em> will grow up to this width before it starts scrolling
+the content.</p>
+<p>It is a programming error to set the maximum content width to a value
+smaller than <a href="https://developer.gnome.org/gtk3/GtkScrolledWindow.html#GtkScrolledWindow--min-content-width">min-content-width</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+					(
+						<a title="Gtk.ScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>width</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>the maximum content width</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.22
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.22;" id="gtk_scrolled_window_get_max_content_height">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_get_max_content_height">
+	<span><code>gtk_scrolled_window_get_max_content_height</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a>
+gtk_scrolled_window_get_max_content_height (<a title="GtkScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">GtkScrolledWindow</a> * scrolled_window)</pre>
+
+<p>Returns the maximum content height set.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">GtkScrolledWindow</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>the maximum content height, or -1</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.22
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_get_max_content_height">
+	<span><code>Gtk.prototype.get_max_content_height</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_max_content_height(): {
+    // javascript wrapper for 'gtk_scrolled_window_get_max_content_height'
+}</pre>
+
+<p>Returns the maximum content height set.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+					(
+						<a title="Gtk.ScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p>the maximum content height, or -1</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.22
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_get_max_content_height">
+	<span><code>Gtk.ScrolledWindow.get_max_content_height</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.ScrolledWindow.get_max_content_height (self):
+    #python wrapper for 'gtk_scrolled_window_get_max_content_height'</pre>
+
+<p>Returns the maximum content height set.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+					(
+						<a title="Gtk.ScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+										)
+								–
+			</div>
+							<p>the maximum content height, or -1</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.22
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.22;" id="gtk_scrolled_window_set_max_content_height">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_set_max_content_height">
+	<span><code>gtk_scrolled_window_set_max_content_height</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_scrolled_window_set_max_content_height (<a title="GtkScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">GtkScrolledWindow</a> * scrolled_window,
+                                            <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> height)</pre>
+
+<p>Sets the maximum height that <em>scrolled_window</em> should keep visible. The
+<em>scrolled_window</em> will grow up to this height before it starts scrolling
+the content.</p>
+<p>It is a programming error to set the maximum content height to a value
+smaller than <a href="https://developer.gnome.org/gtk3/GtkScrolledWindow.html#GtkScrolledWindow--min-content-height">min-content-height</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">GtkScrolledWindow</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>height</code></em></i>
+				–
+	</div>
+			<p>the maximum content height</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.22
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_set_max_content_height">
+	<span><code>Gtk.prototype.set_max_content_height</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_max_content_height(height: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_scrolled_window_set_max_content_height'
+}</pre>
+
+<p>Sets the maximum height that <em>scrolled_window</em> should keep visible. The
+<em>scrolled_window</em> will grow up to this height before it starts scrolling
+the content.</p>
+<p>It is a programming error to set the maximum content height to a value
+smaller than <a href="https://developer.gnome.org/gtk3/GtkScrolledWindow.html#GtkScrolledWindow--min-content-height">min-content-height</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+					(
+						<a title="Gtk.ScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>height</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the maximum content height</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.22
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_set_max_content_height">
+	<span><code>Gtk.ScrolledWindow.set_max_content_height</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.ScrolledWindow.set_max_content_height (self, height):
+    #python wrapper for 'gtk_scrolled_window_set_max_content_height'</pre>
+
+<p>Sets the maximum height that <em>scrolled_window</em> should keep visible. The
+<em>scrolled_window</em> will grow up to this height before it starts scrolling
+the content.</p>
+<p>It is a programming error to set the maximum content height to a value
+smaller than <a href="https://developer.gnome.org/gtk3/GtkScrolledWindow.html#GtkScrolledWindow--min-content-height">min-content-height</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+					(
+						<a title="Gtk.ScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>height</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>the maximum content height</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.22
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.22;" id="gtk_scrolled_window_get_propagate_natural_width">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_get_propagate_natural_width">
+	<span><code>gtk_scrolled_window_get_propagate_natural_width</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_scrolled_window_get_propagate_natural_width (<a title="GtkScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">GtkScrolledWindow</a> * scrolled_window)</pre>
+
+<p>Reports whether the natural width of the child will be calculated and propagated
+through the scrolled windows requested natural width.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">GtkScrolledWindow</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>whether natural width propagation is enabled.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.22
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_get_propagate_natural_width">
+	<span><code>Gtk.prototype.get_propagate_natural_width</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_propagate_natural_width(): {
+    // javascript wrapper for 'gtk_scrolled_window_get_propagate_natural_width'
+}</pre>
+
+<p>Reports whether the natural width of the child will be calculated and propagated
+through the scrolled windows requested natural width.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+					(
+						<a title="Gtk.ScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p>whether natural width propagation is enabled.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.22
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_get_propagate_natural_width">
+	<span><code>Gtk.ScrolledWindow.get_propagate_natural_width</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.ScrolledWindow.get_propagate_natural_width (self):
+    #python wrapper for 'gtk_scrolled_window_get_propagate_natural_width'</pre>
+
+<p>Reports whether the natural width of the child will be calculated and propagated
+through the scrolled windows requested natural width.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+					(
+						<a title="Gtk.ScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+										)
+								–
+			</div>
+							<p>whether natural width propagation is enabled.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.22
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.22;" id="gtk_scrolled_window_set_propagate_natural_width">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_set_propagate_natural_width">
+	<span><code>gtk_scrolled_window_set_propagate_natural_width</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_scrolled_window_set_propagate_natural_width (<a title="GtkScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">GtkScrolledWindow</a> * scrolled_window,
+                                                 <a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a> propagate)</pre>
+
+<p>Sets whether the natural width of the child should be calculated and propagated
+through the scrolled windows requested natural width.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">GtkScrolledWindow</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>propagate</code></em></i>
+				–
+	</div>
+			<p>whether to propagate natural width</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.22
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_set_propagate_natural_width">
+	<span><code>Gtk.prototype.set_propagate_natural_width</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_propagate_natural_width(propagate: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_scrolled_window_set_propagate_natural_width'
+}</pre>
+
+<p>Sets whether the natural width of the child should be calculated and propagated
+through the scrolled windows requested natural width.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+					(
+						<a title="Gtk.ScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>propagate</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>whether to propagate natural width</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.22
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_set_propagate_natural_width">
+	<span><code>Gtk.ScrolledWindow.set_propagate_natural_width</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.ScrolledWindow.set_propagate_natural_width (self, propagate):
+    #python wrapper for 'gtk_scrolled_window_set_propagate_natural_width'</pre>
+
+<p>Sets whether the natural width of the child should be calculated and propagated
+through the scrolled windows requested natural width.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+					(
+						<a title="Gtk.ScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>propagate</code></em></i>
+					(
+						<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+						)
+				–
+	</div>
+			<p>whether to propagate natural width</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.22
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.22;" id="gtk_scrolled_window_get_propagate_natural_height">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_get_propagate_natural_height">
+	<span><code>gtk_scrolled_window_get_propagate_natural_height</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_scrolled_window_get_propagate_natural_height (<a title="GtkScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">GtkScrolledWindow</a> * scrolled_window)</pre>
+
+<p>Reports whether the natural height of the child will be calculated and propagated
+through the scrolled windows requested natural height.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">GtkScrolledWindow</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>whether natural height propagation is enabled.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.22
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_get_propagate_natural_height">
+	<span><code>Gtk.prototype.get_propagate_natural_height</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_propagate_natural_height(): {
+    // javascript wrapper for 'gtk_scrolled_window_get_propagate_natural_height'
+}</pre>
+
+<p>Reports whether the natural height of the child will be calculated and propagated
+through the scrolled windows requested natural height.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+					(
+						<a title="Gtk.ScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p>whether natural height propagation is enabled.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.22
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_get_propagate_natural_height">
+	<span><code>Gtk.ScrolledWindow.get_propagate_natural_height</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.ScrolledWindow.get_propagate_natural_height (self):
+    #python wrapper for 'gtk_scrolled_window_get_propagate_natural_height'</pre>
+
+<p>Reports whether the natural height of the child will be calculated and propagated
+through the scrolled windows requested natural height.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+					(
+						<a title="Gtk.ScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+										)
+								–
+			</div>
+							<p>whether natural height propagation is enabled.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.22
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.22;" id="gtk_scrolled_window_set_propagate_natural_height">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_set_propagate_natural_height">
+	<span><code>gtk_scrolled_window_set_propagate_natural_height</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_scrolled_window_set_propagate_natural_height (<a title="GtkScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">GtkScrolledWindow</a> * scrolled_window,
+                                                  <a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a> propagate)</pre>
+
+<p>Sets whether the natural height of the child should be calculated and propagated
+through the scrolled windows requested natural height.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">GtkScrolledWindow</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>propagate</code></em></i>
+				–
+	</div>
+			<p>whether to propagate natural height</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.22
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_set_propagate_natural_height">
+	<span><code>Gtk.prototype.set_propagate_natural_height</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_propagate_natural_height(propagate: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_scrolled_window_set_propagate_natural_height'
+}</pre>
+
+<p>Sets whether the natural height of the child should be calculated and propagated
+through the scrolled windows requested natural height.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+					(
+						<a title="Gtk.ScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>propagate</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>whether to propagate natural height</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.22
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scrolled_window_set_propagate_natural_height">
+	<span><code>Gtk.ScrolledWindow.set_propagate_natural_height</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.ScrolledWindow.set_propagate_natural_height (self, propagate):
+    #python wrapper for 'gtk_scrolled_window_set_propagate_natural_height'</pre>
+
+<p>Sets whether the natural height of the child should be calculated and propagated
+through the scrolled windows requested natural height.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scrolled_window</code></em></i>
+					(
+						<a title="Gtk.ScrolledWindow" href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>propagate</code></em></i>
+					(
+						<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+						)
+				–
+	</div>
+			<p>whether to propagate natural height</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.22
+		</p>
+
+
+        </div>
+
+</div>
+
+
+        
+
+            <h2 class="symbol_section">Enumerations</h2>
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="GtkPolicyType">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h3 data-hotdoc-id="GtkPolicyType">
+	<span><code>GtkPolicyType</code></span>
+</h3>
+
+
+<p>Determines how the size should be computed to achieve the one of the
+visibility mode for the scrollbars.</p>
+
+
+
+
+	<div class="members-container">
+		<h4>Members</h4>
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_POLICY_ALWAYS">
+	<div>
+		<i><em><code>GTK_POLICY_ALWAYS</code></em></i>
+		(<span class="value">0</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_POLICY_AUTOMATIC">
+	<div>
+		<i><em><code>GTK_POLICY_AUTOMATIC</code></em></i>
+		(<span class="value">1</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_POLICY_NEVER">
+	<div>
+		<i><em><code>GTK_POLICY_NEVER</code></em></i>
+		(<span class="value">2</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_POLICY_EXTERNAL">
+	<div>
+		<i><em><code>GTK_POLICY_EXTERNAL</code></em></i>
+		(<span class="value">3</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h3 data-hotdoc-id="GtkPolicyType">
+	<span><code>Gtk.PolicyType</code></span>
+</h3>
+
+
+<p>Determines how the size should be computed to achieve the one of the
+visibility mode for the scrollbars.</p>
+
+
+
+
+	<div class="members-container">
+		<h4>Members</h4>
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_POLICY_ALWAYS">
+	<div>
+		<i><em><code>Gtk.PolicyType.ALWAYS</code></em></i>
+		(<span class="value">0</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_POLICY_AUTOMATIC">
+	<div>
+		<i><em><code>Gtk.PolicyType.AUTOMATIC</code></em></i>
+		(<span class="value">1</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_POLICY_NEVER">
+	<div>
+		<i><em><code>Gtk.PolicyType.NEVER</code></em></i>
+		(<span class="value">2</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_POLICY_EXTERNAL">
+	<div>
+		<i><em><code>Gtk.PolicyType.EXTERNAL</code></em></i>
+		(<span class="value">3</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="GtkPolicyType">
+	<span><code>Gtk.PolicyType</code></span>
+</h3>
+
+
+<p>Determines how the size should be computed to achieve the one of the
+visibility mode for the scrollbars.</p>
+
+
+
+
+	<div class="members-container">
+		<h4>Members</h4>
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_POLICY_ALWAYS">
+	<div>
+		<i><em><code>Gtk.PolicyType.ALWAYS</code></em></i>
+		(<span class="value">0</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_POLICY_AUTOMATIC">
+	<div>
+		<i><em><code>Gtk.PolicyType.AUTOMATIC</code></em></i>
+		(<span class="value">1</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_POLICY_NEVER">
+	<div>
+		<i><em><code>Gtk.PolicyType.NEVER</code></em></i>
+		(<span class="value">2</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_POLICY_EXTERNAL">
+	<div>
+		<i><em><code>Gtk.PolicyType.EXTERNAL</code></em></i>
+		(<span class="value">3</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="GtkCornerType">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h3 data-hotdoc-id="GtkCornerType">
+	<span><code>GtkCornerType</code></span>
+</h3>
+
+
+<p>Specifies which corner a child widget should be placed in when packed into
+a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">GtkScrolledWindow</a>. This is effectively the opposite of where the scroll
+bars are placed.</p>
+
+
+
+
+	<div class="members-container">
+		<h4>Members</h4>
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_CORNER_TOP_LEFT">
+	<div>
+		<i><em><code>GTK_CORNER_TOP_LEFT</code></em></i>
+		(<span class="value">0</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_CORNER_BOTTOM_LEFT">
+	<div>
+		<i><em><code>GTK_CORNER_BOTTOM_LEFT</code></em></i>
+		(<span class="value">1</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_CORNER_TOP_RIGHT">
+	<div>
+		<i><em><code>GTK_CORNER_TOP_RIGHT</code></em></i>
+		(<span class="value">2</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_CORNER_BOTTOM_RIGHT">
+	<div>
+		<i><em><code>GTK_CORNER_BOTTOM_RIGHT</code></em></i>
+		(<span class="value">3</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h3 data-hotdoc-id="GtkCornerType">
+	<span><code>Gtk.CornerType</code></span>
+</h3>
+
+
+<p>Specifies which corner a child widget should be placed in when packed into
+a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a>. This is effectively the opposite of where the scroll
+bars are placed.</p>
+
+
+
+
+	<div class="members-container">
+		<h4>Members</h4>
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_CORNER_TOP_LEFT">
+	<div>
+		<i><em><code>Gtk.CornerType.TOP_LEFT</code></em></i>
+		(<span class="value">0</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_CORNER_BOTTOM_LEFT">
+	<div>
+		<i><em><code>Gtk.CornerType.BOTTOM_LEFT</code></em></i>
+		(<span class="value">1</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_CORNER_TOP_RIGHT">
+	<div>
+		<i><em><code>Gtk.CornerType.TOP_RIGHT</code></em></i>
+		(<span class="value">2</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_CORNER_BOTTOM_RIGHT">
+	<div>
+		<i><em><code>Gtk.CornerType.BOTTOM_RIGHT</code></em></i>
+		(<span class="value">3</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="GtkCornerType">
+	<span><code>Gtk.CornerType</code></span>
+</h3>
+
+
+<p>Specifies which corner a child widget should be placed in when packed into
+a <a href="gtkscrolledwindow-h.html#GtkScrolledWindow">Gtk.ScrolledWindow</a>. This is effectively the opposite of where the scroll
+bars are placed.</p>
+
+
+
+
+	<div class="members-container">
+		<h4>Members</h4>
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_CORNER_TOP_LEFT">
+	<div>
+		<i><em><code>Gtk.CornerType.TOP_LEFT</code></em></i>
+		(<span class="value">0</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_CORNER_BOTTOM_LEFT">
+	<div>
+		<i><em><code>Gtk.CornerType.BOTTOM_LEFT</code></em></i>
+		(<span class="value">1</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_CORNER_TOP_RIGHT">
+	<div>
+		<i><em><code>Gtk.CornerType.TOP_RIGHT</code></em></i>
+		(<span class="value">2</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_CORNER_BOTTOM_RIGHT">
+	<div>
+		<i><em><code>Gtk.CornerType.BOTTOM_RIGHT</code></em></i>
+		(<span class="value">3</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+
+</div>
+
+
+
+
+
+
+		
+	</div>
+	<div id="search_results">
+		<p>The results of the search are</p>
+	</div>
+	<hr>
+	<div id="footer">
+		    
+
+	</div>
+</div>
+
+<div id="toc-column">
+	
+		<div class="edit-button">
+		
+
+	</div>
+		<div id="toc-wrapper">
+		<nav id="toc"></nav>
+	</div>
+</div>
+</div>
+</main>
+
+</body>
+
+<script src="assets/js/navbar_offset_scroller.js"></script>
+</html>

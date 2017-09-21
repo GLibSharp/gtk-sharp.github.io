@@ -1,0 +1,4870 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<base href=".">
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>GtkApplication</title>
+
+<link rel="stylesheet" href="assets/css/custom_bootstrap.css" type="text/css">
+<link rel="stylesheet" href="assets/css/bootstrap-toc.min.css" type="text/css">
+<link rel="stylesheet" href="assets/css/frontend.css" type="text/css">
+<link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
+
+<link rel="stylesheet" href="assets/css/prism.css" type="text/css">
+
+<script src="assets/js/mustache.min.js"></script>
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/scrollspy.js"></script>
+<script src="assets/js/bootstrap.js"></script>
+<script src="assets/js/typeahead.jquery.min.js"></script>
+<script src="assets/js/search.js"></script>
+<script src="assets/js/isotope.pkgd.min.js"></script>
+<script src="assets/js/compare-versions.js"></script>
+<script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="assets/js/bootstrap-toc.min.js"></script>
+<script src="assets/js/jquery.touchSwipe.min.js"></script>
+<script src="assets/js/anchor.min.js"></script>
+<script src="assets/js/tag_filtering.js"></script>
+<script src="assets/js/language_switching.js"></script>
+
+<script src="assets/js/lines_around_headings.js"></script>
+
+<script src="assets/js/prism-core.js"></script>
+<script src="assets/js/prism-autoloader.js"></script>
+<script src="assets/js/prism_autoloader_path_override.js"></script>
+<script src="assets/js/trie.js"></script>
+
+
+</head>
+
+<body class="no-script
+" data-spy="scroll" data-target="#toc" data-offset="70">
+
+<script>
+$('body').removeClass('no-script');
+</script>
+
+<nav class="navbar navbar-fixed-top navbar-default" id="topnav">
+	<div class="container-fluid">
+		<div class="navbar-right">
+			<a id="toc-toggle">
+				<span class="glyphicon glyphicon-menu-right"></span>
+				<span class="glyphicon glyphicon-menu-left"></span>
+			</a>
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-wrapper" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<form action="" class="navbar-form pull-right" id="navbar-search-form">
+                               <div class="form-group has-feedback">
+                                       <input type="text" class="form-control input-sm" name="search" id="sidenav-lookup-field" placeholder="search" disabled>
+				       <span class="glyphicon glyphicon-search form-control-feedback" id="search-mgn-glass"></span>
+                               </div>
+                        </form>
+		</div>
+		<div class="navbar-header">
+			<a id="sidenav-toggle">
+				<span class="glyphicon glyphicon-menu-right"></span>
+				<span class="glyphicon glyphicon-menu-left"></span>
+			</a>
+			<a id="home-link" href="index.html" class="hotdoc-navbar-brand">
+				<img src="assets/images/home.svg" alt="Home">
+			</a>
+		</div>
+		<div class="navbar-collapse collapse" id="navbar-wrapper">
+			<ul class="nav navbar-nav" id="menu">
+							</ul>
+			<div class="hidden-xs hidden-sm navbar-text navbar-center">
+							</div>
+		</div>
+	</div>
+</nav>
+
+<main>
+<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="gtkapplication-h.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['c', 'javascript', 'python']" data-hotdoc-meta-gi-language="c">
+<script src="assets/js/utils.js"></script>
+
+<div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
+	<script src="assets/js/navigation.js"></script>
+	<script src="assets/js/sitemap.js"></script>
+</div>
+
+<div id="body">
+	<div id="main">
+				    <div id="page-description" data-hotdoc-source="gtkapplication.h.markdown" data-hotdoc-role="main">
+        <h1 id="gtkapplication-page">GtkApplication</h1>
+<p><a href="gtkapplication-h.html#GtkApplication" data-gi-href-javascript="gtkapplication-h.html#GtkApplication" data-gi-title-javascript="Gtk.Application" data-gi-href-python="gtkapplication-h.html#GtkApplication" data-gi-title-python="Gtk.Application">GtkApplication</a> is a class that handles many important aspects
+of a GTK+ application in a convenient fashion, without enforcing
+a one-size-fits-all application model.</p>
+<p>Currently, GtkApplication handles GTK+ initialization, application
+uniqueness, session management, provides some basic scriptability and
+desktop shell integration by exporting actions and menus and manages a
+list of toplevel windows whose life-cycle is automatically tied to the
+life-cycle of your application.</p>
+<p>While GtkApplication works fine with plain <a href="gtkwindow-h.html#GtkWindow" data-gi-href-javascript="gtkwindow-h.html#GtkWindow" data-gi-title-javascript="Gtk.Window" data-gi-href-python="gtkwindow-h.html#GtkWindow" data-gi-title-python="Gtk.Window">GtkWindow</a>, it is recommended
+to use it together with <a href="gtkapplicationwindow-h.html#GtkApplicationWindow" data-gi-href-javascript="gtkapplicationwindow-h.html#GtkApplicationWindow" data-gi-title-javascript="Gtk.ApplicationWindow" data-gi-href-python="gtkapplicationwindow-h.html#GtkApplicationWindow" data-gi-title-python="Gtk.ApplicationWindow">GtkApplicationWindow</a>.</p>
+<p>When GDK threads are enabled, GtkApplication will acquire the GDK
+lock when invoking actions that arrive from other processes.  The GDK
+lock is not touched for local action invocations.  In order to have
+actions invoked in a predictable context it is therefore recommended
+that the GDK lock be held while invoking actions locally with
+<a href="https://developer.gnome.org/gio/unstable/GActionGroup.html#g-action-group-activate-action">g_action_group_activate_action</a>.  The same applies to actions
+associated with <a href="gtkapplicationwindow-h.html#GtkApplicationWindow" data-gi-href-javascript="gtkapplicationwindow-h.html#GtkApplicationWindow" data-gi-title-javascript="Gtk.ApplicationWindow" data-gi-href-python="gtkapplicationwindow-h.html#GtkApplicationWindow" data-gi-title-python="Gtk.ApplicationWindow">GtkApplicationWindow</a> and to the “activate” and
+“open” <a href="https://developer.gnome.org/gio/unstable/GApplication.html#GApplication-struct" data-gi-href-javascript="https://developer.gnome.org/gio/unstable/GApplication.html#GApplication-struct" data-gi-title-javascript="Gio.Application" data-gi-href-python="https://developer.gnome.org/gio/unstable/GApplication.html#GApplication-struct" data-gi-title-python="Gio.Application">GApplication</a> methods.</p>
+<h2 id="automatic-resources-automaticresources">Automatic resources # {#automatic-resources}</h2>
+<p><a href="gtkapplication-h.html#GtkApplication" data-gi-href-javascript="gtkapplication-h.html#GtkApplication" data-gi-title-javascript="Gtk.Application" data-gi-href-python="gtkapplication-h.html#GtkApplication" data-gi-title-python="Gtk.Application">GtkApplication</a> will automatically load menus from the <a href="gtkbuilder-h.html#GtkBuilder" data-gi-href-javascript="gtkbuilder-h.html#GtkBuilder" data-gi-title-javascript="Gtk.Builder" data-gi-href-python="gtkbuilder-h.html#GtkBuilder" data-gi-title-python="Gtk.Builder">GtkBuilder</a>
+resource located at "gtk/menus.ui", relative to the application's
+resource base path (see <a href="https://developer.gnome.org/gio/unstable/GApplication.html#g-application-set-resource-base-path">g_application_set_resource_base_path</a>).  The
+menu with the ID "app-menu" is taken as the application's app menu
+and the menu with the ID "menubar" is taken as the application's
+menubar.  Additional menus (most interesting submenus) can be named
+and accessed via <a href="gtkapplication-h.html#gtk_application_get_menu_by_id" data-gi-href-javascript="gtkapplication-h.html#gtk_application_get_menu_by_id" data-gi-title-javascript="Gtk.prototype.get_menu_by_id" data-gi-href-python="gtkapplication-h.html#gtk_application_get_menu_by_id" data-gi-title-python="Gtk.Application.get_menu_by_id">gtk_application_get_menu_by_id</a> which allows for
+dynamic population of a part of the menu structure.</p>
+<p>If the resources "gtk/menus-appmenu.ui" or "gtk/menus-traditional.ui" are
+present then these files will be used in preference, depending on the value
+of <a href="gtkapplication-h.html#gtk_application_prefers_app_menu" data-gi-href-javascript="gtkapplication-h.html#gtk_application_prefers_app_menu" data-gi-title-javascript="Gtk.prototype.prefers_app_menu" data-gi-href-python="gtkapplication-h.html#gtk_application_prefers_app_menu" data-gi-title-python="Gtk.Application.prefers_app_menu">gtk_application_prefers_app_menu</a>. If the resource "gtk/menus-common.ui"
+is present it will be loaded as well. This is useful for storing items that
+are referenced from both "gtk/menus-appmenu.ui" and
+"gtk/menus-traditional.ui".</p>
+<p>It is also possible to provide the menus manually using
+<a href="gtkapplication-h.html#gtk_application_set_app_menu" data-gi-href-javascript="gtkapplication-h.html#gtk_application_set_app_menu" data-gi-title-javascript="Gtk.prototype.set_app_menu" data-gi-href-python="gtkapplication-h.html#gtk_application_set_app_menu" data-gi-title-python="Gtk.Application.set_app_menu">gtk_application_set_app_menu</a> and <a href="gtkapplication-h.html#gtk_application_set_menubar" data-gi-href-javascript="gtkapplication-h.html#gtk_application_set_menubar" data-gi-title-javascript="Gtk.prototype.set_menubar" data-gi-href-python="gtkapplication-h.html#gtk_application_set_menubar" data-gi-title-python="Gtk.Application.set_menubar">gtk_application_set_menubar</a>.</p>
+<p><a href="gtkapplication-h.html#GtkApplication" data-gi-href-javascript="gtkapplication-h.html#GtkApplication" data-gi-title-javascript="Gtk.Application" data-gi-href-python="gtkapplication-h.html#GtkApplication" data-gi-title-python="Gtk.Application">GtkApplication</a> will also automatically setup an icon search path for
+the default icon theme by appending "icons" to the resource base
+path.  This allows your application to easily store its icons as
+resources.  See <a href="gtkicontheme-h.html#gtk_icon_theme_add_resource_path" data-gi-href-javascript="gtkicontheme-h.html#gtk_icon_theme_add_resource_path" data-gi-title-javascript="Gtk.prototype.add_resource_path" data-gi-href-python="gtkicontheme-h.html#gtk_icon_theme_add_resource_path" data-gi-title-python="Gtk.IconTheme.add_resource_path">gtk_icon_theme_add_resource_path</a> for more
+information.</p>
+<p>If there is a resource located at "gtk/help-overlay.ui" which
+defines a <a href="gtkshortcutswindow-h.html#GtkShortcutsWindow" data-gi-href-javascript="gtkshortcutswindow-h.html#GtkShortcutsWindow" data-gi-title-javascript="Gtk.ShortcutsWindow" data-gi-href-python="gtkshortcutswindow-h.html#GtkShortcutsWindow" data-gi-title-python="Gtk.ShortcutsWindow">GtkShortcutsWindow</a> with ID "help_overlay" then GtkApplication
+associates an instance of this shortcuts window with each
+<a href="gtkapplicationwindow-h.html#GtkApplicationWindow" data-gi-href-javascript="gtkapplicationwindow-h.html#GtkApplicationWindow" data-gi-title-javascript="Gtk.ApplicationWindow" data-gi-href-python="gtkapplicationwindow-h.html#GtkApplicationWindow" data-gi-title-python="Gtk.ApplicationWindow">GtkApplicationWindow</a> and sets up keyboard accelerators (Control-F1
+and Control-?) to open it. To create a menu item that displays the
+shortcuts window, associate the item with the action win.show-help-overlay.</p>
+<h2 id="a-simple-application-gtkapplication">A simple application # {#gtkapplication}</h2>
+<p><a href="https://git.gnome.org/browse/gtk+/tree/examples/bp/bloatpad.c">A simple example</a></p>
+<p>GtkApplication optionally registers with a session manager
+of the users session (if you set the <a href="https://developer.gnome.org/gtk3/GtkApplication.html#GtkApplication--register-session">GtkApplication:register-session</a>
+property) and offers various functionality related to the session
+life-cycle.</p>
+<p>An application can block various ways to end the session with
+the <a href="gtkapplication-h.html#gtk_application_inhibit" data-gi-href-javascript="gtkapplication-h.html#gtk_application_inhibit" data-gi-title-javascript="Gtk.prototype.inhibit" data-gi-href-python="gtkapplication-h.html#gtk_application_inhibit" data-gi-title-python="Gtk.Application.inhibit">gtk_application_inhibit</a> function. Typical use cases for
+this kind of inhibiting are long-running, uninterruptible operations,
+such as burning a CD or performing a disk backup. The session
+manager may not honor the inhibitor, but it can be expected to
+inform the user about the negative consequences of ending the
+session while inhibitors are present.</p>
+<h2 id="see-also-seealso">See Also # {#seealso}</h2>
+<p><a href="https://wiki.gnome.org/HowDoI/GtkApplication">HowDoI: Using GtkApplication</a>,
+<a href="https://developer.gnome.org/gtk3/stable/gtk-getting-started.html#id-1.2.3.3">Getting Started with GTK+: Basics</a></p>
+
+    </div>
+        
+        
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="GtkApplication">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h2 data-hotdoc-id="GtkApplication">
+	<span><code>GtkApplication</code></span>
+</h2>
+
+
+<div class="hierarchy_container">
+	<div class="hierarchy_details">
+<pre>
+<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object">GObject</a>
+    <span class="lineart">╰──</span><a title="GApplication" href="https://developer.gnome.org/gio/unstable/GApplication.html#GApplication-struct" data-gi-href-javascript="https://developer.gnome.org/gio/unstable/GApplication.html#GApplication-struct" data-gi-title-javascript="Gio.Application" data-gi-href-python="https://developer.gnome.org/gio/unstable/GApplication.html#GApplication-struct" data-gi-title-python="Gio.Application">GApplication</a>
+        <span class="lineart">╰──</span>GtkApplication
+</pre>
+
+</div>
+
+</div>
+
+<div class="interfaces_container">
+	
+<p><b>Implemented interfaces:</b>
+    <a title="GActionGroup" href="https://developer.gnome.org/gio/unstable/GActionGroup.html#GActionGroup-struct" data-gi-href-javascript="https://developer.gnome.org/gio/unstable/GActionGroup.html#GActionGroup-struct" data-gi-title-javascript="Gio.ActionGroup" data-gi-href-python="https://developer.gnome.org/gio/unstable/GActionGroup.html#GActionGroup-struct" data-gi-title-python="Gio.ActionGroup">GActionGroup</a>, <a title="GActionMap" href="https://developer.gnome.org/gio/unstable/GActionMap.html#GActionMap-struct" data-gi-href-javascript="https://developer.gnome.org/gio/unstable/GActionMap.html#GActionMap-struct" data-gi-title-javascript="Gio.ActionMap" data-gi-href-python="https://developer.gnome.org/gio/unstable/GActionMap.html#GActionMap-struct" data-gi-title-python="Gio.ActionMap">GActionMap</a>
+</p>
+
+</div>
+
+
+
+
+	<div class="members-container">
+		<h3>Members</h3>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkApplication.parent">
+	<div>
+		<i><em><code>parent</code></em></i>
+		(<a title="GApplication" href="https://developer.gnome.org/gio/unstable/GApplication.html#GApplication-struct" data-gi-href-javascript="https://developer.gnome.org/gio/unstable/GApplication.html#GApplication-struct" data-gi-title-javascript="Gio.Application" data-gi-href-python="https://developer.gnome.org/gio/unstable/GApplication.html#GApplication-struct" data-gi-title-python="Gio.Application">GApplication</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+<h3>Class structure</h3>
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="GtkApplicationClass">
+	<span><code>GtkApplicationClass</code></span>
+</h4>
+
+
+
+
+
+	<div class="members-container">
+		<h5>Fields</h5>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkApplicationClass.parent_class">
+	<div>
+		<i><em><code>parent_class</code></em></i>
+		(<a title="GApplicationClass" href="https://developer.gnome.org/gio/unstable/GApplication.html#GApplicationClass">GApplicationClass</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h3>
+	Gtk.ApplicationClass
+</h3>
+
+
+
+
+
+	<div class="members-container">
+		<h5>Attributes</h5>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkApplicationClass.parent_class">
+	<div>
+		<i><em><code>ApplicationClass.parent_class</code></em></i>
+		(<a title="Gio.ApplicationClass" href="https://developer.gnome.org/gio/unstable/GApplication.html#GApplicationClass">Gio.ApplicationClass</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3>
+	Gtk.ApplicationClass
+</h3>
+
+
+
+
+
+	<div class="members-container">
+		<h5>Attributes</h5>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkApplicationClass.parent_class">
+	<div>
+		<i><em><code>ApplicationClass.parent_class</code></em></i>
+		(<a title="Gio.ApplicationClass" href="https://developer.gnome.org/gio/unstable/GApplication.html#GApplicationClass">Gio.ApplicationClass</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h2 data-hotdoc-id="GtkApplication">
+	<span><code>GtkApplication</code></span>
+</h2>
+
+
+<div class="hierarchy_container">
+	<div class="hierarchy_details">
+<pre>
+<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object">GObject</a>
+    <span class="lineart">╰──</span><a title="GApplication" href="https://developer.gnome.org/gio/unstable/GApplication.html#GApplication-struct" data-gi-href-javascript="https://developer.gnome.org/gio/unstable/GApplication.html#GApplication-struct" data-gi-title-javascript="Gio.Application" data-gi-href-python="https://developer.gnome.org/gio/unstable/GApplication.html#GApplication-struct" data-gi-title-python="Gio.Application">GApplication</a>
+        <span class="lineart">╰──</span>GtkApplication
+</pre>
+
+</div>
+
+</div>
+
+<div class="interfaces_container">
+	
+<p><b>Implemented interfaces:</b>
+    <a title="GActionGroup" href="https://developer.gnome.org/gio/unstable/GActionGroup.html#GActionGroup-struct" data-gi-href-javascript="https://developer.gnome.org/gio/unstable/GActionGroup.html#GActionGroup-struct" data-gi-title-javascript="Gio.ActionGroup" data-gi-href-python="https://developer.gnome.org/gio/unstable/GActionGroup.html#GActionGroup-struct" data-gi-title-python="Gio.ActionGroup">GActionGroup</a>, <a title="GActionMap" href="https://developer.gnome.org/gio/unstable/GActionMap.html#GActionMap-struct" data-gi-href-javascript="https://developer.gnome.org/gio/unstable/GActionMap.html#GActionMap-struct" data-gi-title-javascript="Gio.ActionMap" data-gi-href-python="https://developer.gnome.org/gio/unstable/GActionMap.html#GActionMap-struct" data-gi-title-python="Gio.ActionMap">GActionMap</a>
+</p>
+
+</div>
+
+
+
+
+	<div class="members-container">
+		<h3>Members</h3>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkApplication.parent">
+	<div>
+		<i><em><code>parent</code></em></i>
+		(<a title="GApplication" href="https://developer.gnome.org/gio/unstable/GApplication.html#GApplication-struct" data-gi-href-javascript="https://developer.gnome.org/gio/unstable/GApplication.html#GApplication-struct" data-gi-title-javascript="Gio.Application" data-gi-href-python="https://developer.gnome.org/gio/unstable/GApplication.html#GApplication-struct" data-gi-title-python="Gio.Application">GApplication</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h2 data-hotdoc-id="GtkApplication">
+	<span><code>GtkApplication</code></span>
+</h2>
+
+
+<div class="hierarchy_container">
+	<div class="hierarchy_details">
+<pre>
+<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object">GObject</a>
+    <span class="lineart">╰──</span><a title="GApplication" href="https://developer.gnome.org/gio/unstable/GApplication.html#GApplication-struct" data-gi-href-javascript="https://developer.gnome.org/gio/unstable/GApplication.html#GApplication-struct" data-gi-title-javascript="Gio.Application" data-gi-href-python="https://developer.gnome.org/gio/unstable/GApplication.html#GApplication-struct" data-gi-title-python="Gio.Application">GApplication</a>
+        <span class="lineart">╰──</span>GtkApplication
+</pre>
+
+</div>
+
+</div>
+
+<div class="interfaces_container">
+	
+<p><b>Implemented interfaces:</b>
+    <a title="GActionGroup" href="https://developer.gnome.org/gio/unstable/GActionGroup.html#GActionGroup-struct" data-gi-href-javascript="https://developer.gnome.org/gio/unstable/GActionGroup.html#GActionGroup-struct" data-gi-title-javascript="Gio.ActionGroup" data-gi-href-python="https://developer.gnome.org/gio/unstable/GActionGroup.html#GActionGroup-struct" data-gi-title-python="Gio.ActionGroup">GActionGroup</a>, <a title="GActionMap" href="https://developer.gnome.org/gio/unstable/GActionMap.html#GActionMap-struct" data-gi-href-javascript="https://developer.gnome.org/gio/unstable/GActionMap.html#GActionMap-struct" data-gi-title-javascript="Gio.ActionMap" data-gi-href-python="https://developer.gnome.org/gio/unstable/GActionMap.html#GActionMap-struct" data-gi-title-python="Gio.ActionMap">GActionMap</a>
+</p>
+
+</div>
+
+
+
+
+	<div class="members-container">
+		<h3>Members</h3>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkApplication.parent">
+	<div>
+		<i><em><code>parent</code></em></i>
+		(<a title="GApplication" href="https://developer.gnome.org/gio/unstable/GApplication.html#GApplication-struct" data-gi-href-javascript="https://developer.gnome.org/gio/unstable/GApplication.html#GApplication-struct" data-gi-title-javascript="Gio.Application" data-gi-href-python="https://developer.gnome.org/gio/unstable/GApplication.html#GApplication-struct" data-gi-title-python="Gio.Application">GApplication</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+
+</div>
+
+
+            <h3 class="symbol_section">Constructors</h3>
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_application_new">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_application_new">
+	<span><code>gtk_application_new</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkApplication" href="gtkapplication-h.html#GtkApplication">GtkApplication</a> *
+gtk_application_new (const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * application_id,
+                     <a title="GApplicationFlags" href="https://developer.gnome.org/gio/unstable/GApplication.html#GApplicationFlags">GApplicationFlags</a> flags)</pre>
+
+<p>Creates a new <a href="gtkapplication-h.html#GtkApplication">GtkApplication</a> instance.</p>
+<p>When using <a href="gtkapplication-h.html#GtkApplication">GtkApplication</a>, it is not necessary to call <a href="gtkmain-h.html#gtk_init">gtk_init</a>
+manually. It is called as soon as the application gets registered as
+the primary instance.</p>
+<p>Concretely, <a href="gtkmain-h.html#gtk_init">gtk_init</a> is called in the default handler for the
+<a href="https://developer.gnome.org/gio/unstable/GApplication.html#GApplication-startup">startup</a> signal. Therefore, <a href="gtkapplication-h.html#GtkApplication">GtkApplication</a> subclasses should
+chain up in their <a href="https://developer.gnome.org/gio/unstable/GApplication.html#GApplication-startup">startup</a> handler before using any GTK+ API.</p>
+<p>Note that commandline arguments are not passed to <a href="gtkmain-h.html#gtk_init">gtk_init</a>.
+All GTK+ functionality that is available via commandline arguments
+can also be achieved by setting suitable environment variables
+such as <code>G_DEBUG</code>, so this should not be a big
+problem. If you absolutely must support GTK+ commandline arguments,
+you can explicitly call <a href="gtkmain-h.html#gtk_init">gtk_init</a> before creating the application
+instance.</p>
+<p>If non-%NULL, the application ID must be valid.  See
+<a href="https://developer.gnome.org/gio/unstable/GApplication.html#g-application-id-is-valid">g_application_id_is_valid</a>.</p>
+<p>If no application ID is given then some features (most notably application
+uniqueness) will be disabled. A null application ID is only allowed with
+GTK+ 3.6 or later.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>application_id</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>The application ID.</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>flags</code></em></i>
+				–
+	</div>
+			<p>the application flags</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>a new <a href="gtkapplication-h.html#GtkApplication">GtkApplication</a> instance</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_application_new">
+	<span><code>Gtk.prototype.new</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.new(application_id: <a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>, flags: <a title="Gio.ApplicationFlags" href="https://developer.gnome.org/gio/unstable/GApplication.html#GApplicationFlags">Gio.ApplicationFlags</a>): {
+    // javascript wrapper for 'gtk_application_new'
+}</pre>
+
+<p>Creates a new <a href="gtkapplication-h.html#GtkApplication">Gtk.Application</a> instance.</p>
+<p>When using <a href="gtkapplication-h.html#GtkApplication">Gtk.Application</a>, it is not necessary to call <a href="gtkmain-h.html#gtk_init">prototype.init</a>
+manually. It is called as soon as the application gets registered as
+the primary instance.</p>
+<p>Concretely, <a href="gtkmain-h.html#gtk_init">prototype.init</a> is called in the default handler for the
+<a href="https://developer.gnome.org/gio/unstable/GApplication.html#GApplication-startup">startup</a> signal. Therefore, <a href="gtkapplication-h.html#GtkApplication">Gtk.Application</a> subclasses should
+chain up in their <a href="https://developer.gnome.org/gio/unstable/GApplication.html#GApplication-startup">startup</a> handler before using any GTK+ API.</p>
+<p>Note that commandline arguments are not passed to <a href="gtkmain-h.html#gtk_init">prototype.init</a>.
+All GTK+ functionality that is available via commandline arguments
+can also be achieved by setting suitable environment variables
+such as <code>G_DEBUG</code>, so this should not be a big
+problem. If you absolutely must support GTK+ commandline arguments,
+you can explicitly call <a href="gtkmain-h.html#gtk_init">prototype.init</a> before creating the application
+instance.</p>
+<p>If non-%NULL, the application ID must be valid.  See
+<a href="https://developer.gnome.org/gio/unstable/GApplication.html#g-application-id-is-valid">Gio.prototype.id_is_valid</a>.</p>
+<p>If no application ID is given then some features (most notably application
+uniqueness) will be disabled. A null application ID is only allowed with
+GTK+ 3.6 or later.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>application_id</code></em></i>
+					(
+						<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
+						)
+				–
+	</div>
+			<p>The application ID.</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>flags</code></em></i>
+					(
+						<a title="Gio.ApplicationFlags" href="https://developer.gnome.org/gio/unstable/GApplication.html#GApplicationFlags">Gio.ApplicationFlags</a>
+						)
+				–
+	</div>
+			<p>the application flags</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Application" href="gtkapplication-h.html#GtkApplication">Gtk.Application</a>
+										)
+								–
+			</div>
+							<p>a new <a href="gtkapplication-h.html#GtkApplication">Gtk.Application</a> instance</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_application_new">
+	<span><code>Gtk.Application.new</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Application.new (application_id, flags):
+    #python wrapper for 'gtk_application_new'</pre>
+
+<p>Creates a new <a href="gtkapplication-h.html#GtkApplication">Gtk.Application</a> instance.</p>
+<p>When using <a href="gtkapplication-h.html#GtkApplication">Gtk.Application</a>, it is not necessary to call <a href="gtkmain-h.html#gtk_init">Gtk.init</a>
+manually. It is called as soon as the application gets registered as
+the primary instance.</p>
+<p>Concretely, <a href="gtkmain-h.html#gtk_init">Gtk.init</a> is called in the default handler for the
+<a href="https://developer.gnome.org/gio/unstable/GApplication.html#GApplication-startup">startup</a> signal. Therefore, <a href="gtkapplication-h.html#GtkApplication">Gtk.Application</a> subclasses should
+chain up in their <a href="https://developer.gnome.org/gio/unstable/GApplication.html#GApplication-startup">startup</a> handler before using any GTK+ API.</p>
+<p>Note that commandline arguments are not passed to <a href="gtkmain-h.html#gtk_init">Gtk.init</a>.
+All GTK+ functionality that is available via commandline arguments
+can also be achieved by setting suitable environment variables
+such as <code>G_DEBUG</code>, so this should not be a big
+problem. If you absolutely must support GTK+ commandline arguments,
+you can explicitly call <a href="gtkmain-h.html#gtk_init">Gtk.init</a> before creating the application
+instance.</p>
+<p>If non-%NULL, the application ID must be valid.  See
+<a href="https://developer.gnome.org/gio/unstable/GApplication.html#g-application-id-is-valid">Gio.Application.id_is_valid</a>.</p>
+<p>If no application ID is given then some features (most notably application
+uniqueness) will be disabled. A null application ID is only allowed with
+GTK+ 3.6 or later.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>application_id</code></em></i>
+					(
+						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
+						)
+				–
+	</div>
+			<p>The application ID.</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>flags</code></em></i>
+					(
+						<a title="Gio.ApplicationFlags" href="https://developer.gnome.org/gio/unstable/GApplication.html#GApplicationFlags">Gio.ApplicationFlags</a>
+						)
+				–
+	</div>
+			<p>the application flags</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Application" href="gtkapplication-h.html#GtkApplication">Gtk.Application</a>
+										)
+								–
+			</div>
+							<p>a new <a href="gtkapplication-h.html#GtkApplication">Gtk.Application</a> instance</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+
+</div>
+
+
+            <h3 class="symbol_section">Methods</h3>
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_application_add_window">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_application_add_window">
+	<span><code>gtk_application_add_window</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_application_add_window (<a title="GtkApplication" href="gtkapplication-h.html#GtkApplication">GtkApplication</a> * application,
+                            <a title="GtkWindow" href="gtkwindow-h.html#GtkWindow">GtkWindow</a> * window)</pre>
+
+<p>Adds a window to <em>application</em>.</p>
+<p>This call can only happen after the <em>application</em> has started;
+typically, you should add new application windows in response
+to the emission of the <a href="https://developer.gnome.org/gio/unstable/GApplication.html#GApplication-activate">activate</a> signal.</p>
+<p>This call is equivalent to setting the <a href="https://developer.gnome.org/gtk3/GtkWindow.html#GtkWindow--application">application</a>
+property of <em>window</em> to <em>application</em>.</p>
+<p>Normally, the connection between the application and the window
+will remain until the window is destroyed, but you can explicitly
+remove it with <a href="gtkapplication-h.html#gtk_application_remove_window">gtk_application_remove_window</a>.</p>
+<p>GTK+ will keep the <em>application</em> running as long as it has
+any windows.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>application</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkapplication-h.html#GtkApplication">GtkApplication</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>window</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkwindow-h.html#GtkWindow">GtkWindow</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_application_add_window">
+	<span><code>Gtk.prototype.add_window</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.add_window(window: <a title="Gtk.Window" href="gtkwindow-h.html#GtkWindow">Gtk.Window</a>): {
+    // javascript wrapper for 'gtk_application_add_window'
+}</pre>
+
+<p>Adds a window to <em>application</em>.</p>
+<p>This call can only happen after the <em>application</em> has started;
+typically, you should add new application windows in response
+to the emission of the <a href="https://developer.gnome.org/gio/unstable/GApplication.html#GApplication-activate">activate</a> signal.</p>
+<p>This call is equivalent to setting the <a href="https://developer.gnome.org/gtk3/GtkWindow.html#GtkWindow--application">application</a>
+property of <em>window</em> to <em>application</em>.</p>
+<p>Normally, the connection between the application and the window
+will remain until the window is destroyed, but you can explicitly
+remove it with <a href="gtkapplication-h.html#gtk_application_remove_window">Gtk.prototype.remove_window</a>.</p>
+<p>GTK+ will keep the <em>application</em> running as long as it has
+any windows.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>application</code></em></i>
+					(
+						<a title="Gtk.Application" href="gtkapplication-h.html#GtkApplication">Gtk.Application</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkapplication-h.html#GtkApplication">Gtk.Application</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>window</code></em></i>
+					(
+						<a title="Gtk.Window" href="gtkwindow-h.html#GtkWindow">Gtk.Window</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkwindow-h.html#GtkWindow">Gtk.Window</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_application_add_window">
+	<span><code>Gtk.Application.add_window</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Application.add_window (self, window):
+    #python wrapper for 'gtk_application_add_window'</pre>
+
+<p>Adds a window to <em>application</em>.</p>
+<p>This call can only happen after the <em>application</em> has started;
+typically, you should add new application windows in response
+to the emission of the <a href="https://developer.gnome.org/gio/unstable/GApplication.html#GApplication-activate">activate</a> signal.</p>
+<p>This call is equivalent to setting the <a href="https://developer.gnome.org/gtk3/GtkWindow.html#GtkWindow--application">application</a>
+property of <em>window</em> to <em>application</em>.</p>
+<p>Normally, the connection between the application and the window
+will remain until the window is destroyed, but you can explicitly
+remove it with <a href="gtkapplication-h.html#gtk_application_remove_window">Gtk.Application.remove_window</a>.</p>
+<p>GTK+ will keep the <em>application</em> running as long as it has
+any windows.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>application</code></em></i>
+					(
+						<a title="Gtk.Application" href="gtkapplication-h.html#GtkApplication">Gtk.Application</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkapplication-h.html#GtkApplication">Gtk.Application</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>window</code></em></i>
+					(
+						<a title="Gtk.Window" href="gtkwindow-h.html#GtkWindow">Gtk.Window</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkwindow-h.html#GtkWindow">Gtk.Window</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_application_remove_window">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_application_remove_window">
+	<span><code>gtk_application_remove_window</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_application_remove_window (<a title="GtkApplication" href="gtkapplication-h.html#GtkApplication">GtkApplication</a> * application,
+                               <a title="GtkWindow" href="gtkwindow-h.html#GtkWindow">GtkWindow</a> * window)</pre>
+
+<p>Remove a window from <em>application</em>.</p>
+<p>If <em>window</em> belongs to <em>application</em> then this call is equivalent to
+setting the <a href="https://developer.gnome.org/gtk3/GtkWindow.html#GtkWindow--application">application</a> property of <em>window</em> to
+<a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a>.</p>
+<p>The application may stop running as a result of a call to this
+function.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>application</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkapplication-h.html#GtkApplication">GtkApplication</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>window</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkwindow-h.html#GtkWindow">GtkWindow</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_application_remove_window">
+	<span><code>Gtk.prototype.remove_window</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.remove_window(window: <a title="Gtk.Window" href="gtkwindow-h.html#GtkWindow">Gtk.Window</a>): {
+    // javascript wrapper for 'gtk_application_remove_window'
+}</pre>
+
+<p>Remove a window from <em>application</em>.</p>
+<p>If <em>window</em> belongs to <em>application</em> then this call is equivalent to
+setting the <a href="https://developer.gnome.org/gtk3/GtkWindow.html#GtkWindow--application">application</a> property of <em>window</em> to
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a>.</p>
+<p>The application may stop running as a result of a call to this
+function.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>application</code></em></i>
+					(
+						<a title="Gtk.Application" href="gtkapplication-h.html#GtkApplication">Gtk.Application</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkapplication-h.html#GtkApplication">Gtk.Application</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>window</code></em></i>
+					(
+						<a title="Gtk.Window" href="gtkwindow-h.html#GtkWindow">Gtk.Window</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkwindow-h.html#GtkWindow">Gtk.Window</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_application_remove_window">
+	<span><code>Gtk.Application.remove_window</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Application.remove_window (self, window):
+    #python wrapper for 'gtk_application_remove_window'</pre>
+
+<p>Remove a window from <em>application</em>.</p>
+<p>If <em>window</em> belongs to <em>application</em> then this call is equivalent to
+setting the <a href="https://developer.gnome.org/gtk3/GtkWindow.html#GtkWindow--application">application</a> property of <em>window</em> to
+<a href="https://docs.python.org/3/library/constants.html#None">None</a>.</p>
+<p>The application may stop running as a result of a call to this
+function.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>application</code></em></i>
+					(
+						<a title="Gtk.Application" href="gtkapplication-h.html#GtkApplication">Gtk.Application</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkapplication-h.html#GtkApplication">Gtk.Application</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>window</code></em></i>
+					(
+						<a title="Gtk.Window" href="gtkwindow-h.html#GtkWindow">Gtk.Window</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkwindow-h.html#GtkWindow">Gtk.Window</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_application_get_windows">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_application_get_windows">
+	<span><code>gtk_application_get_windows</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GList" href="https://developer.gnome.org/glib/unstable/glib-Doubly-Linked-Lists.html#GList">GList</a> *
+gtk_application_get_windows (<a title="GtkApplication" href="gtkapplication-h.html#GtkApplication">GtkApplication</a> * application)</pre>
+
+<p>Gets a list of the <a href="gtkwindow-h.html#GtkWindow">GtkWindow</a> associated with <em>application</em>.</p>
+<p>The list is sorted by most recently focused window, such that the first
+element is the currently focused window. (Useful for choosing a parent
+for a transient window.)</p>
+<p>The list that is returned should not be modified in any way. It will
+only remain valid until the next focus change or window creation or
+deletion.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>application</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkapplication-h.html#GtkApplication">GtkApplication</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					
+										
+<span class="annotation">[<abbr title="Generic and defining element of containers and arrays"><span class="acronym">element-type</span></abbr> GtkWindow]</span>
+<span class="annotation">[<abbr title="Don't free data after the code is done"><span class="acronym">transfer: none</span></abbr>]</span>
+
+										)
+								–
+			</div>
+							<p>a <a href="https://developer.gnome.org/glib/unstable/glib-Doubly-Linked-Lists.html#GList">GList</a> of <a href="gtkwindow-h.html#GtkWindow">GtkWindow</a></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_application_get_windows">
+	<span><code>Gtk.prototype.get_windows</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_windows(): {
+    // javascript wrapper for 'gtk_application_get_windows'
+}</pre>
+
+<p>Gets a list of the <a href="gtkwindow-h.html#GtkWindow">Gtk.Window</a> associated with <em>application</em>.</p>
+<p>The list is sorted by most recently focused window, such that the first
+element is the currently focused window. (Useful for choosing a parent
+for a transient window.)</p>
+<p>The list that is returned should not be modified in any way. It will
+only remain valid until the next focus change or window creation or
+deletion.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>application</code></em></i>
+					(
+						<a title="Gtk.Application" href="gtkapplication-h.html#GtkApplication">Gtk.Application</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkapplication-h.html#GtkApplication">Gtk.Application</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					[ <a title="Gtk.Window" href="gtkwindow-h.html#GtkWindow">Gtk.Window</a> ]
+										)
+								–
+			</div>
+							<p>a <a href="https://developer.gnome.org/glib/unstable/glib-Doubly-Linked-Lists.html#GList">GLib.List</a> of <a href="gtkwindow-h.html#GtkWindow">Gtk.Window</a></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_application_get_windows">
+	<span><code>Gtk.Application.get_windows</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Application.get_windows (self):
+    #python wrapper for 'gtk_application_get_windows'</pre>
+
+<p>Gets a list of the <a href="gtkwindow-h.html#GtkWindow">Gtk.Window</a> associated with <em>application</em>.</p>
+<p>The list is sorted by most recently focused window, such that the first
+element is the currently focused window. (Useful for choosing a parent
+for a transient window.)</p>
+<p>The list that is returned should not be modified in any way. It will
+only remain valid until the next focus change or window creation or
+deletion.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>application</code></em></i>
+					(
+						<a title="Gtk.Application" href="gtkapplication-h.html#GtkApplication">Gtk.Application</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkapplication-h.html#GtkApplication">Gtk.Application</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					[ <a title="Gtk.Window" href="gtkwindow-h.html#GtkWindow">Gtk.Window</a> ]
+										)
+								–
+			</div>
+							<p>a <a href="https://developer.gnome.org/glib/unstable/glib-Doubly-Linked-Lists.html#GList">GLib.List</a> of <a href="gtkwindow-h.html#GtkWindow">Gtk.Window</a></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.6;" id="gtk_application_get_window_by_id">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_application_get_window_by_id">
+	<span><code>gtk_application_get_window_by_id</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkWindow" href="gtkwindow-h.html#GtkWindow">GtkWindow</a> *
+gtk_application_get_window_by_id (<a title="GtkApplication" href="gtkapplication-h.html#GtkApplication">GtkApplication</a> * application,
+                                  <a title="guint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint">guint</a> id)</pre>
+
+<p>Returns the <a href="gtkapplicationwindow-h.html#GtkApplicationWindow">GtkApplicationWindow</a> with the given ID.</p>
+<p>The ID of a <a href="gtkapplicationwindow-h.html#GtkApplicationWindow">GtkApplicationWindow</a> can be retrieved with
+<a href="gtkapplicationwindow-h.html#gtk_application_window_get_id">gtk_application_window_get_id</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>application</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkapplication-h.html#GtkApplication">GtkApplication</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>id</code></em></i>
+				–
+	</div>
+			<p>an identifier number</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					
+										
+<span class="annotation">[<abbr title="NULL may be passed to the value"><span class="acronym">nullable</span></abbr>]</span>
+<span class="annotation">[<abbr title="Don't free data after the code is done"><span class="acronym">transfer: none</span></abbr>]</span>
+
+										)
+								–
+			</div>
+							<p>the window with ID <em>id</em>, or
+<a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> if there is no window with this ID</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.6
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_application_get_window_by_id">
+	<span><code>Gtk.prototype.get_window_by_id</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_window_by_id(id: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_application_get_window_by_id'
+}</pre>
+
+<p>Returns the <a href="gtkapplicationwindow-h.html#GtkApplicationWindow">Gtk.ApplicationWindow</a> with the given ID.</p>
+<p>The ID of a <a href="gtkapplicationwindow-h.html#GtkApplicationWindow">Gtk.ApplicationWindow</a> can be retrieved with
+<a href="gtkapplicationwindow-h.html#gtk_application_window_get_id">Gtk.prototype.get_id</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>application</code></em></i>
+					(
+						<a title="Gtk.Application" href="gtkapplication-h.html#GtkApplication">Gtk.Application</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkapplication-h.html#GtkApplication">Gtk.Application</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>id</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>an identifier number</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Window" href="gtkwindow-h.html#GtkWindow">Gtk.Window</a>
+										)
+								–
+			</div>
+							<p>the window with ID <em>id</em>, or
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a> if there is no window with this ID</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.6
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_application_get_window_by_id">
+	<span><code>Gtk.Application.get_window_by_id</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Application.get_window_by_id (self, id):
+    #python wrapper for 'gtk_application_get_window_by_id'</pre>
+
+<p>Returns the <a href="gtkapplicationwindow-h.html#GtkApplicationWindow">Gtk.ApplicationWindow</a> with the given ID.</p>
+<p>The ID of a <a href="gtkapplicationwindow-h.html#GtkApplicationWindow">Gtk.ApplicationWindow</a> can be retrieved with
+<a href="gtkapplicationwindow-h.html#gtk_application_window_get_id">Gtk.ApplicationWindow.get_id</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>application</code></em></i>
+					(
+						<a title="Gtk.Application" href="gtkapplication-h.html#GtkApplication">Gtk.Application</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkapplication-h.html#GtkApplication">Gtk.Application</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>id</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>an identifier number</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Window" href="gtkwindow-h.html#GtkWindow">Gtk.Window</a>
+										)
+								–
+			</div>
+							<p>the window with ID <em>id</em>, or
+<a href="https://docs.python.org/3/library/constants.html#None">None</a> if there is no window with this ID</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.6
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.6;" id="gtk_application_get_active_window">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_application_get_active_window">
+	<span><code>gtk_application_get_active_window</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkWindow" href="gtkwindow-h.html#GtkWindow">GtkWindow</a> *
+gtk_application_get_active_window (<a title="GtkApplication" href="gtkapplication-h.html#GtkApplication">GtkApplication</a> * application)</pre>
+
+<p>Gets the “active” window for the application.</p>
+<p>The active window is the one that was most recently focused (within
+the application).  This window may not have the focus at the moment
+if another application has it — this is just the most
+recently-focused window within this application.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>application</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkapplication-h.html#GtkApplication">GtkApplication</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					
+										
+<span class="annotation">[<abbr title="Don't free data after the code is done"><span class="acronym">transfer: none</span></abbr>]</span>
+<span class="annotation">[<abbr title="NULL may be passed to the value"><span class="acronym">nullable</span></abbr>]</span>
+
+										)
+								–
+			</div>
+							<p>the active window, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> if
+there isn't one.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.6
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_application_get_active_window">
+	<span><code>Gtk.prototype.get_active_window</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_active_window(): {
+    // javascript wrapper for 'gtk_application_get_active_window'
+}</pre>
+
+<p>Gets the “active” window for the application.</p>
+<p>The active window is the one that was most recently focused (within
+the application).  This window may not have the focus at the moment
+if another application has it — this is just the most
+recently-focused window within this application.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>application</code></em></i>
+					(
+						<a title="Gtk.Application" href="gtkapplication-h.html#GtkApplication">Gtk.Application</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkapplication-h.html#GtkApplication">Gtk.Application</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Window" href="gtkwindow-h.html#GtkWindow">Gtk.Window</a>
+										)
+								–
+			</div>
+							<p>the active window, or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a> if
+there isn't one.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.6
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_application_get_active_window">
+	<span><code>Gtk.Application.get_active_window</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Application.get_active_window (self):
+    #python wrapper for 'gtk_application_get_active_window'</pre>
+
+<p>Gets the “active” window for the application.</p>
+<p>The active window is the one that was most recently focused (within
+the application).  This window may not have the focus at the moment
+if another application has it — this is just the most
+recently-focused window within this application.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>application</code></em></i>
+					(
+						<a title="Gtk.Application" href="gtkapplication-h.html#GtkApplication">Gtk.Application</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkapplication-h.html#GtkApplication">Gtk.Application</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Window" href="gtkwindow-h.html#GtkWindow">Gtk.Window</a>
+										)
+								–
+			</div>
+							<p>the active window, or <a href="https://docs.python.org/3/library/constants.html#None">None</a> if
+there isn't one.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.6
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.4;" id="gtk_application_inhibit">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_application_inhibit">
+	<span><code>gtk_application_inhibit</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="guint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint">guint</a>
+gtk_application_inhibit (<a title="GtkApplication" href="gtkapplication-h.html#GtkApplication">GtkApplication</a> * application,
+                         <a title="GtkWindow" href="gtkwindow-h.html#GtkWindow">GtkWindow</a> * window,
+                         <a title="GtkApplicationInhibitFlags" href="gtkapplication-h.html#GtkApplicationInhibitFlags">GtkApplicationInhibitFlags</a> flags,
+                         const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * reason)</pre>
+
+<p>Inform the session manager that certain types of actions should be
+inhibited. This is not guaranteed to work on all platforms and for
+all types of actions.</p>
+<p>Applications should invoke this method when they begin an operation
+that should not be interrupted, such as creating a CD or DVD. The
+types of actions that may be blocked are specified by the <em>flags</em>
+parameter. When the application completes the operation it should
+call <a href="gtkapplication-h.html#gtk_application_uninhibit">gtk_application_uninhibit</a> to remove the inhibitor. Note that
+an application can have multiple inhibitors, and all of them must
+be individually removed. Inhibitors are also cleared when the
+application exits.</p>
+<p>Applications should not expect that they will always be able to block
+the action. In most cases, users will be given the option to force
+the action to take place.</p>
+<p>Reasons should be short and to the point.</p>
+<p>If <em>window</em> is given, the session manager may point the user to
+this window to find out more about why the action is inhibited.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>application</code></em></i>
+				–
+	</div>
+			<p>the <a href="gtkapplication-h.html#GtkApplication">GtkApplication</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>window</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>a <a href="gtkwindow-h.html#GtkWindow">GtkWindow</a>, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>flags</code></em></i>
+				–
+	</div>
+			<p>what types of actions should be inhibited</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>reason</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>a short, human-readable string that explains
+why these operations are inhibited</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>A non-zero cookie that is used to uniquely identify this
+request. It should be used as an argument to <a href="gtkapplication-h.html#gtk_application_uninhibit">gtk_application_uninhibit</a>
+in order to remove the request. If the platform does not support
+inhibiting or the request failed for some reason, 0 is returned.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.4
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_application_inhibit">
+	<span><code>Gtk.prototype.inhibit</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.inhibit(window: <a title="Gtk.Window" href="gtkwindow-h.html#GtkWindow">Gtk.Window</a>, flags: <a title="Gtk.ApplicationInhibitFlags" href="gtkapplication-h.html#GtkApplicationInhibitFlags">Gtk.ApplicationInhibitFlags</a>, reason: <a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>): {
+    // javascript wrapper for 'gtk_application_inhibit'
+}</pre>
+
+<p>Inform the session manager that certain types of actions should be
+inhibited. This is not guaranteed to work on all platforms and for
+all types of actions.</p>
+<p>Applications should invoke this method when they begin an operation
+that should not be interrupted, such as creating a CD or DVD. The
+types of actions that may be blocked are specified by the <em>flags</em>
+parameter. When the application completes the operation it should
+call <a href="gtkapplication-h.html#gtk_application_uninhibit">Gtk.prototype.uninhibit</a> to remove the inhibitor. Note that
+an application can have multiple inhibitors, and all of them must
+be individually removed. Inhibitors are also cleared when the
+application exits.</p>
+<p>Applications should not expect that they will always be able to block
+the action. In most cases, users will be given the option to force
+the action to take place.</p>
+<p>Reasons should be short and to the point.</p>
+<p>If <em>window</em> is given, the session manager may point the user to
+this window to find out more about why the action is inhibited.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>application</code></em></i>
+					(
+						<a title="Gtk.Application" href="gtkapplication-h.html#GtkApplication">Gtk.Application</a>
+						)
+				–
+	</div>
+			<p>the <a href="gtkapplication-h.html#GtkApplication">Gtk.Application</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>window</code></em></i>
+					(
+						<a title="Gtk.Window" href="gtkwindow-h.html#GtkWindow">Gtk.Window</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkwindow-h.html#GtkWindow">Gtk.Window</a>, or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>flags</code></em></i>
+					(
+						<a title="Gtk.ApplicationInhibitFlags" href="gtkapplication-h.html#GtkApplicationInhibitFlags">Gtk.ApplicationInhibitFlags</a>
+						)
+				–
+	</div>
+			<p>what types of actions should be inhibited</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>reason</code></em></i>
+					(
+						<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
+						)
+				–
+	</div>
+			<p>a short, human-readable string that explains
+why these operations are inhibited</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p>A non-zero cookie that is used to uniquely identify this
+request. It should be used as an argument to <a href="gtkapplication-h.html#gtk_application_uninhibit">Gtk.prototype.uninhibit</a>
+in order to remove the request. If the platform does not support
+inhibiting or the request failed for some reason, 0 is returned.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.4
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_application_inhibit">
+	<span><code>Gtk.Application.inhibit</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Application.inhibit (self, window, flags, reason):
+    #python wrapper for 'gtk_application_inhibit'</pre>
+
+<p>Inform the session manager that certain types of actions should be
+inhibited. This is not guaranteed to work on all platforms and for
+all types of actions.</p>
+<p>Applications should invoke this method when they begin an operation
+that should not be interrupted, such as creating a CD or DVD. The
+types of actions that may be blocked are specified by the <em>flags</em>
+parameter. When the application completes the operation it should
+call <a href="gtkapplication-h.html#gtk_application_uninhibit">Gtk.Application.uninhibit</a> to remove the inhibitor. Note that
+an application can have multiple inhibitors, and all of them must
+be individually removed. Inhibitors are also cleared when the
+application exits.</p>
+<p>Applications should not expect that they will always be able to block
+the action. In most cases, users will be given the option to force
+the action to take place.</p>
+<p>Reasons should be short and to the point.</p>
+<p>If <em>window</em> is given, the session manager may point the user to
+this window to find out more about why the action is inhibited.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>application</code></em></i>
+					(
+						<a title="Gtk.Application" href="gtkapplication-h.html#GtkApplication">Gtk.Application</a>
+						)
+				–
+	</div>
+			<p>the <a href="gtkapplication-h.html#GtkApplication">Gtk.Application</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>window</code></em></i>
+					(
+						<a title="Gtk.Window" href="gtkwindow-h.html#GtkWindow">Gtk.Window</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkwindow-h.html#GtkWindow">Gtk.Window</a>, or <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>flags</code></em></i>
+					(
+						<a title="Gtk.ApplicationInhibitFlags" href="gtkapplication-h.html#GtkApplicationInhibitFlags">Gtk.ApplicationInhibitFlags</a>
+						)
+				–
+	</div>
+			<p>what types of actions should be inhibited</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>reason</code></em></i>
+					(
+						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
+						)
+				–
+	</div>
+			<p>a short, human-readable string that explains
+why these operations are inhibited</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+										)
+								–
+			</div>
+							<p>A non-zero cookie that is used to uniquely identify this
+request. It should be used as an argument to <a href="gtkapplication-h.html#gtk_application_uninhibit">Gtk.Application.uninhibit</a>
+in order to remove the request. If the platform does not support
+inhibiting or the request failed for some reason, 0 is returned.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.4
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.4;" id="gtk_application_uninhibit">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_application_uninhibit">
+	<span><code>gtk_application_uninhibit</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_application_uninhibit (<a title="GtkApplication" href="gtkapplication-h.html#GtkApplication">GtkApplication</a> * application,
+                           <a title="guint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint">guint</a> cookie)</pre>
+
+<p>Removes an inhibitor that has been established with <a href="gtkapplication-h.html#gtk_application_inhibit">gtk_application_inhibit</a>.
+Inhibitors are also cleared when the application exits.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>application</code></em></i>
+				–
+	</div>
+			<p>the <a href="gtkapplication-h.html#GtkApplication">GtkApplication</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cookie</code></em></i>
+				–
+	</div>
+			<p>a cookie that was returned by <a href="gtkapplication-h.html#gtk_application_inhibit">gtk_application_inhibit</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.4
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_application_uninhibit">
+	<span><code>Gtk.prototype.uninhibit</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.uninhibit(cookie: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_application_uninhibit'
+}</pre>
+
+<p>Removes an inhibitor that has been established with <a href="gtkapplication-h.html#gtk_application_inhibit">Gtk.prototype.inhibit</a>.
+Inhibitors are also cleared when the application exits.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>application</code></em></i>
+					(
+						<a title="Gtk.Application" href="gtkapplication-h.html#GtkApplication">Gtk.Application</a>
+						)
+				–
+	</div>
+			<p>the <a href="gtkapplication-h.html#GtkApplication">Gtk.Application</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cookie</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>a cookie that was returned by <a href="gtkapplication-h.html#gtk_application_inhibit">Gtk.prototype.inhibit</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.4
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_application_uninhibit">
+	<span><code>Gtk.Application.uninhibit</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Application.uninhibit (self, cookie):
+    #python wrapper for 'gtk_application_uninhibit'</pre>
+
+<p>Removes an inhibitor that has been established with <a href="gtkapplication-h.html#gtk_application_inhibit">Gtk.Application.inhibit</a>.
+Inhibitors are also cleared when the application exits.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>application</code></em></i>
+					(
+						<a title="Gtk.Application" href="gtkapplication-h.html#GtkApplication">Gtk.Application</a>
+						)
+				–
+	</div>
+			<p>the <a href="gtkapplication-h.html#GtkApplication">Gtk.Application</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cookie</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>a cookie that was returned by <a href="gtkapplication-h.html#gtk_application_inhibit">Gtk.Application.inhibit</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.4
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.4;" id="gtk_application_is_inhibited">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_application_is_inhibited">
+	<span><code>gtk_application_is_inhibited</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_application_is_inhibited (<a title="GtkApplication" href="gtkapplication-h.html#GtkApplication">GtkApplication</a> * application,
+                              <a title="GtkApplicationInhibitFlags" href="gtkapplication-h.html#GtkApplicationInhibitFlags">GtkApplicationInhibitFlags</a> flags)</pre>
+
+<p>Determines if any of the actions specified in <em>flags</em> are
+currently inhibited (possibly by another application).</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>application</code></em></i>
+				–
+	</div>
+			<p>the <a href="gtkapplication-h.html#GtkApplication">GtkApplication</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>flags</code></em></i>
+				–
+	</div>
+			<p>what types of actions should be queried</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if any of the actions specified in <em>flags</em> are inhibited</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.4
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_application_is_inhibited">
+	<span><code>Gtk.prototype.is_inhibited</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.is_inhibited(flags: <a title="Gtk.ApplicationInhibitFlags" href="gtkapplication-h.html#GtkApplicationInhibitFlags">Gtk.ApplicationInhibitFlags</a>): {
+    // javascript wrapper for 'gtk_application_is_inhibited'
+}</pre>
+
+<p>Determines if any of the actions specified in <em>flags</em> are
+currently inhibited (possibly by another application).</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>application</code></em></i>
+					(
+						<a title="Gtk.Application" href="gtkapplication-h.html#GtkApplication">Gtk.Application</a>
+						)
+				–
+	</div>
+			<p>the <a href="gtkapplication-h.html#GtkApplication">Gtk.Application</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>flags</code></em></i>
+					(
+						<a title="Gtk.ApplicationInhibitFlags" href="gtkapplication-h.html#GtkApplicationInhibitFlags">Gtk.ApplicationInhibitFlags</a>
+						)
+				–
+	</div>
+			<p>what types of actions should be queried</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if any of the actions specified in <em>flags</em> are inhibited</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.4
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_application_is_inhibited">
+	<span><code>Gtk.Application.is_inhibited</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Application.is_inhibited (self, flags):
+    #python wrapper for 'gtk_application_is_inhibited'</pre>
+
+<p>Determines if any of the actions specified in <em>flags</em> are
+currently inhibited (possibly by another application).</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>application</code></em></i>
+					(
+						<a title="Gtk.Application" href="gtkapplication-h.html#GtkApplication">Gtk.Application</a>
+						)
+				–
+	</div>
+			<p>the <a href="gtkapplication-h.html#GtkApplication">Gtk.Application</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>flags</code></em></i>
+					(
+						<a title="Gtk.ApplicationInhibitFlags" href="gtkapplication-h.html#GtkApplicationInhibitFlags">Gtk.ApplicationInhibitFlags</a>
+						)
+				–
+	</div>
+			<p>what types of actions should be queried</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+										)
+								–
+			</div>
+							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if any of the actions specified in <em>flags</em> are inhibited</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.4
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.14;" id="gtk_application_prefers_app_menu">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_application_prefers_app_menu">
+	<span><code>gtk_application_prefers_app_menu</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_application_prefers_app_menu (<a title="GtkApplication" href="gtkapplication-h.html#GtkApplication">GtkApplication</a> * application)</pre>
+
+<p>Determines if the desktop environment in which the application is
+running would prefer an application menu be shown.</p>
+<p>If this function returns <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> then the application should call
+<a href="gtkapplication-h.html#gtk_application_set_app_menu">gtk_application_set_app_menu</a> with the contents of an application
+menu, which will be shown by the desktop environment.  If it returns
+<a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS">FALSE</a> then you should consider using an alternate approach, such as
+a menubar.</p>
+<p>The value returned by this function is purely advisory and you are
+free to ignore it.  If you call <a href="gtkapplication-h.html#gtk_application_set_app_menu">gtk_application_set_app_menu</a> even
+if the desktop environment doesn't support app menus, then a fallback
+will be provided.</p>
+<p>Applications are similarly free not to set an app menu even if the
+desktop environment wants to show one.  In that case, a fallback will
+also be created by the desktop environment (GNOME, for example, uses
+a menu with only a "Quit" item in it).</p>
+<p>The value returned by this function never changes.  Once it returns a
+particular value, it is guaranteed to always return the same value.</p>
+<p>You may only call this function after the application has been
+registered and after the base startup handler has run.  You're most
+likely to want to use this from your own startup handler.  It may
+also make sense to consult this function while constructing UI (in
+activate, open or an action activation handler) in order to determine
+if you should show a gear menu or not.</p>
+<p>This function will return <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS">FALSE</a> on Mac OS and a default app menu
+will be created automatically with the "usual" contents of that menu
+typical to most Mac OS applications.  If you call
+<a href="gtkapplication-h.html#gtk_application_set_app_menu">gtk_application_set_app_menu</a> anyway, then this menu will be
+replaced with your own.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>application</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkapplication-h.html#GtkApplication">GtkApplication</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if you should set an app menu</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.14
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_application_prefers_app_menu">
+	<span><code>Gtk.prototype.prefers_app_menu</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.prefers_app_menu(): {
+    // javascript wrapper for 'gtk_application_prefers_app_menu'
+}</pre>
+
+<p>Determines if the desktop environment in which the application is
+running would prefer an application menu be shown.</p>
+<p>If this function returns <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> then the application should call
+<a href="gtkapplication-h.html#gtk_application_set_app_menu">Gtk.prototype.set_app_menu</a> with the contents of an application
+menu, which will be shown by the desktop environment.  If it returns
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">false</a> then you should consider using an alternate approach, such as
+a menubar.</p>
+<p>The value returned by this function is purely advisory and you are
+free to ignore it.  If you call <a href="gtkapplication-h.html#gtk_application_set_app_menu">Gtk.prototype.set_app_menu</a> even
+if the desktop environment doesn't support app menus, then a fallback
+will be provided.</p>
+<p>Applications are similarly free not to set an app menu even if the
+desktop environment wants to show one.  In that case, a fallback will
+also be created by the desktop environment (GNOME, for example, uses
+a menu with only a "Quit" item in it).</p>
+<p>The value returned by this function never changes.  Once it returns a
+particular value, it is guaranteed to always return the same value.</p>
+<p>You may only call this function after the application has been
+registered and after the base startup handler has run.  You're most
+likely to want to use this from your own startup handler.  It may
+also make sense to consult this function while constructing UI (in
+activate, open or an action activation handler) in order to determine
+if you should show a gear menu or not.</p>
+<p>This function will return <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">false</a> on Mac OS and a default app menu
+will be created automatically with the "usual" contents of that menu
+typical to most Mac OS applications.  If you call
+<a href="gtkapplication-h.html#gtk_application_set_app_menu">Gtk.prototype.set_app_menu</a> anyway, then this menu will be
+replaced with your own.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>application</code></em></i>
+					(
+						<a title="Gtk.Application" href="gtkapplication-h.html#GtkApplication">Gtk.Application</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkapplication-h.html#GtkApplication">Gtk.Application</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if you should set an app menu</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.14
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_application_prefers_app_menu">
+	<span><code>Gtk.Application.prefers_app_menu</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Application.prefers_app_menu (self):
+    #python wrapper for 'gtk_application_prefers_app_menu'</pre>
+
+<p>Determines if the desktop environment in which the application is
+running would prefer an application menu be shown.</p>
+<p>If this function returns <a href="https://docs.python.org/3/library/constants.html#True">True</a> then the application should call
+<a href="gtkapplication-h.html#gtk_application_set_app_menu">Gtk.Application.set_app_menu</a> with the contents of an application
+menu, which will be shown by the desktop environment.  If it returns
+<a href="https://docs.python.org/3/library/constants.html#False">False</a> then you should consider using an alternate approach, such as
+a menubar.</p>
+<p>The value returned by this function is purely advisory and you are
+free to ignore it.  If you call <a href="gtkapplication-h.html#gtk_application_set_app_menu">Gtk.Application.set_app_menu</a> even
+if the desktop environment doesn't support app menus, then a fallback
+will be provided.</p>
+<p>Applications are similarly free not to set an app menu even if the
+desktop environment wants to show one.  In that case, a fallback will
+also be created by the desktop environment (GNOME, for example, uses
+a menu with only a "Quit" item in it).</p>
+<p>The value returned by this function never changes.  Once it returns a
+particular value, it is guaranteed to always return the same value.</p>
+<p>You may only call this function after the application has been
+registered and after the base startup handler has run.  You're most
+likely to want to use this from your own startup handler.  It may
+also make sense to consult this function while constructing UI (in
+activate, open or an action activation handler) in order to determine
+if you should show a gear menu or not.</p>
+<p>This function will return <a href="https://docs.python.org/3/library/constants.html#False">False</a> on Mac OS and a default app menu
+will be created automatically with the "usual" contents of that menu
+typical to most Mac OS applications.  If you call
+<a href="gtkapplication-h.html#gtk_application_set_app_menu">Gtk.Application.set_app_menu</a> anyway, then this menu will be
+replaced with your own.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>application</code></em></i>
+					(
+						<a title="Gtk.Application" href="gtkapplication-h.html#GtkApplication">Gtk.Application</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkapplication-h.html#GtkApplication">Gtk.Application</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+										)
+								–
+			</div>
+							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if you should set an app menu</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.14
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.4;" id="gtk_application_get_app_menu">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_application_get_app_menu">
+	<span><code>gtk_application_get_app_menu</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GMenuModel" href="https://developer.gnome.org/gio/unstable/GMenuModel.html#GMenuModel-struct">GMenuModel</a> *
+gtk_application_get_app_menu (<a title="GtkApplication" href="gtkapplication-h.html#GtkApplication">GtkApplication</a> * application)</pre>
+
+<p>Returns the menu model that has been set with
+<a href="gtkapplication-h.html#gtk_application_set_app_menu">gtk_application_set_app_menu</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>application</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkapplication-h.html#GtkApplication">GtkApplication</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					
+										
+<span class="annotation">[<abbr title="Don't free data after the code is done"><span class="acronym">transfer: none</span></abbr>]</span>
+<span class="annotation">[<abbr title="NULL may be passed to the value"><span class="acronym">nullable</span></abbr>]</span>
+
+										)
+								–
+			</div>
+							<p>the application menu of <em>application</em>
+or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> if no application menu has been set.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.4
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_application_get_app_menu">
+	<span><code>Gtk.prototype.get_app_menu</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_app_menu(): {
+    // javascript wrapper for 'gtk_application_get_app_menu'
+}</pre>
+
+<p>Returns the menu model that has been set with
+<a href="gtkapplication-h.html#gtk_application_set_app_menu">Gtk.prototype.set_app_menu</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>application</code></em></i>
+					(
+						<a title="Gtk.Application" href="gtkapplication-h.html#GtkApplication">Gtk.Application</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkapplication-h.html#GtkApplication">Gtk.Application</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gio.MenuModel" href="https://developer.gnome.org/gio/unstable/GMenuModel.html#GMenuModel-struct">Gio.MenuModel</a>
+										)
+								–
+			</div>
+							<p>the application menu of <em>application</em>
+or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a> if no application menu has been set.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.4
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_application_get_app_menu">
+	<span><code>Gtk.Application.get_app_menu</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Application.get_app_menu (self):
+    #python wrapper for 'gtk_application_get_app_menu'</pre>
+
+<p>Returns the menu model that has been set with
+<a href="gtkapplication-h.html#gtk_application_set_app_menu">Gtk.Application.set_app_menu</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>application</code></em></i>
+					(
+						<a title="Gtk.Application" href="gtkapplication-h.html#GtkApplication">Gtk.Application</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkapplication-h.html#GtkApplication">Gtk.Application</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gio.MenuModel" href="https://developer.gnome.org/gio/unstable/GMenuModel.html#GMenuModel-struct">Gio.MenuModel</a>
+										)
+								–
+			</div>
+							<p>the application menu of <em>application</em>
+or <a href="https://docs.python.org/3/library/constants.html#None">None</a> if no application menu has been set.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.4
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.4;" id="gtk_application_set_app_menu">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_application_set_app_menu">
+	<span><code>gtk_application_set_app_menu</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_application_set_app_menu (<a title="GtkApplication" href="gtkapplication-h.html#GtkApplication">GtkApplication</a> * application,
+                              <a title="GMenuModel" href="https://developer.gnome.org/gio/unstable/GMenuModel.html#GMenuModel-struct">GMenuModel</a> * app_menu)</pre>
+
+<p>Sets or unsets the application menu for <em>application</em>.</p>
+<p>This can only be done in the primary instance of the application,
+after it has been registered.  <a href="https://developer.gnome.org/gio/unstable/GApplication.html#GApplication-startup">startup</a> is a good place
+to call this.</p>
+<p>The application menu is a single menu containing items that typically
+impact the application as a whole, rather than acting on a specific
+window or document.  For example, you would expect to see
+“Preferences” or “Quit” in an application menu, but not “Save” or
+“Print”.</p>
+<p>If supported, the application menu will be rendered by the desktop
+environment.</p>
+<p>Use the base <a href="https://developer.gnome.org/gio/unstable/GActionMap.html#GActionMap-struct">GActionMap</a> interface to add actions, to respond to the user
+selecting these menu items.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>application</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkapplication-h.html#GtkApplication">GtkApplication</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>app_menu</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/gio/unstable/GMenuModel.html#GMenuModel-struct">GMenuModel</a>, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.4
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_application_set_app_menu">
+	<span><code>Gtk.prototype.set_app_menu</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_app_menu(app_menu: <a title="Gio.MenuModel" href="https://developer.gnome.org/gio/unstable/GMenuModel.html#GMenuModel-struct">Gio.MenuModel</a>): {
+    // javascript wrapper for 'gtk_application_set_app_menu'
+}</pre>
+
+<p>Sets or unsets the application menu for <em>application</em>.</p>
+<p>This can only be done in the primary instance of the application,
+after it has been registered.  <a href="https://developer.gnome.org/gio/unstable/GApplication.html#GApplication-startup">startup</a> is a good place
+to call this.</p>
+<p>The application menu is a single menu containing items that typically
+impact the application as a whole, rather than acting on a specific
+window or document.  For example, you would expect to see
+“Preferences” or “Quit” in an application menu, but not “Save” or
+“Print”.</p>
+<p>If supported, the application menu will be rendered by the desktop
+environment.</p>
+<p>Use the base <a href="https://developer.gnome.org/gio/unstable/GActionMap.html#GActionMap-struct">Gio.ActionMap</a> interface to add actions, to respond to the user
+selecting these menu items.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>application</code></em></i>
+					(
+						<a title="Gtk.Application" href="gtkapplication-h.html#GtkApplication">Gtk.Application</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkapplication-h.html#GtkApplication">Gtk.Application</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>app_menu</code></em></i>
+					(
+						<a title="Gio.MenuModel" href="https://developer.gnome.org/gio/unstable/GMenuModel.html#GMenuModel-struct">Gio.MenuModel</a>
+						)
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/gio/unstable/GMenuModel.html#GMenuModel-struct">Gio.MenuModel</a>, or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.4
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_application_set_app_menu">
+	<span><code>Gtk.Application.set_app_menu</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Application.set_app_menu (self, app_menu):
+    #python wrapper for 'gtk_application_set_app_menu'</pre>
+
+<p>Sets or unsets the application menu for <em>application</em>.</p>
+<p>This can only be done in the primary instance of the application,
+after it has been registered.  <a href="https://developer.gnome.org/gio/unstable/GApplication.html#GApplication-startup">startup</a> is a good place
+to call this.</p>
+<p>The application menu is a single menu containing items that typically
+impact the application as a whole, rather than acting on a specific
+window or document.  For example, you would expect to see
+“Preferences” or “Quit” in an application menu, but not “Save” or
+“Print”.</p>
+<p>If supported, the application menu will be rendered by the desktop
+environment.</p>
+<p>Use the base <a href="https://developer.gnome.org/gio/unstable/GActionMap.html#GActionMap-struct">Gio.ActionMap</a> interface to add actions, to respond to the user
+selecting these menu items.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>application</code></em></i>
+					(
+						<a title="Gtk.Application" href="gtkapplication-h.html#GtkApplication">Gtk.Application</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkapplication-h.html#GtkApplication">Gtk.Application</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>app_menu</code></em></i>
+					(
+						<a title="Gio.MenuModel" href="https://developer.gnome.org/gio/unstable/GMenuModel.html#GMenuModel-struct">Gio.MenuModel</a>
+						)
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/gio/unstable/GMenuModel.html#GMenuModel-struct">Gio.MenuModel</a>, or <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.4
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.4;" id="gtk_application_get_menubar">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_application_get_menubar">
+	<span><code>gtk_application_get_menubar</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GMenuModel" href="https://developer.gnome.org/gio/unstable/GMenuModel.html#GMenuModel-struct">GMenuModel</a> *
+gtk_application_get_menubar (<a title="GtkApplication" href="gtkapplication-h.html#GtkApplication">GtkApplication</a> * application)</pre>
+
+<p>Returns the menu model that has been set with
+<a href="gtkapplication-h.html#gtk_application_set_menubar">gtk_application_set_menubar</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>application</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkapplication-h.html#GtkApplication">GtkApplication</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					
+										
+<span class="annotation">[<abbr title="Don't free data after the code is done"><span class="acronym">transfer: none</span></abbr>]</span>
+
+										)
+								–
+			</div>
+							<p>the menubar for windows of <em>application</em></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.4
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_application_get_menubar">
+	<span><code>Gtk.prototype.get_menubar</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_menubar(): {
+    // javascript wrapper for 'gtk_application_get_menubar'
+}</pre>
+
+<p>Returns the menu model that has been set with
+<a href="gtkapplication-h.html#gtk_application_set_menubar">Gtk.prototype.set_menubar</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>application</code></em></i>
+					(
+						<a title="Gtk.Application" href="gtkapplication-h.html#GtkApplication">Gtk.Application</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkapplication-h.html#GtkApplication">Gtk.Application</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gio.MenuModel" href="https://developer.gnome.org/gio/unstable/GMenuModel.html#GMenuModel-struct">Gio.MenuModel</a>
+										)
+								–
+			</div>
+							<p>the menubar for windows of <em>application</em></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.4
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_application_get_menubar">
+	<span><code>Gtk.Application.get_menubar</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Application.get_menubar (self):
+    #python wrapper for 'gtk_application_get_menubar'</pre>
+
+<p>Returns the menu model that has been set with
+<a href="gtkapplication-h.html#gtk_application_set_menubar">Gtk.Application.set_menubar</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>application</code></em></i>
+					(
+						<a title="Gtk.Application" href="gtkapplication-h.html#GtkApplication">Gtk.Application</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkapplication-h.html#GtkApplication">Gtk.Application</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gio.MenuModel" href="https://developer.gnome.org/gio/unstable/GMenuModel.html#GMenuModel-struct">Gio.MenuModel</a>
+										)
+								–
+			</div>
+							<p>the menubar for windows of <em>application</em></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.4
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.4;" id="gtk_application_set_menubar">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_application_set_menubar">
+	<span><code>gtk_application_set_menubar</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_application_set_menubar (<a title="GtkApplication" href="gtkapplication-h.html#GtkApplication">GtkApplication</a> * application,
+                             <a title="GMenuModel" href="https://developer.gnome.org/gio/unstable/GMenuModel.html#GMenuModel-struct">GMenuModel</a> * menubar)</pre>
+
+<p>Sets or unsets the menubar for windows of <em>application</em>.</p>
+<p>This is a menubar in the traditional sense.</p>
+<p>This can only be done in the primary instance of the application,
+after it has been registered.  <a href="https://developer.gnome.org/gio/unstable/GApplication.html#GApplication-startup">startup</a> is a good place
+to call this.</p>
+<p>Depending on the desktop environment, this may appear at the top of
+each window, or at the top of the screen.  In some environments, if
+both the application menu and the menubar are set, the application
+menu will be presented as if it were the first item of the menubar.
+Other environments treat the two as completely separate — for example,
+the application menu may be rendered by the desktop shell while the
+menubar (if set) remains in each individual window.</p>
+<p>Use the base <a href="https://developer.gnome.org/gio/unstable/GActionMap.html#GActionMap-struct">GActionMap</a> interface to add actions, to respond to the
+user selecting these menu items.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>application</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkapplication-h.html#GtkApplication">GtkApplication</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menubar</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/gio/unstable/GMenuModel.html#GMenuModel-struct">GMenuModel</a>, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.4
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_application_set_menubar">
+	<span><code>Gtk.prototype.set_menubar</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_menubar(menubar: <a title="Gio.MenuModel" href="https://developer.gnome.org/gio/unstable/GMenuModel.html#GMenuModel-struct">Gio.MenuModel</a>): {
+    // javascript wrapper for 'gtk_application_set_menubar'
+}</pre>
+
+<p>Sets or unsets the menubar for windows of <em>application</em>.</p>
+<p>This is a menubar in the traditional sense.</p>
+<p>This can only be done in the primary instance of the application,
+after it has been registered.  <a href="https://developer.gnome.org/gio/unstable/GApplication.html#GApplication-startup">startup</a> is a good place
+to call this.</p>
+<p>Depending on the desktop environment, this may appear at the top of
+each window, or at the top of the screen.  In some environments, if
+both the application menu and the menubar are set, the application
+menu will be presented as if it were the first item of the menubar.
+Other environments treat the two as completely separate — for example,
+the application menu may be rendered by the desktop shell while the
+menubar (if set) remains in each individual window.</p>
+<p>Use the base <a href="https://developer.gnome.org/gio/unstable/GActionMap.html#GActionMap-struct">Gio.ActionMap</a> interface to add actions, to respond to the
+user selecting these menu items.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>application</code></em></i>
+					(
+						<a title="Gtk.Application" href="gtkapplication-h.html#GtkApplication">Gtk.Application</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkapplication-h.html#GtkApplication">Gtk.Application</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menubar</code></em></i>
+					(
+						<a title="Gio.MenuModel" href="https://developer.gnome.org/gio/unstable/GMenuModel.html#GMenuModel-struct">Gio.MenuModel</a>
+						)
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/gio/unstable/GMenuModel.html#GMenuModel-struct">Gio.MenuModel</a>, or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.4
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_application_set_menubar">
+	<span><code>Gtk.Application.set_menubar</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Application.set_menubar (self, menubar):
+    #python wrapper for 'gtk_application_set_menubar'</pre>
+
+<p>Sets or unsets the menubar for windows of <em>application</em>.</p>
+<p>This is a menubar in the traditional sense.</p>
+<p>This can only be done in the primary instance of the application,
+after it has been registered.  <a href="https://developer.gnome.org/gio/unstable/GApplication.html#GApplication-startup">startup</a> is a good place
+to call this.</p>
+<p>Depending on the desktop environment, this may appear at the top of
+each window, or at the top of the screen.  In some environments, if
+both the application menu and the menubar are set, the application
+menu will be presented as if it were the first item of the menubar.
+Other environments treat the two as completely separate — for example,
+the application menu may be rendered by the desktop shell while the
+menubar (if set) remains in each individual window.</p>
+<p>Use the base <a href="https://developer.gnome.org/gio/unstable/GActionMap.html#GActionMap-struct">Gio.ActionMap</a> interface to add actions, to respond to the
+user selecting these menu items.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>application</code></em></i>
+					(
+						<a title="Gtk.Application" href="gtkapplication-h.html#GtkApplication">Gtk.Application</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkapplication-h.html#GtkApplication">Gtk.Application</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>menubar</code></em></i>
+					(
+						<a title="Gio.MenuModel" href="https://developer.gnome.org/gio/unstable/GMenuModel.html#GMenuModel-struct">Gio.MenuModel</a>
+						)
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/gio/unstable/GMenuModel.html#GMenuModel-struct">Gio.MenuModel</a>, or <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.4
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.14;" id="gtk_application_get_menu_by_id">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_application_get_menu_by_id">
+	<span><code>gtk_application_get_menu_by_id</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GMenu" href="https://developer.gnome.org/gio/unstable/GMenu.html#GMenu-struct">GMenu</a> *
+gtk_application_get_menu_by_id (<a title="GtkApplication" href="gtkapplication-h.html#GtkApplication">GtkApplication</a> * application,
+                                const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * id)</pre>
+
+<p>Gets a menu from automatically loaded resources.
+See [Automatic resources][automatic-resources]
+for more information.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>application</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkapplication-h.html#GtkApplication">GtkApplication</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>id</code></em></i>
+				–
+	</div>
+			<p>the id of the menu to look up</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					
+										
+<span class="annotation">[<abbr title="Don't free data after the code is done"><span class="acronym">transfer: none</span></abbr>]</span>
+
+										)
+								–
+			</div>
+							<p>Gets the menu with the
+given id from the automatically loaded resources</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.14
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_application_get_menu_by_id">
+	<span><code>Gtk.prototype.get_menu_by_id</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_menu_by_id(id: <a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>): {
+    // javascript wrapper for 'gtk_application_get_menu_by_id'
+}</pre>
+
+<p>Gets a menu from automatically loaded resources.
+See [Automatic resources][automatic-resources]
+for more information.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>application</code></em></i>
+					(
+						<a title="Gtk.Application" href="gtkapplication-h.html#GtkApplication">Gtk.Application</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkapplication-h.html#GtkApplication">Gtk.Application</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>id</code></em></i>
+					(
+						<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
+						)
+				–
+	</div>
+			<p>the id of the menu to look up</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gio.Menu" href="https://developer.gnome.org/gio/unstable/GMenu.html#GMenu-struct">Gio.Menu</a>
+										)
+								–
+			</div>
+							<p>Gets the menu with the
+given id from the automatically loaded resources</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.14
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_application_get_menu_by_id">
+	<span><code>Gtk.Application.get_menu_by_id</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Application.get_menu_by_id (self, id):
+    #python wrapper for 'gtk_application_get_menu_by_id'</pre>
+
+<p>Gets a menu from automatically loaded resources.
+See [Automatic resources][automatic-resources]
+for more information.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>application</code></em></i>
+					(
+						<a title="Gtk.Application" href="gtkapplication-h.html#GtkApplication">Gtk.Application</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkapplication-h.html#GtkApplication">Gtk.Application</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>id</code></em></i>
+					(
+						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
+						)
+				–
+	</div>
+			<p>the id of the menu to look up</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gio.Menu" href="https://developer.gnome.org/gio/unstable/GMenu.html#GMenu-struct">Gio.Menu</a>
+										)
+								–
+			</div>
+							<p>Gets the menu with the
+given id from the automatically loaded resources</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.14
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.12;" id="gtk_application_list_action_descriptions">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_application_list_action_descriptions">
+	<span><code>gtk_application_list_action_descriptions</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> **
+gtk_application_list_action_descriptions (<a title="GtkApplication" href="gtkapplication-h.html#GtkApplication">GtkApplication</a> * application)</pre>
+
+<p>Lists the detailed action names which have associated accelerators.
+See <a href="gtkapplication-h.html#gtk_application_set_accels_for_action">gtk_application_set_accels_for_action</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>application</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkapplication-h.html#GtkApplication">GtkApplication</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					
+										
+<span class="annotation">[<abbr title="Free data after the code is done"><span class="acronym">transfer: full</span></abbr>]</span>
+
+										)
+								–
+			</div>
+							<p>a <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a>-terminated array of strings,
+free with <a href="https://developer.gnome.org/glib/unstable/glib-String-Utility-Functions.html#g-strfreev">g_strfreev</a> when done</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.12
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_application_list_action_descriptions">
+	<span><code>Gtk.prototype.list_action_descriptions</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.list_action_descriptions(): {
+    // javascript wrapper for 'gtk_application_list_action_descriptions'
+}</pre>
+
+<p>Lists the detailed action names which have associated accelerators.
+See <a href="gtkapplication-h.html#gtk_application_set_accels_for_action">Gtk.prototype.set_accels_for_action</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>application</code></em></i>
+					(
+						<a title="Gtk.Application" href="gtkapplication-h.html#GtkApplication">Gtk.Application</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkapplication-h.html#GtkApplication">Gtk.Application</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					[ <a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a> ]
+										)
+								–
+			</div>
+							<p>a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a>-terminated array of strings,
+free with <a href="https://developer.gnome.org/glib/unstable/glib-String-Utility-Functions.html#g-strfreev">prototype.strfreev</a> when done</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.12
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_application_list_action_descriptions">
+	<span><code>Gtk.Application.list_action_descriptions</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Application.list_action_descriptions (self):
+    #python wrapper for 'gtk_application_list_action_descriptions'</pre>
+
+<p>Lists the detailed action names which have associated accelerators.
+See <a href="gtkapplication-h.html#gtk_application_set_accels_for_action">Gtk.Application.set_accels_for_action</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>application</code></em></i>
+					(
+						<a title="Gtk.Application" href="gtkapplication-h.html#GtkApplication">Gtk.Application</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkapplication-h.html#GtkApplication">Gtk.Application</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					[ <a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a> ]
+										)
+								–
+			</div>
+							<p>a <a href="https://docs.python.org/3/library/constants.html#None">None</a>-terminated array of strings,
+free with <a href="https://developer.gnome.org/glib/unstable/glib-String-Utility-Functions.html#g-strfreev">GLib.strfreev</a> when done</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.12
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.12;" id="gtk_application_get_accels_for_action">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_application_get_accels_for_action">
+	<span><code>gtk_application_get_accels_for_action</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> **
+gtk_application_get_accels_for_action (<a title="GtkApplication" href="gtkapplication-h.html#GtkApplication">GtkApplication</a> * application,
+                                       const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * detailed_action_name)</pre>
+
+<p>Gets the accelerators that are currently associated with
+the given action.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>application</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkapplication-h.html#GtkApplication">GtkApplication</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>detailed_action_name</code></em></i>
+				–
+	</div>
+			<p>a detailed action name, specifying an action
+and target to obtain accelerators for</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					
+										
+<span class="annotation">[<abbr title="Free data after the code is done"><span class="acronym">transfer: full</span></abbr>]</span>
+
+										)
+								–
+			</div>
+							<p>accelerators for <em>detailed_action_name</em>, as
+a <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a>-terminated array. Free with <a href="https://developer.gnome.org/glib/unstable/glib-String-Utility-Functions.html#g-strfreev">g_strfreev</a> when no longer needed</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.12
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_application_get_accels_for_action">
+	<span><code>Gtk.prototype.get_accels_for_action</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_accels_for_action(detailed_action_name: <a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>): {
+    // javascript wrapper for 'gtk_application_get_accels_for_action'
+}</pre>
+
+<p>Gets the accelerators that are currently associated with
+the given action.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>application</code></em></i>
+					(
+						<a title="Gtk.Application" href="gtkapplication-h.html#GtkApplication">Gtk.Application</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkapplication-h.html#GtkApplication">Gtk.Application</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>detailed_action_name</code></em></i>
+					(
+						<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
+						)
+				–
+	</div>
+			<p>a detailed action name, specifying an action
+and target to obtain accelerators for</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					[ <a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a> ]
+										)
+								–
+			</div>
+							<p>accelerators for <em>detailed_action_name</em>, as
+a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a>-terminated array. Free with <a href="https://developer.gnome.org/glib/unstable/glib-String-Utility-Functions.html#g-strfreev">prototype.strfreev</a> when no longer needed</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.12
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_application_get_accels_for_action">
+	<span><code>Gtk.Application.get_accels_for_action</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Application.get_accels_for_action (self, detailed_action_name):
+    #python wrapper for 'gtk_application_get_accels_for_action'</pre>
+
+<p>Gets the accelerators that are currently associated with
+the given action.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>application</code></em></i>
+					(
+						<a title="Gtk.Application" href="gtkapplication-h.html#GtkApplication">Gtk.Application</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkapplication-h.html#GtkApplication">Gtk.Application</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>detailed_action_name</code></em></i>
+					(
+						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
+						)
+				–
+	</div>
+			<p>a detailed action name, specifying an action
+and target to obtain accelerators for</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					[ <a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a> ]
+										)
+								–
+			</div>
+							<p>accelerators for <em>detailed_action_name</em>, as
+a <a href="https://docs.python.org/3/library/constants.html#None">None</a>-terminated array. Free with <a href="https://developer.gnome.org/glib/unstable/glib-String-Utility-Functions.html#g-strfreev">GLib.strfreev</a> when no longer needed</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.12
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.12;" id="gtk_application_set_accels_for_action">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_application_set_accels_for_action">
+	<span><code>gtk_application_set_accels_for_action</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_application_set_accels_for_action (<a title="GtkApplication" href="gtkapplication-h.html#GtkApplication">GtkApplication</a> * application,
+                                       const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * detailed_action_name,
+                                       <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> ** accels)</pre>
+
+<p>Sets zero or more keyboard accelerators that will trigger the
+given action. The first item in <em>accels</em> will be the primary
+accelerator, which may be displayed in the UI.</p>
+<p>To remove all accelerators for an action, use an empty, zero-terminated
+array for <em>accels</em>.</p>
+<p>For the <em>detailed_action_name</em>, see <a href="https://developer.gnome.org/gio/unstable/GAction.html#g-action-parse-detailed-name">g_action_parse_detailed_name</a> and
+<a href="https://developer.gnome.org/gio/unstable/GAction.html#g-action-print-detailed-name">g_action_print_detailed_name</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>application</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkapplication-h.html#GtkApplication">GtkApplication</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>detailed_action_name</code></em></i>
+				–
+	</div>
+			<p>a detailed action name, specifying an action
+and target to associate accelerators with</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>accels</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="Parameter points to an array of items"><span class="acronym">array</span></abbr> zero-terminated=1]</span>
+
+						)
+				–
+	</div>
+			<p>a list of accelerators in the format
+understood by <a href="gtkaccelgroup-h.html#gtk_accelerator_parse">gtk_accelerator_parse</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.12
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_application_set_accels_for_action">
+	<span><code>Gtk.prototype.set_accels_for_action</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_accels_for_action(detailed_action_name: <a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>, accels: [ <a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a> ]): {
+    // javascript wrapper for 'gtk_application_set_accels_for_action'
+}</pre>
+
+<p>Sets zero or more keyboard accelerators that will trigger the
+given action. The first item in <em>accels</em> will be the primary
+accelerator, which may be displayed in the UI.</p>
+<p>To remove all accelerators for an action, use an empty, zero-terminated
+array for <em>accels</em>.</p>
+<p>For the <em>detailed_action_name</em>, see <a href="https://developer.gnome.org/gio/unstable/GAction.html#g-action-parse-detailed-name">Gio.prototype.parse_detailed_name</a> and
+<a href="https://developer.gnome.org/gio/unstable/GAction.html#g-action-print-detailed-name">Gio.prototype.print_detailed_name</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>application</code></em></i>
+					(
+						<a title="Gtk.Application" href="gtkapplication-h.html#GtkApplication">Gtk.Application</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkapplication-h.html#GtkApplication">Gtk.Application</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>detailed_action_name</code></em></i>
+					(
+						<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
+						)
+				–
+	</div>
+			<p>a detailed action name, specifying an action
+and target to associate accelerators with</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>accels</code></em></i>
+					(
+						[ <a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a> ]
+						)
+				–
+	</div>
+			<p>a list of accelerators in the format
+understood by <a href="gtkaccelgroup-h.html#gtk_accelerator_parse">prototype.accelerator_parse</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.12
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_application_set_accels_for_action">
+	<span><code>Gtk.Application.set_accels_for_action</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Application.set_accels_for_action (self, detailed_action_name, accels):
+    #python wrapper for 'gtk_application_set_accels_for_action'</pre>
+
+<p>Sets zero or more keyboard accelerators that will trigger the
+given action. The first item in <em>accels</em> will be the primary
+accelerator, which may be displayed in the UI.</p>
+<p>To remove all accelerators for an action, use an empty, zero-terminated
+array for <em>accels</em>.</p>
+<p>For the <em>detailed_action_name</em>, see <a href="https://developer.gnome.org/gio/unstable/GAction.html#g-action-parse-detailed-name">Gio.Action.parse_detailed_name</a> and
+<a href="https://developer.gnome.org/gio/unstable/GAction.html#g-action-print-detailed-name">Gio.Action.print_detailed_name</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>application</code></em></i>
+					(
+						<a title="Gtk.Application" href="gtkapplication-h.html#GtkApplication">Gtk.Application</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkapplication-h.html#GtkApplication">Gtk.Application</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>detailed_action_name</code></em></i>
+					(
+						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
+						)
+				–
+	</div>
+			<p>a detailed action name, specifying an action
+and target to associate accelerators with</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>accels</code></em></i>
+					(
+						[ <a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a> ]
+						)
+				–
+	</div>
+			<p>a list of accelerators in the format
+understood by <a href="gtkaccelgroup-h.html#gtk_accelerator_parse">Gtk.accelerator_parse</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.12
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.14;" id="gtk_application_get_actions_for_accel">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_application_get_actions_for_accel">
+	<span><code>gtk_application_get_actions_for_accel</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> **
+gtk_application_get_actions_for_accel (<a title="GtkApplication" href="gtkapplication-h.html#GtkApplication">GtkApplication</a> * application,
+                                       const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * accel)</pre>
+
+<p>Returns the list of actions (possibly empty) that <em>accel</em> maps to.
+Each item in the list is a detailed action name in the usual form.</p>
+<p>This might be useful to discover if an accel already exists in
+order to prevent installation of a conflicting accelerator (from
+an accelerator editor or a plugin system, for example). Note that
+having more than one action per accelerator may not be a bad thing
+and might make sense in cases where the actions never appear in the
+same context.</p>
+<p>In case there are no actions for a given accelerator, an empty array
+is returned.  <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> is never returned.</p>
+<p>It is a programmer error to pass an invalid accelerator string.
+If you are unsure, check it with <a href="gtkaccelgroup-h.html#gtk_accelerator_parse">gtk_accelerator_parse</a> first.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>application</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkapplication-h.html#GtkApplication">GtkApplication</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>accel</code></em></i>
+				–
+	</div>
+			<p>an accelerator that can be parsed by <a href="gtkaccelgroup-h.html#gtk_accelerator_parse">gtk_accelerator_parse</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					
+										
+<span class="annotation">[<abbr title="Free data after the code is done"><span class="acronym">transfer: full</span></abbr>]</span>
+
+										)
+								–
+			</div>
+							<p>a <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a>-terminated array of actions for <em>accel</em></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.14
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_application_get_actions_for_accel">
+	<span><code>Gtk.prototype.get_actions_for_accel</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_actions_for_accel(accel: <a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>): {
+    // javascript wrapper for 'gtk_application_get_actions_for_accel'
+}</pre>
+
+<p>Returns the list of actions (possibly empty) that <em>accel</em> maps to.
+Each item in the list is a detailed action name in the usual form.</p>
+<p>This might be useful to discover if an accel already exists in
+order to prevent installation of a conflicting accelerator (from
+an accelerator editor or a plugin system, for example). Note that
+having more than one action per accelerator may not be a bad thing
+and might make sense in cases where the actions never appear in the
+same context.</p>
+<p>In case there are no actions for a given accelerator, an empty array
+is returned.  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a> is never returned.</p>
+<p>It is a programmer error to pass an invalid accelerator string.
+If you are unsure, check it with <a href="gtkaccelgroup-h.html#gtk_accelerator_parse">prototype.accelerator_parse</a> first.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>application</code></em></i>
+					(
+						<a title="Gtk.Application" href="gtkapplication-h.html#GtkApplication">Gtk.Application</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkapplication-h.html#GtkApplication">Gtk.Application</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>accel</code></em></i>
+					(
+						<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
+						)
+				–
+	</div>
+			<p>an accelerator that can be parsed by <a href="gtkaccelgroup-h.html#gtk_accelerator_parse">prototype.accelerator_parse</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					[ <a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a> ]
+										)
+								–
+			</div>
+							<p>a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a>-terminated array of actions for <em>accel</em></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.14
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_application_get_actions_for_accel">
+	<span><code>Gtk.Application.get_actions_for_accel</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Application.get_actions_for_accel (self, accel):
+    #python wrapper for 'gtk_application_get_actions_for_accel'</pre>
+
+<p>Returns the list of actions (possibly empty) that <em>accel</em> maps to.
+Each item in the list is a detailed action name in the usual form.</p>
+<p>This might be useful to discover if an accel already exists in
+order to prevent installation of a conflicting accelerator (from
+an accelerator editor or a plugin system, for example). Note that
+having more than one action per accelerator may not be a bad thing
+and might make sense in cases where the actions never appear in the
+same context.</p>
+<p>In case there are no actions for a given accelerator, an empty array
+is returned.  <a href="https://docs.python.org/3/library/constants.html#None">None</a> is never returned.</p>
+<p>It is a programmer error to pass an invalid accelerator string.
+If you are unsure, check it with <a href="gtkaccelgroup-h.html#gtk_accelerator_parse">Gtk.accelerator_parse</a> first.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>application</code></em></i>
+					(
+						<a title="Gtk.Application" href="gtkapplication-h.html#GtkApplication">Gtk.Application</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkapplication-h.html#GtkApplication">Gtk.Application</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>accel</code></em></i>
+					(
+						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
+						)
+				–
+	</div>
+			<p>an accelerator that can be parsed by <a href="gtkaccelgroup-h.html#gtk_accelerator_parse">Gtk.accelerator_parse</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					[ <a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a> ]
+										)
+								–
+			</div>
+							<p>a <a href="https://docs.python.org/3/library/constants.html#None">None</a>-terminated array of actions for <em>accel</em></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.14
+		</p>
+
+
+        </div>
+
+</div>
+
+
+        
+
+            <h2 class="symbol_section">Enumerations</h2>
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.4;" id="GtkApplicationInhibitFlags">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h3 data-hotdoc-id="GtkApplicationInhibitFlags">
+	<span><code>GtkApplicationInhibitFlags</code></span>
+</h3>
+
+
+<p>Types of user actions that may be blocked by <a href="gtkapplication-h.html#gtk_application_inhibit">gtk_application_inhibit</a>.</p>
+
+
+
+
+	<div class="members-container">
+		<h4>Members</h4>
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_APPLICATION_INHIBIT_LOGOUT">
+	<div>
+		<i><em><code>GTK_APPLICATION_INHIBIT_LOGOUT</code></em></i>
+		(<span class="value">1</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_APPLICATION_INHIBIT_SWITCH">
+	<div>
+		<i><em><code>GTK_APPLICATION_INHIBIT_SWITCH</code></em></i>
+		(<span class="value">2</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_APPLICATION_INHIBIT_SUSPEND">
+	<div>
+		<i><em><code>GTK_APPLICATION_INHIBIT_SUSPEND</code></em></i>
+		(<span class="value">4</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_APPLICATION_INHIBIT_IDLE">
+	<div>
+		<i><em><code>GTK_APPLICATION_INHIBIT_IDLE</code></em></i>
+		(<span class="value">8</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h3 data-hotdoc-id="GtkApplicationInhibitFlags">
+	<span><code>Gtk.ApplicationInhibitFlags</code></span>
+</h3>
+
+
+<p>Types of user actions that may be blocked by <a href="gtkapplication-h.html#gtk_application_inhibit">Gtk.prototype.inhibit</a>.</p>
+
+
+
+
+	<div class="members-container">
+		<h4>Members</h4>
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_APPLICATION_INHIBIT_LOGOUT">
+	<div>
+		<i><em><code>Gtk.ApplicationInhibitFlags.LOGOUT</code></em></i>
+		(<span class="value">1</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_APPLICATION_INHIBIT_SWITCH">
+	<div>
+		<i><em><code>Gtk.ApplicationInhibitFlags.SWITCH</code></em></i>
+		(<span class="value">2</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_APPLICATION_INHIBIT_SUSPEND">
+	<div>
+		<i><em><code>Gtk.ApplicationInhibitFlags.SUSPEND</code></em></i>
+		(<span class="value">4</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_APPLICATION_INHIBIT_IDLE">
+	<div>
+		<i><em><code>Gtk.ApplicationInhibitFlags.IDLE</code></em></i>
+		(<span class="value">8</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="GtkApplicationInhibitFlags">
+	<span><code>Gtk.ApplicationInhibitFlags</code></span>
+</h3>
+
+
+<p>Types of user actions that may be blocked by <a href="gtkapplication-h.html#gtk_application_inhibit">Gtk.Application.inhibit</a>.</p>
+
+
+
+
+	<div class="members-container">
+		<h4>Members</h4>
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_APPLICATION_INHIBIT_LOGOUT">
+	<div>
+		<i><em><code>Gtk.ApplicationInhibitFlags.LOGOUT</code></em></i>
+		(<span class="value">1</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_APPLICATION_INHIBIT_SWITCH">
+	<div>
+		<i><em><code>Gtk.ApplicationInhibitFlags.SWITCH</code></em></i>
+		(<span class="value">2</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_APPLICATION_INHIBIT_SUSPEND">
+	<div>
+		<i><em><code>Gtk.ApplicationInhibitFlags.SUSPEND</code></em></i>
+		(<span class="value">4</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_APPLICATION_INHIBIT_IDLE">
+	<div>
+		<i><em><code>Gtk.ApplicationInhibitFlags.IDLE</code></em></i>
+		(<span class="value">8</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+
+</div>
+
+
+
+
+
+
+		
+	</div>
+	<div id="search_results">
+		<p>The results of the search are</p>
+	</div>
+	<hr>
+	<div id="footer">
+		    
+
+	</div>
+</div>
+
+<div id="toc-column">
+	
+		<div class="edit-button">
+		
+
+	</div>
+		<div id="toc-wrapper">
+		<nav id="toc"></nav>
+	</div>
+</div>
+</div>
+</main>
+
+</body>
+
+<script src="assets/js/navbar_offset_scroller.js"></script>
+</html>

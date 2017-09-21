@@ -1,0 +1,6402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<base href=".">
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>GtkSpinButton</title>
+
+<link rel="stylesheet" href="assets/css/custom_bootstrap.css" type="text/css">
+<link rel="stylesheet" href="assets/css/bootstrap-toc.min.css" type="text/css">
+<link rel="stylesheet" href="assets/css/frontend.css" type="text/css">
+<link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
+
+<link rel="stylesheet" href="assets/css/prism.css" type="text/css">
+
+<script src="assets/js/mustache.min.js"></script>
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/scrollspy.js"></script>
+<script src="assets/js/bootstrap.js"></script>
+<script src="assets/js/typeahead.jquery.min.js"></script>
+<script src="assets/js/search.js"></script>
+<script src="assets/js/isotope.pkgd.min.js"></script>
+<script src="assets/js/compare-versions.js"></script>
+<script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="assets/js/bootstrap-toc.min.js"></script>
+<script src="assets/js/jquery.touchSwipe.min.js"></script>
+<script src="assets/js/anchor.min.js"></script>
+<script src="assets/js/tag_filtering.js"></script>
+<script src="assets/js/language_switching.js"></script>
+
+<script src="assets/js/lines_around_headings.js"></script>
+
+<script src="assets/js/prism-core.js"></script>
+<script src="assets/js/prism-autoloader.js"></script>
+<script src="assets/js/prism_autoloader_path_override.js"></script>
+<script src="assets/js/trie.js"></script>
+
+
+</head>
+
+<body class="no-script
+" data-spy="scroll" data-target="#toc" data-offset="70">
+
+<script>
+$('body').removeClass('no-script');
+</script>
+
+<nav class="navbar navbar-fixed-top navbar-default" id="topnav">
+	<div class="container-fluid">
+		<div class="navbar-right">
+			<a id="toc-toggle">
+				<span class="glyphicon glyphicon-menu-right"></span>
+				<span class="glyphicon glyphicon-menu-left"></span>
+			</a>
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-wrapper" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<form action="" class="navbar-form pull-right" id="navbar-search-form">
+                               <div class="form-group has-feedback">
+                                       <input type="text" class="form-control input-sm" name="search" id="sidenav-lookup-field" placeholder="search" disabled>
+				       <span class="glyphicon glyphicon-search form-control-feedback" id="search-mgn-glass"></span>
+                               </div>
+                        </form>
+		</div>
+		<div class="navbar-header">
+			<a id="sidenav-toggle">
+				<span class="glyphicon glyphicon-menu-right"></span>
+				<span class="glyphicon glyphicon-menu-left"></span>
+			</a>
+			<a id="home-link" href="index.html" class="hotdoc-navbar-brand">
+				<img src="assets/images/home.svg" alt="Home">
+			</a>
+		</div>
+		<div class="navbar-collapse collapse" id="navbar-wrapper">
+			<ul class="nav navbar-nav" id="menu">
+							</ul>
+			<div class="hidden-xs hidden-sm navbar-text navbar-center">
+							</div>
+		</div>
+	</div>
+</nav>
+
+<main>
+<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="gtkspinbutton-h.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['c', 'javascript', 'python']" data-hotdoc-meta-gi-language="c">
+<script src="assets/js/utils.js"></script>
+
+<div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
+	<script src="assets/js/navigation.js"></script>
+	<script src="assets/js/sitemap.js"></script>
+</div>
+
+<div id="body">
+	<div id="main">
+				    <div id="page-description" data-hotdoc-source="gtkspinbutton.h.markdown" data-hotdoc-role="main">
+        <h1 id="gtkspinbutton-page">GtkSpinButton</h1>
+<p>A <a href="gtkspinbutton-h.html#GtkSpinButton" data-gi-href-javascript="gtkspinbutton-h.html#GtkSpinButton" data-gi-title-javascript="Gtk.SpinButton" data-gi-href-python="gtkspinbutton-h.html#GtkSpinButton" data-gi-title-python="Gtk.SpinButton">GtkSpinButton</a> is an ideal way to allow the user to set the value of
+some attribute. Rather than having to directly type a number into a
+<a href="gtkentry-h.html#GtkEntry" data-gi-href-javascript="gtkentry-h.html#GtkEntry" data-gi-title-javascript="Gtk.Entry" data-gi-href-python="gtkentry-h.html#GtkEntry" data-gi-title-python="Gtk.Entry">GtkEntry</a>, GtkSpinButton allows the user to click on one of two arrows
+to increment or decrement the displayed value. A value can still be
+typed in, with the bonus that it can be checked to ensure it is in a
+given range.</p>
+<p>The main properties of a GtkSpinButton are through an adjustment.
+See the <a href="gtkadjustment-h.html#GtkAdjustment" data-gi-href-javascript="gtkadjustment-h.html#GtkAdjustment" data-gi-title-javascript="Gtk.Adjustment" data-gi-href-python="gtkadjustment-h.html#GtkAdjustment" data-gi-title-python="Gtk.Adjustment">GtkAdjustment</a> section for more details about an adjustment's
+properties. Note that GtkSpinButton will by default make its entry
+large enough to accomodate the lower and upper bounds of the adjustment,
+which can lead to surprising results. Best practice is to set both
+the <a href="https://developer.gnome.org/gtk3/GtkEntry.html#GtkEntry--width-chars">GtkEntry:width-chars</a> and <a href="https://developer.gnome.org/gtk3/GtkEntry.html#GtkEntry--max-width-chars">GtkEntry:max-width-chars</a> poperties
+to the desired number of characters to display in the entry.</p>
+<h1 id="css-nodes">CSS nodes</h1>
+<pre><code class="language-[&lt;!--"> spinbutton.horizontal
+ ╰── box.horizontal
+     ├── entry
+     │    ├── undershoot.left
+     │    ╰── undershoot.right
+     ├── button.down
+     ╰── button.up
+</code></pre>
+<pre><code class="language-[&lt;!--"> spinbutton.vertical
+ ╰── box.vertical
+     ├── button.up
+     ├── entry
+     │    ├── undershoot.left
+     │    ╰── undershoot.right
+     ╰── button.up
+</code></pre>
+<p>GtkSpinButtons main CSS node has the name spinbutton. It creates subnodes
+for the entry and the two buttons, with these names. The button nodes have
+the style classes .up and .down. The GtkEntry subnodes (if present) are put
+below the entry node. The orientation of the spin button is reflected in
+the .vertical or .horizontal style class on the main node.</p>
+<h2 id="using-a-gtkspinbutton-to-get-an-integer">Using a GtkSpinButton to get an integer</h2>
+<pre><code class="language-[&lt;!--"> // Provides a function to retrieve an integer value from a GtkSpinButton
+ // and creates a spin button to model percentage values.
+
+ gint
+ grab_int_value (GtkSpinButton *button,
+                 gpointer       user_data)
+ {
+   return gtk_spin_button_get_value_as_int (button);
+ }
+
+ void
+ create_integer_spin_button (void)
+ {
+
+   GtkWidget *window, *button;
+   GtkAdjustment *adjustment;
+
+   adjustment = gtk_adjustment_new (50.0, 0.0, 100.0, 1.0, 5.0, 0.0);
+
+   window = gtk_window_new (GTK_WINDOW_TOPLEVEL);
+
+   // creates the spinbutton, with no decimal places
+   button = gtk_spin_button_new (adjustment, 1.0, 0);
+   gtk_container_add (GTK_CONTAINER (window), button);
+
+   gtk_widget_show (window);
+ }
+</code></pre>
+<h2 id="using-a-gtkspinbutton-to-get-a-floating-point-value">Using a GtkSpinButton to get a floating point value</h2>
+<pre><code class="language-[&lt;!--"> // Provides a function to retrieve a floating point value from a
+ // GtkSpinButton, and creates a high precision spin button.
+
+ gfloat
+ grab_float_value (GtkSpinButton *button,
+                   gpointer       user_data)
+ {
+   return gtk_spin_button_get_value (button);
+ }
+
+ void
+ create_floating_spin_button (void)
+ {
+   GtkWidget *window, *button;
+   GtkAdjustment *adjustment;
+
+   adjustment = gtk_adjustment_new (2.500, 0.0, 5.0, 0.001, 0.1, 0.0);
+
+   window = gtk_window_new (GTK_WINDOW_TOPLEVEL);
+
+   // creates the spinbutton, with three decimal places
+   button = gtk_spin_button_new (adjustment, 0.001, 3);
+   gtk_container_add (GTK_CONTAINER (window), button);
+
+   gtk_widget_show (window);
+ }
+</code></pre>
+
+    </div>
+        
+        
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="GtkSpinButton">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h2 data-hotdoc-id="GtkSpinButton">
+	<span><code>GtkSpinButton</code></span>
+</h2>
+
+
+<div class="hierarchy_container">
+	<div class="hierarchy_details">
+<pre>
+<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object">GObject</a>
+    <span class="lineart">╰──</span><a title="GInitiallyUnowned" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-javascript="GObject.InitiallyUnowned" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-python="GObject.InitiallyUnowned">GInitiallyUnowned</a>
+        <span class="lineart">╰──</span><a title="GtkWidget" href="gtkwidget-h.html#GtkWidget" data-gi-href-javascript="gtkwidget-h.html#GtkWidget" data-gi-title-javascript="Gtk.Widget" data-gi-href-python="gtkwidget-h.html#GtkWidget" data-gi-title-python="Gtk.Widget">GtkWidget</a>
+            <span class="lineart">╰──</span>GtkSpinButton
+</pre>
+
+</div>
+
+</div>
+
+<div class="interfaces_container">
+	
+<p><b>Implemented interfaces:</b>
+    AtkImplementorIface, <a title="GtkBuildable" href="gtkbuildable-h.html#GtkBuildable" data-gi-href-javascript="gtkbuildable-h.html#GtkBuildable" data-gi-title-javascript="Gtk.Buildable" data-gi-href-python="gtkbuildable-h.html#GtkBuildable" data-gi-title-python="Gtk.Buildable">GtkBuildable</a>, <a title="GtkEditable" href="gtkeditable-h.html#GtkEditable" data-gi-href-javascript="gtkeditable-h.html#GtkEditable" data-gi-title-javascript="Gtk.Editable" data-gi-href-python="gtkeditable-h.html#GtkEditable" data-gi-title-python="Gtk.Editable">GtkEditable</a>, <a title="GtkOrientable" href="gtkorientable-h.html#GtkOrientable" data-gi-href-javascript="gtkorientable-h.html#GtkOrientable" data-gi-title-javascript="Gtk.Orientable" data-gi-href-python="gtkorientable-h.html#GtkOrientable" data-gi-title-python="Gtk.Orientable">GtkOrientable</a>
+</p>
+
+</div>
+
+<div class="class_details">
+	<p>The <a href="gtkspinbutton-h.html#GtkSpinButton" data-gi-href-javascript="gtkspinbutton-h.html#GtkSpinButton" data-gi-title-javascript="Gtk.SpinButton" data-gi-href-python="gtkspinbutton-h.html#GtkSpinButton" data-gi-title-python="Gtk.SpinButton">GtkSpinButton</a>-struct contains only private data and should
+not be directly modified.</p>
+
+</div>
+
+
+
+	<div class="members-container">
+		<h3>Members</h3>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkSpinButton.parent_instance">
+	<div>
+		<i><em><code>parent_instance</code></em></i>
+		(<a title="GtkWidget" href="gtkwidget-h.html#GtkWidget" data-gi-href-javascript="gtkwidget-h.html#GtkWidget" data-gi-title-javascript="Gtk.Widget" data-gi-href-python="gtkwidget-h.html#GtkWidget" data-gi-title-python="Gtk.Widget">GtkWidget</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+<h3>Class structure</h3>
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="GtkSpinButtonClass">
+	<span><code>GtkSpinButtonClass</code></span>
+</h4>
+
+
+
+
+
+	<div class="members-container">
+		<h5>Fields</h5>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkSpinButtonClass.parent_class">
+	<div>
+		<i><em><code>parent_class</code></em></i>
+		(<a title="GtkWidgetClass" href="GtkWidgetClass">GtkWidgetClass</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h3>
+	Gtk.SpinButtonClass
+</h3>
+
+
+
+
+
+	<div class="members-container">
+		<h5>Attributes</h5>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkSpinButtonClass.parent_class">
+	<div>
+		<i><em><code>SpinButtonClass.parent_class</code></em></i>
+		(<a title="Gtk.WidgetClass" href="GtkWidgetClass">Gtk.WidgetClass</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3>
+	Gtk.SpinButtonClass
+</h3>
+
+
+
+
+
+	<div class="members-container">
+		<h5>Attributes</h5>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkSpinButtonClass.parent_class">
+	<div>
+		<i><em><code>SpinButtonClass.parent_class</code></em></i>
+		(<a title="Gtk.WidgetClass" href="GtkWidgetClass">Gtk.WidgetClass</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h2 data-hotdoc-id="GtkSpinButton">
+	<span><code>GtkSpinButton</code></span>
+</h2>
+
+
+<div class="hierarchy_container">
+	<div class="hierarchy_details">
+<pre>
+<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object">GObject</a>
+    <span class="lineart">╰──</span><a title="GInitiallyUnowned" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-javascript="GObject.InitiallyUnowned" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-python="GObject.InitiallyUnowned">GInitiallyUnowned</a>
+        <span class="lineart">╰──</span><a title="GtkWidget" href="gtkwidget-h.html#GtkWidget" data-gi-href-javascript="gtkwidget-h.html#GtkWidget" data-gi-title-javascript="Gtk.Widget" data-gi-href-python="gtkwidget-h.html#GtkWidget" data-gi-title-python="Gtk.Widget">GtkWidget</a>
+            <span class="lineart">╰──</span>GtkSpinButton
+</pre>
+
+</div>
+
+</div>
+
+<div class="interfaces_container">
+	
+<p><b>Implemented interfaces:</b>
+    AtkImplementorIface, <a title="GtkBuildable" href="gtkbuildable-h.html#GtkBuildable" data-gi-href-javascript="gtkbuildable-h.html#GtkBuildable" data-gi-title-javascript="Gtk.Buildable" data-gi-href-python="gtkbuildable-h.html#GtkBuildable" data-gi-title-python="Gtk.Buildable">GtkBuildable</a>, <a title="GtkEditable" href="gtkeditable-h.html#GtkEditable" data-gi-href-javascript="gtkeditable-h.html#GtkEditable" data-gi-title-javascript="Gtk.Editable" data-gi-href-python="gtkeditable-h.html#GtkEditable" data-gi-title-python="Gtk.Editable">GtkEditable</a>, <a title="GtkOrientable" href="gtkorientable-h.html#GtkOrientable" data-gi-href-javascript="gtkorientable-h.html#GtkOrientable" data-gi-title-javascript="Gtk.Orientable" data-gi-href-python="gtkorientable-h.html#GtkOrientable" data-gi-title-python="Gtk.Orientable">GtkOrientable</a>
+</p>
+
+</div>
+
+<div class="class_details">
+	<p>The <a href="gtkspinbutton-h.html#GtkSpinButton" data-gi-href-javascript="gtkspinbutton-h.html#GtkSpinButton" data-gi-title-javascript="Gtk.SpinButton" data-gi-href-python="gtkspinbutton-h.html#GtkSpinButton" data-gi-title-python="Gtk.SpinButton">GtkSpinButton</a>-struct contains only private data and should
+not be directly modified.</p>
+
+</div>
+
+
+
+	<div class="members-container">
+		<h3>Members</h3>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkSpinButton.parent_instance">
+	<div>
+		<i><em><code>parent_instance</code></em></i>
+		(<a title="GtkWidget" href="gtkwidget-h.html#GtkWidget" data-gi-href-javascript="gtkwidget-h.html#GtkWidget" data-gi-title-javascript="Gtk.Widget" data-gi-href-python="gtkwidget-h.html#GtkWidget" data-gi-title-python="Gtk.Widget">GtkWidget</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h2 data-hotdoc-id="GtkSpinButton">
+	<span><code>GtkSpinButton</code></span>
+</h2>
+
+
+<div class="hierarchy_container">
+	<div class="hierarchy_details">
+<pre>
+<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object">GObject</a>
+    <span class="lineart">╰──</span><a title="GInitiallyUnowned" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-javascript="GObject.InitiallyUnowned" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-python="GObject.InitiallyUnowned">GInitiallyUnowned</a>
+        <span class="lineart">╰──</span><a title="GtkWidget" href="gtkwidget-h.html#GtkWidget" data-gi-href-javascript="gtkwidget-h.html#GtkWidget" data-gi-title-javascript="Gtk.Widget" data-gi-href-python="gtkwidget-h.html#GtkWidget" data-gi-title-python="Gtk.Widget">GtkWidget</a>
+            <span class="lineart">╰──</span>GtkSpinButton
+</pre>
+
+</div>
+
+</div>
+
+<div class="interfaces_container">
+	
+<p><b>Implemented interfaces:</b>
+    AtkImplementorIface, <a title="GtkBuildable" href="gtkbuildable-h.html#GtkBuildable" data-gi-href-javascript="gtkbuildable-h.html#GtkBuildable" data-gi-title-javascript="Gtk.Buildable" data-gi-href-python="gtkbuildable-h.html#GtkBuildable" data-gi-title-python="Gtk.Buildable">GtkBuildable</a>, <a title="GtkEditable" href="gtkeditable-h.html#GtkEditable" data-gi-href-javascript="gtkeditable-h.html#GtkEditable" data-gi-title-javascript="Gtk.Editable" data-gi-href-python="gtkeditable-h.html#GtkEditable" data-gi-title-python="Gtk.Editable">GtkEditable</a>, <a title="GtkOrientable" href="gtkorientable-h.html#GtkOrientable" data-gi-href-javascript="gtkorientable-h.html#GtkOrientable" data-gi-title-javascript="Gtk.Orientable" data-gi-href-python="gtkorientable-h.html#GtkOrientable" data-gi-title-python="Gtk.Orientable">GtkOrientable</a>
+</p>
+
+</div>
+
+<div class="class_details">
+	<p>The <a href="gtkspinbutton-h.html#GtkSpinButton" data-gi-href-javascript="gtkspinbutton-h.html#GtkSpinButton" data-gi-title-javascript="Gtk.SpinButton" data-gi-href-python="gtkspinbutton-h.html#GtkSpinButton" data-gi-title-python="Gtk.SpinButton">GtkSpinButton</a>-struct contains only private data and should
+not be directly modified.</p>
+
+</div>
+
+
+
+	<div class="members-container">
+		<h3>Members</h3>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkSpinButton.parent_instance">
+	<div>
+		<i><em><code>parent_instance</code></em></i>
+		(<a title="GtkWidget" href="gtkwidget-h.html#GtkWidget" data-gi-href-javascript="gtkwidget-h.html#GtkWidget" data-gi-title-javascript="Gtk.Widget" data-gi-href-python="gtkwidget-h.html#GtkWidget" data-gi-title-python="Gtk.Widget">GtkWidget</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+
+</div>
+
+
+            <h3 class="symbol_section">Constructors</h3>
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_spin_button_new">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_new">
+	<span><code>gtk_spin_button_new</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> *
+gtk_spin_button_new (<a title="GtkAdjustment" href="gtkadjustment-h.html#GtkAdjustment">GtkAdjustment</a> * adjustment,
+                     <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> climb_rate,
+                     <a title="guint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint">guint</a> digits)</pre>
+
+<p>Creates a new <a href="gtkspinbutton-h.html#GtkSpinButton">GtkSpinButton</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>adjustment</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>the <a href="gtkadjustment-h.html#GtkAdjustment">GtkAdjustment</a> object that this spin
+button should use, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>climb_rate</code></em></i>
+				–
+	</div>
+			<p>specifies how much the spin button changes when an arrow
+is clicked on</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>digits</code></em></i>
+				–
+	</div>
+			<p>the number of decimal places to display</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>The new spin button as a <a href="gtkwidget-h.html#GtkWidget">GtkWidget</a></p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_new">
+	<span><code>Gtk.prototype.new</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.new(adjustment: <a title="Gtk.Adjustment" href="gtkadjustment-h.html#GtkAdjustment">Gtk.Adjustment</a>, climb_rate: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, digits: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_spin_button_new'
+}</pre>
+
+<p>Creates a new <a href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>adjustment</code></em></i>
+					(
+						<a title="Gtk.Adjustment" href="gtkadjustment-h.html#GtkAdjustment">Gtk.Adjustment</a>
+						)
+				–
+	</div>
+			<p>the <a href="gtkadjustment-h.html#GtkAdjustment">Gtk.Adjustment</a> object that this spin
+button should use, or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>climb_rate</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>specifies how much the spin button changes when an arrow
+is clicked on</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>digits</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the number of decimal places to display</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>The new spin button as a <a href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a></p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_new">
+	<span><code>Gtk.SpinButton.new</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.SpinButton.new (adjustment, climb_rate, digits):
+    #python wrapper for 'gtk_spin_button_new'</pre>
+
+<p>Creates a new <a href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>adjustment</code></em></i>
+					(
+						<a title="Gtk.Adjustment" href="gtkadjustment-h.html#GtkAdjustment">Gtk.Adjustment</a>
+						)
+				–
+	</div>
+			<p>the <a href="gtkadjustment-h.html#GtkAdjustment">Gtk.Adjustment</a> object that this spin
+button should use, or <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>climb_rate</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>specifies how much the spin button changes when an arrow
+is clicked on</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>digits</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>the number of decimal places to display</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>The new spin button as a <a href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a></p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_spin_button_new_with_range">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_new_with_range">
+	<span><code>gtk_spin_button_new_with_range</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkWidget" href="gtkwidget-h.html#GtkWidget">GtkWidget</a> *
+gtk_spin_button_new_with_range (<a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> min,
+                                <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> max,
+                                <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> step)</pre>
+
+<p>This is a convenience constructor that allows creation of a numeric
+<a href="gtkspinbutton-h.html#GtkSpinButton">GtkSpinButton</a> without manually creating an adjustment. The value is
+initially set to the minimum value and a page increment of 10 * <em>step</em>
+is the default. The precision of the spin button is equivalent to the
+precision of <em>step</em>.</p>
+<p>Note that the way in which the precision is derived works best if <em>step</em>
+is a power of ten. If the resulting precision is not suitable for your
+needs, use <a href="gtkspinbutton-h.html#gtk_spin_button_set_digits">gtk_spin_button_set_digits</a> to correct it.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>min</code></em></i>
+				–
+	</div>
+			<p>Minimum allowable value</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>max</code></em></i>
+				–
+	</div>
+			<p>Maximum allowable value</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>step</code></em></i>
+				–
+	</div>
+			<p>Increment added or subtracted by spinning the widget</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>The new spin button as a <a href="gtkwidget-h.html#GtkWidget">GtkWidget</a></p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_new_with_range">
+	<span><code>Gtk.prototype.new_with_range</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.new_with_range(min: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, max: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, step: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_spin_button_new_with_range'
+}</pre>
+
+<p>This is a convenience constructor that allows creation of a numeric
+<a href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a> without manually creating an adjustment. The value is
+initially set to the minimum value and a page increment of 10 * <em>step</em>
+is the default. The precision of the spin button is equivalent to the
+precision of <em>step</em>.</p>
+<p>Note that the way in which the precision is derived works best if <em>step</em>
+is a power of ten. If the resulting precision is not suitable for your
+needs, use <a href="gtkspinbutton-h.html#gtk_spin_button_set_digits">Gtk.prototype.set_digits</a> to correct it.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>min</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>Minimum allowable value</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>max</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>Maximum allowable value</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>step</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>Increment added or subtracted by spinning the widget</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>The new spin button as a <a href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a></p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_new_with_range">
+	<span><code>Gtk.SpinButton.new_with_range</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.SpinButton.new_with_range (min, max, step):
+    #python wrapper for 'gtk_spin_button_new_with_range'</pre>
+
+<p>This is a convenience constructor that allows creation of a numeric
+<a href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a> without manually creating an adjustment. The value is
+initially set to the minimum value and a page increment of 10 * <em>step</em>
+is the default. The precision of the spin button is equivalent to the
+precision of <em>step</em>.</p>
+<p>Note that the way in which the precision is derived works best if <em>step</em>
+is a power of ten. If the resulting precision is not suitable for your
+needs, use <a href="gtkspinbutton-h.html#gtk_spin_button_set_digits">Gtk.SpinButton.set_digits</a> to correct it.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>min</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>Minimum allowable value</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>max</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>Maximum allowable value</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>step</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>Increment added or subtracted by spinning the widget</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>The new spin button as a <a href="gtkwidget-h.html#GtkWidget">Gtk.Widget</a></p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+
+            <h3 class="symbol_section">Methods</h3>
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_spin_button_configure">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_configure">
+	<span><code>gtk_spin_button_configure</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_spin_button_configure (<a title="GtkSpinButton" href="gtkspinbutton-h.html#GtkSpinButton">GtkSpinButton</a> * spin_button,
+                           <a title="GtkAdjustment" href="gtkadjustment-h.html#GtkAdjustment">GtkAdjustment</a> * adjustment,
+                           <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> climb_rate,
+                           <a title="guint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint">guint</a> digits)</pre>
+
+<p>Changes the properties of an existing spin button. The adjustment,
+climb rate, and number of decimal places are all changed accordingly,
+after this function call.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">GtkSpinButton</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>adjustment</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>a <a href="gtkadjustment-h.html#GtkAdjustment">GtkAdjustment</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>climb_rate</code></em></i>
+				–
+	</div>
+			<p>the new climb rate</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>digits</code></em></i>
+				–
+	</div>
+			<p>the number of decimal places to display in the spin button</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_configure">
+	<span><code>Gtk.prototype.configure</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.configure(adjustment: <a title="Gtk.Adjustment" href="gtkadjustment-h.html#GtkAdjustment">Gtk.Adjustment</a>, climb_rate: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, digits: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_spin_button_configure'
+}</pre>
+
+<p>Changes the properties of an existing spin button. The adjustment,
+climb rate, and number of decimal places are all changed accordingly,
+after this function call.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+					(
+						<a title="Gtk.SpinButton" href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>adjustment</code></em></i>
+					(
+						<a title="Gtk.Adjustment" href="gtkadjustment-h.html#GtkAdjustment">Gtk.Adjustment</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkadjustment-h.html#GtkAdjustment">Gtk.Adjustment</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>climb_rate</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the new climb rate</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>digits</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the number of decimal places to display in the spin button</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_configure">
+	<span><code>Gtk.SpinButton.configure</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.SpinButton.configure (self, adjustment, climb_rate, digits):
+    #python wrapper for 'gtk_spin_button_configure'</pre>
+
+<p>Changes the properties of an existing spin button. The adjustment,
+climb rate, and number of decimal places are all changed accordingly,
+after this function call.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+					(
+						<a title="Gtk.SpinButton" href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>adjustment</code></em></i>
+					(
+						<a title="Gtk.Adjustment" href="gtkadjustment-h.html#GtkAdjustment">Gtk.Adjustment</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkadjustment-h.html#GtkAdjustment">Gtk.Adjustment</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>climb_rate</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>the new climb rate</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>digits</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>the number of decimal places to display in the spin button</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_spin_button_set_adjustment">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_set_adjustment">
+	<span><code>gtk_spin_button_set_adjustment</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_spin_button_set_adjustment (<a title="GtkSpinButton" href="gtkspinbutton-h.html#GtkSpinButton">GtkSpinButton</a> * spin_button,
+                                <a title="GtkAdjustment" href="gtkadjustment-h.html#GtkAdjustment">GtkAdjustment</a> * adjustment)</pre>
+
+<p>Replaces the <a href="gtkadjustment-h.html#GtkAdjustment">GtkAdjustment</a> associated with <em>spin_button</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">GtkSpinButton</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>adjustment</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkadjustment-h.html#GtkAdjustment">GtkAdjustment</a> to replace the existing adjustment</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_set_adjustment">
+	<span><code>Gtk.prototype.set_adjustment</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_adjustment(adjustment: <a title="Gtk.Adjustment" href="gtkadjustment-h.html#GtkAdjustment">Gtk.Adjustment</a>): {
+    // javascript wrapper for 'gtk_spin_button_set_adjustment'
+}</pre>
+
+<p>Replaces the <a href="gtkadjustment-h.html#GtkAdjustment">Gtk.Adjustment</a> associated with <em>spin_button</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+					(
+						<a title="Gtk.SpinButton" href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>adjustment</code></em></i>
+					(
+						<a title="Gtk.Adjustment" href="gtkadjustment-h.html#GtkAdjustment">Gtk.Adjustment</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkadjustment-h.html#GtkAdjustment">Gtk.Adjustment</a> to replace the existing adjustment</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_set_adjustment">
+	<span><code>Gtk.SpinButton.set_adjustment</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.SpinButton.set_adjustment (self, adjustment):
+    #python wrapper for 'gtk_spin_button_set_adjustment'</pre>
+
+<p>Replaces the <a href="gtkadjustment-h.html#GtkAdjustment">Gtk.Adjustment</a> associated with <em>spin_button</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+					(
+						<a title="Gtk.SpinButton" href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>adjustment</code></em></i>
+					(
+						<a title="Gtk.Adjustment" href="gtkadjustment-h.html#GtkAdjustment">Gtk.Adjustment</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkadjustment-h.html#GtkAdjustment">Gtk.Adjustment</a> to replace the existing adjustment</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_spin_button_get_adjustment">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_get_adjustment">
+	<span><code>gtk_spin_button_get_adjustment</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkAdjustment" href="gtkadjustment-h.html#GtkAdjustment">GtkAdjustment</a> *
+gtk_spin_button_get_adjustment (<a title="GtkSpinButton" href="gtkspinbutton-h.html#GtkSpinButton">GtkSpinButton</a> * spin_button)</pre>
+
+<p>Get the adjustment associated with a <a href="gtkspinbutton-h.html#GtkSpinButton">GtkSpinButton</a></p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">GtkSpinButton</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					
+										
+<span class="annotation">[<abbr title="Don't free data after the code is done"><span class="acronym">transfer: none</span></abbr>]</span>
+
+										)
+								–
+			</div>
+							<p>the <a href="gtkadjustment-h.html#GtkAdjustment">GtkAdjustment</a> of <em>spin_button</em></p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_get_adjustment">
+	<span><code>Gtk.prototype.get_adjustment</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_adjustment(): {
+    // javascript wrapper for 'gtk_spin_button_get_adjustment'
+}</pre>
+
+<p>Get the adjustment associated with a <a href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a></p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+					(
+						<a title="Gtk.SpinButton" href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Adjustment" href="gtkadjustment-h.html#GtkAdjustment">Gtk.Adjustment</a>
+										)
+								–
+			</div>
+							<p>the <a href="gtkadjustment-h.html#GtkAdjustment">Gtk.Adjustment</a> of <em>spin_button</em></p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_get_adjustment">
+	<span><code>Gtk.SpinButton.get_adjustment</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.SpinButton.get_adjustment (self):
+    #python wrapper for 'gtk_spin_button_get_adjustment'</pre>
+
+<p>Get the adjustment associated with a <a href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a></p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+					(
+						<a title="Gtk.SpinButton" href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Adjustment" href="gtkadjustment-h.html#GtkAdjustment">Gtk.Adjustment</a>
+										)
+								–
+			</div>
+							<p>the <a href="gtkadjustment-h.html#GtkAdjustment">Gtk.Adjustment</a> of <em>spin_button</em></p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_spin_button_set_digits">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_set_digits">
+	<span><code>gtk_spin_button_set_digits</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_spin_button_set_digits (<a title="GtkSpinButton" href="gtkspinbutton-h.html#GtkSpinButton">GtkSpinButton</a> * spin_button,
+                            <a title="guint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint">guint</a> digits)</pre>
+
+<p>Set the precision to be displayed by <em>spin_button</em>. Up to 20 digit precision
+is allowed.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">GtkSpinButton</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>digits</code></em></i>
+				–
+	</div>
+			<p>the number of digits after the decimal point to be displayed for the spin button’s value</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_set_digits">
+	<span><code>Gtk.prototype.set_digits</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_digits(digits: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_spin_button_set_digits'
+}</pre>
+
+<p>Set the precision to be displayed by <em>spin_button</em>. Up to 20 digit precision
+is allowed.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+					(
+						<a title="Gtk.SpinButton" href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>digits</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the number of digits after the decimal point to be displayed for the spin button’s value</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_set_digits">
+	<span><code>Gtk.SpinButton.set_digits</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.SpinButton.set_digits (self, digits):
+    #python wrapper for 'gtk_spin_button_set_digits'</pre>
+
+<p>Set the precision to be displayed by <em>spin_button</em>. Up to 20 digit precision
+is allowed.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+					(
+						<a title="Gtk.SpinButton" href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>digits</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>the number of digits after the decimal point to be displayed for the spin button’s value</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_spin_button_set_increments">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_set_increments">
+	<span><code>gtk_spin_button_set_increments</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_spin_button_set_increments (<a title="GtkSpinButton" href="gtkspinbutton-h.html#GtkSpinButton">GtkSpinButton</a> * spin_button,
+                                <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> step,
+                                <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> page)</pre>
+
+<p>Sets the step and page increments for spin_button.  This affects how
+quickly the value changes when the spin button’s arrows are activated.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">GtkSpinButton</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>step</code></em></i>
+				–
+	</div>
+			<p>increment applied for a button 1 press.</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>page</code></em></i>
+				–
+	</div>
+			<p>increment applied for a button 2 press.</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_set_increments">
+	<span><code>Gtk.prototype.set_increments</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_increments(step: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, page: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_spin_button_set_increments'
+}</pre>
+
+<p>Sets the step and page increments for spin_button.  This affects how
+quickly the value changes when the spin button’s arrows are activated.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+					(
+						<a title="Gtk.SpinButton" href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>step</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>increment applied for a button 1 press.</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>page</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>increment applied for a button 2 press.</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_set_increments">
+	<span><code>Gtk.SpinButton.set_increments</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.SpinButton.set_increments (self, step, page):
+    #python wrapper for 'gtk_spin_button_set_increments'</pre>
+
+<p>Sets the step and page increments for spin_button.  This affects how
+quickly the value changes when the spin button’s arrows are activated.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+					(
+						<a title="Gtk.SpinButton" href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>step</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>increment applied for a button 1 press.</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>page</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>increment applied for a button 2 press.</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_spin_button_set_range">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_set_range">
+	<span><code>gtk_spin_button_set_range</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_spin_button_set_range (<a title="GtkSpinButton" href="gtkspinbutton-h.html#GtkSpinButton">GtkSpinButton</a> * spin_button,
+                           <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> min,
+                           <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> max)</pre>
+
+<p>Sets the minimum and maximum allowable values for <em>spin_button</em>.</p>
+<p>If the current value is outside this range, it will be adjusted
+to fit within the range, otherwise it will remain unchanged.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">GtkSpinButton</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>min</code></em></i>
+				–
+	</div>
+			<p>minimum allowable value</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>max</code></em></i>
+				–
+	</div>
+			<p>maximum allowable value</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_set_range">
+	<span><code>Gtk.prototype.set_range</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_range(min: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, max: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_spin_button_set_range'
+}</pre>
+
+<p>Sets the minimum and maximum allowable values for <em>spin_button</em>.</p>
+<p>If the current value is outside this range, it will be adjusted
+to fit within the range, otherwise it will remain unchanged.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+					(
+						<a title="Gtk.SpinButton" href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>min</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>minimum allowable value</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>max</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>maximum allowable value</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_set_range">
+	<span><code>Gtk.SpinButton.set_range</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.SpinButton.set_range (self, min, max):
+    #python wrapper for 'gtk_spin_button_set_range'</pre>
+
+<p>Sets the minimum and maximum allowable values for <em>spin_button</em>.</p>
+<p>If the current value is outside this range, it will be adjusted
+to fit within the range, otherwise it will remain unchanged.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+					(
+						<a title="Gtk.SpinButton" href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>min</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>minimum allowable value</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>max</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>maximum allowable value</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_spin_button_get_value_as_int">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_get_value_as_int">
+	<span><code>gtk_spin_button_get_value_as_int</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a>
+gtk_spin_button_get_value_as_int (<a title="GtkSpinButton" href="gtkspinbutton-h.html#GtkSpinButton">GtkSpinButton</a> * spin_button)</pre>
+
+<p>Get the value <em>spin_button</em> represented as an integer.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">GtkSpinButton</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>the value of <em>spin_button</em></p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_get_value_as_int">
+	<span><code>Gtk.prototype.get_value_as_int</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_value_as_int(): {
+    // javascript wrapper for 'gtk_spin_button_get_value_as_int'
+}</pre>
+
+<p>Get the value <em>spin_button</em> represented as an integer.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+					(
+						<a title="Gtk.SpinButton" href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p>the value of <em>spin_button</em></p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_get_value_as_int">
+	<span><code>Gtk.SpinButton.get_value_as_int</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.SpinButton.get_value_as_int (self):
+    #python wrapper for 'gtk_spin_button_get_value_as_int'</pre>
+
+<p>Get the value <em>spin_button</em> represented as an integer.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+					(
+						<a title="Gtk.SpinButton" href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+										)
+								–
+			</div>
+							<p>the value of <em>spin_button</em></p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_spin_button_set_value">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_set_value">
+	<span><code>gtk_spin_button_set_value</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_spin_button_set_value (<a title="GtkSpinButton" href="gtkspinbutton-h.html#GtkSpinButton">GtkSpinButton</a> * spin_button,
+                           <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> value)</pre>
+
+<p>Sets the value of <em>spin_button</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">GtkSpinButton</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>value</code></em></i>
+				–
+	</div>
+			<p>the new value</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_set_value">
+	<span><code>Gtk.prototype.set_value</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_value(value: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_spin_button_set_value'
+}</pre>
+
+<p>Sets the value of <em>spin_button</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+					(
+						<a title="Gtk.SpinButton" href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>value</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the new value</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_set_value">
+	<span><code>Gtk.SpinButton.set_value</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.SpinButton.set_value (self, value):
+    #python wrapper for 'gtk_spin_button_set_value'</pre>
+
+<p>Sets the value of <em>spin_button</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+					(
+						<a title="Gtk.SpinButton" href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>value</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>the new value</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_spin_button_set_update_policy">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_set_update_policy">
+	<span><code>gtk_spin_button_set_update_policy</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_spin_button_set_update_policy (<a title="GtkSpinButton" href="gtkspinbutton-h.html#GtkSpinButton">GtkSpinButton</a> * spin_button,
+                                   <a title="GtkSpinButtonUpdatePolicy" href="gtkspinbutton-h.html#GtkSpinButtonUpdatePolicy">GtkSpinButtonUpdatePolicy</a> policy)</pre>
+
+<p>Sets the update behavior of a spin button.
+This determines whether the spin button is always updated
+or only when a valid value is set.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">GtkSpinButton</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>policy</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButtonUpdatePolicy">GtkSpinButtonUpdatePolicy</a> value</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_set_update_policy">
+	<span><code>Gtk.prototype.set_update_policy</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_update_policy(policy: <a title="Gtk.SpinButtonUpdatePolicy" href="gtkspinbutton-h.html#GtkSpinButtonUpdatePolicy">Gtk.SpinButtonUpdatePolicy</a>): {
+    // javascript wrapper for 'gtk_spin_button_set_update_policy'
+}</pre>
+
+<p>Sets the update behavior of a spin button.
+This determines whether the spin button is always updated
+or only when a valid value is set.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+					(
+						<a title="Gtk.SpinButton" href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>policy</code></em></i>
+					(
+						<a title="Gtk.SpinButtonUpdatePolicy" href="gtkspinbutton-h.html#GtkSpinButtonUpdatePolicy">Gtk.SpinButtonUpdatePolicy</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButtonUpdatePolicy">Gtk.SpinButtonUpdatePolicy</a> value</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_set_update_policy">
+	<span><code>Gtk.SpinButton.set_update_policy</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.SpinButton.set_update_policy (self, policy):
+    #python wrapper for 'gtk_spin_button_set_update_policy'</pre>
+
+<p>Sets the update behavior of a spin button.
+This determines whether the spin button is always updated
+or only when a valid value is set.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+					(
+						<a title="Gtk.SpinButton" href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>policy</code></em></i>
+					(
+						<a title="Gtk.SpinButtonUpdatePolicy" href="gtkspinbutton-h.html#GtkSpinButtonUpdatePolicy">Gtk.SpinButtonUpdatePolicy</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButtonUpdatePolicy">Gtk.SpinButtonUpdatePolicy</a> value</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_spin_button_set_numeric">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_set_numeric">
+	<span><code>gtk_spin_button_set_numeric</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_spin_button_set_numeric (<a title="GtkSpinButton" href="gtkspinbutton-h.html#GtkSpinButton">GtkSpinButton</a> * spin_button,
+                             <a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a> numeric)</pre>
+
+<p>Sets the flag that determines if non-numeric text can be typed
+into the spin button.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">GtkSpinButton</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>numeric</code></em></i>
+				–
+	</div>
+			<p>flag indicating if only numeric entry is allowed</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_set_numeric">
+	<span><code>Gtk.prototype.set_numeric</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_numeric(numeric: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_spin_button_set_numeric'
+}</pre>
+
+<p>Sets the flag that determines if non-numeric text can be typed
+into the spin button.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+					(
+						<a title="Gtk.SpinButton" href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>numeric</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>flag indicating if only numeric entry is allowed</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_set_numeric">
+	<span><code>Gtk.SpinButton.set_numeric</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.SpinButton.set_numeric (self, numeric):
+    #python wrapper for 'gtk_spin_button_set_numeric'</pre>
+
+<p>Sets the flag that determines if non-numeric text can be typed
+into the spin button.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+					(
+						<a title="Gtk.SpinButton" href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>numeric</code></em></i>
+					(
+						<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+						)
+				–
+	</div>
+			<p>flag indicating if only numeric entry is allowed</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_spin_button_spin">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_spin">
+	<span><code>gtk_spin_button_spin</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_spin_button_spin (<a title="GtkSpinButton" href="gtkspinbutton-h.html#GtkSpinButton">GtkSpinButton</a> * spin_button,
+                      <a title="GtkSpinType" href="gtkspinbutton-h.html#GtkSpinType">GtkSpinType</a> direction,
+                      <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> increment)</pre>
+
+<p>Increment or decrement a spin button’s value in a specified
+direction by a specified amount.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">GtkSpinButton</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>direction</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinType">GtkSpinType</a> indicating the direction to spin</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>increment</code></em></i>
+				–
+	</div>
+			<p>step increment to apply in the specified direction</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_spin">
+	<span><code>Gtk.prototype.spin</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.spin(direction: <a title="Gtk.SpinType" href="gtkspinbutton-h.html#GtkSpinType">Gtk.SpinType</a>, increment: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_spin_button_spin'
+}</pre>
+
+<p>Increment or decrement a spin button’s value in a specified
+direction by a specified amount.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+					(
+						<a title="Gtk.SpinButton" href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>direction</code></em></i>
+					(
+						<a title="Gtk.SpinType" href="gtkspinbutton-h.html#GtkSpinType">Gtk.SpinType</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinType">Gtk.SpinType</a> indicating the direction to spin</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>increment</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>step increment to apply in the specified direction</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_spin">
+	<span><code>Gtk.SpinButton.spin</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.SpinButton.spin (self, direction, increment):
+    #python wrapper for 'gtk_spin_button_spin'</pre>
+
+<p>Increment or decrement a spin button’s value in a specified
+direction by a specified amount.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+					(
+						<a title="Gtk.SpinButton" href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>direction</code></em></i>
+					(
+						<a title="Gtk.SpinType" href="gtkspinbutton-h.html#GtkSpinType">Gtk.SpinType</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinType">Gtk.SpinType</a> indicating the direction to spin</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>increment</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>step increment to apply in the specified direction</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_spin_button_set_wrap">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_set_wrap">
+	<span><code>gtk_spin_button_set_wrap</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_spin_button_set_wrap (<a title="GtkSpinButton" href="gtkspinbutton-h.html#GtkSpinButton">GtkSpinButton</a> * spin_button,
+                          <a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a> wrap)</pre>
+
+<p>Sets the flag that determines if a spin button value wraps
+around to the opposite limit when the upper or lower limit
+of the range is exceeded.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">GtkSpinButton</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>wrap</code></em></i>
+				–
+	</div>
+			<p>a flag indicating if wrapping behavior is performed</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_set_wrap">
+	<span><code>Gtk.prototype.set_wrap</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_wrap(wrap: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_spin_button_set_wrap'
+}</pre>
+
+<p>Sets the flag that determines if a spin button value wraps
+around to the opposite limit when the upper or lower limit
+of the range is exceeded.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+					(
+						<a title="Gtk.SpinButton" href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>wrap</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>a flag indicating if wrapping behavior is performed</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_set_wrap">
+	<span><code>Gtk.SpinButton.set_wrap</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.SpinButton.set_wrap (self, wrap):
+    #python wrapper for 'gtk_spin_button_set_wrap'</pre>
+
+<p>Sets the flag that determines if a spin button value wraps
+around to the opposite limit when the upper or lower limit
+of the range is exceeded.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+					(
+						<a title="Gtk.SpinButton" href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>wrap</code></em></i>
+					(
+						<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+						)
+				–
+	</div>
+			<p>a flag indicating if wrapping behavior is performed</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_spin_button_set_snap_to_ticks">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_set_snap_to_ticks">
+	<span><code>gtk_spin_button_set_snap_to_ticks</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_spin_button_set_snap_to_ticks (<a title="GtkSpinButton" href="gtkspinbutton-h.html#GtkSpinButton">GtkSpinButton</a> * spin_button,
+                                   <a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a> snap_to_ticks)</pre>
+
+<p>Sets the policy as to whether values are corrected to the
+nearest step increment when a spin button is activated after
+providing an invalid value.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">GtkSpinButton</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>snap_to_ticks</code></em></i>
+				–
+	</div>
+			<p>a flag indicating if invalid values should be corrected</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_set_snap_to_ticks">
+	<span><code>Gtk.prototype.set_snap_to_ticks</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_snap_to_ticks(snap_to_ticks: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_spin_button_set_snap_to_ticks'
+}</pre>
+
+<p>Sets the policy as to whether values are corrected to the
+nearest step increment when a spin button is activated after
+providing an invalid value.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+					(
+						<a title="Gtk.SpinButton" href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>snap_to_ticks</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>a flag indicating if invalid values should be corrected</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_set_snap_to_ticks">
+	<span><code>Gtk.SpinButton.set_snap_to_ticks</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.SpinButton.set_snap_to_ticks (self, snap_to_ticks):
+    #python wrapper for 'gtk_spin_button_set_snap_to_ticks'</pre>
+
+<p>Sets the policy as to whether values are corrected to the
+nearest step increment when a spin button is activated after
+providing an invalid value.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+					(
+						<a title="Gtk.SpinButton" href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>snap_to_ticks</code></em></i>
+					(
+						<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+						)
+				–
+	</div>
+			<p>a flag indicating if invalid values should be corrected</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_spin_button_update">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_update">
+	<span><code>gtk_spin_button_update</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_spin_button_update (<a title="GtkSpinButton" href="gtkspinbutton-h.html#GtkSpinButton">GtkSpinButton</a> * spin_button)</pre>
+
+<p>Manually force an update of the spin button.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">GtkSpinButton</a></p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_update">
+	<span><code>Gtk.prototype.update</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.update(): {
+    // javascript wrapper for 'gtk_spin_button_update'
+}</pre>
+
+<p>Manually force an update of the spin button.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+					(
+						<a title="Gtk.SpinButton" href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a></p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_update">
+	<span><code>Gtk.SpinButton.update</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.SpinButton.update (self):
+    #python wrapper for 'gtk_spin_button_update'</pre>
+
+<p>Manually force an update of the spin button.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+					(
+						<a title="Gtk.SpinButton" href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a></p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_spin_button_get_digits">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_get_digits">
+	<span><code>gtk_spin_button_get_digits</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="guint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint">guint</a>
+gtk_spin_button_get_digits (<a title="GtkSpinButton" href="gtkspinbutton-h.html#GtkSpinButton">GtkSpinButton</a> * spin_button)</pre>
+
+<p>Fetches the precision of <em>spin_button</em>. See <a href="gtkspinbutton-h.html#gtk_spin_button_set_digits">gtk_spin_button_set_digits</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">GtkSpinButton</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>the current precision</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_get_digits">
+	<span><code>Gtk.prototype.get_digits</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_digits(): {
+    // javascript wrapper for 'gtk_spin_button_get_digits'
+}</pre>
+
+<p>Fetches the precision of <em>spin_button</em>. See <a href="gtkspinbutton-h.html#gtk_spin_button_set_digits">Gtk.prototype.set_digits</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+					(
+						<a title="Gtk.SpinButton" href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p>the current precision</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_get_digits">
+	<span><code>Gtk.SpinButton.get_digits</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.SpinButton.get_digits (self):
+    #python wrapper for 'gtk_spin_button_get_digits'</pre>
+
+<p>Fetches the precision of <em>spin_button</em>. See <a href="gtkspinbutton-h.html#gtk_spin_button_set_digits">Gtk.SpinButton.set_digits</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+					(
+						<a title="Gtk.SpinButton" href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+										)
+								–
+			</div>
+							<p>the current precision</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_spin_button_get_increments">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_get_increments">
+	<span><code>gtk_spin_button_get_increments</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_spin_button_get_increments (<a title="GtkSpinButton" href="gtkspinbutton-h.html#GtkSpinButton">GtkSpinButton</a> * spin_button,
+                                <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> * step,
+                                <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> * page)</pre>
+
+<p>Gets the current step and page the increments used by <em>spin_button</em>. See
+<a href="gtkspinbutton-h.html#gtk_spin_button_set_increments">gtk_spin_button_set_increments</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">GtkSpinButton</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>step</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="Parameter for returning results"><span class="acronym">out</span></abbr>]</span>
+<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>location to store step increment, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>page</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="Parameter for returning results"><span class="acronym">out</span></abbr>]</span>
+<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>location to store page increment, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_get_increments">
+	<span><code>Gtk.prototype.get_increments</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_increments(): {
+    // javascript wrapper for 'gtk_spin_button_get_increments'
+}</pre>
+
+<p>Gets the current step and page the increments used by <em>spin_button</em>. See
+<a href="gtkspinbutton-h.html#gtk_spin_button_set_increments">Gtk.prototype.set_increments</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+					(
+						<a title="Gtk.SpinButton" href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a></p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_get_increments">
+	<span><code>Gtk.SpinButton.get_increments</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.SpinButton.get_increments (self):
+    #python wrapper for 'gtk_spin_button_get_increments'</pre>
+
+<p>Gets the current step and page the increments used by <em>spin_button</em>. See
+<a href="gtkspinbutton-h.html#gtk_spin_button_set_increments">Gtk.SpinButton.set_increments</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+					(
+						<a title="Gtk.SpinButton" href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a></p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_spin_button_get_numeric">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_get_numeric">
+	<span><code>gtk_spin_button_get_numeric</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_spin_button_get_numeric (<a title="GtkSpinButton" href="gtkspinbutton-h.html#GtkSpinButton">GtkSpinButton</a> * spin_button)</pre>
+
+<p>Returns whether non-numeric text can be typed into the spin button.
+See <a href="gtkspinbutton-h.html#gtk_spin_button_set_numeric">gtk_spin_button_set_numeric</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">GtkSpinButton</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if only numeric text can be entered</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_get_numeric">
+	<span><code>Gtk.prototype.get_numeric</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_numeric(): {
+    // javascript wrapper for 'gtk_spin_button_get_numeric'
+}</pre>
+
+<p>Returns whether non-numeric text can be typed into the spin button.
+See <a href="gtkspinbutton-h.html#gtk_spin_button_set_numeric">Gtk.prototype.set_numeric</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+					(
+						<a title="Gtk.SpinButton" href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if only numeric text can be entered</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_get_numeric">
+	<span><code>Gtk.SpinButton.get_numeric</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.SpinButton.get_numeric (self):
+    #python wrapper for 'gtk_spin_button_get_numeric'</pre>
+
+<p>Returns whether non-numeric text can be typed into the spin button.
+See <a href="gtkspinbutton-h.html#gtk_spin_button_set_numeric">Gtk.SpinButton.set_numeric</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+					(
+						<a title="Gtk.SpinButton" href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+										)
+								–
+			</div>
+							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if only numeric text can be entered</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_spin_button_get_range">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_get_range">
+	<span><code>gtk_spin_button_get_range</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_spin_button_get_range (<a title="GtkSpinButton" href="gtkspinbutton-h.html#GtkSpinButton">GtkSpinButton</a> * spin_button,
+                           <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> * min,
+                           <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> * max)</pre>
+
+<p>Gets the range allowed for <em>spin_button</em>.
+See <a href="gtkspinbutton-h.html#gtk_spin_button_set_range">gtk_spin_button_set_range</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">GtkSpinButton</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>min</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="Parameter for returning results"><span class="acronym">out</span></abbr>]</span>
+<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>location to store minimum allowed value, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>max</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="Parameter for returning results"><span class="acronym">out</span></abbr>]</span>
+<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>location to store maximum allowed value, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_get_range">
+	<span><code>Gtk.prototype.get_range</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_range(): {
+    // javascript wrapper for 'gtk_spin_button_get_range'
+}</pre>
+
+<p>Gets the range allowed for <em>spin_button</em>.
+See <a href="gtkspinbutton-h.html#gtk_spin_button_set_range">Gtk.prototype.set_range</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+					(
+						<a title="Gtk.SpinButton" href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a></p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_get_range">
+	<span><code>Gtk.SpinButton.get_range</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.SpinButton.get_range (self):
+    #python wrapper for 'gtk_spin_button_get_range'</pre>
+
+<p>Gets the range allowed for <em>spin_button</em>.
+See <a href="gtkspinbutton-h.html#gtk_spin_button_set_range">Gtk.SpinButton.set_range</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+					(
+						<a title="Gtk.SpinButton" href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a></p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_spin_button_get_snap_to_ticks">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_get_snap_to_ticks">
+	<span><code>gtk_spin_button_get_snap_to_ticks</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_spin_button_get_snap_to_ticks (<a title="GtkSpinButton" href="gtkspinbutton-h.html#GtkSpinButton">GtkSpinButton</a> * spin_button)</pre>
+
+<p>Returns whether the values are corrected to the nearest step.
+See <a href="gtkspinbutton-h.html#gtk_spin_button_set_snap_to_ticks">gtk_spin_button_set_snap_to_ticks</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">GtkSpinButton</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if values are snapped to the nearest step</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_get_snap_to_ticks">
+	<span><code>Gtk.prototype.get_snap_to_ticks</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_snap_to_ticks(): {
+    // javascript wrapper for 'gtk_spin_button_get_snap_to_ticks'
+}</pre>
+
+<p>Returns whether the values are corrected to the nearest step.
+See <a href="gtkspinbutton-h.html#gtk_spin_button_set_snap_to_ticks">Gtk.prototype.set_snap_to_ticks</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+					(
+						<a title="Gtk.SpinButton" href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if values are snapped to the nearest step</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_get_snap_to_ticks">
+	<span><code>Gtk.SpinButton.get_snap_to_ticks</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.SpinButton.get_snap_to_ticks (self):
+    #python wrapper for 'gtk_spin_button_get_snap_to_ticks'</pre>
+
+<p>Returns whether the values are corrected to the nearest step.
+See <a href="gtkspinbutton-h.html#gtk_spin_button_set_snap_to_ticks">Gtk.SpinButton.set_snap_to_ticks</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+					(
+						<a title="Gtk.SpinButton" href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+										)
+								–
+			</div>
+							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if values are snapped to the nearest step</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_spin_button_get_update_policy">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_get_update_policy">
+	<span><code>gtk_spin_button_get_update_policy</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkSpinButtonUpdatePolicy" href="gtkspinbutton-h.html#GtkSpinButtonUpdatePolicy">GtkSpinButtonUpdatePolicy</a>
+gtk_spin_button_get_update_policy (<a title="GtkSpinButton" href="gtkspinbutton-h.html#GtkSpinButton">GtkSpinButton</a> * spin_button)</pre>
+
+<p>Gets the update behavior of a spin button.
+See <a href="gtkspinbutton-h.html#gtk_spin_button_set_update_policy">gtk_spin_button_set_update_policy</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">GtkSpinButton</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>the current update policy</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_get_update_policy">
+	<span><code>Gtk.prototype.get_update_policy</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_update_policy(): {
+    // javascript wrapper for 'gtk_spin_button_get_update_policy'
+}</pre>
+
+<p>Gets the update behavior of a spin button.
+See <a href="gtkspinbutton-h.html#gtk_spin_button_set_update_policy">Gtk.prototype.set_update_policy</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+					(
+						<a title="Gtk.SpinButton" href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.SpinButtonUpdatePolicy" href="gtkspinbutton-h.html#GtkSpinButtonUpdatePolicy">Gtk.SpinButtonUpdatePolicy</a>
+										)
+								–
+			</div>
+							<p>the current update policy</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_get_update_policy">
+	<span><code>Gtk.SpinButton.get_update_policy</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.SpinButton.get_update_policy (self):
+    #python wrapper for 'gtk_spin_button_get_update_policy'</pre>
+
+<p>Gets the update behavior of a spin button.
+See <a href="gtkspinbutton-h.html#gtk_spin_button_set_update_policy">Gtk.SpinButton.set_update_policy</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+					(
+						<a title="Gtk.SpinButton" href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.SpinButtonUpdatePolicy" href="gtkspinbutton-h.html#GtkSpinButtonUpdatePolicy">Gtk.SpinButtonUpdatePolicy</a>
+										)
+								–
+			</div>
+							<p>the current update policy</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_spin_button_get_value">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_get_value">
+	<span><code>gtk_spin_button_get_value</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a>
+gtk_spin_button_get_value (<a title="GtkSpinButton" href="gtkspinbutton-h.html#GtkSpinButton">GtkSpinButton</a> * spin_button)</pre>
+
+<p>Get the value in the <em>spin_button</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">GtkSpinButton</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>the value of <em>spin_button</em></p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_get_value">
+	<span><code>Gtk.prototype.get_value</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_value(): {
+    // javascript wrapper for 'gtk_spin_button_get_value'
+}</pre>
+
+<p>Get the value in the <em>spin_button</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+					(
+						<a title="Gtk.SpinButton" href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p>the value of <em>spin_button</em></p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_get_value">
+	<span><code>Gtk.SpinButton.get_value</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.SpinButton.get_value (self):
+    #python wrapper for 'gtk_spin_button_get_value'</pre>
+
+<p>Get the value in the <em>spin_button</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+					(
+						<a title="Gtk.SpinButton" href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+										)
+								–
+			</div>
+							<p>the value of <em>spin_button</em></p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_spin_button_get_wrap">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_get_wrap">
+	<span><code>gtk_spin_button_get_wrap</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_spin_button_get_wrap (<a title="GtkSpinButton" href="gtkspinbutton-h.html#GtkSpinButton">GtkSpinButton</a> * spin_button)</pre>
+
+<p>Returns whether the spin button’s value wraps around to the
+opposite limit when the upper or lower limit of the range is
+exceeded. See <a href="gtkspinbutton-h.html#gtk_spin_button_set_wrap">gtk_spin_button_set_wrap</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">GtkSpinButton</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if the spin button wraps around</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_get_wrap">
+	<span><code>Gtk.prototype.get_wrap</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_wrap(): {
+    // javascript wrapper for 'gtk_spin_button_get_wrap'
+}</pre>
+
+<p>Returns whether the spin button’s value wraps around to the
+opposite limit when the upper or lower limit of the range is
+exceeded. See <a href="gtkspinbutton-h.html#gtk_spin_button_set_wrap">Gtk.prototype.set_wrap</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+					(
+						<a title="Gtk.SpinButton" href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if the spin button wraps around</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_get_wrap">
+	<span><code>Gtk.SpinButton.get_wrap</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.SpinButton.get_wrap (self):
+    #python wrapper for 'gtk_spin_button_get_wrap'</pre>
+
+<p>Returns whether the spin button’s value wraps around to the
+opposite limit when the upper or lower limit of the range is
+exceeded. See <a href="gtkspinbutton-h.html#gtk_spin_button_set_wrap">Gtk.SpinButton.set_wrap</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+					(
+						<a title="Gtk.SpinButton" href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+										)
+								–
+			</div>
+							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if the spin button wraps around</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.92;" id="gtk_spin_button_set_text">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_set_text">
+	<span><code>gtk_spin_button_set_text</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_spin_button_set_text (<a title="GtkSpinButton" href="gtkspinbutton-h.html#GtkSpinButton">GtkSpinButton</a> * spin_button,
+                          const char* text)</pre>
+
+<p>Sets the current text of the spinbutton. Note that setting this will not change
+the value of the adjustment <em>spin_button</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">GtkSpinButton</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>text</code></em></i>
+				–
+	</div>
+			<p>The text to set</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.92
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_set_text">
+	<span><code>Gtk.prototype.set_text</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_text(text: <a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>): {
+    // javascript wrapper for 'gtk_spin_button_set_text'
+}</pre>
+
+<p>Sets the current text of the spinbutton. Note that setting this will not change
+the value of the adjustment <em>spin_button</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+					(
+						<a title="Gtk.SpinButton" href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>text</code></em></i>
+					(
+						<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
+						)
+				–
+	</div>
+			<p>The text to set</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.92
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_set_text">
+	<span><code>Gtk.SpinButton.set_text</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.SpinButton.set_text (self, text):
+    #python wrapper for 'gtk_spin_button_set_text'</pre>
+
+<p>Sets the current text of the spinbutton. Note that setting this will not change
+the value of the adjustment <em>spin_button</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+					(
+						<a title="Gtk.SpinButton" href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>text</code></em></i>
+					(
+						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
+						)
+				–
+	</div>
+			<p>The text to set</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.92
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.92;" id="gtk_spin_button_get_text">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_get_text">
+	<span><code>gtk_spin_button_get_text</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+const char*
+gtk_spin_button_get_text (<a title="GtkSpinButton" href="gtkspinbutton-h.html#GtkSpinButton">GtkSpinButton</a> * spin_button)</pre>
+
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">GtkSpinButton</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					
+										
+<span class="annotation">[<abbr title="Don't free data after the code is done"><span class="acronym">transfer: none</span></abbr>]</span>
+
+										)
+								–
+			</div>
+							<p>The current text shown in the entry area of <em>spin_button</em>.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.92
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_get_text">
+	<span><code>Gtk.prototype.get_text</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_text(): {
+    // javascript wrapper for 'gtk_spin_button_get_text'
+}</pre>
+
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+					(
+						<a title="Gtk.SpinButton" href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
+										)
+								–
+			</div>
+							<p>The current text shown in the entry area of <em>spin_button</em>.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.92
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_get_text">
+	<span><code>Gtk.SpinButton.get_text</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.SpinButton.get_text (self):
+    #python wrapper for 'gtk_spin_button_get_text'</pre>
+
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+					(
+						<a title="Gtk.SpinButton" href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
+										)
+								–
+			</div>
+							<p>The current text shown in the entry area of <em>spin_button</em>.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.92
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.92;" id="gtk_spin_button_set_max_width_chars">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_set_max_width_chars">
+	<span><code>gtk_spin_button_set_max_width_chars</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_spin_button_set_max_width_chars (<a title="GtkSpinButton" href="gtkspinbutton-h.html#GtkSpinButton">GtkSpinButton</a> * spin_button,
+                                     int max_width_chars)</pre>
+
+<p>Sets the desired maximum width of <em>spin_button</em>, in characters.
+Note that this only applies to the entry area of <em>spin_button</em>, not the
+spin button. This is especially important for horizontal spinbuttons.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">GtkSpinButton</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>max_width_chars</code></em></i>
+				–
+	</div>
+			<p>new desired maximum width in chars</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.92
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_set_max_width_chars">
+	<span><code>Gtk.prototype.set_max_width_chars</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_max_width_chars(max_width_chars: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_spin_button_set_max_width_chars'
+}</pre>
+
+<p>Sets the desired maximum width of <em>spin_button</em>, in characters.
+Note that this only applies to the entry area of <em>spin_button</em>, not the
+spin button. This is especially important for horizontal spinbuttons.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+					(
+						<a title="Gtk.SpinButton" href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>max_width_chars</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>new desired maximum width in chars</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.92
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_set_max_width_chars">
+	<span><code>Gtk.SpinButton.set_max_width_chars</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.SpinButton.set_max_width_chars (self, max_width_chars):
+    #python wrapper for 'gtk_spin_button_set_max_width_chars'</pre>
+
+<p>Sets the desired maximum width of <em>spin_button</em>, in characters.
+Note that this only applies to the entry area of <em>spin_button</em>, not the
+spin button. This is especially important for horizontal spinbuttons.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+					(
+						<a title="Gtk.SpinButton" href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>max_width_chars</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>new desired maximum width in chars</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.92
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.92;" id="gtk_spin_button_get_max_width_chars">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_get_max_width_chars">
+	<span><code>gtk_spin_button_get_max_width_chars</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+int
+gtk_spin_button_get_max_width_chars (<a title="GtkSpinButton" href="gtkspinbutton-h.html#GtkSpinButton">GtkSpinButton</a> * spin_button)</pre>
+
+<p>Retrieves the desired maximum width of <em>spin_button</em>, in characters.
+Note that this only applies to the entry area of <em>spin_button</em>, not the
+spin button. This is especially important for horizontal spinbuttons.</p>
+<p>See also <a href="https://developer.gnome.org/gtk3/GtkEntry.html#GtkEntry--max-width-chars">max-width-chars</a></p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">GtkSpinButton</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>the maximum width of the spin button, in characters</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.92
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_get_max_width_chars">
+	<span><code>Gtk.prototype.get_max_width_chars</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_max_width_chars(): {
+    // javascript wrapper for 'gtk_spin_button_get_max_width_chars'
+}</pre>
+
+<p>Retrieves the desired maximum width of <em>spin_button</em>, in characters.
+Note that this only applies to the entry area of <em>spin_button</em>, not the
+spin button. This is especially important for horizontal spinbuttons.</p>
+<p>See also <a href="https://developer.gnome.org/gtk3/GtkEntry.html#GtkEntry--max-width-chars">max-width-chars</a></p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+					(
+						<a title="Gtk.SpinButton" href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p>the maximum width of the spin button, in characters</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.92
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_get_max_width_chars">
+	<span><code>Gtk.SpinButton.get_max_width_chars</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.SpinButton.get_max_width_chars (self):
+    #python wrapper for 'gtk_spin_button_get_max_width_chars'</pre>
+
+<p>Retrieves the desired maximum width of <em>spin_button</em>, in characters.
+Note that this only applies to the entry area of <em>spin_button</em>, not the
+spin button. This is especially important for horizontal spinbuttons.</p>
+<p>See also <a href="https://developer.gnome.org/gtk3/GtkEntry.html#GtkEntry--max-width-chars">max-width-chars</a></p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+					(
+						<a title="Gtk.SpinButton" href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+										)
+								–
+			</div>
+							<p>the maximum width of the spin button, in characters</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.92
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.92;" id="gtk_spin_button_set_width_chars">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_set_width_chars">
+	<span><code>gtk_spin_button_set_width_chars</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_spin_button_set_width_chars (<a title="GtkSpinButton" href="gtkspinbutton-h.html#GtkSpinButton">GtkSpinButton</a> * spin_button,
+                                 int width_chars)</pre>
+
+<p>Changes the size request of the entry area of <em>spin_button</em>
+to be about the right size for <em>width_chars</em> characters.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">GtkSpinButton</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>width_chars</code></em></i>
+				–
+	</div>
+			<p>desired width in characters</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.92
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_set_width_chars">
+	<span><code>Gtk.prototype.set_width_chars</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_width_chars(width_chars: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_spin_button_set_width_chars'
+}</pre>
+
+<p>Changes the size request of the entry area of <em>spin_button</em>
+to be about the right size for <em>width_chars</em> characters.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+					(
+						<a title="Gtk.SpinButton" href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>width_chars</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>desired width in characters</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.92
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_set_width_chars">
+	<span><code>Gtk.SpinButton.set_width_chars</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.SpinButton.set_width_chars (self, width_chars):
+    #python wrapper for 'gtk_spin_button_set_width_chars'</pre>
+
+<p>Changes the size request of the entry area of <em>spin_button</em>
+to be about the right size for <em>width_chars</em> characters.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+					(
+						<a title="Gtk.SpinButton" href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>width_chars</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>desired width in characters</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.92
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.92;" id="gtk_spin_button_get_width_chars">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_get_width_chars">
+	<span><code>gtk_spin_button_get_width_chars</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+int
+gtk_spin_button_get_width_chars (<a title="GtkSpinButton" href="gtkspinbutton-h.html#GtkSpinButton">GtkSpinButton</a> * spin_button)</pre>
+
+<p>Get the value set by <a href="gtkspinbutton-h.html#gtk_spin_button_set_width_chars">gtk_spin_button_set_width_chars</a>. Note that this
+value only applies to the entry area of <em>spin_button</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">GtkSpinButton</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>The number of characters to request space for in the entry
+area of <em>spin_button</em></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.92
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_get_width_chars">
+	<span><code>Gtk.prototype.get_width_chars</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_width_chars(): {
+    // javascript wrapper for 'gtk_spin_button_get_width_chars'
+}</pre>
+
+<p>Get the value set by <a href="gtkspinbutton-h.html#gtk_spin_button_set_width_chars">Gtk.prototype.set_width_chars</a>. Note that this
+value only applies to the entry area of <em>spin_button</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+					(
+						<a title="Gtk.SpinButton" href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p>The number of characters to request space for in the entry
+area of <em>spin_button</em></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.92
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_spin_button_get_width_chars">
+	<span><code>Gtk.SpinButton.get_width_chars</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.SpinButton.get_width_chars (self):
+    #python wrapper for 'gtk_spin_button_get_width_chars'</pre>
+
+<p>Get the value set by <a href="gtkspinbutton-h.html#gtk_spin_button_set_width_chars">Gtk.SpinButton.set_width_chars</a>. Note that this
+value only applies to the entry area of <em>spin_button</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spin_button</code></em></i>
+					(
+						<a title="Gtk.SpinButton" href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkspinbutton-h.html#GtkSpinButton">Gtk.SpinButton</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+										)
+								–
+			</div>
+							<p>The number of characters to request space for in the entry
+area of <em>spin_button</em></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.92
+		</p>
+
+
+        </div>
+
+</div>
+
+
+        
+
+            <h2 class="symbol_section">Enumerations</h2>
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="GtkSpinButtonUpdatePolicy">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h3 data-hotdoc-id="GtkSpinButtonUpdatePolicy">
+	<span><code>GtkSpinButtonUpdatePolicy</code></span>
+</h3>
+
+
+<p>The spin button update policy determines whether the spin button displays
+values even if they are outside the bounds of its adjustment.
+See <a href="gtkspinbutton-h.html#gtk_spin_button_set_update_policy">gtk_spin_button_set_update_policy</a>.</p>
+
+
+
+
+	<div class="members-container">
+		<h4>Members</h4>
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_UPDATE_ALWAYS">
+	<div>
+		<i><em><code>GTK_UPDATE_ALWAYS</code></em></i>
+		(<span class="value">0</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_UPDATE_IF_VALID">
+	<div>
+		<i><em><code>GTK_UPDATE_IF_VALID</code></em></i>
+		(<span class="value">1</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h3 data-hotdoc-id="GtkSpinButtonUpdatePolicy">
+	<span><code>Gtk.SpinButtonUpdatePolicy</code></span>
+</h3>
+
+
+<p>The spin button update policy determines whether the spin button displays
+values even if they are outside the bounds of its adjustment.
+See <a href="gtkspinbutton-h.html#gtk_spin_button_set_update_policy">Gtk.prototype.set_update_policy</a>.</p>
+
+
+
+
+	<div class="members-container">
+		<h4>Members</h4>
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_UPDATE_ALWAYS">
+	<div>
+		<i><em><code>Gtk.SpinButtonUpdatePolicy.ALWAYS</code></em></i>
+		(<span class="value">0</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_UPDATE_IF_VALID">
+	<div>
+		<i><em><code>Gtk.SpinButtonUpdatePolicy.IF_VALID</code></em></i>
+		(<span class="value">1</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="GtkSpinButtonUpdatePolicy">
+	<span><code>Gtk.SpinButtonUpdatePolicy</code></span>
+</h3>
+
+
+<p>The spin button update policy determines whether the spin button displays
+values even if they are outside the bounds of its adjustment.
+See <a href="gtkspinbutton-h.html#gtk_spin_button_set_update_policy">Gtk.SpinButton.set_update_policy</a>.</p>
+
+
+
+
+	<div class="members-container">
+		<h4>Members</h4>
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_UPDATE_ALWAYS">
+	<div>
+		<i><em><code>Gtk.SpinButtonUpdatePolicy.ALWAYS</code></em></i>
+		(<span class="value">0</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_UPDATE_IF_VALID">
+	<div>
+		<i><em><code>Gtk.SpinButtonUpdatePolicy.IF_VALID</code></em></i>
+		(<span class="value">1</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="GtkSpinType">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h3 data-hotdoc-id="GtkSpinType">
+	<span><code>GtkSpinType</code></span>
+</h3>
+
+
+<p>The values of the GtkSpinType enumeration are used to specify the
+change to make in <a href="gtkspinbutton-h.html#gtk_spin_button_spin">gtk_spin_button_spin</a>.</p>
+
+
+
+
+	<div class="members-container">
+		<h4>Members</h4>
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_SPIN_STEP_FORWARD">
+	<div>
+		<i><em><code>GTK_SPIN_STEP_FORWARD</code></em></i>
+		(<span class="value">0</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_SPIN_STEP_BACKWARD">
+	<div>
+		<i><em><code>GTK_SPIN_STEP_BACKWARD</code></em></i>
+		(<span class="value">1</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_SPIN_PAGE_FORWARD">
+	<div>
+		<i><em><code>GTK_SPIN_PAGE_FORWARD</code></em></i>
+		(<span class="value">2</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_SPIN_PAGE_BACKWARD">
+	<div>
+		<i><em><code>GTK_SPIN_PAGE_BACKWARD</code></em></i>
+		(<span class="value">3</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_SPIN_HOME">
+	<div>
+		<i><em><code>GTK_SPIN_HOME</code></em></i>
+		(<span class="value">4</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_SPIN_END">
+	<div>
+		<i><em><code>GTK_SPIN_END</code></em></i>
+		(<span class="value">5</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_SPIN_USER_DEFINED">
+	<div>
+		<i><em><code>GTK_SPIN_USER_DEFINED</code></em></i>
+		(<span class="value">6</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h3 data-hotdoc-id="GtkSpinType">
+	<span><code>Gtk.SpinType</code></span>
+</h3>
+
+
+<p>The values of the GtkSpinType enumeration are used to specify the
+change to make in <a href="gtkspinbutton-h.html#gtk_spin_button_spin">Gtk.prototype.spin</a>.</p>
+
+
+
+
+	<div class="members-container">
+		<h4>Members</h4>
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_SPIN_STEP_FORWARD">
+	<div>
+		<i><em><code>Gtk.SpinType.STEP_FORWARD</code></em></i>
+		(<span class="value">0</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_SPIN_STEP_BACKWARD">
+	<div>
+		<i><em><code>Gtk.SpinType.STEP_BACKWARD</code></em></i>
+		(<span class="value">1</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_SPIN_PAGE_FORWARD">
+	<div>
+		<i><em><code>Gtk.SpinType.PAGE_FORWARD</code></em></i>
+		(<span class="value">2</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_SPIN_PAGE_BACKWARD">
+	<div>
+		<i><em><code>Gtk.SpinType.PAGE_BACKWARD</code></em></i>
+		(<span class="value">3</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_SPIN_HOME">
+	<div>
+		<i><em><code>Gtk.SpinType.HOME</code></em></i>
+		(<span class="value">4</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_SPIN_END">
+	<div>
+		<i><em><code>Gtk.SpinType.END</code></em></i>
+		(<span class="value">5</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_SPIN_USER_DEFINED">
+	<div>
+		<i><em><code>Gtk.SpinType.USER_DEFINED</code></em></i>
+		(<span class="value">6</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="GtkSpinType">
+	<span><code>Gtk.SpinType</code></span>
+</h3>
+
+
+<p>The values of the GtkSpinType enumeration are used to specify the
+change to make in <a href="gtkspinbutton-h.html#gtk_spin_button_spin">Gtk.SpinButton.spin</a>.</p>
+
+
+
+
+	<div class="members-container">
+		<h4>Members</h4>
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_SPIN_STEP_FORWARD">
+	<div>
+		<i><em><code>Gtk.SpinType.STEP_FORWARD</code></em></i>
+		(<span class="value">0</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_SPIN_STEP_BACKWARD">
+	<div>
+		<i><em><code>Gtk.SpinType.STEP_BACKWARD</code></em></i>
+		(<span class="value">1</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_SPIN_PAGE_FORWARD">
+	<div>
+		<i><em><code>Gtk.SpinType.PAGE_FORWARD</code></em></i>
+		(<span class="value">2</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_SPIN_PAGE_BACKWARD">
+	<div>
+		<i><em><code>Gtk.SpinType.PAGE_BACKWARD</code></em></i>
+		(<span class="value">3</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_SPIN_HOME">
+	<div>
+		<i><em><code>Gtk.SpinType.HOME</code></em></i>
+		(<span class="value">4</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_SPIN_END">
+	<div>
+		<i><em><code>Gtk.SpinType.END</code></em></i>
+		(<span class="value">5</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_SPIN_USER_DEFINED">
+	<div>
+		<i><em><code>Gtk.SpinType.USER_DEFINED</code></em></i>
+		(<span class="value">6</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+
+</div>
+
+
+            <h2 class="symbol_section">Constants</h2>
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="GTK_INPUT_ERROR">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h3 data-hotdoc-id="GTK_INPUT_ERROR">
+	<span><code>GTK_INPUT_ERROR</code></span>
+</h3>
+
+
+<pre class="raw_code">
+#define GTK_INPUT_ERROR -1
+</pre>
+
+<p>Constant to return from a signal handler for the <a href="https://developer.gnome.org/gtk3/GtkSpinButton.html#GtkSpinButton-input">input</a>
+signal in case of conversion failure.</p>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h3 data-hotdoc-id="GTK_INPUT_ERROR">
+	<span><code>Gtk.INPUT_ERROR</code></span>
+</h3>
+
+
+<p>Constant to return from a signal handler for the <a href="https://developer.gnome.org/gtk3/GtkSpinButton.html#GtkSpinButton-input">input</a>
+signal in case of conversion failure.</p>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="GTK_INPUT_ERROR">
+	<span><code>Gtk.INPUT_ERROR</code></span>
+</h3>
+
+
+<p>Constant to return from a signal handler for the <a href="https://developer.gnome.org/gtk3/GtkSpinButton.html#GtkSpinButton-input">input</a>
+signal in case of conversion failure.</p>
+
+
+
+        </div>
+
+</div>
+
+
+
+
+
+
+		
+	</div>
+	<div id="search_results">
+		<p>The results of the search are</p>
+	</div>
+	<hr>
+	<div id="footer">
+		    
+
+	</div>
+</div>
+
+<div id="toc-column">
+	
+		<div class="edit-button">
+		
+
+	</div>
+		<div id="toc-wrapper">
+		<nav id="toc"></nav>
+	</div>
+</div>
+</div>
+</main>
+
+</body>
+
+<script src="assets/js/navbar_offset_scroller.js"></script>
+</html>
