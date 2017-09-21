@@ -1,0 +1,5158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<base href="..">
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>gtkrange</title>
+
+<link rel="stylesheet" href="assets/css/custom_bootstrap.css" type="text/css">
+<link rel="stylesheet" href="assets/css/bootstrap-toc.min.css" type="text/css">
+<link rel="stylesheet" href="assets/css/frontend.css" type="text/css">
+<link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
+
+<link rel="stylesheet" href="assets/css/prism.css" type="text/css">
+
+<script src="assets/js/mustache.min.js"></script>
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/scrollspy.js"></script>
+<script src="assets/js/bootstrap.js"></script>
+<script src="assets/js/typeahead.jquery.min.js"></script>
+<script src="assets/js/search.js"></script>
+<script src="assets/js/isotope.pkgd.min.js"></script>
+<script src="assets/js/compare-versions.js"></script>
+<script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="assets/js/bootstrap-toc.min.js"></script>
+<script src="assets/js/jquery.touchSwipe.min.js"></script>
+<script src="assets/js/anchor.min.js"></script>
+<script src="assets/js/tag_filtering.js"></script>
+<script src="assets/js/language_switching.js"></script>
+
+<script src="assets/js/lines_around_headings.js"></script>
+
+<script src="assets/js/prism-core.js"></script>
+<script src="assets/js/prism-autoloader.js"></script>
+<script src="assets/js/prism_autoloader_path_override.js"></script>
+<script src="assets/js/trie.js"></script>
+
+
+</head>
+
+<body class="no-script
+" data-spy="scroll" data-target="#toc" data-offset="70">
+
+<script>
+$('body').removeClass('no-script');
+</script>
+
+<nav class="navbar navbar-fixed-top navbar-default" id="topnav">
+	<div class="container-fluid">
+		<div class="navbar-right">
+			<a id="toc-toggle">
+				<span class="glyphicon glyphicon-menu-right"></span>
+				<span class="glyphicon glyphicon-menu-left"></span>
+			</a>
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-wrapper" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<form action="" class="navbar-form pull-right" id="navbar-search-form">
+                               <div class="form-group has-feedback">
+                                       <input type="text" class="form-control input-sm" name="search" id="sidenav-lookup-field" placeholder="search" disabled>
+				       <span class="glyphicon glyphicon-search form-control-feedback" id="search-mgn-glass"></span>
+                               </div>
+                        </form>
+		</div>
+		<div class="navbar-header">
+			<a id="sidenav-toggle">
+				<span class="glyphicon glyphicon-menu-right"></span>
+				<span class="glyphicon glyphicon-menu-left"></span>
+			</a>
+			<a id="home-link" href="index.html" class="hotdoc-navbar-brand">
+				<img src="assets/images/home.svg" alt="Home">
+			</a>
+		</div>
+		<div class="navbar-collapse collapse" id="navbar-wrapper">
+			<ul class="nav navbar-nav" id="menu">
+							</ul>
+			<div class="hidden-xs hidden-sm navbar-text navbar-center">
+							</div>
+		</div>
+	</div>
+</nav>
+
+<main>
+<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="hotdoc_markdown/gtkrange.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['c', 'javascript', 'python']" data-hotdoc-meta-gi-language="c">
+<script src="assets/js/utils.js"></script>
+
+<div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
+	<script src="assets/js/navigation.js"></script>
+	<script src="assets/js/sitemap.js"></script>
+</div>
+
+<div id="body">
+	<div id="main">
+				    <div id="page-description" data-hotdoc-source="gtkrange.markdown" data-hotdoc-role="main">
+    </div>
+        
+        
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="GtkRange">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h2 data-hotdoc-id="GtkRange">
+	<span><code>GtkRange</code></span>
+</h2>
+
+
+<div class="hierarchy_container">
+	<div class="hierarchy_details">
+<pre>
+<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object">GObject</a>
+    <span class="lineart">╰──</span><a title="GInitiallyUnowned" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-python="GObject.InitiallyUnowned" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-javascript="GObject.InitiallyUnowned">GInitiallyUnowned</a>
+        <span class="lineart">╰──</span><a title="GtkWidget" href="hotdoc_markdown/gtkwidget.html#GtkWidget" data-gi-href-python="hotdoc_markdown/gtkwidget.html#GtkWidget" data-gi-title-python="Gtk.Widget" data-gi-href-javascript="hotdoc_markdown/gtkwidget.html#GtkWidget" data-gi-title-javascript="Gtk.Widget">GtkWidget</a>
+            <span class="lineart">╰──</span>GtkRange
+                <span class="lineart">╰──</span><a title="GtkScale" href="hotdoc_markdown/gtkscale.html#GtkScale" data-gi-href-python="hotdoc_markdown/gtkscale.html#GtkScale" data-gi-title-python="Gtk.Scale" data-gi-href-javascript="hotdoc_markdown/gtkscale.html#GtkScale" data-gi-title-javascript="Gtk.Scale">GtkScale</a>
+</pre>
+
+</div>
+
+</div>
+
+<div class="interfaces_container">
+	
+<p><b>Implemented interfaces:</b>
+    AtkImplementorIface, <a title="GtkBuildable" href="hotdoc_markdown/gtkbuildable.html#GtkBuildable" data-gi-href-python="hotdoc_markdown/gtkbuildable.html#GtkBuildable" data-gi-title-python="Gtk.Buildable" data-gi-href-javascript="hotdoc_markdown/gtkbuildable.html#GtkBuildable" data-gi-title-javascript="Gtk.Buildable">GtkBuildable</a>, <a title="GtkOrientable" href="hotdoc_markdown/gtkorientable.html#GtkOrientable" data-gi-href-python="hotdoc_markdown/gtkorientable.html#GtkOrientable" data-gi-title-python="Gtk.Orientable" data-gi-href-javascript="hotdoc_markdown/gtkorientable.html#GtkOrientable" data-gi-title-javascript="Gtk.Orientable">GtkOrientable</a>
+</p>
+
+</div>
+
+
+
+
+	<div class="members-container">
+		<h3>Members</h3>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkRange.widget">
+	<div>
+		<i><em><code>widget</code></em></i>
+		(<a title="GtkWidget" href="hotdoc_markdown/gtkwidget.html#GtkWidget" data-gi-href-python="hotdoc_markdown/gtkwidget.html#GtkWidget" data-gi-title-python="Gtk.Widget" data-gi-href-javascript="hotdoc_markdown/gtkwidget.html#GtkWidget" data-gi-title-javascript="Gtk.Widget">GtkWidget</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GtkRange.priv">
+	<div>
+		<i><em><code>priv</code></em></i>
+		(GtkRangePrivate*)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+<h3>Class structure</h3>
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="GtkRangeClass">
+	<span><code>GtkRangeClass</code></span>
+</h4>
+
+
+
+
+
+	<div class="members-container">
+		<h5>Fields</h5>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkRangeClass.parent_class">
+	<div>
+		<i><em><code>parent_class</code></em></i>
+		(<a title="GtkWidgetClass" href="GtkWidgetClass">GtkWidgetClass</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h3>
+	Gtk.RangeClass
+</h3>
+
+
+
+
+
+	<div class="members-container">
+		<h5>Attributes</h5>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkRangeClass.parent_class">
+	<div>
+		<i><em><code>RangeClass.parent_class</code></em></i>
+		(<a title="Gtk.WidgetClass" href="GtkWidgetClass">Gtk.WidgetClass</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3>
+	Gtk.RangeClass
+</h3>
+
+
+
+
+
+	<div class="members-container">
+		<h5>Attributes</h5>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkRangeClass.parent_class">
+	<div>
+		<i><em><code>RangeClass.parent_class</code></em></i>
+		(<a title="Gtk.WidgetClass" href="GtkWidgetClass">Gtk.WidgetClass</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h2 data-hotdoc-id="GtkRange">
+	<span><code>GtkRange</code></span>
+</h2>
+
+
+<div class="hierarchy_container">
+	<div class="hierarchy_details">
+<pre>
+<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object">GObject</a>
+    <span class="lineart">╰──</span><a title="GInitiallyUnowned" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-python="GObject.InitiallyUnowned" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-javascript="GObject.InitiallyUnowned">GInitiallyUnowned</a>
+        <span class="lineart">╰──</span><a title="GtkWidget" href="hotdoc_markdown/gtkwidget.html#GtkWidget" data-gi-href-python="hotdoc_markdown/gtkwidget.html#GtkWidget" data-gi-title-python="Gtk.Widget" data-gi-href-javascript="hotdoc_markdown/gtkwidget.html#GtkWidget" data-gi-title-javascript="Gtk.Widget">GtkWidget</a>
+            <span class="lineart">╰──</span>GtkRange
+                <span class="lineart">╰──</span><a title="GtkScale" href="hotdoc_markdown/gtkscale.html#GtkScale" data-gi-href-python="hotdoc_markdown/gtkscale.html#GtkScale" data-gi-title-python="Gtk.Scale" data-gi-href-javascript="hotdoc_markdown/gtkscale.html#GtkScale" data-gi-title-javascript="Gtk.Scale">GtkScale</a>
+</pre>
+
+</div>
+
+</div>
+
+<div class="interfaces_container">
+	
+<p><b>Implemented interfaces:</b>
+    AtkImplementorIface, <a title="GtkBuildable" href="hotdoc_markdown/gtkbuildable.html#GtkBuildable" data-gi-href-python="hotdoc_markdown/gtkbuildable.html#GtkBuildable" data-gi-title-python="Gtk.Buildable" data-gi-href-javascript="hotdoc_markdown/gtkbuildable.html#GtkBuildable" data-gi-title-javascript="Gtk.Buildable">GtkBuildable</a>, <a title="GtkOrientable" href="hotdoc_markdown/gtkorientable.html#GtkOrientable" data-gi-href-python="hotdoc_markdown/gtkorientable.html#GtkOrientable" data-gi-title-python="Gtk.Orientable" data-gi-href-javascript="hotdoc_markdown/gtkorientable.html#GtkOrientable" data-gi-title-javascript="Gtk.Orientable">GtkOrientable</a>
+</p>
+
+</div>
+
+
+
+
+	<div class="members-container">
+		<h3>Members</h3>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkRange.widget">
+	<div>
+		<i><em><code>widget</code></em></i>
+		(<a title="GtkWidget" href="hotdoc_markdown/gtkwidget.html#GtkWidget" data-gi-href-python="hotdoc_markdown/gtkwidget.html#GtkWidget" data-gi-title-python="Gtk.Widget" data-gi-href-javascript="hotdoc_markdown/gtkwidget.html#GtkWidget" data-gi-title-javascript="Gtk.Widget">GtkWidget</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GtkRange.priv">
+	<div>
+		<i><em><code>priv</code></em></i>
+		(GtkRangePrivate)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h2 data-hotdoc-id="GtkRange">
+	<span><code>GtkRange</code></span>
+</h2>
+
+
+<div class="hierarchy_container">
+	<div class="hierarchy_details">
+<pre>
+<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object">GObject</a>
+    <span class="lineart">╰──</span><a title="GInitiallyUnowned" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-python="GObject.InitiallyUnowned" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-javascript="GObject.InitiallyUnowned">GInitiallyUnowned</a>
+        <span class="lineart">╰──</span><a title="GtkWidget" href="hotdoc_markdown/gtkwidget.html#GtkWidget" data-gi-href-python="hotdoc_markdown/gtkwidget.html#GtkWidget" data-gi-title-python="Gtk.Widget" data-gi-href-javascript="hotdoc_markdown/gtkwidget.html#GtkWidget" data-gi-title-javascript="Gtk.Widget">GtkWidget</a>
+            <span class="lineart">╰──</span>GtkRange
+                <span class="lineart">╰──</span><a title="GtkScale" href="hotdoc_markdown/gtkscale.html#GtkScale" data-gi-href-python="hotdoc_markdown/gtkscale.html#GtkScale" data-gi-title-python="Gtk.Scale" data-gi-href-javascript="hotdoc_markdown/gtkscale.html#GtkScale" data-gi-title-javascript="Gtk.Scale">GtkScale</a>
+</pre>
+
+</div>
+
+</div>
+
+<div class="interfaces_container">
+	
+<p><b>Implemented interfaces:</b>
+    AtkImplementorIface, <a title="GtkBuildable" href="hotdoc_markdown/gtkbuildable.html#GtkBuildable" data-gi-href-python="hotdoc_markdown/gtkbuildable.html#GtkBuildable" data-gi-title-python="Gtk.Buildable" data-gi-href-javascript="hotdoc_markdown/gtkbuildable.html#GtkBuildable" data-gi-title-javascript="Gtk.Buildable">GtkBuildable</a>, <a title="GtkOrientable" href="hotdoc_markdown/gtkorientable.html#GtkOrientable" data-gi-href-python="hotdoc_markdown/gtkorientable.html#GtkOrientable" data-gi-title-python="Gtk.Orientable" data-gi-href-javascript="hotdoc_markdown/gtkorientable.html#GtkOrientable" data-gi-title-javascript="Gtk.Orientable">GtkOrientable</a>
+</p>
+
+</div>
+
+
+
+
+	<div class="members-container">
+		<h3>Members</h3>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkRange.widget">
+	<div>
+		<i><em><code>widget</code></em></i>
+		(<a title="GtkWidget" href="hotdoc_markdown/gtkwidget.html#GtkWidget" data-gi-href-python="hotdoc_markdown/gtkwidget.html#GtkWidget" data-gi-title-python="Gtk.Widget" data-gi-href-javascript="hotdoc_markdown/gtkwidget.html#GtkWidget" data-gi-title-javascript="Gtk.Widget">GtkWidget</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GtkRange.priv">
+	<div>
+		<i><em><code>priv</code></em></i>
+		(GtkRangePrivate)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+
+</div>
+
+
+            <h3 class="symbol_section">Methods</h3>
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.12;" id="gtk_range_get_fill_level">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_range_get_fill_level">
+	<span><code>gtk_range_get_fill_level</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a>
+gtk_range_get_fill_level (<a title="GtkRange" href="hotdoc_markdown/gtkrange.html#GtkRange">GtkRange</a> * range)</pre>
+
+<p>Gets the current position of the fill level indicator.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>range</code></em></i>
+				–
+	</div>
+			<p>A <a href="hotdoc_markdown/gtkrange.html#GtkRange">GtkRange</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>The current fill level</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.12
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_range_get_fill_level">
+	<span><code>Gtk.prototype.get_fill_level</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_fill_level(): {
+    // javascript wrapper for 'gtk_range_get_fill_level'
+}</pre>
+
+<p>Gets the current position of the fill level indicator.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>range</code></em></i>
+					(
+						<a title="Gtk.Range" href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a>
+						)
+				–
+	</div>
+			<p>A <a href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p>The current fill level</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.12
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_range_get_fill_level">
+	<span><code>Gtk.Range.get_fill_level</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Range.get_fill_level (self):
+    #python wrapper for 'gtk_range_get_fill_level'</pre>
+
+<p>Gets the current position of the fill level indicator.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>range</code></em></i>
+					(
+						<a title="Gtk.Range" href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a>
+						)
+				–
+	</div>
+			<p>A <a href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+										)
+								–
+			</div>
+							<p>The current fill level</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.12
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.12;" id="gtk_range_get_restrict_to_fill_level">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_range_get_restrict_to_fill_level">
+	<span><code>gtk_range_get_restrict_to_fill_level</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_range_get_restrict_to_fill_level (<a title="GtkRange" href="hotdoc_markdown/gtkrange.html#GtkRange">GtkRange</a> * range)</pre>
+
+<p>Gets whether the range is restricted to the fill level.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>range</code></em></i>
+				–
+	</div>
+			<p>A <a href="hotdoc_markdown/gtkrange.html#GtkRange">GtkRange</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if <em>range</em> is restricted to the fill level.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.12
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_range_get_restrict_to_fill_level">
+	<span><code>Gtk.prototype.get_restrict_to_fill_level</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_restrict_to_fill_level(): {
+    // javascript wrapper for 'gtk_range_get_restrict_to_fill_level'
+}</pre>
+
+<p>Gets whether the range is restricted to the fill level.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>range</code></em></i>
+					(
+						<a title="Gtk.Range" href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a>
+						)
+				–
+	</div>
+			<p>A <a href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if <em>range</em> is restricted to the fill level.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.12
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_range_get_restrict_to_fill_level">
+	<span><code>Gtk.Range.get_restrict_to_fill_level</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Range.get_restrict_to_fill_level (self):
+    #python wrapper for 'gtk_range_get_restrict_to_fill_level'</pre>
+
+<p>Gets whether the range is restricted to the fill level.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>range</code></em></i>
+					(
+						<a title="Gtk.Range" href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a>
+						)
+				–
+	</div>
+			<p>A <a href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+										)
+								–
+			</div>
+							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if <em>range</em> is restricted to the fill level.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.12
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.12;" id="gtk_range_get_show_fill_level">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_range_get_show_fill_level">
+	<span><code>gtk_range_get_show_fill_level</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_range_get_show_fill_level (<a title="GtkRange" href="hotdoc_markdown/gtkrange.html#GtkRange">GtkRange</a> * range)</pre>
+
+<p>Gets whether the range displays the fill level graphically.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>range</code></em></i>
+				–
+	</div>
+			<p>A <a href="hotdoc_markdown/gtkrange.html#GtkRange">GtkRange</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if <em>range</em> shows the fill level.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.12
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_range_get_show_fill_level">
+	<span><code>Gtk.prototype.get_show_fill_level</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_show_fill_level(): {
+    // javascript wrapper for 'gtk_range_get_show_fill_level'
+}</pre>
+
+<p>Gets whether the range displays the fill level graphically.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>range</code></em></i>
+					(
+						<a title="Gtk.Range" href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a>
+						)
+				–
+	</div>
+			<p>A <a href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if <em>range</em> shows the fill level.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.12
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_range_get_show_fill_level">
+	<span><code>Gtk.Range.get_show_fill_level</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Range.get_show_fill_level (self):
+    #python wrapper for 'gtk_range_get_show_fill_level'</pre>
+
+<p>Gets whether the range displays the fill level graphically.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>range</code></em></i>
+					(
+						<a title="Gtk.Range" href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a>
+						)
+				–
+	</div>
+			<p>A <a href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+										)
+								–
+			</div>
+							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if <em>range</em> shows the fill level.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.12
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.12;" id="gtk_range_set_fill_level">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_range_set_fill_level">
+	<span><code>gtk_range_set_fill_level</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_range_set_fill_level (<a title="GtkRange" href="hotdoc_markdown/gtkrange.html#GtkRange">GtkRange</a> * range,
+                          <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> fill_level)</pre>
+
+<p>Set the new position of the fill level indicator.</p>
+<p>The “fill level” is probably best described by its most prominent
+use case, which is an indicator for the amount of pre-buffering in
+a streaming media player. In that use case, the value of the range
+would indicate the current play position, and the fill level would
+be the position up to which the file/stream has been downloaded.</p>
+<p>This amount of prebuffering can be displayed on the range’s trough
+and is themeable separately from the trough. To enable fill level
+display, use <a href="hotdoc_markdown/gtkrange.html#gtk_range_set_show_fill_level">gtk_range_set_show_fill_level</a>. The range defaults
+to not showing the fill level.</p>
+<p>Additionally, it’s possible to restrict the range’s slider position
+to values which are smaller than the fill level. This is controller
+by <a href="hotdoc_markdown/gtkrange.html#gtk_range_set_restrict_to_fill_level">gtk_range_set_restrict_to_fill_level</a> and is by default
+enabled.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>range</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkrange.html#GtkRange">GtkRange</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>fill_level</code></em></i>
+				–
+	</div>
+			<p>the new position of the fill level indicator</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.12
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_range_set_fill_level">
+	<span><code>Gtk.prototype.set_fill_level</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_fill_level(fill_level: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_range_set_fill_level'
+}</pre>
+
+<p>Set the new position of the fill level indicator.</p>
+<p>The “fill level” is probably best described by its most prominent
+use case, which is an indicator for the amount of pre-buffering in
+a streaming media player. In that use case, the value of the range
+would indicate the current play position, and the fill level would
+be the position up to which the file/stream has been downloaded.</p>
+<p>This amount of prebuffering can be displayed on the range’s trough
+and is themeable separately from the trough. To enable fill level
+display, use <a href="hotdoc_markdown/gtkrange.html#gtk_range_set_show_fill_level">Gtk.prototype.set_show_fill_level</a>. The range defaults
+to not showing the fill level.</p>
+<p>Additionally, it’s possible to restrict the range’s slider position
+to values which are smaller than the fill level. This is controller
+by <a href="hotdoc_markdown/gtkrange.html#gtk_range_set_restrict_to_fill_level">Gtk.prototype.set_restrict_to_fill_level</a> and is by default
+enabled.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>range</code></em></i>
+					(
+						<a title="Gtk.Range" href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>fill_level</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the new position of the fill level indicator</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.12
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_range_set_fill_level">
+	<span><code>Gtk.Range.set_fill_level</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Range.set_fill_level (self, fill_level):
+    #python wrapper for 'gtk_range_set_fill_level'</pre>
+
+<p>Set the new position of the fill level indicator.</p>
+<p>The “fill level” is probably best described by its most prominent
+use case, which is an indicator for the amount of pre-buffering in
+a streaming media player. In that use case, the value of the range
+would indicate the current play position, and the fill level would
+be the position up to which the file/stream has been downloaded.</p>
+<p>This amount of prebuffering can be displayed on the range’s trough
+and is themeable separately from the trough. To enable fill level
+display, use <a href="hotdoc_markdown/gtkrange.html#gtk_range_set_show_fill_level">Gtk.Range.set_show_fill_level</a>. The range defaults
+to not showing the fill level.</p>
+<p>Additionally, it’s possible to restrict the range’s slider position
+to values which are smaller than the fill level. This is controller
+by <a href="hotdoc_markdown/gtkrange.html#gtk_range_set_restrict_to_fill_level">Gtk.Range.set_restrict_to_fill_level</a> and is by default
+enabled.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>range</code></em></i>
+					(
+						<a title="Gtk.Range" href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>fill_level</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>the new position of the fill level indicator</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.12
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.12;" id="gtk_range_set_restrict_to_fill_level">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_range_set_restrict_to_fill_level">
+	<span><code>gtk_range_set_restrict_to_fill_level</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_range_set_restrict_to_fill_level (<a title="GtkRange" href="hotdoc_markdown/gtkrange.html#GtkRange">GtkRange</a> * range,
+                                      <a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a> restrict_to_fill_level)</pre>
+
+<p>Sets whether the slider is restricted to the fill level. See
+<a href="hotdoc_markdown/gtkrange.html#gtk_range_set_fill_level">gtk_range_set_fill_level</a> for a general description of the fill
+level concept.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>range</code></em></i>
+				–
+	</div>
+			<p>A <a href="hotdoc_markdown/gtkrange.html#GtkRange">GtkRange</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>restrict_to_fill_level</code></em></i>
+				–
+	</div>
+			<p>Whether the fill level restricts slider movement.</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.12
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_range_set_restrict_to_fill_level">
+	<span><code>Gtk.prototype.set_restrict_to_fill_level</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_restrict_to_fill_level(restrict_to_fill_level: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_range_set_restrict_to_fill_level'
+}</pre>
+
+<p>Sets whether the slider is restricted to the fill level. See
+<a href="hotdoc_markdown/gtkrange.html#gtk_range_set_fill_level">Gtk.prototype.set_fill_level</a> for a general description of the fill
+level concept.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>range</code></em></i>
+					(
+						<a title="Gtk.Range" href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a>
+						)
+				–
+	</div>
+			<p>A <a href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>restrict_to_fill_level</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>Whether the fill level restricts slider movement.</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.12
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_range_set_restrict_to_fill_level">
+	<span><code>Gtk.Range.set_restrict_to_fill_level</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Range.set_restrict_to_fill_level (self, restrict_to_fill_level):
+    #python wrapper for 'gtk_range_set_restrict_to_fill_level'</pre>
+
+<p>Sets whether the slider is restricted to the fill level. See
+<a href="hotdoc_markdown/gtkrange.html#gtk_range_set_fill_level">Gtk.Range.set_fill_level</a> for a general description of the fill
+level concept.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>range</code></em></i>
+					(
+						<a title="Gtk.Range" href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a>
+						)
+				–
+	</div>
+			<p>A <a href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>restrict_to_fill_level</code></em></i>
+					(
+						<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+						)
+				–
+	</div>
+			<p>Whether the fill level restricts slider movement.</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.12
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.12;" id="gtk_range_set_show_fill_level">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_range_set_show_fill_level">
+	<span><code>gtk_range_set_show_fill_level</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_range_set_show_fill_level (<a title="GtkRange" href="hotdoc_markdown/gtkrange.html#GtkRange">GtkRange</a> * range,
+                               <a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a> show_fill_level)</pre>
+
+<p>Sets whether a graphical fill level is show on the trough. See
+<a href="hotdoc_markdown/gtkrange.html#gtk_range_set_fill_level">gtk_range_set_fill_level</a> for a general description of the fill
+level concept.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>range</code></em></i>
+				–
+	</div>
+			<p>A <a href="hotdoc_markdown/gtkrange.html#GtkRange">GtkRange</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>show_fill_level</code></em></i>
+				–
+	</div>
+			<p>Whether a fill level indicator graphics is shown.</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.12
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_range_set_show_fill_level">
+	<span><code>Gtk.prototype.set_show_fill_level</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_show_fill_level(show_fill_level: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_range_set_show_fill_level'
+}</pre>
+
+<p>Sets whether a graphical fill level is show on the trough. See
+<a href="hotdoc_markdown/gtkrange.html#gtk_range_set_fill_level">Gtk.prototype.set_fill_level</a> for a general description of the fill
+level concept.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>range</code></em></i>
+					(
+						<a title="Gtk.Range" href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a>
+						)
+				–
+	</div>
+			<p>A <a href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>show_fill_level</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>Whether a fill level indicator graphics is shown.</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.12
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_range_set_show_fill_level">
+	<span><code>Gtk.Range.set_show_fill_level</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Range.set_show_fill_level (self, show_fill_level):
+    #python wrapper for 'gtk_range_set_show_fill_level'</pre>
+
+<p>Sets whether a graphical fill level is show on the trough. See
+<a href="hotdoc_markdown/gtkrange.html#gtk_range_set_fill_level">Gtk.Range.set_fill_level</a> for a general description of the fill
+level concept.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>range</code></em></i>
+					(
+						<a title="Gtk.Range" href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a>
+						)
+				–
+	</div>
+			<p>A <a href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>show_fill_level</code></em></i>
+					(
+						<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+						)
+				–
+	</div>
+			<p>Whether a fill level indicator graphics is shown.</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.12
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_range_get_adjustment">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_range_get_adjustment">
+	<span><code>gtk_range_get_adjustment</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkAdjustment" href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">GtkAdjustment</a> *
+gtk_range_get_adjustment (<a title="GtkRange" href="hotdoc_markdown/gtkrange.html#GtkRange">GtkRange</a> * range)</pre>
+
+<p>Get the <a href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">GtkAdjustment</a> which is the “model” object for <a href="hotdoc_markdown/gtkrange.html#GtkRange">GtkRange</a>.
+See <a href="hotdoc_markdown/gtkrange.html#gtk_range_set_adjustment">gtk_range_set_adjustment</a> for details.
+The return value does not have a reference added, so should not
+be unreferenced.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>range</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkrange.html#GtkRange">GtkRange</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					
+										
+<span class="annotation">[<abbr title="Don't free data after the code is done"><span class="acronym">transfer: none</span></abbr>]</span>
+
+										)
+								–
+			</div>
+							<p>a <a href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">GtkAdjustment</a></p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_range_get_adjustment">
+	<span><code>Gtk.prototype.get_adjustment</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_adjustment(): {
+    // javascript wrapper for 'gtk_range_get_adjustment'
+}</pre>
+
+<p>Get the <a href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a> which is the “model” object for <a href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a>.
+See <a href="hotdoc_markdown/gtkrange.html#gtk_range_set_adjustment">Gtk.prototype.set_adjustment</a> for details.
+The return value does not have a reference added, so should not
+be unreferenced.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>range</code></em></i>
+					(
+						<a title="Gtk.Range" href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Adjustment" href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a>
+										)
+								–
+			</div>
+							<p>a <a href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a></p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_range_get_adjustment">
+	<span><code>Gtk.Range.get_adjustment</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Range.get_adjustment (self):
+    #python wrapper for 'gtk_range_get_adjustment'</pre>
+
+<p>Get the <a href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a> which is the “model” object for <a href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a>.
+See <a href="hotdoc_markdown/gtkrange.html#gtk_range_set_adjustment">Gtk.Range.set_adjustment</a> for details.
+The return value does not have a reference added, so should not
+be unreferenced.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>range</code></em></i>
+					(
+						<a title="Gtk.Range" href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Adjustment" href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a>
+										)
+								–
+			</div>
+							<p>a <a href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a></p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_range_set_adjustment">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_range_set_adjustment">
+	<span><code>gtk_range_set_adjustment</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_range_set_adjustment (<a title="GtkRange" href="hotdoc_markdown/gtkrange.html#GtkRange">GtkRange</a> * range,
+                          <a title="GtkAdjustment" href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">GtkAdjustment</a> * adjustment)</pre>
+
+<p>Sets the adjustment to be used as the “model” object for this range
+widget. The adjustment indicates the current range value, the
+minimum and maximum range values, the step/page increments used
+for keybindings and scrolling, and the page size. The page size
+is normally 0 for <a href="hotdoc_markdown/gtkscale.html#GtkScale">GtkScale</a> and nonzero for <a href="hotdoc_markdown/gtkscrollbar.html#GtkScrollbar">GtkScrollbar</a>, and
+indicates the size of the visible area of the widget being scrolled.
+The page size affects the size of the scrollbar slider.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>range</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkrange.html#GtkRange">GtkRange</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>adjustment</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">GtkAdjustment</a></p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_range_set_adjustment">
+	<span><code>Gtk.prototype.set_adjustment</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_adjustment(adjustment: <a title="Gtk.Adjustment" href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a>): {
+    // javascript wrapper for 'gtk_range_set_adjustment'
+}</pre>
+
+<p>Sets the adjustment to be used as the “model” object for this range
+widget. The adjustment indicates the current range value, the
+minimum and maximum range values, the step/page increments used
+for keybindings and scrolling, and the page size. The page size
+is normally 0 for <a href="hotdoc_markdown/gtkscale.html#GtkScale">Gtk.Scale</a> and nonzero for <a href="hotdoc_markdown/gtkscrollbar.html#GtkScrollbar">Gtk.Scrollbar</a>, and
+indicates the size of the visible area of the widget being scrolled.
+The page size affects the size of the scrollbar slider.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>range</code></em></i>
+					(
+						<a title="Gtk.Range" href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>adjustment</code></em></i>
+					(
+						<a title="Gtk.Adjustment" href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a></p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_range_set_adjustment">
+	<span><code>Gtk.Range.set_adjustment</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Range.set_adjustment (self, adjustment):
+    #python wrapper for 'gtk_range_set_adjustment'</pre>
+
+<p>Sets the adjustment to be used as the “model” object for this range
+widget. The adjustment indicates the current range value, the
+minimum and maximum range values, the step/page increments used
+for keybindings and scrolling, and the page size. The page size
+is normally 0 for <a href="hotdoc_markdown/gtkscale.html#GtkScale">Gtk.Scale</a> and nonzero for <a href="hotdoc_markdown/gtkscrollbar.html#GtkScrollbar">Gtk.Scrollbar</a>, and
+indicates the size of the visible area of the widget being scrolled.
+The page size affects the size of the scrollbar slider.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>range</code></em></i>
+					(
+						<a title="Gtk.Range" href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>adjustment</code></em></i>
+					(
+						<a title="Gtk.Adjustment" href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a></p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_range_get_inverted">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_range_get_inverted">
+	<span><code>gtk_range_get_inverted</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_range_get_inverted (<a title="GtkRange" href="hotdoc_markdown/gtkrange.html#GtkRange">GtkRange</a> * range)</pre>
+
+<p>Gets the value set by <a href="hotdoc_markdown/gtkrange.html#gtk_range_set_inverted">gtk_range_set_inverted</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>range</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkrange.html#GtkRange">GtkRange</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if the range is inverted</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_range_get_inverted">
+	<span><code>Gtk.prototype.get_inverted</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_inverted(): {
+    // javascript wrapper for 'gtk_range_get_inverted'
+}</pre>
+
+<p>Gets the value set by <a href="hotdoc_markdown/gtkrange.html#gtk_range_set_inverted">Gtk.prototype.set_inverted</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>range</code></em></i>
+					(
+						<a title="Gtk.Range" href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if the range is inverted</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_range_get_inverted">
+	<span><code>Gtk.Range.get_inverted</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Range.get_inverted (self):
+    #python wrapper for 'gtk_range_get_inverted'</pre>
+
+<p>Gets the value set by <a href="hotdoc_markdown/gtkrange.html#gtk_range_set_inverted">Gtk.Range.set_inverted</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>range</code></em></i>
+					(
+						<a title="Gtk.Range" href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+										)
+								–
+			</div>
+							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if the range is inverted</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_range_set_inverted">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_range_set_inverted">
+	<span><code>gtk_range_set_inverted</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_range_set_inverted (<a title="GtkRange" href="hotdoc_markdown/gtkrange.html#GtkRange">GtkRange</a> * range,
+                        <a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a> setting)</pre>
+
+<p>Ranges normally move from lower to higher values as the
+slider moves from top to bottom or left to right. Inverted
+ranges have higher values at the top or on the right rather than
+on the bottom or left.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>range</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkrange.html#GtkRange">GtkRange</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>setting</code></em></i>
+				–
+	</div>
+			<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> to invert the range</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_range_set_inverted">
+	<span><code>Gtk.prototype.set_inverted</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_inverted(setting: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_range_set_inverted'
+}</pre>
+
+<p>Ranges normally move from lower to higher values as the
+slider moves from top to bottom or left to right. Inverted
+ranges have higher values at the top or on the right rather than
+on the bottom or left.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>range</code></em></i>
+					(
+						<a title="Gtk.Range" href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>setting</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> to invert the range</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_range_set_inverted">
+	<span><code>Gtk.Range.set_inverted</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Range.set_inverted (self, setting):
+    #python wrapper for 'gtk_range_set_inverted'</pre>
+
+<p>Ranges normally move from lower to higher values as the
+slider moves from top to bottom or left to right. Inverted
+ranges have higher values at the top or on the right rather than
+on the bottom or left.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>range</code></em></i>
+					(
+						<a title="Gtk.Range" href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>setting</code></em></i>
+					(
+						<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+						)
+				–
+	</div>
+			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> to invert the range</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_range_get_value">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_range_get_value">
+	<span><code>gtk_range_get_value</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a>
+gtk_range_get_value (<a title="GtkRange" href="hotdoc_markdown/gtkrange.html#GtkRange">GtkRange</a> * range)</pre>
+
+<p>Gets the current value of the range.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>range</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkrange.html#GtkRange">GtkRange</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>current value of the range.</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_range_get_value">
+	<span><code>Gtk.prototype.get_value</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_value(): {
+    // javascript wrapper for 'gtk_range_get_value'
+}</pre>
+
+<p>Gets the current value of the range.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>range</code></em></i>
+					(
+						<a title="Gtk.Range" href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p>current value of the range.</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_range_get_value">
+	<span><code>Gtk.Range.get_value</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Range.get_value (self):
+    #python wrapper for 'gtk_range_get_value'</pre>
+
+<p>Gets the current value of the range.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>range</code></em></i>
+					(
+						<a title="Gtk.Range" href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+										)
+								–
+			</div>
+							<p>current value of the range.</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_range_set_value">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_range_set_value">
+	<span><code>gtk_range_set_value</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_range_set_value (<a title="GtkRange" href="hotdoc_markdown/gtkrange.html#GtkRange">GtkRange</a> * range,
+                     <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> value)</pre>
+
+<p>Sets the current value of the range; if the value is outside the
+minimum or maximum range values, it will be clamped to fit inside
+them. The range emits the <a href="gtkrange.html#GtkRange::value-changed">value-changed</a> signal if the
+value changes.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>range</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkrange.html#GtkRange">GtkRange</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>value</code></em></i>
+				–
+	</div>
+			<p>new value of the range</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_range_set_value">
+	<span><code>Gtk.prototype.set_value</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_value(value: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_range_set_value'
+}</pre>
+
+<p>Sets the current value of the range; if the value is outside the
+minimum or maximum range values, it will be clamped to fit inside
+them. The range emits the <a href="gtkrange.html#GtkRange::value-changed">value-changed</a> signal if the
+value changes.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>range</code></em></i>
+					(
+						<a title="Gtk.Range" href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>value</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>new value of the range</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_range_set_value">
+	<span><code>Gtk.Range.set_value</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Range.set_value (self, value):
+    #python wrapper for 'gtk_range_set_value'</pre>
+
+<p>Sets the current value of the range; if the value is outside the
+minimum or maximum range values, it will be clamped to fit inside
+them. The range emits the <a href="gtkrange.html#GtkRange::value-changed">value-changed</a> signal if the
+value changes.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>range</code></em></i>
+					(
+						<a title="Gtk.Range" href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>value</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>new value of the range</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_range_set_increments">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_range_set_increments">
+	<span><code>gtk_range_set_increments</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_range_set_increments (<a title="GtkRange" href="hotdoc_markdown/gtkrange.html#GtkRange">GtkRange</a> * range,
+                          <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> step,
+                          <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> page)</pre>
+
+<p>Sets the step and page sizes for the range.
+The step size is used when the user clicks the <a href="hotdoc_markdown/gtkscrollbar.html#GtkScrollbar">GtkScrollbar</a>
+arrows or moves <a href="hotdoc_markdown/gtkscale.html#GtkScale">GtkScale</a> via arrow keys. The page size
+is used for example when moving via Page Up or Page Down keys.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>range</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkrange.html#GtkRange">GtkRange</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>step</code></em></i>
+				–
+	</div>
+			<p>step size</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>page</code></em></i>
+				–
+	</div>
+			<p>page size</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_range_set_increments">
+	<span><code>Gtk.prototype.set_increments</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_increments(step: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, page: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_range_set_increments'
+}</pre>
+
+<p>Sets the step and page sizes for the range.
+The step size is used when the user clicks the <a href="hotdoc_markdown/gtkscrollbar.html#GtkScrollbar">Gtk.Scrollbar</a>
+arrows or moves <a href="hotdoc_markdown/gtkscale.html#GtkScale">Gtk.Scale</a> via arrow keys. The page size
+is used for example when moving via Page Up or Page Down keys.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>range</code></em></i>
+					(
+						<a title="Gtk.Range" href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>step</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>step size</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>page</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>page size</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_range_set_increments">
+	<span><code>Gtk.Range.set_increments</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Range.set_increments (self, step, page):
+    #python wrapper for 'gtk_range_set_increments'</pre>
+
+<p>Sets the step and page sizes for the range.
+The step size is used when the user clicks the <a href="hotdoc_markdown/gtkscrollbar.html#GtkScrollbar">Gtk.Scrollbar</a>
+arrows or moves <a href="hotdoc_markdown/gtkscale.html#GtkScale">Gtk.Scale</a> via arrow keys. The page size
+is used for example when moving via Page Up or Page Down keys.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>range</code></em></i>
+					(
+						<a title="Gtk.Range" href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>step</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>step size</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>page</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>page size</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_range_set_range">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_range_set_range">
+	<span><code>gtk_range_set_range</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_range_set_range (<a title="GtkRange" href="hotdoc_markdown/gtkrange.html#GtkRange">GtkRange</a> * range,
+                     <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> min,
+                     <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> max)</pre>
+
+<p>Sets the allowable values in the <a href="hotdoc_markdown/gtkrange.html#GtkRange">GtkRange</a>, and clamps the range
+value to be between <em>min</em> and <em>max</em>. (If the range has a non-zero
+page size, it is clamped between <em>min</em> and <em>max</em> - page-size.)</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>range</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkrange.html#GtkRange">GtkRange</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>min</code></em></i>
+				–
+	</div>
+			<p>minimum range value</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>max</code></em></i>
+				–
+	</div>
+			<p>maximum range value</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_range_set_range">
+	<span><code>Gtk.prototype.set_range</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_range(min: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, max: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_range_set_range'
+}</pre>
+
+<p>Sets the allowable values in the <a href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a>, and clamps the range
+value to be between <em>min</em> and <em>max</em>. (If the range has a non-zero
+page size, it is clamped between <em>min</em> and <em>max</em> - page-size.)</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>range</code></em></i>
+					(
+						<a title="Gtk.Range" href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>min</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>minimum range value</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>max</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>maximum range value</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_range_set_range">
+	<span><code>Gtk.Range.set_range</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Range.set_range (self, min, max):
+    #python wrapper for 'gtk_range_set_range'</pre>
+
+<p>Sets the allowable values in the <a href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a>, and clamps the range
+value to be between <em>min</em> and <em>max</em>. (If the range has a non-zero
+page size, it is clamped between <em>min</em> and <em>max</em> - page-size.)</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>range</code></em></i>
+					(
+						<a title="Gtk.Range" href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>min</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>minimum range value</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>max</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>maximum range value</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.24;" id="gtk_range_get_round_digits">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_range_get_round_digits">
+	<span><code>gtk_range_get_round_digits</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a>
+gtk_range_get_round_digits (<a title="GtkRange" href="hotdoc_markdown/gtkrange.html#GtkRange">GtkRange</a> * range)</pre>
+
+<p>Gets the number of digits to round the value to when
+it changes. See <a href="gtkrange.html#GtkRange::change-value">change-value</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>range</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkrange.html#GtkRange">GtkRange</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>the number of digits to round to</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.24
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_range_get_round_digits">
+	<span><code>Gtk.prototype.get_round_digits</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_round_digits(): {
+    // javascript wrapper for 'gtk_range_get_round_digits'
+}</pre>
+
+<p>Gets the number of digits to round the value to when
+it changes. See <a href="gtkrange.html#GtkRange::change-value">change-value</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>range</code></em></i>
+					(
+						<a title="Gtk.Range" href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p>the number of digits to round to</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.24
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_range_get_round_digits">
+	<span><code>Gtk.Range.get_round_digits</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Range.get_round_digits (self):
+    #python wrapper for 'gtk_range_get_round_digits'</pre>
+
+<p>Gets the number of digits to round the value to when
+it changes. See <a href="gtkrange.html#GtkRange::change-value">change-value</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>range</code></em></i>
+					(
+						<a title="Gtk.Range" href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+										)
+								–
+			</div>
+							<p>the number of digits to round to</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.24
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.24;" id="gtk_range_set_round_digits">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_range_set_round_digits">
+	<span><code>gtk_range_set_round_digits</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_range_set_round_digits (<a title="GtkRange" href="hotdoc_markdown/gtkrange.html#GtkRange">GtkRange</a> * range,
+                            <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> round_digits)</pre>
+
+<p>Sets the number of digits to round the value to when
+it changes. See <a href="gtkrange.html#GtkRange::change-value">change-value</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>range</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkrange.html#GtkRange">GtkRange</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>round_digits</code></em></i>
+				–
+	</div>
+			<p>the precision in digits, or -1</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.24
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_range_set_round_digits">
+	<span><code>Gtk.prototype.set_round_digits</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_round_digits(round_digits: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_range_set_round_digits'
+}</pre>
+
+<p>Sets the number of digits to round the value to when
+it changes. See <a href="gtkrange.html#GtkRange::change-value">change-value</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>range</code></em></i>
+					(
+						<a title="Gtk.Range" href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>round_digits</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the precision in digits, or -1</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.24
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_range_set_round_digits">
+	<span><code>Gtk.Range.set_round_digits</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Range.set_round_digits (self, round_digits):
+    #python wrapper for 'gtk_range_set_round_digits'</pre>
+
+<p>Sets the number of digits to round the value to when
+it changes. See <a href="gtkrange.html#GtkRange::change-value">change-value</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>range</code></em></i>
+					(
+						<a title="Gtk.Range" href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>round_digits</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>the precision in digits, or -1</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.24
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_range_set_lower_stepper_sensitivity">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_range_set_lower_stepper_sensitivity">
+	<span><code>gtk_range_set_lower_stepper_sensitivity</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_range_set_lower_stepper_sensitivity (<a title="GtkRange" href="hotdoc_markdown/gtkrange.html#GtkRange">GtkRange</a> * range,
+                                         <a title="GtkSensitivityType" href="hotdoc_markdown/gtkrange.html#GtkSensitivityType">GtkSensitivityType</a> sensitivity)</pre>
+
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>range</code></em></i>
+				–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>sensitivity</code></em></i>
+				–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_range_set_lower_stepper_sensitivity">
+	<span><code>Gtk.prototype.set_lower_stepper_sensitivity</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_lower_stepper_sensitivity(sensitivity: <a title="Gtk.SensitivityType" href="hotdoc_markdown/gtkrange.html#GtkSensitivityType">Gtk.SensitivityType</a>): {
+    // javascript wrapper for 'gtk_range_set_lower_stepper_sensitivity'
+}</pre>
+
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>range</code></em></i>
+					(
+						<a title="Gtk.Range" href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a>
+						)
+				–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>sensitivity</code></em></i>
+					(
+						<a title="Gtk.SensitivityType" href="hotdoc_markdown/gtkrange.html#GtkSensitivityType">Gtk.SensitivityType</a>
+						)
+				–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_range_set_lower_stepper_sensitivity">
+	<span><code>Gtk.Range.set_lower_stepper_sensitivity</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Range.set_lower_stepper_sensitivity (self, sensitivity):
+    #python wrapper for 'gtk_range_set_lower_stepper_sensitivity'</pre>
+
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>range</code></em></i>
+					(
+						<a title="Gtk.Range" href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a>
+						)
+				–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>sensitivity</code></em></i>
+					(
+						<a title="Gtk.SensitivityType" href="hotdoc_markdown/gtkrange.html#GtkSensitivityType">Gtk.SensitivityType</a>
+						)
+				–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_range_get_lower_stepper_sensitivity">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_range_get_lower_stepper_sensitivity">
+	<span><code>gtk_range_get_lower_stepper_sensitivity</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkSensitivityType" href="hotdoc_markdown/gtkrange.html#GtkSensitivityType">GtkSensitivityType</a>
+gtk_range_get_lower_stepper_sensitivity (<a title="GtkRange" href="hotdoc_markdown/gtkrange.html#GtkRange">GtkRange</a> * range)</pre>
+
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>range</code></em></i>
+				–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<i>No description available</i>
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_range_get_lower_stepper_sensitivity">
+	<span><code>Gtk.prototype.get_lower_stepper_sensitivity</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_lower_stepper_sensitivity(): {
+    // javascript wrapper for 'gtk_range_get_lower_stepper_sensitivity'
+}</pre>
+
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>range</code></em></i>
+					(
+						<a title="Gtk.Range" href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a>
+						)
+				–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.SensitivityType" href="hotdoc_markdown/gtkrange.html#GtkSensitivityType">Gtk.SensitivityType</a>
+										)
+								–
+			</div>
+							<i>No description available</i>
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_range_get_lower_stepper_sensitivity">
+	<span><code>Gtk.Range.get_lower_stepper_sensitivity</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Range.get_lower_stepper_sensitivity (self):
+    #python wrapper for 'gtk_range_get_lower_stepper_sensitivity'</pre>
+
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>range</code></em></i>
+					(
+						<a title="Gtk.Range" href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a>
+						)
+				–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.SensitivityType" href="hotdoc_markdown/gtkrange.html#GtkSensitivityType">Gtk.SensitivityType</a>
+										)
+								–
+			</div>
+							<i>No description available</i>
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_range_set_upper_stepper_sensitivity">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_range_set_upper_stepper_sensitivity">
+	<span><code>gtk_range_set_upper_stepper_sensitivity</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_range_set_upper_stepper_sensitivity (<a title="GtkRange" href="hotdoc_markdown/gtkrange.html#GtkRange">GtkRange</a> * range,
+                                         <a title="GtkSensitivityType" href="hotdoc_markdown/gtkrange.html#GtkSensitivityType">GtkSensitivityType</a> sensitivity)</pre>
+
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>range</code></em></i>
+				–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>sensitivity</code></em></i>
+				–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_range_set_upper_stepper_sensitivity">
+	<span><code>Gtk.prototype.set_upper_stepper_sensitivity</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_upper_stepper_sensitivity(sensitivity: <a title="Gtk.SensitivityType" href="hotdoc_markdown/gtkrange.html#GtkSensitivityType">Gtk.SensitivityType</a>): {
+    // javascript wrapper for 'gtk_range_set_upper_stepper_sensitivity'
+}</pre>
+
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>range</code></em></i>
+					(
+						<a title="Gtk.Range" href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a>
+						)
+				–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>sensitivity</code></em></i>
+					(
+						<a title="Gtk.SensitivityType" href="hotdoc_markdown/gtkrange.html#GtkSensitivityType">Gtk.SensitivityType</a>
+						)
+				–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_range_set_upper_stepper_sensitivity">
+	<span><code>Gtk.Range.set_upper_stepper_sensitivity</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Range.set_upper_stepper_sensitivity (self, sensitivity):
+    #python wrapper for 'gtk_range_set_upper_stepper_sensitivity'</pre>
+
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>range</code></em></i>
+					(
+						<a title="Gtk.Range" href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a>
+						)
+				–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>sensitivity</code></em></i>
+					(
+						<a title="Gtk.SensitivityType" href="hotdoc_markdown/gtkrange.html#GtkSensitivityType">Gtk.SensitivityType</a>
+						)
+				–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_range_get_upper_stepper_sensitivity">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_range_get_upper_stepper_sensitivity">
+	<span><code>gtk_range_get_upper_stepper_sensitivity</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkSensitivityType" href="hotdoc_markdown/gtkrange.html#GtkSensitivityType">GtkSensitivityType</a>
+gtk_range_get_upper_stepper_sensitivity (<a title="GtkRange" href="hotdoc_markdown/gtkrange.html#GtkRange">GtkRange</a> * range)</pre>
+
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>range</code></em></i>
+				–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<i>No description available</i>
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_range_get_upper_stepper_sensitivity">
+	<span><code>Gtk.prototype.get_upper_stepper_sensitivity</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_upper_stepper_sensitivity(): {
+    // javascript wrapper for 'gtk_range_get_upper_stepper_sensitivity'
+}</pre>
+
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>range</code></em></i>
+					(
+						<a title="Gtk.Range" href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a>
+						)
+				–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.SensitivityType" href="hotdoc_markdown/gtkrange.html#GtkSensitivityType">Gtk.SensitivityType</a>
+										)
+								–
+			</div>
+							<i>No description available</i>
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_range_get_upper_stepper_sensitivity">
+	<span><code>Gtk.Range.get_upper_stepper_sensitivity</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Range.get_upper_stepper_sensitivity (self):
+    #python wrapper for 'gtk_range_get_upper_stepper_sensitivity'</pre>
+
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>range</code></em></i>
+					(
+						<a title="Gtk.Range" href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a>
+						)
+				–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.SensitivityType" href="hotdoc_markdown/gtkrange.html#GtkSensitivityType">Gtk.SensitivityType</a>
+										)
+								–
+			</div>
+							<i>No description available</i>
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.18;" id="gtk_range_get_flippable">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_range_get_flippable">
+	<span><code>gtk_range_get_flippable</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_range_get_flippable (<a title="GtkRange" href="hotdoc_markdown/gtkrange.html#GtkRange">GtkRange</a> * range)</pre>
+
+<p>Gets the value set by <a href="hotdoc_markdown/gtkrange.html#gtk_range_set_flippable">gtk_range_set_flippable</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>range</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkrange.html#GtkRange">GtkRange</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if the range is flippable</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.18
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_range_get_flippable">
+	<span><code>Gtk.prototype.get_flippable</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_flippable(): {
+    // javascript wrapper for 'gtk_range_get_flippable'
+}</pre>
+
+<p>Gets the value set by <a href="hotdoc_markdown/gtkrange.html#gtk_range_set_flippable">Gtk.prototype.set_flippable</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>range</code></em></i>
+					(
+						<a title="Gtk.Range" href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if the range is flippable</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.18
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_range_get_flippable">
+	<span><code>Gtk.Range.get_flippable</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Range.get_flippable (self):
+    #python wrapper for 'gtk_range_get_flippable'</pre>
+
+<p>Gets the value set by <a href="hotdoc_markdown/gtkrange.html#gtk_range_set_flippable">Gtk.Range.set_flippable</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>range</code></em></i>
+					(
+						<a title="Gtk.Range" href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+										)
+								–
+			</div>
+							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if the range is flippable</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.18
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.18;" id="gtk_range_set_flippable">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_range_set_flippable">
+	<span><code>gtk_range_set_flippable</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_range_set_flippable (<a title="GtkRange" href="hotdoc_markdown/gtkrange.html#GtkRange">GtkRange</a> * range,
+                         <a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a> flippable)</pre>
+
+<p>If a range is flippable, it will switch its direction if it is
+horizontal and its direction is <a href="gtkenums.html#GTK_TEXT_DIR_RTL">GTK_TEXT_DIR_RTL</a>.</p>
+<p>See <a href="hotdoc_markdown/gtkwidget.html#gtk_widget_get_direction">gtk_widget_get_direction</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>range</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkrange.html#GtkRange">GtkRange</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>flippable</code></em></i>
+				–
+	</div>
+			<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> to make the range flippable</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.18
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_range_set_flippable">
+	<span><code>Gtk.prototype.set_flippable</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_flippable(flippable: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_range_set_flippable'
+}</pre>
+
+<p>If a range is flippable, it will switch its direction if it is
+horizontal and its direction is <a href="gtkenums.html#GTK_TEXT_DIR_RTL">Gtk.TextDirection.RTL</a>.</p>
+<p>See <a href="hotdoc_markdown/gtkwidget.html#gtk_widget_get_direction">Gtk.prototype.get_direction</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>range</code></em></i>
+					(
+						<a title="Gtk.Range" href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>flippable</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> to make the range flippable</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.18
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_range_set_flippable">
+	<span><code>Gtk.Range.set_flippable</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Range.set_flippable (self, flippable):
+    #python wrapper for 'gtk_range_set_flippable'</pre>
+
+<p>If a range is flippable, it will switch its direction if it is
+horizontal and its direction is <a href="gtkenums.html#GTK_TEXT_DIR_RTL">Gtk.TextDirection.RTL</a>.</p>
+<p>See <a href="hotdoc_markdown/gtkwidget.html#gtk_widget_get_direction">Gtk.Widget.get_direction</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>range</code></em></i>
+					(
+						<a title="Gtk.Range" href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>flippable</code></em></i>
+					(
+						<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+						)
+				–
+	</div>
+			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> to make the range flippable</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.18
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.20;" id="gtk_range_get_range_rect">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_range_get_range_rect">
+	<span><code>gtk_range_get_range_rect</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_range_get_range_rect (<a title="GtkRange" href="hotdoc_markdown/gtkrange.html#GtkRange">GtkRange</a> * range,
+                          <a title="GdkRectangle" href="https://developer.gnome.org/gdk3/gdk3-Points-Rectangles-and-Regions.html#GdkRectangle">GdkRectangle</a> * range_rect)</pre>
+
+<p>This function returns the area that contains the range’s trough,
+in coordinates relative to <em>range</em>'s origin.</p>
+<p>This function is useful mainly for <a href="hotdoc_markdown/gtkrange.html#GtkRange">GtkRange</a> subclasses.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>range</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkrange.html#GtkRange">GtkRange</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>range_rect</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="Parameter for returning results"><span class="acronym">out</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>return location for the range rectangle</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.20
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_range_get_range_rect">
+	<span><code>Gtk.prototype.get_range_rect</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_range_rect(): {
+    // javascript wrapper for 'gtk_range_get_range_rect'
+}</pre>
+
+<p>This function returns the area that contains the range’s trough,
+in coordinates relative to <em>range</em>'s origin.</p>
+<p>This function is useful mainly for <a href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a> subclasses.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>range</code></em></i>
+					(
+						<a title="Gtk.Range" href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.20
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_range_get_range_rect">
+	<span><code>Gtk.Range.get_range_rect</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Range.get_range_rect (self):
+    #python wrapper for 'gtk_range_get_range_rect'</pre>
+
+<p>This function returns the area that contains the range’s trough,
+in coordinates relative to <em>range</em>'s origin.</p>
+<p>This function is useful mainly for <a href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a> subclasses.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>range</code></em></i>
+					(
+						<a title="Gtk.Range" href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.20
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.20;" id="gtk_range_get_slider_range">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_range_get_slider_range">
+	<span><code>gtk_range_get_slider_range</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_range_get_slider_range (<a title="GtkRange" href="hotdoc_markdown/gtkrange.html#GtkRange">GtkRange</a> * range,
+                            <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> * slider_start,
+                            <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> * slider_end)</pre>
+
+<p>This function returns sliders range along the long dimension,
+in widget-&gt;window coordinates.</p>
+<p>This function is useful mainly for <a href="hotdoc_markdown/gtkrange.html#GtkRange">GtkRange</a> subclasses.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>range</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkrange.html#GtkRange">GtkRange</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>slider_start</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="Parameter for returning results"><span class="acronym">out</span></abbr>]</span>
+<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>return location for the slider's
+start, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>slider_end</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="Parameter for returning results"><span class="acronym">out</span></abbr>]</span>
+<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>return location for the slider's
+end, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.20
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_range_get_slider_range">
+	<span><code>Gtk.prototype.get_slider_range</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_slider_range(): {
+    // javascript wrapper for 'gtk_range_get_slider_range'
+}</pre>
+
+<p>This function returns sliders range along the long dimension,
+in widget-&gt;window coordinates.</p>
+<p>This function is useful mainly for <a href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a> subclasses.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>range</code></em></i>
+					(
+						<a title="Gtk.Range" href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.20
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_range_get_slider_range">
+	<span><code>Gtk.Range.get_slider_range</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Range.get_slider_range (self):
+    #python wrapper for 'gtk_range_get_slider_range'</pre>
+
+<p>This function returns sliders range along the long dimension,
+in widget-&gt;window coordinates.</p>
+<p>This function is useful mainly for <a href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a> subclasses.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>range</code></em></i>
+					(
+						<a title="Gtk.Range" href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.20
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.20;" id="gtk_range_get_slider_size_fixed">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_range_get_slider_size_fixed">
+	<span><code>gtk_range_get_slider_size_fixed</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_range_get_slider_size_fixed (<a title="GtkRange" href="hotdoc_markdown/gtkrange.html#GtkRange">GtkRange</a> * range)</pre>
+
+<p>This function is useful mainly for <a href="hotdoc_markdown/gtkrange.html#GtkRange">GtkRange</a> subclasses.</p>
+<p>See <a href="hotdoc_markdown/gtkrange.html#gtk_range_set_slider_size_fixed">gtk_range_set_slider_size_fixed</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>range</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkrange.html#GtkRange">GtkRange</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>whether the range’s slider has a fixed size.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.20
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_range_get_slider_size_fixed">
+	<span><code>Gtk.prototype.get_slider_size_fixed</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_slider_size_fixed(): {
+    // javascript wrapper for 'gtk_range_get_slider_size_fixed'
+}</pre>
+
+<p>This function is useful mainly for <a href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a> subclasses.</p>
+<p>See <a href="hotdoc_markdown/gtkrange.html#gtk_range_set_slider_size_fixed">Gtk.prototype.set_slider_size_fixed</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>range</code></em></i>
+					(
+						<a title="Gtk.Range" href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p>whether the range’s slider has a fixed size.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.20
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_range_get_slider_size_fixed">
+	<span><code>Gtk.Range.get_slider_size_fixed</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Range.get_slider_size_fixed (self):
+    #python wrapper for 'gtk_range_get_slider_size_fixed'</pre>
+
+<p>This function is useful mainly for <a href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a> subclasses.</p>
+<p>See <a href="hotdoc_markdown/gtkrange.html#gtk_range_set_slider_size_fixed">Gtk.Range.set_slider_size_fixed</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>range</code></em></i>
+					(
+						<a title="Gtk.Range" href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+										)
+								–
+			</div>
+							<p>whether the range’s slider has a fixed size.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.20
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.20;" id="gtk_range_set_slider_size_fixed">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_range_set_slider_size_fixed">
+	<span><code>gtk_range_set_slider_size_fixed</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_range_set_slider_size_fixed (<a title="GtkRange" href="hotdoc_markdown/gtkrange.html#GtkRange">GtkRange</a> * range,
+                                 <a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a> size_fixed)</pre>
+
+<p>Sets whether the range’s slider has a fixed size, or a size that
+depends on its adjustment’s page size.</p>
+<p>This function is useful mainly for <a href="hotdoc_markdown/gtkrange.html#GtkRange">GtkRange</a> subclasses.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>range</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkrange.html#GtkRange">GtkRange</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>size_fixed</code></em></i>
+				–
+	</div>
+			<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> to make the slider size constant</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.20
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_range_set_slider_size_fixed">
+	<span><code>Gtk.prototype.set_slider_size_fixed</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_slider_size_fixed(size_fixed: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_range_set_slider_size_fixed'
+}</pre>
+
+<p>Sets whether the range’s slider has a fixed size, or a size that
+depends on its adjustment’s page size.</p>
+<p>This function is useful mainly for <a href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a> subclasses.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>range</code></em></i>
+					(
+						<a title="Gtk.Range" href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>size_fixed</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> to make the slider size constant</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.20
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_range_set_slider_size_fixed">
+	<span><code>Gtk.Range.set_slider_size_fixed</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Range.set_slider_size_fixed (self, size_fixed):
+    #python wrapper for 'gtk_range_set_slider_size_fixed'</pre>
+
+<p>Sets whether the range’s slider has a fixed size, or a size that
+depends on its adjustment’s page size.</p>
+<p>This function is useful mainly for <a href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a> subclasses.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>range</code></em></i>
+					(
+						<a title="Gtk.Range" href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkrange.html#GtkRange">Gtk.Range</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>size_fixed</code></em></i>
+					(
+						<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+						)
+				–
+	</div>
+			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> to make the slider size constant</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.20
+		</p>
+
+
+        </div>
+
+</div>
+
+
+        
+
+            <h2 class="symbol_section">Enumerations</h2>
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="GtkSensitivityType">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h3 data-hotdoc-id="GtkSensitivityType">
+	<span><code>GtkSensitivityType</code></span>
+</h3>
+
+
+<p>Determines how GTK+ handles the sensitivity of stepper arrows
+at the end of range widgets.</p>
+
+
+
+
+	<div class="members-container">
+		<h4>Members</h4>
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_SENSITIVITY_AUTO">
+	<div>
+		<i><em><code>GTK_SENSITIVITY_AUTO</code></em></i>
+		(<span class="value">0</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_SENSITIVITY_ON">
+	<div>
+		<i><em><code>GTK_SENSITIVITY_ON</code></em></i>
+		(<span class="value">1</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_SENSITIVITY_OFF">
+	<div>
+		<i><em><code>GTK_SENSITIVITY_OFF</code></em></i>
+		(<span class="value">2</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h3 data-hotdoc-id="GtkSensitivityType">
+	<span><code>Gtk.SensitivityType</code></span>
+</h3>
+
+
+<p>Determines how GTK+ handles the sensitivity of stepper arrows
+at the end of range widgets.</p>
+
+
+
+
+	<div class="members-container">
+		<h4>Members</h4>
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_SENSITIVITY_AUTO">
+	<div>
+		<i><em><code>Gtk.SensitivityType.AUTO</code></em></i>
+		(<span class="value">0</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_SENSITIVITY_ON">
+	<div>
+		<i><em><code>Gtk.SensitivityType.ON</code></em></i>
+		(<span class="value">1</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_SENSITIVITY_OFF">
+	<div>
+		<i><em><code>Gtk.SensitivityType.OFF</code></em></i>
+		(<span class="value">2</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="GtkSensitivityType">
+	<span><code>Gtk.SensitivityType</code></span>
+</h3>
+
+
+<p>Determines how GTK+ handles the sensitivity of stepper arrows
+at the end of range widgets.</p>
+
+
+
+
+	<div class="members-container">
+		<h4>Members</h4>
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_SENSITIVITY_AUTO">
+	<div>
+		<i><em><code>Gtk.SensitivityType.AUTO</code></em></i>
+		(<span class="value">0</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_SENSITIVITY_ON">
+	<div>
+		<i><em><code>Gtk.SensitivityType.ON</code></em></i>
+		(<span class="value">1</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_SENSITIVITY_OFF">
+	<div>
+		<i><em><code>Gtk.SensitivityType.OFF</code></em></i>
+		(<span class="value">2</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+
+</div>
+
+
+
+
+
+
+		
+	</div>
+	<div id="search_results">
+		<p>The results of the search are</p>
+	</div>
+	<hr>
+	<div id="footer">
+		    
+
+	</div>
+</div>
+
+<div id="toc-column">
+	
+		<div class="edit-button">
+		
+
+	</div>
+		<div id="toc-wrapper">
+		<nav id="toc"></nav>
+	</div>
+</div>
+</div>
+</main>
+
+</body>
+
+<script src="assets/js/navbar_offset_scroller.js"></script>
+</html>

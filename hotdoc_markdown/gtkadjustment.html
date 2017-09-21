@@ -1,0 +1,3676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<base href="..">
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>gtkadjustment</title>
+
+<link rel="stylesheet" href="assets/css/custom_bootstrap.css" type="text/css">
+<link rel="stylesheet" href="assets/css/bootstrap-toc.min.css" type="text/css">
+<link rel="stylesheet" href="assets/css/frontend.css" type="text/css">
+<link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
+
+<link rel="stylesheet" href="assets/css/prism.css" type="text/css">
+
+<script src="assets/js/mustache.min.js"></script>
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/scrollspy.js"></script>
+<script src="assets/js/bootstrap.js"></script>
+<script src="assets/js/typeahead.jquery.min.js"></script>
+<script src="assets/js/search.js"></script>
+<script src="assets/js/isotope.pkgd.min.js"></script>
+<script src="assets/js/compare-versions.js"></script>
+<script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="assets/js/bootstrap-toc.min.js"></script>
+<script src="assets/js/jquery.touchSwipe.min.js"></script>
+<script src="assets/js/anchor.min.js"></script>
+<script src="assets/js/tag_filtering.js"></script>
+<script src="assets/js/language_switching.js"></script>
+
+<script src="assets/js/lines_around_headings.js"></script>
+
+<script src="assets/js/prism-core.js"></script>
+<script src="assets/js/prism-autoloader.js"></script>
+<script src="assets/js/prism_autoloader_path_override.js"></script>
+<script src="assets/js/trie.js"></script>
+
+
+</head>
+
+<body class="no-script
+" data-spy="scroll" data-target="#toc" data-offset="70">
+
+<script>
+$('body').removeClass('no-script');
+</script>
+
+<nav class="navbar navbar-fixed-top navbar-default" id="topnav">
+	<div class="container-fluid">
+		<div class="navbar-right">
+			<a id="toc-toggle">
+				<span class="glyphicon glyphicon-menu-right"></span>
+				<span class="glyphicon glyphicon-menu-left"></span>
+			</a>
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-wrapper" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<form action="" class="navbar-form pull-right" id="navbar-search-form">
+                               <div class="form-group has-feedback">
+                                       <input type="text" class="form-control input-sm" name="search" id="sidenav-lookup-field" placeholder="search" disabled>
+				       <span class="glyphicon glyphicon-search form-control-feedback" id="search-mgn-glass"></span>
+                               </div>
+                        </form>
+		</div>
+		<div class="navbar-header">
+			<a id="sidenav-toggle">
+				<span class="glyphicon glyphicon-menu-right"></span>
+				<span class="glyphicon glyphicon-menu-left"></span>
+			</a>
+			<a id="home-link" href="index.html" class="hotdoc-navbar-brand">
+				<img src="assets/images/home.svg" alt="Home">
+			</a>
+		</div>
+		<div class="navbar-collapse collapse" id="navbar-wrapper">
+			<ul class="nav navbar-nav" id="menu">
+							</ul>
+			<div class="hidden-xs hidden-sm navbar-text navbar-center">
+							</div>
+		</div>
+	</div>
+</nav>
+
+<main>
+<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="hotdoc_markdown/gtkadjustment.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['c', 'javascript', 'python']" data-hotdoc-meta-gi-language="c">
+<script src="assets/js/utils.js"></script>
+
+<div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
+	<script src="assets/js/navigation.js"></script>
+	<script src="assets/js/sitemap.js"></script>
+</div>
+
+<div id="body">
+	<div id="main">
+				    <div id="page-description" data-hotdoc-source="gtkadjustment.markdown" data-hotdoc-role="main">
+    </div>
+        
+        
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="GtkAdjustment">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h2 data-hotdoc-id="GtkAdjustment">
+	<span><code>GtkAdjustment</code></span>
+</h2>
+
+
+<div class="hierarchy_container">
+	<div class="hierarchy_details">
+<pre>
+<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object">GObject</a>
+    <span class="lineart">╰──</span><a title="GInitiallyUnowned" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-python="GObject.InitiallyUnowned" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-javascript="GObject.InitiallyUnowned">GInitiallyUnowned</a>
+        <span class="lineart">╰──</span>GtkAdjustment
+</pre>
+
+</div>
+
+</div>
+
+
+<div class="class_details">
+	<p>The <a href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment" data-gi-href-python="hotdoc_markdown/gtkadjustment.html#GtkAdjustment" data-gi-title-python="Gtk.Adjustment" data-gi-href-javascript="hotdoc_markdown/gtkadjustment.html#GtkAdjustment" data-gi-title-javascript="Gtk.Adjustment">GtkAdjustment</a>-struct contains only private fields and
+should not be directly accessed.</p>
+
+</div>
+
+
+
+	<div class="members-container">
+		<h3>Members</h3>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkAdjustment.parent_instance">
+	<div>
+		<i><em><code>parent_instance</code></em></i>
+		(<a title="GInitiallyUnowned" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-python="GObject.InitiallyUnowned" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-javascript="GObject.InitiallyUnowned">GInitiallyUnowned</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GtkAdjustment.priv">
+	<div>
+		<i><em><code>priv</code></em></i>
+		(GtkAdjustmentPrivate*)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+<h3>Class structure</h3>
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="GtkAdjustmentClass">
+	<span><code>GtkAdjustmentClass</code></span>
+</h4>
+
+
+
+
+
+	<div class="members-container">
+		<h5>Fields</h5>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkAdjustmentClass.parent_class">
+	<div>
+		<i><em><code>parent_class</code></em></i>
+		(<a title="GInitiallyUnownedClass" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnownedClass">GInitiallyUnownedClass</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h3>
+	Gtk.AdjustmentClass
+</h3>
+
+
+
+
+
+	<div class="members-container">
+		<h5>Attributes</h5>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkAdjustmentClass.parent_class">
+	<div>
+		<i><em><code>AdjustmentClass.parent_class</code></em></i>
+		(<a title="GObject.InitiallyUnownedClass" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnownedClass">GObject.InitiallyUnownedClass</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3>
+	Gtk.AdjustmentClass
+</h3>
+
+
+
+
+
+	<div class="members-container">
+		<h5>Attributes</h5>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkAdjustmentClass.parent_class">
+	<div>
+		<i><em><code>AdjustmentClass.parent_class</code></em></i>
+		(<a title="GObject.InitiallyUnownedClass" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnownedClass">GObject.InitiallyUnownedClass</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h2 data-hotdoc-id="GtkAdjustment">
+	<span><code>GtkAdjustment</code></span>
+</h2>
+
+
+<div class="hierarchy_container">
+	<div class="hierarchy_details">
+<pre>
+<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object">GObject</a>
+    <span class="lineart">╰──</span><a title="GInitiallyUnowned" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-python="GObject.InitiallyUnowned" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-javascript="GObject.InitiallyUnowned">GInitiallyUnowned</a>
+        <span class="lineart">╰──</span>GtkAdjustment
+</pre>
+
+</div>
+
+</div>
+
+
+<div class="class_details">
+	<p>The <a href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment" data-gi-href-python="hotdoc_markdown/gtkadjustment.html#GtkAdjustment" data-gi-title-python="Gtk.Adjustment" data-gi-href-javascript="hotdoc_markdown/gtkadjustment.html#GtkAdjustment" data-gi-title-javascript="Gtk.Adjustment">GtkAdjustment</a>-struct contains only private fields and
+should not be directly accessed.</p>
+
+</div>
+
+
+
+	<div class="members-container">
+		<h3>Members</h3>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkAdjustment.parent_instance">
+	<div>
+		<i><em><code>parent_instance</code></em></i>
+		(<a title="GInitiallyUnowned" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-python="GObject.InitiallyUnowned" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-javascript="GObject.InitiallyUnowned">GInitiallyUnowned</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GtkAdjustment.priv">
+	<div>
+		<i><em><code>priv</code></em></i>
+		(GtkAdjustmentPrivate)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h2 data-hotdoc-id="GtkAdjustment">
+	<span><code>GtkAdjustment</code></span>
+</h2>
+
+
+<div class="hierarchy_container">
+	<div class="hierarchy_details">
+<pre>
+<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object">GObject</a>
+    <span class="lineart">╰──</span><a title="GInitiallyUnowned" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-python="GObject.InitiallyUnowned" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-javascript="GObject.InitiallyUnowned">GInitiallyUnowned</a>
+        <span class="lineart">╰──</span>GtkAdjustment
+</pre>
+
+</div>
+
+</div>
+
+
+<div class="class_details">
+	<p>The <a href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment" data-gi-href-python="hotdoc_markdown/gtkadjustment.html#GtkAdjustment" data-gi-title-python="Gtk.Adjustment" data-gi-href-javascript="hotdoc_markdown/gtkadjustment.html#GtkAdjustment" data-gi-title-javascript="Gtk.Adjustment">GtkAdjustment</a>-struct contains only private fields and
+should not be directly accessed.</p>
+
+</div>
+
+
+
+	<div class="members-container">
+		<h3>Members</h3>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkAdjustment.parent_instance">
+	<div>
+		<i><em><code>parent_instance</code></em></i>
+		(<a title="GInitiallyUnowned" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-python="GObject.InitiallyUnowned" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-javascript="GObject.InitiallyUnowned">GInitiallyUnowned</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GtkAdjustment.priv">
+	<div>
+		<i><em><code>priv</code></em></i>
+		(GtkAdjustmentPrivate)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+
+</div>
+
+
+            <h3 class="symbol_section">Constructors</h3>
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_adjustment_new">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_adjustment_new">
+	<span><code>gtk_adjustment_new</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkAdjustment" href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">GtkAdjustment</a> *
+gtk_adjustment_new (<a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> value,
+                    <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> lower,
+                    <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> upper,
+                    <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> step_increment,
+                    <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> page_increment,
+                    <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> page_size)</pre>
+
+<p>Creates a new <a href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">GtkAdjustment</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>value</code></em></i>
+				–
+	</div>
+			<p>the initial value</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>lower</code></em></i>
+				–
+	</div>
+			<p>the minimum value</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>upper</code></em></i>
+				–
+	</div>
+			<p>the maximum value</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>step_increment</code></em></i>
+				–
+	</div>
+			<p>the step increment</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>page_increment</code></em></i>
+				–
+	</div>
+			<p>the page increment</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>page_size</code></em></i>
+				–
+	</div>
+			<p>the page size</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>a new <a href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">GtkAdjustment</a></p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_adjustment_new">
+	<span><code>Gtk.prototype.new</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.new(value: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, lower: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, upper: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, step_increment: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, page_increment: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, page_size: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_adjustment_new'
+}</pre>
+
+<p>Creates a new <a href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>value</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the initial value</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>lower</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the minimum value</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>upper</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the maximum value</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>step_increment</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the step increment</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>page_increment</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the page increment</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>page_size</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the page size</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Adjustment" href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a>
+										)
+								–
+			</div>
+							<p>a new <a href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a></p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_adjustment_new">
+	<span><code>Gtk.Adjustment.new</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Adjustment.new (value, lower, upper, step_increment, page_increment, page_size):
+    #python wrapper for 'gtk_adjustment_new'</pre>
+
+<p>Creates a new <a href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>value</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>the initial value</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>lower</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>the minimum value</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>upper</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>the maximum value</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>step_increment</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>the step increment</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>page_increment</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>the page increment</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>page_size</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>the page size</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Adjustment" href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a>
+										)
+								–
+			</div>
+							<p>a new <a href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a></p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+
+            <h3 class="symbol_section">Methods</h3>
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_adjustment_get_value">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_adjustment_get_value">
+	<span><code>gtk_adjustment_get_value</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a>
+gtk_adjustment_get_value (<a title="GtkAdjustment" href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">GtkAdjustment</a> * adjustment)</pre>
+
+<p>Gets the current value of the adjustment.
+See <a href="hotdoc_markdown/gtkadjustment.html#gtk_adjustment_set_value">gtk_adjustment_set_value</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>adjustment</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">GtkAdjustment</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>The current value of the adjustment</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_adjustment_get_value">
+	<span><code>Gtk.prototype.get_value</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_value(): {
+    // javascript wrapper for 'gtk_adjustment_get_value'
+}</pre>
+
+<p>Gets the current value of the adjustment.
+See <a href="hotdoc_markdown/gtkadjustment.html#gtk_adjustment_set_value">Gtk.prototype.set_value</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>adjustment</code></em></i>
+					(
+						<a title="Gtk.Adjustment" href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p>The current value of the adjustment</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_adjustment_get_value">
+	<span><code>Gtk.Adjustment.get_value</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Adjustment.get_value (self):
+    #python wrapper for 'gtk_adjustment_get_value'</pre>
+
+<p>Gets the current value of the adjustment.
+See <a href="hotdoc_markdown/gtkadjustment.html#gtk_adjustment_set_value">Gtk.Adjustment.set_value</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>adjustment</code></em></i>
+					(
+						<a title="Gtk.Adjustment" href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+										)
+								–
+			</div>
+							<p>The current value of the adjustment</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_adjustment_set_value">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_adjustment_set_value">
+	<span><code>gtk_adjustment_set_value</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_adjustment_set_value (<a title="GtkAdjustment" href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">GtkAdjustment</a> * adjustment,
+                          <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> value)</pre>
+
+<p>Sets the <a href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">GtkAdjustment</a> value. The value is clamped to lie between
+<a href="gtkadjustment.html#GtkAdjustment:lower">lower</a> and <a href="gtkadjustment.html#GtkAdjustment:upper">upper</a>.</p>
+<p>Note that for adjustments which are used in a <a href="hotdoc_markdown/gtkscrollbar.html#GtkScrollbar">GtkScrollbar</a>, the
+effective range of allowed values goes from <a href="gtkadjustment.html#GtkAdjustment:lower">lower</a> to
+<a href="gtkadjustment.html#GtkAdjustment:upper">upper</a> - <a href="gtkadjustment.html#GtkAdjustment:page-size">page-size</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>adjustment</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">GtkAdjustment</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>value</code></em></i>
+				–
+	</div>
+			<p>the new value</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_adjustment_set_value">
+	<span><code>Gtk.prototype.set_value</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_value(value: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_adjustment_set_value'
+}</pre>
+
+<p>Sets the <a href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a> value. The value is clamped to lie between
+<a href="gtkadjustment.html#GtkAdjustment:lower">lower</a> and <a href="gtkadjustment.html#GtkAdjustment:upper">upper</a>.</p>
+<p>Note that for adjustments which are used in a <a href="hotdoc_markdown/gtkscrollbar.html#GtkScrollbar">Gtk.Scrollbar</a>, the
+effective range of allowed values goes from <a href="gtkadjustment.html#GtkAdjustment:lower">lower</a> to
+<a href="gtkadjustment.html#GtkAdjustment:upper">upper</a> - <a href="gtkadjustment.html#GtkAdjustment:page-size">page-size</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>adjustment</code></em></i>
+					(
+						<a title="Gtk.Adjustment" href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>value</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the new value</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_adjustment_set_value">
+	<span><code>Gtk.Adjustment.set_value</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Adjustment.set_value (self, value):
+    #python wrapper for 'gtk_adjustment_set_value'</pre>
+
+<p>Sets the <a href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a> value. The value is clamped to lie between
+<a href="gtkadjustment.html#GtkAdjustment:lower">lower</a> and <a href="gtkadjustment.html#GtkAdjustment:upper">upper</a>.</p>
+<p>Note that for adjustments which are used in a <a href="hotdoc_markdown/gtkscrollbar.html#GtkScrollbar">Gtk.Scrollbar</a>, the
+effective range of allowed values goes from <a href="gtkadjustment.html#GtkAdjustment:lower">lower</a> to
+<a href="gtkadjustment.html#GtkAdjustment:upper">upper</a> - <a href="gtkadjustment.html#GtkAdjustment:page-size">page-size</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>adjustment</code></em></i>
+					(
+						<a title="Gtk.Adjustment" href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>value</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>the new value</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_adjustment_clamp_page">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_adjustment_clamp_page">
+	<span><code>gtk_adjustment_clamp_page</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_adjustment_clamp_page (<a title="GtkAdjustment" href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">GtkAdjustment</a> * adjustment,
+                           <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> lower,
+                           <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> upper)</pre>
+
+<p>Updates the <a href="gtkadjustment.html#GtkAdjustment:value">value</a> property to ensure that the range
+between <em>lower</em> and <em>upper</em> is in the current page (i.e. between
+<a href="gtkadjustment.html#GtkAdjustment:value">value</a> and <a href="gtkadjustment.html#GtkAdjustment:value">value</a> + <a href="gtkadjustment.html#GtkAdjustment:page-size">page-size</a>).
+If the range is larger than the page size, then only the start of it will
+be in the current page.</p>
+<p>A <a href="gtkadjustment.html#GtkAdjustment::value-changed">value-changed</a> signal will be emitted if the value is changed.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>adjustment</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">GtkAdjustment</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>lower</code></em></i>
+				–
+	</div>
+			<p>the lower value</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>upper</code></em></i>
+				–
+	</div>
+			<p>the upper value</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_adjustment_clamp_page">
+	<span><code>Gtk.prototype.clamp_page</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.clamp_page(lower: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, upper: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_adjustment_clamp_page'
+}</pre>
+
+<p>Updates the <a href="gtkadjustment.html#GtkAdjustment:value">value</a> property to ensure that the range
+between <em>lower</em> and <em>upper</em> is in the current page (i.e. between
+<a href="gtkadjustment.html#GtkAdjustment:value">value</a> and <a href="gtkadjustment.html#GtkAdjustment:value">value</a> + <a href="gtkadjustment.html#GtkAdjustment:page-size">page-size</a>).
+If the range is larger than the page size, then only the start of it will
+be in the current page.</p>
+<p>A <a href="gtkadjustment.html#GtkAdjustment::value-changed">value-changed</a> signal will be emitted if the value is changed.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>adjustment</code></em></i>
+					(
+						<a title="Gtk.Adjustment" href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>lower</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the lower value</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>upper</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the upper value</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_adjustment_clamp_page">
+	<span><code>Gtk.Adjustment.clamp_page</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Adjustment.clamp_page (self, lower, upper):
+    #python wrapper for 'gtk_adjustment_clamp_page'</pre>
+
+<p>Updates the <a href="gtkadjustment.html#GtkAdjustment:value">value</a> property to ensure that the range
+between <em>lower</em> and <em>upper</em> is in the current page (i.e. between
+<a href="gtkadjustment.html#GtkAdjustment:value">value</a> and <a href="gtkadjustment.html#GtkAdjustment:value">value</a> + <a href="gtkadjustment.html#GtkAdjustment:page-size">page-size</a>).
+If the range is larger than the page size, then only the start of it will
+be in the current page.</p>
+<p>A <a href="gtkadjustment.html#GtkAdjustment::value-changed">value-changed</a> signal will be emitted if the value is changed.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>adjustment</code></em></i>
+					(
+						<a title="Gtk.Adjustment" href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>lower</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>the lower value</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>upper</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>the upper value</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.14;" id="gtk_adjustment_configure">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_adjustment_configure">
+	<span><code>gtk_adjustment_configure</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_adjustment_configure (<a title="GtkAdjustment" href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">GtkAdjustment</a> * adjustment,
+                          <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> value,
+                          <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> lower,
+                          <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> upper,
+                          <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> step_increment,
+                          <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> page_increment,
+                          <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> page_size)</pre>
+
+<p>Sets all properties of the adjustment at once.</p>
+<p>Use this function to avoid multiple emissions of the
+<a href="gtkadjustment.html#GtkAdjustment::changed">changed</a> signal. See <a href="hotdoc_markdown/gtkadjustment.html#gtk_adjustment_set_lower">gtk_adjustment_set_lower</a>
+for an alternative way of compressing multiple emissions of
+<a href="gtkadjustment.html#GtkAdjustment::changed">changed</a> into one.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>adjustment</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">GtkAdjustment</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>value</code></em></i>
+				–
+	</div>
+			<p>the new value</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>lower</code></em></i>
+				–
+	</div>
+			<p>the new minimum value</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>upper</code></em></i>
+				–
+	</div>
+			<p>the new maximum value</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>step_increment</code></em></i>
+				–
+	</div>
+			<p>the new step increment</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>page_increment</code></em></i>
+				–
+	</div>
+			<p>the new page increment</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>page_size</code></em></i>
+				–
+	</div>
+			<p>the new page size</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.14
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_adjustment_configure">
+	<span><code>Gtk.prototype.configure</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.configure(value: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, lower: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, upper: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, step_increment: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, page_increment: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, page_size: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_adjustment_configure'
+}</pre>
+
+<p>Sets all properties of the adjustment at once.</p>
+<p>Use this function to avoid multiple emissions of the
+<a href="gtkadjustment.html#GtkAdjustment::changed">changed</a> signal. See <a href="hotdoc_markdown/gtkadjustment.html#gtk_adjustment_set_lower">Gtk.prototype.set_lower</a>
+for an alternative way of compressing multiple emissions of
+<a href="gtkadjustment.html#GtkAdjustment::changed">changed</a> into one.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>adjustment</code></em></i>
+					(
+						<a title="Gtk.Adjustment" href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>value</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the new value</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>lower</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the new minimum value</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>upper</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the new maximum value</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>step_increment</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the new step increment</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>page_increment</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the new page increment</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>page_size</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the new page size</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.14
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_adjustment_configure">
+	<span><code>Gtk.Adjustment.configure</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Adjustment.configure (self, value, lower, upper, step_increment, page_increment, page_size):
+    #python wrapper for 'gtk_adjustment_configure'</pre>
+
+<p>Sets all properties of the adjustment at once.</p>
+<p>Use this function to avoid multiple emissions of the
+<a href="gtkadjustment.html#GtkAdjustment::changed">changed</a> signal. See <a href="hotdoc_markdown/gtkadjustment.html#gtk_adjustment_set_lower">Gtk.Adjustment.set_lower</a>
+for an alternative way of compressing multiple emissions of
+<a href="gtkadjustment.html#GtkAdjustment::changed">changed</a> into one.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>adjustment</code></em></i>
+					(
+						<a title="Gtk.Adjustment" href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>value</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>the new value</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>lower</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>the new minimum value</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>upper</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>the new maximum value</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>step_increment</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>the new step increment</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>page_increment</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>the new page increment</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>page_size</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>the new page size</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.14
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.14;" id="gtk_adjustment_get_lower">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_adjustment_get_lower">
+	<span><code>gtk_adjustment_get_lower</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a>
+gtk_adjustment_get_lower (<a title="GtkAdjustment" href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">GtkAdjustment</a> * adjustment)</pre>
+
+<p>Retrieves the minimum value of the adjustment.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>adjustment</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">GtkAdjustment</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>The current minimum value of the adjustment</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.14
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_adjustment_get_lower">
+	<span><code>Gtk.prototype.get_lower</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_lower(): {
+    // javascript wrapper for 'gtk_adjustment_get_lower'
+}</pre>
+
+<p>Retrieves the minimum value of the adjustment.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>adjustment</code></em></i>
+					(
+						<a title="Gtk.Adjustment" href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p>The current minimum value of the adjustment</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.14
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_adjustment_get_lower">
+	<span><code>Gtk.Adjustment.get_lower</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Adjustment.get_lower (self):
+    #python wrapper for 'gtk_adjustment_get_lower'</pre>
+
+<p>Retrieves the minimum value of the adjustment.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>adjustment</code></em></i>
+					(
+						<a title="Gtk.Adjustment" href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+										)
+								–
+			</div>
+							<p>The current minimum value of the adjustment</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.14
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.14;" id="gtk_adjustment_get_page_increment">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_adjustment_get_page_increment">
+	<span><code>gtk_adjustment_get_page_increment</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a>
+gtk_adjustment_get_page_increment (<a title="GtkAdjustment" href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">GtkAdjustment</a> * adjustment)</pre>
+
+<p>Retrieves the page increment of the adjustment.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>adjustment</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">GtkAdjustment</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>The current page increment of the adjustment</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.14
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_adjustment_get_page_increment">
+	<span><code>Gtk.prototype.get_page_increment</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_page_increment(): {
+    // javascript wrapper for 'gtk_adjustment_get_page_increment'
+}</pre>
+
+<p>Retrieves the page increment of the adjustment.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>adjustment</code></em></i>
+					(
+						<a title="Gtk.Adjustment" href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p>The current page increment of the adjustment</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.14
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_adjustment_get_page_increment">
+	<span><code>Gtk.Adjustment.get_page_increment</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Adjustment.get_page_increment (self):
+    #python wrapper for 'gtk_adjustment_get_page_increment'</pre>
+
+<p>Retrieves the page increment of the adjustment.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>adjustment</code></em></i>
+					(
+						<a title="Gtk.Adjustment" href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+										)
+								–
+			</div>
+							<p>The current page increment of the adjustment</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.14
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.14;" id="gtk_adjustment_get_page_size">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_adjustment_get_page_size">
+	<span><code>gtk_adjustment_get_page_size</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a>
+gtk_adjustment_get_page_size (<a title="GtkAdjustment" href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">GtkAdjustment</a> * adjustment)</pre>
+
+<p>Retrieves the page size of the adjustment.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>adjustment</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">GtkAdjustment</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>The current page size of the adjustment</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.14
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_adjustment_get_page_size">
+	<span><code>Gtk.prototype.get_page_size</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_page_size(): {
+    // javascript wrapper for 'gtk_adjustment_get_page_size'
+}</pre>
+
+<p>Retrieves the page size of the adjustment.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>adjustment</code></em></i>
+					(
+						<a title="Gtk.Adjustment" href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p>The current page size of the adjustment</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.14
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_adjustment_get_page_size">
+	<span><code>Gtk.Adjustment.get_page_size</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Adjustment.get_page_size (self):
+    #python wrapper for 'gtk_adjustment_get_page_size'</pre>
+
+<p>Retrieves the page size of the adjustment.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>adjustment</code></em></i>
+					(
+						<a title="Gtk.Adjustment" href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+										)
+								–
+			</div>
+							<p>The current page size of the adjustment</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.14
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.14;" id="gtk_adjustment_get_step_increment">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_adjustment_get_step_increment">
+	<span><code>gtk_adjustment_get_step_increment</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a>
+gtk_adjustment_get_step_increment (<a title="GtkAdjustment" href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">GtkAdjustment</a> * adjustment)</pre>
+
+<p>Retrieves the step increment of the adjustment.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>adjustment</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">GtkAdjustment</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>The current step increment of the adjustment.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.14
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_adjustment_get_step_increment">
+	<span><code>Gtk.prototype.get_step_increment</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_step_increment(): {
+    // javascript wrapper for 'gtk_adjustment_get_step_increment'
+}</pre>
+
+<p>Retrieves the step increment of the adjustment.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>adjustment</code></em></i>
+					(
+						<a title="Gtk.Adjustment" href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p>The current step increment of the adjustment.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.14
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_adjustment_get_step_increment">
+	<span><code>Gtk.Adjustment.get_step_increment</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Adjustment.get_step_increment (self):
+    #python wrapper for 'gtk_adjustment_get_step_increment'</pre>
+
+<p>Retrieves the step increment of the adjustment.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>adjustment</code></em></i>
+					(
+						<a title="Gtk.Adjustment" href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+										)
+								–
+			</div>
+							<p>The current step increment of the adjustment.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.14
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.2;" id="gtk_adjustment_get_minimum_increment">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_adjustment_get_minimum_increment">
+	<span><code>gtk_adjustment_get_minimum_increment</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a>
+gtk_adjustment_get_minimum_increment (<a title="GtkAdjustment" href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">GtkAdjustment</a> * adjustment)</pre>
+
+<p>Gets the smaller of step increment and page increment.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>adjustment</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">GtkAdjustment</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>the minimum increment of <em>adjustment</em></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.2
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_adjustment_get_minimum_increment">
+	<span><code>Gtk.prototype.get_minimum_increment</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_minimum_increment(): {
+    // javascript wrapper for 'gtk_adjustment_get_minimum_increment'
+}</pre>
+
+<p>Gets the smaller of step increment and page increment.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>adjustment</code></em></i>
+					(
+						<a title="Gtk.Adjustment" href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p>the minimum increment of <em>adjustment</em></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.2
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_adjustment_get_minimum_increment">
+	<span><code>Gtk.Adjustment.get_minimum_increment</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Adjustment.get_minimum_increment (self):
+    #python wrapper for 'gtk_adjustment_get_minimum_increment'</pre>
+
+<p>Gets the smaller of step increment and page increment.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>adjustment</code></em></i>
+					(
+						<a title="Gtk.Adjustment" href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+										)
+								–
+			</div>
+							<p>the minimum increment of <em>adjustment</em></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.2
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.14;" id="gtk_adjustment_get_upper">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_adjustment_get_upper">
+	<span><code>gtk_adjustment_get_upper</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a>
+gtk_adjustment_get_upper (<a title="GtkAdjustment" href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">GtkAdjustment</a> * adjustment)</pre>
+
+<p>Retrieves the maximum value of the adjustment.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>adjustment</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">GtkAdjustment</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>The current maximum value of the adjustment</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.14
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_adjustment_get_upper">
+	<span><code>Gtk.prototype.get_upper</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_upper(): {
+    // javascript wrapper for 'gtk_adjustment_get_upper'
+}</pre>
+
+<p>Retrieves the maximum value of the adjustment.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>adjustment</code></em></i>
+					(
+						<a title="Gtk.Adjustment" href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p>The current maximum value of the adjustment</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.14
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_adjustment_get_upper">
+	<span><code>Gtk.Adjustment.get_upper</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Adjustment.get_upper (self):
+    #python wrapper for 'gtk_adjustment_get_upper'</pre>
+
+<p>Retrieves the maximum value of the adjustment.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>adjustment</code></em></i>
+					(
+						<a title="Gtk.Adjustment" href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+										)
+								–
+			</div>
+							<p>The current maximum value of the adjustment</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.14
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.14;" id="gtk_adjustment_set_lower">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_adjustment_set_lower">
+	<span><code>gtk_adjustment_set_lower</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_adjustment_set_lower (<a title="GtkAdjustment" href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">GtkAdjustment</a> * adjustment,
+                          <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> lower)</pre>
+
+<p>Sets the minimum value of the adjustment.</p>
+<p>When setting multiple adjustment properties via their individual
+setters, multiple <a href="gtkadjustment.html#GtkAdjustment::changed">changed</a> signals will be emitted.
+However, since the emission of the <a href="gtkadjustment.html#GtkAdjustment::changed">changed</a> signal
+is tied to the emission of the <a href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-notify">notify</a> signals of the changed
+properties, it’s possible to compress the <a href="gtkadjustment.html#GtkAdjustment::changed">changed</a>
+signals into one by calling <a href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-freeze-notify">g_object_freeze_notify</a> and
+<a href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-thaw-notify">g_object_thaw_notify</a> around the calls to the individual setters.</p>
+<p>Alternatively, using a single <a href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-set">g_object_set</a> for all the properties
+to change, or using <a href="hotdoc_markdown/gtkadjustment.html#gtk_adjustment_configure">gtk_adjustment_configure</a> has the same effect
+of compressing <a href="gtkadjustment.html#GtkAdjustment::changed">changed</a> emissions.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>adjustment</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">GtkAdjustment</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>lower</code></em></i>
+				–
+	</div>
+			<p>the new minimum value</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.14
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_adjustment_set_lower">
+	<span><code>Gtk.prototype.set_lower</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_lower(lower: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_adjustment_set_lower'
+}</pre>
+
+<p>Sets the minimum value of the adjustment.</p>
+<p>When setting multiple adjustment properties via their individual
+setters, multiple <a href="gtkadjustment.html#GtkAdjustment::changed">changed</a> signals will be emitted.
+However, since the emission of the <a href="gtkadjustment.html#GtkAdjustment::changed">changed</a> signal
+is tied to the emission of the <a href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-notify">notify</a> signals of the changed
+properties, it’s possible to compress the <a href="gtkadjustment.html#GtkAdjustment::changed">changed</a>
+signals into one by calling <a href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-freeze-notify">GObject.prototype.freeze_notify</a> and
+<a href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-thaw-notify">GObject.prototype.thaw_notify</a> around the calls to the individual setters.</p>
+<p>Alternatively, using a single <a href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-set">g_object_set (not introspectable)</a> for all the properties
+to change, or using <a href="hotdoc_markdown/gtkadjustment.html#gtk_adjustment_configure">Gtk.prototype.configure</a> has the same effect
+of compressing <a href="gtkadjustment.html#GtkAdjustment::changed">changed</a> emissions.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>adjustment</code></em></i>
+					(
+						<a title="Gtk.Adjustment" href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>lower</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the new minimum value</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.14
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_adjustment_set_lower">
+	<span><code>Gtk.Adjustment.set_lower</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Adjustment.set_lower (self, lower):
+    #python wrapper for 'gtk_adjustment_set_lower'</pre>
+
+<p>Sets the minimum value of the adjustment.</p>
+<p>When setting multiple adjustment properties via their individual
+setters, multiple <a href="gtkadjustment.html#GtkAdjustment::changed">changed</a> signals will be emitted.
+However, since the emission of the <a href="gtkadjustment.html#GtkAdjustment::changed">changed</a> signal
+is tied to the emission of the <a href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-notify">notify</a> signals of the changed
+properties, it’s possible to compress the <a href="gtkadjustment.html#GtkAdjustment::changed">changed</a>
+signals into one by calling <a href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-freeze-notify">GObject.Object.freeze_notify</a> and
+<a href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-thaw-notify">GObject.Object.thaw_notify</a> around the calls to the individual setters.</p>
+<p>Alternatively, using a single <a href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-set">g_object_set (not introspectable)</a> for all the properties
+to change, or using <a href="hotdoc_markdown/gtkadjustment.html#gtk_adjustment_configure">Gtk.Adjustment.configure</a> has the same effect
+of compressing <a href="gtkadjustment.html#GtkAdjustment::changed">changed</a> emissions.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>adjustment</code></em></i>
+					(
+						<a title="Gtk.Adjustment" href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>lower</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>the new minimum value</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.14
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.14;" id="gtk_adjustment_set_page_increment">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_adjustment_set_page_increment">
+	<span><code>gtk_adjustment_set_page_increment</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_adjustment_set_page_increment (<a title="GtkAdjustment" href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">GtkAdjustment</a> * adjustment,
+                                   <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> page_increment)</pre>
+
+<p>Sets the page increment of the adjustment.</p>
+<p>See <a href="hotdoc_markdown/gtkadjustment.html#gtk_adjustment_set_lower">gtk_adjustment_set_lower</a> about how to compress multiple
+emissions of the <a href="gtkadjustment.html#GtkAdjustment::changed">changed</a> signal when setting
+multiple adjustment properties.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>adjustment</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">GtkAdjustment</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>page_increment</code></em></i>
+				–
+	</div>
+			<p>the new page increment</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.14
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_adjustment_set_page_increment">
+	<span><code>Gtk.prototype.set_page_increment</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_page_increment(page_increment: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_adjustment_set_page_increment'
+}</pre>
+
+<p>Sets the page increment of the adjustment.</p>
+<p>See <a href="hotdoc_markdown/gtkadjustment.html#gtk_adjustment_set_lower">Gtk.prototype.set_lower</a> about how to compress multiple
+emissions of the <a href="gtkadjustment.html#GtkAdjustment::changed">changed</a> signal when setting
+multiple adjustment properties.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>adjustment</code></em></i>
+					(
+						<a title="Gtk.Adjustment" href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>page_increment</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the new page increment</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.14
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_adjustment_set_page_increment">
+	<span><code>Gtk.Adjustment.set_page_increment</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Adjustment.set_page_increment (self, page_increment):
+    #python wrapper for 'gtk_adjustment_set_page_increment'</pre>
+
+<p>Sets the page increment of the adjustment.</p>
+<p>See <a href="hotdoc_markdown/gtkadjustment.html#gtk_adjustment_set_lower">Gtk.Adjustment.set_lower</a> about how to compress multiple
+emissions of the <a href="gtkadjustment.html#GtkAdjustment::changed">changed</a> signal when setting
+multiple adjustment properties.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>adjustment</code></em></i>
+					(
+						<a title="Gtk.Adjustment" href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>page_increment</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>the new page increment</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.14
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.14;" id="gtk_adjustment_set_page_size">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_adjustment_set_page_size">
+	<span><code>gtk_adjustment_set_page_size</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_adjustment_set_page_size (<a title="GtkAdjustment" href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">GtkAdjustment</a> * adjustment,
+                              <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> page_size)</pre>
+
+<p>Sets the page size of the adjustment.</p>
+<p>See <a href="hotdoc_markdown/gtkadjustment.html#gtk_adjustment_set_lower">gtk_adjustment_set_lower</a> about how to compress multiple
+emissions of the GtkAdjustment::changed signal when setting
+multiple adjustment properties.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>adjustment</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">GtkAdjustment</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>page_size</code></em></i>
+				–
+	</div>
+			<p>the new page size</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.14
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_adjustment_set_page_size">
+	<span><code>Gtk.prototype.set_page_size</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_page_size(page_size: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_adjustment_set_page_size'
+}</pre>
+
+<p>Sets the page size of the adjustment.</p>
+<p>See <a href="hotdoc_markdown/gtkadjustment.html#gtk_adjustment_set_lower">Gtk.prototype.set_lower</a> about how to compress multiple
+emissions of the GtkAdjustment::changed signal when setting
+multiple adjustment properties.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>adjustment</code></em></i>
+					(
+						<a title="Gtk.Adjustment" href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>page_size</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the new page size</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.14
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_adjustment_set_page_size">
+	<span><code>Gtk.Adjustment.set_page_size</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Adjustment.set_page_size (self, page_size):
+    #python wrapper for 'gtk_adjustment_set_page_size'</pre>
+
+<p>Sets the page size of the adjustment.</p>
+<p>See <a href="hotdoc_markdown/gtkadjustment.html#gtk_adjustment_set_lower">Gtk.Adjustment.set_lower</a> about how to compress multiple
+emissions of the GtkAdjustment::changed signal when setting
+multiple adjustment properties.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>adjustment</code></em></i>
+					(
+						<a title="Gtk.Adjustment" href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>page_size</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>the new page size</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.14
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.14;" id="gtk_adjustment_set_step_increment">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_adjustment_set_step_increment">
+	<span><code>gtk_adjustment_set_step_increment</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_adjustment_set_step_increment (<a title="GtkAdjustment" href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">GtkAdjustment</a> * adjustment,
+                                   <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> step_increment)</pre>
+
+<p>Sets the step increment of the adjustment.</p>
+<p>See <a href="hotdoc_markdown/gtkadjustment.html#gtk_adjustment_set_lower">gtk_adjustment_set_lower</a> about how to compress multiple
+emissions of the <a href="gtkadjustment.html#GtkAdjustment::changed">changed</a> signal when setting
+multiple adjustment properties.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>adjustment</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">GtkAdjustment</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>step_increment</code></em></i>
+				–
+	</div>
+			<p>the new step increment</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.14
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_adjustment_set_step_increment">
+	<span><code>Gtk.prototype.set_step_increment</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_step_increment(step_increment: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_adjustment_set_step_increment'
+}</pre>
+
+<p>Sets the step increment of the adjustment.</p>
+<p>See <a href="hotdoc_markdown/gtkadjustment.html#gtk_adjustment_set_lower">Gtk.prototype.set_lower</a> about how to compress multiple
+emissions of the <a href="gtkadjustment.html#GtkAdjustment::changed">changed</a> signal when setting
+multiple adjustment properties.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>adjustment</code></em></i>
+					(
+						<a title="Gtk.Adjustment" href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>step_increment</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the new step increment</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.14
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_adjustment_set_step_increment">
+	<span><code>Gtk.Adjustment.set_step_increment</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Adjustment.set_step_increment (self, step_increment):
+    #python wrapper for 'gtk_adjustment_set_step_increment'</pre>
+
+<p>Sets the step increment of the adjustment.</p>
+<p>See <a href="hotdoc_markdown/gtkadjustment.html#gtk_adjustment_set_lower">Gtk.Adjustment.set_lower</a> about how to compress multiple
+emissions of the <a href="gtkadjustment.html#GtkAdjustment::changed">changed</a> signal when setting
+multiple adjustment properties.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>adjustment</code></em></i>
+					(
+						<a title="Gtk.Adjustment" href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>step_increment</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>the new step increment</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.14
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.14;" id="gtk_adjustment_set_upper">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_adjustment_set_upper">
+	<span><code>gtk_adjustment_set_upper</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_adjustment_set_upper (<a title="GtkAdjustment" href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">GtkAdjustment</a> * adjustment,
+                          <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> upper)</pre>
+
+<p>Sets the maximum value of the adjustment.</p>
+<p>Note that values will be restricted by <code>upper - page-size</code>
+if the page-size property is nonzero.</p>
+<p>See <a href="hotdoc_markdown/gtkadjustment.html#gtk_adjustment_set_lower">gtk_adjustment_set_lower</a> about how to compress multiple
+emissions of the <a href="gtkadjustment.html#GtkAdjustment::changed">changed</a> signal when setting
+multiple adjustment properties.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>adjustment</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">GtkAdjustment</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>upper</code></em></i>
+				–
+	</div>
+			<p>the new maximum value</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.14
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_adjustment_set_upper">
+	<span><code>Gtk.prototype.set_upper</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_upper(upper: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_adjustment_set_upper'
+}</pre>
+
+<p>Sets the maximum value of the adjustment.</p>
+<p>Note that values will be restricted by <code>upper - page-size</code>
+if the page-size property is nonzero.</p>
+<p>See <a href="hotdoc_markdown/gtkadjustment.html#gtk_adjustment_set_lower">Gtk.prototype.set_lower</a> about how to compress multiple
+emissions of the <a href="gtkadjustment.html#GtkAdjustment::changed">changed</a> signal when setting
+multiple adjustment properties.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>adjustment</code></em></i>
+					(
+						<a title="Gtk.Adjustment" href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>upper</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the new maximum value</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.14
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_adjustment_set_upper">
+	<span><code>Gtk.Adjustment.set_upper</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Adjustment.set_upper (self, upper):
+    #python wrapper for 'gtk_adjustment_set_upper'</pre>
+
+<p>Sets the maximum value of the adjustment.</p>
+<p>Note that values will be restricted by <code>upper - page-size</code>
+if the page-size property is nonzero.</p>
+<p>See <a href="hotdoc_markdown/gtkadjustment.html#gtk_adjustment_set_lower">Gtk.Adjustment.set_lower</a> about how to compress multiple
+emissions of the <a href="gtkadjustment.html#GtkAdjustment::changed">changed</a> signal when setting
+multiple adjustment properties.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>adjustment</code></em></i>
+					(
+						<a title="Gtk.Adjustment" href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>upper</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>the new maximum value</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.14
+		</p>
+
+
+        </div>
+
+</div>
+
+
+
+
+
+
+		
+	</div>
+	<div id="search_results">
+		<p>The results of the search are</p>
+	</div>
+	<hr>
+	<div id="footer">
+		    
+
+	</div>
+</div>
+
+<div id="toc-column">
+	
+		<div class="edit-button">
+		
+
+	</div>
+		<div id="toc-wrapper">
+		<nav id="toc"></nav>
+	</div>
+</div>
+</div>
+</main>
+
+</body>
+
+<script src="assets/js/navbar_offset_scroller.js"></script>
+</html>

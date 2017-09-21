@@ -1,0 +1,5412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<base href=".">
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>gtkrender</title>
+
+<link rel="stylesheet" href="assets/css/custom_bootstrap.css" type="text/css">
+<link rel="stylesheet" href="assets/css/bootstrap-toc.min.css" type="text/css">
+<link rel="stylesheet" href="assets/css/frontend.css" type="text/css">
+<link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
+
+<link rel="stylesheet" href="assets/css/prism.css" type="text/css">
+
+<script src="assets/js/mustache.min.js"></script>
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/scrollspy.js"></script>
+<script src="assets/js/bootstrap.js"></script>
+<script src="assets/js/typeahead.jquery.min.js"></script>
+<script src="assets/js/search.js"></script>
+<script src="assets/js/isotope.pkgd.min.js"></script>
+<script src="assets/js/compare-versions.js"></script>
+<script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="assets/js/bootstrap-toc.min.js"></script>
+<script src="assets/js/jquery.touchSwipe.min.js"></script>
+<script src="assets/js/anchor.min.js"></script>
+<script src="assets/js/tag_filtering.js"></script>
+<script src="assets/js/language_switching.js"></script>
+
+<script src="assets/js/lines_around_headings.js"></script>
+
+<script src="assets/js/prism-core.js"></script>
+<script src="assets/js/prism-autoloader.js"></script>
+<script src="assets/js/prism_autoloader_path_override.js"></script>
+<script src="assets/js/trie.js"></script>
+
+
+</head>
+
+<body class="no-script
+" data-spy="scroll" data-target="#toc" data-offset="70">
+
+<script>
+$('body').removeClass('no-script');
+</script>
+
+<nav class="navbar navbar-fixed-top navbar-default" id="topnav">
+	<div class="container-fluid">
+		<div class="navbar-right">
+			<a id="toc-toggle">
+				<span class="glyphicon glyphicon-menu-right"></span>
+				<span class="glyphicon glyphicon-menu-left"></span>
+			</a>
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-wrapper" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<form action="" class="navbar-form pull-right" id="navbar-search-form">
+                               <div class="form-group has-feedback">
+                                       <input type="text" class="form-control input-sm" name="search" id="sidenav-lookup-field" placeholder="search" disabled>
+				       <span class="glyphicon glyphicon-search form-control-feedback" id="search-mgn-glass"></span>
+                               </div>
+                        </form>
+		</div>
+		<div class="navbar-header">
+			<a id="sidenav-toggle">
+				<span class="glyphicon glyphicon-menu-right"></span>
+				<span class="glyphicon glyphicon-menu-left"></span>
+			</a>
+			<a id="home-link" href="index.html" class="hotdoc-navbar-brand">
+				<img src="assets/images/home.svg" alt="Home">
+			</a>
+		</div>
+		<div class="navbar-collapse collapse" id="navbar-wrapper">
+			<ul class="nav navbar-nav" id="menu">
+							</ul>
+			<div class="hidden-xs hidden-sm navbar-text navbar-center">
+							</div>
+		</div>
+	</div>
+</nav>
+
+<main>
+<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="gtkrender.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['c', 'javascript', 'python']" data-hotdoc-meta-gi-language="c">
+<script src="assets/js/utils.js"></script>
+
+<div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
+	<script src="assets/js/navigation.js"></script>
+	<script src="assets/js/sitemap.js"></script>
+</div>
+
+<div id="body">
+	<div id="main">
+				    <div id="page-description" data-hotdoc-source="gtkrender.h" data-hotdoc-role="main">
+    </div>
+        
+        
+
+            <h2 class="symbol_section">Functions</h2>
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_render_activity">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_render_activity">
+	<span><code>gtk_render_activity</code></span>
+</h3>
+
+
+
+
+<pre class="c-prototype">
+gtk_render_activity (<a title="GtkStyleContext" href="gtkstylecontext.html#GtkStyleContext">GtkStyleContext</a> * context,
+                     <a title="cairo_t" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo_t</a> * cr,
+                     <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> x,
+                     <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> y,
+                     <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> width,
+                     <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> height)</pre>
+
+<p>Renders an activity indicator (such as in <a href="gtkspinner.html#GtkSpinner">GtkSpinner</a>).
+The state <a href="gtkenums.html#GTK_STATE_FLAG_CHECKED">GTK_STATE_FLAG_CHECKED</a> determines whether there is
+activity going on.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkstylecontext.html#GtkStyleContext">GtkStyleContext</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cr</code></em></i>
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo_t</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>x</code></em></i>
+				–
+	</div>
+			<p>X origin of the rectangle</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>y</code></em></i>
+				–
+	</div>
+			<p>Y origin of the rectangle</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>width</code></em></i>
+				–
+	</div>
+			<p>rectangle width</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>height</code></em></i>
+				–
+	</div>
+			<p>rectangle height</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_render_activity">
+	<span><code>prototype.render_activity</code></span>
+</h3>
+
+
+<pre class="javascript-prototype">
+function prototype.render_activity(context: <a title="Gtk.StyleContext" href="gtkstylecontext.html#GtkStyleContext">Gtk.StyleContext</a>, cr: <a title="cairo.Context" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a>, x: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, y: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, width: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, height: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_render_activity'
+}</pre>
+
+<p>Renders an activity indicator (such as in <a href="gtkspinner.html#GtkSpinner">Gtk.Spinner</a>).
+The state <a href="gtkenums.html#GTK_STATE_FLAG_CHECKED">Gtk.StateFlags.CHECKED</a> determines whether there is
+activity going on.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+					(
+						<a title="Gtk.StyleContext" href="gtkstylecontext.html#GtkStyleContext">Gtk.StyleContext</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkstylecontext.html#GtkStyleContext">Gtk.StyleContext</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cr</code></em></i>
+					(
+						<a title="cairo.Context" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a>
+						)
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>x</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>X origin of the rectangle</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>y</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>Y origin of the rectangle</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>width</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>rectangle width</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>height</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>rectangle height</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_render_activity">
+	<span><code>Gtk.render_activity</code></span>
+</h3>
+
+
+<pre class="python-prototype">
+def Gtk.render_activity (context, cr, x, y, width, height):
+    #python wrapper for 'gtk_render_activity'</pre>
+
+<p>Renders an activity indicator (such as in <a href="gtkspinner.html#GtkSpinner">Gtk.Spinner</a>).
+The state <a href="gtkenums.html#GTK_STATE_FLAG_CHECKED">Gtk.StateFlags.CHECKED</a> determines whether there is
+activity going on.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+					(
+						<a title="Gtk.StyleContext" href="gtkstylecontext.html#GtkStyleContext">Gtk.StyleContext</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkstylecontext.html#GtkStyleContext">Gtk.StyleContext</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cr</code></em></i>
+					(
+						<a title="cairo.Context" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a>
+						)
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>x</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>X origin of the rectangle</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>y</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>Y origin of the rectangle</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>width</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>rectangle width</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>height</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>rectangle height</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_render_arrow">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_render_arrow">
+	<span><code>gtk_render_arrow</code></span>
+</h3>
+
+
+
+
+<pre class="c-prototype">
+gtk_render_arrow (<a title="GtkStyleContext" href="gtkstylecontext.html#GtkStyleContext">GtkStyleContext</a> * context,
+                  <a title="cairo_t" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo_t</a> * cr,
+                  <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> angle,
+                  <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> x,
+                  <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> y,
+                  <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> size)</pre>
+
+<p>Renders an arrow pointing to <em>angle</em>.</p>
+<p>Typical arrow rendering at 0, 1⁄2 π;, π; and 3⁄2 π:</p>
+<p><img src="arrows.png" alt=""></p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkstylecontext.html#GtkStyleContext">GtkStyleContext</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cr</code></em></i>
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo_t</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>angle</code></em></i>
+				–
+	</div>
+			<p>arrow angle from 0 to 2 * <a href="https://developer.gnome.org/glib/unstable/glib-Numerical-Definitions.html#G-PI:CAPS">G_PI</a>, being 0 the arrow pointing to the north</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>x</code></em></i>
+				–
+	</div>
+			<p>X origin of the render area</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>y</code></em></i>
+				–
+	</div>
+			<p>Y origin of the render area</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>size</code></em></i>
+				–
+	</div>
+			<p>square side for render area</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_render_arrow">
+	<span><code>prototype.render_arrow</code></span>
+</h3>
+
+
+<pre class="javascript-prototype">
+function prototype.render_arrow(context: <a title="Gtk.StyleContext" href="gtkstylecontext.html#GtkStyleContext">Gtk.StyleContext</a>, cr: <a title="cairo.Context" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a>, angle: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, x: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, y: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, size: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_render_arrow'
+}</pre>
+
+<p>Renders an arrow pointing to <em>angle</em>.</p>
+<p>Typical arrow rendering at 0, 1⁄2 π;, π; and 3⁄2 π:</p>
+<p><img src="arrows.png" alt=""></p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+					(
+						<a title="Gtk.StyleContext" href="gtkstylecontext.html#GtkStyleContext">Gtk.StyleContext</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkstylecontext.html#GtkStyleContext">Gtk.StyleContext</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cr</code></em></i>
+					(
+						<a title="cairo.Context" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a>
+						)
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>angle</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>arrow angle from 0 to 2 * <a href="https://developer.gnome.org/glib/unstable/glib-Numerical-Definitions.html#G-PI:CAPS">GLib.PI</a>, being 0 the arrow pointing to the north</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>x</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>X origin of the render area</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>y</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>Y origin of the render area</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>size</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>square side for render area</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_render_arrow">
+	<span><code>Gtk.render_arrow</code></span>
+</h3>
+
+
+<pre class="python-prototype">
+def Gtk.render_arrow (context, cr, angle, x, y, size):
+    #python wrapper for 'gtk_render_arrow'</pre>
+
+<p>Renders an arrow pointing to <em>angle</em>.</p>
+<p>Typical arrow rendering at 0, 1⁄2 π;, π; and 3⁄2 π:</p>
+<p><img src="arrows.png" alt=""></p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+					(
+						<a title="Gtk.StyleContext" href="gtkstylecontext.html#GtkStyleContext">Gtk.StyleContext</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkstylecontext.html#GtkStyleContext">Gtk.StyleContext</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cr</code></em></i>
+					(
+						<a title="cairo.Context" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a>
+						)
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>angle</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>arrow angle from 0 to 2 * <a href="https://developer.gnome.org/glib/unstable/glib-Numerical-Definitions.html#G-PI:CAPS">GLib.PI</a>, being 0 the arrow pointing to the north</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>x</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>X origin of the render area</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>y</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>Y origin of the render area</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>size</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>square side for render area</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.0.;" id="gtk_render_background">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_render_background">
+	<span><code>gtk_render_background</code></span>
+</h3>
+
+
+
+
+<pre class="c-prototype">
+gtk_render_background (<a title="GtkStyleContext" href="gtkstylecontext.html#GtkStyleContext">GtkStyleContext</a> * context,
+                       <a title="cairo_t" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo_t</a> * cr,
+                       <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> x,
+                       <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> y,
+                       <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> width,
+                       <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> height)</pre>
+
+<p>Renders the background of an element.</p>
+<p>Typical background rendering, showing the effect of
+<code>background-image</code>, <code>border-width</code> and <code>border-radius</code>:</p>
+<p><img src="background.png" alt=""></p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkstylecontext.html#GtkStyleContext">GtkStyleContext</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cr</code></em></i>
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo_t</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>x</code></em></i>
+				–
+	</div>
+			<p>X origin of the rectangle</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>y</code></em></i>
+				–
+	</div>
+			<p>Y origin of the rectangle</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>width</code></em></i>
+				–
+	</div>
+			<p>rectangle width</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>height</code></em></i>
+				–
+	</div>
+			<p>rectangle height</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0.
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_render_background">
+	<span><code>prototype.render_background</code></span>
+</h3>
+
+
+<pre class="javascript-prototype">
+function prototype.render_background(context: <a title="Gtk.StyleContext" href="gtkstylecontext.html#GtkStyleContext">Gtk.StyleContext</a>, cr: <a title="cairo.Context" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a>, x: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, y: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, width: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, height: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_render_background'
+}</pre>
+
+<p>Renders the background of an element.</p>
+<p>Typical background rendering, showing the effect of
+<code>background-image</code>, <code>border-width</code> and <code>border-radius</code>:</p>
+<p><img src="background.png" alt=""></p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+					(
+						<a title="Gtk.StyleContext" href="gtkstylecontext.html#GtkStyleContext">Gtk.StyleContext</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkstylecontext.html#GtkStyleContext">Gtk.StyleContext</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cr</code></em></i>
+					(
+						<a title="cairo.Context" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a>
+						)
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>x</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>X origin of the rectangle</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>y</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>Y origin of the rectangle</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>width</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>rectangle width</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>height</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>rectangle height</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0.
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_render_background">
+	<span><code>Gtk.render_background</code></span>
+</h3>
+
+
+<pre class="python-prototype">
+def Gtk.render_background (context, cr, x, y, width, height):
+    #python wrapper for 'gtk_render_background'</pre>
+
+<p>Renders the background of an element.</p>
+<p>Typical background rendering, showing the effect of
+<code>background-image</code>, <code>border-width</code> and <code>border-radius</code>:</p>
+<p><img src="background.png" alt=""></p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+					(
+						<a title="Gtk.StyleContext" href="gtkstylecontext.html#GtkStyleContext">Gtk.StyleContext</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkstylecontext.html#GtkStyleContext">Gtk.StyleContext</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cr</code></em></i>
+					(
+						<a title="cairo.Context" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a>
+						)
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>x</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>X origin of the rectangle</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>y</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>Y origin of the rectangle</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>width</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>rectangle width</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>height</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>rectangle height</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0.
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.20;" id="gtk_render_background_get_clip">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_render_background_get_clip">
+	<span><code>gtk_render_background_get_clip</code></span>
+</h3>
+
+
+
+
+<pre class="c-prototype">
+gtk_render_background_get_clip (<a title="GtkStyleContext" href="gtkstylecontext.html#GtkStyleContext">GtkStyleContext</a> * context,
+                                <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> x,
+                                <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> y,
+                                <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> width,
+                                <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> height,
+                                <a title="GdkRectangle" href="https://developer.gnome.org/gdk3/gdk3-Points-Rectangles-and-Regions.html#GdkRectangle">GdkRectangle</a> * out_clip)</pre>
+
+<p>Returns the area that will be affected (i.e. drawn to) when
+calling <a href="gtkrender.html#gtk_render_background">gtk_render_background</a> for the given <em>context</em> and
+rectangle.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkstylecontext.html#GtkStyleContext">GtkStyleContext</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>x</code></em></i>
+				–
+	</div>
+			<p>X origin of the rectangle</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>y</code></em></i>
+				–
+	</div>
+			<p>Y origin of the rectangle</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>width</code></em></i>
+				–
+	</div>
+			<p>rectangle width</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>height</code></em></i>
+				–
+	</div>
+			<p>rectangle height</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>out_clip</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="Parameter for returning results"><span class="acronym">out</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>return location for the clip</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.20
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_render_background_get_clip">
+	<span><code>prototype.render_background_get_clip</code></span>
+</h3>
+
+
+<pre class="javascript-prototype">
+function prototype.render_background_get_clip(context: <a title="Gtk.StyleContext" href="gtkstylecontext.html#GtkStyleContext">Gtk.StyleContext</a>, x: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, y: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, width: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, height: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_render_background_get_clip'
+}</pre>
+
+<p>Returns the area that will be affected (i.e. drawn to) when
+calling <a href="gtkrender.html#gtk_render_background">prototype.render_background</a> for the given <em>context</em> and
+rectangle.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+					(
+						<a title="Gtk.StyleContext" href="gtkstylecontext.html#GtkStyleContext">Gtk.StyleContext</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkstylecontext.html#GtkStyleContext">Gtk.StyleContext</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>x</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>X origin of the rectangle</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>y</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>Y origin of the rectangle</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>width</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>rectangle width</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>height</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>rectangle height</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.20
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_render_background_get_clip">
+	<span><code>Gtk.render_background_get_clip</code></span>
+</h3>
+
+
+<pre class="python-prototype">
+def Gtk.render_background_get_clip (context, x, y, width, height):
+    #python wrapper for 'gtk_render_background_get_clip'</pre>
+
+<p>Returns the area that will be affected (i.e. drawn to) when
+calling <a href="gtkrender.html#gtk_render_background">Gtk.render_background</a> for the given <em>context</em> and
+rectangle.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+					(
+						<a title="Gtk.StyleContext" href="gtkstylecontext.html#GtkStyleContext">Gtk.StyleContext</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkstylecontext.html#GtkStyleContext">Gtk.StyleContext</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>x</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>X origin of the rectangle</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>y</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>Y origin of the rectangle</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>width</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>rectangle width</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>height</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>rectangle height</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.20
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_render_check">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_render_check">
+	<span><code>gtk_render_check</code></span>
+</h3>
+
+
+
+
+<pre class="c-prototype">
+gtk_render_check (<a title="GtkStyleContext" href="gtkstylecontext.html#GtkStyleContext">GtkStyleContext</a> * context,
+                  <a title="cairo_t" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo_t</a> * cr,
+                  <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> x,
+                  <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> y,
+                  <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> width,
+                  <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> height)</pre>
+
+<p>Renders a checkmark (as in a <a href="gtkcheckbutton.html#GtkCheckButton">GtkCheckButton</a>).</p>
+<p>The <a href="gtkenums.html#GTK_STATE_FLAG_CHECKED">GTK_STATE_FLAG_CHECKED</a> state determines whether the check is
+on or off, and <a href="gtkenums.html#GTK_STATE_FLAG_INCONSISTENT">GTK_STATE_FLAG_INCONSISTENT</a> determines whether it
+should be marked as undefined.</p>
+<p>Typical checkmark rendering:</p>
+<p><img src="checks.png" alt=""></p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkstylecontext.html#GtkStyleContext">GtkStyleContext</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cr</code></em></i>
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo_t</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>x</code></em></i>
+				–
+	</div>
+			<p>X origin of the rectangle</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>y</code></em></i>
+				–
+	</div>
+			<p>Y origin of the rectangle</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>width</code></em></i>
+				–
+	</div>
+			<p>rectangle width</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>height</code></em></i>
+				–
+	</div>
+			<p>rectangle height</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_render_check">
+	<span><code>prototype.render_check</code></span>
+</h3>
+
+
+<pre class="javascript-prototype">
+function prototype.render_check(context: <a title="Gtk.StyleContext" href="gtkstylecontext.html#GtkStyleContext">Gtk.StyleContext</a>, cr: <a title="cairo.Context" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a>, x: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, y: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, width: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, height: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_render_check'
+}</pre>
+
+<p>Renders a checkmark (as in a <a href="gtkcheckbutton.html#GtkCheckButton">Gtk.CheckButton</a>).</p>
+<p>The <a href="gtkenums.html#GTK_STATE_FLAG_CHECKED">Gtk.StateFlags.CHECKED</a> state determines whether the check is
+on or off, and <a href="gtkenums.html#GTK_STATE_FLAG_INCONSISTENT">Gtk.StateFlags.INCONSISTENT</a> determines whether it
+should be marked as undefined.</p>
+<p>Typical checkmark rendering:</p>
+<p><img src="checks.png" alt=""></p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+					(
+						<a title="Gtk.StyleContext" href="gtkstylecontext.html#GtkStyleContext">Gtk.StyleContext</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkstylecontext.html#GtkStyleContext">Gtk.StyleContext</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cr</code></em></i>
+					(
+						<a title="cairo.Context" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a>
+						)
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>x</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>X origin of the rectangle</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>y</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>Y origin of the rectangle</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>width</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>rectangle width</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>height</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>rectangle height</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_render_check">
+	<span><code>Gtk.render_check</code></span>
+</h3>
+
+
+<pre class="python-prototype">
+def Gtk.render_check (context, cr, x, y, width, height):
+    #python wrapper for 'gtk_render_check'</pre>
+
+<p>Renders a checkmark (as in a <a href="gtkcheckbutton.html#GtkCheckButton">Gtk.CheckButton</a>).</p>
+<p>The <a href="gtkenums.html#GTK_STATE_FLAG_CHECKED">Gtk.StateFlags.CHECKED</a> state determines whether the check is
+on or off, and <a href="gtkenums.html#GTK_STATE_FLAG_INCONSISTENT">Gtk.StateFlags.INCONSISTENT</a> determines whether it
+should be marked as undefined.</p>
+<p>Typical checkmark rendering:</p>
+<p><img src="checks.png" alt=""></p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+					(
+						<a title="Gtk.StyleContext" href="gtkstylecontext.html#GtkStyleContext">Gtk.StyleContext</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkstylecontext.html#GtkStyleContext">Gtk.StyleContext</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cr</code></em></i>
+					(
+						<a title="cairo.Context" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a>
+						)
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>x</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>X origin of the rectangle</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>y</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>Y origin of the rectangle</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>width</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>rectangle width</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>height</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>rectangle height</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_render_expander">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_render_expander">
+	<span><code>gtk_render_expander</code></span>
+</h3>
+
+
+
+
+<pre class="c-prototype">
+gtk_render_expander (<a title="GtkStyleContext" href="gtkstylecontext.html#GtkStyleContext">GtkStyleContext</a> * context,
+                     <a title="cairo_t" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo_t</a> * cr,
+                     <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> x,
+                     <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> y,
+                     <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> width,
+                     <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> height)</pre>
+
+<p>Renders an expander (as used in <a href="gtktreeview.html#GtkTreeView">GtkTreeView</a> and <a href="gtkexpander.html#GtkExpander">GtkExpander</a>) in the area
+defined by <em>x</em>, <em>y</em>, <em>width</em>, <em>height</em>. The state <a href="gtkenums.html#GTK_STATE_FLAG_CHECKED">GTK_STATE_FLAG_CHECKED</a>
+determines whether the expander is collapsed or expanded.</p>
+<p>Typical expander rendering:</p>
+<p><img src="expanders.png" alt=""></p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkstylecontext.html#GtkStyleContext">GtkStyleContext</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cr</code></em></i>
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo_t</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>x</code></em></i>
+				–
+	</div>
+			<p>X origin of the rectangle</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>y</code></em></i>
+				–
+	</div>
+			<p>Y origin of the rectangle</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>width</code></em></i>
+				–
+	</div>
+			<p>rectangle width</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>height</code></em></i>
+				–
+	</div>
+			<p>rectangle height</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_render_expander">
+	<span><code>prototype.render_expander</code></span>
+</h3>
+
+
+<pre class="javascript-prototype">
+function prototype.render_expander(context: <a title="Gtk.StyleContext" href="gtkstylecontext.html#GtkStyleContext">Gtk.StyleContext</a>, cr: <a title="cairo.Context" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a>, x: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, y: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, width: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, height: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_render_expander'
+}</pre>
+
+<p>Renders an expander (as used in <a href="gtktreeview.html#GtkTreeView">Gtk.TreeView</a> and <a href="gtkexpander.html#GtkExpander">Gtk.Expander</a>) in the area
+defined by <em>x</em>, <em>y</em>, <em>width</em>, <em>height</em>. The state <a href="gtkenums.html#GTK_STATE_FLAG_CHECKED">Gtk.StateFlags.CHECKED</a>
+determines whether the expander is collapsed or expanded.</p>
+<p>Typical expander rendering:</p>
+<p><img src="expanders.png" alt=""></p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+					(
+						<a title="Gtk.StyleContext" href="gtkstylecontext.html#GtkStyleContext">Gtk.StyleContext</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkstylecontext.html#GtkStyleContext">Gtk.StyleContext</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cr</code></em></i>
+					(
+						<a title="cairo.Context" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a>
+						)
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>x</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>X origin of the rectangle</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>y</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>Y origin of the rectangle</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>width</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>rectangle width</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>height</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>rectangle height</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_render_expander">
+	<span><code>Gtk.render_expander</code></span>
+</h3>
+
+
+<pre class="python-prototype">
+def Gtk.render_expander (context, cr, x, y, width, height):
+    #python wrapper for 'gtk_render_expander'</pre>
+
+<p>Renders an expander (as used in <a href="gtktreeview.html#GtkTreeView">Gtk.TreeView</a> and <a href="gtkexpander.html#GtkExpander">Gtk.Expander</a>) in the area
+defined by <em>x</em>, <em>y</em>, <em>width</em>, <em>height</em>. The state <a href="gtkenums.html#GTK_STATE_FLAG_CHECKED">Gtk.StateFlags.CHECKED</a>
+determines whether the expander is collapsed or expanded.</p>
+<p>Typical expander rendering:</p>
+<p><img src="expanders.png" alt=""></p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+					(
+						<a title="Gtk.StyleContext" href="gtkstylecontext.html#GtkStyleContext">Gtk.StyleContext</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkstylecontext.html#GtkStyleContext">Gtk.StyleContext</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cr</code></em></i>
+					(
+						<a title="cairo.Context" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a>
+						)
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>x</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>X origin of the rectangle</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>y</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>Y origin of the rectangle</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>width</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>rectangle width</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>height</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>rectangle height</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_render_focus">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_render_focus">
+	<span><code>gtk_render_focus</code></span>
+</h3>
+
+
+
+
+<pre class="c-prototype">
+gtk_render_focus (<a title="GtkStyleContext" href="gtkstylecontext.html#GtkStyleContext">GtkStyleContext</a> * context,
+                  <a title="cairo_t" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo_t</a> * cr,
+                  <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> x,
+                  <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> y,
+                  <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> width,
+                  <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> height)</pre>
+
+<p>Renders a focus indicator on the rectangle determined by <em>x</em>, <em>y</em>, <em>width</em>, <em>height</em>.</p>
+<p>Typical focus rendering:</p>
+<p><img src="focus.png" alt=""></p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkstylecontext.html#GtkStyleContext">GtkStyleContext</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cr</code></em></i>
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo_t</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>x</code></em></i>
+				–
+	</div>
+			<p>X origin of the rectangle</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>y</code></em></i>
+				–
+	</div>
+			<p>Y origin of the rectangle</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>width</code></em></i>
+				–
+	</div>
+			<p>rectangle width</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>height</code></em></i>
+				–
+	</div>
+			<p>rectangle height</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_render_focus">
+	<span><code>prototype.render_focus</code></span>
+</h3>
+
+
+<pre class="javascript-prototype">
+function prototype.render_focus(context: <a title="Gtk.StyleContext" href="gtkstylecontext.html#GtkStyleContext">Gtk.StyleContext</a>, cr: <a title="cairo.Context" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a>, x: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, y: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, width: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, height: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_render_focus'
+}</pre>
+
+<p>Renders a focus indicator on the rectangle determined by <em>x</em>, <em>y</em>, <em>width</em>, <em>height</em>.</p>
+<p>Typical focus rendering:</p>
+<p><img src="focus.png" alt=""></p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+					(
+						<a title="Gtk.StyleContext" href="gtkstylecontext.html#GtkStyleContext">Gtk.StyleContext</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkstylecontext.html#GtkStyleContext">Gtk.StyleContext</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cr</code></em></i>
+					(
+						<a title="cairo.Context" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a>
+						)
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>x</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>X origin of the rectangle</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>y</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>Y origin of the rectangle</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>width</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>rectangle width</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>height</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>rectangle height</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_render_focus">
+	<span><code>Gtk.render_focus</code></span>
+</h3>
+
+
+<pre class="python-prototype">
+def Gtk.render_focus (context, cr, x, y, width, height):
+    #python wrapper for 'gtk_render_focus'</pre>
+
+<p>Renders a focus indicator on the rectangle determined by <em>x</em>, <em>y</em>, <em>width</em>, <em>height</em>.</p>
+<p>Typical focus rendering:</p>
+<p><img src="focus.png" alt=""></p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+					(
+						<a title="Gtk.StyleContext" href="gtkstylecontext.html#GtkStyleContext">Gtk.StyleContext</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkstylecontext.html#GtkStyleContext">Gtk.StyleContext</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cr</code></em></i>
+					(
+						<a title="cairo.Context" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a>
+						)
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>x</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>X origin of the rectangle</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>y</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>Y origin of the rectangle</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>width</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>rectangle width</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>height</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>rectangle height</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_render_frame">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_render_frame">
+	<span><code>gtk_render_frame</code></span>
+</h3>
+
+
+
+
+<pre class="c-prototype">
+gtk_render_frame (<a title="GtkStyleContext" href="gtkstylecontext.html#GtkStyleContext">GtkStyleContext</a> * context,
+                  <a title="cairo_t" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo_t</a> * cr,
+                  <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> x,
+                  <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> y,
+                  <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> width,
+                  <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> height)</pre>
+
+<p>Renders a frame around the rectangle defined by <em>x</em>, <em>y</em>, <em>width</em>, <em>height</em>.</p>
+<p>Examples of frame rendering, showing the effect of <code>border-image</code>,
+<code>border-color</code>, <code>border-width</code>, <code>border-radius</code> and junctions:</p>
+<p><img src="frames.png" alt=""></p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkstylecontext.html#GtkStyleContext">GtkStyleContext</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cr</code></em></i>
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo_t</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>x</code></em></i>
+				–
+	</div>
+			<p>X origin of the rectangle</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>y</code></em></i>
+				–
+	</div>
+			<p>Y origin of the rectangle</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>width</code></em></i>
+				–
+	</div>
+			<p>rectangle width</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>height</code></em></i>
+				–
+	</div>
+			<p>rectangle height</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_render_frame">
+	<span><code>prototype.render_frame</code></span>
+</h3>
+
+
+<pre class="javascript-prototype">
+function prototype.render_frame(context: <a title="Gtk.StyleContext" href="gtkstylecontext.html#GtkStyleContext">Gtk.StyleContext</a>, cr: <a title="cairo.Context" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a>, x: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, y: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, width: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, height: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_render_frame'
+}</pre>
+
+<p>Renders a frame around the rectangle defined by <em>x</em>, <em>y</em>, <em>width</em>, <em>height</em>.</p>
+<p>Examples of frame rendering, showing the effect of <code>border-image</code>,
+<code>border-color</code>, <code>border-width</code>, <code>border-radius</code> and junctions:</p>
+<p><img src="frames.png" alt=""></p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+					(
+						<a title="Gtk.StyleContext" href="gtkstylecontext.html#GtkStyleContext">Gtk.StyleContext</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkstylecontext.html#GtkStyleContext">Gtk.StyleContext</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cr</code></em></i>
+					(
+						<a title="cairo.Context" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a>
+						)
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>x</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>X origin of the rectangle</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>y</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>Y origin of the rectangle</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>width</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>rectangle width</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>height</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>rectangle height</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_render_frame">
+	<span><code>Gtk.render_frame</code></span>
+</h3>
+
+
+<pre class="python-prototype">
+def Gtk.render_frame (context, cr, x, y, width, height):
+    #python wrapper for 'gtk_render_frame'</pre>
+
+<p>Renders a frame around the rectangle defined by <em>x</em>, <em>y</em>, <em>width</em>, <em>height</em>.</p>
+<p>Examples of frame rendering, showing the effect of <code>border-image</code>,
+<code>border-color</code>, <code>border-width</code>, <code>border-radius</code> and junctions:</p>
+<p><img src="frames.png" alt=""></p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+					(
+						<a title="Gtk.StyleContext" href="gtkstylecontext.html#GtkStyleContext">Gtk.StyleContext</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkstylecontext.html#GtkStyleContext">Gtk.StyleContext</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cr</code></em></i>
+					(
+						<a title="cairo.Context" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a>
+						)
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>x</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>X origin of the rectangle</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>y</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>Y origin of the rectangle</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>width</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>rectangle width</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>height</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>rectangle height</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_render_frame_gap">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_render_frame_gap">
+	<span><code>gtk_render_frame_gap</code></span>
+</h3>
+
+
+
+
+<pre class="c-prototype">
+gtk_render_frame_gap (<a title="GtkStyleContext" href="gtkstylecontext.html#GtkStyleContext">GtkStyleContext</a> * context,
+                      <a title="cairo_t" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo_t</a> * cr,
+                      <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> x,
+                      <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> y,
+                      <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> width,
+                      <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> height,
+                      <a title="GtkPositionType" href="gtkenums.html#GtkPositionType">GtkPositionType</a> gap_side,
+                      <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> xy0_gap,
+                      <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> xy1_gap)</pre>
+
+<p>Renders a frame around the rectangle defined by (@x, <em>y</em>, <em>width</em>, <em>height</em>),
+leaving a gap on one side. <em>xy0_gap</em> and <em>xy1_gap</em> will mean X coordinates
+for <a href="gtkenums.html#GTK_POS_TOP">GTK_POS_TOP</a> and <a href="gtkenums.html#GTK_POS_BOTTOM">GTK_POS_BOTTOM</a> gap sides, and Y coordinates for
+<a href="gtkenums.html#GTK_POS_LEFT">GTK_POS_LEFT</a> and <a href="gtkenums.html#GTK_POS_RIGHT">GTK_POS_RIGHT</a>.</p>
+<p>Typical rendering of a frame with a gap:</p>
+<p><img src="frame-gap.png" alt=""></p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkstylecontext.html#GtkStyleContext">GtkStyleContext</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cr</code></em></i>
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo_t</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>x</code></em></i>
+				–
+	</div>
+			<p>X origin of the rectangle</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>y</code></em></i>
+				–
+	</div>
+			<p>Y origin of the rectangle</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>width</code></em></i>
+				–
+	</div>
+			<p>rectangle width</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>height</code></em></i>
+				–
+	</div>
+			<p>rectangle height</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>gap_side</code></em></i>
+				–
+	</div>
+			<p>side where the gap is</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>xy0_gap</code></em></i>
+				–
+	</div>
+			<p>initial coordinate (X or Y depending on <em>gap_side</em>) for the gap</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>xy1_gap</code></em></i>
+				–
+	</div>
+			<p>end coordinate (X or Y depending on <em>gap_side</em>) for the gap</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_render_frame_gap">
+	<span><code>prototype.render_frame_gap</code></span>
+</h3>
+
+
+<pre class="javascript-prototype">
+function prototype.render_frame_gap(context: <a title="Gtk.StyleContext" href="gtkstylecontext.html#GtkStyleContext">Gtk.StyleContext</a>, cr: <a title="cairo.Context" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a>, x: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, y: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, width: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, height: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, gap_side: <a title="Gtk.PositionType" href="gtkenums.html#GtkPositionType">Gtk.PositionType</a>, xy0_gap: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, xy1_gap: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_render_frame_gap'
+}</pre>
+
+<p>Renders a frame around the rectangle defined by (@x, <em>y</em>, <em>width</em>, <em>height</em>),
+leaving a gap on one side. <em>xy0_gap</em> and <em>xy1_gap</em> will mean X coordinates
+for <a href="gtkenums.html#GTK_POS_TOP">Gtk.PositionType.TOP</a> and <a href="gtkenums.html#GTK_POS_BOTTOM">Gtk.PositionType.BOTTOM</a> gap sides, and Y coordinates for
+<a href="gtkenums.html#GTK_POS_LEFT">Gtk.PositionType.LEFT</a> and <a href="gtkenums.html#GTK_POS_RIGHT">Gtk.PositionType.RIGHT</a>.</p>
+<p>Typical rendering of a frame with a gap:</p>
+<p><img src="frame-gap.png" alt=""></p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+					(
+						<a title="Gtk.StyleContext" href="gtkstylecontext.html#GtkStyleContext">Gtk.StyleContext</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkstylecontext.html#GtkStyleContext">Gtk.StyleContext</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cr</code></em></i>
+					(
+						<a title="cairo.Context" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a>
+						)
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>x</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>X origin of the rectangle</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>y</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>Y origin of the rectangle</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>width</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>rectangle width</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>height</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>rectangle height</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>gap_side</code></em></i>
+					(
+						<a title="Gtk.PositionType" href="gtkenums.html#GtkPositionType">Gtk.PositionType</a>
+						)
+				–
+	</div>
+			<p>side where the gap is</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>xy0_gap</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>initial coordinate (X or Y depending on <em>gap_side</em>) for the gap</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>xy1_gap</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>end coordinate (X or Y depending on <em>gap_side</em>) for the gap</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_render_frame_gap">
+	<span><code>Gtk.render_frame_gap</code></span>
+</h3>
+
+
+<pre class="python-prototype">
+def Gtk.render_frame_gap (context, cr, x, y, width, height, gap_side, xy0_gap, xy1_gap):
+    #python wrapper for 'gtk_render_frame_gap'</pre>
+
+<p>Renders a frame around the rectangle defined by (@x, <em>y</em>, <em>width</em>, <em>height</em>),
+leaving a gap on one side. <em>xy0_gap</em> and <em>xy1_gap</em> will mean X coordinates
+for <a href="gtkenums.html#GTK_POS_TOP">Gtk.PositionType.TOP</a> and <a href="gtkenums.html#GTK_POS_BOTTOM">Gtk.PositionType.BOTTOM</a> gap sides, and Y coordinates for
+<a href="gtkenums.html#GTK_POS_LEFT">Gtk.PositionType.LEFT</a> and <a href="gtkenums.html#GTK_POS_RIGHT">Gtk.PositionType.RIGHT</a>.</p>
+<p>Typical rendering of a frame with a gap:</p>
+<p><img src="frame-gap.png" alt=""></p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+					(
+						<a title="Gtk.StyleContext" href="gtkstylecontext.html#GtkStyleContext">Gtk.StyleContext</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkstylecontext.html#GtkStyleContext">Gtk.StyleContext</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cr</code></em></i>
+					(
+						<a title="cairo.Context" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a>
+						)
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>x</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>X origin of the rectangle</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>y</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>Y origin of the rectangle</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>width</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>rectangle width</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>height</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>rectangle height</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>gap_side</code></em></i>
+					(
+						<a title="Gtk.PositionType" href="gtkenums.html#GtkPositionType">Gtk.PositionType</a>
+						)
+				–
+	</div>
+			<p>side where the gap is</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>xy0_gap</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>initial coordinate (X or Y depending on <em>gap_side</em>) for the gap</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>xy1_gap</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>end coordinate (X or Y depending on <em>gap_side</em>) for the gap</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_render_handle">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_render_handle">
+	<span><code>gtk_render_handle</code></span>
+</h3>
+
+
+
+
+<pre class="c-prototype">
+gtk_render_handle (<a title="GtkStyleContext" href="gtkstylecontext.html#GtkStyleContext">GtkStyleContext</a> * context,
+                   <a title="cairo_t" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo_t</a> * cr,
+                   <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> x,
+                   <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> y,
+                   <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> width,
+                   <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> height)</pre>
+
+<p>Renders a handle (as in <a href="https://developer.gnome.org/gtk3/GtkHandleBox.html#GtkHandleBox-struct">GtkHandleBox</a>, <a href="gtkpaned.html#GtkPaned">GtkPaned</a> and
+<a href="gtkwindow.html#GtkWindow">GtkWindow</a>’s resize grip), in the rectangle
+determined by <em>x</em>, <em>y</em>, <em>width</em>, <em>height</em>.</p>
+<p>Handles rendered for the paned and grip classes:</p>
+<p><img src="handles.png" alt=""></p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkstylecontext.html#GtkStyleContext">GtkStyleContext</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cr</code></em></i>
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo_t</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>x</code></em></i>
+				–
+	</div>
+			<p>X origin of the rectangle</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>y</code></em></i>
+				–
+	</div>
+			<p>Y origin of the rectangle</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>width</code></em></i>
+				–
+	</div>
+			<p>rectangle width</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>height</code></em></i>
+				–
+	</div>
+			<p>rectangle height</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_render_handle">
+	<span><code>prototype.render_handle</code></span>
+</h3>
+
+
+<pre class="javascript-prototype">
+function prototype.render_handle(context: <a title="Gtk.StyleContext" href="gtkstylecontext.html#GtkStyleContext">Gtk.StyleContext</a>, cr: <a title="cairo.Context" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a>, x: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, y: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, width: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, height: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_render_handle'
+}</pre>
+
+<p>Renders a handle (as in <a href="https://developer.gnome.org/gtk3/GtkHandleBox.html#GtkHandleBox-struct">GtkHandleBox (not introspectable)</a>, <a href="gtkpaned.html#GtkPaned">Gtk.Paned</a> and
+<a href="gtkwindow.html#GtkWindow">Gtk.Window</a>’s resize grip), in the rectangle
+determined by <em>x</em>, <em>y</em>, <em>width</em>, <em>height</em>.</p>
+<p>Handles rendered for the paned and grip classes:</p>
+<p><img src="handles.png" alt=""></p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+					(
+						<a title="Gtk.StyleContext" href="gtkstylecontext.html#GtkStyleContext">Gtk.StyleContext</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkstylecontext.html#GtkStyleContext">Gtk.StyleContext</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cr</code></em></i>
+					(
+						<a title="cairo.Context" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a>
+						)
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>x</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>X origin of the rectangle</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>y</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>Y origin of the rectangle</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>width</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>rectangle width</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>height</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>rectangle height</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_render_handle">
+	<span><code>Gtk.render_handle</code></span>
+</h3>
+
+
+<pre class="python-prototype">
+def Gtk.render_handle (context, cr, x, y, width, height):
+    #python wrapper for 'gtk_render_handle'</pre>
+
+<p>Renders a handle (as in <a href="https://developer.gnome.org/gtk3/GtkHandleBox.html#GtkHandleBox-struct">GtkHandleBox (not introspectable)</a>, <a href="gtkpaned.html#GtkPaned">Gtk.Paned</a> and
+<a href="gtkwindow.html#GtkWindow">Gtk.Window</a>’s resize grip), in the rectangle
+determined by <em>x</em>, <em>y</em>, <em>width</em>, <em>height</em>.</p>
+<p>Handles rendered for the paned and grip classes:</p>
+<p><img src="handles.png" alt=""></p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+					(
+						<a title="Gtk.StyleContext" href="gtkstylecontext.html#GtkStyleContext">Gtk.StyleContext</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkstylecontext.html#GtkStyleContext">Gtk.StyleContext</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cr</code></em></i>
+					(
+						<a title="cairo.Context" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a>
+						)
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>x</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>X origin of the rectangle</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>y</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>Y origin of the rectangle</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>width</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>rectangle width</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>height</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>rectangle height</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.2;" id="gtk_render_icon">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_render_icon">
+	<span><code>gtk_render_icon</code></span>
+</h3>
+
+
+
+
+<pre class="c-prototype">
+gtk_render_icon (<a title="GtkStyleContext" href="gtkstylecontext.html#GtkStyleContext">GtkStyleContext</a> * context,
+                 <a title="cairo_t" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo_t</a> * cr,
+                 <a title="GdkPixbuf" href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf</a> * pixbuf,
+                 <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> x,
+                 <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> y)</pre>
+
+<p>Renders the icon in <em>pixbuf</em> at the specified <em>x</em> and <em>y</em> coordinates.</p>
+<p>This function will render the icon in <em>pixbuf</em> at exactly its size,
+regardless of scaling factors, which may not be appropriate when
+drawing on displays with high pixel densities.</p>
+<p>You probably want to use <a href="gtkrender.html#gtk_render_icon_surface">gtk_render_icon_surface</a> instead, if you
+already have a Cairo surface.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkstylecontext.html#GtkStyleContext">GtkStyleContext</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cr</code></em></i>
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo_t</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>pixbuf</code></em></i>
+				–
+	</div>
+			<p>a <a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf</a> containing the icon to draw</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>x</code></em></i>
+				–
+	</div>
+			<p>X position for the <em>pixbuf</em></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>y</code></em></i>
+				–
+	</div>
+			<p>Y position for the <em>pixbuf</em></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.2
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_render_icon">
+	<span><code>prototype.render_icon</code></span>
+</h3>
+
+
+<pre class="javascript-prototype">
+function prototype.render_icon(context: <a title="Gtk.StyleContext" href="gtkstylecontext.html#GtkStyleContext">Gtk.StyleContext</a>, cr: <a title="cairo.Context" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a>, pixbuf: <a title="GdkPixbuf.Pixbuf" href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf.Pixbuf</a>, x: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, y: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_render_icon'
+}</pre>
+
+<p>Renders the icon in <em>pixbuf</em> at the specified <em>x</em> and <em>y</em> coordinates.</p>
+<p>This function will render the icon in <em>pixbuf</em> at exactly its size,
+regardless of scaling factors, which may not be appropriate when
+drawing on displays with high pixel densities.</p>
+<p>You probably want to use <a href="gtkrender.html#gtk_render_icon_surface">prototype.render_icon_surface</a> instead, if you
+already have a Cairo surface.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+					(
+						<a title="Gtk.StyleContext" href="gtkstylecontext.html#GtkStyleContext">Gtk.StyleContext</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkstylecontext.html#GtkStyleContext">Gtk.StyleContext</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cr</code></em></i>
+					(
+						<a title="cairo.Context" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a>
+						)
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>pixbuf</code></em></i>
+					(
+						<a title="GdkPixbuf.Pixbuf" href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf.Pixbuf</a>
+						)
+				–
+	</div>
+			<p>a <a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf.Pixbuf</a> containing the icon to draw</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>x</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>X position for the <em>pixbuf</em></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>y</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>Y position for the <em>pixbuf</em></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.2
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_render_icon">
+	<span><code>Gtk.render_icon</code></span>
+</h3>
+
+
+<pre class="python-prototype">
+def Gtk.render_icon (context, cr, pixbuf, x, y):
+    #python wrapper for 'gtk_render_icon'</pre>
+
+<p>Renders the icon in <em>pixbuf</em> at the specified <em>x</em> and <em>y</em> coordinates.</p>
+<p>This function will render the icon in <em>pixbuf</em> at exactly its size,
+regardless of scaling factors, which may not be appropriate when
+drawing on displays with high pixel densities.</p>
+<p>You probably want to use <a href="gtkrender.html#gtk_render_icon_surface">Gtk.render_icon_surface</a> instead, if you
+already have a Cairo surface.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+					(
+						<a title="Gtk.StyleContext" href="gtkstylecontext.html#GtkStyleContext">Gtk.StyleContext</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkstylecontext.html#GtkStyleContext">Gtk.StyleContext</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cr</code></em></i>
+					(
+						<a title="cairo.Context" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a>
+						)
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>pixbuf</code></em></i>
+					(
+						<a title="GdkPixbuf.Pixbuf" href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf.Pixbuf</a>
+						)
+				–
+	</div>
+			<p>a <a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf.Pixbuf</a> containing the icon to draw</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>x</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>X position for the <em>pixbuf</em></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>y</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>Y position for the <em>pixbuf</em></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.2
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.10;" id="gtk_render_icon_surface">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_render_icon_surface">
+	<span><code>gtk_render_icon_surface</code></span>
+</h3>
+
+
+
+
+<pre class="c-prototype">
+gtk_render_icon_surface (<a title="GtkStyleContext" href="gtkstylecontext.html#GtkStyleContext">GtkStyleContext</a> * context,
+                         <a title="cairo_t" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo_t</a> * cr,
+                         <a title="cairo_surface_t" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-surface-t.html#cairo-surface-t">cairo_surface_t</a> * surface,
+                         <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> x,
+                         <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> y)</pre>
+
+<p>Renders the icon in <em>surface</em> at the specified <em>x</em> and <em>y</em> coordinates.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkstylecontext.html#GtkStyleContext">GtkStyleContext</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cr</code></em></i>
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo_t</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>surface</code></em></i>
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/cairo/unstable/cairo-cairo-surface-t.html#cairo-surface-t">cairo_surface_t</a> containing the icon to draw</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>x</code></em></i>
+				–
+	</div>
+			<p>X position for the <em>icon</em></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>y</code></em></i>
+				–
+	</div>
+			<p>Y position for the <em>incon</em></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_render_icon_surface">
+	<span><code>prototype.render_icon_surface</code></span>
+</h3>
+
+
+<pre class="javascript-prototype">
+function prototype.render_icon_surface(context: <a title="Gtk.StyleContext" href="gtkstylecontext.html#GtkStyleContext">Gtk.StyleContext</a>, cr: <a title="cairo.Context" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a>, surface: <a title="cairo.Surface" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-surface-t.html#cairo-surface-t">cairo.Surface</a>, x: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, y: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_render_icon_surface'
+}</pre>
+
+<p>Renders the icon in <em>surface</em> at the specified <em>x</em> and <em>y</em> coordinates.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+					(
+						<a title="Gtk.StyleContext" href="gtkstylecontext.html#GtkStyleContext">Gtk.StyleContext</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkstylecontext.html#GtkStyleContext">Gtk.StyleContext</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cr</code></em></i>
+					(
+						<a title="cairo.Context" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a>
+						)
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>surface</code></em></i>
+					(
+						<a title="cairo.Surface" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-surface-t.html#cairo-surface-t">cairo.Surface</a>
+						)
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/cairo/unstable/cairo-cairo-surface-t.html#cairo-surface-t">cairo.Surface</a> containing the icon to draw</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>x</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>X position for the <em>icon</em></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>y</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>Y position for the <em>incon</em></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_render_icon_surface">
+	<span><code>Gtk.render_icon_surface</code></span>
+</h3>
+
+
+<pre class="python-prototype">
+def Gtk.render_icon_surface (context, cr, surface, x, y):
+    #python wrapper for 'gtk_render_icon_surface'</pre>
+
+<p>Renders the icon in <em>surface</em> at the specified <em>x</em> and <em>y</em> coordinates.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+					(
+						<a title="Gtk.StyleContext" href="gtkstylecontext.html#GtkStyleContext">Gtk.StyleContext</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkstylecontext.html#GtkStyleContext">Gtk.StyleContext</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cr</code></em></i>
+					(
+						<a title="cairo.Context" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a>
+						)
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>surface</code></em></i>
+					(
+						<a title="cairo.Surface" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-surface-t.html#cairo-surface-t">cairo.Surface</a>
+						)
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/cairo/unstable/cairo-cairo-surface-t.html#cairo-surface-t">cairo.Surface</a> containing the icon to draw</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>x</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>X position for the <em>icon</em></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>y</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>Y position for the <em>incon</em></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.10
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_render_layout">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_render_layout">
+	<span><code>gtk_render_layout</code></span>
+</h3>
+
+
+
+
+<pre class="c-prototype">
+gtk_render_layout (<a title="GtkStyleContext" href="gtkstylecontext.html#GtkStyleContext">GtkStyleContext</a> * context,
+                   <a title="cairo_t" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo_t</a> * cr,
+                   <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> x,
+                   <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> y,
+                   <a title="PangoLayout" href="https://developer.gnome.org/pango/unstable/pango-Layout-Objects.html#PangoLayout-struct">PangoLayout</a> * layout)</pre>
+
+<p>Renders <em>layout</em> on the coordinates <em>x</em>, <em>y</em></p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkstylecontext.html#GtkStyleContext">GtkStyleContext</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cr</code></em></i>
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo_t</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>x</code></em></i>
+				–
+	</div>
+			<p>X origin</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>y</code></em></i>
+				–
+	</div>
+			<p>Y origin</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>layout</code></em></i>
+				–
+	</div>
+			<p>the <a href="https://developer.gnome.org/pango/unstable/pango-Layout-Objects.html#PangoLayout-struct">PangoLayout</a> to render</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_render_layout">
+	<span><code>prototype.render_layout</code></span>
+</h3>
+
+
+<pre class="javascript-prototype">
+function prototype.render_layout(context: <a title="Gtk.StyleContext" href="gtkstylecontext.html#GtkStyleContext">Gtk.StyleContext</a>, cr: <a title="cairo.Context" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a>, x: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, y: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, layout: <a title="Pango.Layout" href="https://developer.gnome.org/pango/unstable/pango-Layout-Objects.html#PangoLayout-struct">Pango.Layout</a>): {
+    // javascript wrapper for 'gtk_render_layout'
+}</pre>
+
+<p>Renders <em>layout</em> on the coordinates <em>x</em>, <em>y</em></p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+					(
+						<a title="Gtk.StyleContext" href="gtkstylecontext.html#GtkStyleContext">Gtk.StyleContext</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkstylecontext.html#GtkStyleContext">Gtk.StyleContext</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cr</code></em></i>
+					(
+						<a title="cairo.Context" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a>
+						)
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>x</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>X origin</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>y</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>Y origin</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>layout</code></em></i>
+					(
+						<a title="Pango.Layout" href="https://developer.gnome.org/pango/unstable/pango-Layout-Objects.html#PangoLayout-struct">Pango.Layout</a>
+						)
+				–
+	</div>
+			<p>the <a href="https://developer.gnome.org/pango/unstable/pango-Layout-Objects.html#PangoLayout-struct">Pango.Layout</a> to render</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_render_layout">
+	<span><code>Gtk.render_layout</code></span>
+</h3>
+
+
+<pre class="python-prototype">
+def Gtk.render_layout (context, cr, x, y, layout):
+    #python wrapper for 'gtk_render_layout'</pre>
+
+<p>Renders <em>layout</em> on the coordinates <em>x</em>, <em>y</em></p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+					(
+						<a title="Gtk.StyleContext" href="gtkstylecontext.html#GtkStyleContext">Gtk.StyleContext</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkstylecontext.html#GtkStyleContext">Gtk.StyleContext</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cr</code></em></i>
+					(
+						<a title="cairo.Context" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a>
+						)
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>x</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>X origin</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>y</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>Y origin</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>layout</code></em></i>
+					(
+						<a title="Pango.Layout" href="https://developer.gnome.org/pango/unstable/pango-Layout-Objects.html#PangoLayout-struct">Pango.Layout</a>
+						)
+				–
+	</div>
+			<p>the <a href="https://developer.gnome.org/pango/unstable/pango-Layout-Objects.html#PangoLayout-struct">Pango.Layout</a> to render</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_render_line">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_render_line">
+	<span><code>gtk_render_line</code></span>
+</h3>
+
+
+
+
+<pre class="c-prototype">
+gtk_render_line (<a title="GtkStyleContext" href="gtkstylecontext.html#GtkStyleContext">GtkStyleContext</a> * context,
+                 <a title="cairo_t" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo_t</a> * cr,
+                 <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> x0,
+                 <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> y0,
+                 <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> x1,
+                 <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> y1)</pre>
+
+<p>Renders a line from (x0, y0) to (x1, y1).</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkstylecontext.html#GtkStyleContext">GtkStyleContext</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cr</code></em></i>
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo_t</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>x0</code></em></i>
+				–
+	</div>
+			<p>X coordinate for the origin of the line</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>y0</code></em></i>
+				–
+	</div>
+			<p>Y coordinate for the origin of the line</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>x1</code></em></i>
+				–
+	</div>
+			<p>X coordinate for the end of the line</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>y1</code></em></i>
+				–
+	</div>
+			<p>Y coordinate for the end of the line</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_render_line">
+	<span><code>prototype.render_line</code></span>
+</h3>
+
+
+<pre class="javascript-prototype">
+function prototype.render_line(context: <a title="Gtk.StyleContext" href="gtkstylecontext.html#GtkStyleContext">Gtk.StyleContext</a>, cr: <a title="cairo.Context" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a>, x0: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, y0: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, x1: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, y1: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_render_line'
+}</pre>
+
+<p>Renders a line from (x0, y0) to (x1, y1).</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+					(
+						<a title="Gtk.StyleContext" href="gtkstylecontext.html#GtkStyleContext">Gtk.StyleContext</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkstylecontext.html#GtkStyleContext">Gtk.StyleContext</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cr</code></em></i>
+					(
+						<a title="cairo.Context" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a>
+						)
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>x0</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>X coordinate for the origin of the line</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>y0</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>Y coordinate for the origin of the line</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>x1</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>X coordinate for the end of the line</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>y1</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>Y coordinate for the end of the line</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_render_line">
+	<span><code>Gtk.render_line</code></span>
+</h3>
+
+
+<pre class="python-prototype">
+def Gtk.render_line (context, cr, x0, y0, x1, y1):
+    #python wrapper for 'gtk_render_line'</pre>
+
+<p>Renders a line from (x0, y0) to (x1, y1).</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+					(
+						<a title="Gtk.StyleContext" href="gtkstylecontext.html#GtkStyleContext">Gtk.StyleContext</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkstylecontext.html#GtkStyleContext">Gtk.StyleContext</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cr</code></em></i>
+					(
+						<a title="cairo.Context" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a>
+						)
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>x0</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>X coordinate for the origin of the line</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>y0</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>Y coordinate for the origin of the line</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>x1</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>X coordinate for the end of the line</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>y1</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>Y coordinate for the end of the line</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_render_option">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_render_option">
+	<span><code>gtk_render_option</code></span>
+</h3>
+
+
+
+
+<pre class="c-prototype">
+gtk_render_option (<a title="GtkStyleContext" href="gtkstylecontext.html#GtkStyleContext">GtkStyleContext</a> * context,
+                   <a title="cairo_t" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo_t</a> * cr,
+                   <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> x,
+                   <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> y,
+                   <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> width,
+                   <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> height)</pre>
+
+<p>Renders an option mark (as in a <a href="gtkradiobutton.html#GtkRadioButton">GtkRadioButton</a>), the <a href="gtkenums.html#GTK_STATE_FLAG_CHECKED">GTK_STATE_FLAG_CHECKED</a>
+state will determine whether the option is on or off, and
+<a href="gtkenums.html#GTK_STATE_FLAG_INCONSISTENT">GTK_STATE_FLAG_INCONSISTENT</a> whether it should be marked as undefined.</p>
+<p>Typical option mark rendering:</p>
+<p><img src="options.png" alt=""></p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkstylecontext.html#GtkStyleContext">GtkStyleContext</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cr</code></em></i>
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo_t</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>x</code></em></i>
+				–
+	</div>
+			<p>X origin of the rectangle</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>y</code></em></i>
+				–
+	</div>
+			<p>Y origin of the rectangle</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>width</code></em></i>
+				–
+	</div>
+			<p>rectangle width</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>height</code></em></i>
+				–
+	</div>
+			<p>rectangle height</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_render_option">
+	<span><code>prototype.render_option</code></span>
+</h3>
+
+
+<pre class="javascript-prototype">
+function prototype.render_option(context: <a title="Gtk.StyleContext" href="gtkstylecontext.html#GtkStyleContext">Gtk.StyleContext</a>, cr: <a title="cairo.Context" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a>, x: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, y: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, width: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, height: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_render_option'
+}</pre>
+
+<p>Renders an option mark (as in a <a href="gtkradiobutton.html#GtkRadioButton">Gtk.RadioButton</a>), the <a href="gtkenums.html#GTK_STATE_FLAG_CHECKED">Gtk.StateFlags.CHECKED</a>
+state will determine whether the option is on or off, and
+<a href="gtkenums.html#GTK_STATE_FLAG_INCONSISTENT">Gtk.StateFlags.INCONSISTENT</a> whether it should be marked as undefined.</p>
+<p>Typical option mark rendering:</p>
+<p><img src="options.png" alt=""></p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+					(
+						<a title="Gtk.StyleContext" href="gtkstylecontext.html#GtkStyleContext">Gtk.StyleContext</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkstylecontext.html#GtkStyleContext">Gtk.StyleContext</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cr</code></em></i>
+					(
+						<a title="cairo.Context" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a>
+						)
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>x</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>X origin of the rectangle</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>y</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>Y origin of the rectangle</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>width</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>rectangle width</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>height</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>rectangle height</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_render_option">
+	<span><code>Gtk.render_option</code></span>
+</h3>
+
+
+<pre class="python-prototype">
+def Gtk.render_option (context, cr, x, y, width, height):
+    #python wrapper for 'gtk_render_option'</pre>
+
+<p>Renders an option mark (as in a <a href="gtkradiobutton.html#GtkRadioButton">Gtk.RadioButton</a>), the <a href="gtkenums.html#GTK_STATE_FLAG_CHECKED">Gtk.StateFlags.CHECKED</a>
+state will determine whether the option is on or off, and
+<a href="gtkenums.html#GTK_STATE_FLAG_INCONSISTENT">Gtk.StateFlags.INCONSISTENT</a> whether it should be marked as undefined.</p>
+<p>Typical option mark rendering:</p>
+<p><img src="options.png" alt=""></p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+					(
+						<a title="Gtk.StyleContext" href="gtkstylecontext.html#GtkStyleContext">Gtk.StyleContext</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkstylecontext.html#GtkStyleContext">Gtk.StyleContext</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cr</code></em></i>
+					(
+						<a title="cairo.Context" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a>
+						)
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>x</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>X origin of the rectangle</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>y</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>Y origin of the rectangle</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>width</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>rectangle width</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>height</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>rectangle height</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_render_slider">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_render_slider">
+	<span><code>gtk_render_slider</code></span>
+</h3>
+
+
+
+
+<pre class="c-prototype">
+gtk_render_slider (<a title="GtkStyleContext" href="gtkstylecontext.html#GtkStyleContext">GtkStyleContext</a> * context,
+                   <a title="cairo_t" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo_t</a> * cr,
+                   <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> x,
+                   <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> y,
+                   <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> width,
+                   <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> height,
+                   <a title="GtkOrientation" href="gtkenums.html#GtkOrientation">GtkOrientation</a> orientation)</pre>
+
+<p>Renders a slider (as in <a href="gtkscale.html#GtkScale">GtkScale</a>) in the rectangle defined by <em>x</em>, <em>y</em>,
+<em>width</em>, <em>height</em>. <em>orientation</em> defines whether the slider is vertical
+or horizontal.</p>
+<p>Typical slider rendering:</p>
+<p><img src="sliders.png" alt=""></p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkstylecontext.html#GtkStyleContext">GtkStyleContext</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cr</code></em></i>
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo_t</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>x</code></em></i>
+				–
+	</div>
+			<p>X origin of the rectangle</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>y</code></em></i>
+				–
+	</div>
+			<p>Y origin of the rectangle</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>width</code></em></i>
+				–
+	</div>
+			<p>rectangle width</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>height</code></em></i>
+				–
+	</div>
+			<p>rectangle height</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>orientation</code></em></i>
+				–
+	</div>
+			<p>orientation of the slider</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_render_slider">
+	<span><code>prototype.render_slider</code></span>
+</h3>
+
+
+<pre class="javascript-prototype">
+function prototype.render_slider(context: <a title="Gtk.StyleContext" href="gtkstylecontext.html#GtkStyleContext">Gtk.StyleContext</a>, cr: <a title="cairo.Context" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a>, x: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, y: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, width: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, height: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, orientation: <a title="Gtk.Orientation" href="gtkenums.html#GtkOrientation">Gtk.Orientation</a>): {
+    // javascript wrapper for 'gtk_render_slider'
+}</pre>
+
+<p>Renders a slider (as in <a href="gtkscale.html#GtkScale">Gtk.Scale</a>) in the rectangle defined by <em>x</em>, <em>y</em>,
+<em>width</em>, <em>height</em>. <em>orientation</em> defines whether the slider is vertical
+or horizontal.</p>
+<p>Typical slider rendering:</p>
+<p><img src="sliders.png" alt=""></p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+					(
+						<a title="Gtk.StyleContext" href="gtkstylecontext.html#GtkStyleContext">Gtk.StyleContext</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkstylecontext.html#GtkStyleContext">Gtk.StyleContext</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cr</code></em></i>
+					(
+						<a title="cairo.Context" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a>
+						)
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>x</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>X origin of the rectangle</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>y</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>Y origin of the rectangle</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>width</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>rectangle width</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>height</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>rectangle height</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>orientation</code></em></i>
+					(
+						<a title="Gtk.Orientation" href="gtkenums.html#GtkOrientation">Gtk.Orientation</a>
+						)
+				–
+	</div>
+			<p>orientation of the slider</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_render_slider">
+	<span><code>Gtk.render_slider</code></span>
+</h3>
+
+
+<pre class="python-prototype">
+def Gtk.render_slider (context, cr, x, y, width, height, orientation):
+    #python wrapper for 'gtk_render_slider'</pre>
+
+<p>Renders a slider (as in <a href="gtkscale.html#GtkScale">Gtk.Scale</a>) in the rectangle defined by <em>x</em>, <em>y</em>,
+<em>width</em>, <em>height</em>. <em>orientation</em> defines whether the slider is vertical
+or horizontal.</p>
+<p>Typical slider rendering:</p>
+<p><img src="sliders.png" alt=""></p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+					(
+						<a title="Gtk.StyleContext" href="gtkstylecontext.html#GtkStyleContext">Gtk.StyleContext</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkstylecontext.html#GtkStyleContext">Gtk.StyleContext</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cr</code></em></i>
+					(
+						<a title="cairo.Context" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a>
+						)
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>x</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>X origin of the rectangle</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>y</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>Y origin of the rectangle</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>width</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>rectangle width</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>height</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>rectangle height</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>orientation</code></em></i>
+					(
+						<a title="Gtk.Orientation" href="gtkenums.html#GtkOrientation">Gtk.Orientation</a>
+						)
+				–
+	</div>
+			<p>orientation of the slider</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+
+</div>
+
+
+
+
+
+
+		
+	</div>
+	<div id="search_results">
+		<p>The results of the search are</p>
+	</div>
+	<hr>
+	<div id="footer">
+		    
+
+	</div>
+</div>
+
+<div id="toc-column">
+	
+		<div class="edit-button">
+		
+
+	</div>
+		<div id="toc-wrapper">
+		<nav id="toc"></nav>
+	</div>
+</div>
+</div>
+</main>
+
+</body>
+
+<script src="assets/js/navbar_offset_scroller.js"></script>
+</html>

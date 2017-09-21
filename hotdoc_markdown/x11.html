@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<base href="..">
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>Using GTK+ on the X Window System</title>
+
+<link rel="stylesheet" href="assets/css/custom_bootstrap.css" type="text/css">
+<link rel="stylesheet" href="assets/css/bootstrap-toc.min.css" type="text/css">
+<link rel="stylesheet" href="assets/css/frontend.css" type="text/css">
+<link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
+
+<link rel="stylesheet" href="assets/css/prism.css" type="text/css">
+
+<script src="assets/js/mustache.min.js"></script>
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/scrollspy.js"></script>
+<script src="assets/js/bootstrap.js"></script>
+<script src="assets/js/typeahead.jquery.min.js"></script>
+<script src="assets/js/search.js"></script>
+<script src="assets/js/isotope.pkgd.min.js"></script>
+<script src="assets/js/compare-versions.js"></script>
+<script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="assets/js/bootstrap-toc.min.js"></script>
+<script src="assets/js/jquery.touchSwipe.min.js"></script>
+<script src="assets/js/anchor.min.js"></script>
+<script src="assets/js/tag_filtering.js"></script>
+<script src="assets/js/language_switching.js"></script>
+
+<script src="assets/js/lines_around_headings.js"></script>
+
+<script src="assets/js/prism-core.js"></script>
+<script src="assets/js/prism-autoloader.js"></script>
+<script src="assets/js/prism_autoloader_path_override.js"></script>
+<script src="assets/js/trie.js"></script>
+
+
+</head>
+
+<body class="no-script
+" data-spy="scroll" data-target="#toc" data-offset="70">
+
+<script>
+$('body').removeClass('no-script');
+</script>
+
+<nav class="navbar navbar-fixed-top navbar-default" id="topnav">
+	<div class="container-fluid">
+		<div class="navbar-right">
+			<a id="toc-toggle">
+				<span class="glyphicon glyphicon-menu-right"></span>
+				<span class="glyphicon glyphicon-menu-left"></span>
+			</a>
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-wrapper" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<form action="" class="navbar-form pull-right" id="navbar-search-form">
+                               <div class="form-group has-feedback">
+                                       <input type="text" class="form-control input-sm" name="search" id="sidenav-lookup-field" placeholder="search" disabled>
+				       <span class="glyphicon glyphicon-search form-control-feedback" id="search-mgn-glass"></span>
+                               </div>
+                        </form>
+		</div>
+		<div class="navbar-header">
+			<a id="sidenav-toggle">
+				<span class="glyphicon glyphicon-menu-right"></span>
+				<span class="glyphicon glyphicon-menu-left"></span>
+			</a>
+			<a id="home-link" href="index.html" class="hotdoc-navbar-brand">
+				<img src="assets/images/home.svg" alt="Home">
+			</a>
+		</div>
+		<div class="navbar-collapse collapse" id="navbar-wrapper">
+			<ul class="nav navbar-nav" id="menu">
+							</ul>
+			<div class="hidden-xs hidden-sm navbar-text navbar-center">
+							</div>
+		</div>
+	</div>
+</nav>
+
+<main>
+<div data-extension="core" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="hotdoc_markdown/x11.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['c', 'javascript', 'python']">
+<script src="assets/js/utils.js"></script>
+
+<div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
+	<script src="assets/js/navigation.js"></script>
+	<script src="assets/js/sitemap.js"></script>
+</div>
+
+<div id="body">
+	<div id="main">
+				    <div id="page-description" data-hotdoc-source="x11.markdown" data-hotdoc-role="main">
+        <h1 id="gtk-for-the-x-window-system">GTK+ for the X Window System</h1>
+<p>On UNIX, the X backend is the default build for GTK+. So you don't need
+to do anything special when compiling it, and everything should "just
+work."</p>
+<p>To mix low-level Xlib routines into a GTK program, see <a href="hotdoc_markdown/x11.html#gdk-X-Window-System-Interaction">GDK X Window
+System interaction</a> in the GDK manual.</p>
+<h2 id="x11specific-commandline-options">X11-specific commandline options</h2>
+<p>The X backend understands some additional command line arguments.</p>
+<p><strong>--display display.</strong></p>
+<p>The name of the X display to open instead of the one specified in the
+DISPLAY environment variable.</p>
+<h2 id="x11specific-environment-variables">X11-specific environment variables</h2>
+<p>The X11 GDK backend can be influenced with some additional environment
+variables.</p>
+<p><strong>GDK_SYNCHRONIZE.</strong></p>
+<p>If set, GDK makes all X requests synchronously. This is a useful option
+for debugging, but it will slow down the performance considerably.</p>
+<p><strong>GDK_CORE_DEVICE_EVENTS.</strong></p>
+<p>If set, GDK makes does not use the XInput extension, and only reacts to
+core X input events.</p>
+<p><strong>GDK_SCALE.</strong></p>
+<p>Must be set to an integer, typically 2. If set, GDK will scale all
+windows by the specified factor. Scaled output is meant to be used on
+high-dpi displays. Normally, GDK will pick up a suitable scale factor
+for each monitor from the display system. This environment variable
+allows to override that.</p>
+<p><strong>GDK_DPI_SCALE.</strong></p>
+<p>This can be useful when using scale-aware GTK+ applications together
+with scale-unaware applications on a high-dpi display. In that case, the
+font resolution can be doubled to make scale-unaware applications
+readable, and GDK_DPI_SCALE=0.5 can be set to compensate for that in
+GTK+ applications which are already scaled by setting GDK_SCALE=2.</p>
+<h1 id="understanding-the-x11-architecture">Understanding the X11 architecture</h1>
+<p>People coming from a Windows or MacOS background often find certain
+aspects of the X Window System surprising. This section introduces some
+basic X concepts at a high level. For more details, the book most people
+use is called the Xlib Programming Manual by Adrian Nye; this book is
+volume one in the O'Reilly X Window System series.</p>
+<p>Standards are another important resource if you're poking in low-level
+X11 details, in particular the ICCCM and the Extended Window Manager
+Hints specifications.
+<a href="http://www.freedesktop.org/standards/">freedesktop.org</a> has links to
+many relevant specifications.</p>
+<p>The GDK manual covers <a href="hotdoc_markdown/x11.html#gdk-X-Window-System-Interaction">using Xlib in a GTK
+program</a>.</p>
+<h2 id="server-client-window-manager">Server, client, window manager</h2>
+<p>Other window systems typically put all their functionality in the
+application itself. With X, each application involves three different
+programs: the X server, the application (called a client because it's a
+client of the X server), and a special client called the window manager.</p>
+<p>The X server is in charge of managing resources, processing drawing
+requests, and dispatching events such as keyboard and mouse events to
+interested applications. So client applications can ask the X server to
+create a window, draw a circle, or move windows around.</p>
+<p>The window manager is in charge of rendering the frame or borders around
+windows; it also has final say on the size of each window, and window
+states such as minimized, maximized, and so forth. On Windows and MacOS
+the application handles most of this. On X11, if you wish to modify the
+window's state, or change its frame, you must ask the window manager to
+do so on your behalf, using an established
+<a href="http://www.freedesktop.org/standards/">convention</a>.</p>
+<p>GTK+ has functions for asking the window manager to do various things;
+see for example <a href="hotdoc_markdown/gtkwindow.html#gtk_window_iconify">gtk_window_iconify()</a> or
+<a href="hotdoc_markdown/gtkwindow.html#gtk_window_maximize">gtk_window_maximize()</a> or
+<a href="hotdoc_markdown/gtkwindow.html#gtk_window_set_decorated">gtk_window_set_decorated()</a>. Keep in mind
+that <a href="hotdoc_markdown/gtkwindow.html#gtk_window_move">gtk_window_move()</a> and window sizing are
+ultimately controlled by the window manager as well and most window
+managers <em>will</em> ignore certain requests from time to time, in the
+interests of good user interface.</p>
+
+    </div>
+        
+
+
+
+
+		
+	</div>
+	<div id="search_results">
+		<p>The results of the search are</p>
+	</div>
+	<hr>
+	<div id="footer">
+		    
+
+	</div>
+</div>
+
+<div id="toc-column">
+	
+		<div class="edit-button">
+		
+
+	</div>
+		<div id="toc-wrapper">
+		<nav id="toc"></nav>
+	</div>
+</div>
+</div>
+</main>
+
+</body>
+
+<script src="assets/js/navbar_offset_scroller.js"></script>
+</html>

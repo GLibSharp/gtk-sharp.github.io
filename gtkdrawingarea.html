@@ -1,0 +1,1834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<base href=".">
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>gtkdrawingarea</title>
+
+<link rel="stylesheet" href="assets/css/custom_bootstrap.css" type="text/css">
+<link rel="stylesheet" href="assets/css/bootstrap-toc.min.css" type="text/css">
+<link rel="stylesheet" href="assets/css/frontend.css" type="text/css">
+<link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
+
+<link rel="stylesheet" href="assets/css/prism.css" type="text/css">
+
+<script src="assets/js/mustache.min.js"></script>
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/scrollspy.js"></script>
+<script src="assets/js/bootstrap.js"></script>
+<script src="assets/js/typeahead.jquery.min.js"></script>
+<script src="assets/js/search.js"></script>
+<script src="assets/js/isotope.pkgd.min.js"></script>
+<script src="assets/js/compare-versions.js"></script>
+<script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="assets/js/bootstrap-toc.min.js"></script>
+<script src="assets/js/jquery.touchSwipe.min.js"></script>
+<script src="assets/js/anchor.min.js"></script>
+<script src="assets/js/tag_filtering.js"></script>
+<script src="assets/js/language_switching.js"></script>
+
+<script src="assets/js/lines_around_headings.js"></script>
+
+<script src="assets/js/prism-core.js"></script>
+<script src="assets/js/prism-autoloader.js"></script>
+<script src="assets/js/prism_autoloader_path_override.js"></script>
+<script src="assets/js/trie.js"></script>
+
+
+</head>
+
+<body class="no-script
+" data-spy="scroll" data-target="#toc" data-offset="70">
+
+<script>
+$('body').removeClass('no-script');
+</script>
+
+<nav class="navbar navbar-fixed-top navbar-default" id="topnav">
+	<div class="container-fluid">
+		<div class="navbar-right">
+			<a id="toc-toggle">
+				<span class="glyphicon glyphicon-menu-right"></span>
+				<span class="glyphicon glyphicon-menu-left"></span>
+			</a>
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-wrapper" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<form action="" class="navbar-form pull-right" id="navbar-search-form">
+                               <div class="form-group has-feedback">
+                                       <input type="text" class="form-control input-sm" name="search" id="sidenav-lookup-field" placeholder="search" disabled>
+				       <span class="glyphicon glyphicon-search form-control-feedback" id="search-mgn-glass"></span>
+                               </div>
+                        </form>
+		</div>
+		<div class="navbar-header">
+			<a id="sidenav-toggle">
+				<span class="glyphicon glyphicon-menu-right"></span>
+				<span class="glyphicon glyphicon-menu-left"></span>
+			</a>
+			<a id="home-link" href="index.html" class="hotdoc-navbar-brand">
+				<img src="assets/images/home.svg" alt="Home">
+			</a>
+		</div>
+		<div class="navbar-collapse collapse" id="navbar-wrapper">
+			<ul class="nav navbar-nav" id="menu">
+							</ul>
+			<div class="hidden-xs hidden-sm navbar-text navbar-center">
+							</div>
+		</div>
+	</div>
+</nav>
+
+<main>
+<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="gtkdrawingarea.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['c', 'javascript', 'python']" data-hotdoc-meta-gi-language="c">
+<script src="assets/js/utils.js"></script>
+
+<div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
+	<script src="assets/js/navigation.js"></script>
+	<script src="assets/js/sitemap.js"></script>
+</div>
+
+<div id="body">
+	<div id="main">
+				    <div id="page-description" data-hotdoc-source="gtkdrawingarea.markdown" data-hotdoc-role="main">
+    </div>
+        
+        
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="GtkDrawingArea">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h2 data-hotdoc-id="GtkDrawingArea">
+	<span><code>GtkDrawingArea</code></span>
+</h2>
+
+
+<div class="hierarchy_container">
+	<div class="hierarchy_details">
+<pre>
+<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object">GObject</a>
+    <span class="lineart">╰──</span><a title="GInitiallyUnowned" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-javascript="GObject.InitiallyUnowned" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-python="GObject.InitiallyUnowned">GInitiallyUnowned</a>
+        <span class="lineart">╰──</span><a title="GtkWidget" href="gtkwidget.html#GtkWidget" data-gi-href-javascript="gtkwidget.html#GtkWidget" data-gi-title-javascript="Gtk.Widget" data-gi-href-python="gtkwidget.html#GtkWidget" data-gi-title-python="Gtk.Widget">GtkWidget</a>
+            <span class="lineart">╰──</span>GtkDrawingArea
+</pre>
+
+</div>
+
+</div>
+
+<div class="interfaces_container">
+	
+<p><b>Implemented interfaces:</b>
+    AtkImplementorIface, <a title="GtkBuildable" href="gtkbuildable.html#GtkBuildable" data-gi-href-javascript="gtkbuildable.html#GtkBuildable" data-gi-title-javascript="Gtk.Buildable" data-gi-href-python="gtkbuildable.html#GtkBuildable" data-gi-title-python="Gtk.Buildable">GtkBuildable</a>
+</p>
+
+</div>
+
+
+
+
+	<div class="members-container">
+		<h3>Members</h3>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkDrawingArea.widget">
+	<div>
+		<i><em><code>widget</code></em></i>
+		(<a title="GtkWidget" href="gtkwidget.html#GtkWidget" data-gi-href-javascript="gtkwidget.html#GtkWidget" data-gi-title-javascript="Gtk.Widget" data-gi-href-python="gtkwidget.html#GtkWidget" data-gi-title-python="Gtk.Widget">GtkWidget</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+<h3>Class structure</h3>
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="GtkDrawingAreaClass">
+	<span><code>GtkDrawingAreaClass</code></span>
+</h4>
+
+
+
+
+
+	<div class="members-container">
+		<h5>Fields</h5>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkDrawingAreaClass.parent_class">
+	<div>
+		<i><em><code>parent_class</code></em></i>
+		(<a title="GtkWidgetClass" href="GtkWidgetClass">GtkWidgetClass</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h3>
+	Gtk.DrawingAreaClass
+</h3>
+
+
+
+
+
+	<div class="members-container">
+		<h5>Attributes</h5>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkDrawingAreaClass.parent_class">
+	<div>
+		<i><em><code>DrawingAreaClass.parent_class</code></em></i>
+		(<a title="Gtk.WidgetClass" href="GtkWidgetClass">Gtk.WidgetClass</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3>
+	Gtk.DrawingAreaClass
+</h3>
+
+
+
+
+
+	<div class="members-container">
+		<h5>Attributes</h5>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkDrawingAreaClass.parent_class">
+	<div>
+		<i><em><code>DrawingAreaClass.parent_class</code></em></i>
+		(<a title="Gtk.WidgetClass" href="GtkWidgetClass">Gtk.WidgetClass</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h2 data-hotdoc-id="GtkDrawingArea">
+	<span><code>GtkDrawingArea</code></span>
+</h2>
+
+
+<div class="hierarchy_container">
+	<div class="hierarchy_details">
+<pre>
+<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object">GObject</a>
+    <span class="lineart">╰──</span><a title="GInitiallyUnowned" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-javascript="GObject.InitiallyUnowned" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-python="GObject.InitiallyUnowned">GInitiallyUnowned</a>
+        <span class="lineart">╰──</span><a title="GtkWidget" href="gtkwidget.html#GtkWidget" data-gi-href-javascript="gtkwidget.html#GtkWidget" data-gi-title-javascript="Gtk.Widget" data-gi-href-python="gtkwidget.html#GtkWidget" data-gi-title-python="Gtk.Widget">GtkWidget</a>
+            <span class="lineart">╰──</span>GtkDrawingArea
+</pre>
+
+</div>
+
+</div>
+
+<div class="interfaces_container">
+	
+<p><b>Implemented interfaces:</b>
+    AtkImplementorIface, <a title="GtkBuildable" href="gtkbuildable.html#GtkBuildable" data-gi-href-javascript="gtkbuildable.html#GtkBuildable" data-gi-title-javascript="Gtk.Buildable" data-gi-href-python="gtkbuildable.html#GtkBuildable" data-gi-title-python="Gtk.Buildable">GtkBuildable</a>
+</p>
+
+</div>
+
+
+
+
+	<div class="members-container">
+		<h3>Members</h3>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkDrawingArea.widget">
+	<div>
+		<i><em><code>widget</code></em></i>
+		(<a title="GtkWidget" href="gtkwidget.html#GtkWidget" data-gi-href-javascript="gtkwidget.html#GtkWidget" data-gi-title-javascript="Gtk.Widget" data-gi-href-python="gtkwidget.html#GtkWidget" data-gi-title-python="Gtk.Widget">GtkWidget</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h2 data-hotdoc-id="GtkDrawingArea">
+	<span><code>GtkDrawingArea</code></span>
+</h2>
+
+
+<div class="hierarchy_container">
+	<div class="hierarchy_details">
+<pre>
+<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object">GObject</a>
+    <span class="lineart">╰──</span><a title="GInitiallyUnowned" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-javascript="GObject.InitiallyUnowned" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-python="GObject.InitiallyUnowned">GInitiallyUnowned</a>
+        <span class="lineart">╰──</span><a title="GtkWidget" href="gtkwidget.html#GtkWidget" data-gi-href-javascript="gtkwidget.html#GtkWidget" data-gi-title-javascript="Gtk.Widget" data-gi-href-python="gtkwidget.html#GtkWidget" data-gi-title-python="Gtk.Widget">GtkWidget</a>
+            <span class="lineart">╰──</span>GtkDrawingArea
+</pre>
+
+</div>
+
+</div>
+
+<div class="interfaces_container">
+	
+<p><b>Implemented interfaces:</b>
+    AtkImplementorIface, <a title="GtkBuildable" href="gtkbuildable.html#GtkBuildable" data-gi-href-javascript="gtkbuildable.html#GtkBuildable" data-gi-title-javascript="Gtk.Buildable" data-gi-href-python="gtkbuildable.html#GtkBuildable" data-gi-title-python="Gtk.Buildable">GtkBuildable</a>
+</p>
+
+</div>
+
+
+
+
+	<div class="members-container">
+		<h3>Members</h3>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkDrawingArea.widget">
+	<div>
+		<i><em><code>widget</code></em></i>
+		(<a title="GtkWidget" href="gtkwidget.html#GtkWidget" data-gi-href-javascript="gtkwidget.html#GtkWidget" data-gi-title-javascript="Gtk.Widget" data-gi-href-python="gtkwidget.html#GtkWidget" data-gi-title-python="Gtk.Widget">GtkWidget</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+
+</div>
+
+
+            <h3 class="symbol_section">Constructors</h3>
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_drawing_area_new">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_drawing_area_new">
+	<span><code>gtk_drawing_area_new</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkWidget" href="gtkwidget.html#GtkWidget">GtkWidget</a> *
+gtk_drawing_area_new ()</pre>
+
+<p>Creates a new drawing area.</p>
+
+
+
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>a new <a href="gtkdrawingarea.html#GtkDrawingArea">GtkDrawingArea</a></p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_drawing_area_new">
+	<span><code>Gtk.prototype.new</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.new(): {
+    // javascript wrapper for 'gtk_drawing_area_new'
+}</pre>
+
+<p>Creates a new drawing area.</p>
+
+
+
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>a new <a href="gtkdrawingarea.html#GtkDrawingArea">Gtk.DrawingArea</a></p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_drawing_area_new">
+	<span><code>Gtk.DrawingArea.new</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.DrawingArea.new ():
+    #python wrapper for 'gtk_drawing_area_new'</pre>
+
+<p>Creates a new drawing area.</p>
+
+
+
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>a new <a href="gtkdrawingarea.html#GtkDrawingArea">Gtk.DrawingArea</a></p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+
+            <h3 class="symbol_section">Methods</h3>
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.90;" id="gtk_drawing_area_get_content_width">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_drawing_area_get_content_width">
+	<span><code>gtk_drawing_area_get_content_width</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+int
+gtk_drawing_area_get_content_width (<a title="GtkDrawingArea" href="gtkdrawingarea.html#GtkDrawingArea">GtkDrawingArea</a> * self)</pre>
+
+<p>Retrieves the value previously set via <a href="gtkdrawingarea.html#gtk_drawing_area_set_content_width">gtk_drawing_area_set_content_width</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>self</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkdrawingarea.html#GtkDrawingArea">GtkDrawingArea</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>The width requested for content of the drawing area</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.90
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_drawing_area_get_content_width">
+	<span><code>Gtk.prototype.get_content_width</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_content_width(): {
+    // javascript wrapper for 'gtk_drawing_area_get_content_width'
+}</pre>
+
+<p>Retrieves the value previously set via <a href="gtkdrawingarea.html#gtk_drawing_area_set_content_width">Gtk.prototype.set_content_width</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>self</code></em></i>
+					(
+						<a title="Gtk.DrawingArea" href="gtkdrawingarea.html#GtkDrawingArea">Gtk.DrawingArea</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkdrawingarea.html#GtkDrawingArea">Gtk.DrawingArea</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p>The width requested for content of the drawing area</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.90
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_drawing_area_get_content_width">
+	<span><code>Gtk.DrawingArea.get_content_width</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.DrawingArea.get_content_width (self):
+    #python wrapper for 'gtk_drawing_area_get_content_width'</pre>
+
+<p>Retrieves the value previously set via <a href="gtkdrawingarea.html#gtk_drawing_area_set_content_width">Gtk.DrawingArea.set_content_width</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>self</code></em></i>
+					(
+						<a title="Gtk.DrawingArea" href="gtkdrawingarea.html#GtkDrawingArea">Gtk.DrawingArea</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkdrawingarea.html#GtkDrawingArea">Gtk.DrawingArea</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+										)
+								–
+			</div>
+							<p>The width requested for content of the drawing area</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.90
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.90;" id="gtk_drawing_area_set_content_width">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_drawing_area_set_content_width">
+	<span><code>gtk_drawing_area_set_content_width</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_drawing_area_set_content_width (<a title="GtkDrawingArea" href="gtkdrawingarea.html#GtkDrawingArea">GtkDrawingArea</a> * self,
+                                    int width)</pre>
+
+<p>Sets the desired width of the contents of the drawing area. Note that
+because widgets may be allocated larger sizes than they requested, it is
+possible that the actual width passed to your draw function is larger
+than the width set here. You can use <a href="gtkwidget.html#gtk_widget_set_halign">gtk_widget_set_halign</a> to avoid
+that.</p>
+<p>If the width is set to 0 (the default), the drawing area may disappear.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>self</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkdrawingarea.html#GtkDrawingArea">GtkDrawingArea</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>width</code></em></i>
+				–
+	</div>
+			<p>the width of contents</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.90
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_drawing_area_set_content_width">
+	<span><code>Gtk.prototype.set_content_width</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_content_width(width: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_drawing_area_set_content_width'
+}</pre>
+
+<p>Sets the desired width of the contents of the drawing area. Note that
+because widgets may be allocated larger sizes than they requested, it is
+possible that the actual width passed to your draw function is larger
+than the width set here. You can use <a href="gtkwidget.html#gtk_widget_set_halign">Gtk.prototype.set_halign</a> to avoid
+that.</p>
+<p>If the width is set to 0 (the default), the drawing area may disappear.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>self</code></em></i>
+					(
+						<a title="Gtk.DrawingArea" href="gtkdrawingarea.html#GtkDrawingArea">Gtk.DrawingArea</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkdrawingarea.html#GtkDrawingArea">Gtk.DrawingArea</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>width</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the width of contents</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.90
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_drawing_area_set_content_width">
+	<span><code>Gtk.DrawingArea.set_content_width</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.DrawingArea.set_content_width (self, width):
+    #python wrapper for 'gtk_drawing_area_set_content_width'</pre>
+
+<p>Sets the desired width of the contents of the drawing area. Note that
+because widgets may be allocated larger sizes than they requested, it is
+possible that the actual width passed to your draw function is larger
+than the width set here. You can use <a href="gtkwidget.html#gtk_widget_set_halign">Gtk.Widget.set_halign</a> to avoid
+that.</p>
+<p>If the width is set to 0 (the default), the drawing area may disappear.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>self</code></em></i>
+					(
+						<a title="Gtk.DrawingArea" href="gtkdrawingarea.html#GtkDrawingArea">Gtk.DrawingArea</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkdrawingarea.html#GtkDrawingArea">Gtk.DrawingArea</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>width</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>the width of contents</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.90
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.90;" id="gtk_drawing_area_get_content_height">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_drawing_area_get_content_height">
+	<span><code>gtk_drawing_area_get_content_height</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+int
+gtk_drawing_area_get_content_height (<a title="GtkDrawingArea" href="gtkdrawingarea.html#GtkDrawingArea">GtkDrawingArea</a> * self)</pre>
+
+<p>Retrieves the value previously set via <a href="gtkdrawingarea.html#gtk_drawing_area_set_content_height">gtk_drawing_area_set_content_height</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>self</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkdrawingarea.html#GtkDrawingArea">GtkDrawingArea</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>The height requested for content of the drawing area</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.90
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_drawing_area_get_content_height">
+	<span><code>Gtk.prototype.get_content_height</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_content_height(): {
+    // javascript wrapper for 'gtk_drawing_area_get_content_height'
+}</pre>
+
+<p>Retrieves the value previously set via <a href="gtkdrawingarea.html#gtk_drawing_area_set_content_height">Gtk.prototype.set_content_height</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>self</code></em></i>
+					(
+						<a title="Gtk.DrawingArea" href="gtkdrawingarea.html#GtkDrawingArea">Gtk.DrawingArea</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkdrawingarea.html#GtkDrawingArea">Gtk.DrawingArea</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p>The height requested for content of the drawing area</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.90
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_drawing_area_get_content_height">
+	<span><code>Gtk.DrawingArea.get_content_height</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.DrawingArea.get_content_height (self):
+    #python wrapper for 'gtk_drawing_area_get_content_height'</pre>
+
+<p>Retrieves the value previously set via <a href="gtkdrawingarea.html#gtk_drawing_area_set_content_height">Gtk.DrawingArea.set_content_height</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>self</code></em></i>
+					(
+						<a title="Gtk.DrawingArea" href="gtkdrawingarea.html#GtkDrawingArea">Gtk.DrawingArea</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkdrawingarea.html#GtkDrawingArea">Gtk.DrawingArea</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+										)
+								–
+			</div>
+							<p>The height requested for content of the drawing area</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.90
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.90;" id="gtk_drawing_area_set_content_height">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_drawing_area_set_content_height">
+	<span><code>gtk_drawing_area_set_content_height</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_drawing_area_set_content_height (<a title="GtkDrawingArea" href="gtkdrawingarea.html#GtkDrawingArea">GtkDrawingArea</a> * self,
+                                     int height)</pre>
+
+<p>Sets the desired height of the contents of the drawing area. Note that
+because widgets may be allocated larger sizes than they requested, it is
+possible that the actual height passed to your draw function is larger
+than the height set here. You can use <a href="gtkwidget.html#gtk_widget_set_valign">gtk_widget_set_valign</a> to avoid
+that.</p>
+<p>If the height is set to 0 (the default), the drawing area may disappear.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>self</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkdrawingarea.html#GtkDrawingArea">GtkDrawingArea</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>height</code></em></i>
+				–
+	</div>
+			<p>the height of contents</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.90
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_drawing_area_set_content_height">
+	<span><code>Gtk.prototype.set_content_height</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_content_height(height: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_drawing_area_set_content_height'
+}</pre>
+
+<p>Sets the desired height of the contents of the drawing area. Note that
+because widgets may be allocated larger sizes than they requested, it is
+possible that the actual height passed to your draw function is larger
+than the height set here. You can use <a href="gtkwidget.html#gtk_widget_set_valign">Gtk.prototype.set_valign</a> to avoid
+that.</p>
+<p>If the height is set to 0 (the default), the drawing area may disappear.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>self</code></em></i>
+					(
+						<a title="Gtk.DrawingArea" href="gtkdrawingarea.html#GtkDrawingArea">Gtk.DrawingArea</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkdrawingarea.html#GtkDrawingArea">Gtk.DrawingArea</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>height</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the height of contents</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.90
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_drawing_area_set_content_height">
+	<span><code>Gtk.DrawingArea.set_content_height</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.DrawingArea.set_content_height (self, height):
+    #python wrapper for 'gtk_drawing_area_set_content_height'</pre>
+
+<p>Sets the desired height of the contents of the drawing area. Note that
+because widgets may be allocated larger sizes than they requested, it is
+possible that the actual height passed to your draw function is larger
+than the height set here. You can use <a href="gtkwidget.html#gtk_widget_set_valign">Gtk.Widget.set_valign</a> to avoid
+that.</p>
+<p>If the height is set to 0 (the default), the drawing area may disappear.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>self</code></em></i>
+					(
+						<a title="Gtk.DrawingArea" href="gtkdrawingarea.html#GtkDrawingArea">Gtk.DrawingArea</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkdrawingarea.html#GtkDrawingArea">Gtk.DrawingArea</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>height</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>the height of contents</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.90
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.90;" id="gtk_drawing_area_set_draw_func">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_drawing_area_set_draw_func">
+	<span><code>gtk_drawing_area_set_draw_func</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_drawing_area_set_draw_func (<a title="GtkDrawingArea" href="gtkdrawingarea.html#GtkDrawingArea">GtkDrawingArea</a> * self,
+                                <a title="GtkDrawingAreaDrawFunc" href="gtkdrawingarea.html#GtkDrawingAreaDrawFunc">GtkDrawingAreaDrawFunc</a> draw_func,
+                                <a title="gpointer" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer">gpointer</a> user_data,
+                                <a title="GDestroyNotify" href="https://developer.gnome.org/glib/unstable/glib-Datasets.html#GDestroyNotify">GDestroyNotify</a> destroy)</pre>
+
+<p>Setting a draw function is the main thing you want to do when using a drawing
+area. It is called whenever GTK needs to draw the contents of the drawing area
+to the screen.</p>
+<p>The draw function will be called during the drawing stage of GTK. In the
+drawing stage it is not allowed to change properties of any GTK widgets or call
+any functions that would cause any properties to be changed.
+You should restrict yourself exclusively to drawing your contents in the draw
+function.</p>
+<p>If what you are drawing does change, call <a href="gtkwidget.html#gtk_widget_queue_draw">gtk_widget_queue_draw</a> on the
+drawing area. This will call a redraw and will call <em>draw_func</em> again.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>self</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkdrawingarea.html#GtkDrawingArea">GtkDrawingArea</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>draw_func</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="This parameter is a closure for callbacks, many bindings can pass NULL to user_data"><span class="acronym">closure</span></abbr>]</span>
+<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>callback that lets you draw
+the drawing area's contents</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>user_data</code></em></i>
+				–
+	</div>
+			<p>user data passed to <em>draw_func</em></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>destroy</code></em></i>
+				–
+	</div>
+			<p>destroy notifier for <em>user_data</em></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.90
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_drawing_area_set_draw_func">
+	<span><code>Gtk.prototype.set_draw_func</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_draw_func(draw_func: <a title="Gtk.DrawingAreaDrawFunc" href="gtkdrawingarea.html#GtkDrawingAreaDrawFunc">Gtk.DrawingAreaDrawFunc</a>, user_data: <a title="Object" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>, destroy: <a title="GLib.DestroyNotify" href="https://developer.gnome.org/glib/unstable/glib-Datasets.html#GDestroyNotify">GLib.DestroyNotify</a>): {
+    // javascript wrapper for 'gtk_drawing_area_set_draw_func'
+}</pre>
+
+<p>Setting a draw function is the main thing you want to do when using a drawing
+area. It is called whenever GTK needs to draw the contents of the drawing area
+to the screen.</p>
+<p>The draw function will be called during the drawing stage of GTK. In the
+drawing stage it is not allowed to change properties of any GTK widgets or call
+any functions that would cause any properties to be changed.
+You should restrict yourself exclusively to drawing your contents in the draw
+function.</p>
+<p>If what you are drawing does change, call <a href="gtkwidget.html#gtk_widget_queue_draw">Gtk.prototype.queue_draw</a> on the
+drawing area. This will call a redraw and will call <em>draw_func</em> again.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>self</code></em></i>
+					(
+						<a title="Gtk.DrawingArea" href="gtkdrawingarea.html#GtkDrawingArea">Gtk.DrawingArea</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkdrawingarea.html#GtkDrawingArea">Gtk.DrawingArea</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>draw_func</code></em></i>
+					(
+						<a title="Gtk.DrawingAreaDrawFunc" href="gtkdrawingarea.html#GtkDrawingAreaDrawFunc">Gtk.DrawingAreaDrawFunc</a>
+						)
+				–
+	</div>
+			<p>callback that lets you draw
+the drawing area's contents</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>user_data</code></em></i>
+					(
+						<a title="Object" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>
+						)
+				–
+	</div>
+			<p>user data passed to <em>draw_func</em></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>destroy</code></em></i>
+					(
+						<a title="GLib.DestroyNotify" href="https://developer.gnome.org/glib/unstable/glib-Datasets.html#GDestroyNotify">GLib.DestroyNotify</a>
+						)
+				–
+	</div>
+			<p>destroy notifier for <em>user_data</em></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.90
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_drawing_area_set_draw_func">
+	<span><code>Gtk.DrawingArea.set_draw_func</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.DrawingArea.set_draw_func (self, draw_func, user_data, destroy):
+    #python wrapper for 'gtk_drawing_area_set_draw_func'</pre>
+
+<p>Setting a draw function is the main thing you want to do when using a drawing
+area. It is called whenever GTK needs to draw the contents of the drawing area
+to the screen.</p>
+<p>The draw function will be called during the drawing stage of GTK. In the
+drawing stage it is not allowed to change properties of any GTK widgets or call
+any functions that would cause any properties to be changed.
+You should restrict yourself exclusively to drawing your contents in the draw
+function.</p>
+<p>If what you are drawing does change, call <a href="gtkwidget.html#gtk_widget_queue_draw">Gtk.Widget.queue_draw</a> on the
+drawing area. This will call a redraw and will call <em>draw_func</em> again.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>self</code></em></i>
+					(
+						<a title="Gtk.DrawingArea" href="gtkdrawingarea.html#GtkDrawingArea">Gtk.DrawingArea</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkdrawingarea.html#GtkDrawingArea">Gtk.DrawingArea</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>draw_func</code></em></i>
+					(
+						<a title="Gtk.DrawingAreaDrawFunc" href="gtkdrawingarea.html#GtkDrawingAreaDrawFunc">Gtk.DrawingAreaDrawFunc</a>
+						)
+				–
+	</div>
+			<p>callback that lets you draw
+the drawing area's contents</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>user_data</code></em></i>
+					(
+						<a title="object" href="https://docs.python.org/3/library/functions.html#object">object</a>
+						)
+				–
+	</div>
+			<p>user data passed to <em>draw_func</em></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>destroy</code></em></i>
+					(
+						<a title="GLib.DestroyNotify" href="https://developer.gnome.org/glib/unstable/glib-Datasets.html#GDestroyNotify">GLib.DestroyNotify</a>
+						)
+				–
+	</div>
+			<p>destroy notifier for <em>user_data</em></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.90
+		</p>
+
+
+        </div>
+
+</div>
+
+
+        
+
+            <h2 class="symbol_section">Callbacks</h2>
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.90;" id="GtkDrawingAreaDrawFunc">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h3 data-hotdoc-id="GtkDrawingAreaDrawFunc">
+	<span><code>GtkDrawingAreaDrawFunc</code></span>
+</h3>
+
+
+
+
+<pre class="c-prototype">
+(*GtkDrawingAreaDrawFunc) (<a title="GtkDrawingArea" href="gtkdrawingarea.html#GtkDrawingArea">GtkDrawingArea</a> * drawing_area,
+                           <a title="cairo_t" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo_t</a> * cr,
+                           int width,
+                           int height,
+                           <a title="gpointer" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer">gpointer</a> user_data)</pre>
+
+<p>Whenever <em>drawing_area</em> needs to redraw, this function will be called.</p>
+<p>This function should exclusively redraw the contents of the drawing area
+and must not call any widget functions that cause changes.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>drawing_area</code></em></i>
+				–
+	</div>
+			<p>the <a href="gtkdrawingarea.html#GtkDrawingArea">GtkDrawingArea</a> to redraw</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cr</code></em></i>
+				–
+	</div>
+			<p>the context to draw to</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>width</code></em></i>
+				–
+	</div>
+			<p>the actual width of the contents. This value will be at least
+as wide as GtkDrawingArea:width.</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>height</code></em></i>
+				–
+	</div>
+			<p>the actual height of the contents. This value will be at least
+as wide as GtkDrawingArea:height.</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>user_data</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="This parameter is a closure for callbacks, many bindings can pass NULL here"><span class="acronym">closure</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>user data</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.90
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h3 data-hotdoc-id="GtkDrawingAreaDrawFunc">
+	<span><code>Gtk.DrawingAreaDrawFunc</code></span>
+</h3>
+
+
+
+
+<pre class="c-prototype">
+(*Gtk.DrawingAreaDrawFunc) (<a title="Gtk.DrawingArea" href="gtkdrawingarea.html#GtkDrawingArea">Gtk.DrawingArea</a>,
+                            <a title="cairo.Context" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a>,
+                            <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>,
+                            <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>,
+                            <a title="Object" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</pre>
+
+<p>Whenever <em>drawing_area</em> needs to redraw, this function will be called.</p>
+<p>This function should exclusively redraw the contents of the drawing area
+and must not call any widget functions that cause changes.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>drawing_area</code></em></i>
+					(
+						<a title="Gtk.DrawingArea" href="gtkdrawingarea.html#GtkDrawingArea">Gtk.DrawingArea</a>
+						)
+				–
+	</div>
+			<p>the <a href="gtkdrawingarea.html#GtkDrawingArea">Gtk.DrawingArea</a> to redraw</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cr</code></em></i>
+					(
+						<a title="cairo.Context" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a>
+						)
+				–
+	</div>
+			<p>the context to draw to</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>width</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the actual width of the contents. This value will be at least
+as wide as GtkDrawingArea:width.</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>height</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the actual height of the contents. This value will be at least
+as wide as GtkDrawingArea:height.</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>user_data</code></em></i>
+					(
+						<a title="Object" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>
+						)
+				–
+	</div>
+			<p>user data</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.90
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="GtkDrawingAreaDrawFunc">
+	<span><code>Gtk.DrawingAreaDrawFunc</code></span>
+</h3>
+
+
+
+
+<pre class="c-prototype">
+(*Gtk.DrawingAreaDrawFunc) (<a title="Gtk.DrawingArea" href="gtkdrawingarea.html#GtkDrawingArea">Gtk.DrawingArea</a>,
+                            <a title="cairo.Context" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a>,
+                            <a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>,
+                            <a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>,
+                            <a title="object" href="https://docs.python.org/3/library/functions.html#object">object</a>)</pre>
+
+<p>Whenever <em>drawing_area</em> needs to redraw, this function will be called.</p>
+<p>This function should exclusively redraw the contents of the drawing area
+and must not call any widget functions that cause changes.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>drawing_area</code></em></i>
+					(
+						<a title="Gtk.DrawingArea" href="gtkdrawingarea.html#GtkDrawingArea">Gtk.DrawingArea</a>
+						)
+				–
+	</div>
+			<p>the <a href="gtkdrawingarea.html#GtkDrawingArea">Gtk.DrawingArea</a> to redraw</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cr</code></em></i>
+					(
+						<a title="cairo.Context" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a>
+						)
+				–
+	</div>
+			<p>the context to draw to</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>width</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>the actual width of the contents. This value will be at least
+as wide as GtkDrawingArea:width.</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>height</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>the actual height of the contents. This value will be at least
+as wide as GtkDrawingArea:height.</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>user_data</code></em></i>
+					(
+						<a title="object" href="https://docs.python.org/3/library/functions.html#object">object</a>
+						)
+				–
+	</div>
+			<p>user data</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.90
+		</p>
+
+
+        </div>
+
+</div>
+
+
+
+
+
+
+		
+	</div>
+	<div id="search_results">
+		<p>The results of the search are</p>
+	</div>
+	<hr>
+	<div id="footer">
+		    
+
+	</div>
+</div>
+
+<div id="toc-column">
+	
+		<div class="edit-button">
+		
+
+	</div>
+		<div id="toc-wrapper">
+		<nav id="toc"></nav>
+	</div>
+</div>
+</div>
+</main>
+
+</body>
+
+<script src="assets/js/navbar_offset_scroller.js"></script>
+</html>

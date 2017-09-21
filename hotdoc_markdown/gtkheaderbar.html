@@ -1,0 +1,3107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<base href="..">
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>gtkheaderbar</title>
+
+<link rel="stylesheet" href="assets/css/custom_bootstrap.css" type="text/css">
+<link rel="stylesheet" href="assets/css/bootstrap-toc.min.css" type="text/css">
+<link rel="stylesheet" href="assets/css/frontend.css" type="text/css">
+<link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
+
+<link rel="stylesheet" href="assets/css/prism.css" type="text/css">
+
+<script src="assets/js/mustache.min.js"></script>
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/scrollspy.js"></script>
+<script src="assets/js/bootstrap.js"></script>
+<script src="assets/js/typeahead.jquery.min.js"></script>
+<script src="assets/js/search.js"></script>
+<script src="assets/js/isotope.pkgd.min.js"></script>
+<script src="assets/js/compare-versions.js"></script>
+<script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="assets/js/bootstrap-toc.min.js"></script>
+<script src="assets/js/jquery.touchSwipe.min.js"></script>
+<script src="assets/js/anchor.min.js"></script>
+<script src="assets/js/tag_filtering.js"></script>
+<script src="assets/js/language_switching.js"></script>
+
+<script src="assets/js/lines_around_headings.js"></script>
+
+<script src="assets/js/prism-core.js"></script>
+<script src="assets/js/prism-autoloader.js"></script>
+<script src="assets/js/prism_autoloader_path_override.js"></script>
+<script src="assets/js/trie.js"></script>
+
+
+</head>
+
+<body class="no-script
+" data-spy="scroll" data-target="#toc" data-offset="70">
+
+<script>
+$('body').removeClass('no-script');
+</script>
+
+<nav class="navbar navbar-fixed-top navbar-default" id="topnav">
+	<div class="container-fluid">
+		<div class="navbar-right">
+			<a id="toc-toggle">
+				<span class="glyphicon glyphicon-menu-right"></span>
+				<span class="glyphicon glyphicon-menu-left"></span>
+			</a>
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-wrapper" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<form action="" class="navbar-form pull-right" id="navbar-search-form">
+                               <div class="form-group has-feedback">
+                                       <input type="text" class="form-control input-sm" name="search" id="sidenav-lookup-field" placeholder="search" disabled>
+				       <span class="glyphicon glyphicon-search form-control-feedback" id="search-mgn-glass"></span>
+                               </div>
+                        </form>
+		</div>
+		<div class="navbar-header">
+			<a id="sidenav-toggle">
+				<span class="glyphicon glyphicon-menu-right"></span>
+				<span class="glyphicon glyphicon-menu-left"></span>
+			</a>
+			<a id="home-link" href="index.html" class="hotdoc-navbar-brand">
+				<img src="assets/images/home.svg" alt="Home">
+			</a>
+		</div>
+		<div class="navbar-collapse collapse" id="navbar-wrapper">
+			<ul class="nav navbar-nav" id="menu">
+							</ul>
+			<div class="hidden-xs hidden-sm navbar-text navbar-center">
+							</div>
+		</div>
+	</div>
+</nav>
+
+<main>
+<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="hotdoc_markdown/gtkheaderbar.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['c', 'javascript', 'python']" data-hotdoc-meta-gi-language="c">
+<script src="assets/js/utils.js"></script>
+
+<div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
+	<script src="assets/js/navigation.js"></script>
+	<script src="assets/js/sitemap.js"></script>
+</div>
+
+<div id="body">
+	<div id="main">
+				    <div id="page-description" data-hotdoc-source="gtkheaderbar.markdown" data-hotdoc-role="main">
+    </div>
+        
+        
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="GtkHeaderBar">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h2 data-hotdoc-id="GtkHeaderBar">
+	<span><code>GtkHeaderBar</code></span>
+</h2>
+
+
+<div class="hierarchy_container">
+	<div class="hierarchy_details">
+<pre>
+<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object">GObject</a>
+    <span class="lineart">╰──</span><a title="GInitiallyUnowned" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-python="GObject.InitiallyUnowned" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-javascript="GObject.InitiallyUnowned">GInitiallyUnowned</a>
+        <span class="lineart">╰──</span><a title="GtkWidget" href="hotdoc_markdown/gtkwidget.html#GtkWidget" data-gi-href-python="hotdoc_markdown/gtkwidget.html#GtkWidget" data-gi-title-python="Gtk.Widget" data-gi-href-javascript="hotdoc_markdown/gtkwidget.html#GtkWidget" data-gi-title-javascript="Gtk.Widget">GtkWidget</a>
+            <span class="lineart">╰──</span><a title="GtkContainer" href="hotdoc_markdown/gtkcontainer.html#GtkContainer" data-gi-href-python="hotdoc_markdown/gtkcontainer.html#GtkContainer" data-gi-title-python="Gtk.Container" data-gi-href-javascript="hotdoc_markdown/gtkcontainer.html#GtkContainer" data-gi-title-javascript="Gtk.Container">GtkContainer</a>
+                <span class="lineart">╰──</span>GtkHeaderBar
+</pre>
+
+</div>
+
+</div>
+
+<div class="interfaces_container">
+	
+<p><b>Implemented interfaces:</b>
+    AtkImplementorIface, <a title="GtkBuildable" href="hotdoc_markdown/gtkbuildable.html#GtkBuildable" data-gi-href-python="hotdoc_markdown/gtkbuildable.html#GtkBuildable" data-gi-title-python="Gtk.Buildable" data-gi-href-javascript="hotdoc_markdown/gtkbuildable.html#GtkBuildable" data-gi-title-javascript="Gtk.Buildable">GtkBuildable</a>
+</p>
+
+</div>
+
+
+
+
+	<div class="members-container">
+		<h3>Members</h3>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkHeaderBar.container">
+	<div>
+		<i><em><code>container</code></em></i>
+		(<a title="GtkContainer" href="hotdoc_markdown/gtkcontainer.html#GtkContainer" data-gi-href-python="hotdoc_markdown/gtkcontainer.html#GtkContainer" data-gi-title-python="Gtk.Container" data-gi-href-javascript="hotdoc_markdown/gtkcontainer.html#GtkContainer" data-gi-title-javascript="Gtk.Container">GtkContainer</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+<h3>Class structure</h3>
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="GtkHeaderBarClass">
+	<span><code>GtkHeaderBarClass</code></span>
+</h4>
+
+
+
+
+
+	<div class="members-container">
+		<h5>Fields</h5>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkHeaderBarClass.parent_class">
+	<div>
+		<i><em><code>parent_class</code></em></i>
+		(<a title="GtkContainerClass" href="GtkContainerClass">GtkContainerClass</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h3>
+	Gtk.HeaderBarClass
+</h3>
+
+
+
+
+
+	<div class="members-container">
+		<h5>Attributes</h5>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkHeaderBarClass.parent_class">
+	<div>
+		<i><em><code>HeaderBarClass.parent_class</code></em></i>
+		(<a title="Gtk.ContainerClass" href="GtkContainerClass">Gtk.ContainerClass</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3>
+	Gtk.HeaderBarClass
+</h3>
+
+
+
+
+
+	<div class="members-container">
+		<h5>Attributes</h5>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkHeaderBarClass.parent_class">
+	<div>
+		<i><em><code>HeaderBarClass.parent_class</code></em></i>
+		(<a title="Gtk.ContainerClass" href="GtkContainerClass">Gtk.ContainerClass</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h2 data-hotdoc-id="GtkHeaderBar">
+	<span><code>GtkHeaderBar</code></span>
+</h2>
+
+
+<div class="hierarchy_container">
+	<div class="hierarchy_details">
+<pre>
+<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object">GObject</a>
+    <span class="lineart">╰──</span><a title="GInitiallyUnowned" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-python="GObject.InitiallyUnowned" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-javascript="GObject.InitiallyUnowned">GInitiallyUnowned</a>
+        <span class="lineart">╰──</span><a title="GtkWidget" href="hotdoc_markdown/gtkwidget.html#GtkWidget" data-gi-href-python="hotdoc_markdown/gtkwidget.html#GtkWidget" data-gi-title-python="Gtk.Widget" data-gi-href-javascript="hotdoc_markdown/gtkwidget.html#GtkWidget" data-gi-title-javascript="Gtk.Widget">GtkWidget</a>
+            <span class="lineart">╰──</span><a title="GtkContainer" href="hotdoc_markdown/gtkcontainer.html#GtkContainer" data-gi-href-python="hotdoc_markdown/gtkcontainer.html#GtkContainer" data-gi-title-python="Gtk.Container" data-gi-href-javascript="hotdoc_markdown/gtkcontainer.html#GtkContainer" data-gi-title-javascript="Gtk.Container">GtkContainer</a>
+                <span class="lineart">╰──</span>GtkHeaderBar
+</pre>
+
+</div>
+
+</div>
+
+<div class="interfaces_container">
+	
+<p><b>Implemented interfaces:</b>
+    AtkImplementorIface, <a title="GtkBuildable" href="hotdoc_markdown/gtkbuildable.html#GtkBuildable" data-gi-href-python="hotdoc_markdown/gtkbuildable.html#GtkBuildable" data-gi-title-python="Gtk.Buildable" data-gi-href-javascript="hotdoc_markdown/gtkbuildable.html#GtkBuildable" data-gi-title-javascript="Gtk.Buildable">GtkBuildable</a>
+</p>
+
+</div>
+
+
+
+
+	<div class="members-container">
+		<h3>Members</h3>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkHeaderBar.container">
+	<div>
+		<i><em><code>container</code></em></i>
+		(<a title="GtkContainer" href="hotdoc_markdown/gtkcontainer.html#GtkContainer" data-gi-href-python="hotdoc_markdown/gtkcontainer.html#GtkContainer" data-gi-title-python="Gtk.Container" data-gi-href-javascript="hotdoc_markdown/gtkcontainer.html#GtkContainer" data-gi-title-javascript="Gtk.Container">GtkContainer</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h2 data-hotdoc-id="GtkHeaderBar">
+	<span><code>GtkHeaderBar</code></span>
+</h2>
+
+
+<div class="hierarchy_container">
+	<div class="hierarchy_details">
+<pre>
+<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object">GObject</a>
+    <span class="lineart">╰──</span><a title="GInitiallyUnowned" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-python="GObject.InitiallyUnowned" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-javascript="GObject.InitiallyUnowned">GInitiallyUnowned</a>
+        <span class="lineart">╰──</span><a title="GtkWidget" href="hotdoc_markdown/gtkwidget.html#GtkWidget" data-gi-href-python="hotdoc_markdown/gtkwidget.html#GtkWidget" data-gi-title-python="Gtk.Widget" data-gi-href-javascript="hotdoc_markdown/gtkwidget.html#GtkWidget" data-gi-title-javascript="Gtk.Widget">GtkWidget</a>
+            <span class="lineart">╰──</span><a title="GtkContainer" href="hotdoc_markdown/gtkcontainer.html#GtkContainer" data-gi-href-python="hotdoc_markdown/gtkcontainer.html#GtkContainer" data-gi-title-python="Gtk.Container" data-gi-href-javascript="hotdoc_markdown/gtkcontainer.html#GtkContainer" data-gi-title-javascript="Gtk.Container">GtkContainer</a>
+                <span class="lineart">╰──</span>GtkHeaderBar
+</pre>
+
+</div>
+
+</div>
+
+<div class="interfaces_container">
+	
+<p><b>Implemented interfaces:</b>
+    AtkImplementorIface, <a title="GtkBuildable" href="hotdoc_markdown/gtkbuildable.html#GtkBuildable" data-gi-href-python="hotdoc_markdown/gtkbuildable.html#GtkBuildable" data-gi-title-python="Gtk.Buildable" data-gi-href-javascript="hotdoc_markdown/gtkbuildable.html#GtkBuildable" data-gi-title-javascript="Gtk.Buildable">GtkBuildable</a>
+</p>
+
+</div>
+
+
+
+
+	<div class="members-container">
+		<h3>Members</h3>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkHeaderBar.container">
+	<div>
+		<i><em><code>container</code></em></i>
+		(<a title="GtkContainer" href="hotdoc_markdown/gtkcontainer.html#GtkContainer" data-gi-href-python="hotdoc_markdown/gtkcontainer.html#GtkContainer" data-gi-title-python="Gtk.Container" data-gi-href-javascript="hotdoc_markdown/gtkcontainer.html#GtkContainer" data-gi-title-javascript="Gtk.Container">GtkContainer</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+
+</div>
+
+
+            <h3 class="symbol_section">Constructors</h3>
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.10;" id="gtk_header_bar_new">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_header_bar_new">
+	<span><code>gtk_header_bar_new</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkWidget" href="hotdoc_markdown/gtkwidget.html#GtkWidget">GtkWidget</a> *
+gtk_header_bar_new ()</pre>
+
+<p>Creates a new <a href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">GtkHeaderBar</a> widget.</p>
+
+
+
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>a new <a href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">GtkHeaderBar</a></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_header_bar_new">
+	<span><code>Gtk.prototype.new</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.new(): {
+    // javascript wrapper for 'gtk_header_bar_new'
+}</pre>
+
+<p>Creates a new <a href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">Gtk.HeaderBar</a> widget.</p>
+
+
+
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="hotdoc_markdown/gtkwidget.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>a new <a href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">Gtk.HeaderBar</a></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_header_bar_new">
+	<span><code>Gtk.HeaderBar.new</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.HeaderBar.new ():
+    #python wrapper for 'gtk_header_bar_new'</pre>
+
+<p>Creates a new <a href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">Gtk.HeaderBar</a> widget.</p>
+
+
+
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="hotdoc_markdown/gtkwidget.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>a new <a href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">Gtk.HeaderBar</a></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.10
+		</p>
+
+
+        </div>
+
+</div>
+
+
+            <h3 class="symbol_section">Methods</h3>
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.10;" id="gtk_header_bar_set_title">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_header_bar_set_title">
+	<span><code>gtk_header_bar_set_title</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_header_bar_set_title (<a title="GtkHeaderBar" href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">GtkHeaderBar</a> * bar,
+                          const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * title)</pre>
+
+<p>Sets the title of the <a href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">GtkHeaderBar</a>. The title should help a user
+identify the current view. A good title should not include the
+application name.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>bar</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">GtkHeaderBar</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>title</code></em></i>
+				–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_header_bar_set_title">
+	<span><code>Gtk.prototype.set_title</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_title(title: <a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>): {
+    // javascript wrapper for 'gtk_header_bar_set_title'
+}</pre>
+
+<p>Sets the title of the <a href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">Gtk.HeaderBar</a>. The title should help a user
+identify the current view. A good title should not include the
+application name.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>bar</code></em></i>
+					(
+						<a title="Gtk.HeaderBar" href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">Gtk.HeaderBar</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">Gtk.HeaderBar</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>title</code></em></i>
+					(
+						<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
+						)
+				–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_header_bar_set_title">
+	<span><code>Gtk.HeaderBar.set_title</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.HeaderBar.set_title (self, title):
+    #python wrapper for 'gtk_header_bar_set_title'</pre>
+
+<p>Sets the title of the <a href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">Gtk.HeaderBar</a>. The title should help a user
+identify the current view. A good title should not include the
+application name.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>bar</code></em></i>
+					(
+						<a title="Gtk.HeaderBar" href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">Gtk.HeaderBar</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">Gtk.HeaderBar</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>title</code></em></i>
+					(
+						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
+						)
+				–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.10
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.10;" id="gtk_header_bar_get_title">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_header_bar_get_title">
+	<span><code>gtk_header_bar_get_title</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> *
+gtk_header_bar_get_title (<a title="GtkHeaderBar" href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">GtkHeaderBar</a> * bar)</pre>
+
+<p>Retrieves the title of the header. See <a href="hotdoc_markdown/gtkheaderbar.html#gtk_header_bar_set_title">gtk_header_bar_set_title</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>bar</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">GtkHeaderBar</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					
+										
+<span class="annotation">[<abbr title="NULL may be passed to the value"><span class="acronym">nullable</span></abbr>]</span>
+
+										)
+								–
+			</div>
+							<p>the title of the header, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> if none has
+been set explicitly. The returned string is owned by the widget
+and must not be modified or freed.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_header_bar_get_title">
+	<span><code>Gtk.prototype.get_title</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_title(): {
+    // javascript wrapper for 'gtk_header_bar_get_title'
+}</pre>
+
+<p>Retrieves the title of the header. See <a href="hotdoc_markdown/gtkheaderbar.html#gtk_header_bar_set_title">Gtk.prototype.set_title</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>bar</code></em></i>
+					(
+						<a title="Gtk.HeaderBar" href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">Gtk.HeaderBar</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">Gtk.HeaderBar</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
+										)
+								–
+			</div>
+							<p>the title of the header, or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a> if none has
+been set explicitly. The returned string is owned by the widget
+and must not be modified or freed.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_header_bar_get_title">
+	<span><code>Gtk.HeaderBar.get_title</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.HeaderBar.get_title (self):
+    #python wrapper for 'gtk_header_bar_get_title'</pre>
+
+<p>Retrieves the title of the header. See <a href="hotdoc_markdown/gtkheaderbar.html#gtk_header_bar_set_title">Gtk.HeaderBar.set_title</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>bar</code></em></i>
+					(
+						<a title="Gtk.HeaderBar" href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">Gtk.HeaderBar</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">Gtk.HeaderBar</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
+										)
+								–
+			</div>
+							<p>the title of the header, or <a href="https://docs.python.org/3/library/constants.html#None">None</a> if none has
+been set explicitly. The returned string is owned by the widget
+and must not be modified or freed.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.10
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.10;" id="gtk_header_bar_set_subtitle">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_header_bar_set_subtitle">
+	<span><code>gtk_header_bar_set_subtitle</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_header_bar_set_subtitle (<a title="GtkHeaderBar" href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">GtkHeaderBar</a> * bar,
+                             const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * subtitle)</pre>
+
+<p>Sets the subtitle of the <a href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">GtkHeaderBar</a>. The title should give a user
+an additional detail to help him identify the current view.</p>
+<p>Note that GtkHeaderBar by default reserves room for the subtitle,
+even if none is currently set. If this is not desired, set the
+<a href="gtkheaderbar.html#GtkHeaderBar:has-subtitle">has-subtitle</a> property to <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS">FALSE</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>bar</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">GtkHeaderBar</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>subtitle</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>a subtitle, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_header_bar_set_subtitle">
+	<span><code>Gtk.prototype.set_subtitle</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_subtitle(subtitle: <a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>): {
+    // javascript wrapper for 'gtk_header_bar_set_subtitle'
+}</pre>
+
+<p>Sets the subtitle of the <a href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">Gtk.HeaderBar</a>. The title should give a user
+an additional detail to help him identify the current view.</p>
+<p>Note that GtkHeaderBar by default reserves room for the subtitle,
+even if none is currently set. If this is not desired, set the
+<a href="gtkheaderbar.html#GtkHeaderBar:has-subtitle">has-subtitle</a> property to <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">false</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>bar</code></em></i>
+					(
+						<a title="Gtk.HeaderBar" href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">Gtk.HeaderBar</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">Gtk.HeaderBar</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>subtitle</code></em></i>
+					(
+						<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
+						)
+				–
+	</div>
+			<p>a subtitle, or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_header_bar_set_subtitle">
+	<span><code>Gtk.HeaderBar.set_subtitle</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.HeaderBar.set_subtitle (self, subtitle):
+    #python wrapper for 'gtk_header_bar_set_subtitle'</pre>
+
+<p>Sets the subtitle of the <a href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">Gtk.HeaderBar</a>. The title should give a user
+an additional detail to help him identify the current view.</p>
+<p>Note that GtkHeaderBar by default reserves room for the subtitle,
+even if none is currently set. If this is not desired, set the
+<a href="gtkheaderbar.html#GtkHeaderBar:has-subtitle">has-subtitle</a> property to <a href="https://docs.python.org/3/library/constants.html#False">False</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>bar</code></em></i>
+					(
+						<a title="Gtk.HeaderBar" href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">Gtk.HeaderBar</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">Gtk.HeaderBar</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>subtitle</code></em></i>
+					(
+						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
+						)
+				–
+	</div>
+			<p>a subtitle, or <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.10
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.10;" id="gtk_header_bar_get_subtitle">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_header_bar_get_subtitle">
+	<span><code>gtk_header_bar_get_subtitle</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> *
+gtk_header_bar_get_subtitle (<a title="GtkHeaderBar" href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">GtkHeaderBar</a> * bar)</pre>
+
+<p>Retrieves the subtitle of the header. See <a href="hotdoc_markdown/gtkheaderbar.html#gtk_header_bar_set_subtitle">gtk_header_bar_set_subtitle</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>bar</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">GtkHeaderBar</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					
+										
+<span class="annotation">[<abbr title="NULL may be passed to the value"><span class="acronym">nullable</span></abbr>]</span>
+
+										)
+								–
+			</div>
+							<p>the subtitle of the header, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> if none has
+been set explicitly. The returned string is owned by the widget
+and must not be modified or freed.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_header_bar_get_subtitle">
+	<span><code>Gtk.prototype.get_subtitle</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_subtitle(): {
+    // javascript wrapper for 'gtk_header_bar_get_subtitle'
+}</pre>
+
+<p>Retrieves the subtitle of the header. See <a href="hotdoc_markdown/gtkheaderbar.html#gtk_header_bar_set_subtitle">Gtk.prototype.set_subtitle</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>bar</code></em></i>
+					(
+						<a title="Gtk.HeaderBar" href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">Gtk.HeaderBar</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">Gtk.HeaderBar</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
+										)
+								–
+			</div>
+							<p>the subtitle of the header, or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a> if none has
+been set explicitly. The returned string is owned by the widget
+and must not be modified or freed.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_header_bar_get_subtitle">
+	<span><code>Gtk.HeaderBar.get_subtitle</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.HeaderBar.get_subtitle (self):
+    #python wrapper for 'gtk_header_bar_get_subtitle'</pre>
+
+<p>Retrieves the subtitle of the header. See <a href="hotdoc_markdown/gtkheaderbar.html#gtk_header_bar_set_subtitle">Gtk.HeaderBar.set_subtitle</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>bar</code></em></i>
+					(
+						<a title="Gtk.HeaderBar" href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">Gtk.HeaderBar</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">Gtk.HeaderBar</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
+										)
+								–
+			</div>
+							<p>the subtitle of the header, or <a href="https://docs.python.org/3/library/constants.html#None">None</a> if none has
+been set explicitly. The returned string is owned by the widget
+and must not be modified or freed.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.10
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.12;" id="gtk_header_bar_set_has_subtitle">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_header_bar_set_has_subtitle">
+	<span><code>gtk_header_bar_set_has_subtitle</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_header_bar_set_has_subtitle (<a title="GtkHeaderBar" href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">GtkHeaderBar</a> * bar,
+                                 <a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a> setting)</pre>
+
+<p>Sets whether the header bar should reserve space
+for a subtitle, even if none is currently set.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>bar</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">GtkHeaderBar</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>setting</code></em></i>
+				–
+	</div>
+			<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> to reserve space for a subtitle</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.12
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_header_bar_set_has_subtitle">
+	<span><code>Gtk.prototype.set_has_subtitle</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_has_subtitle(setting: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_header_bar_set_has_subtitle'
+}</pre>
+
+<p>Sets whether the header bar should reserve space
+for a subtitle, even if none is currently set.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>bar</code></em></i>
+					(
+						<a title="Gtk.HeaderBar" href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">Gtk.HeaderBar</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">Gtk.HeaderBar</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>setting</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> to reserve space for a subtitle</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.12
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_header_bar_set_has_subtitle">
+	<span><code>Gtk.HeaderBar.set_has_subtitle</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.HeaderBar.set_has_subtitle (self, setting):
+    #python wrapper for 'gtk_header_bar_set_has_subtitle'</pre>
+
+<p>Sets whether the header bar should reserve space
+for a subtitle, even if none is currently set.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>bar</code></em></i>
+					(
+						<a title="Gtk.HeaderBar" href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">Gtk.HeaderBar</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">Gtk.HeaderBar</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>setting</code></em></i>
+					(
+						<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+						)
+				–
+	</div>
+			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> to reserve space for a subtitle</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.12
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.12;" id="gtk_header_bar_get_has_subtitle">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_header_bar_get_has_subtitle">
+	<span><code>gtk_header_bar_get_has_subtitle</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_header_bar_get_has_subtitle (<a title="GtkHeaderBar" href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">GtkHeaderBar</a> * bar)</pre>
+
+<p>Retrieves whether the header bar reserves space for
+a subtitle, regardless if one is currently set or not.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>bar</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">GtkHeaderBar</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if the header bar reserves space
+for a subtitle</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.12
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_header_bar_get_has_subtitle">
+	<span><code>Gtk.prototype.get_has_subtitle</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_has_subtitle(): {
+    // javascript wrapper for 'gtk_header_bar_get_has_subtitle'
+}</pre>
+
+<p>Retrieves whether the header bar reserves space for
+a subtitle, regardless if one is currently set or not.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>bar</code></em></i>
+					(
+						<a title="Gtk.HeaderBar" href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">Gtk.HeaderBar</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">Gtk.HeaderBar</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if the header bar reserves space
+for a subtitle</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.12
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_header_bar_get_has_subtitle">
+	<span><code>Gtk.HeaderBar.get_has_subtitle</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.HeaderBar.get_has_subtitle (self):
+    #python wrapper for 'gtk_header_bar_get_has_subtitle'</pre>
+
+<p>Retrieves whether the header bar reserves space for
+a subtitle, regardless if one is currently set or not.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>bar</code></em></i>
+					(
+						<a title="Gtk.HeaderBar" href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">Gtk.HeaderBar</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">Gtk.HeaderBar</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+										)
+								–
+			</div>
+							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if the header bar reserves space
+for a subtitle</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.12
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.10;" id="gtk_header_bar_set_custom_title">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_header_bar_set_custom_title">
+	<span><code>gtk_header_bar_set_custom_title</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_header_bar_set_custom_title (<a title="GtkHeaderBar" href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">GtkHeaderBar</a> * bar,
+                                 <a title="GtkWidget" href="hotdoc_markdown/gtkwidget.html#GtkWidget">GtkWidget</a> * title_widget)</pre>
+
+<p>Sets a custom title for the <a href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">GtkHeaderBar</a>.</p>
+<p>The title should help a user identify the current view. This
+supersedes any title set by <a href="hotdoc_markdown/gtkheaderbar.html#gtk_header_bar_set_title">gtk_header_bar_set_title</a> or
+<a href="hotdoc_markdown/gtkheaderbar.html#gtk_header_bar_set_subtitle">gtk_header_bar_set_subtitle</a>. To achieve the same style as
+the builtin title and subtitle, use the “title” and “subtitle”
+style classes.</p>
+<p>You should set the custom title to <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a>, for the header title
+label to be visible again.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>bar</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">GtkHeaderBar</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>title_widget</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>a custom widget to use for a title</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_header_bar_set_custom_title">
+	<span><code>Gtk.prototype.set_custom_title</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_custom_title(title_widget: <a title="Gtk.Widget" href="hotdoc_markdown/gtkwidget.html#GtkWidget">Gtk.Widget</a>): {
+    // javascript wrapper for 'gtk_header_bar_set_custom_title'
+}</pre>
+
+<p>Sets a custom title for the <a href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">Gtk.HeaderBar</a>.</p>
+<p>The title should help a user identify the current view. This
+supersedes any title set by <a href="hotdoc_markdown/gtkheaderbar.html#gtk_header_bar_set_title">Gtk.prototype.set_title</a> or
+<a href="hotdoc_markdown/gtkheaderbar.html#gtk_header_bar_set_subtitle">Gtk.prototype.set_subtitle</a>. To achieve the same style as
+the builtin title and subtitle, use the “title” and “subtitle”
+style classes.</p>
+<p>You should set the custom title to <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a>, for the header title
+label to be visible again.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>bar</code></em></i>
+					(
+						<a title="Gtk.HeaderBar" href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">Gtk.HeaderBar</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">Gtk.HeaderBar</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>title_widget</code></em></i>
+					(
+						<a title="Gtk.Widget" href="hotdoc_markdown/gtkwidget.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>a custom widget to use for a title</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_header_bar_set_custom_title">
+	<span><code>Gtk.HeaderBar.set_custom_title</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.HeaderBar.set_custom_title (self, title_widget):
+    #python wrapper for 'gtk_header_bar_set_custom_title'</pre>
+
+<p>Sets a custom title for the <a href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">Gtk.HeaderBar</a>.</p>
+<p>The title should help a user identify the current view. This
+supersedes any title set by <a href="hotdoc_markdown/gtkheaderbar.html#gtk_header_bar_set_title">Gtk.HeaderBar.set_title</a> or
+<a href="hotdoc_markdown/gtkheaderbar.html#gtk_header_bar_set_subtitle">Gtk.HeaderBar.set_subtitle</a>. To achieve the same style as
+the builtin title and subtitle, use the “title” and “subtitle”
+style classes.</p>
+<p>You should set the custom title to <a href="https://docs.python.org/3/library/constants.html#None">None</a>, for the header title
+label to be visible again.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>bar</code></em></i>
+					(
+						<a title="Gtk.HeaderBar" href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">Gtk.HeaderBar</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">Gtk.HeaderBar</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>title_widget</code></em></i>
+					(
+						<a title="Gtk.Widget" href="hotdoc_markdown/gtkwidget.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>a custom widget to use for a title</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.10
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.10;" id="gtk_header_bar_get_custom_title">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_header_bar_get_custom_title">
+	<span><code>gtk_header_bar_get_custom_title</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkWidget" href="hotdoc_markdown/gtkwidget.html#GtkWidget">GtkWidget</a> *
+gtk_header_bar_get_custom_title (<a title="GtkHeaderBar" href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">GtkHeaderBar</a> * bar)</pre>
+
+<p>Retrieves the custom title widget of the header. See
+<a href="hotdoc_markdown/gtkheaderbar.html#gtk_header_bar_set_custom_title">gtk_header_bar_set_custom_title</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>bar</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">GtkHeaderBar</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					
+										
+<span class="annotation">[<abbr title="NULL may be passed to the value"><span class="acronym">nullable</span></abbr>]</span>
+<span class="annotation">[<abbr title="Don't free data after the code is done"><span class="acronym">transfer: none</span></abbr>]</span>
+
+										)
+								–
+			</div>
+							<p>the custom title widget
+of the header, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> if none has been set explicitly.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_header_bar_get_custom_title">
+	<span><code>Gtk.prototype.get_custom_title</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_custom_title(): {
+    // javascript wrapper for 'gtk_header_bar_get_custom_title'
+}</pre>
+
+<p>Retrieves the custom title widget of the header. See
+<a href="hotdoc_markdown/gtkheaderbar.html#gtk_header_bar_set_custom_title">Gtk.prototype.set_custom_title</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>bar</code></em></i>
+					(
+						<a title="Gtk.HeaderBar" href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">Gtk.HeaderBar</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">Gtk.HeaderBar</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="hotdoc_markdown/gtkwidget.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>the custom title widget
+of the header, or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a> if none has been set explicitly.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_header_bar_get_custom_title">
+	<span><code>Gtk.HeaderBar.get_custom_title</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.HeaderBar.get_custom_title (self):
+    #python wrapper for 'gtk_header_bar_get_custom_title'</pre>
+
+<p>Retrieves the custom title widget of the header. See
+<a href="hotdoc_markdown/gtkheaderbar.html#gtk_header_bar_set_custom_title">Gtk.HeaderBar.set_custom_title</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>bar</code></em></i>
+					(
+						<a title="Gtk.HeaderBar" href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">Gtk.HeaderBar</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">Gtk.HeaderBar</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="hotdoc_markdown/gtkwidget.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>the custom title widget
+of the header, or <a href="https://docs.python.org/3/library/constants.html#None">None</a> if none has been set explicitly.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.10
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.10;" id="gtk_header_bar_pack_start">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_header_bar_pack_start">
+	<span><code>gtk_header_bar_pack_start</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_header_bar_pack_start (<a title="GtkHeaderBar" href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">GtkHeaderBar</a> * bar,
+                           <a title="GtkWidget" href="hotdoc_markdown/gtkwidget.html#GtkWidget">GtkWidget</a> * child)</pre>
+
+<p>Adds <em>child</em> to <em>bar</em>, packed with reference to the
+start of the <em>bar</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>bar</code></em></i>
+				–
+	</div>
+			<p>A <a href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">GtkHeaderBar</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>child</code></em></i>
+				–
+	</div>
+			<p>the <a href="hotdoc_markdown/gtkwidget.html#GtkWidget">GtkWidget</a> to be added to <em>bar</em></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_header_bar_pack_start">
+	<span><code>Gtk.prototype.pack_start</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.pack_start(child: <a title="Gtk.Widget" href="hotdoc_markdown/gtkwidget.html#GtkWidget">Gtk.Widget</a>): {
+    // javascript wrapper for 'gtk_header_bar_pack_start'
+}</pre>
+
+<p>Adds <em>child</em> to <em>bar</em>, packed with reference to the
+start of the <em>bar</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>bar</code></em></i>
+					(
+						<a title="Gtk.HeaderBar" href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">Gtk.HeaderBar</a>
+						)
+				–
+	</div>
+			<p>A <a href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">Gtk.HeaderBar</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>child</code></em></i>
+					(
+						<a title="Gtk.Widget" href="hotdoc_markdown/gtkwidget.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>the <a href="hotdoc_markdown/gtkwidget.html#GtkWidget">Gtk.Widget</a> to be added to <em>bar</em></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_header_bar_pack_start">
+	<span><code>Gtk.HeaderBar.pack_start</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.HeaderBar.pack_start (self, child):
+    #python wrapper for 'gtk_header_bar_pack_start'</pre>
+
+<p>Adds <em>child</em> to <em>bar</em>, packed with reference to the
+start of the <em>bar</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>bar</code></em></i>
+					(
+						<a title="Gtk.HeaderBar" href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">Gtk.HeaderBar</a>
+						)
+				–
+	</div>
+			<p>A <a href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">Gtk.HeaderBar</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>child</code></em></i>
+					(
+						<a title="Gtk.Widget" href="hotdoc_markdown/gtkwidget.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>the <a href="hotdoc_markdown/gtkwidget.html#GtkWidget">Gtk.Widget</a> to be added to <em>bar</em></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.10
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.10;" id="gtk_header_bar_pack_end">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_header_bar_pack_end">
+	<span><code>gtk_header_bar_pack_end</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_header_bar_pack_end (<a title="GtkHeaderBar" href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">GtkHeaderBar</a> * bar,
+                         <a title="GtkWidget" href="hotdoc_markdown/gtkwidget.html#GtkWidget">GtkWidget</a> * child)</pre>
+
+<p>Adds <em>child</em> to <em>bar</em>, packed with reference to the
+end of the <em>bar</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>bar</code></em></i>
+				–
+	</div>
+			<p>A <a href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">GtkHeaderBar</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>child</code></em></i>
+				–
+	</div>
+			<p>the <a href="hotdoc_markdown/gtkwidget.html#GtkWidget">GtkWidget</a> to be added to <em>bar</em></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_header_bar_pack_end">
+	<span><code>Gtk.prototype.pack_end</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.pack_end(child: <a title="Gtk.Widget" href="hotdoc_markdown/gtkwidget.html#GtkWidget">Gtk.Widget</a>): {
+    // javascript wrapper for 'gtk_header_bar_pack_end'
+}</pre>
+
+<p>Adds <em>child</em> to <em>bar</em>, packed with reference to the
+end of the <em>bar</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>bar</code></em></i>
+					(
+						<a title="Gtk.HeaderBar" href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">Gtk.HeaderBar</a>
+						)
+				–
+	</div>
+			<p>A <a href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">Gtk.HeaderBar</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>child</code></em></i>
+					(
+						<a title="Gtk.Widget" href="hotdoc_markdown/gtkwidget.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>the <a href="hotdoc_markdown/gtkwidget.html#GtkWidget">Gtk.Widget</a> to be added to <em>bar</em></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_header_bar_pack_end">
+	<span><code>Gtk.HeaderBar.pack_end</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.HeaderBar.pack_end (self, child):
+    #python wrapper for 'gtk_header_bar_pack_end'</pre>
+
+<p>Adds <em>child</em> to <em>bar</em>, packed with reference to the
+end of the <em>bar</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>bar</code></em></i>
+					(
+						<a title="Gtk.HeaderBar" href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">Gtk.HeaderBar</a>
+						)
+				–
+	</div>
+			<p>A <a href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">Gtk.HeaderBar</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>child</code></em></i>
+					(
+						<a title="Gtk.Widget" href="hotdoc_markdown/gtkwidget.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>the <a href="hotdoc_markdown/gtkwidget.html#GtkWidget">Gtk.Widget</a> to be added to <em>bar</em></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.10
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.10;" id="gtk_header_bar_set_show_close_button">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_header_bar_set_show_close_button">
+	<span><code>gtk_header_bar_set_show_close_button</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_header_bar_set_show_close_button (<a title="GtkHeaderBar" href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">GtkHeaderBar</a> * bar,
+                                      <a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a> setting)</pre>
+
+<p>Sets whether this header bar shows the standard window decorations,
+including close, maximize, and minimize.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>bar</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">GtkHeaderBar</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>setting</code></em></i>
+				–
+	</div>
+			<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> to show standard window decorations</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_header_bar_set_show_close_button">
+	<span><code>Gtk.prototype.set_show_close_button</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_show_close_button(setting: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_header_bar_set_show_close_button'
+}</pre>
+
+<p>Sets whether this header bar shows the standard window decorations,
+including close, maximize, and minimize.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>bar</code></em></i>
+					(
+						<a title="Gtk.HeaderBar" href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">Gtk.HeaderBar</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">Gtk.HeaderBar</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>setting</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> to show standard window decorations</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_header_bar_set_show_close_button">
+	<span><code>Gtk.HeaderBar.set_show_close_button</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.HeaderBar.set_show_close_button (self, setting):
+    #python wrapper for 'gtk_header_bar_set_show_close_button'</pre>
+
+<p>Sets whether this header bar shows the standard window decorations,
+including close, maximize, and minimize.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>bar</code></em></i>
+					(
+						<a title="Gtk.HeaderBar" href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">Gtk.HeaderBar</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">Gtk.HeaderBar</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>setting</code></em></i>
+					(
+						<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+						)
+				–
+	</div>
+			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> to show standard window decorations</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.10
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.10;" id="gtk_header_bar_get_show_close_button">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_header_bar_get_show_close_button">
+	<span><code>gtk_header_bar_get_show_close_button</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_header_bar_get_show_close_button (<a title="GtkHeaderBar" href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">GtkHeaderBar</a> * bar)</pre>
+
+<p>Returns whether this header bar shows the standard window
+decorations.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>bar</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">GtkHeaderBar</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if the decorations are shown</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_header_bar_get_show_close_button">
+	<span><code>Gtk.prototype.get_show_close_button</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_show_close_button(): {
+    // javascript wrapper for 'gtk_header_bar_get_show_close_button'
+}</pre>
+
+<p>Returns whether this header bar shows the standard window
+decorations.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>bar</code></em></i>
+					(
+						<a title="Gtk.HeaderBar" href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">Gtk.HeaderBar</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">Gtk.HeaderBar</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if the decorations are shown</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_header_bar_get_show_close_button">
+	<span><code>Gtk.HeaderBar.get_show_close_button</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.HeaderBar.get_show_close_button (self):
+    #python wrapper for 'gtk_header_bar_get_show_close_button'</pre>
+
+<p>Returns whether this header bar shows the standard window
+decorations.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>bar</code></em></i>
+					(
+						<a title="Gtk.HeaderBar" href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">Gtk.HeaderBar</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">Gtk.HeaderBar</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+										)
+								–
+			</div>
+							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if the decorations are shown</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.10
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.12;" id="gtk_header_bar_set_decoration_layout">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_header_bar_set_decoration_layout">
+	<span><code>gtk_header_bar_set_decoration_layout</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_header_bar_set_decoration_layout (<a title="GtkHeaderBar" href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">GtkHeaderBar</a> * bar,
+                                      const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * layout)</pre>
+
+<p>Sets the decoration layout for this header bar, overriding
+the <a href="gtksettings.html#GtkSettings:gtk-decoration-layout">gtk-decoration-layout</a> setting.</p>
+<p>There can be valid reasons for overriding the setting, such
+as a header bar design that does not allow for buttons to take
+room on the right, or only offers room for a single close button.
+Split header bars are another example for overriding the
+setting.</p>
+<p>The format of the string is button names, separated by commas.
+A colon separates the buttons that should appear on the left
+from those on the right. Recognized button names are minimize,
+maximize, close, icon (the window icon) and menu (a menu button
+for the fallback app menu).</p>
+<p>For example, “menu:minimize,maximize,close” specifies a menu
+on the left, and minimize, maximize and close buttons on the right.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>bar</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">GtkHeaderBar</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>layout</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>a decoration layout, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> to
+unset the layout</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.12
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_header_bar_set_decoration_layout">
+	<span><code>Gtk.prototype.set_decoration_layout</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_decoration_layout(layout: <a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>): {
+    // javascript wrapper for 'gtk_header_bar_set_decoration_layout'
+}</pre>
+
+<p>Sets the decoration layout for this header bar, overriding
+the <a href="gtksettings.html#GtkSettings:gtk-decoration-layout">gtk-decoration-layout</a> setting.</p>
+<p>There can be valid reasons for overriding the setting, such
+as a header bar design that does not allow for buttons to take
+room on the right, or only offers room for a single close button.
+Split header bars are another example for overriding the
+setting.</p>
+<p>The format of the string is button names, separated by commas.
+A colon separates the buttons that should appear on the left
+from those on the right. Recognized button names are minimize,
+maximize, close, icon (the window icon) and menu (a menu button
+for the fallback app menu).</p>
+<p>For example, “menu:minimize,maximize,close” specifies a menu
+on the left, and minimize, maximize and close buttons on the right.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>bar</code></em></i>
+					(
+						<a title="Gtk.HeaderBar" href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">Gtk.HeaderBar</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">Gtk.HeaderBar</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>layout</code></em></i>
+					(
+						<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
+						)
+				–
+	</div>
+			<p>a decoration layout, or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a> to
+unset the layout</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.12
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_header_bar_set_decoration_layout">
+	<span><code>Gtk.HeaderBar.set_decoration_layout</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.HeaderBar.set_decoration_layout (self, layout):
+    #python wrapper for 'gtk_header_bar_set_decoration_layout'</pre>
+
+<p>Sets the decoration layout for this header bar, overriding
+the <a href="gtksettings.html#GtkSettings:gtk-decoration-layout">gtk-decoration-layout</a> setting.</p>
+<p>There can be valid reasons for overriding the setting, such
+as a header bar design that does not allow for buttons to take
+room on the right, or only offers room for a single close button.
+Split header bars are another example for overriding the
+setting.</p>
+<p>The format of the string is button names, separated by commas.
+A colon separates the buttons that should appear on the left
+from those on the right. Recognized button names are minimize,
+maximize, close, icon (the window icon) and menu (a menu button
+for the fallback app menu).</p>
+<p>For example, “menu:minimize,maximize,close” specifies a menu
+on the left, and minimize, maximize and close buttons on the right.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>bar</code></em></i>
+					(
+						<a title="Gtk.HeaderBar" href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">Gtk.HeaderBar</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">Gtk.HeaderBar</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>layout</code></em></i>
+					(
+						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
+						)
+				–
+	</div>
+			<p>a decoration layout, or <a href="https://docs.python.org/3/library/constants.html#None">None</a> to
+unset the layout</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.12
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.12;" id="gtk_header_bar_get_decoration_layout">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_header_bar_get_decoration_layout">
+	<span><code>gtk_header_bar_get_decoration_layout</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> *
+gtk_header_bar_get_decoration_layout (<a title="GtkHeaderBar" href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">GtkHeaderBar</a> * bar)</pre>
+
+<p>Gets the decoration layout set with
+<a href="hotdoc_markdown/gtkheaderbar.html#gtk_header_bar_set_decoration_layout">gtk_header_bar_set_decoration_layout</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>bar</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">GtkHeaderBar</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>the decoration layout</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.12
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_header_bar_get_decoration_layout">
+	<span><code>Gtk.prototype.get_decoration_layout</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_decoration_layout(): {
+    // javascript wrapper for 'gtk_header_bar_get_decoration_layout'
+}</pre>
+
+<p>Gets the decoration layout set with
+<a href="hotdoc_markdown/gtkheaderbar.html#gtk_header_bar_set_decoration_layout">Gtk.prototype.set_decoration_layout</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>bar</code></em></i>
+					(
+						<a title="Gtk.HeaderBar" href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">Gtk.HeaderBar</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">Gtk.HeaderBar</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
+										)
+								–
+			</div>
+							<p>the decoration layout</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.12
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_header_bar_get_decoration_layout">
+	<span><code>Gtk.HeaderBar.get_decoration_layout</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.HeaderBar.get_decoration_layout (self):
+    #python wrapper for 'gtk_header_bar_get_decoration_layout'</pre>
+
+<p>Gets the decoration layout set with
+<a href="hotdoc_markdown/gtkheaderbar.html#gtk_header_bar_set_decoration_layout">Gtk.HeaderBar.set_decoration_layout</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>bar</code></em></i>
+					(
+						<a title="Gtk.HeaderBar" href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">Gtk.HeaderBar</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkheaderbar.html#GtkHeaderBar">Gtk.HeaderBar</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
+										)
+								–
+			</div>
+							<p>the decoration layout</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.12
+		</p>
+
+
+        </div>
+
+</div>
+
+
+
+
+
+
+		
+	</div>
+	<div id="search_results">
+		<p>The results of the search are</p>
+	</div>
+	<hr>
+	<div id="footer">
+		    
+
+	</div>
+</div>
+
+<div id="toc-column">
+	
+		<div class="edit-button">
+		
+
+	</div>
+		<div id="toc-wrapper">
+		<nav id="toc"></nav>
+	</div>
+</div>
+</div>
+</main>
+
+</body>
+
+<script src="assets/js/navbar_offset_scroller.js"></script>
+</html>

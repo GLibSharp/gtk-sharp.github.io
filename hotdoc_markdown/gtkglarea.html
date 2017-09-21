@@ -1,0 +1,3625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<base href="..">
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>gtkglarea</title>
+
+<link rel="stylesheet" href="assets/css/custom_bootstrap.css" type="text/css">
+<link rel="stylesheet" href="assets/css/bootstrap-toc.min.css" type="text/css">
+<link rel="stylesheet" href="assets/css/frontend.css" type="text/css">
+<link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
+
+<link rel="stylesheet" href="assets/css/prism.css" type="text/css">
+
+<script src="assets/js/mustache.min.js"></script>
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/scrollspy.js"></script>
+<script src="assets/js/bootstrap.js"></script>
+<script src="assets/js/typeahead.jquery.min.js"></script>
+<script src="assets/js/search.js"></script>
+<script src="assets/js/isotope.pkgd.min.js"></script>
+<script src="assets/js/compare-versions.js"></script>
+<script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="assets/js/bootstrap-toc.min.js"></script>
+<script src="assets/js/jquery.touchSwipe.min.js"></script>
+<script src="assets/js/anchor.min.js"></script>
+<script src="assets/js/tag_filtering.js"></script>
+<script src="assets/js/language_switching.js"></script>
+
+<script src="assets/js/lines_around_headings.js"></script>
+
+<script src="assets/js/prism-core.js"></script>
+<script src="assets/js/prism-autoloader.js"></script>
+<script src="assets/js/prism_autoloader_path_override.js"></script>
+<script src="assets/js/trie.js"></script>
+
+
+</head>
+
+<body class="no-script
+" data-spy="scroll" data-target="#toc" data-offset="70">
+
+<script>
+$('body').removeClass('no-script');
+</script>
+
+<nav class="navbar navbar-fixed-top navbar-default" id="topnav">
+	<div class="container-fluid">
+		<div class="navbar-right">
+			<a id="toc-toggle">
+				<span class="glyphicon glyphicon-menu-right"></span>
+				<span class="glyphicon glyphicon-menu-left"></span>
+			</a>
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-wrapper" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<form action="" class="navbar-form pull-right" id="navbar-search-form">
+                               <div class="form-group has-feedback">
+                                       <input type="text" class="form-control input-sm" name="search" id="sidenav-lookup-field" placeholder="search" disabled>
+				       <span class="glyphicon glyphicon-search form-control-feedback" id="search-mgn-glass"></span>
+                               </div>
+                        </form>
+		</div>
+		<div class="navbar-header">
+			<a id="sidenav-toggle">
+				<span class="glyphicon glyphicon-menu-right"></span>
+				<span class="glyphicon glyphicon-menu-left"></span>
+			</a>
+			<a id="home-link" href="index.html" class="hotdoc-navbar-brand">
+				<img src="assets/images/home.svg" alt="Home">
+			</a>
+		</div>
+		<div class="navbar-collapse collapse" id="navbar-wrapper">
+			<ul class="nav navbar-nav" id="menu">
+							</ul>
+			<div class="hidden-xs hidden-sm navbar-text navbar-center">
+							</div>
+		</div>
+	</div>
+</nav>
+
+<main>
+<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="hotdoc_markdown/gtkglarea.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['c', 'javascript', 'python']" data-hotdoc-meta-gi-language="c">
+<script src="assets/js/utils.js"></script>
+
+<div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
+	<script src="assets/js/navigation.js"></script>
+	<script src="assets/js/sitemap.js"></script>
+</div>
+
+<div id="body">
+	<div id="main">
+				    <div id="page-description" data-hotdoc-source="gtkglarea.markdown" data-hotdoc-role="main">
+    </div>
+        
+        
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.16;" id="GtkGLArea">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h2 data-hotdoc-id="GtkGLArea">
+	<span><code>GtkGLArea</code></span>
+</h2>
+
+
+<div class="hierarchy_container">
+	<div class="hierarchy_details">
+<pre>
+<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object">GObject</a>
+    <span class="lineart">╰──</span><a title="GInitiallyUnowned" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-python="GObject.InitiallyUnowned" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-javascript="GObject.InitiallyUnowned">GInitiallyUnowned</a>
+        <span class="lineart">╰──</span><a title="GtkWidget" href="hotdoc_markdown/gtkwidget.html#GtkWidget" data-gi-href-python="hotdoc_markdown/gtkwidget.html#GtkWidget" data-gi-title-python="Gtk.Widget" data-gi-href-javascript="hotdoc_markdown/gtkwidget.html#GtkWidget" data-gi-title-javascript="Gtk.Widget">GtkWidget</a>
+            <span class="lineart">╰──</span>GtkGLArea
+</pre>
+
+</div>
+
+</div>
+
+<div class="interfaces_container">
+	
+<p><b>Implemented interfaces:</b>
+    AtkImplementorIface, <a title="GtkBuildable" href="hotdoc_markdown/gtkbuildable.html#GtkBuildable" data-gi-href-python="hotdoc_markdown/gtkbuildable.html#GtkBuildable" data-gi-title-python="Gtk.Buildable" data-gi-href-javascript="hotdoc_markdown/gtkbuildable.html#GtkBuildable" data-gi-title-javascript="Gtk.Buildable">GtkBuildable</a>
+</p>
+
+</div>
+
+<div class="class_details">
+	<p>A <a href="hotdoc_markdown/gtkwidget.html#GtkWidget" data-gi-href-python="hotdoc_markdown/gtkwidget.html#GtkWidget" data-gi-title-python="Gtk.Widget" data-gi-href-javascript="hotdoc_markdown/gtkwidget.html#GtkWidget" data-gi-title-javascript="Gtk.Widget">GtkWidget</a> used for drawing with OpenGL.</p>
+
+</div>
+
+
+
+
+<h3>Class structure</h3>
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="GtkGLAreaClass">
+	<span><code>GtkGLAreaClass</code></span>
+</h4>
+
+
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h3>
+	Gtk.GLAreaClass
+</h3>
+
+
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3>
+	Gtk.GLAreaClass
+</h3>
+
+
+
+
+
+
+
+        </div>
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h2 data-hotdoc-id="GtkGLArea">
+	<span><code>GtkGLArea</code></span>
+</h2>
+
+
+<div class="hierarchy_container">
+	<div class="hierarchy_details">
+<pre>
+<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object">GObject</a>
+    <span class="lineart">╰──</span><a title="GInitiallyUnowned" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-python="GObject.InitiallyUnowned" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-javascript="GObject.InitiallyUnowned">GInitiallyUnowned</a>
+        <span class="lineart">╰──</span><a title="GtkWidget" href="hotdoc_markdown/gtkwidget.html#GtkWidget" data-gi-href-python="hotdoc_markdown/gtkwidget.html#GtkWidget" data-gi-title-python="Gtk.Widget" data-gi-href-javascript="hotdoc_markdown/gtkwidget.html#GtkWidget" data-gi-title-javascript="Gtk.Widget">GtkWidget</a>
+            <span class="lineart">╰──</span>GtkGLArea
+</pre>
+
+</div>
+
+</div>
+
+<div class="interfaces_container">
+	
+<p><b>Implemented interfaces:</b>
+    AtkImplementorIface, <a title="GtkBuildable" href="hotdoc_markdown/gtkbuildable.html#GtkBuildable" data-gi-href-python="hotdoc_markdown/gtkbuildable.html#GtkBuildable" data-gi-title-python="Gtk.Buildable" data-gi-href-javascript="hotdoc_markdown/gtkbuildable.html#GtkBuildable" data-gi-title-javascript="Gtk.Buildable">GtkBuildable</a>
+</p>
+
+</div>
+
+<div class="class_details">
+	<p>A <a href="hotdoc_markdown/gtkwidget.html#GtkWidget" data-gi-href-python="hotdoc_markdown/gtkwidget.html#GtkWidget" data-gi-title-python="Gtk.Widget" data-gi-href-javascript="hotdoc_markdown/gtkwidget.html#GtkWidget" data-gi-title-javascript="Gtk.Widget">GtkWidget</a> used for drawing with OpenGL.</p>
+
+</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h2 data-hotdoc-id="GtkGLArea">
+	<span><code>GtkGLArea</code></span>
+</h2>
+
+
+<div class="hierarchy_container">
+	<div class="hierarchy_details">
+<pre>
+<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object">GObject</a>
+    <span class="lineart">╰──</span><a title="GInitiallyUnowned" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-python="GObject.InitiallyUnowned" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-javascript="GObject.InitiallyUnowned">GInitiallyUnowned</a>
+        <span class="lineart">╰──</span><a title="GtkWidget" href="hotdoc_markdown/gtkwidget.html#GtkWidget" data-gi-href-python="hotdoc_markdown/gtkwidget.html#GtkWidget" data-gi-title-python="Gtk.Widget" data-gi-href-javascript="hotdoc_markdown/gtkwidget.html#GtkWidget" data-gi-title-javascript="Gtk.Widget">GtkWidget</a>
+            <span class="lineart">╰──</span>GtkGLArea
+</pre>
+
+</div>
+
+</div>
+
+<div class="interfaces_container">
+	
+<p><b>Implemented interfaces:</b>
+    AtkImplementorIface, <a title="GtkBuildable" href="hotdoc_markdown/gtkbuildable.html#GtkBuildable" data-gi-href-python="hotdoc_markdown/gtkbuildable.html#GtkBuildable" data-gi-title-python="Gtk.Buildable" data-gi-href-javascript="hotdoc_markdown/gtkbuildable.html#GtkBuildable" data-gi-title-javascript="Gtk.Buildable">GtkBuildable</a>
+</p>
+
+</div>
+
+<div class="class_details">
+	<p>A <a href="hotdoc_markdown/gtkwidget.html#GtkWidget" data-gi-href-python="hotdoc_markdown/gtkwidget.html#GtkWidget" data-gi-title-python="Gtk.Widget" data-gi-href-javascript="hotdoc_markdown/gtkwidget.html#GtkWidget" data-gi-title-javascript="Gtk.Widget">GtkWidget</a> used for drawing with OpenGL.</p>
+
+</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+
+            <h3 class="symbol_section">Constructors</h3>
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.16;" id="gtk_gl_area_new">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gl_area_new">
+	<span><code>gtk_gl_area_new</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkWidget" href="hotdoc_markdown/gtkwidget.html#GtkWidget">GtkWidget</a> *
+gtk_gl_area_new ()</pre>
+
+<p>Creates a new <a href="hotdoc_markdown/gtkglarea.html#GtkGLArea">GtkGLArea</a> widget.</p>
+
+
+
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					
+										
+<span class="annotation">[<abbr title="Free data after the code is done"><span class="acronym">transfer: full</span></abbr>]</span>
+
+										)
+								–
+			</div>
+							<p>the newly created <a href="hotdoc_markdown/gtkglarea.html#GtkGLArea">GtkGLArea</a></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.16
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gl_area_new">
+	<span><code>Gtk.prototype.new</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.new(): {
+    // javascript wrapper for 'gtk_gl_area_new'
+}</pre>
+
+<p>Creates a new <a href="hotdoc_markdown/gtkglarea.html#GtkGLArea">Gtk.GLArea</a> widget.</p>
+
+
+
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="hotdoc_markdown/gtkwidget.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>the newly created <a href="hotdoc_markdown/gtkglarea.html#GtkGLArea">Gtk.GLArea</a></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.16
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gl_area_new">
+	<span><code>Gtk.GLArea.new</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.GLArea.new ():
+    #python wrapper for 'gtk_gl_area_new'</pre>
+
+<p>Creates a new <a href="hotdoc_markdown/gtkglarea.html#GtkGLArea">Gtk.GLArea</a> widget.</p>
+
+
+
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="hotdoc_markdown/gtkwidget.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>the newly created <a href="hotdoc_markdown/gtkglarea.html#GtkGLArea">Gtk.GLArea</a></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.16
+		</p>
+
+
+        </div>
+
+</div>
+
+
+            <h3 class="symbol_section">Methods</h3>
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.16;" id="gtk_gl_area_get_context">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gl_area_get_context">
+	<span><code>gtk_gl_area_get_context</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GdkGLContext" href="https://developer.gnome.org/gdk3/GdkGLContext.html#GdkGLContext-struct">GdkGLContext</a> *
+gtk_gl_area_get_context (<a title="GtkGLArea" href="hotdoc_markdown/gtkglarea.html#GtkGLArea">GtkGLArea</a> * area)</pre>
+
+<p>Retrieves the <a href="https://developer.gnome.org/gdk3/GdkGLContext.html#GdkGLContext-struct">GdkGLContext</a> used by <em>area</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>area</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkglarea.html#GtkGLArea">GtkGLArea</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					
+										
+<span class="annotation">[<abbr title="Don't free data after the code is done"><span class="acronym">transfer: none</span></abbr>]</span>
+
+										)
+								–
+			</div>
+							<p>the <a href="https://developer.gnome.org/gdk3/GdkGLContext.html#GdkGLContext-struct">GdkGLContext</a></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.16
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gl_area_get_context">
+	<span><code>Gtk.prototype.get_context</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_context(): {
+    // javascript wrapper for 'gtk_gl_area_get_context'
+}</pre>
+
+<p>Retrieves the <a href="https://developer.gnome.org/gdk3/GdkGLContext.html#GdkGLContext-struct">Gdk.GLContext</a> used by <em>area</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>area</code></em></i>
+					(
+						<a title="Gtk.GLArea" href="hotdoc_markdown/gtkglarea.html#GtkGLArea">Gtk.GLArea</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkglarea.html#GtkGLArea">Gtk.GLArea</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gdk.GLContext" href="https://developer.gnome.org/gdk3/GdkGLContext.html#GdkGLContext-struct">Gdk.GLContext</a>
+										)
+								–
+			</div>
+							<p>the <a href="https://developer.gnome.org/gdk3/GdkGLContext.html#GdkGLContext-struct">Gdk.GLContext</a></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.16
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gl_area_get_context">
+	<span><code>Gtk.GLArea.get_context</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.GLArea.get_context (self):
+    #python wrapper for 'gtk_gl_area_get_context'</pre>
+
+<p>Retrieves the <a href="https://developer.gnome.org/gdk3/GdkGLContext.html#GdkGLContext-struct">Gdk.GLContext</a> used by <em>area</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>area</code></em></i>
+					(
+						<a title="Gtk.GLArea" href="hotdoc_markdown/gtkglarea.html#GtkGLArea">Gtk.GLArea</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkglarea.html#GtkGLArea">Gtk.GLArea</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gdk.GLContext" href="https://developer.gnome.org/gdk3/GdkGLContext.html#GdkGLContext-struct">Gdk.GLContext</a>
+										)
+								–
+			</div>
+							<p>the <a href="https://developer.gnome.org/gdk3/GdkGLContext.html#GdkGLContext-struct">Gdk.GLContext</a></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.16
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.16;" id="gtk_gl_area_make_current">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gl_area_make_current">
+	<span><code>gtk_gl_area_make_current</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_gl_area_make_current (<a title="GtkGLArea" href="hotdoc_markdown/gtkglarea.html#GtkGLArea">GtkGLArea</a> * area)</pre>
+
+<p>Ensures that the <a href="https://developer.gnome.org/gdk3/GdkGLContext.html#GdkGLContext-struct">GdkGLContext</a> used by <em>area</em> is associated with
+the <a href="hotdoc_markdown/gtkglarea.html#GtkGLArea">GtkGLArea</a>.</p>
+<p>This function is automatically called before emitting the
+<a href="gtkglarea.html#GtkGLArea::render">render</a> signal, and doesn't normally need to be called
+by application code.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>area</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkglarea.html#GtkGLArea">GtkGLArea</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.16
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gl_area_make_current">
+	<span><code>Gtk.prototype.make_current</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.make_current(): {
+    // javascript wrapper for 'gtk_gl_area_make_current'
+}</pre>
+
+<p>Ensures that the <a href="https://developer.gnome.org/gdk3/GdkGLContext.html#GdkGLContext-struct">Gdk.GLContext</a> used by <em>area</em> is associated with
+the <a href="hotdoc_markdown/gtkglarea.html#GtkGLArea">Gtk.GLArea</a>.</p>
+<p>This function is automatically called before emitting the
+<a href="gtkglarea.html#GtkGLArea::render">render</a> signal, and doesn't normally need to be called
+by application code.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>area</code></em></i>
+					(
+						<a title="Gtk.GLArea" href="hotdoc_markdown/gtkglarea.html#GtkGLArea">Gtk.GLArea</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkglarea.html#GtkGLArea">Gtk.GLArea</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.16
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gl_area_make_current">
+	<span><code>Gtk.GLArea.make_current</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.GLArea.make_current (self):
+    #python wrapper for 'gtk_gl_area_make_current'</pre>
+
+<p>Ensures that the <a href="https://developer.gnome.org/gdk3/GdkGLContext.html#GdkGLContext-struct">Gdk.GLContext</a> used by <em>area</em> is associated with
+the <a href="hotdoc_markdown/gtkglarea.html#GtkGLArea">Gtk.GLArea</a>.</p>
+<p>This function is automatically called before emitting the
+<a href="gtkglarea.html#GtkGLArea::render">render</a> signal, and doesn't normally need to be called
+by application code.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>area</code></em></i>
+					(
+						<a title="Gtk.GLArea" href="hotdoc_markdown/gtkglarea.html#GtkGLArea">Gtk.GLArea</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkglarea.html#GtkGLArea">Gtk.GLArea</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.16
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.16;" id="gtk_gl_area_queue_render">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gl_area_queue_render">
+	<span><code>gtk_gl_area_queue_render</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_gl_area_queue_render (<a title="GtkGLArea" href="hotdoc_markdown/gtkglarea.html#GtkGLArea">GtkGLArea</a> * area)</pre>
+
+<p>Marks the currently rendered data (if any) as invalid, and queues
+a redraw of the widget, ensuring that the <a href="gtkglarea.html#GtkGLArea::render">render</a> signal
+is emitted during the draw.</p>
+<p>This is only needed when the <a href="hotdoc_markdown/gtkglarea.html#gtk_gl_area_set_auto_render">gtk_gl_area_set_auto_render</a> has
+been called with a <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS">FALSE</a> value. The default behaviour is to
+emit <a href="gtkglarea.html#GtkGLArea::render">render</a> on each draw.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>area</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkglarea.html#GtkGLArea">GtkGLArea</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.16
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gl_area_queue_render">
+	<span><code>Gtk.prototype.queue_render</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.queue_render(): {
+    // javascript wrapper for 'gtk_gl_area_queue_render'
+}</pre>
+
+<p>Marks the currently rendered data (if any) as invalid, and queues
+a redraw of the widget, ensuring that the <a href="gtkglarea.html#GtkGLArea::render">render</a> signal
+is emitted during the draw.</p>
+<p>This is only needed when the <a href="hotdoc_markdown/gtkglarea.html#gtk_gl_area_set_auto_render">Gtk.prototype.set_auto_render</a> has
+been called with a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">false</a> value. The default behaviour is to
+emit <a href="gtkglarea.html#GtkGLArea::render">render</a> on each draw.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>area</code></em></i>
+					(
+						<a title="Gtk.GLArea" href="hotdoc_markdown/gtkglarea.html#GtkGLArea">Gtk.GLArea</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkglarea.html#GtkGLArea">Gtk.GLArea</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.16
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gl_area_queue_render">
+	<span><code>Gtk.GLArea.queue_render</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.GLArea.queue_render (self):
+    #python wrapper for 'gtk_gl_area_queue_render'</pre>
+
+<p>Marks the currently rendered data (if any) as invalid, and queues
+a redraw of the widget, ensuring that the <a href="gtkglarea.html#GtkGLArea::render">render</a> signal
+is emitted during the draw.</p>
+<p>This is only needed when the <a href="hotdoc_markdown/gtkglarea.html#gtk_gl_area_set_auto_render">Gtk.GLArea.set_auto_render</a> has
+been called with a <a href="https://docs.python.org/3/library/constants.html#False">False</a> value. The default behaviour is to
+emit <a href="gtkglarea.html#GtkGLArea::render">render</a> on each draw.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>area</code></em></i>
+					(
+						<a title="Gtk.GLArea" href="hotdoc_markdown/gtkglarea.html#GtkGLArea">Gtk.GLArea</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkglarea.html#GtkGLArea">Gtk.GLArea</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.16
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.16;" id="gtk_gl_area_attach_buffers">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gl_area_attach_buffers">
+	<span><code>gtk_gl_area_attach_buffers</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_gl_area_attach_buffers (<a title="GtkGLArea" href="hotdoc_markdown/gtkglarea.html#GtkGLArea">GtkGLArea</a> * area)</pre>
+
+<p>Ensures that the <em>area</em> framebuffer object is made the current draw
+and read target, and that all the required buffers for the <em>area</em>
+are created and bound to the frambuffer.</p>
+<p>This function is automatically called before emitting the
+<a href="gtkglarea.html#GtkGLArea::render">render</a> signal, and doesn't normally need to be called
+by application code.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>area</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkglarea.html#GtkGLArea">GtkGLArea</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.16
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gl_area_attach_buffers">
+	<span><code>Gtk.prototype.attach_buffers</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.attach_buffers(): {
+    // javascript wrapper for 'gtk_gl_area_attach_buffers'
+}</pre>
+
+<p>Ensures that the <em>area</em> framebuffer object is made the current draw
+and read target, and that all the required buffers for the <em>area</em>
+are created and bound to the frambuffer.</p>
+<p>This function is automatically called before emitting the
+<a href="gtkglarea.html#GtkGLArea::render">render</a> signal, and doesn't normally need to be called
+by application code.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>area</code></em></i>
+					(
+						<a title="Gtk.GLArea" href="hotdoc_markdown/gtkglarea.html#GtkGLArea">Gtk.GLArea</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkglarea.html#GtkGLArea">Gtk.GLArea</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.16
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gl_area_attach_buffers">
+	<span><code>Gtk.GLArea.attach_buffers</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.GLArea.attach_buffers (self):
+    #python wrapper for 'gtk_gl_area_attach_buffers'</pre>
+
+<p>Ensures that the <em>area</em> framebuffer object is made the current draw
+and read target, and that all the required buffers for the <em>area</em>
+are created and bound to the frambuffer.</p>
+<p>This function is automatically called before emitting the
+<a href="gtkglarea.html#GtkGLArea::render">render</a> signal, and doesn't normally need to be called
+by application code.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>area</code></em></i>
+					(
+						<a title="Gtk.GLArea" href="hotdoc_markdown/gtkglarea.html#GtkGLArea">Gtk.GLArea</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkglarea.html#GtkGLArea">Gtk.GLArea</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.16
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.16;" id="gtk_gl_area_set_error">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gl_area_set_error">
+	<span><code>gtk_gl_area_set_error</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_gl_area_set_error (<a title="GtkGLArea" href="hotdoc_markdown/gtkglarea.html#GtkGLArea">GtkGLArea</a> * area,
+                       const <a title="GError" href="https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html#GError">GError</a> * error)</pre>
+
+<p>Sets an error on the area which will be shown instead of the
+GL rendering. This is useful in the <a href="gtkglarea.html#GtkGLArea::create-context">create-context</a>
+signal if GL context creation fails.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>area</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkglarea.html#GtkGLArea">GtkGLArea</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>error</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>a new <a href="https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html#GError">GError</a>, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> to unset the error</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.16
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gl_area_set_error">
+	<span><code>Gtk.prototype.set_error</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_error(error: <a title="GLib.Error" href="https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html#GError">GLib.Error</a>): {
+    // javascript wrapper for 'gtk_gl_area_set_error'
+}</pre>
+
+<p>Sets an error on the area which will be shown instead of the
+GL rendering. This is useful in the <a href="gtkglarea.html#GtkGLArea::create-context">create-context</a>
+signal if GL context creation fails.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>area</code></em></i>
+					(
+						<a title="Gtk.GLArea" href="hotdoc_markdown/gtkglarea.html#GtkGLArea">Gtk.GLArea</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkglarea.html#GtkGLArea">Gtk.GLArea</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>error</code></em></i>
+					(
+						<a title="GLib.Error" href="https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html#GError">GLib.Error</a>
+						)
+				–
+	</div>
+			<p>a new <a href="https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html#GError">GLib.Error</a>, or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a> to unset the error</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.16
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gl_area_set_error">
+	<span><code>Gtk.GLArea.set_error</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.GLArea.set_error (self, error):
+    #python wrapper for 'gtk_gl_area_set_error'</pre>
+
+<p>Sets an error on the area which will be shown instead of the
+GL rendering. This is useful in the <a href="gtkglarea.html#GtkGLArea::create-context">create-context</a>
+signal if GL context creation fails.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>area</code></em></i>
+					(
+						<a title="Gtk.GLArea" href="hotdoc_markdown/gtkglarea.html#GtkGLArea">Gtk.GLArea</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkglarea.html#GtkGLArea">Gtk.GLArea</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>error</code></em></i>
+					(
+						<a title="GLib.Error" href="https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html#GError">GLib.Error</a>
+						)
+				–
+	</div>
+			<p>a new <a href="https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html#GError">GLib.Error</a>, or <a href="https://docs.python.org/3/library/constants.html#None">None</a> to unset the error</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.16
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.16;" id="gtk_gl_area_get_error">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gl_area_get_error">
+	<span><code>gtk_gl_area_get_error</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GError" href="https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html#GError">GError</a> *
+gtk_gl_area_get_error (<a title="GtkGLArea" href="hotdoc_markdown/gtkglarea.html#GtkGLArea">GtkGLArea</a> * area)</pre>
+
+<p>Gets the current error set on the <em>area</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>area</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkglarea.html#GtkGLArea">GtkGLArea</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					
+										
+<span class="annotation">[<abbr title="NULL may be passed to the value"><span class="acronym">nullable</span></abbr>]</span>
+<span class="annotation">[<abbr title="Don't free data after the code is done"><span class="acronym">transfer: none</span></abbr>]</span>
+
+										)
+								–
+			</div>
+							<p>the <a href="https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html#GError">GError</a> or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.16
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gl_area_get_error">
+	<span><code>Gtk.prototype.get_error</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_error(): {
+    // javascript wrapper for 'gtk_gl_area_get_error'
+}</pre>
+
+<p>Gets the current error set on the <em>area</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>area</code></em></i>
+					(
+						<a title="Gtk.GLArea" href="hotdoc_markdown/gtkglarea.html#GtkGLArea">Gtk.GLArea</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkglarea.html#GtkGLArea">Gtk.GLArea</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="GLib.Error" href="https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html#GError">GLib.Error</a>
+										)
+								–
+			</div>
+							<p>the <a href="https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html#GError">GLib.Error</a> or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.16
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gl_area_get_error">
+	<span><code>Gtk.GLArea.get_error</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.GLArea.get_error (self):
+    #python wrapper for 'gtk_gl_area_get_error'</pre>
+
+<p>Gets the current error set on the <em>area</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>area</code></em></i>
+					(
+						<a title="Gtk.GLArea" href="hotdoc_markdown/gtkglarea.html#GtkGLArea">Gtk.GLArea</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkglarea.html#GtkGLArea">Gtk.GLArea</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="GLib.Error" href="https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html#GError">GLib.Error</a>
+										)
+								–
+			</div>
+							<p>the <a href="https://developer.gnome.org/glib/unstable/glib-Error-Reporting.html#GError">GLib.Error</a> or <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.16
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.16;" id="gtk_gl_area_set_has_alpha">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gl_area_set_has_alpha">
+	<span><code>gtk_gl_area_set_has_alpha</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_gl_area_set_has_alpha (<a title="GtkGLArea" href="hotdoc_markdown/gtkglarea.html#GtkGLArea">GtkGLArea</a> * area,
+                           <a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a> has_alpha)</pre>
+
+<p>If <em>has_alpha</em> is <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> the buffer allocated by the widget will have
+an alpha channel component, and when rendering to the window the
+result will be composited over whatever is below the widget.</p>
+<p>If <em>has_alpha</em> is <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS">FALSE</a> there will be no alpha channel, and the
+buffer will fully replace anything below the widget.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>area</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkglarea.html#GtkGLArea">GtkGLArea</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>has_alpha</code></em></i>
+				–
+	</div>
+			<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> to add an alpha component</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.16
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gl_area_set_has_alpha">
+	<span><code>Gtk.prototype.set_has_alpha</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_has_alpha(has_alpha: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_gl_area_set_has_alpha'
+}</pre>
+
+<p>If <em>has_alpha</em> is <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> the buffer allocated by the widget will have
+an alpha channel component, and when rendering to the window the
+result will be composited over whatever is below the widget.</p>
+<p>If <em>has_alpha</em> is <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">false</a> there will be no alpha channel, and the
+buffer will fully replace anything below the widget.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>area</code></em></i>
+					(
+						<a title="Gtk.GLArea" href="hotdoc_markdown/gtkglarea.html#GtkGLArea">Gtk.GLArea</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkglarea.html#GtkGLArea">Gtk.GLArea</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>has_alpha</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> to add an alpha component</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.16
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gl_area_set_has_alpha">
+	<span><code>Gtk.GLArea.set_has_alpha</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.GLArea.set_has_alpha (self, has_alpha):
+    #python wrapper for 'gtk_gl_area_set_has_alpha'</pre>
+
+<p>If <em>has_alpha</em> is <a href="https://docs.python.org/3/library/constants.html#True">True</a> the buffer allocated by the widget will have
+an alpha channel component, and when rendering to the window the
+result will be composited over whatever is below the widget.</p>
+<p>If <em>has_alpha</em> is <a href="https://docs.python.org/3/library/constants.html#False">False</a> there will be no alpha channel, and the
+buffer will fully replace anything below the widget.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>area</code></em></i>
+					(
+						<a title="Gtk.GLArea" href="hotdoc_markdown/gtkglarea.html#GtkGLArea">Gtk.GLArea</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkglarea.html#GtkGLArea">Gtk.GLArea</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>has_alpha</code></em></i>
+					(
+						<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+						)
+				–
+	</div>
+			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> to add an alpha component</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.16
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.16;" id="gtk_gl_area_get_has_alpha">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gl_area_get_has_alpha">
+	<span><code>gtk_gl_area_get_has_alpha</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_gl_area_get_has_alpha (<a title="GtkGLArea" href="hotdoc_markdown/gtkglarea.html#GtkGLArea">GtkGLArea</a> * area)</pre>
+
+<p>Returns whether the area has an alpha component.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>area</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkglarea.html#GtkGLArea">GtkGLArea</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if the <em>area</em> has an alpha component, <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS">FALSE</a> otherwise</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.16
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gl_area_get_has_alpha">
+	<span><code>Gtk.prototype.get_has_alpha</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_has_alpha(): {
+    // javascript wrapper for 'gtk_gl_area_get_has_alpha'
+}</pre>
+
+<p>Returns whether the area has an alpha component.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>area</code></em></i>
+					(
+						<a title="Gtk.GLArea" href="hotdoc_markdown/gtkglarea.html#GtkGLArea">Gtk.GLArea</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkglarea.html#GtkGLArea">Gtk.GLArea</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if the <em>area</em> has an alpha component, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">false</a> otherwise</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.16
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gl_area_get_has_alpha">
+	<span><code>Gtk.GLArea.get_has_alpha</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.GLArea.get_has_alpha (self):
+    #python wrapper for 'gtk_gl_area_get_has_alpha'</pre>
+
+<p>Returns whether the area has an alpha component.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>area</code></em></i>
+					(
+						<a title="Gtk.GLArea" href="hotdoc_markdown/gtkglarea.html#GtkGLArea">Gtk.GLArea</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkglarea.html#GtkGLArea">Gtk.GLArea</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+										)
+								–
+			</div>
+							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if the <em>area</em> has an alpha component, <a href="https://docs.python.org/3/library/constants.html#False">False</a> otherwise</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.16
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.16;" id="gtk_gl_area_set_has_depth_buffer">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gl_area_set_has_depth_buffer">
+	<span><code>gtk_gl_area_set_has_depth_buffer</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_gl_area_set_has_depth_buffer (<a title="GtkGLArea" href="hotdoc_markdown/gtkglarea.html#GtkGLArea">GtkGLArea</a> * area,
+                                  <a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a> has_depth_buffer)</pre>
+
+<p>If <em>has_depth_buffer</em> is <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> the widget will allocate and
+enable a depth buffer for the target framebuffer. Otherwise
+there will be none.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>area</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkglarea.html#GtkGLArea">GtkGLArea</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>has_depth_buffer</code></em></i>
+				–
+	</div>
+			<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> to add a depth buffer</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.16
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gl_area_set_has_depth_buffer">
+	<span><code>Gtk.prototype.set_has_depth_buffer</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_has_depth_buffer(has_depth_buffer: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_gl_area_set_has_depth_buffer'
+}</pre>
+
+<p>If <em>has_depth_buffer</em> is <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> the widget will allocate and
+enable a depth buffer for the target framebuffer. Otherwise
+there will be none.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>area</code></em></i>
+					(
+						<a title="Gtk.GLArea" href="hotdoc_markdown/gtkglarea.html#GtkGLArea">Gtk.GLArea</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkglarea.html#GtkGLArea">Gtk.GLArea</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>has_depth_buffer</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> to add a depth buffer</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.16
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gl_area_set_has_depth_buffer">
+	<span><code>Gtk.GLArea.set_has_depth_buffer</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.GLArea.set_has_depth_buffer (self, has_depth_buffer):
+    #python wrapper for 'gtk_gl_area_set_has_depth_buffer'</pre>
+
+<p>If <em>has_depth_buffer</em> is <a href="https://docs.python.org/3/library/constants.html#True">True</a> the widget will allocate and
+enable a depth buffer for the target framebuffer. Otherwise
+there will be none.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>area</code></em></i>
+					(
+						<a title="Gtk.GLArea" href="hotdoc_markdown/gtkglarea.html#GtkGLArea">Gtk.GLArea</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkglarea.html#GtkGLArea">Gtk.GLArea</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>has_depth_buffer</code></em></i>
+					(
+						<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+						)
+				–
+	</div>
+			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> to add a depth buffer</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.16
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.16;" id="gtk_gl_area_get_has_depth_buffer">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gl_area_get_has_depth_buffer">
+	<span><code>gtk_gl_area_get_has_depth_buffer</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_gl_area_get_has_depth_buffer (<a title="GtkGLArea" href="hotdoc_markdown/gtkglarea.html#GtkGLArea">GtkGLArea</a> * area)</pre>
+
+<p>Returns whether the area has a depth buffer.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>area</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkglarea.html#GtkGLArea">GtkGLArea</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if the <em>area</em> has a depth buffer, <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS">FALSE</a> otherwise</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.16
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gl_area_get_has_depth_buffer">
+	<span><code>Gtk.prototype.get_has_depth_buffer</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_has_depth_buffer(): {
+    // javascript wrapper for 'gtk_gl_area_get_has_depth_buffer'
+}</pre>
+
+<p>Returns whether the area has a depth buffer.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>area</code></em></i>
+					(
+						<a title="Gtk.GLArea" href="hotdoc_markdown/gtkglarea.html#GtkGLArea">Gtk.GLArea</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkglarea.html#GtkGLArea">Gtk.GLArea</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if the <em>area</em> has a depth buffer, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">false</a> otherwise</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.16
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gl_area_get_has_depth_buffer">
+	<span><code>Gtk.GLArea.get_has_depth_buffer</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.GLArea.get_has_depth_buffer (self):
+    #python wrapper for 'gtk_gl_area_get_has_depth_buffer'</pre>
+
+<p>Returns whether the area has a depth buffer.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>area</code></em></i>
+					(
+						<a title="Gtk.GLArea" href="hotdoc_markdown/gtkglarea.html#GtkGLArea">Gtk.GLArea</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkglarea.html#GtkGLArea">Gtk.GLArea</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+										)
+								–
+			</div>
+							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if the <em>area</em> has a depth buffer, <a href="https://docs.python.org/3/library/constants.html#False">False</a> otherwise</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.16
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.16;" id="gtk_gl_area_set_has_stencil_buffer">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gl_area_set_has_stencil_buffer">
+	<span><code>gtk_gl_area_set_has_stencil_buffer</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_gl_area_set_has_stencil_buffer (<a title="GtkGLArea" href="hotdoc_markdown/gtkglarea.html#GtkGLArea">GtkGLArea</a> * area,
+                                    <a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a> has_stencil_buffer)</pre>
+
+<p>If <em>has_stencil_buffer</em> is <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> the widget will allocate and
+enable a stencil buffer for the target framebuffer. Otherwise
+there will be none.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>area</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkglarea.html#GtkGLArea">GtkGLArea</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>has_stencil_buffer</code></em></i>
+				–
+	</div>
+			<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> to add a stencil buffer</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.16
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gl_area_set_has_stencil_buffer">
+	<span><code>Gtk.prototype.set_has_stencil_buffer</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_has_stencil_buffer(has_stencil_buffer: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_gl_area_set_has_stencil_buffer'
+}</pre>
+
+<p>If <em>has_stencil_buffer</em> is <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> the widget will allocate and
+enable a stencil buffer for the target framebuffer. Otherwise
+there will be none.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>area</code></em></i>
+					(
+						<a title="Gtk.GLArea" href="hotdoc_markdown/gtkglarea.html#GtkGLArea">Gtk.GLArea</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkglarea.html#GtkGLArea">Gtk.GLArea</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>has_stencil_buffer</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> to add a stencil buffer</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.16
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gl_area_set_has_stencil_buffer">
+	<span><code>Gtk.GLArea.set_has_stencil_buffer</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.GLArea.set_has_stencil_buffer (self, has_stencil_buffer):
+    #python wrapper for 'gtk_gl_area_set_has_stencil_buffer'</pre>
+
+<p>If <em>has_stencil_buffer</em> is <a href="https://docs.python.org/3/library/constants.html#True">True</a> the widget will allocate and
+enable a stencil buffer for the target framebuffer. Otherwise
+there will be none.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>area</code></em></i>
+					(
+						<a title="Gtk.GLArea" href="hotdoc_markdown/gtkglarea.html#GtkGLArea">Gtk.GLArea</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkglarea.html#GtkGLArea">Gtk.GLArea</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>has_stencil_buffer</code></em></i>
+					(
+						<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+						)
+				–
+	</div>
+			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> to add a stencil buffer</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.16
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.16;" id="gtk_gl_area_get_has_stencil_buffer">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gl_area_get_has_stencil_buffer">
+	<span><code>gtk_gl_area_get_has_stencil_buffer</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_gl_area_get_has_stencil_buffer (<a title="GtkGLArea" href="hotdoc_markdown/gtkglarea.html#GtkGLArea">GtkGLArea</a> * area)</pre>
+
+<p>Returns whether the area has a stencil buffer.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>area</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkglarea.html#GtkGLArea">GtkGLArea</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if the <em>area</em> has a stencil buffer, <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS">FALSE</a> otherwise</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.16
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gl_area_get_has_stencil_buffer">
+	<span><code>Gtk.prototype.get_has_stencil_buffer</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_has_stencil_buffer(): {
+    // javascript wrapper for 'gtk_gl_area_get_has_stencil_buffer'
+}</pre>
+
+<p>Returns whether the area has a stencil buffer.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>area</code></em></i>
+					(
+						<a title="Gtk.GLArea" href="hotdoc_markdown/gtkglarea.html#GtkGLArea">Gtk.GLArea</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkglarea.html#GtkGLArea">Gtk.GLArea</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if the <em>area</em> has a stencil buffer, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">false</a> otherwise</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.16
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gl_area_get_has_stencil_buffer">
+	<span><code>Gtk.GLArea.get_has_stencil_buffer</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.GLArea.get_has_stencil_buffer (self):
+    #python wrapper for 'gtk_gl_area_get_has_stencil_buffer'</pre>
+
+<p>Returns whether the area has a stencil buffer.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>area</code></em></i>
+					(
+						<a title="Gtk.GLArea" href="hotdoc_markdown/gtkglarea.html#GtkGLArea">Gtk.GLArea</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkglarea.html#GtkGLArea">Gtk.GLArea</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+										)
+								–
+			</div>
+							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if the <em>area</em> has a stencil buffer, <a href="https://docs.python.org/3/library/constants.html#False">False</a> otherwise</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.16
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.16;" id="gtk_gl_area_set_auto_render">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gl_area_set_auto_render">
+	<span><code>gtk_gl_area_set_auto_render</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_gl_area_set_auto_render (<a title="GtkGLArea" href="hotdoc_markdown/gtkglarea.html#GtkGLArea">GtkGLArea</a> * area,
+                             <a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a> auto_render)</pre>
+
+<p>If <em>auto_render</em> is <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> the <a href="gtkglarea.html#GtkGLArea::render">render</a> signal will be
+emitted every time the widget draws. This is the default and is
+useful if drawing the widget is faster.</p>
+<p>If <em>auto_render</em> is <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS">FALSE</a> the data from previous rendering is kept
+around and will be used for drawing the widget the next time,
+unless the window is resized. In order to force a rendering
+<a href="hotdoc_markdown/gtkglarea.html#gtk_gl_area_queue_render">gtk_gl_area_queue_render</a> must be called. This mode is useful when
+the scene changes seldomly, but takes a long time to redraw.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>area</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkglarea.html#GtkGLArea">GtkGLArea</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>auto_render</code></em></i>
+				–
+	</div>
+			<p>a boolean</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.16
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gl_area_set_auto_render">
+	<span><code>Gtk.prototype.set_auto_render</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_auto_render(auto_render: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_gl_area_set_auto_render'
+}</pre>
+
+<p>If <em>auto_render</em> is <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> the <a href="gtkglarea.html#GtkGLArea::render">render</a> signal will be
+emitted every time the widget draws. This is the default and is
+useful if drawing the widget is faster.</p>
+<p>If <em>auto_render</em> is <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">false</a> the data from previous rendering is kept
+around and will be used for drawing the widget the next time,
+unless the window is resized. In order to force a rendering
+<a href="hotdoc_markdown/gtkglarea.html#gtk_gl_area_queue_render">Gtk.prototype.queue_render</a> must be called. This mode is useful when
+the scene changes seldomly, but takes a long time to redraw.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>area</code></em></i>
+					(
+						<a title="Gtk.GLArea" href="hotdoc_markdown/gtkglarea.html#GtkGLArea">Gtk.GLArea</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkglarea.html#GtkGLArea">Gtk.GLArea</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>auto_render</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>a boolean</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.16
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gl_area_set_auto_render">
+	<span><code>Gtk.GLArea.set_auto_render</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.GLArea.set_auto_render (self, auto_render):
+    #python wrapper for 'gtk_gl_area_set_auto_render'</pre>
+
+<p>If <em>auto_render</em> is <a href="https://docs.python.org/3/library/constants.html#True">True</a> the <a href="gtkglarea.html#GtkGLArea::render">render</a> signal will be
+emitted every time the widget draws. This is the default and is
+useful if drawing the widget is faster.</p>
+<p>If <em>auto_render</em> is <a href="https://docs.python.org/3/library/constants.html#False">False</a> the data from previous rendering is kept
+around and will be used for drawing the widget the next time,
+unless the window is resized. In order to force a rendering
+<a href="hotdoc_markdown/gtkglarea.html#gtk_gl_area_queue_render">Gtk.GLArea.queue_render</a> must be called. This mode is useful when
+the scene changes seldomly, but takes a long time to redraw.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>area</code></em></i>
+					(
+						<a title="Gtk.GLArea" href="hotdoc_markdown/gtkglarea.html#GtkGLArea">Gtk.GLArea</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkglarea.html#GtkGLArea">Gtk.GLArea</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>auto_render</code></em></i>
+					(
+						<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+						)
+				–
+	</div>
+			<p>a boolean</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.16
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.16;" id="gtk_gl_area_get_auto_render">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gl_area_get_auto_render">
+	<span><code>gtk_gl_area_get_auto_render</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_gl_area_get_auto_render (<a title="GtkGLArea" href="hotdoc_markdown/gtkglarea.html#GtkGLArea">GtkGLArea</a> * area)</pre>
+
+<p>Returns whether the area is in auto render mode or not.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>area</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkglarea.html#GtkGLArea">GtkGLArea</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if the <em>area</em> is auto rendering, <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS">FALSE</a> otherwise</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.16
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gl_area_get_auto_render">
+	<span><code>Gtk.prototype.get_auto_render</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_auto_render(): {
+    // javascript wrapper for 'gtk_gl_area_get_auto_render'
+}</pre>
+
+<p>Returns whether the area is in auto render mode or not.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>area</code></em></i>
+					(
+						<a title="Gtk.GLArea" href="hotdoc_markdown/gtkglarea.html#GtkGLArea">Gtk.GLArea</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkglarea.html#GtkGLArea">Gtk.GLArea</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if the <em>area</em> is auto rendering, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">false</a> otherwise</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.16
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gl_area_get_auto_render">
+	<span><code>Gtk.GLArea.get_auto_render</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.GLArea.get_auto_render (self):
+    #python wrapper for 'gtk_gl_area_get_auto_render'</pre>
+
+<p>Returns whether the area is in auto render mode or not.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>area</code></em></i>
+					(
+						<a title="Gtk.GLArea" href="hotdoc_markdown/gtkglarea.html#GtkGLArea">Gtk.GLArea</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkglarea.html#GtkGLArea">Gtk.GLArea</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+										)
+								–
+			</div>
+							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if the <em>area</em> is auto rendering, <a href="https://docs.python.org/3/library/constants.html#False">False</a> otherwise</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.16
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.16;" id="gtk_gl_area_get_required_version">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gl_area_get_required_version">
+	<span><code>gtk_gl_area_get_required_version</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_gl_area_get_required_version (<a title="GtkGLArea" href="hotdoc_markdown/gtkglarea.html#GtkGLArea">GtkGLArea</a> * area,
+                                  <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> * major,
+                                  <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> * minor)</pre>
+
+<p>Retrieves the required version of OpenGL set
+using <a href="hotdoc_markdown/gtkglarea.html#gtk_gl_area_set_required_version">gtk_gl_area_set_required_version</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>area</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkglarea.html#GtkGLArea">GtkGLArea</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>major</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="Parameter for returning results"><span class="acronym">out</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>return location for the required major version</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>minor</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="Parameter for returning results"><span class="acronym">out</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>return location for the required minor version</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.16
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gl_area_get_required_version">
+	<span><code>Gtk.prototype.get_required_version</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_required_version(): {
+    // javascript wrapper for 'gtk_gl_area_get_required_version'
+}</pre>
+
+<p>Retrieves the required version of OpenGL set
+using <a href="hotdoc_markdown/gtkglarea.html#gtk_gl_area_set_required_version">Gtk.prototype.set_required_version</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>area</code></em></i>
+					(
+						<a title="Gtk.GLArea" href="hotdoc_markdown/gtkglarea.html#GtkGLArea">Gtk.GLArea</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkglarea.html#GtkGLArea">Gtk.GLArea</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.16
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gl_area_get_required_version">
+	<span><code>Gtk.GLArea.get_required_version</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.GLArea.get_required_version (self):
+    #python wrapper for 'gtk_gl_area_get_required_version'</pre>
+
+<p>Retrieves the required version of OpenGL set
+using <a href="hotdoc_markdown/gtkglarea.html#gtk_gl_area_set_required_version">Gtk.GLArea.set_required_version</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>area</code></em></i>
+					(
+						<a title="Gtk.GLArea" href="hotdoc_markdown/gtkglarea.html#GtkGLArea">Gtk.GLArea</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkglarea.html#GtkGLArea">Gtk.GLArea</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.16
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.16;" id="gtk_gl_area_set_required_version">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gl_area_set_required_version">
+	<span><code>gtk_gl_area_set_required_version</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_gl_area_set_required_version (<a title="GtkGLArea" href="hotdoc_markdown/gtkglarea.html#GtkGLArea">GtkGLArea</a> * area,
+                                  <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> major,
+                                  <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> minor)</pre>
+
+<p>Sets the required version of OpenGL to be used when creating the context
+for the widget.</p>
+<p>This function must be called before the area has been realized.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>area</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkglarea.html#GtkGLArea">GtkGLArea</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>major</code></em></i>
+				–
+	</div>
+			<p>the major version</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>minor</code></em></i>
+				–
+	</div>
+			<p>the minor version</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.16
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gl_area_set_required_version">
+	<span><code>Gtk.prototype.set_required_version</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_required_version(major: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, minor: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_gl_area_set_required_version'
+}</pre>
+
+<p>Sets the required version of OpenGL to be used when creating the context
+for the widget.</p>
+<p>This function must be called before the area has been realized.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>area</code></em></i>
+					(
+						<a title="Gtk.GLArea" href="hotdoc_markdown/gtkglarea.html#GtkGLArea">Gtk.GLArea</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkglarea.html#GtkGLArea">Gtk.GLArea</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>major</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the major version</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>minor</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the minor version</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.16
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gl_area_set_required_version">
+	<span><code>Gtk.GLArea.set_required_version</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.GLArea.set_required_version (self, major, minor):
+    #python wrapper for 'gtk_gl_area_set_required_version'</pre>
+
+<p>Sets the required version of OpenGL to be used when creating the context
+for the widget.</p>
+<p>This function must be called before the area has been realized.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>area</code></em></i>
+					(
+						<a title="Gtk.GLArea" href="hotdoc_markdown/gtkglarea.html#GtkGLArea">Gtk.GLArea</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkglarea.html#GtkGLArea">Gtk.GLArea</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>major</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>the major version</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>minor</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>the minor version</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.16
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.22;" id="gtk_gl_area_set_use_es">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gl_area_set_use_es">
+	<span><code>gtk_gl_area_set_use_es</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_gl_area_set_use_es (<a title="GtkGLArea" href="hotdoc_markdown/gtkglarea.html#GtkGLArea">GtkGLArea</a> * area,
+                        <a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a> use_es)</pre>
+
+<p>Sets whether the <em>area</em> should create an OpenGL or an OpenGL ES context.</p>
+<p>You should check the capabilities of the <a href="https://developer.gnome.org/gdk3/GdkGLContext.html#GdkGLContext-struct">GdkGLContext</a> before drawing
+with either API.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>area</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkglarea.html#GtkGLArea">GtkGLArea</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>use_es</code></em></i>
+				–
+	</div>
+			<p>whether to use OpenGL or OpenGL ES</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.22
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gl_area_set_use_es">
+	<span><code>Gtk.prototype.set_use_es</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_use_es(use_es: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_gl_area_set_use_es'
+}</pre>
+
+<p>Sets whether the <em>area</em> should create an OpenGL or an OpenGL ES context.</p>
+<p>You should check the capabilities of the <a href="https://developer.gnome.org/gdk3/GdkGLContext.html#GdkGLContext-struct">Gdk.GLContext</a> before drawing
+with either API.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>area</code></em></i>
+					(
+						<a title="Gtk.GLArea" href="hotdoc_markdown/gtkglarea.html#GtkGLArea">Gtk.GLArea</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkglarea.html#GtkGLArea">Gtk.GLArea</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>use_es</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>whether to use OpenGL or OpenGL ES</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.22
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gl_area_set_use_es">
+	<span><code>Gtk.GLArea.set_use_es</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.GLArea.set_use_es (self, use_es):
+    #python wrapper for 'gtk_gl_area_set_use_es'</pre>
+
+<p>Sets whether the <em>area</em> should create an OpenGL or an OpenGL ES context.</p>
+<p>You should check the capabilities of the <a href="https://developer.gnome.org/gdk3/GdkGLContext.html#GdkGLContext-struct">Gdk.GLContext</a> before drawing
+with either API.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>area</code></em></i>
+					(
+						<a title="Gtk.GLArea" href="hotdoc_markdown/gtkglarea.html#GtkGLArea">Gtk.GLArea</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkglarea.html#GtkGLArea">Gtk.GLArea</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>use_es</code></em></i>
+					(
+						<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+						)
+				–
+	</div>
+			<p>whether to use OpenGL or OpenGL ES</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.22
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.22;" id="gtk_gl_area_get_use_es">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gl_area_get_use_es">
+	<span><code>gtk_gl_area_get_use_es</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_gl_area_get_use_es (<a title="GtkGLArea" href="hotdoc_markdown/gtkglarea.html#GtkGLArea">GtkGLArea</a> * area)</pre>
+
+<p>Retrieves the value set by <a href="hotdoc_markdown/gtkglarea.html#gtk_gl_area_set_use_es">gtk_gl_area_set_use_es</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>area</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkglarea.html#GtkGLArea">GtkGLArea</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if the <a href="hotdoc_markdown/gtkglarea.html#GtkGLArea">GtkGLArea</a> should create an OpenGL ES context
+and <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS">FALSE</a> otherwise</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.22
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gl_area_get_use_es">
+	<span><code>Gtk.prototype.get_use_es</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_use_es(): {
+    // javascript wrapper for 'gtk_gl_area_get_use_es'
+}</pre>
+
+<p>Retrieves the value set by <a href="hotdoc_markdown/gtkglarea.html#gtk_gl_area_set_use_es">Gtk.prototype.set_use_es</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>area</code></em></i>
+					(
+						<a title="Gtk.GLArea" href="hotdoc_markdown/gtkglarea.html#GtkGLArea">Gtk.GLArea</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkglarea.html#GtkGLArea">Gtk.GLArea</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if the <a href="hotdoc_markdown/gtkglarea.html#GtkGLArea">Gtk.GLArea</a> should create an OpenGL ES context
+and <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">false</a> otherwise</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.22
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gl_area_get_use_es">
+	<span><code>Gtk.GLArea.get_use_es</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.GLArea.get_use_es (self):
+    #python wrapper for 'gtk_gl_area_get_use_es'</pre>
+
+<p>Retrieves the value set by <a href="hotdoc_markdown/gtkglarea.html#gtk_gl_area_set_use_es">Gtk.GLArea.set_use_es</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>area</code></em></i>
+					(
+						<a title="Gtk.GLArea" href="hotdoc_markdown/gtkglarea.html#GtkGLArea">Gtk.GLArea</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkglarea.html#GtkGLArea">Gtk.GLArea</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+										)
+								–
+			</div>
+							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if the <a href="hotdoc_markdown/gtkglarea.html#GtkGLArea">Gtk.GLArea</a> should create an OpenGL ES context
+and <a href="https://docs.python.org/3/library/constants.html#False">False</a> otherwise</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.22
+		</p>
+
+
+        </div>
+
+</div>
+
+
+
+
+
+
+		
+	</div>
+	<div id="search_results">
+		<p>The results of the search are</p>
+	</div>
+	<hr>
+	<div id="footer">
+		    
+
+	</div>
+</div>
+
+<div id="toc-column">
+	
+		<div class="edit-button">
+		
+
+	</div>
+		<div id="toc-wrapper">
+		<nav id="toc"></nav>
+	</div>
+</div>
+</div>
+</main>
+
+</body>
+
+<script src="assets/js/navbar_offset_scroller.js"></script>
+</html>

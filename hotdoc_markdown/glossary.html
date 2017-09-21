@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<base href="..">
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>Glossary</title>
+
+<link rel="stylesheet" href="assets/css/custom_bootstrap.css" type="text/css">
+<link rel="stylesheet" href="assets/css/bootstrap-toc.min.css" type="text/css">
+<link rel="stylesheet" href="assets/css/frontend.css" type="text/css">
+<link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
+
+<link rel="stylesheet" href="assets/css/prism.css" type="text/css">
+
+<script src="assets/js/mustache.min.js"></script>
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/scrollspy.js"></script>
+<script src="assets/js/bootstrap.js"></script>
+<script src="assets/js/typeahead.jquery.min.js"></script>
+<script src="assets/js/search.js"></script>
+<script src="assets/js/isotope.pkgd.min.js"></script>
+<script src="assets/js/compare-versions.js"></script>
+<script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="assets/js/bootstrap-toc.min.js"></script>
+<script src="assets/js/jquery.touchSwipe.min.js"></script>
+<script src="assets/js/anchor.min.js"></script>
+<script src="assets/js/tag_filtering.js"></script>
+<script src="assets/js/language_switching.js"></script>
+
+<script src="assets/js/lines_around_headings.js"></script>
+
+<script src="assets/js/prism-core.js"></script>
+<script src="assets/js/prism-autoloader.js"></script>
+<script src="assets/js/prism_autoloader_path_override.js"></script>
+<script src="assets/js/trie.js"></script>
+
+
+</head>
+
+<body class="no-script
+" data-spy="scroll" data-target="#toc" data-offset="70">
+
+<script>
+$('body').removeClass('no-script');
+</script>
+
+<nav class="navbar navbar-fixed-top navbar-default" id="topnav">
+	<div class="container-fluid">
+		<div class="navbar-right">
+			<a id="toc-toggle">
+				<span class="glyphicon glyphicon-menu-right"></span>
+				<span class="glyphicon glyphicon-menu-left"></span>
+			</a>
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-wrapper" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<form action="" class="navbar-form pull-right" id="navbar-search-form">
+                               <div class="form-group has-feedback">
+                                       <input type="text" class="form-control input-sm" name="search" id="sidenav-lookup-field" placeholder="search" disabled>
+				       <span class="glyphicon glyphicon-search form-control-feedback" id="search-mgn-glass"></span>
+                               </div>
+                        </form>
+		</div>
+		<div class="navbar-header">
+			<a id="sidenav-toggle">
+				<span class="glyphicon glyphicon-menu-right"></span>
+				<span class="glyphicon glyphicon-menu-left"></span>
+			</a>
+			<a id="home-link" href="index.html" class="hotdoc-navbar-brand">
+				<img src="assets/images/home.svg" alt="Home">
+			</a>
+		</div>
+		<div class="navbar-collapse collapse" id="navbar-wrapper">
+			<ul class="nav navbar-nav" id="menu">
+							</ul>
+			<div class="hidden-xs hidden-sm navbar-text navbar-center">
+							</div>
+		</div>
+	</div>
+</nav>
+
+<main>
+<div data-extension="core" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="hotdoc_markdown/glossary.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['c', 'javascript', 'python']">
+<script src="assets/js/utils.js"></script>
+
+<div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
+	<script src="assets/js/navigation.js"></script>
+	<script src="assets/js/sitemap.js"></script>
+</div>
+
+<div id="body">
+	<div id="main">
+				    <div id="page-description" data-hotdoc-source="glossary.markdown" data-hotdoc-role="main">
+        <h1 id="glossary">Glossary</h1>
+<p>allocation</p>
+<p>The final size of a widget within its parent. For example, a widget may
+request a minimum size of 20×20 pixels, but its parent may decide to
+allocate 50×20 pixels for it instead.</p>
+<p>See also requisition.</p>
+<p>bin</p>
+<p>A container that can hold at most one child widget. The base class for
+bins is #GtkBin.</p>
+<p>See also container.</p>
+<p>child</p>
+<p>A container's child is a widget contained inside it.</p>
+<p>column</p>
+<p>GTK+ contains several widgets which display data in columns, e.g. the
+#GtkTreeView. These view columns in the tree view are represented by
+#GtkTreeViewColumn objects inside GTK+. They should not be confused
+with model columns which are used to organize the data in tree models.</p>
+<p>See also model-view widget.</p>
+<p>container</p>
+<p>A widget that contains other widgets; in that case, the container is the
+<em>parent</em> of the <em>child</em> widgets. Some containers don't draw anything on
+their own, but rather just organize their children's geometry; for
+example, #GtkVBox lays out its children vertically without painting
+anything on its own. Other containers include decorative elements; for
+example, #GtkFrame contains the frame's child and a label in addition
+to the shaded frame it draws. The base class for containers is
+#GtkContainer.</p>
+<p>See also widget geometry.</p>
+<p>display</p>
+<p>GDK inherited the concept of display from the X window system, which
+considers a display to be the combination of a keyboard, a pointing
+device and one or more screens. Applications open a display to show
+windows and interact with the user. In GDK, a display is represented by
+a #GdkDisplay.</p>
+<p>Ellipsization is the process of replacing some part of a text by an
+ellipsis (usually "...") to make the text fit in a smaller space. Pango
+can ellipsize text at the beginning, at the end or in the middle.</p>
+<p>event</p>
+<p>Events are the way in which GDK informs GTK+ about external events like
+pointer motion, button clicks, key presses, etc.</p>
+<p>geometry</p>
+<p>A widget's position and size. Within its parent, this is called the
+widget's allocation.</p>
+<p>mapping</p>
+<p>This is the step in a widget's life cycle where it actually shows the
+GdkWindows it created when it was realized. When a widget is mapped, it
+must turn on its %GTK_MAPPED <a href="hotdoc_markdown/glossary.html#GtkWidgetFlags">flag</a>.</p>
+<p>Note that due to the asynchronous nature of the X window system, a
+widget's window may not appear on the screen immediatly after one calls
+gdk_window_show(): you must wait for the corresponding map event to be
+received. You can do this with the <a href="hotdoc_markdown/glossary.html#GtkWidget-map-event">GtkWidget::map-event
+signal</a>.</p>
+<p>model column</p>
+<p>A column in a tree model, holding data of a certain type. The types
+which can be stored in the columns of a model have to be specified when
+the model is constructed, see e.g. gtk_list_store_new().</p>
+<p>See also view column.</p>
+<p>model-view widget</p>
+<p>These widgets follow the well-known model-view pattern, which separates
+the data (the model) to be displayed from the component which does the
+actual visualization (the view). Examples of this pattern in GTK+ are
+the #GtkTreeView/#GtkTreeModel and #GtkTextView/#GtkTextBuffer</p>
+<p>One important advantage of this pattern is that it is possible to
+display the same model in multiple views; another one that the
+separation of the model allows a great deal of flexibility, as
+demonstrated by e.g. #GtkTreeModelSort or #GtkTreeModelFilter.</p>
+<p>no-window widget</p>
+<p>A widget that does not have a GdkWindow of its own on which to draw its
+contents, but rather shares its parent's. This can be tested with the
+gtk_widget_get_has_window() function.</p>
+<p>parent</p>
+<p>A widget's parent is the container inside which it resides.</p>
+<p>realization</p>
+<p>This is the step in a widget's life cycle where it creates its own
+GdkWindow, or otherwise associates itself with its parent's GdkWindow.
+If the widget has its own window, then it must also attach a style to
+it. A widget becomes unrealized by destroying its associated GdkWindow.
+When a widget is realized, it must turn on its %GTK_REALIZED
+<a href="hotdoc_markdown/glossary.html#GtkWidgetFlags">flag</a>.</p>
+<p>Widgets that don't own the GdkWindow on which they draw are called
+no-window widgets. This can be tested with the
+gtk_widget_get_has_window() function. Normally, these widgets draw
+on their parent's GdkWindow.</p>
+<p>Note that when a #GtkWidget creates a window in its
+#GtkWidget::realize handler, it does not actually show the window. That
+is, the window's structure is just created in memory. The widget
+actually shows the window when it gets mapped.</p>
+<p>requisition</p>
+<p>The size requisition of a widget is the minimum amount of space it
+requests from its parent. Once the parent computes the widget's final
+size, it gives it its size allocation.</p>
+<p>See also allocation.</p>
+<p>screen</p>
+<p>GDK inherited the concept of screen from the X window system, which
+considers a screen to be a rectangular area, on which applications may
+place their windows. Screens under X may have quite dissimilar visuals.
+Each screen can stretch across multiple physical monitors.</p>
+<p>In GDK, screens are represented by #GdkScreen objects.</p>
+<p>style</p>
+<p>A style encapsulates what GTK+ needs to know in order to draw a widget.
+Styles can be modified with <a href="hotdoc_markdown/glossary.html#gtk3-Resource-Files">resource files</a>.</p>
+<p>toplevel</p>
+<p>A widget that does not require a parent container. The only toplevel
+widgets in GTK+ are #GtkWindow and widgets derived from it.</p>
+<p>See also container.</p>
+<p>unmap</p>
+<p>See mapping.</p>
+<p>unrealize</p>
+<p>See realization.</p>
+<p>view column</p>
+<p>A displayed column in a tree view, represented by a #GtkTreeViewColumn
+object.</p>
+<p>See also model column.</p>
+<p>visual</p>
+<p>A visual describes how color information is stored in pixels. A screen
+may support multiple visuals. On modern hardware, the most common
+visuals are truecolor visuals, which store a fixed number of bits
+(typically 8) for the red, green and blue components of a color.</p>
+<p>On ancient hardware, one may still meet indexed visuals, which store
+color information as an index into a color map, or even monochrome
+visuals.</p>
+<p>widget</p>
+<p>A control in a graphical user interface. Widgets can draw themselves and
+process events from the mouse and keyboard. Widget types include
+buttons, menus, text entry lines, and lists. Widgets can be arranged
+into containers, and these take care of assigning the geometry of the
+widgets: every widget thus has a parent except those widgets which are
+toplevels. The base class for widgets is #GtkWidget.</p>
+<p>See also container.</p>
+
+    </div>
+        
+
+
+
+
+		
+	</div>
+	<div id="search_results">
+		<p>The results of the search are</p>
+	</div>
+	<hr>
+	<div id="footer">
+		    
+
+	</div>
+</div>
+
+<div id="toc-column">
+	
+		<div class="edit-button">
+		
+
+	</div>
+		<div id="toc-wrapper">
+		<nav id="toc"></nav>
+	</div>
+</div>
+</div>
+</main>
+
+</body>
+
+<script src="assets/js/navbar_offset_scroller.js"></script>
+</html>

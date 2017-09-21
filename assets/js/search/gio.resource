@@ -1,0 +1,1 @@
+urls_downloaded_cb({"token": "gio.resource", "urls": [{"url": "gtkbuilder.html#gtk_builder_new_from_resource", "context": {"gi-language": ["javascript", "python"]}}, {"url": "gtkcssprovider.html#gtk_css_provider_load_from_resource", "context": {"gi-language": ["javascript", "python"]}}]});

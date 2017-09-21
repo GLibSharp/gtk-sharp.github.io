@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<base href="..">
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>Common Questions</title>
+
+<link rel="stylesheet" href="assets/css/custom_bootstrap.css" type="text/css">
+<link rel="stylesheet" href="assets/css/bootstrap-toc.min.css" type="text/css">
+<link rel="stylesheet" href="assets/css/frontend.css" type="text/css">
+<link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
+
+<link rel="stylesheet" href="assets/css/prism.css" type="text/css">
+
+<script src="assets/js/mustache.min.js"></script>
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/scrollspy.js"></script>
+<script src="assets/js/bootstrap.js"></script>
+<script src="assets/js/typeahead.jquery.min.js"></script>
+<script src="assets/js/search.js"></script>
+<script src="assets/js/isotope.pkgd.min.js"></script>
+<script src="assets/js/compare-versions.js"></script>
+<script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="assets/js/bootstrap-toc.min.js"></script>
+<script src="assets/js/jquery.touchSwipe.min.js"></script>
+<script src="assets/js/anchor.min.js"></script>
+<script src="assets/js/tag_filtering.js"></script>
+<script src="assets/js/language_switching.js"></script>
+
+<script src="assets/js/lines_around_headings.js"></script>
+
+<script src="assets/js/prism-core.js"></script>
+<script src="assets/js/prism-autoloader.js"></script>
+<script src="assets/js/prism_autoloader_path_override.js"></script>
+<script src="assets/js/trie.js"></script>
+
+
+</head>
+
+<body class="no-script
+" data-spy="scroll" data-target="#toc" data-offset="70">
+
+<script>
+$('body').removeClass('no-script');
+</script>
+
+<nav class="navbar navbar-fixed-top navbar-default" id="topnav">
+	<div class="container-fluid">
+		<div class="navbar-right">
+			<a id="toc-toggle">
+				<span class="glyphicon glyphicon-menu-right"></span>
+				<span class="glyphicon glyphicon-menu-left"></span>
+			</a>
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-wrapper" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<form action="" class="navbar-form pull-right" id="navbar-search-form">
+                               <div class="form-group has-feedback">
+                                       <input type="text" class="form-control input-sm" name="search" id="sidenav-lookup-field" placeholder="search" disabled>
+				       <span class="glyphicon glyphicon-search form-control-feedback" id="search-mgn-glass"></span>
+                               </div>
+                        </form>
+		</div>
+		<div class="navbar-header">
+			<a id="sidenav-toggle">
+				<span class="glyphicon glyphicon-menu-right"></span>
+				<span class="glyphicon glyphicon-menu-left"></span>
+			</a>
+			<a id="home-link" href="index.html" class="hotdoc-navbar-brand">
+				<img src="assets/images/home.svg" alt="Home">
+			</a>
+		</div>
+		<div class="navbar-collapse collapse" id="navbar-wrapper">
+			<ul class="nav navbar-nav" id="menu">
+							</ul>
+			<div class="hidden-xs hidden-sm navbar-text navbar-center">
+							</div>
+		</div>
+	</div>
+</nav>
+
+<main>
+<div data-extension="core" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="hotdoc_markdown/question_index.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['c', 'javascript', 'python']">
+<script src="assets/js/utils.js"></script>
+
+<div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
+	<script src="assets/js/navigation.js"></script>
+	<script src="assets/js/sitemap.js"></script>
+</div>
+
+<div id="body">
+	<div id="main">
+				    <div id="page-description" data-hotdoc-source="question_index.markdown" data-hotdoc-role="main">
+        <h1 id="questions-and-answers">Questions and Answers</h1>
+<p>This is an "index" of the reference manual organized by common "How do
+I..." questions. If you aren't sure which documentation to read for the
+question you have, this list is a good place to start.</p>
+<h2 id="general">General</h2>
+<p><strong>Q:</strong> How do I get started with GTK+?</p>
+<p><strong>A:</strong> The GTK+ <a href="https://www.gtk.org">website</a> offers some
+<a href="https://www.gtk.org/documentation.php">tutorials</a> and other
+documentation (most of it about GTK+ 2.x, but mostly still applicable).
+More documentation ranging from whitepapers to online books can be found
+at the <a href="https://developer.gnome.org">GNOME developer's site</a>. After
+studying these materials you should be well prepared to come back to
+this reference manual for details.</p>
+<p><strong>Q:</strong> Where can I get help with GTK+, submit a bug report, or make a
+feature request?</p>
+<p><strong>A:</strong> See the <a href="hotdoc_markdown/resources.html">documentation on this topic</a>.</p>
+<p><strong>Q:</strong> How do I port from one GTK+ version to another?</p>
+<p><strong>A:</strong> See <a href="hotdoc_markdown/question_index.html#gtk-migrating-2-to-3">???</a>. You may also find useful
+information in the documentation for specific widgets and functions.</p>
+<p>If you have a question not covered in the manual, feel free to ask on
+the mailing lists and please <a href="https://bugzilla.gnome.org">file a bug
+report</a> against the documentation.</p>
+<p><strong>Q:</strong> How does memory management work in GTK+? Should I free data
+returned from functions?</p>
+<p><strong>A:</strong> See the documentation for #GObject and #GInitiallyUnowned. For
+#GObject note specifically g_object_ref() and g_object_unref().
+#GInitiallyUnowned is a subclass of #GObject so the same points apply,
+except that it has a "floating" state (explained in its documentation).</p>
+<p>For strings returned from functions, they will be declared "const" if
+they should not be freed. Non-const strings should be freed with
+g_free(). Arrays follow the same rule. If you find an undocumented
+exception to the rules, please report a bug to
+<a href="https://bugzilla.gnome.org">https://bugzilla.gnome.org</a>.</p>
+<p><strong>Q:</strong> Why does my program leak memory, if I destroy a widget
+immediately after creating it ?</p>
+<p><strong>A:</strong> If GtkFoo isn't a toplevel window, then</p>
+<pre><code> foo = gtk_foo_new ();
+ gtk_widget_destroy (foo);
+</code></pre>
+<p>is a memory leak, because no one assumed the initial floating reference.
+If you are using a widget and you aren't immediately packing it into a
+container, then you probably want standard reference counting, not
+floating reference counting.</p>
+<p>To get this, you must acquire a reference to the widget and drop the
+floating reference (“ref and sink” in GTK+ parlance) after creating it:</p>
+<pre><code> foo = gtk_foo_new ();
+ g_object_ref_sink (foo);
+</code></pre>
+<p>When you want to get rid of the widget, you must call
+gtk_widget_destroy() to break any external connections to the widget
+before dropping your reference:</p>
+<pre><code> gtk_widget_destroy (foo);
+ g_object_unref (foo);
+</code></pre>
+<p>When you immediately add a widget to a container, it takes care of
+assuming the initial floating reference and you don't have to worry
+about reference counting at all ... just call gtk_widget_destroy() to
+get rid of the widget.</p>
+<p><strong>Q:</strong> How do I use GTK+ with threads?</p>
+<p><strong>A:</strong> This is covered in the <a href="hotdoc_markdown/question_index.html#gdk-Threads">GDK threads documentation</a>.
+See also the <a href="hotdoc_markdown/question_index.html#glib-Threads">GThread</a> documentation for portable
+threading primitives.</p>
+<p><strong>Q:</strong> How do I internationalize a GTK+ program?</p>
+<p><strong>A:</strong> Most people use <a href="https://www.gnu.org/software/gettext/">GNU
+gettext</a>, already required in
+order to install GLib. On a UNIX or Linux system with gettext installed,
+type <code>info gettext</code> to read the documentation.</p>
+<p>The short checklist on how to use gettext is: call <code>bindtextdomain()</code> so
+gettext can find the files containing your translations, call
+textdomain() to set the default translation domain, call
+<code>bind_textdomain_codeset()</code> to request that all translated strings are
+returned in UTF-8, then call gettext() to look up each string to be
+translated in the default domain.</p>
+<p><code>gi18n.h</code> provides the following shorthand macros for convenience.
+Conventionally, people define macros as follows for convenience:</p>
+<pre><code>  #define  _(x)     gettext (x)
+  #define N_(x)     x
+  #define C_(ctx,x) pgettext (ctx, x)
+</code></pre>
+<p>You use N_() (N stands for no-op) to mark a string for translation in a
+location where a function call to gettext() is not allowed, such as in
+an array initializer. You eventually have to call gettext() on the
+string to actually fetch the translation. _() both marks the string for
+translation and actually translates it. The C_() macro (C stands for
+context) adds an additional context to the string that is marked for
+translation, which can help to disambiguate short strings that might
+need different translations in different parts of your program.</p>
+<p>Code using these macros ends up looking like this:</p>
+<pre><code> #include &lt;gi18n.h&gt;
+
+ static const char *global_variable = N_("Translate this string");
+
+ static void
+ make_widgets (void)
+ {
+    GtkWidget *label1;
+    GtkWidget *label2;
+
+    label1 = gtk_label_new (_("Another string to translate"));
+    label2 = gtk_label_new (_(global_variable));
+...
+</code></pre>
+<p>Libraries using gettext should use dgettext() instead of gettext(),
+which allows them to specify the translation domain each time they ask
+for a translation. Libraries should also avoid calling textdomain(),
+since they will be specifying the domain instead of using the default.</p>
+<p>With the convention that the macro <code>GETTEXT_PACKAGE</code> is defined to hold
+your libraries translation domain, <code>gi18n-lib.h</code> can be included to
+provide the following convenience:</p>
+<pre><code>  #define _(x) dgettext (GETTEXT_PACKAGE, x)
+</code></pre>
+<p><strong>Q:</strong> How do I use non-ASCII characters in GTK+ programs ?</p>
+<p><strong>A:</strong> GTK+ uses <a href="http://www.unicode.org">Unicode</a> (more exactly UTF-8)
+for all text. UTF-8 encodes each Unicode codepoint as a sequence of one
+to six bytes and has a number of nice properties which make it a good
+choice for working with Unicode text in C programs:</p>
+<ul>
+<li>
+<p>ASCII characters are encoded by their familiar ASCII codepoints.</p>
+</li>
+<li>
+<p>ASCII characters never appear as part of any other character.</p>
+</li>
+<li>
+<p>The zero byte doesn't occur as part of a character, so that UTF-8
+strings can be manipulated with the usual C library functions for
+handling zero-terminated strings.</p>
+</li>
+</ul>
+<p>More information about Unicode and UTF-8 can be found in the <a href="https://www.cl.cam.ac.uk/%7Emgk25/unicode.html">UTF-8 and
+Unicode FAQ for
+Unix/Linux</a>. GLib provides
+functions for converting strings between UTF-8 and other encodings, see
+g_locale_to_utf8() and g_convert().</p>
+<p>Text coming from external sources (e.g. files or user input), has to be
+converted to UTF-8 before being handed over to GTK+. The following
+example writes the content of a IS0-8859-1 encoded text file to
+<code>stdout</code>:</p>
+<pre><code>gchar *text, *utf8_text;
+gsize length;
+GError *error = NULL;
+
+if (g_file_get_contents (filename, &amp;text, &amp;length, NULL))
+  {
+     utf8_text = g_convert (text, length, "UTF-8", "ISO-8859-1",
+                            NULL, NULL, &amp;error);
+     if (error != NULL)
+       {
+         fprintf ("Couldn't convert file %s to UTF-8\n", filename);
+         g_error_free (error);
+       }
+     else
+       g_print (utf8_text);
+  }
+else
+  fprintf (stderr, "Unable to read file %s\n", filename);
+</code></pre>
+<p>For string literals in the source code, there are several alternatives
+for handling non-ASCII content:</p>
+<ul>
+<li>
+<p>direct UTF-8<br>
+If your editor and compiler are capable of handling UTF-8 encoded
+sources, it is very convenient to simply use UTF-8 for string
+literals, since it allows you to edit the strings in "wysiwyg". Note
+that choosing this option may reduce the portability of your code.</p>
+</li>
+<li>
+<p>escaped UTF-8<br>
+Even if your toolchain can't handle UTF-8 directly, you can still
+encode string literals in UTF-8 by using octal or hexadecimal
+escapes like <code>\212</code> or <code>\xa8</code> to encode each byte. This is portable,
+but modifying the escaped strings is not very convenient. Be careful
+when mixing hexadecimal escapes with ordinary text; <code>"\xa8abcd"</code> is
+a string of length 1 !</p>
+</li>
+<li>
+<p>runtime conversion<br>
+If the string literals can be represented in an encoding which your
+toolchain can handle (e.g. IS0-8859-1), you can write your source
+files in that encoding and use g_convert() to convert the strings
+to UTF-8 at runtime. Note that this has some runtime overhead, so
+you may want to move the conversion out of inner loops.</p>
+</li>
+</ul>
+<p>Here is an example showing the three approaches using the copyright sign
+© which has Unicode and ISO-8859-1 codepoint 169 and is represented in
+UTF-8 by the two bytes 194, 169, or <code>"\302\251"</code> as a string literal:</p>
+<pre><code>g_print ("direct UTF-8: ©");
+g_print ("escaped UTF-8: \302\251");
+text = g_convert ("runtime conversion: ©", -1, "ISO-8859-1", "UTF-8", NULL, NULL, NULL);
+g_print(text);
+g_free (text);
+</code></pre>
+<p>If you are using gettext() to localize your application, you need to
+call <code>bind_textdomain_codeset()</code> to ensure that translated strings are
+returned in UTF-8 encoding.</p>
+<p><strong>Q:</strong> How do I use GTK+ with C++?</p>
+<p><strong>A:</strong> There are two ways to approach this. The GTK+ header files use
+the subset of C that's also valid C++, so you can simply use the normal
+GTK+ API in a C++ program. Alternatively, you can use a "C++ binding"
+such as <a href="https://www.gtkmm.org/">gtkmm</a> which provides a native C++ API.</p>
+<p>When using GTK+ directly, keep in mind that only functions can be
+connected to signals, not methods. So you will need to use global
+functions or "static" class functions for signal connections.</p>
+<p>Another common issue when using GTK+ directly is that C++ will not
+implicitly convert an integer to an enumeration. This comes up when
+using bitfields; in C you can write the following code:</p>
+<pre><code>  gdk_window_set_events (gdk_window,
+                         GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK);
+</code></pre>
+<p>while in C++ you must write:</p>
+<pre><code>  gdk_window_set_events (gdk_window,
+                         (GdkEventMask) GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK);
+</code></pre>
+<p>There are very few functions that require this cast, however.</p>
+<p><strong>Q:</strong> How do I use GTK+ with other non-C languages?</p>
+<p><strong>A:</strong> See the <a href="https://www.gtk.org/language-bindings.php">list of language
+bindings</a> on
+<a href="https://www.gtk.org">https://www.gtk.org</a>.</p>
+<p><strong>Q:</strong> How do I load an image or animation from a file?</p>
+<p><strong>A:</strong> To load an image file straight into a display widget, use
+gtk_image_new_from_file() [1]. To load an image for another
+purpose, use gdk_pixbuf_new_from_file(). To load an animation, use
+gdk_pixbuf_animation_new_from_file().
+gdk_pixbuf_animation_new_from_file() can also load non-animated
+images, so use it in combination with
+gdk_pixbuf_animation_is_static_image() to load a file of unknown
+type.</p>
+<p>To load an image or animation file asynchronously (without blocking),
+use #GdkPixbufLoader.</p>
+<p><strong>Q:</strong> How do I draw text ?</p>
+<p><strong>A:</strong> To draw a piece of text, use a Pango layout and
+pango_cairo_show_layout().</p>
+<pre><code> layout = gtk_widget_create_pango_layout (widget, text);
+ fontdesc = pango_font_description_from_string ("Luxi Mono 12");
+ pango_layout_set_font_description (layout, fontdesc);
+ pango_cairo_show_layout (cr, layout);
+ pango_font_description_free (fontdesc);
+ g_object_unref (layout);
+</code></pre>
+<p>See also the <a href="https://developer.gnome.org/pango/stable/pango-Cairo-Rendering.html">Cairo
+Rendering</a>
+section of <a href="https://developer.gnome.org/pango/stable/">Pango manual</a>.</p>
+<p><strong>Q:</strong> How do I measure the size of a piece of text ?</p>
+<p><strong>A:</strong> To obtain the size of a piece of text, use a Pango layout and
+pango_layout_get_pixel_size(), using code like the following:</p>
+<pre><code> layout = gtk_widget_create_pango_layout (widget, text);
+ fontdesc = pango_font_description_from_string ("Luxi Mono 12");
+ pango_layout_set_font_description (layout, fontdesc);
+ pango_layout_get_pixel_size (layout, &amp;width, &amp;height);
+ pango_font_description_free (fontdesc);
+ g_object_unref (layout);
+</code></pre>
+<p>See also the <a href="https://developer.gnome.org/pango/stable/pango-Layout-Objects.html">Layout
+Objects</a>
+section of <a href="https://developer.gnome.org/pango/stable/">Pango manual</a>.</p>
+<p><strong>Q:</strong> Why are types not registered if I use their <code>GTK_TYPE_BLAH</code> macro
+?</p>
+<p><strong>A:</strong> The <code>GTK_TYPE_BLAH</code> macros are defined as calls to
+<code>gtk_blah_get_type()</code>, and the <code>_get_type()</code> functions are declared as
+%G_GNUC_CONST which allows the compiler to optimize the call away if
+it appears that the value is not being used.</p>
+<p>A common workaround for this problem is to store the result in a
+volatile variable, which keeps the compiler from optimizing the call
+away.</p>
+<pre><code>volatile GType dummy = GTK_TYPE_BLAH;
+</code></pre>
+<p><strong>Q:</strong> How do I create a transparent toplevel window ?</p>
+<p><strong>A:</strong> To make a window transparent, it needs to use a visual which
+supports that. This is done by getting the RGBA visual of the screen
+with gdk_screen_get_rgba_visual() and setting it on the window. Note
+that gdk_screen_get_rgba_visual() will return %NULL if transparent
+windows are not supported on the screen, you should fall back to
+gdk_screen_get_system_visual() in that case. Additionally, note that
+this will change from screen to screen, so it needs to be repeated
+whenever the window is moved to a different screen.</p>
+<pre><code>GdkVisual *visual;
+
+visual = gdk_screen_get_rgba_visual (screen);
+if (visual == NULL)
+  visual = gdk_screen_get_system_visual (screen);
+
+gtk_widget_set_visual (GTK_WIDGET (window), visual);
+</code></pre>
+<p>To fill the alpha channel on the window simply use cairos RGBA drawing
+capabilities.</p>
+<p>Note that the presence of an RGBA visual is no guarantee that the window
+will actually appear transparent on screen. On X11, this requires a
+compositing manager to be running. See gdk_display_is_composited()
+for a way to find out if the alpha channel will be respected.</p>
+<h2 id="which-widget-should-i-use">Which widget should I use...</h2>
+<p><strong>Q:</strong> ...for lists and trees?</p>
+<p><strong>A:</strong> See <a href="hotdoc_markdown/tree_widget.html">tree widget overview</a> — you should use
+the #GtkTreeView widget. (A list is just a tree with no branches, so
+the tree widget is used for lists as well).</p>
+<p><strong>Q:</strong> ...for multi-line text display or editing?</p>
+<p><strong>A:</strong> See <a href="hotdoc_markdown/text_widget.html">text widget overview</a> — you should use
+the #GtkTextView widget.</p>
+<p>If you only have a small amount of text, #GtkLabel may also be
+appropriate of course. It can be made selectable with
+gtk_label_set_selectable(). For a single-line text entry, see
+#GtkEntry.</p>
+<p><strong>Q:</strong> ...to display an image or animation?</p>
+<p><strong>A:</strong> #GtkImage can display images in just about any format GTK+
+understands. You can also use #GtkDrawingArea if you need to do
+something more complex, such as draw text or graphics over the top of
+the image.</p>
+<p><strong>Q:</strong> ...for presenting a set of mutually-exclusive choices, where
+Windows would use a combo box?</p>
+<p><strong>A:</strong> With GTK+, a #GtkComboBox is the recommended widget to use for
+this use case. This widget looks like either a combo box or the current
+option menu, depending on the current theme. If you need an editable
+text entry, use the #GtkComboBox:has-entry property.</p>
+<h2 id="gtkwidget">GtkWidget</h2>
+<p><strong>Q:</strong> How do I change the color of a widget?</p>
+<p><strong>A:</strong> See gtk_widget_override_color() and
+gtk_widget_override_background_color(). You can also change the
+appearance of a widget by installing a custom style provider, see
+gtk_style_context_add_provider().</p>
+<p><strong>Q:</strong> How do I change the font of a widget?</p>
+<p><strong>A:</strong> This has several possible answers, depending on what exactly you
+want to achieve. One option is gtk_widget_override_font().</p>
+<pre><code> PangoFontDesc *font_desc = pango_font_description_new ();
+ pango_font_description_set_size (font_desc, 40);
+ gtk_widget_override_font (widget, font);
+ pango_font_description_free (font_desc);
+</code></pre>
+<p>If you want to make the text of a label larger, you can use
+gtk_label_set_markup():</p>
+<pre><code>gtk_label_set_markup (label, "&lt;big&gt;big text&lt;/big&gt;");
+</code></pre>
+<p>This is preferred for many apps because it's a relative size to the
+user's chosen font size. See g_markup_escape_text() if you are
+constructing such strings on the fly.</p>
+<p>You can also change the font of a widget by putting</p>
+<pre><code> .my-widget-class {
+   font: Sans 30;
+ }
+</code></pre>
+<p>in a CSS file, loading it with gtk_css_provider_load_from_file(),
+and adding the provider with
+gtk_style_context_add_provider_for_screen(). To associate this
+style information with your widget, set a style class on its
+#GtkStyleContext using gtk_style_context_add_class(). The advantage
+of this approach is that users can then override the font you have
+chosen. See the #GtkStyleContext documentation for more discussion.</p>
+<p><strong>Q:</strong> How do I disable/ghost/desensitize a widget?</p>
+<p><strong>A:</strong> In GTK+ a disabled widget is termed "insensitive." See
+gtk_widget_set_sensitive().</p>
+<h2 id="gtktextview">GtkTextView</h2>
+<p><strong>Q:</strong> How do I get the contents of the entire text widget as a string?</p>
+<p><strong>A:</strong> See gtk_text_buffer_get_bounds() and
+gtk_text_buffer_get_text() or gtk_text_iter_get_text().</p>
+<pre><code>  GtkTextIter start, end;
+  GtkTextBuffer *buffer;
+  char *text;
+
+  buffer = gtk_text_view_get_buffer (GTK_TEXT_VIEW (text_view));
+  gtk_text_buffer_get_bounds (buffer, &amp;start, &amp;end);
+  text = gtk_text_iter_get_text (&amp;start, &amp;end);
+  /* use text */
+  g_free (text);
+</code></pre>
+<p><strong>Q:</strong> How do I make a text widget display its complete contents in a
+specific font?</p>
+<p><strong>A:</strong> If you use gtk_text_buffer_insert_with_tags() with
+appropriate tags to select the font, the inserted text will have the
+desired appearance, but text typed in by the user before or after the
+tagged block will appear in the default style.</p>
+<p>To ensure that all text has the desired appearance, use
+gtk_widget_override_font() to change the default font for the widget.</p>
+<p><strong>Q:</strong> How do I make a text view scroll to the end of the buffer
+automatically ?</p>
+<p><strong>A:</strong> A good way to keep a text buffer scrolled to the end is to place
+a <a href="hotdoc_markdown/gtktextmark.html#GtkTextMark">mark</a> at the end of the buffer, and give it right
+gravity. The gravity has the effect that text inserted at the mark gets
+inserted <em>before</em>, keeping the mark at the end.</p>
+<p>To ensure that the end of the buffer remains visible, use
+gtk_text_view_scroll_to_mark() to scroll to the mark after
+inserting new text.</p>
+<p>The gtk-demo application contains an example of this technique.</p>
+<h2 id="gtktreeview">#GtkTreeView</h2>
+<p><strong>Q:</strong> How do I associate some data with a row in the tree?</p>
+<p><strong>A:</strong> Remember that the #GtkTreeModel columns don't necessarily have
+to be displayed. So you can put non-user-visible data in your model just
+like any other data, and retrieve it with gtk_tree_model_get(). See
+the <a href="hotdoc_markdown/tree_widget.html">tree widget overview</a>.</p>
+<p><strong>Q:</strong> How do I put an image and some text in the same column?</p>
+<p><strong>A:</strong> You can pack more than one #GtkCellRenderer into a single
+#GtkTreeViewColumn using gtk_tree_view_column_pack_start() or
+gtk_tree_view_column_pack_end(). So pack both a
+#GtkCellRendererPixbuf and a #GtkCellRendererText into the column.</p>
+<p><strong>Q:</strong> I can set data easily on my #GtkTreeStore/#GtkListStore models
+using gtk_list_store_set() and gtk_tree_store_set(), but can't
+read it back?</p>
+<p><strong>A:</strong> Both the #GtkTreeStore and the #GtkListStore implement the
+#GtkTreeModel interface. Consequentially, you can use any function this
+interface implements. The easiest way to read a set of data back is to
+use gtk_tree_model_get().</p>
+<p><strong>Q:</strong> How do I change the way that numbers are formatted by
+#GtkTreeView?</p>
+<p><strong>A:</strong> Use gtk_tree_view_insert_column_with_data_func() or
+gtk_tree_view_column_set_cell_data_func() and do the conversion
+from number to string yourself (with, say, g_strdup_printf()).</p>
+<p>The following example demonstrates this:</p>
+<pre><code>enum
+{
+  DOUBLE_COLUMN,
+  N_COLUMNS
+};
+
+GtkListStore *mycolumns;
+GtkTreeView *treeview;
+
+void
+my_cell_double_to_text (GtkTreeViewColumn *tree_column,
+                    GtkCellRenderer   *cell,
+                        GtkTreeModel      *tree_model,
+                    GtkTreeIter       *iter,
+                        gpointer           data)
+{
+  GtkCellRendererText *cell_text = (GtkCellRendererText *)cell;
+  gdouble d;
+  gchar *text;
+
+  /* Get the double value from the model. */
+  gtk_tree_model_get (tree_model, iter, (gint)data, &amp;d, -1);
+  /* Now we can format the value ourselves. */
+  text = g_strdup_printf ("%.2f", d);
+  g_object_set (cell, "text", text, NULL);
+  g_free (text);
+}
+
+void
+set_up_new_columns (GtkTreeView *myview)
+{
+  GtkCellRendererText *renderer;
+  GtkTreeViewColumn *column;
+  GtkListStore *mycolumns;
+
+  /* Create the data model and associate it with the given TreeView */
+  mycolumns = gtk_list_store_new (N_COLUMNS, G_TYPE_DOUBLE);
+  gtk_tree_view_set_model (myview, GTK_TREE_MODEL (mycolumns));
+
+  /* Create a GtkCellRendererText */
+  renderer = gtk_cell_renderer_text_new ();
+
+  /* Create a new column that has a title ("Example column"),
+   * uses the above created renderer that will render the double
+   * value into text from the associated model's rows.
+   */
+  column = gtk_tree_view_column_new ();
+  gtk_tree_view_column_set_title  (column, "Example column");
+  renderer = gtk_cell_renderer_text_new ();
+  gtk_tree_view_column_pack_start (column, renderer, TRUE);
+
+  /* Append the new column after the GtkTreeView's previous columns. */
+  gtk_tree_view_append_column (GTK_TREE_VIEW (myview), column);
+  /* Since we created the column by hand, we can set it up for our
+   * needs, e.g. set its minimum and maximum width, etc.
+   */
+  /* Set up a custom function that will be called when the column content
+   * is rendered. We use the func_data pointer as an index into our
+   * model. This is convenient when using multi column lists.
+   */
+  gtk_tree_view_column_set_cell_data_func (column, renderer,
+                                       my_cell_double_to_text,
+                                           (gpointer)DOUBLE_COLUMN, NULL);
+}
+</code></pre>
+<p><strong>Q:</strong> How do I hide the expander arrows in my tree view ?</p>
+<p><strong>A:</strong> Set the expander-column property of the tree view to a hidden
+column. See gtk_tree_view_set_expander_column() and
+gtk_tree_view_column_set_visible().</p>
+<h2 id="using-cairo-with-gtk">Using cairo with GTK+</h2>
+<p><strong>Q:</strong> How do I use cairo to draw in GTK+ applications ?</p>
+<p><strong>A:</strong> The #GtkWidget::draw signal gets a ready-to-use cairo context as
+parameter that you should use.</p>
+<p>All drawing in GTK+ is normally done in a draw handler, and GTK+ creates
+a temporary pixmap for double-buffering the drawing. It is possible to
+turn off double-buffering, with gtk_widget_set_double_buffered(),
+but this is not ideal, since it can cause some flickering.</p>
+<p><strong>Q:</strong> Can I improve the performance of my application by using the
+Glitz or GL backend of cairo ?</p>
+<p><strong>A:</strong> No. The GDK X11 backend uses the cairo X backend (and the other
+GDK backends use their respective native cairo backends). The GTK+
+developers believe that the best way to improving the GDK drawing
+performance is to optimize the cairo X backend and the relevant code
+paths in the X server that is uses (mostly the Render extension).</p>
+<p><strong>Q:</strong> Can I use cairo to draw on a #GdkPixbuf ?</p>
+<p><strong>A:</strong> No, at least not yet. The cairo image surface does not support
+the pixel format used by GdkPixbuf.</p>
+<ol>
+<li>If the file load fails, gtk_image_new_from_file() will display
+no image graphic — to detect a failed load yourself, use
+gdk_pixbuf_new_from_file() directly, then
+gtk_image_new_from_pixbuf().</li>
+</ol>
+
+    </div>
+        
+
+
+
+
+		
+	</div>
+	<div id="search_results">
+		<p>The results of the search are</p>
+	</div>
+	<hr>
+	<div id="footer">
+		    
+
+	</div>
+</div>
+
+<div id="toc-column">
+	
+		<div class="edit-button">
+		
+
+	</div>
+		<div id="toc-wrapper">
+		<nav id="toc"></nav>
+	</div>
+</div>
+</div>
+</main>
+
+</body>
+
+<script src="assets/js/navbar_offset_scroller.js"></script>
+</html>

@@ -1,0 +1,2463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<base href=".">
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>gtkprintcontext</title>
+
+<link rel="stylesheet" href="assets/css/custom_bootstrap.css" type="text/css">
+<link rel="stylesheet" href="assets/css/bootstrap-toc.min.css" type="text/css">
+<link rel="stylesheet" href="assets/css/frontend.css" type="text/css">
+<link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
+
+<link rel="stylesheet" href="assets/css/prism.css" type="text/css">
+
+<script src="assets/js/mustache.min.js"></script>
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/scrollspy.js"></script>
+<script src="assets/js/bootstrap.js"></script>
+<script src="assets/js/typeahead.jquery.min.js"></script>
+<script src="assets/js/search.js"></script>
+<script src="assets/js/isotope.pkgd.min.js"></script>
+<script src="assets/js/compare-versions.js"></script>
+<script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="assets/js/bootstrap-toc.min.js"></script>
+<script src="assets/js/jquery.touchSwipe.min.js"></script>
+<script src="assets/js/anchor.min.js"></script>
+<script src="assets/js/tag_filtering.js"></script>
+<script src="assets/js/language_switching.js"></script>
+
+<script src="assets/js/lines_around_headings.js"></script>
+
+<script src="assets/js/prism-core.js"></script>
+<script src="assets/js/prism-autoloader.js"></script>
+<script src="assets/js/prism_autoloader_path_override.js"></script>
+<script src="assets/js/trie.js"></script>
+
+
+</head>
+
+<body class="no-script
+" data-spy="scroll" data-target="#toc" data-offset="70">
+
+<script>
+$('body').removeClass('no-script');
+</script>
+
+<nav class="navbar navbar-fixed-top navbar-default" id="topnav">
+	<div class="container-fluid">
+		<div class="navbar-right">
+			<a id="toc-toggle">
+				<span class="glyphicon glyphicon-menu-right"></span>
+				<span class="glyphicon glyphicon-menu-left"></span>
+			</a>
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-wrapper" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<form action="" class="navbar-form pull-right" id="navbar-search-form">
+                               <div class="form-group has-feedback">
+                                       <input type="text" class="form-control input-sm" name="search" id="sidenav-lookup-field" placeholder="search" disabled>
+				       <span class="glyphicon glyphicon-search form-control-feedback" id="search-mgn-glass"></span>
+                               </div>
+                        </form>
+		</div>
+		<div class="navbar-header">
+			<a id="sidenav-toggle">
+				<span class="glyphicon glyphicon-menu-right"></span>
+				<span class="glyphicon glyphicon-menu-left"></span>
+			</a>
+			<a id="home-link" href="index.html" class="hotdoc-navbar-brand">
+				<img src="assets/images/home.svg" alt="Home">
+			</a>
+		</div>
+		<div class="navbar-collapse collapse" id="navbar-wrapper">
+			<ul class="nav navbar-nav" id="menu">
+							</ul>
+			<div class="hidden-xs hidden-sm navbar-text navbar-center">
+							</div>
+		</div>
+	</div>
+</nav>
+
+<main>
+<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="gtkprintcontext.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['c', 'javascript', 'python']" data-hotdoc-meta-gi-language="c">
+<script src="assets/js/utils.js"></script>
+
+<div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
+	<script src="assets/js/navigation.js"></script>
+	<script src="assets/js/sitemap.js"></script>
+</div>
+
+<div id="body">
+	<div id="main">
+				    <div id="page-description" data-hotdoc-source="gtkprintcontext.markdown" data-hotdoc-role="main">
+    </div>
+        
+        
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="GtkPrintContext">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h2 data-hotdoc-id="GtkPrintContext">
+	<span><code>GtkPrintContext</code></span>
+</h2>
+
+
+<div class="hierarchy_container">
+	<div class="hierarchy_details">
+<pre>
+<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
+    <span class="lineart">╰──</span>GtkPrintContext
+</pre>
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h2 data-hotdoc-id="GtkPrintContext">
+	<span><code>Gtk.PrintContext</code></span>
+</h2>
+
+
+<div class="hierarchy_container">
+	<div class="hierarchy_details">
+<pre>
+<a title="GObject.Object" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct">GObject.Object</a>
+    <span class="lineart">╰──</span>Gtk.PrintContext
+</pre>
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h2 data-hotdoc-id="GtkPrintContext">
+	<span><code>Gtk.PrintContext</code></span>
+</h2>
+
+
+<div class="hierarchy_container">
+	<div class="hierarchy_details">
+<pre>
+<a title="GObject.Object" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct">GObject.Object</a>
+    <span class="lineart">╰──</span>Gtk.PrintContext
+</pre>
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+        </div>
+
+</div>
+
+
+            <h3 class="symbol_section">Methods</h3>
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_print_context_get_cairo_context">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_print_context_get_cairo_context">
+	<span><code>gtk_print_context_get_cairo_context</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="cairo_t" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo_t</a> *
+gtk_print_context_get_cairo_context (<a title="GtkPrintContext" href="gtkprintcontext.html#GtkPrintContext">GtkPrintContext</a> * context)</pre>
+
+<p>Obtains the cairo context that is associated with the
+<a href="gtkprintcontext.html#GtkPrintContext">GtkPrintContext</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkprintcontext.html#GtkPrintContext">GtkPrintContext</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					
+										
+<span class="annotation">[<abbr title="Don't free data after the code is done"><span class="acronym">transfer: none</span></abbr>]</span>
+
+										)
+								–
+			</div>
+							<p>the cairo context of <em>context</em></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_print_context_get_cairo_context">
+	<span><code>Gtk.prototype.get_cairo_context</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_cairo_context(): {
+    // javascript wrapper for 'gtk_print_context_get_cairo_context'
+}</pre>
+
+<p>Obtains the cairo context that is associated with the
+<a href="gtkprintcontext.html#GtkPrintContext">Gtk.PrintContext</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+					(
+						<a title="Gtk.PrintContext" href="gtkprintcontext.html#GtkPrintContext">Gtk.PrintContext</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkprintcontext.html#GtkPrintContext">Gtk.PrintContext</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="cairo.Context" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a>
+										)
+								–
+			</div>
+							<p>the cairo context of <em>context</em></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_print_context_get_cairo_context">
+	<span><code>Gtk.PrintContext.get_cairo_context</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.PrintContext.get_cairo_context (self):
+    #python wrapper for 'gtk_print_context_get_cairo_context'</pre>
+
+<p>Obtains the cairo context that is associated with the
+<a href="gtkprintcontext.html#GtkPrintContext">Gtk.PrintContext</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+					(
+						<a title="Gtk.PrintContext" href="gtkprintcontext.html#GtkPrintContext">Gtk.PrintContext</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkprintcontext.html#GtkPrintContext">Gtk.PrintContext</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="cairo.Context" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a>
+										)
+								–
+			</div>
+							<p>the cairo context of <em>context</em></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_print_context_set_cairo_context">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_print_context_set_cairo_context">
+	<span><code>gtk_print_context_set_cairo_context</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_print_context_set_cairo_context (<a title="GtkPrintContext" href="gtkprintcontext.html#GtkPrintContext">GtkPrintContext</a> * context,
+                                     <a title="cairo_t" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo_t</a> * cr,
+                                     double dpi_x,
+                                     double dpi_y)</pre>
+
+<p>Sets a new cairo context on a print context.</p>
+<p>This function is intended to be used when implementing
+an internal print preview, it is not needed for printing,
+since GTK+ itself creates a suitable cairo context in that
+case.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkprintcontext.html#GtkPrintContext">GtkPrintContext</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cr</code></em></i>
+				–
+	</div>
+			<p>the cairo context</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>dpi_x</code></em></i>
+				–
+	</div>
+			<p>the horizontal resolution to use with <em>cr</em></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>dpi_y</code></em></i>
+				–
+	</div>
+			<p>the vertical resolution to use with <em>cr</em></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_print_context_set_cairo_context">
+	<span><code>Gtk.prototype.set_cairo_context</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_cairo_context(cr: <a title="cairo.Context" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a>, dpi_x: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, dpi_y: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_print_context_set_cairo_context'
+}</pre>
+
+<p>Sets a new cairo context on a print context.</p>
+<p>This function is intended to be used when implementing
+an internal print preview, it is not needed for printing,
+since GTK+ itself creates a suitable cairo context in that
+case.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+					(
+						<a title="Gtk.PrintContext" href="gtkprintcontext.html#GtkPrintContext">Gtk.PrintContext</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkprintcontext.html#GtkPrintContext">Gtk.PrintContext</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cr</code></em></i>
+					(
+						<a title="cairo.Context" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a>
+						)
+				–
+	</div>
+			<p>the cairo context</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>dpi_x</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the horizontal resolution to use with <em>cr</em></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>dpi_y</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the vertical resolution to use with <em>cr</em></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_print_context_set_cairo_context">
+	<span><code>Gtk.PrintContext.set_cairo_context</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.PrintContext.set_cairo_context (self, cr, dpi_x, dpi_y):
+    #python wrapper for 'gtk_print_context_set_cairo_context'</pre>
+
+<p>Sets a new cairo context on a print context.</p>
+<p>This function is intended to be used when implementing
+an internal print preview, it is not needed for printing,
+since GTK+ itself creates a suitable cairo context in that
+case.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+					(
+						<a title="Gtk.PrintContext" href="gtkprintcontext.html#GtkPrintContext">Gtk.PrintContext</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkprintcontext.html#GtkPrintContext">Gtk.PrintContext</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cr</code></em></i>
+					(
+						<a title="cairo.Context" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-t.html#cairo-t">cairo.Context</a>
+						)
+				–
+	</div>
+			<p>the cairo context</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>dpi_x</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>the horizontal resolution to use with <em>cr</em></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>dpi_y</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>the vertical resolution to use with <em>cr</em></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_print_context_get_page_setup">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_print_context_get_page_setup">
+	<span><code>gtk_print_context_get_page_setup</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkPageSetup" href="gtkpagesetup.html#GtkPageSetup">GtkPageSetup</a> *
+gtk_print_context_get_page_setup (<a title="GtkPrintContext" href="gtkprintcontext.html#GtkPrintContext">GtkPrintContext</a> * context)</pre>
+
+<p>Obtains the <a href="gtkpagesetup.html#GtkPageSetup">GtkPageSetup</a> that determines the page
+dimensions of the <a href="gtkprintcontext.html#GtkPrintContext">GtkPrintContext</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkprintcontext.html#GtkPrintContext">GtkPrintContext</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					
+										
+<span class="annotation">[<abbr title="Don't free data after the code is done"><span class="acronym">transfer: none</span></abbr>]</span>
+
+										)
+								–
+			</div>
+							<p>the page setup of <em>context</em></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_print_context_get_page_setup">
+	<span><code>Gtk.prototype.get_page_setup</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_page_setup(): {
+    // javascript wrapper for 'gtk_print_context_get_page_setup'
+}</pre>
+
+<p>Obtains the <a href="gtkpagesetup.html#GtkPageSetup">Gtk.PageSetup</a> that determines the page
+dimensions of the <a href="gtkprintcontext.html#GtkPrintContext">Gtk.PrintContext</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+					(
+						<a title="Gtk.PrintContext" href="gtkprintcontext.html#GtkPrintContext">Gtk.PrintContext</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkprintcontext.html#GtkPrintContext">Gtk.PrintContext</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.PageSetup" href="gtkpagesetup.html#GtkPageSetup">Gtk.PageSetup</a>
+										)
+								–
+			</div>
+							<p>the page setup of <em>context</em></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_print_context_get_page_setup">
+	<span><code>Gtk.PrintContext.get_page_setup</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.PrintContext.get_page_setup (self):
+    #python wrapper for 'gtk_print_context_get_page_setup'</pre>
+
+<p>Obtains the <a href="gtkpagesetup.html#GtkPageSetup">Gtk.PageSetup</a> that determines the page
+dimensions of the <a href="gtkprintcontext.html#GtkPrintContext">Gtk.PrintContext</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+					(
+						<a title="Gtk.PrintContext" href="gtkprintcontext.html#GtkPrintContext">Gtk.PrintContext</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkprintcontext.html#GtkPrintContext">Gtk.PrintContext</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.PageSetup" href="gtkpagesetup.html#GtkPageSetup">Gtk.PageSetup</a>
+										)
+								–
+			</div>
+							<p>the page setup of <em>context</em></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_print_context_get_width">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_print_context_get_width">
+	<span><code>gtk_print_context_get_width</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a>
+gtk_print_context_get_width (<a title="GtkPrintContext" href="gtkprintcontext.html#GtkPrintContext">GtkPrintContext</a> * context)</pre>
+
+<p>Obtains the width of the <a href="gtkprintcontext.html#GtkPrintContext">GtkPrintContext</a>, in pixels.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkprintcontext.html#GtkPrintContext">GtkPrintContext</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>the width of <em>context</em></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_print_context_get_width">
+	<span><code>Gtk.prototype.get_width</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_width(): {
+    // javascript wrapper for 'gtk_print_context_get_width'
+}</pre>
+
+<p>Obtains the width of the <a href="gtkprintcontext.html#GtkPrintContext">Gtk.PrintContext</a>, in pixels.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+					(
+						<a title="Gtk.PrintContext" href="gtkprintcontext.html#GtkPrintContext">Gtk.PrintContext</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkprintcontext.html#GtkPrintContext">Gtk.PrintContext</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p>the width of <em>context</em></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_print_context_get_width">
+	<span><code>Gtk.PrintContext.get_width</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.PrintContext.get_width (self):
+    #python wrapper for 'gtk_print_context_get_width'</pre>
+
+<p>Obtains the width of the <a href="gtkprintcontext.html#GtkPrintContext">Gtk.PrintContext</a>, in pixels.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+					(
+						<a title="Gtk.PrintContext" href="gtkprintcontext.html#GtkPrintContext">Gtk.PrintContext</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkprintcontext.html#GtkPrintContext">Gtk.PrintContext</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+										)
+								–
+			</div>
+							<p>the width of <em>context</em></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_print_context_get_height">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_print_context_get_height">
+	<span><code>gtk_print_context_get_height</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a>
+gtk_print_context_get_height (<a title="GtkPrintContext" href="gtkprintcontext.html#GtkPrintContext">GtkPrintContext</a> * context)</pre>
+
+<p>Obtains the height of the <a href="gtkprintcontext.html#GtkPrintContext">GtkPrintContext</a>, in pixels.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkprintcontext.html#GtkPrintContext">GtkPrintContext</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>the height of <em>context</em></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_print_context_get_height">
+	<span><code>Gtk.prototype.get_height</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_height(): {
+    // javascript wrapper for 'gtk_print_context_get_height'
+}</pre>
+
+<p>Obtains the height of the <a href="gtkprintcontext.html#GtkPrintContext">Gtk.PrintContext</a>, in pixels.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+					(
+						<a title="Gtk.PrintContext" href="gtkprintcontext.html#GtkPrintContext">Gtk.PrintContext</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkprintcontext.html#GtkPrintContext">Gtk.PrintContext</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p>the height of <em>context</em></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_print_context_get_height">
+	<span><code>Gtk.PrintContext.get_height</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.PrintContext.get_height (self):
+    #python wrapper for 'gtk_print_context_get_height'</pre>
+
+<p>Obtains the height of the <a href="gtkprintcontext.html#GtkPrintContext">Gtk.PrintContext</a>, in pixels.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+					(
+						<a title="Gtk.PrintContext" href="gtkprintcontext.html#GtkPrintContext">Gtk.PrintContext</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkprintcontext.html#GtkPrintContext">Gtk.PrintContext</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+										)
+								–
+			</div>
+							<p>the height of <em>context</em></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_print_context_get_dpi_x">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_print_context_get_dpi_x">
+	<span><code>gtk_print_context_get_dpi_x</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a>
+gtk_print_context_get_dpi_x (<a title="GtkPrintContext" href="gtkprintcontext.html#GtkPrintContext">GtkPrintContext</a> * context)</pre>
+
+<p>Obtains the horizontal resolution of the <a href="gtkprintcontext.html#GtkPrintContext">GtkPrintContext</a>,
+in dots per inch.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkprintcontext.html#GtkPrintContext">GtkPrintContext</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>the horizontal resolution of <em>context</em></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_print_context_get_dpi_x">
+	<span><code>Gtk.prototype.get_dpi_x</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_dpi_x(): {
+    // javascript wrapper for 'gtk_print_context_get_dpi_x'
+}</pre>
+
+<p>Obtains the horizontal resolution of the <a href="gtkprintcontext.html#GtkPrintContext">Gtk.PrintContext</a>,
+in dots per inch.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+					(
+						<a title="Gtk.PrintContext" href="gtkprintcontext.html#GtkPrintContext">Gtk.PrintContext</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkprintcontext.html#GtkPrintContext">Gtk.PrintContext</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p>the horizontal resolution of <em>context</em></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_print_context_get_dpi_x">
+	<span><code>Gtk.PrintContext.get_dpi_x</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.PrintContext.get_dpi_x (self):
+    #python wrapper for 'gtk_print_context_get_dpi_x'</pre>
+
+<p>Obtains the horizontal resolution of the <a href="gtkprintcontext.html#GtkPrintContext">Gtk.PrintContext</a>,
+in dots per inch.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+					(
+						<a title="Gtk.PrintContext" href="gtkprintcontext.html#GtkPrintContext">Gtk.PrintContext</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkprintcontext.html#GtkPrintContext">Gtk.PrintContext</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+										)
+								–
+			</div>
+							<p>the horizontal resolution of <em>context</em></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_print_context_get_dpi_y">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_print_context_get_dpi_y">
+	<span><code>gtk_print_context_get_dpi_y</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a>
+gtk_print_context_get_dpi_y (<a title="GtkPrintContext" href="gtkprintcontext.html#GtkPrintContext">GtkPrintContext</a> * context)</pre>
+
+<p>Obtains the vertical resolution of the <a href="gtkprintcontext.html#GtkPrintContext">GtkPrintContext</a>,
+in dots per inch.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkprintcontext.html#GtkPrintContext">GtkPrintContext</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>the vertical resolution of <em>context</em></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_print_context_get_dpi_y">
+	<span><code>Gtk.prototype.get_dpi_y</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_dpi_y(): {
+    // javascript wrapper for 'gtk_print_context_get_dpi_y'
+}</pre>
+
+<p>Obtains the vertical resolution of the <a href="gtkprintcontext.html#GtkPrintContext">Gtk.PrintContext</a>,
+in dots per inch.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+					(
+						<a title="Gtk.PrintContext" href="gtkprintcontext.html#GtkPrintContext">Gtk.PrintContext</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkprintcontext.html#GtkPrintContext">Gtk.PrintContext</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p>the vertical resolution of <em>context</em></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_print_context_get_dpi_y">
+	<span><code>Gtk.PrintContext.get_dpi_y</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.PrintContext.get_dpi_y (self):
+    #python wrapper for 'gtk_print_context_get_dpi_y'</pre>
+
+<p>Obtains the vertical resolution of the <a href="gtkprintcontext.html#GtkPrintContext">Gtk.PrintContext</a>,
+in dots per inch.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+					(
+						<a title="Gtk.PrintContext" href="gtkprintcontext.html#GtkPrintContext">Gtk.PrintContext</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkprintcontext.html#GtkPrintContext">Gtk.PrintContext</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+										)
+								–
+			</div>
+							<p>the vertical resolution of <em>context</em></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_print_context_get_pango_fontmap">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_print_context_get_pango_fontmap">
+	<span><code>gtk_print_context_get_pango_fontmap</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="PangoFontMap" href="https://developer.gnome.org/pango/unstable/pango-Fonts.html#PangoFontMap-struct">PangoFontMap</a> *
+gtk_print_context_get_pango_fontmap (<a title="GtkPrintContext" href="gtkprintcontext.html#GtkPrintContext">GtkPrintContext</a> * context)</pre>
+
+<p>Returns a <a href="https://developer.gnome.org/pango/unstable/pango-Fonts.html#PangoFontMap-struct">PangoFontMap</a> that is suitable for use
+with the <a href="gtkprintcontext.html#GtkPrintContext">GtkPrintContext</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkprintcontext.html#GtkPrintContext">GtkPrintContext</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					
+										
+<span class="annotation">[<abbr title="Don't free data after the code is done"><span class="acronym">transfer: none</span></abbr>]</span>
+
+										)
+								–
+			</div>
+							<p>the font map of <em>context</em></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_print_context_get_pango_fontmap">
+	<span><code>Gtk.prototype.get_pango_fontmap</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_pango_fontmap(): {
+    // javascript wrapper for 'gtk_print_context_get_pango_fontmap'
+}</pre>
+
+<p>Returns a <a href="https://developer.gnome.org/pango/unstable/pango-Fonts.html#PangoFontMap-struct">Pango.FontMap</a> that is suitable for use
+with the <a href="gtkprintcontext.html#GtkPrintContext">Gtk.PrintContext</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+					(
+						<a title="Gtk.PrintContext" href="gtkprintcontext.html#GtkPrintContext">Gtk.PrintContext</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkprintcontext.html#GtkPrintContext">Gtk.PrintContext</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Pango.FontMap" href="https://developer.gnome.org/pango/unstable/pango-Fonts.html#PangoFontMap-struct">Pango.FontMap</a>
+										)
+								–
+			</div>
+							<p>the font map of <em>context</em></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_print_context_get_pango_fontmap">
+	<span><code>Gtk.PrintContext.get_pango_fontmap</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.PrintContext.get_pango_fontmap (self):
+    #python wrapper for 'gtk_print_context_get_pango_fontmap'</pre>
+
+<p>Returns a <a href="https://developer.gnome.org/pango/unstable/pango-Fonts.html#PangoFontMap-struct">Pango.FontMap</a> that is suitable for use
+with the <a href="gtkprintcontext.html#GtkPrintContext">Gtk.PrintContext</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+					(
+						<a title="Gtk.PrintContext" href="gtkprintcontext.html#GtkPrintContext">Gtk.PrintContext</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkprintcontext.html#GtkPrintContext">Gtk.PrintContext</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Pango.FontMap" href="https://developer.gnome.org/pango/unstable/pango-Fonts.html#PangoFontMap-struct">Pango.FontMap</a>
+										)
+								–
+			</div>
+							<p>the font map of <em>context</em></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_print_context_create_pango_context">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_print_context_create_pango_context">
+	<span><code>gtk_print_context_create_pango_context</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="PangoContext" href="https://developer.gnome.org/pango/unstable/pango-Text-Processing.html#PangoContext-struct">PangoContext</a> *
+gtk_print_context_create_pango_context (<a title="GtkPrintContext" href="gtkprintcontext.html#GtkPrintContext">GtkPrintContext</a> * context)</pre>
+
+<p>Creates a new <a href="https://developer.gnome.org/pango/unstable/pango-Text-Processing.html#PangoContext-struct">PangoContext</a> that can be used with the
+<a href="gtkprintcontext.html#GtkPrintContext">GtkPrintContext</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkprintcontext.html#GtkPrintContext">GtkPrintContext</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					
+										
+<span class="annotation">[<abbr title="Free data after the code is done"><span class="acronym">transfer: full</span></abbr>]</span>
+
+										)
+								–
+			</div>
+							<p>a new Pango context for <em>context</em></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_print_context_create_pango_context">
+	<span><code>Gtk.prototype.create_pango_context</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.create_pango_context(): {
+    // javascript wrapper for 'gtk_print_context_create_pango_context'
+}</pre>
+
+<p>Creates a new <a href="https://developer.gnome.org/pango/unstable/pango-Text-Processing.html#PangoContext-struct">Pango.Context</a> that can be used with the
+<a href="gtkprintcontext.html#GtkPrintContext">Gtk.PrintContext</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+					(
+						<a title="Gtk.PrintContext" href="gtkprintcontext.html#GtkPrintContext">Gtk.PrintContext</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkprintcontext.html#GtkPrintContext">Gtk.PrintContext</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Pango.Context" href="https://developer.gnome.org/pango/unstable/pango-Text-Processing.html#PangoContext-struct">Pango.Context</a>
+										)
+								–
+			</div>
+							<p>a new Pango context for <em>context</em></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_print_context_create_pango_context">
+	<span><code>Gtk.PrintContext.create_pango_context</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.PrintContext.create_pango_context (self):
+    #python wrapper for 'gtk_print_context_create_pango_context'</pre>
+
+<p>Creates a new <a href="https://developer.gnome.org/pango/unstable/pango-Text-Processing.html#PangoContext-struct">Pango.Context</a> that can be used with the
+<a href="gtkprintcontext.html#GtkPrintContext">Gtk.PrintContext</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+					(
+						<a title="Gtk.PrintContext" href="gtkprintcontext.html#GtkPrintContext">Gtk.PrintContext</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkprintcontext.html#GtkPrintContext">Gtk.PrintContext</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Pango.Context" href="https://developer.gnome.org/pango/unstable/pango-Text-Processing.html#PangoContext-struct">Pango.Context</a>
+										)
+								–
+			</div>
+							<p>a new Pango context for <em>context</em></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_print_context_create_pango_layout">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_print_context_create_pango_layout">
+	<span><code>gtk_print_context_create_pango_layout</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="PangoLayout" href="https://developer.gnome.org/pango/unstable/pango-Layout-Objects.html#PangoLayout-struct">PangoLayout</a> *
+gtk_print_context_create_pango_layout (<a title="GtkPrintContext" href="gtkprintcontext.html#GtkPrintContext">GtkPrintContext</a> * context)</pre>
+
+<p>Creates a new <a href="https://developer.gnome.org/pango/unstable/pango-Layout-Objects.html#PangoLayout-struct">PangoLayout</a> that is suitable for use
+with the <a href="gtkprintcontext.html#GtkPrintContext">GtkPrintContext</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkprintcontext.html#GtkPrintContext">GtkPrintContext</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					
+										
+<span class="annotation">[<abbr title="Free data after the code is done"><span class="acronym">transfer: full</span></abbr>]</span>
+
+										)
+								–
+			</div>
+							<p>a new Pango layout for <em>context</em></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_print_context_create_pango_layout">
+	<span><code>Gtk.prototype.create_pango_layout</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.create_pango_layout(): {
+    // javascript wrapper for 'gtk_print_context_create_pango_layout'
+}</pre>
+
+<p>Creates a new <a href="https://developer.gnome.org/pango/unstable/pango-Layout-Objects.html#PangoLayout-struct">Pango.Layout</a> that is suitable for use
+with the <a href="gtkprintcontext.html#GtkPrintContext">Gtk.PrintContext</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+					(
+						<a title="Gtk.PrintContext" href="gtkprintcontext.html#GtkPrintContext">Gtk.PrintContext</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkprintcontext.html#GtkPrintContext">Gtk.PrintContext</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Pango.Layout" href="https://developer.gnome.org/pango/unstable/pango-Layout-Objects.html#PangoLayout-struct">Pango.Layout</a>
+										)
+								–
+			</div>
+							<p>a new Pango layout for <em>context</em></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_print_context_create_pango_layout">
+	<span><code>Gtk.PrintContext.create_pango_layout</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.PrintContext.create_pango_layout (self):
+    #python wrapper for 'gtk_print_context_create_pango_layout'</pre>
+
+<p>Creates a new <a href="https://developer.gnome.org/pango/unstable/pango-Layout-Objects.html#PangoLayout-struct">Pango.Layout</a> that is suitable for use
+with the <a href="gtkprintcontext.html#GtkPrintContext">Gtk.PrintContext</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+					(
+						<a title="Gtk.PrintContext" href="gtkprintcontext.html#GtkPrintContext">Gtk.PrintContext</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkprintcontext.html#GtkPrintContext">Gtk.PrintContext</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Pango.Layout" href="https://developer.gnome.org/pango/unstable/pango-Layout-Objects.html#PangoLayout-struct">Pango.Layout</a>
+										)
+								–
+			</div>
+							<p>a new Pango layout for <em>context</em></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.20;" id="gtk_print_context_get_hard_margins">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_print_context_get_hard_margins">
+	<span><code>gtk_print_context_get_hard_margins</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_print_context_get_hard_margins (<a title="GtkPrintContext" href="gtkprintcontext.html#GtkPrintContext">GtkPrintContext</a> * context,
+                                    <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> * top,
+                                    <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> * bottom,
+                                    <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> * left,
+                                    <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> * right)</pre>
+
+<p>Obtains the hardware printer margins of the <a href="gtkprintcontext.html#GtkPrintContext">GtkPrintContext</a>, in units.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkprintcontext.html#GtkPrintContext">GtkPrintContext</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>top</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="Parameter for returning results"><span class="acronym">out</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>top hardware printer margin</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>bottom</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="Parameter for returning results"><span class="acronym">out</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>bottom hardware printer margin</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>left</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="Parameter for returning results"><span class="acronym">out</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>left hardware printer margin</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>right</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="Parameter for returning results"><span class="acronym">out</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>right hardware printer margin</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if the hard margins were retrieved</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.20
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_print_context_get_hard_margins">
+	<span><code>Gtk.prototype.get_hard_margins</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_hard_margins(): {
+    // javascript wrapper for 'gtk_print_context_get_hard_margins'
+}</pre>
+
+<p>Obtains the hardware printer margins of the <a href="gtkprintcontext.html#GtkPrintContext">Gtk.PrintContext</a>, in units.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+					(
+						<a title="Gtk.PrintContext" href="gtkprintcontext.html#GtkPrintContext">Gtk.PrintContext</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkprintcontext.html#GtkPrintContext">Gtk.PrintContext</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<p><b>Returns a tuple made of:</b></p>
+				
+<div class="symbol-detail">
+	<div>
+									(
+			<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if the hard margins were retrieved</p>
+
+	</div>
+
+				
+<div class="symbol-detail">
+	<div>
+				<i><em><code>top</code></em></i>
+									(
+			<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if the hard margins were retrieved</p>
+
+	</div>
+
+				
+<div class="symbol-detail">
+	<div>
+				<i><em><code>bottom</code></em></i>
+									(
+			<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if the hard margins were retrieved</p>
+
+	</div>
+
+				
+<div class="symbol-detail">
+	<div>
+				<i><em><code>left</code></em></i>
+									(
+			<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if the hard margins were retrieved</p>
+
+	</div>
+
+				
+<div class="symbol-detail">
+	<div>
+				<i><em><code>right</code></em></i>
+									(
+			<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if the hard margins were retrieved</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.20
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_print_context_get_hard_margins">
+	<span><code>Gtk.PrintContext.get_hard_margins</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.PrintContext.get_hard_margins (self):
+    #python wrapper for 'gtk_print_context_get_hard_margins'</pre>
+
+<p>Obtains the hardware printer margins of the <a href="gtkprintcontext.html#GtkPrintContext">Gtk.PrintContext</a>, in units.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+					(
+						<a title="Gtk.PrintContext" href="gtkprintcontext.html#GtkPrintContext">Gtk.PrintContext</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkprintcontext.html#GtkPrintContext">Gtk.PrintContext</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<p><b>Returns a tuple made of:</b></p>
+				
+<div class="symbol-detail">
+	<div>
+									(
+			<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+						)
+				–
+	</div>
+			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if the hard margins were retrieved</p>
+
+	</div>
+
+				
+<div class="symbol-detail">
+	<div>
+				<i><em><code>top</code></em></i>
+									(
+			<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if the hard margins were retrieved</p>
+
+	</div>
+
+				
+<div class="symbol-detail">
+	<div>
+				<i><em><code>bottom</code></em></i>
+									(
+			<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if the hard margins were retrieved</p>
+
+	</div>
+
+				
+<div class="symbol-detail">
+	<div>
+				<i><em><code>left</code></em></i>
+									(
+			<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if the hard margins were retrieved</p>
+
+	</div>
+
+				
+<div class="symbol-detail">
+	<div>
+				<i><em><code>right</code></em></i>
+									(
+			<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if the hard margins were retrieved</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.20
+		</p>
+
+
+        </div>
+
+</div>
+
+
+
+
+
+
+		
+	</div>
+	<div id="search_results">
+		<p>The results of the search are</p>
+	</div>
+	<hr>
+	<div id="footer">
+		    
+
+	</div>
+</div>
+
+<div id="toc-column">
+	
+		<div class="edit-button">
+		
+
+	</div>
+		<div id="toc-wrapper">
+		<nav id="toc"></nav>
+	</div>
+</div>
+</div>
+</main>
+
+</body>
+
+<script src="assets/js/navbar_offset_scroller.js"></script>
+</html>

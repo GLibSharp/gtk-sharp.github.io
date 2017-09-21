@@ -1,0 +1,5599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<base href="..">
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>gtkentrycompletion</title>
+
+<link rel="stylesheet" href="assets/css/custom_bootstrap.css" type="text/css">
+<link rel="stylesheet" href="assets/css/bootstrap-toc.min.css" type="text/css">
+<link rel="stylesheet" href="assets/css/frontend.css" type="text/css">
+<link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
+
+<link rel="stylesheet" href="assets/css/prism.css" type="text/css">
+
+<script src="assets/js/mustache.min.js"></script>
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/scrollspy.js"></script>
+<script src="assets/js/bootstrap.js"></script>
+<script src="assets/js/typeahead.jquery.min.js"></script>
+<script src="assets/js/search.js"></script>
+<script src="assets/js/isotope.pkgd.min.js"></script>
+<script src="assets/js/compare-versions.js"></script>
+<script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="assets/js/bootstrap-toc.min.js"></script>
+<script src="assets/js/jquery.touchSwipe.min.js"></script>
+<script src="assets/js/anchor.min.js"></script>
+<script src="assets/js/tag_filtering.js"></script>
+<script src="assets/js/language_switching.js"></script>
+
+<script src="assets/js/lines_around_headings.js"></script>
+
+<script src="assets/js/prism-core.js"></script>
+<script src="assets/js/prism-autoloader.js"></script>
+<script src="assets/js/prism_autoloader_path_override.js"></script>
+<script src="assets/js/trie.js"></script>
+
+
+</head>
+
+<body class="no-script
+" data-spy="scroll" data-target="#toc" data-offset="70">
+
+<script>
+$('body').removeClass('no-script');
+</script>
+
+<nav class="navbar navbar-fixed-top navbar-default" id="topnav">
+	<div class="container-fluid">
+		<div class="navbar-right">
+			<a id="toc-toggle">
+				<span class="glyphicon glyphicon-menu-right"></span>
+				<span class="glyphicon glyphicon-menu-left"></span>
+			</a>
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-wrapper" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<form action="" class="navbar-form pull-right" id="navbar-search-form">
+                               <div class="form-group has-feedback">
+                                       <input type="text" class="form-control input-sm" name="search" id="sidenav-lookup-field" placeholder="search" disabled>
+				       <span class="glyphicon glyphicon-search form-control-feedback" id="search-mgn-glass"></span>
+                               </div>
+                        </form>
+		</div>
+		<div class="navbar-header">
+			<a id="sidenav-toggle">
+				<span class="glyphicon glyphicon-menu-right"></span>
+				<span class="glyphicon glyphicon-menu-left"></span>
+			</a>
+			<a id="home-link" href="index.html" class="hotdoc-navbar-brand">
+				<img src="assets/images/home.svg" alt="Home">
+			</a>
+		</div>
+		<div class="navbar-collapse collapse" id="navbar-wrapper">
+			<ul class="nav navbar-nav" id="menu">
+							</ul>
+			<div class="hidden-xs hidden-sm navbar-text navbar-center">
+							</div>
+		</div>
+	</div>
+</nav>
+
+<main>
+<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="hotdoc_markdown/gtkentrycompletion.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['c', 'javascript', 'python']" data-hotdoc-meta-gi-language="c">
+<script src="assets/js/utils.js"></script>
+
+<div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
+	<script src="assets/js/navigation.js"></script>
+	<script src="assets/js/sitemap.js"></script>
+</div>
+
+<div id="body">
+	<div id="main">
+				    <div id="page-description" data-hotdoc-source="gtkentrycompletion.markdown" data-hotdoc-role="main">
+    </div>
+        
+        
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="GtkEntryCompletion">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h2 data-hotdoc-id="GtkEntryCompletion">
+	<span><code>GtkEntryCompletion</code></span>
+</h2>
+
+
+<div class="hierarchy_container">
+	<div class="hierarchy_details">
+<pre>
+<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object">GObject</a>
+    <span class="lineart">╰──</span>GtkEntryCompletion
+</pre>
+
+</div>
+
+</div>
+
+<div class="interfaces_container">
+	
+<p><b>Implemented interfaces:</b>
+    <a title="GtkBuildable" href="hotdoc_markdown/gtkbuildable.html#GtkBuildable" data-gi-href-python="hotdoc_markdown/gtkbuildable.html#GtkBuildable" data-gi-title-python="Gtk.Buildable" data-gi-href-javascript="hotdoc_markdown/gtkbuildable.html#GtkBuildable" data-gi-title-javascript="Gtk.Buildable">GtkBuildable</a>, <a title="GtkCellLayout" href="hotdoc_markdown/gtkcelllayout.html#GtkCellLayout" data-gi-href-python="hotdoc_markdown/gtkcelllayout.html#GtkCellLayout" data-gi-title-python="Gtk.CellLayout" data-gi-href-javascript="hotdoc_markdown/gtkcelllayout.html#GtkCellLayout" data-gi-title-javascript="Gtk.CellLayout">GtkCellLayout</a>
+</p>
+
+</div>
+
+
+
+
+	<div class="members-container">
+		<h3>Members</h3>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkEntryCompletion.parent_instance">
+	<div>
+		<i><em><code>parent_instance</code></em></i>
+		(<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object">GObject</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+<h3>Class structure</h3>
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="GtkEntryCompletionClass">
+	<span><code>GtkEntryCompletionClass</code></span>
+</h4>
+
+
+
+
+
+	<div class="members-container">
+		<h5>Fields</h5>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkEntryCompletionClass.parent_class">
+	<div>
+		<i><em><code>parent_class</code></em></i>
+		(<a title="GObjectClass" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObjectClass">GObjectClass</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h3>
+	Gtk.EntryCompletionClass
+</h3>
+
+
+
+
+
+	<div class="members-container">
+		<h5>Attributes</h5>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkEntryCompletionClass.parent_class">
+	<div>
+		<i><em><code>EntryCompletionClass.parent_class</code></em></i>
+		(<a title="GObject.ObjectClass" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObjectClass">GObject.ObjectClass</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3>
+	Gtk.EntryCompletionClass
+</h3>
+
+
+
+
+
+	<div class="members-container">
+		<h5>Attributes</h5>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkEntryCompletionClass.parent_class">
+	<div>
+		<i><em><code>EntryCompletionClass.parent_class</code></em></i>
+		(<a title="GObject.ObjectClass" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObjectClass">GObject.ObjectClass</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h2 data-hotdoc-id="GtkEntryCompletion">
+	<span><code>GtkEntryCompletion</code></span>
+</h2>
+
+
+<div class="hierarchy_container">
+	<div class="hierarchy_details">
+<pre>
+<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object">GObject</a>
+    <span class="lineart">╰──</span>GtkEntryCompletion
+</pre>
+
+</div>
+
+</div>
+
+<div class="interfaces_container">
+	
+<p><b>Implemented interfaces:</b>
+    <a title="GtkBuildable" href="hotdoc_markdown/gtkbuildable.html#GtkBuildable" data-gi-href-python="hotdoc_markdown/gtkbuildable.html#GtkBuildable" data-gi-title-python="Gtk.Buildable" data-gi-href-javascript="hotdoc_markdown/gtkbuildable.html#GtkBuildable" data-gi-title-javascript="Gtk.Buildable">GtkBuildable</a>, <a title="GtkCellLayout" href="hotdoc_markdown/gtkcelllayout.html#GtkCellLayout" data-gi-href-python="hotdoc_markdown/gtkcelllayout.html#GtkCellLayout" data-gi-title-python="Gtk.CellLayout" data-gi-href-javascript="hotdoc_markdown/gtkcelllayout.html#GtkCellLayout" data-gi-title-javascript="Gtk.CellLayout">GtkCellLayout</a>
+</p>
+
+</div>
+
+
+
+
+	<div class="members-container">
+		<h3>Members</h3>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkEntryCompletion.parent_instance">
+	<div>
+		<i><em><code>parent_instance</code></em></i>
+		(<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object">GObject</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h2 data-hotdoc-id="GtkEntryCompletion">
+	<span><code>GtkEntryCompletion</code></span>
+</h2>
+
+
+<div class="hierarchy_container">
+	<div class="hierarchy_details">
+<pre>
+<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object">GObject</a>
+    <span class="lineart">╰──</span>GtkEntryCompletion
+</pre>
+
+</div>
+
+</div>
+
+<div class="interfaces_container">
+	
+<p><b>Implemented interfaces:</b>
+    <a title="GtkBuildable" href="hotdoc_markdown/gtkbuildable.html#GtkBuildable" data-gi-href-python="hotdoc_markdown/gtkbuildable.html#GtkBuildable" data-gi-title-python="Gtk.Buildable" data-gi-href-javascript="hotdoc_markdown/gtkbuildable.html#GtkBuildable" data-gi-title-javascript="Gtk.Buildable">GtkBuildable</a>, <a title="GtkCellLayout" href="hotdoc_markdown/gtkcelllayout.html#GtkCellLayout" data-gi-href-python="hotdoc_markdown/gtkcelllayout.html#GtkCellLayout" data-gi-title-python="Gtk.CellLayout" data-gi-href-javascript="hotdoc_markdown/gtkcelllayout.html#GtkCellLayout" data-gi-title-javascript="Gtk.CellLayout">GtkCellLayout</a>
+</p>
+
+</div>
+
+
+
+
+	<div class="members-container">
+		<h3>Members</h3>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkEntryCompletion.parent_instance">
+	<div>
+		<i><em><code>parent_instance</code></em></i>
+		(<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object">GObject</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+
+</div>
+
+
+            <h3 class="symbol_section">Constructors</h3>
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.4;" id="gtk_entry_completion_new">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_entry_completion_new">
+	<span><code>gtk_entry_completion_new</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkEntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">GtkEntryCompletion</a> *
+gtk_entry_completion_new ()</pre>
+
+<p>Creates a new <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">GtkEntryCompletion</a> object.</p>
+
+
+
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>A newly created <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">GtkEntryCompletion</a> object</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.4
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_entry_completion_new">
+	<span><code>Gtk.prototype.new</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.new(): {
+    // javascript wrapper for 'gtk_entry_completion_new'
+}</pre>
+
+<p>Creates a new <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a> object.</p>
+
+
+
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.EntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a>
+										)
+								–
+			</div>
+							<p>A newly created <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a> object</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.4
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_entry_completion_new">
+	<span><code>Gtk.EntryCompletion.new</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.EntryCompletion.new ():
+    #python wrapper for 'gtk_entry_completion_new'</pre>
+
+<p>Creates a new <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a> object.</p>
+
+
+
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.EntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a>
+										)
+								–
+			</div>
+							<p>A newly created <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a> object</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.4
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_entry_completion_new_with_area">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_entry_completion_new_with_area">
+	<span><code>gtk_entry_completion_new_with_area</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkEntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">GtkEntryCompletion</a> *
+gtk_entry_completion_new_with_area (<a title="GtkCellArea" href="hotdoc_markdown/gtkcellarea.html#GtkCellArea">GtkCellArea</a> * area)</pre>
+
+<p>Creates a new <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">GtkEntryCompletion</a> object using the
+specified <em>area</em> to layout cells in the underlying
+<a href="hotdoc_markdown/gtktreeviewcolumn.html#GtkTreeViewColumn">GtkTreeViewColumn</a> for the drop-down menu.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>area</code></em></i>
+				–
+	</div>
+			<p>the <a href="hotdoc_markdown/gtkcellarea.html#GtkCellArea">GtkCellArea</a> used to layout cells</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>A newly created <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">GtkEntryCompletion</a> object</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_entry_completion_new_with_area">
+	<span><code>Gtk.prototype.new_with_area</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.new_with_area(area: <a title="Gtk.CellArea" href="hotdoc_markdown/gtkcellarea.html#GtkCellArea">Gtk.CellArea</a>): {
+    // javascript wrapper for 'gtk_entry_completion_new_with_area'
+}</pre>
+
+<p>Creates a new <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a> object using the
+specified <em>area</em> to layout cells in the underlying
+<a href="hotdoc_markdown/gtktreeviewcolumn.html#GtkTreeViewColumn">Gtk.TreeViewColumn</a> for the drop-down menu.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>area</code></em></i>
+					(
+						<a title="Gtk.CellArea" href="hotdoc_markdown/gtkcellarea.html#GtkCellArea">Gtk.CellArea</a>
+						)
+				–
+	</div>
+			<p>the <a href="hotdoc_markdown/gtkcellarea.html#GtkCellArea">Gtk.CellArea</a> used to layout cells</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.EntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a>
+										)
+								–
+			</div>
+							<p>A newly created <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a> object</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_entry_completion_new_with_area">
+	<span><code>Gtk.EntryCompletion.new_with_area</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.EntryCompletion.new_with_area (area):
+    #python wrapper for 'gtk_entry_completion_new_with_area'</pre>
+
+<p>Creates a new <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a> object using the
+specified <em>area</em> to layout cells in the underlying
+<a href="hotdoc_markdown/gtktreeviewcolumn.html#GtkTreeViewColumn">Gtk.TreeViewColumn</a> for the drop-down menu.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>area</code></em></i>
+					(
+						<a title="Gtk.CellArea" href="hotdoc_markdown/gtkcellarea.html#GtkCellArea">Gtk.CellArea</a>
+						)
+				–
+	</div>
+			<p>the <a href="hotdoc_markdown/gtkcellarea.html#GtkCellArea">Gtk.CellArea</a> used to layout cells</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.EntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a>
+										)
+								–
+			</div>
+							<p>A newly created <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a> object</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+
+</div>
+
+
+            <h3 class="symbol_section">Methods</h3>
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.4;" id="gtk_entry_completion_get_entry">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_entry_completion_get_entry">
+	<span><code>gtk_entry_completion_get_entry</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkWidget" href="hotdoc_markdown/gtkwidget.html#GtkWidget">GtkWidget</a> *
+gtk_entry_completion_get_entry (<a title="GtkEntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">GtkEntryCompletion</a> * completion)</pre>
+
+<p>Gets the entry <em>completion</em> has been attached to.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>completion</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">GtkEntryCompletion</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					
+										
+<span class="annotation">[<abbr title="Don't free data after the code is done"><span class="acronym">transfer: none</span></abbr>]</span>
+
+										)
+								–
+			</div>
+							<p>The entry <em>completion</em> has been attached to</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.4
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_entry_completion_get_entry">
+	<span><code>Gtk.prototype.get_entry</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_entry(): {
+    // javascript wrapper for 'gtk_entry_completion_get_entry'
+}</pre>
+
+<p>Gets the entry <em>completion</em> has been attached to.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>completion</code></em></i>
+					(
+						<a title="Gtk.EntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="hotdoc_markdown/gtkwidget.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>The entry <em>completion</em> has been attached to</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.4
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_entry_completion_get_entry">
+	<span><code>Gtk.EntryCompletion.get_entry</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.EntryCompletion.get_entry (self):
+    #python wrapper for 'gtk_entry_completion_get_entry'</pre>
+
+<p>Gets the entry <em>completion</em> has been attached to.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>completion</code></em></i>
+					(
+						<a title="Gtk.EntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="hotdoc_markdown/gtkwidget.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>The entry <em>completion</em> has been attached to</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.4
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.4;" id="gtk_entry_completion_set_model">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_entry_completion_set_model">
+	<span><code>gtk_entry_completion_set_model</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_entry_completion_set_model (<a title="GtkEntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">GtkEntryCompletion</a> * completion,
+                                <a title="GtkTreeModel" href="hotdoc_markdown/gtktreemodel.html#GtkTreeModel">GtkTreeModel</a> * model)</pre>
+
+<p>Sets the model for a <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">GtkEntryCompletion</a>. If <em>completion</em> already has
+a model set, it will remove it before setting the new model.
+If model is <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a>, then it will unset the model.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>completion</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">GtkEntryCompletion</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>model</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>the <a href="hotdoc_markdown/gtktreemodel.html#GtkTreeModel">GtkTreeModel</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.4
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_entry_completion_set_model">
+	<span><code>Gtk.prototype.set_model</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_model(model: <a title="Gtk.TreeModel" href="hotdoc_markdown/gtktreemodel.html#GtkTreeModel">Gtk.TreeModel</a>): {
+    // javascript wrapper for 'gtk_entry_completion_set_model'
+}</pre>
+
+<p>Sets the model for a <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a>. If <em>completion</em> already has
+a model set, it will remove it before setting the new model.
+If model is <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a>, then it will unset the model.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>completion</code></em></i>
+					(
+						<a title="Gtk.EntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>model</code></em></i>
+					(
+						<a title="Gtk.TreeModel" href="hotdoc_markdown/gtktreemodel.html#GtkTreeModel">Gtk.TreeModel</a>
+						)
+				–
+	</div>
+			<p>the <a href="hotdoc_markdown/gtktreemodel.html#GtkTreeModel">Gtk.TreeModel</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.4
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_entry_completion_set_model">
+	<span><code>Gtk.EntryCompletion.set_model</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.EntryCompletion.set_model (self, model):
+    #python wrapper for 'gtk_entry_completion_set_model'</pre>
+
+<p>Sets the model for a <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a>. If <em>completion</em> already has
+a model set, it will remove it before setting the new model.
+If model is <a href="https://docs.python.org/3/library/constants.html#None">None</a>, then it will unset the model.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>completion</code></em></i>
+					(
+						<a title="Gtk.EntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>model</code></em></i>
+					(
+						<a title="Gtk.TreeModel" href="hotdoc_markdown/gtktreemodel.html#GtkTreeModel">Gtk.TreeModel</a>
+						)
+				–
+	</div>
+			<p>the <a href="hotdoc_markdown/gtktreemodel.html#GtkTreeModel">Gtk.TreeModel</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.4
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.4;" id="gtk_entry_completion_get_model">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_entry_completion_get_model">
+	<span><code>gtk_entry_completion_get_model</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkTreeModel" href="hotdoc_markdown/gtktreemodel.html#GtkTreeModel">GtkTreeModel</a> *
+gtk_entry_completion_get_model (<a title="GtkEntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">GtkEntryCompletion</a> * completion)</pre>
+
+<p>Returns the model the <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">GtkEntryCompletion</a> is using as data source.
+Returns <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> if the model is unset.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>completion</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">GtkEntryCompletion</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					
+										
+<span class="annotation">[<abbr title="NULL may be passed to the value"><span class="acronym">nullable</span></abbr>]</span>
+<span class="annotation">[<abbr title="Don't free data after the code is done"><span class="acronym">transfer: none</span></abbr>]</span>
+
+										)
+								–
+			</div>
+							<p>A <a href="hotdoc_markdown/gtktreemodel.html#GtkTreeModel">GtkTreeModel</a>, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> if none
+is currently being used</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.4
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_entry_completion_get_model">
+	<span><code>Gtk.prototype.get_model</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_model(): {
+    // javascript wrapper for 'gtk_entry_completion_get_model'
+}</pre>
+
+<p>Returns the model the <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a> is using as data source.
+Returns <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a> if the model is unset.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>completion</code></em></i>
+					(
+						<a title="Gtk.EntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.TreeModel" href="hotdoc_markdown/gtktreemodel.html#GtkTreeModel">Gtk.TreeModel</a>
+										)
+								–
+			</div>
+							<p>A <a href="hotdoc_markdown/gtktreemodel.html#GtkTreeModel">Gtk.TreeModel</a>, or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a> if none
+is currently being used</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.4
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_entry_completion_get_model">
+	<span><code>Gtk.EntryCompletion.get_model</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.EntryCompletion.get_model (self):
+    #python wrapper for 'gtk_entry_completion_get_model'</pre>
+
+<p>Returns the model the <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a> is using as data source.
+Returns <a href="https://docs.python.org/3/library/constants.html#None">None</a> if the model is unset.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>completion</code></em></i>
+					(
+						<a title="Gtk.EntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.TreeModel" href="hotdoc_markdown/gtktreemodel.html#GtkTreeModel">Gtk.TreeModel</a>
+										)
+								–
+			</div>
+							<p>A <a href="hotdoc_markdown/gtktreemodel.html#GtkTreeModel">Gtk.TreeModel</a>, or <a href="https://docs.python.org/3/library/constants.html#None">None</a> if none
+is currently being used</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.4
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.4;" id="gtk_entry_completion_set_match_func">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_entry_completion_set_match_func">
+	<span><code>gtk_entry_completion_set_match_func</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_entry_completion_set_match_func (<a title="GtkEntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">GtkEntryCompletion</a> * completion,
+                                     <a title="GtkEntryCompletionMatchFunc" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletionMatchFunc">GtkEntryCompletionMatchFunc</a> func,
+                                     <a title="gpointer" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer">gpointer</a> func_data,
+                                     <a title="GDestroyNotify" href="https://developer.gnome.org/glib/unstable/glib-Datasets.html#GDestroyNotify">GDestroyNotify</a> func_notify)</pre>
+
+<p>Sets the match function for <em>completion</em> to be <em>func</em>. The match function
+is used to determine if a row should or should not be in the completion
+list.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>completion</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">GtkEntryCompletion</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>func</code></em></i>
+				–
+	</div>
+			<p>the <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletionMatchFunc">GtkEntryCompletionMatchFunc</a> to use</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>func_data</code></em></i>
+				–
+	</div>
+			<p>user data for <em>func</em></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>func_notify</code></em></i>
+				–
+	</div>
+			<p>destroy notify for <em>func_data</em>.</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.4
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_entry_completion_set_match_func">
+	<span><code>Gtk.prototype.set_match_func</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_match_func(func: <a title="Gtk.EntryCompletionMatchFunc" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletionMatchFunc">Gtk.EntryCompletionMatchFunc</a>, func_data: <a title="Object" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>, func_notify: <a title="GLib.DestroyNotify" href="https://developer.gnome.org/glib/unstable/glib-Datasets.html#GDestroyNotify">GLib.DestroyNotify</a>): {
+    // javascript wrapper for 'gtk_entry_completion_set_match_func'
+}</pre>
+
+<p>Sets the match function for <em>completion</em> to be <em>func</em>. The match function
+is used to determine if a row should or should not be in the completion
+list.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>completion</code></em></i>
+					(
+						<a title="Gtk.EntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>func</code></em></i>
+					(
+						<a title="Gtk.EntryCompletionMatchFunc" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletionMatchFunc">Gtk.EntryCompletionMatchFunc</a>
+						)
+				–
+	</div>
+			<p>the <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletionMatchFunc">Gtk.EntryCompletionMatchFunc</a> to use</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>func_data</code></em></i>
+					(
+						<a title="Object" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>
+						)
+				–
+	</div>
+			<p>user data for <em>func</em></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>func_notify</code></em></i>
+					(
+						<a title="GLib.DestroyNotify" href="https://developer.gnome.org/glib/unstable/glib-Datasets.html#GDestroyNotify">GLib.DestroyNotify</a>
+						)
+				–
+	</div>
+			<p>destroy notify for <em>func_data</em>.</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.4
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_entry_completion_set_match_func">
+	<span><code>Gtk.EntryCompletion.set_match_func</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.EntryCompletion.set_match_func (self, func, func_data, func_notify):
+    #python wrapper for 'gtk_entry_completion_set_match_func'</pre>
+
+<p>Sets the match function for <em>completion</em> to be <em>func</em>. The match function
+is used to determine if a row should or should not be in the completion
+list.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>completion</code></em></i>
+					(
+						<a title="Gtk.EntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>func</code></em></i>
+					(
+						<a title="Gtk.EntryCompletionMatchFunc" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletionMatchFunc">Gtk.EntryCompletionMatchFunc</a>
+						)
+				–
+	</div>
+			<p>the <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletionMatchFunc">Gtk.EntryCompletionMatchFunc</a> to use</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>func_data</code></em></i>
+					(
+						<a title="object" href="https://docs.python.org/3/library/functions.html#object">object</a>
+						)
+				–
+	</div>
+			<p>user data for <em>func</em></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>func_notify</code></em></i>
+					(
+						<a title="GLib.DestroyNotify" href="https://developer.gnome.org/glib/unstable/glib-Datasets.html#GDestroyNotify">GLib.DestroyNotify</a>
+						)
+				–
+	</div>
+			<p>destroy notify for <em>func_data</em>.</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.4
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.4;" id="gtk_entry_completion_set_minimum_key_length">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_entry_completion_set_minimum_key_length">
+	<span><code>gtk_entry_completion_set_minimum_key_length</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_entry_completion_set_minimum_key_length (<a title="GtkEntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">GtkEntryCompletion</a> * completion,
+                                             <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> length)</pre>
+
+<p>Requires the length of the search key for <em>completion</em> to be at least
+<em>length</em>. This is useful for long lists, where completing using a small
+key takes a lot of time and will come up with meaningless results anyway
+(ie, a too large dataset).</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>completion</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">GtkEntryCompletion</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>length</code></em></i>
+				–
+	</div>
+			<p>the minimum length of the key in order to start completing</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.4
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_entry_completion_set_minimum_key_length">
+	<span><code>Gtk.prototype.set_minimum_key_length</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_minimum_key_length(length: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_entry_completion_set_minimum_key_length'
+}</pre>
+
+<p>Requires the length of the search key for <em>completion</em> to be at least
+<em>length</em>. This is useful for long lists, where completing using a small
+key takes a lot of time and will come up with meaningless results anyway
+(ie, a too large dataset).</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>completion</code></em></i>
+					(
+						<a title="Gtk.EntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>length</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the minimum length of the key in order to start completing</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.4
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_entry_completion_set_minimum_key_length">
+	<span><code>Gtk.EntryCompletion.set_minimum_key_length</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.EntryCompletion.set_minimum_key_length (self, length):
+    #python wrapper for 'gtk_entry_completion_set_minimum_key_length'</pre>
+
+<p>Requires the length of the search key for <em>completion</em> to be at least
+<em>length</em>. This is useful for long lists, where completing using a small
+key takes a lot of time and will come up with meaningless results anyway
+(ie, a too large dataset).</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>completion</code></em></i>
+					(
+						<a title="Gtk.EntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>length</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>the minimum length of the key in order to start completing</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.4
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.4;" id="gtk_entry_completion_get_minimum_key_length">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_entry_completion_get_minimum_key_length">
+	<span><code>gtk_entry_completion_get_minimum_key_length</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a>
+gtk_entry_completion_get_minimum_key_length (<a title="GtkEntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">GtkEntryCompletion</a> * completion)</pre>
+
+<p>Returns the minimum key length as set for <em>completion</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>completion</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">GtkEntryCompletion</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>The currently used minimum key length</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.4
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_entry_completion_get_minimum_key_length">
+	<span><code>Gtk.prototype.get_minimum_key_length</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_minimum_key_length(): {
+    // javascript wrapper for 'gtk_entry_completion_get_minimum_key_length'
+}</pre>
+
+<p>Returns the minimum key length as set for <em>completion</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>completion</code></em></i>
+					(
+						<a title="Gtk.EntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p>The currently used minimum key length</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.4
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_entry_completion_get_minimum_key_length">
+	<span><code>Gtk.EntryCompletion.get_minimum_key_length</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.EntryCompletion.get_minimum_key_length (self):
+    #python wrapper for 'gtk_entry_completion_get_minimum_key_length'</pre>
+
+<p>Returns the minimum key length as set for <em>completion</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>completion</code></em></i>
+					(
+						<a title="Gtk.EntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+										)
+								–
+			</div>
+							<p>The currently used minimum key length</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.4
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.4;" id="gtk_entry_completion_compute_prefix">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_entry_completion_compute_prefix">
+	<span><code>gtk_entry_completion_compute_prefix</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> *
+gtk_entry_completion_compute_prefix (<a title="GtkEntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">GtkEntryCompletion</a> * completion,
+                                     const char* key)</pre>
+
+<p>Computes the common prefix that is shared by all rows in <em>completion</em>
+that start with <em>key</em>. If no row matches <em>key</em>, <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> will be returned.
+Note that a text column must have been set for this function to work,
+see <a href="hotdoc_markdown/gtkentrycompletion.html#gtk_entry_completion_set_text_column">gtk_entry_completion_set_text_column</a> for details.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>completion</code></em></i>
+				–
+	</div>
+			<p>the entry completion</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>key</code></em></i>
+				–
+	</div>
+			<p>The text to complete for</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					
+										
+<span class="annotation">[<abbr title="NULL may be passed to the value"><span class="acronym">nullable</span></abbr>]</span>
+<span class="annotation">[<abbr title="Free data after the code is done"><span class="acronym">transfer: full</span></abbr>]</span>
+
+										)
+								–
+			</div>
+							<p>The common prefix all rows starting with
+<em>key</em> or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> if no row matches <em>key</em>.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.4
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_entry_completion_compute_prefix">
+	<span><code>Gtk.prototype.compute_prefix</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.compute_prefix(key: <a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>): {
+    // javascript wrapper for 'gtk_entry_completion_compute_prefix'
+}</pre>
+
+<p>Computes the common prefix that is shared by all rows in <em>completion</em>
+that start with <em>key</em>. If no row matches <em>key</em>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a> will be returned.
+Note that a text column must have been set for this function to work,
+see <a href="hotdoc_markdown/gtkentrycompletion.html#gtk_entry_completion_set_text_column">Gtk.prototype.set_text_column</a> for details.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>completion</code></em></i>
+					(
+						<a title="Gtk.EntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a>
+						)
+				–
+	</div>
+			<p>the entry completion</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>key</code></em></i>
+					(
+						<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
+						)
+				–
+	</div>
+			<p>The text to complete for</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
+										)
+								–
+			</div>
+							<p>The common prefix all rows starting with
+<em>key</em> or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a> if no row matches <em>key</em>.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.4
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_entry_completion_compute_prefix">
+	<span><code>Gtk.EntryCompletion.compute_prefix</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.EntryCompletion.compute_prefix (self, key):
+    #python wrapper for 'gtk_entry_completion_compute_prefix'</pre>
+
+<p>Computes the common prefix that is shared by all rows in <em>completion</em>
+that start with <em>key</em>. If no row matches <em>key</em>, <a href="https://docs.python.org/3/library/constants.html#None">None</a> will be returned.
+Note that a text column must have been set for this function to work,
+see <a href="hotdoc_markdown/gtkentrycompletion.html#gtk_entry_completion_set_text_column">Gtk.EntryCompletion.set_text_column</a> for details.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>completion</code></em></i>
+					(
+						<a title="Gtk.EntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a>
+						)
+				–
+	</div>
+			<p>the entry completion</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>key</code></em></i>
+					(
+						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
+						)
+				–
+	</div>
+			<p>The text to complete for</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
+										)
+								–
+			</div>
+							<p>The common prefix all rows starting with
+<em>key</em> or <a href="https://docs.python.org/3/library/constants.html#None">None</a> if no row matches <em>key</em>.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.4
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.4;" id="gtk_entry_completion_complete">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_entry_completion_complete">
+	<span><code>gtk_entry_completion_complete</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_entry_completion_complete (<a title="GtkEntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">GtkEntryCompletion</a> * completion)</pre>
+
+<p>Requests a completion operation, or in other words a refiltering of the
+current list with completions, using the current key. The completion list
+view will be updated accordingly.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>completion</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">GtkEntryCompletion</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.4
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_entry_completion_complete">
+	<span><code>Gtk.prototype.complete</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.complete(): {
+    // javascript wrapper for 'gtk_entry_completion_complete'
+}</pre>
+
+<p>Requests a completion operation, or in other words a refiltering of the
+current list with completions, using the current key. The completion list
+view will be updated accordingly.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>completion</code></em></i>
+					(
+						<a title="Gtk.EntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.4
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_entry_completion_complete">
+	<span><code>Gtk.EntryCompletion.complete</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.EntryCompletion.complete (self):
+    #python wrapper for 'gtk_entry_completion_complete'</pre>
+
+<p>Requests a completion operation, or in other words a refiltering of the
+current list with completions, using the current key. The completion list
+view will be updated accordingly.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>completion</code></em></i>
+					(
+						<a title="Gtk.EntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.4
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.12;" id="gtk_entry_completion_get_completion_prefix">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_entry_completion_get_completion_prefix">
+	<span><code>gtk_entry_completion_get_completion_prefix</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> *
+gtk_entry_completion_get_completion_prefix (<a title="GtkEntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">GtkEntryCompletion</a> * completion)</pre>
+
+<p>Get the original text entered by the user that triggered
+the completion or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> if there’s no completion ongoing.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>completion</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">GtkEntryCompletion</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>the prefix for the current completion</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.12
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_entry_completion_get_completion_prefix">
+	<span><code>Gtk.prototype.get_completion_prefix</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_completion_prefix(): {
+    // javascript wrapper for 'gtk_entry_completion_get_completion_prefix'
+}</pre>
+
+<p>Get the original text entered by the user that triggered
+the completion or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a> if there’s no completion ongoing.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>completion</code></em></i>
+					(
+						<a title="Gtk.EntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
+										)
+								–
+			</div>
+							<p>the prefix for the current completion</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.12
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_entry_completion_get_completion_prefix">
+	<span><code>Gtk.EntryCompletion.get_completion_prefix</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.EntryCompletion.get_completion_prefix (self):
+    #python wrapper for 'gtk_entry_completion_get_completion_prefix'</pre>
+
+<p>Get the original text entered by the user that triggered
+the completion or <a href="https://docs.python.org/3/library/constants.html#None">None</a> if there’s no completion ongoing.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>completion</code></em></i>
+					(
+						<a title="Gtk.EntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
+										)
+								–
+			</div>
+							<p>the prefix for the current completion</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.12
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.6;" id="gtk_entry_completion_insert_prefix">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_entry_completion_insert_prefix">
+	<span><code>gtk_entry_completion_insert_prefix</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_entry_completion_insert_prefix (<a title="GtkEntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">GtkEntryCompletion</a> * completion)</pre>
+
+<p>Requests a prefix insertion.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>completion</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">GtkEntryCompletion</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.6
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_entry_completion_insert_prefix">
+	<span><code>Gtk.prototype.insert_prefix</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.insert_prefix(): {
+    // javascript wrapper for 'gtk_entry_completion_insert_prefix'
+}</pre>
+
+<p>Requests a prefix insertion.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>completion</code></em></i>
+					(
+						<a title="Gtk.EntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.6
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_entry_completion_insert_prefix">
+	<span><code>Gtk.EntryCompletion.insert_prefix</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.EntryCompletion.insert_prefix (self):
+    #python wrapper for 'gtk_entry_completion_insert_prefix'</pre>
+
+<p>Requests a prefix insertion.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>completion</code></em></i>
+					(
+						<a title="Gtk.EntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.6
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.4;" id="gtk_entry_completion_insert_action_text">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_entry_completion_insert_action_text">
+	<span><code>gtk_entry_completion_insert_action_text</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_entry_completion_insert_action_text (<a title="GtkEntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">GtkEntryCompletion</a> * completion,
+                                         <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> index_,
+                                         const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * text)</pre>
+
+<p>Inserts an action in <em>completion</em>’s action item list at position <em>index_</em>
+with text <em>text</em>. If you want the action item to have markup, use
+<a href="hotdoc_markdown/gtkentrycompletion.html#gtk_entry_completion_insert_action_markup">gtk_entry_completion_insert_action_markup</a>.</p>
+<p>Note that <em>index_</em> is a relative position in the list of actions and
+the position of an action can change when deleting a different action.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>completion</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">GtkEntryCompletion</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>index_</code></em></i>
+				–
+	</div>
+			<p>the index of the item to insert</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>text</code></em></i>
+				–
+	</div>
+			<p>text of the item to insert</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.4
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_entry_completion_insert_action_text">
+	<span><code>Gtk.prototype.insert_action_text</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.insert_action_text(index_: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, text: <a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>): {
+    // javascript wrapper for 'gtk_entry_completion_insert_action_text'
+}</pre>
+
+<p>Inserts an action in <em>completion</em>’s action item list at position <em>index_</em>
+with text <em>text</em>. If you want the action item to have markup, use
+<a href="hotdoc_markdown/gtkentrycompletion.html#gtk_entry_completion_insert_action_markup">Gtk.prototype.insert_action_markup</a>.</p>
+<p>Note that <em>index_</em> is a relative position in the list of actions and
+the position of an action can change when deleting a different action.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>completion</code></em></i>
+					(
+						<a title="Gtk.EntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>index_</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the index of the item to insert</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>text</code></em></i>
+					(
+						<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
+						)
+				–
+	</div>
+			<p>text of the item to insert</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.4
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_entry_completion_insert_action_text">
+	<span><code>Gtk.EntryCompletion.insert_action_text</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.EntryCompletion.insert_action_text (self, index_, text):
+    #python wrapper for 'gtk_entry_completion_insert_action_text'</pre>
+
+<p>Inserts an action in <em>completion</em>’s action item list at position <em>index_</em>
+with text <em>text</em>. If you want the action item to have markup, use
+<a href="hotdoc_markdown/gtkentrycompletion.html#gtk_entry_completion_insert_action_markup">Gtk.EntryCompletion.insert_action_markup</a>.</p>
+<p>Note that <em>index_</em> is a relative position in the list of actions and
+the position of an action can change when deleting a different action.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>completion</code></em></i>
+					(
+						<a title="Gtk.EntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>index_</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>the index of the item to insert</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>text</code></em></i>
+					(
+						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
+						)
+				–
+	</div>
+			<p>text of the item to insert</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.4
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.4;" id="gtk_entry_completion_insert_action_markup">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_entry_completion_insert_action_markup">
+	<span><code>gtk_entry_completion_insert_action_markup</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_entry_completion_insert_action_markup (<a title="GtkEntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">GtkEntryCompletion</a> * completion,
+                                           <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> index_,
+                                           const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * markup)</pre>
+
+<p>Inserts an action in <em>completion</em>’s action item list at position <em>index_</em>
+with markup <em>markup</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>completion</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">GtkEntryCompletion</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>index_</code></em></i>
+				–
+	</div>
+			<p>the index of the item to insert</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>markup</code></em></i>
+				–
+	</div>
+			<p>markup of the item to insert</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.4
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_entry_completion_insert_action_markup">
+	<span><code>Gtk.prototype.insert_action_markup</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.insert_action_markup(index_: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, markup: <a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>): {
+    // javascript wrapper for 'gtk_entry_completion_insert_action_markup'
+}</pre>
+
+<p>Inserts an action in <em>completion</em>’s action item list at position <em>index_</em>
+with markup <em>markup</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>completion</code></em></i>
+					(
+						<a title="Gtk.EntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>index_</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the index of the item to insert</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>markup</code></em></i>
+					(
+						<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
+						)
+				–
+	</div>
+			<p>markup of the item to insert</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.4
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_entry_completion_insert_action_markup">
+	<span><code>Gtk.EntryCompletion.insert_action_markup</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.EntryCompletion.insert_action_markup (self, index_, markup):
+    #python wrapper for 'gtk_entry_completion_insert_action_markup'</pre>
+
+<p>Inserts an action in <em>completion</em>’s action item list at position <em>index_</em>
+with markup <em>markup</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>completion</code></em></i>
+					(
+						<a title="Gtk.EntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>index_</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>the index of the item to insert</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>markup</code></em></i>
+					(
+						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
+						)
+				–
+	</div>
+			<p>markup of the item to insert</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.4
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.4;" id="gtk_entry_completion_delete_action">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_entry_completion_delete_action">
+	<span><code>gtk_entry_completion_delete_action</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_entry_completion_delete_action (<a title="GtkEntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">GtkEntryCompletion</a> * completion,
+                                    <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> index_)</pre>
+
+<p>Deletes the action at <em>index_</em> from <em>completion</em>’s action list.</p>
+<p>Note that <em>index_</em> is a relative position and the position of an
+action may have changed since it was inserted.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>completion</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">GtkEntryCompletion</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>index_</code></em></i>
+				–
+	</div>
+			<p>the index of the item to delete</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.4
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_entry_completion_delete_action">
+	<span><code>Gtk.prototype.delete_action</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.delete_action(index_: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_entry_completion_delete_action'
+}</pre>
+
+<p>Deletes the action at <em>index_</em> from <em>completion</em>’s action list.</p>
+<p>Note that <em>index_</em> is a relative position and the position of an
+action may have changed since it was inserted.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>completion</code></em></i>
+					(
+						<a title="Gtk.EntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>index_</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the index of the item to delete</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.4
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_entry_completion_delete_action">
+	<span><code>Gtk.EntryCompletion.delete_action</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.EntryCompletion.delete_action (self, index_):
+    #python wrapper for 'gtk_entry_completion_delete_action'</pre>
+
+<p>Deletes the action at <em>index_</em> from <em>completion</em>’s action list.</p>
+<p>Note that <em>index_</em> is a relative position and the position of an
+action may have changed since it was inserted.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>completion</code></em></i>
+					(
+						<a title="Gtk.EntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>index_</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>the index of the item to delete</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.4
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.4;" id="gtk_entry_completion_set_text_column">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_entry_completion_set_text_column">
+	<span><code>gtk_entry_completion_set_text_column</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_entry_completion_set_text_column (<a title="GtkEntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">GtkEntryCompletion</a> * completion,
+                                      <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> column)</pre>
+
+<p>Convenience function for setting up the most used case of this code: a
+completion list with just strings. This function will set up <em>completion</em>
+to have a list displaying all (and just) strings in the completion list,
+and to get those strings from <em>column</em> in the model of <em>completion</em>.</p>
+<p>This functions creates and adds a <a href="hotdoc_markdown/gtkcellrenderertext.html#GtkCellRendererText">GtkCellRendererText</a> for the selected
+column. If you need to set the text column, but don't want the cell
+renderer, use <a href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-set">g_object_set</a> to set the <a href="gtkentrycompletion.html#GtkEntryCompletion:text-column">text-column</a>
+property directly.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>completion</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">GtkEntryCompletion</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>column</code></em></i>
+				–
+	</div>
+			<p>the column in the model of <em>completion</em> to get strings from</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.4
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_entry_completion_set_text_column">
+	<span><code>Gtk.prototype.set_text_column</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_text_column(column: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_entry_completion_set_text_column'
+}</pre>
+
+<p>Convenience function for setting up the most used case of this code: a
+completion list with just strings. This function will set up <em>completion</em>
+to have a list displaying all (and just) strings in the completion list,
+and to get those strings from <em>column</em> in the model of <em>completion</em>.</p>
+<p>This functions creates and adds a <a href="hotdoc_markdown/gtkcellrenderertext.html#GtkCellRendererText">Gtk.CellRendererText</a> for the selected
+column. If you need to set the text column, but don't want the cell
+renderer, use <a href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-set">g_object_set (not introspectable)</a> to set the <a href="gtkentrycompletion.html#GtkEntryCompletion:text-column">text-column</a>
+property directly.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>completion</code></em></i>
+					(
+						<a title="Gtk.EntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>column</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the column in the model of <em>completion</em> to get strings from</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.4
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_entry_completion_set_text_column">
+	<span><code>Gtk.EntryCompletion.set_text_column</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.EntryCompletion.set_text_column (self, column):
+    #python wrapper for 'gtk_entry_completion_set_text_column'</pre>
+
+<p>Convenience function for setting up the most used case of this code: a
+completion list with just strings. This function will set up <em>completion</em>
+to have a list displaying all (and just) strings in the completion list,
+and to get those strings from <em>column</em> in the model of <em>completion</em>.</p>
+<p>This functions creates and adds a <a href="hotdoc_markdown/gtkcellrenderertext.html#GtkCellRendererText">Gtk.CellRendererText</a> for the selected
+column. If you need to set the text column, but don't want the cell
+renderer, use <a href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-set">g_object_set (not introspectable)</a> to set the <a href="gtkentrycompletion.html#GtkEntryCompletion:text-column">text-column</a>
+property directly.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>completion</code></em></i>
+					(
+						<a title="Gtk.EntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>column</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>the column in the model of <em>completion</em> to get strings from</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.4
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.6;" id="gtk_entry_completion_get_text_column">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_entry_completion_get_text_column">
+	<span><code>gtk_entry_completion_get_text_column</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a>
+gtk_entry_completion_get_text_column (<a title="GtkEntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">GtkEntryCompletion</a> * completion)</pre>
+
+<p>Returns the column in the model of <em>completion</em> to get strings from.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>completion</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">GtkEntryCompletion</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>the column containing the strings</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.6
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_entry_completion_get_text_column">
+	<span><code>Gtk.prototype.get_text_column</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_text_column(): {
+    // javascript wrapper for 'gtk_entry_completion_get_text_column'
+}</pre>
+
+<p>Returns the column in the model of <em>completion</em> to get strings from.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>completion</code></em></i>
+					(
+						<a title="Gtk.EntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p>the column containing the strings</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.6
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_entry_completion_get_text_column">
+	<span><code>Gtk.EntryCompletion.get_text_column</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.EntryCompletion.get_text_column (self):
+    #python wrapper for 'gtk_entry_completion_get_text_column'</pre>
+
+<p>Returns the column in the model of <em>completion</em> to get strings from.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>completion</code></em></i>
+					(
+						<a title="Gtk.EntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+										)
+								–
+			</div>
+							<p>the column containing the strings</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.6
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.6;" id="gtk_entry_completion_set_inline_completion">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_entry_completion_set_inline_completion">
+	<span><code>gtk_entry_completion_set_inline_completion</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_entry_completion_set_inline_completion (<a title="GtkEntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">GtkEntryCompletion</a> * completion,
+                                            <a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a> inline_completion)</pre>
+
+<p>Sets whether the common prefix of the possible completions should
+be automatically inserted in the entry.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>completion</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">GtkEntryCompletion</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>inline_completion</code></em></i>
+				–
+	</div>
+			<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> to do inline completion</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.6
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_entry_completion_set_inline_completion">
+	<span><code>Gtk.prototype.set_inline_completion</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_inline_completion(inline_completion: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_entry_completion_set_inline_completion'
+}</pre>
+
+<p>Sets whether the common prefix of the possible completions should
+be automatically inserted in the entry.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>completion</code></em></i>
+					(
+						<a title="Gtk.EntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>inline_completion</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> to do inline completion</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.6
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_entry_completion_set_inline_completion">
+	<span><code>Gtk.EntryCompletion.set_inline_completion</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.EntryCompletion.set_inline_completion (self, inline_completion):
+    #python wrapper for 'gtk_entry_completion_set_inline_completion'</pre>
+
+<p>Sets whether the common prefix of the possible completions should
+be automatically inserted in the entry.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>completion</code></em></i>
+					(
+						<a title="Gtk.EntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>inline_completion</code></em></i>
+					(
+						<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+						)
+				–
+	</div>
+			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> to do inline completion</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.6
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.6;" id="gtk_entry_completion_get_inline_completion">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_entry_completion_get_inline_completion">
+	<span><code>gtk_entry_completion_get_inline_completion</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_entry_completion_get_inline_completion (<a title="GtkEntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">GtkEntryCompletion</a> * completion)</pre>
+
+<p>Returns whether the common prefix of the possible completions should
+be automatically inserted in the entry.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>completion</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">GtkEntryCompletion</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if inline completion is turned on</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.6
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_entry_completion_get_inline_completion">
+	<span><code>Gtk.prototype.get_inline_completion</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_inline_completion(): {
+    // javascript wrapper for 'gtk_entry_completion_get_inline_completion'
+}</pre>
+
+<p>Returns whether the common prefix of the possible completions should
+be automatically inserted in the entry.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>completion</code></em></i>
+					(
+						<a title="Gtk.EntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if inline completion is turned on</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.6
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_entry_completion_get_inline_completion">
+	<span><code>Gtk.EntryCompletion.get_inline_completion</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.EntryCompletion.get_inline_completion (self):
+    #python wrapper for 'gtk_entry_completion_get_inline_completion'</pre>
+
+<p>Returns whether the common prefix of the possible completions should
+be automatically inserted in the entry.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>completion</code></em></i>
+					(
+						<a title="Gtk.EntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+										)
+								–
+			</div>
+							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if inline completion is turned on</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.6
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.12;" id="gtk_entry_completion_set_inline_selection">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_entry_completion_set_inline_selection">
+	<span><code>gtk_entry_completion_set_inline_selection</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_entry_completion_set_inline_selection (<a title="GtkEntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">GtkEntryCompletion</a> * completion,
+                                           <a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a> inline_selection)</pre>
+
+<p>Sets whether it is possible to cycle through the possible completions
+inside the entry.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>completion</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">GtkEntryCompletion</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>inline_selection</code></em></i>
+				–
+	</div>
+			<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> to do inline selection</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.12
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_entry_completion_set_inline_selection">
+	<span><code>Gtk.prototype.set_inline_selection</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_inline_selection(inline_selection: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_entry_completion_set_inline_selection'
+}</pre>
+
+<p>Sets whether it is possible to cycle through the possible completions
+inside the entry.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>completion</code></em></i>
+					(
+						<a title="Gtk.EntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>inline_selection</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> to do inline selection</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.12
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_entry_completion_set_inline_selection">
+	<span><code>Gtk.EntryCompletion.set_inline_selection</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.EntryCompletion.set_inline_selection (self, inline_selection):
+    #python wrapper for 'gtk_entry_completion_set_inline_selection'</pre>
+
+<p>Sets whether it is possible to cycle through the possible completions
+inside the entry.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>completion</code></em></i>
+					(
+						<a title="Gtk.EntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>inline_selection</code></em></i>
+					(
+						<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+						)
+				–
+	</div>
+			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> to do inline selection</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.12
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.12;" id="gtk_entry_completion_get_inline_selection">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_entry_completion_get_inline_selection">
+	<span><code>gtk_entry_completion_get_inline_selection</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_entry_completion_get_inline_selection (<a title="GtkEntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">GtkEntryCompletion</a> * completion)</pre>
+
+<p>Returns <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if inline-selection mode is turned on.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>completion</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">GtkEntryCompletion</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if inline-selection mode is on</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.12
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_entry_completion_get_inline_selection">
+	<span><code>Gtk.prototype.get_inline_selection</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_inline_selection(): {
+    // javascript wrapper for 'gtk_entry_completion_get_inline_selection'
+}</pre>
+
+<p>Returns <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if inline-selection mode is turned on.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>completion</code></em></i>
+					(
+						<a title="Gtk.EntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if inline-selection mode is on</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.12
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_entry_completion_get_inline_selection">
+	<span><code>Gtk.EntryCompletion.get_inline_selection</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.EntryCompletion.get_inline_selection (self):
+    #python wrapper for 'gtk_entry_completion_get_inline_selection'</pre>
+
+<p>Returns <a href="https://docs.python.org/3/library/constants.html#True">True</a> if inline-selection mode is turned on.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>completion</code></em></i>
+					(
+						<a title="Gtk.EntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+										)
+								–
+			</div>
+							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if inline-selection mode is on</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.12
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.6;" id="gtk_entry_completion_set_popup_completion">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_entry_completion_set_popup_completion">
+	<span><code>gtk_entry_completion_set_popup_completion</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_entry_completion_set_popup_completion (<a title="GtkEntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">GtkEntryCompletion</a> * completion,
+                                           <a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a> popup_completion)</pre>
+
+<p>Sets whether the completions should be presented in a popup window.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>completion</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">GtkEntryCompletion</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>popup_completion</code></em></i>
+				–
+	</div>
+			<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> to do popup completion</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.6
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_entry_completion_set_popup_completion">
+	<span><code>Gtk.prototype.set_popup_completion</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_popup_completion(popup_completion: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_entry_completion_set_popup_completion'
+}</pre>
+
+<p>Sets whether the completions should be presented in a popup window.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>completion</code></em></i>
+					(
+						<a title="Gtk.EntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>popup_completion</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> to do popup completion</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.6
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_entry_completion_set_popup_completion">
+	<span><code>Gtk.EntryCompletion.set_popup_completion</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.EntryCompletion.set_popup_completion (self, popup_completion):
+    #python wrapper for 'gtk_entry_completion_set_popup_completion'</pre>
+
+<p>Sets whether the completions should be presented in a popup window.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>completion</code></em></i>
+					(
+						<a title="Gtk.EntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>popup_completion</code></em></i>
+					(
+						<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+						)
+				–
+	</div>
+			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> to do popup completion</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.6
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.6;" id="gtk_entry_completion_get_popup_completion">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_entry_completion_get_popup_completion">
+	<span><code>gtk_entry_completion_get_popup_completion</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_entry_completion_get_popup_completion (<a title="GtkEntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">GtkEntryCompletion</a> * completion)</pre>
+
+<p>Returns whether the completions should be presented in a popup window.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>completion</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">GtkEntryCompletion</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if popup completion is turned on</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.6
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_entry_completion_get_popup_completion">
+	<span><code>Gtk.prototype.get_popup_completion</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_popup_completion(): {
+    // javascript wrapper for 'gtk_entry_completion_get_popup_completion'
+}</pre>
+
+<p>Returns whether the completions should be presented in a popup window.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>completion</code></em></i>
+					(
+						<a title="Gtk.EntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if popup completion is turned on</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.6
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_entry_completion_get_popup_completion">
+	<span><code>Gtk.EntryCompletion.get_popup_completion</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.EntryCompletion.get_popup_completion (self):
+    #python wrapper for 'gtk_entry_completion_get_popup_completion'</pre>
+
+<p>Returns whether the completions should be presented in a popup window.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>completion</code></em></i>
+					(
+						<a title="Gtk.EntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+										)
+								–
+			</div>
+							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if popup completion is turned on</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.6
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.8;" id="gtk_entry_completion_set_popup_set_width">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_entry_completion_set_popup_set_width">
+	<span><code>gtk_entry_completion_set_popup_set_width</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_entry_completion_set_popup_set_width (<a title="GtkEntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">GtkEntryCompletion</a> * completion,
+                                          <a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a> popup_set_width)</pre>
+
+<p>Sets whether the completion popup window will be resized to be the same
+width as the entry.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>completion</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">GtkEntryCompletion</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>popup_set_width</code></em></i>
+				–
+	</div>
+			<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> to make the width of the popup the same as the entry</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.8
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_entry_completion_set_popup_set_width">
+	<span><code>Gtk.prototype.set_popup_set_width</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_popup_set_width(popup_set_width: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_entry_completion_set_popup_set_width'
+}</pre>
+
+<p>Sets whether the completion popup window will be resized to be the same
+width as the entry.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>completion</code></em></i>
+					(
+						<a title="Gtk.EntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>popup_set_width</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> to make the width of the popup the same as the entry</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.8
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_entry_completion_set_popup_set_width">
+	<span><code>Gtk.EntryCompletion.set_popup_set_width</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.EntryCompletion.set_popup_set_width (self, popup_set_width):
+    #python wrapper for 'gtk_entry_completion_set_popup_set_width'</pre>
+
+<p>Sets whether the completion popup window will be resized to be the same
+width as the entry.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>completion</code></em></i>
+					(
+						<a title="Gtk.EntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>popup_set_width</code></em></i>
+					(
+						<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+						)
+				–
+	</div>
+			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> to make the width of the popup the same as the entry</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.8
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.8;" id="gtk_entry_completion_get_popup_set_width">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_entry_completion_get_popup_set_width">
+	<span><code>gtk_entry_completion_get_popup_set_width</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_entry_completion_get_popup_set_width (<a title="GtkEntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">GtkEntryCompletion</a> * completion)</pre>
+
+<p>Returns whether the  completion popup window will be resized to the
+width of the entry.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>completion</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">GtkEntryCompletion</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if the popup window will be resized to the width of
+the entry</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.8
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_entry_completion_get_popup_set_width">
+	<span><code>Gtk.prototype.get_popup_set_width</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_popup_set_width(): {
+    // javascript wrapper for 'gtk_entry_completion_get_popup_set_width'
+}</pre>
+
+<p>Returns whether the  completion popup window will be resized to the
+width of the entry.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>completion</code></em></i>
+					(
+						<a title="Gtk.EntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if the popup window will be resized to the width of
+the entry</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.8
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_entry_completion_get_popup_set_width">
+	<span><code>Gtk.EntryCompletion.get_popup_set_width</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.EntryCompletion.get_popup_set_width (self):
+    #python wrapper for 'gtk_entry_completion_get_popup_set_width'</pre>
+
+<p>Returns whether the  completion popup window will be resized to the
+width of the entry.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>completion</code></em></i>
+					(
+						<a title="Gtk.EntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+										)
+								–
+			</div>
+							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if the popup window will be resized to the width of
+the entry</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.8
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.8;" id="gtk_entry_completion_set_popup_single_match">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_entry_completion_set_popup_single_match">
+	<span><code>gtk_entry_completion_set_popup_single_match</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_entry_completion_set_popup_single_match (<a title="GtkEntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">GtkEntryCompletion</a> * completion,
+                                             <a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a> popup_single_match)</pre>
+
+<p>Sets whether the completion popup window will appear even if there is
+only a single match. You may want to set this to <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS">FALSE</a> if you
+are using [inline completion][GtkEntryCompletion--inline-completion].</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>completion</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">GtkEntryCompletion</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>popup_single_match</code></em></i>
+				–
+	</div>
+			<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if the popup should appear even for a single
+match</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.8
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_entry_completion_set_popup_single_match">
+	<span><code>Gtk.prototype.set_popup_single_match</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_popup_single_match(popup_single_match: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_entry_completion_set_popup_single_match'
+}</pre>
+
+<p>Sets whether the completion popup window will appear even if there is
+only a single match. You may want to set this to <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">false</a> if you
+are using [inline completion][GtkEntryCompletion--inline-completion].</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>completion</code></em></i>
+					(
+						<a title="Gtk.EntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>popup_single_match</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if the popup should appear even for a single
+match</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.8
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_entry_completion_set_popup_single_match">
+	<span><code>Gtk.EntryCompletion.set_popup_single_match</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.EntryCompletion.set_popup_single_match (self, popup_single_match):
+    #python wrapper for 'gtk_entry_completion_set_popup_single_match'</pre>
+
+<p>Sets whether the completion popup window will appear even if there is
+only a single match. You may want to set this to <a href="https://docs.python.org/3/library/constants.html#False">False</a> if you
+are using [inline completion][GtkEntryCompletion--inline-completion].</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>completion</code></em></i>
+					(
+						<a title="Gtk.EntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>popup_single_match</code></em></i>
+					(
+						<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+						)
+				–
+	</div>
+			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if the popup should appear even for a single
+match</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.8
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.8;" id="gtk_entry_completion_get_popup_single_match">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_entry_completion_get_popup_single_match">
+	<span><code>gtk_entry_completion_get_popup_single_match</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_entry_completion_get_popup_single_match (<a title="GtkEntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">GtkEntryCompletion</a> * completion)</pre>
+
+<p>Returns whether the completion popup window will appear even if there is
+only a single match.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>completion</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">GtkEntryCompletion</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if the popup window will appear regardless of the
+number of matches</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.8
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_entry_completion_get_popup_single_match">
+	<span><code>Gtk.prototype.get_popup_single_match</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_popup_single_match(): {
+    // javascript wrapper for 'gtk_entry_completion_get_popup_single_match'
+}</pre>
+
+<p>Returns whether the completion popup window will appear even if there is
+only a single match.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>completion</code></em></i>
+					(
+						<a title="Gtk.EntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if the popup window will appear regardless of the
+number of matches</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.8
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_entry_completion_get_popup_single_match">
+	<span><code>Gtk.EntryCompletion.get_popup_single_match</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.EntryCompletion.get_popup_single_match (self):
+    #python wrapper for 'gtk_entry_completion_get_popup_single_match'</pre>
+
+<p>Returns whether the completion popup window will appear even if there is
+only a single match.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>completion</code></em></i>
+					(
+						<a title="Gtk.EntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+										)
+								–
+			</div>
+							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if the popup window will appear regardless of the
+number of matches</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.8
+		</p>
+
+
+        </div>
+
+</div>
+
+
+        
+
+            <h2 class="symbol_section">Callbacks</h2>
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="GtkEntryCompletionMatchFunc">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h3 data-hotdoc-id="GtkEntryCompletionMatchFunc">
+	<span><code>GtkEntryCompletionMatchFunc</code></span>
+</h3>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+(*GtkEntryCompletionMatchFunc) (<a title="GtkEntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">GtkEntryCompletion</a> * completion,
+                                const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * key,
+                                <a title="GtkTreeIter" href="hotdoc_markdown/gtktreemodel.html#GtkTreeIter">GtkTreeIter</a> * iter,
+                                <a title="gpointer" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer">gpointer</a> user_data)</pre>
+
+<p>A function which decides whether the row indicated by <em>iter</em> matches
+a given <em>key</em>, and should be displayed as a possible completion for <em>key</em>.
+Note that <em>key</em> is normalized and case-folded (see <a href="https://developer.gnome.org/glib/unstable/glib-Unicode-Manipulation.html#g-utf8-normalize">g_utf8_normalize</a>
+and <a href="https://developer.gnome.org/glib/unstable/glib-Unicode-Manipulation.html#g-utf8-casefold">g_utf8_casefold</a>). If this is not appropriate, match functions
+have access to the unmodified key via
+<code>gtk_entry_get_text (GTK_ENTRY (gtk_entry_completion_get_entry ()))</code>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>completion</code></em></i>
+				–
+	</div>
+			<p>the <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">GtkEntryCompletion</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>key</code></em></i>
+				–
+	</div>
+			<p>the string to match, normalized and case-folded</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>iter</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtktreemodel.html#GtkTreeIter">GtkTreeIter</a> indicating the row to match</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>user_data</code></em></i>
+				–
+	</div>
+			<p>user data given to <a href="hotdoc_markdown/gtkentrycompletion.html#gtk_entry_completion_set_match_func">gtk_entry_completion_set_match_func</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if <em>iter</em> should be displayed as a possible completion
+for <em>key</em></p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h3 data-hotdoc-id="GtkEntryCompletionMatchFunc">
+	<span><code>Gtk.EntryCompletionMatchFunc</code></span>
+</h3>
+
+
+
+
+<pre class="c-prototype">
+<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+(*Gtk.EntryCompletionMatchFunc) (<a title="Gtk.EntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a>,
+                                 <a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>,
+                                 <a title="Gtk.TreeIter" href="hotdoc_markdown/gtktreemodel.html#GtkTreeIter">Gtk.TreeIter</a>,
+                                 <a title="Object" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</pre>
+
+<p>A function which decides whether the row indicated by <em>iter</em> matches
+a given <em>key</em>, and should be displayed as a possible completion for <em>key</em>.
+Note that <em>key</em> is normalized and case-folded (see <a href="https://developer.gnome.org/glib/unstable/glib-Unicode-Manipulation.html#g-utf8-normalize">prototype.utf8_normalize</a>
+and <a href="https://developer.gnome.org/glib/unstable/glib-Unicode-Manipulation.html#g-utf8-casefold">prototype.utf8_casefold</a>). If this is not appropriate, match functions
+have access to the unmodified key via
+<code>gtk_entry_get_text (GTK_ENTRY (gtk_entry_completion_get_entry ()))</code>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>completion</code></em></i>
+					(
+						<a title="Gtk.EntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a>
+						)
+				–
+	</div>
+			<p>the <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>key</code></em></i>
+					(
+						<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
+						)
+				–
+	</div>
+			<p>the string to match, normalized and case-folded</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>iter</code></em></i>
+					(
+						<a title="Gtk.TreeIter" href="hotdoc_markdown/gtktreemodel.html#GtkTreeIter">Gtk.TreeIter</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtktreemodel.html#GtkTreeIter">Gtk.TreeIter</a> indicating the row to match</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>user_data</code></em></i>
+					(
+						<a title="Object" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>
+						)
+				–
+	</div>
+			<p>user data given to <a href="hotdoc_markdown/gtkentrycompletion.html#gtk_entry_completion_set_match_func">Gtk.prototype.set_match_func</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if <em>iter</em> should be displayed as a possible completion
+for <em>key</em></p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="GtkEntryCompletionMatchFunc">
+	<span><code>Gtk.EntryCompletionMatchFunc</code></span>
+</h3>
+
+
+
+
+<pre class="c-prototype">
+<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+(*Gtk.EntryCompletionMatchFunc) (<a title="Gtk.EntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a>,
+                                 <a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>,
+                                 <a title="Gtk.TreeIter" href="hotdoc_markdown/gtktreemodel.html#GtkTreeIter">Gtk.TreeIter</a>,
+                                 <a title="object" href="https://docs.python.org/3/library/functions.html#object">object</a>)</pre>
+
+<p>A function which decides whether the row indicated by <em>iter</em> matches
+a given <em>key</em>, and should be displayed as a possible completion for <em>key</em>.
+Note that <em>key</em> is normalized and case-folded (see <a href="https://developer.gnome.org/glib/unstable/glib-Unicode-Manipulation.html#g-utf8-normalize">GLib.utf8_normalize</a>
+and <a href="https://developer.gnome.org/glib/unstable/glib-Unicode-Manipulation.html#g-utf8-casefold">GLib.utf8_casefold</a>). If this is not appropriate, match functions
+have access to the unmodified key via
+<code>gtk_entry_get_text (GTK_ENTRY (gtk_entry_completion_get_entry ()))</code>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>completion</code></em></i>
+					(
+						<a title="Gtk.EntryCompletion" href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a>
+						)
+				–
+	</div>
+			<p>the <a href="hotdoc_markdown/gtkentrycompletion.html#GtkEntryCompletion">Gtk.EntryCompletion</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>key</code></em></i>
+					(
+						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
+						)
+				–
+	</div>
+			<p>the string to match, normalized and case-folded</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>iter</code></em></i>
+					(
+						<a title="Gtk.TreeIter" href="hotdoc_markdown/gtktreemodel.html#GtkTreeIter">Gtk.TreeIter</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtktreemodel.html#GtkTreeIter">Gtk.TreeIter</a> indicating the row to match</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>user_data</code></em></i>
+					(
+						<a title="object" href="https://docs.python.org/3/library/functions.html#object">object</a>
+						)
+				–
+	</div>
+			<p>user data given to <a href="hotdoc_markdown/gtkentrycompletion.html#gtk_entry_completion_set_match_func">Gtk.EntryCompletion.set_match_func</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+										)
+								–
+			</div>
+							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if <em>iter</em> should be displayed as a possible completion
+for <em>key</em></p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+
+
+
+
+
+		
+	</div>
+	<div id="search_results">
+		<p>The results of the search are</p>
+	</div>
+	<hr>
+	<div id="footer">
+		    
+
+	</div>
+</div>
+
+<div id="toc-column">
+	
+		<div class="edit-button">
+		
+
+	</div>
+		<div id="toc-wrapper">
+		<nav id="toc"></nav>
+	</div>
+</div>
+</div>
+</main>
+
+</body>
+
+<script src="assets/js/navbar_offset_scroller.js"></script>
+</html>

@@ -1,0 +1,3336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<base href=".">
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>GtkBindingSet</title>
+
+<link rel="stylesheet" href="assets/css/custom_bootstrap.css" type="text/css">
+<link rel="stylesheet" href="assets/css/bootstrap-toc.min.css" type="text/css">
+<link rel="stylesheet" href="assets/css/frontend.css" type="text/css">
+<link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
+
+<link rel="stylesheet" href="assets/css/prism.css" type="text/css">
+
+<script src="assets/js/mustache.min.js"></script>
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/scrollspy.js"></script>
+<script src="assets/js/bootstrap.js"></script>
+<script src="assets/js/typeahead.jquery.min.js"></script>
+<script src="assets/js/search.js"></script>
+<script src="assets/js/isotope.pkgd.min.js"></script>
+<script src="assets/js/compare-versions.js"></script>
+<script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="assets/js/bootstrap-toc.min.js"></script>
+<script src="assets/js/jquery.touchSwipe.min.js"></script>
+<script src="assets/js/anchor.min.js"></script>
+<script src="assets/js/tag_filtering.js"></script>
+<script src="assets/js/language_switching.js"></script>
+
+<script src="assets/js/lines_around_headings.js"></script>
+
+<script src="assets/js/prism-core.js"></script>
+<script src="assets/js/prism-autoloader.js"></script>
+<script src="assets/js/prism_autoloader_path_override.js"></script>
+<script src="assets/js/trie.js"></script>
+
+
+</head>
+
+<body class="no-script
+" data-spy="scroll" data-target="#toc" data-offset="70">
+
+<script>
+$('body').removeClass('no-script');
+</script>
+
+<nav class="navbar navbar-fixed-top navbar-default" id="topnav">
+	<div class="container-fluid">
+		<div class="navbar-right">
+			<a id="toc-toggle">
+				<span class="glyphicon glyphicon-menu-right"></span>
+				<span class="glyphicon glyphicon-menu-left"></span>
+			</a>
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-wrapper" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<form action="" class="navbar-form pull-right" id="navbar-search-form">
+                               <div class="form-group has-feedback">
+                                       <input type="text" class="form-control input-sm" name="search" id="sidenav-lookup-field" placeholder="search" disabled>
+				       <span class="glyphicon glyphicon-search form-control-feedback" id="search-mgn-glass"></span>
+                               </div>
+                        </form>
+		</div>
+		<div class="navbar-header">
+			<a id="sidenav-toggle">
+				<span class="glyphicon glyphicon-menu-right"></span>
+				<span class="glyphicon glyphicon-menu-left"></span>
+			</a>
+			<a id="home-link" href="index.html" class="hotdoc-navbar-brand">
+				<img src="assets/images/home.svg" alt="Home">
+			</a>
+		</div>
+		<div class="navbar-collapse collapse" id="navbar-wrapper">
+			<ul class="nav navbar-nav" id="menu">
+							</ul>
+			<div class="hidden-xs hidden-sm navbar-text navbar-center">
+							</div>
+		</div>
+	</div>
+</nav>
+
+<main>
+<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="gtkbindings.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['c', 'javascript', 'python']" data-hotdoc-meta-gi-language="c">
+<script src="assets/js/utils.js"></script>
+
+<div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
+	<script src="assets/js/navigation.js"></script>
+	<script src="assets/js/sitemap.js"></script>
+</div>
+
+<div id="body">
+	<div id="main">
+				    <div id="page-description" data-hotdoc-source="gtkbindings.markdown" data-hotdoc-role="main">
+        <h1 id="gtkbindingset-page">GtkBindingSet</h1>
+    </div>
+        
+        
+
+            <h2 class="symbol_section">Methods</h2>
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_binding_set_activate">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_binding_set_activate">
+	<span><code>gtk_binding_set_activate</code></span>
+</h3>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_binding_set_activate (<a title="GtkBindingSet" href="gtkbindings.html#GtkBindingSet">GtkBindingSet</a> * binding_set,
+                          <a title="guint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint">guint</a> keyval,
+                          <a title="GdkModifierType" href="https://developer.gnome.org/gdk3/gdk3-Windows.html#GdkModifierType">GdkModifierType</a> modifiers,
+                          <a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a> * object)</pre>
+
+<p>Find a key binding matching <em>keyval</em> and <em>modifiers</em> within
+<em>binding_set</em> and activate the binding on <em>object</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>binding_set</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkbindings.html#GtkBindingSet">GtkBindingSet</a> set to activate</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>keyval</code></em></i>
+				–
+	</div>
+			<p>key value of the binding</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>modifiers</code></em></i>
+				–
+	</div>
+			<p>key modifier of the binding</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>object</code></em></i>
+				–
+	</div>
+			<p>object to activate when binding found</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if a binding was found and activated</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_binding_set_activate">
+	<span><code>Gtk.prototype.activate</code></span>
+</h3>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.activate(keyval: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, modifiers: <a title="Gdk.ModifierType" href="https://developer.gnome.org/gdk3/gdk3-Windows.html#GdkModifierType">Gdk.ModifierType</a>, object: <a title="GObject.Object" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct">GObject.Object</a>): {
+    // javascript wrapper for 'gtk_binding_set_activate'
+}</pre>
+
+<p>Find a key binding matching <em>keyval</em> and <em>modifiers</em> within
+<em>binding_set</em> and activate the binding on <em>object</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>binding_set</code></em></i>
+					(
+						<a title="Gtk.BindingSet" href="gtkbindings.html#GtkBindingSet">Gtk.BindingSet</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkbindings.html#GtkBindingSet">Gtk.BindingSet</a> set to activate</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>keyval</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>key value of the binding</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>modifiers</code></em></i>
+					(
+						<a title="Gdk.ModifierType" href="https://developer.gnome.org/gdk3/gdk3-Windows.html#GdkModifierType">Gdk.ModifierType</a>
+						)
+				–
+	</div>
+			<p>key modifier of the binding</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>object</code></em></i>
+					(
+						<a title="GObject.Object" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct">GObject.Object</a>
+						)
+				–
+	</div>
+			<p>object to activate when binding found</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if a binding was found and activated</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_binding_set_activate">
+	<span><code>Gtk.BindingSet.activate</code></span>
+</h3>
+
+
+<pre class="python-prototype">
+def Gtk.BindingSet.activate (self, keyval, modifiers, object):
+    #python wrapper for 'gtk_binding_set_activate'</pre>
+
+<p>Find a key binding matching <em>keyval</em> and <em>modifiers</em> within
+<em>binding_set</em> and activate the binding on <em>object</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>binding_set</code></em></i>
+					(
+						<a title="Gtk.BindingSet" href="gtkbindings.html#GtkBindingSet">Gtk.BindingSet</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkbindings.html#GtkBindingSet">Gtk.BindingSet</a> set to activate</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>keyval</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>key value of the binding</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>modifiers</code></em></i>
+					(
+						<a title="Gdk.ModifierType" href="https://developer.gnome.org/gdk3/gdk3-Windows.html#GdkModifierType">Gdk.ModifierType</a>
+						)
+				–
+	</div>
+			<p>key modifier of the binding</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>object</code></em></i>
+					(
+						<a title="GObject.Object" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct">GObject.Object</a>
+						)
+				–
+	</div>
+			<p>object to activate when binding found</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+										)
+								–
+			</div>
+							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if a binding was found and activated</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+
+            <h2 class="symbol_section">Functions</h2>
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_binding_entry_add_signall">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_binding_entry_add_signall">
+	<span><code>gtk_binding_entry_add_signall</code></span>
+</h3>
+
+
+
+
+<pre class="c-prototype">
+gtk_binding_entry_add_signall (<a title="GtkBindingSet" href="gtkbindings.html#GtkBindingSet">GtkBindingSet</a> * binding_set,
+                               <a title="guint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint">guint</a> keyval,
+                               <a title="GdkModifierType" href="https://developer.gnome.org/gdk3/gdk3-Windows.html#GdkModifierType">GdkModifierType</a> modifiers,
+                               const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * signal_name,
+                               <a title="GSList" href="https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html#GSList">GSList</a> * binding_args)</pre>
+
+<p>Override or install a new key binding for <em>keyval</em> with <em>modifiers</em> on
+<em>binding_set</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>binding_set</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkbindings.html#GtkBindingSet">GtkBindingSet</a> to add a signal to</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>keyval</code></em></i>
+				–
+	</div>
+			<p>key value</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>modifiers</code></em></i>
+				–
+	</div>
+			<p>key modifier</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>signal_name</code></em></i>
+				–
+	</div>
+			<p>signal name to be bound</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>binding_args</code></em></i>
+				–
+	</div>
+			<p>(transfer none) (element-type GtkBindingArg):
+list of <a href="gtkbindings.html#GtkBindingArg">GtkBindingArg</a> signal arguments</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_binding_entry_add_signall">
+	<span><code>Gtk.prototype.add_signall</code></span>
+</h3>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.add_signall(binding_set: <a title="Gtk.BindingSet" href="gtkbindings.html#GtkBindingSet">Gtk.BindingSet</a>, keyval: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, modifiers: <a title="Gdk.ModifierType" href="https://developer.gnome.org/gdk3/gdk3-Windows.html#GdkModifierType">Gdk.ModifierType</a>, signal_name: <a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>, binding_args: <a title="GLib.SList" href="https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html#GSList">GLib.SList</a>): {
+    // javascript wrapper for 'gtk_binding_entry_add_signall'
+}</pre>
+
+<p>Override or install a new key binding for <em>keyval</em> with <em>modifiers</em> on
+<em>binding_set</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>binding_set</code></em></i>
+					(
+						<a title="Gtk.BindingSet" href="gtkbindings.html#GtkBindingSet">Gtk.BindingSet</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkbindings.html#GtkBindingSet">Gtk.BindingSet</a> to add a signal to</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>keyval</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>key value</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>modifiers</code></em></i>
+					(
+						<a title="Gdk.ModifierType" href="https://developer.gnome.org/gdk3/gdk3-Windows.html#GdkModifierType">Gdk.ModifierType</a>
+						)
+				–
+	</div>
+			<p>key modifier</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>signal_name</code></em></i>
+					(
+						<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
+						)
+				–
+	</div>
+			<p>signal name to be bound</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>binding_args</code></em></i>
+					(
+						<a title="GLib.SList" href="https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html#GSList">GLib.SList</a>
+						)
+				–
+	</div>
+			<p>(transfer none) (element-type GtkBindingArg):
+list of <a href="gtkbindings.html#GtkBindingArg">Gtk.BindingArg</a> signal arguments</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_binding_entry_add_signall">
+	<span><code>Gtk.BindingEntry.add_signall</code></span>
+</h3>
+
+
+<pre class="python-prototype">
+def Gtk.BindingEntry.add_signall (binding_set, keyval, modifiers, signal_name, binding_args):
+    #python wrapper for 'gtk_binding_entry_add_signall'</pre>
+
+<p>Override or install a new key binding for <em>keyval</em> with <em>modifiers</em> on
+<em>binding_set</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>binding_set</code></em></i>
+					(
+						<a title="Gtk.BindingSet" href="gtkbindings.html#GtkBindingSet">Gtk.BindingSet</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkbindings.html#GtkBindingSet">Gtk.BindingSet</a> to add a signal to</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>keyval</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>key value</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>modifiers</code></em></i>
+					(
+						<a title="Gdk.ModifierType" href="https://developer.gnome.org/gdk3/gdk3-Windows.html#GdkModifierType">Gdk.ModifierType</a>
+						)
+				–
+	</div>
+			<p>key modifier</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>signal_name</code></em></i>
+					(
+						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
+						)
+				–
+	</div>
+			<p>signal name to be bound</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>binding_args</code></em></i>
+					(
+						<a title="GLib.SList" href="https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html#GSList">GLib.SList</a>
+						)
+				–
+	</div>
+			<p>(transfer none) (element-type GtkBindingArg):
+list of <a href="gtkbindings.html#GtkBindingArg">Gtk.BindingArg</a> signal arguments</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_binding_set_new">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_binding_set_new">
+	<span><code>gtk_binding_set_new</code></span>
+</h3>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkBindingSet" href="gtkbindings.html#GtkBindingSet">GtkBindingSet</a> *
+gtk_binding_set_new (const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * set_name)</pre>
+
+<p>GTK+ maintains a global list of binding sets. Each binding set has
+a unique name which needs to be specified upon creation.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>set_name</code></em></i>
+				–
+	</div>
+			<p>unique name of this binding set</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					
+										
+<span class="annotation">[<abbr title="Don't free data after the code is done"><span class="acronym">transfer: none</span></abbr>]</span>
+
+										)
+								–
+			</div>
+							<p>new binding set</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_binding_set_by_class">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_binding_set_by_class">
+	<span><code>gtk_binding_set_by_class</code></span>
+</h3>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkBindingSet" href="gtkbindings.html#GtkBindingSet">GtkBindingSet</a> *
+gtk_binding_set_by_class (<a title="gpointer" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer">gpointer</a> object_class)</pre>
+
+<p>This function returns the binding set named after the type name of
+the passed in class structure. New binding sets are created on
+demand by this function.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>object_class</code></em></i>
+				–
+	</div>
+			<p>a valid <a href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a> class</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					
+										
+<span class="annotation">[<abbr title="Don't free data after the code is done"><span class="acronym">transfer: none</span></abbr>]</span>
+
+										)
+								–
+			</div>
+							<p>the binding set corresponding to
+<em>object_class</em></p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_binding_set_find">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_binding_set_find">
+	<span><code>gtk_binding_set_find</code></span>
+</h3>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkBindingSet" href="gtkbindings.html#GtkBindingSet">GtkBindingSet</a> *
+gtk_binding_set_find (const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * set_name)</pre>
+
+<p>Find a binding set by its globally unique name.</p>
+<p>The <em>set_name</em> can either be a name used for <a href="gtkbindings.html#gtk_binding_set_new">gtk_binding_set_new</a>
+or the type name of a class used in <a href="gtkbindings.html#gtk_binding_set_by_class">gtk_binding_set_by_class</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>set_name</code></em></i>
+				–
+	</div>
+			<p>unique binding set name</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					
+										
+<span class="annotation">[<abbr title="NULL may be passed to the value"><span class="acronym">nullable</span></abbr>]</span>
+<span class="annotation">[<abbr title="Don't free data after the code is done"><span class="acronym">transfer: none</span></abbr>]</span>
+
+										)
+								–
+			</div>
+							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> or the specified binding set</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_binding_set_find">
+	<span><code>Gtk.prototype.find</code></span>
+</h3>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.find(set_name: <a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>): {
+    // javascript wrapper for 'gtk_binding_set_find'
+}</pre>
+
+<p>Find a binding set by its globally unique name.</p>
+<p>The <em>set_name</em> can either be a name used for <a href="gtkbindings.html#gtk_binding_set_new">gtk_binding_set_new (not introspectable)</a>
+or the type name of a class used in <a href="gtkbindings.html#gtk_binding_set_by_class">gtk_binding_set_by_class (not introspectable)</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>set_name</code></em></i>
+					(
+						<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
+						)
+				–
+	</div>
+			<p>unique binding set name</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.BindingSet" href="gtkbindings.html#GtkBindingSet">Gtk.BindingSet</a>
+										)
+								–
+			</div>
+							<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a> or the specified binding set</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_binding_set_find">
+	<span><code>Gtk.BindingSet.find</code></span>
+</h3>
+
+
+<pre class="python-prototype">
+def Gtk.BindingSet.find (set_name):
+    #python wrapper for 'gtk_binding_set_find'</pre>
+
+<p>Find a binding set by its globally unique name.</p>
+<p>The <em>set_name</em> can either be a name used for <a href="gtkbindings.html#gtk_binding_set_new">gtk_binding_set_new (not introspectable)</a>
+or the type name of a class used in <a href="gtkbindings.html#gtk_binding_set_by_class">gtk_binding_set_by_class (not introspectable)</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>set_name</code></em></i>
+					(
+						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
+						)
+				–
+	</div>
+			<p>unique binding set name</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.BindingSet" href="gtkbindings.html#GtkBindingSet">Gtk.BindingSet</a>
+										)
+								–
+			</div>
+							<p><a href="https://docs.python.org/3/library/constants.html#None">None</a> or the specified binding set</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_bindings_activate">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_bindings_activate">
+	<span><code>gtk_bindings_activate</code></span>
+</h3>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_bindings_activate (<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a> * object,
+                       <a title="guint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint">guint</a> keyval,
+                       <a title="GdkModifierType" href="https://developer.gnome.org/gdk3/gdk3-Windows.html#GdkModifierType">GdkModifierType</a> modifiers)</pre>
+
+<p>Find a key binding matching <em>keyval</em> and <em>modifiers</em> and activate the
+binding on <em>object</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>object</code></em></i>
+				–
+	</div>
+			<p>object to activate when binding found</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>keyval</code></em></i>
+				–
+	</div>
+			<p>key value of the binding</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>modifiers</code></em></i>
+				–
+	</div>
+			<p>key modifier of the binding</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if a binding was found and activated</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_bindings_activate">
+	<span><code>prototype.bindings_activate</code></span>
+</h3>
+
+
+<pre class="javascript-prototype">
+function prototype.bindings_activate(object: <a title="GObject.Object" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct">GObject.Object</a>, keyval: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, modifiers: <a title="Gdk.ModifierType" href="https://developer.gnome.org/gdk3/gdk3-Windows.html#GdkModifierType">Gdk.ModifierType</a>): {
+    // javascript wrapper for 'gtk_bindings_activate'
+}</pre>
+
+<p>Find a key binding matching <em>keyval</em> and <em>modifiers</em> and activate the
+binding on <em>object</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>object</code></em></i>
+					(
+						<a title="GObject.Object" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct">GObject.Object</a>
+						)
+				–
+	</div>
+			<p>object to activate when binding found</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>keyval</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>key value of the binding</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>modifiers</code></em></i>
+					(
+						<a title="Gdk.ModifierType" href="https://developer.gnome.org/gdk3/gdk3-Windows.html#GdkModifierType">Gdk.ModifierType</a>
+						)
+				–
+	</div>
+			<p>key modifier of the binding</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if a binding was found and activated</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_bindings_activate">
+	<span><code>Gtk.bindings_activate</code></span>
+</h3>
+
+
+<pre class="python-prototype">
+def Gtk.bindings_activate (object, keyval, modifiers):
+    #python wrapper for 'gtk_bindings_activate'</pre>
+
+<p>Find a key binding matching <em>keyval</em> and <em>modifiers</em> and activate the
+binding on <em>object</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>object</code></em></i>
+					(
+						<a title="GObject.Object" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct">GObject.Object</a>
+						)
+				–
+	</div>
+			<p>object to activate when binding found</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>keyval</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>key value of the binding</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>modifiers</code></em></i>
+					(
+						<a title="Gdk.ModifierType" href="https://developer.gnome.org/gdk3/gdk3-Windows.html#GdkModifierType">Gdk.ModifierType</a>
+						)
+				–
+	</div>
+			<p>key modifier of the binding</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+										)
+								–
+			</div>
+							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if a binding was found and activated</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.4;" id="gtk_bindings_activate_event">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_bindings_activate_event">
+	<span><code>gtk_bindings_activate_event</code></span>
+</h3>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_bindings_activate_event (<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a> * object,
+                             <a title="GdkEventKey" href="https://developer.gnome.org/gdk3/gdk3-Event-Structures.html#GdkEventKey">GdkEventKey</a> * event)</pre>
+
+<p>Looks up key bindings for <em>object</em> to find one matching
+<em>event</em>, and if one was found, activate it.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>object</code></em></i>
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct">GObject</a> (generally must be a widget)</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>event</code></em></i>
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/gdk3/gdk3-Event-Structures.html#GdkEventKey">GdkEventKey</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if a matching key binding was found</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.4
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_bindings_activate_event">
+	<span><code>prototype.bindings_activate_event</code></span>
+</h3>
+
+
+<pre class="javascript-prototype">
+function prototype.bindings_activate_event(object: <a title="GObject.Object" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct">GObject.Object</a>, event: <a title="Gdk.EventKey" href="https://developer.gnome.org/gdk3/gdk3-Event-Structures.html#GdkEventKey">Gdk.EventKey</a>): {
+    // javascript wrapper for 'gtk_bindings_activate_event'
+}</pre>
+
+<p>Looks up key bindings for <em>object</em> to find one matching
+<em>event</em>, and if one was found, activate it.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>object</code></em></i>
+					(
+						<a title="GObject.Object" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct">GObject.Object</a>
+						)
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct">GObject.Object</a> (generally must be a widget)</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>event</code></em></i>
+					(
+						<a title="Gdk.EventKey" href="https://developer.gnome.org/gdk3/gdk3-Event-Structures.html#GdkEventKey">Gdk.EventKey</a>
+						)
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/gdk3/gdk3-Event-Structures.html#GdkEventKey">Gdk.EventKey</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if a matching key binding was found</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.4
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_bindings_activate_event">
+	<span><code>Gtk.bindings_activate_event</code></span>
+</h3>
+
+
+<pre class="python-prototype">
+def Gtk.bindings_activate_event (object, event):
+    #python wrapper for 'gtk_bindings_activate_event'</pre>
+
+<p>Looks up key bindings for <em>object</em> to find one matching
+<em>event</em>, and if one was found, activate it.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>object</code></em></i>
+					(
+						<a title="GObject.Object" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct">GObject.Object</a>
+						)
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct">GObject.Object</a> (generally must be a widget)</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>event</code></em></i>
+					(
+						<a title="Gdk.EventKey" href="https://developer.gnome.org/gdk3/gdk3-Event-Structures.html#GdkEventKey">Gdk.EventKey</a>
+						)
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/gdk3/gdk3-Event-Structures.html#GdkEventKey">Gdk.EventKey</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+										)
+								–
+			</div>
+							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if a matching key binding was found</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.4
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_binding_entry_add_signal">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_binding_entry_add_signal">
+	<span><code>gtk_binding_entry_add_signal</code></span>
+</h3>
+
+
+
+
+<pre class="c-prototype">
+gtk_binding_entry_add_signal (<a title="GtkBindingSet" href="gtkbindings.html#GtkBindingSet">GtkBindingSet</a> * binding_set,
+                              <a title="guint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint">guint</a> keyval,
+                              <a title="GdkModifierType" href="https://developer.gnome.org/gdk3/gdk3-Windows.html#GdkModifierType">GdkModifierType</a> modifiers,
+                              const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * signal_name,
+                              <a title="guint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint">guint</a> n_args,
+                              ... ...)</pre>
+
+<p>Override or install a new key binding for <em>keyval</em> with <em>modifiers</em> on
+<em>binding_set</em>. When the binding is activated, <em>signal_name</em> will be
+emitted on the target widget, with <em>n_args</em> <em>Varargs</em> used as
+arguments.</p>
+<p>Each argument to the signal must be passed as a pair of varargs: the
+<a href="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#GType">GType</a> of the argument, followed by the argument value (which must
+be of the given type). There must be <em>n_args</em> pairs in total.</p>
+<h2>Adding a Key Binding</h2>
+<pre><code class="language-[&lt;!--"> gtk_binding_entry_add_signal (binding_set, keyval, modmask,
+                               "move-cursor", 3,
+                               G_TYPE_ENUM, step,
+                               G_TYPE_INT, count,
+                               G_TYPE_BOOLEAN, FALSE);
+</code></pre>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>binding_set</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkbindings.html#GtkBindingSet">GtkBindingSet</a> to install an entry for</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>keyval</code></em></i>
+				–
+	</div>
+			<p>key value of binding to install</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>modifiers</code></em></i>
+				–
+	</div>
+			<p>key modifier of binding to install</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>signal_name</code></em></i>
+				–
+	</div>
+			<p>signal to execute upon activation</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>n_args</code></em></i>
+				–
+	</div>
+			<p>number of arguments to <em>signal_name</em></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>...</code></em></i>
+				–
+	</div>
+			<p>arguments to <em>signal_name</em></p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_binding_entry_add_signal_from_string">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_binding_entry_add_signal_from_string">
+	<span><code>gtk_binding_entry_add_signal_from_string</code></span>
+</h3>
+
+
+
+
+<pre class="c-prototype">
+<a title="GTokenType" href="https://developer.gnome.org/glib/unstable/glib-Lexical-Scanner.html#GTokenType">GTokenType</a>
+gtk_binding_entry_add_signal_from_string (<a title="GtkBindingSet" href="gtkbindings.html#GtkBindingSet">GtkBindingSet</a> * binding_set,
+                                          const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * signal_desc)</pre>
+
+<p>Parses a signal description from <em>signal_desc</em> and incorporates
+it into <em>binding_set</em>.</p>
+<p>Signal descriptions may either bind a key combination to
+one or more signals:</p>
+<pre><code class="language-[">   bind "key" {
+     "signalname" (param, ...)
+     ...
+   }
+</code></pre>
+<p>Or they may also unbind a key combination:</p>
+<pre><code class="language-[">   unbind "key"
+</code></pre>
+<p>Key combinations must be in a format that can be parsed by
+<a href="gtkaccelgroup.html#gtk_accelerator_parse">gtk_accelerator_parse</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>binding_set</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkbindings.html#GtkBindingSet">GtkBindingSet</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>signal_desc</code></em></i>
+				–
+	</div>
+			<p>a signal description</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p><a href="https://developer.gnome.org/glib/unstable/glib-Lexical-Scanner.html#G-TOKEN-NONE:CAPS">G_TOKEN_NONE</a> if the signal was successfully parsed and added,
+the expected token otherwise</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_binding_entry_add_signal_from_string">
+	<span><code>Gtk.prototype.add_signal_from_string</code></span>
+</h3>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.add_signal_from_string(binding_set: <a title="Gtk.BindingSet" href="gtkbindings.html#GtkBindingSet">Gtk.BindingSet</a>, signal_desc: <a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>): {
+    // javascript wrapper for 'gtk_binding_entry_add_signal_from_string'
+}</pre>
+
+<p>Parses a signal description from <em>signal_desc</em> and incorporates
+it into <em>binding_set</em>.</p>
+<p>Signal descriptions may either bind a key combination to
+one or more signals:</p>
+<pre><code class="language-[">   bind "key" {
+     "signalname" (param, ...)
+     ...
+   }
+</code></pre>
+<p>Or they may also unbind a key combination:</p>
+<pre><code class="language-[">   unbind "key"
+</code></pre>
+<p>Key combinations must be in a format that can be parsed by
+<a href="gtkaccelgroup.html#gtk_accelerator_parse">prototype.accelerator_parse</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>binding_set</code></em></i>
+					(
+						<a title="Gtk.BindingSet" href="gtkbindings.html#GtkBindingSet">Gtk.BindingSet</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkbindings.html#GtkBindingSet">Gtk.BindingSet</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>signal_desc</code></em></i>
+					(
+						<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
+						)
+				–
+	</div>
+			<p>a signal description</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="GLib.TokenType" href="https://developer.gnome.org/glib/unstable/glib-Lexical-Scanner.html#GTokenType">GLib.TokenType</a>
+										)
+								–
+			</div>
+							<p><a href="https://developer.gnome.org/glib/unstable/glib-Lexical-Scanner.html#G-TOKEN-NONE:CAPS">GLib.TokenType.NONE</a> if the signal was successfully parsed and added,
+the expected token otherwise</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_binding_entry_add_signal_from_string">
+	<span><code>Gtk.BindingEntry.add_signal_from_string</code></span>
+</h3>
+
+
+<pre class="python-prototype">
+def Gtk.BindingEntry.add_signal_from_string (binding_set, signal_desc):
+    #python wrapper for 'gtk_binding_entry_add_signal_from_string'</pre>
+
+<p>Parses a signal description from <em>signal_desc</em> and incorporates
+it into <em>binding_set</em>.</p>
+<p>Signal descriptions may either bind a key combination to
+one or more signals:</p>
+<pre><code class="language-[">   bind "key" {
+     "signalname" (param, ...)
+     ...
+   }
+</code></pre>
+<p>Or they may also unbind a key combination:</p>
+<pre><code class="language-[">   unbind "key"
+</code></pre>
+<p>Key combinations must be in a format that can be parsed by
+<a href="gtkaccelgroup.html#gtk_accelerator_parse">Gtk.accelerator_parse</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>binding_set</code></em></i>
+					(
+						<a title="Gtk.BindingSet" href="gtkbindings.html#GtkBindingSet">Gtk.BindingSet</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkbindings.html#GtkBindingSet">Gtk.BindingSet</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>signal_desc</code></em></i>
+					(
+						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
+						)
+				–
+	</div>
+			<p>a signal description</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="GLib.TokenType" href="https://developer.gnome.org/glib/unstable/glib-Lexical-Scanner.html#GTokenType">GLib.TokenType</a>
+										)
+								–
+			</div>
+							<p><a href="https://developer.gnome.org/glib/unstable/glib-Lexical-Scanner.html#G-TOKEN-NONE:CAPS">GLib.TokenType.NONE</a> if the signal was successfully parsed and added,
+the expected token otherwise</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.12;" id="gtk_binding_entry_skip">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_binding_entry_skip">
+	<span><code>gtk_binding_entry_skip</code></span>
+</h3>
+
+
+
+
+<pre class="c-prototype">
+gtk_binding_entry_skip (<a title="GtkBindingSet" href="gtkbindings.html#GtkBindingSet">GtkBindingSet</a> * binding_set,
+                        <a title="guint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint">guint</a> keyval,
+                        <a title="GdkModifierType" href="https://developer.gnome.org/gdk3/gdk3-Windows.html#GdkModifierType">GdkModifierType</a> modifiers)</pre>
+
+<p>Install a binding on <em>binding_set</em> which causes key lookups
+to be aborted, to prevent bindings from lower priority sets
+to be activated.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>binding_set</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkbindings.html#GtkBindingSet">GtkBindingSet</a> to skip an entry of</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>keyval</code></em></i>
+				–
+	</div>
+			<p>key value of binding to skip</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>modifiers</code></em></i>
+				–
+	</div>
+			<p>key modifier of binding to skip</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.12
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_binding_entry_skip">
+	<span><code>Gtk.prototype.skip</code></span>
+</h3>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.skip(binding_set: <a title="Gtk.BindingSet" href="gtkbindings.html#GtkBindingSet">Gtk.BindingSet</a>, keyval: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, modifiers: <a title="Gdk.ModifierType" href="https://developer.gnome.org/gdk3/gdk3-Windows.html#GdkModifierType">Gdk.ModifierType</a>): {
+    // javascript wrapper for 'gtk_binding_entry_skip'
+}</pre>
+
+<p>Install a binding on <em>binding_set</em> which causes key lookups
+to be aborted, to prevent bindings from lower priority sets
+to be activated.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>binding_set</code></em></i>
+					(
+						<a title="Gtk.BindingSet" href="gtkbindings.html#GtkBindingSet">Gtk.BindingSet</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkbindings.html#GtkBindingSet">Gtk.BindingSet</a> to skip an entry of</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>keyval</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>key value of binding to skip</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>modifiers</code></em></i>
+					(
+						<a title="Gdk.ModifierType" href="https://developer.gnome.org/gdk3/gdk3-Windows.html#GdkModifierType">Gdk.ModifierType</a>
+						)
+				–
+	</div>
+			<p>key modifier of binding to skip</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.12
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_binding_entry_skip">
+	<span><code>Gtk.BindingEntry.skip</code></span>
+</h3>
+
+
+<pre class="python-prototype">
+def Gtk.BindingEntry.skip (binding_set, keyval, modifiers):
+    #python wrapper for 'gtk_binding_entry_skip'</pre>
+
+<p>Install a binding on <em>binding_set</em> which causes key lookups
+to be aborted, to prevent bindings from lower priority sets
+to be activated.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>binding_set</code></em></i>
+					(
+						<a title="Gtk.BindingSet" href="gtkbindings.html#GtkBindingSet">Gtk.BindingSet</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkbindings.html#GtkBindingSet">Gtk.BindingSet</a> to skip an entry of</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>keyval</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>key value of binding to skip</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>modifiers</code></em></i>
+					(
+						<a title="Gdk.ModifierType" href="https://developer.gnome.org/gdk3/gdk3-Windows.html#GdkModifierType">Gdk.ModifierType</a>
+						)
+				–
+	</div>
+			<p>key modifier of binding to skip</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.12
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_binding_entry_remove">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_binding_entry_remove">
+	<span><code>gtk_binding_entry_remove</code></span>
+</h3>
+
+
+
+
+<pre class="c-prototype">
+gtk_binding_entry_remove (<a title="GtkBindingSet" href="gtkbindings.html#GtkBindingSet">GtkBindingSet</a> * binding_set,
+                          <a title="guint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint">guint</a> keyval,
+                          <a title="GdkModifierType" href="https://developer.gnome.org/gdk3/gdk3-Windows.html#GdkModifierType">GdkModifierType</a> modifiers)</pre>
+
+<p>Remove a binding previously installed via
+<a href="gtkbindings.html#gtk_binding_entry_add_signal">gtk_binding_entry_add_signal</a> on <em>binding_set</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>binding_set</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkbindings.html#GtkBindingSet">GtkBindingSet</a> to remove an entry of</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>keyval</code></em></i>
+				–
+	</div>
+			<p>key value of binding to remove</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>modifiers</code></em></i>
+				–
+	</div>
+			<p>key modifier of binding to remove</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_binding_entry_remove">
+	<span><code>Gtk.prototype.remove</code></span>
+</h3>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.remove(binding_set: <a title="Gtk.BindingSet" href="gtkbindings.html#GtkBindingSet">Gtk.BindingSet</a>, keyval: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, modifiers: <a title="Gdk.ModifierType" href="https://developer.gnome.org/gdk3/gdk3-Windows.html#GdkModifierType">Gdk.ModifierType</a>): {
+    // javascript wrapper for 'gtk_binding_entry_remove'
+}</pre>
+
+<p>Remove a binding previously installed via
+<a href="gtkbindings.html#gtk_binding_entry_add_signal">gtk_binding_entry_add_signal (not introspectable)</a> on <em>binding_set</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>binding_set</code></em></i>
+					(
+						<a title="Gtk.BindingSet" href="gtkbindings.html#GtkBindingSet">Gtk.BindingSet</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkbindings.html#GtkBindingSet">Gtk.BindingSet</a> to remove an entry of</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>keyval</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>key value of binding to remove</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>modifiers</code></em></i>
+					(
+						<a title="Gdk.ModifierType" href="https://developer.gnome.org/gdk3/gdk3-Windows.html#GdkModifierType">Gdk.ModifierType</a>
+						)
+				–
+	</div>
+			<p>key modifier of binding to remove</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_binding_entry_remove">
+	<span><code>Gtk.BindingEntry.remove</code></span>
+</h3>
+
+
+<pre class="python-prototype">
+def Gtk.BindingEntry.remove (binding_set, keyval, modifiers):
+    #python wrapper for 'gtk_binding_entry_remove'</pre>
+
+<p>Remove a binding previously installed via
+<a href="gtkbindings.html#gtk_binding_entry_add_signal">gtk_binding_entry_add_signal (not introspectable)</a> on <em>binding_set</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>binding_set</code></em></i>
+					(
+						<a title="Gtk.BindingSet" href="gtkbindings.html#GtkBindingSet">Gtk.BindingSet</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkbindings.html#GtkBindingSet">Gtk.BindingSet</a> to remove an entry of</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>keyval</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>key value of binding to remove</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>modifiers</code></em></i>
+					(
+						<a title="Gdk.ModifierType" href="https://developer.gnome.org/gdk3/gdk3-Windows.html#GdkModifierType">Gdk.ModifierType</a>
+						)
+				–
+	</div>
+			<p>key modifier of binding to remove</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+
+            <h2 class="symbol_section">Structures</h2>
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="GtkBindingSet">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h3 data-hotdoc-id="GtkBindingSet">
+	<span><code>GtkBindingSet</code></span>
+</h3>
+
+
+<p>A binding set maintains a list of activatable key bindings.
+A single binding set can match multiple types of widgets.
+Similar to style contexts, can be matched by any information contained
+in a widgets <a href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a>. When a binding within a set is matched upon
+activation, an action signal is emitted on the target widget to carry out
+the actual activation.</p>
+
+
+
+
+	<div class="members-container">
+		<h4>Fields</h4>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkBindingSet.set_name">
+	<div>
+		<i><em><code>set_name</code></em></i>
+		(<a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> *)
+		–
+	</div>
+			<p>unique name of this binding set</p>
+
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GtkBindingSet.priority">
+	<div>
+		<i><em><code>priority</code></em></i>
+		(<a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a>)
+		–
+	</div>
+			<p>unused</p>
+
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GtkBindingSet.widget_path_pspecs">
+	<div>
+		<i><em><code>widget_path_pspecs</code></em></i>
+		(<a title="GSList" href="https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html#GSList">GSList</a> *)
+		–
+	</div>
+			<p>unused</p>
+
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GtkBindingSet.widget_class_pspecs">
+	<div>
+		<i><em><code>widget_class_pspecs</code></em></i>
+		(<a title="GSList" href="https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html#GSList">GSList</a> *)
+		–
+	</div>
+			<p>unused</p>
+
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GtkBindingSet.class_branch_pspecs">
+	<div>
+		<i><em><code>class_branch_pspecs</code></em></i>
+		(<a title="GSList" href="https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html#GSList">GSList</a> *)
+		–
+	</div>
+			<p>unused</p>
+
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GtkBindingSet.entries">
+	<div>
+		<i><em><code>entries</code></em></i>
+		(<a title="GtkBindingEntry" href="gtkbindings.html#GtkBindingEntry">GtkBindingEntry</a> *)
+		–
+	</div>
+			<p>the key binding entries in this binding set</p>
+
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GtkBindingSet.current">
+	<div>
+		<i><em><code>current</code></em></i>
+		(<a title="GtkBindingEntry" href="gtkbindings.html#GtkBindingEntry">GtkBindingEntry</a> *)
+		–
+	</div>
+			<p>implementation detail</p>
+
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GtkBindingSet.parsed">
+	<div>
+		<i><em><code>parsed</code></em></i>
+		(<a title="guint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint">guint</a>)
+		–
+	</div>
+			<p>whether this binding set stems from a CSS file and is reset upon theme changes</p>
+
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h3>
+	Gtk.BindingSet
+</h3>
+
+
+<p>A binding set maintains a list of activatable key bindings.
+A single binding set can match multiple types of widgets.
+Similar to style contexts, can be matched by any information contained
+in a widgets <a href="gtkwidgetpath.html#GtkWidgetPath">Gtk.WidgetPath</a>. When a binding within a set is matched upon
+activation, an action signal is emitted on the target widget to carry out
+the actual activation.</p>
+
+
+
+
+	<div class="members-container">
+		<h4>Attributes</h4>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkBindingSet.set_name">
+	<div>
+		<i><em><code>BindingSet.set_name</code></em></i>
+		(<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)
+		–
+	</div>
+			<p>unique name of this binding set</p>
+
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GtkBindingSet.priority">
+	<div>
+		<i><em><code>BindingSet.priority</code></em></i>
+		(<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>)
+		–
+	</div>
+			<p>unused</p>
+
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GtkBindingSet.widget_path_pspecs">
+	<div>
+		<i><em><code>BindingSet.widget_path_pspecs</code></em></i>
+		(<a title="GLib.SList" href="https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html#GSList">GLib.SList</a>)
+		–
+	</div>
+			<p>unused</p>
+
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GtkBindingSet.widget_class_pspecs">
+	<div>
+		<i><em><code>BindingSet.widget_class_pspecs</code></em></i>
+		(<a title="GLib.SList" href="https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html#GSList">GLib.SList</a>)
+		–
+	</div>
+			<p>unused</p>
+
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GtkBindingSet.class_branch_pspecs">
+	<div>
+		<i><em><code>BindingSet.class_branch_pspecs</code></em></i>
+		(<a title="GLib.SList" href="https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html#GSList">GLib.SList</a>)
+		–
+	</div>
+			<p>unused</p>
+
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GtkBindingSet.entries">
+	<div>
+		<i><em><code>BindingSet.entries</code></em></i>
+		(<a title="Gtk.BindingEntry" href="gtkbindings.html#GtkBindingEntry">Gtk.BindingEntry</a>)
+		–
+	</div>
+			<p>the key binding entries in this binding set</p>
+
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GtkBindingSet.current">
+	<div>
+		<i><em><code>BindingSet.current</code></em></i>
+		(<a title="Gtk.BindingEntry" href="gtkbindings.html#GtkBindingEntry">Gtk.BindingEntry</a>)
+		–
+	</div>
+			<p>implementation detail</p>
+
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GtkBindingSet.parsed">
+	<div>
+		<i><em><code>BindingSet.parsed</code></em></i>
+		(<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>)
+		–
+	</div>
+			<p>whether this binding set stems from a CSS file and is reset upon theme changes</p>
+
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3>
+	Gtk.BindingSet
+</h3>
+
+
+<p>A binding set maintains a list of activatable key bindings.
+A single binding set can match multiple types of widgets.
+Similar to style contexts, can be matched by any information contained
+in a widgets <a href="gtkwidgetpath.html#GtkWidgetPath">Gtk.WidgetPath</a>. When a binding within a set is matched upon
+activation, an action signal is emitted on the target widget to carry out
+the actual activation.</p>
+
+
+
+
+	<div class="members-container">
+		<h4>Attributes</h4>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkBindingSet.set_name">
+	<div>
+		<i><em><code>BindingSet.set_name</code></em></i>
+		(<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>)
+		–
+	</div>
+			<p>unique name of this binding set</p>
+
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GtkBindingSet.priority">
+	<div>
+		<i><em><code>BindingSet.priority</code></em></i>
+		(<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>)
+		–
+	</div>
+			<p>unused</p>
+
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GtkBindingSet.widget_path_pspecs">
+	<div>
+		<i><em><code>BindingSet.widget_path_pspecs</code></em></i>
+		(<a title="GLib.SList" href="https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html#GSList">GLib.SList</a>)
+		–
+	</div>
+			<p>unused</p>
+
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GtkBindingSet.widget_class_pspecs">
+	<div>
+		<i><em><code>BindingSet.widget_class_pspecs</code></em></i>
+		(<a title="GLib.SList" href="https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html#GSList">GLib.SList</a>)
+		–
+	</div>
+			<p>unused</p>
+
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GtkBindingSet.class_branch_pspecs">
+	<div>
+		<i><em><code>BindingSet.class_branch_pspecs</code></em></i>
+		(<a title="GLib.SList" href="https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html#GSList">GLib.SList</a>)
+		–
+	</div>
+			<p>unused</p>
+
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GtkBindingSet.entries">
+	<div>
+		<i><em><code>BindingSet.entries</code></em></i>
+		(<a title="Gtk.BindingEntry" href="gtkbindings.html#GtkBindingEntry">Gtk.BindingEntry</a>)
+		–
+	</div>
+			<p>the key binding entries in this binding set</p>
+
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GtkBindingSet.current">
+	<div>
+		<i><em><code>BindingSet.current</code></em></i>
+		(<a title="Gtk.BindingEntry" href="gtkbindings.html#GtkBindingEntry">Gtk.BindingEntry</a>)
+		–
+	</div>
+			<p>implementation detail</p>
+
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GtkBindingSet.parsed">
+	<div>
+		<i><em><code>BindingSet.parsed</code></em></i>
+		(<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>)
+		–
+	</div>
+			<p>whether this binding set stems from a CSS file and is reset upon theme changes</p>
+
+	</div>
+
+			</div>
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="GtkBindingEntry">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h3 data-hotdoc-id="GtkBindingEntry">
+	<span><code>GtkBindingEntry</code></span>
+</h3>
+
+
+<p>Each key binding element of a binding sets binding list is
+represented by a GtkBindingEntry.</p>
+
+
+
+
+	<div class="members-container">
+		<h4>Fields</h4>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkBindingEntry.keyval">
+	<div>
+		<i><em><code>keyval</code></em></i>
+		(<a title="guint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint">guint</a>)
+		–
+	</div>
+			<p>key value to match</p>
+
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GtkBindingEntry.modifiers">
+	<div>
+		<i><em><code>modifiers</code></em></i>
+		(<a title="GdkModifierType" href="https://developer.gnome.org/gdk3/gdk3-Windows.html#GdkModifierType">GdkModifierType</a>)
+		–
+	</div>
+			<p>key modifiers to match</p>
+
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GtkBindingEntry.binding_set">
+	<div>
+		<i><em><code>binding_set</code></em></i>
+		(<a title="GtkBindingSet" href="gtkbindings.html#GtkBindingSet">GtkBindingSet</a> *)
+		–
+	</div>
+			<p>binding set this entry belongs to</p>
+
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GtkBindingEntry.destroyed">
+	<div>
+		<i><em><code>destroyed</code></em></i>
+		(<a title="guint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint">guint</a>)
+		–
+	</div>
+			<p>implementation detail</p>
+
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GtkBindingEntry.in_emission">
+	<div>
+		<i><em><code>in_emission</code></em></i>
+		(<a title="guint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint">guint</a>)
+		–
+	</div>
+			<p>implementation detail</p>
+
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GtkBindingEntry.marks_unbound">
+	<div>
+		<i><em><code>marks_unbound</code></em></i>
+		(<a title="guint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint">guint</a>)
+		–
+	</div>
+			<p>implementation detail</p>
+
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GtkBindingEntry.set_next">
+	<div>
+		<i><em><code>set_next</code></em></i>
+		(<a title="GtkBindingEntry" href="gtkbindings.html#GtkBindingEntry">GtkBindingEntry</a> *)
+		–
+	</div>
+			<p>linked list of entries maintained by binding set</p>
+
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GtkBindingEntry.hash_next">
+	<div>
+		<i><em><code>hash_next</code></em></i>
+		(<a title="GtkBindingEntry" href="gtkbindings.html#GtkBindingEntry">GtkBindingEntry</a> *)
+		–
+	</div>
+			<p>implementation detail</p>
+
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GtkBindingEntry.signals">
+	<div>
+		<i><em><code>signals</code></em></i>
+		(<a title="GtkBindingSignal" href="gtkbindings.html#GtkBindingSignal">GtkBindingSignal</a> *)
+		–
+	</div>
+			<p>action signals of this entry</p>
+
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h3>
+	Gtk.BindingEntry
+</h3>
+
+
+<p>Each key binding element of a binding sets binding list is
+represented by a GtkBindingEntry.</p>
+
+
+
+
+	<div class="members-container">
+		<h4>Attributes</h4>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkBindingEntry.keyval">
+	<div>
+		<i><em><code>BindingEntry.keyval</code></em></i>
+		(<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>)
+		–
+	</div>
+			<p>key value to match</p>
+
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GtkBindingEntry.modifiers">
+	<div>
+		<i><em><code>BindingEntry.modifiers</code></em></i>
+		(<a title="Gdk.ModifierType" href="https://developer.gnome.org/gdk3/gdk3-Windows.html#GdkModifierType">Gdk.ModifierType</a>)
+		–
+	</div>
+			<p>key modifiers to match</p>
+
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GtkBindingEntry.binding_set">
+	<div>
+		<i><em><code>BindingEntry.binding_set</code></em></i>
+		(<a title="Gtk.BindingSet" href="gtkbindings.html#GtkBindingSet">Gtk.BindingSet</a>)
+		–
+	</div>
+			<p>binding set this entry belongs to</p>
+
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GtkBindingEntry.destroyed">
+	<div>
+		<i><em><code>BindingEntry.destroyed</code></em></i>
+		(<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>)
+		–
+	</div>
+			<p>implementation detail</p>
+
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GtkBindingEntry.in_emission">
+	<div>
+		<i><em><code>BindingEntry.in_emission</code></em></i>
+		(<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>)
+		–
+	</div>
+			<p>implementation detail</p>
+
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GtkBindingEntry.marks_unbound">
+	<div>
+		<i><em><code>BindingEntry.marks_unbound</code></em></i>
+		(<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>)
+		–
+	</div>
+			<p>implementation detail</p>
+
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GtkBindingEntry.set_next">
+	<div>
+		<i><em><code>BindingEntry.set_next</code></em></i>
+		(<a title="Gtk.BindingEntry" href="gtkbindings.html#GtkBindingEntry">Gtk.BindingEntry</a>)
+		–
+	</div>
+			<p>linked list of entries maintained by binding set</p>
+
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GtkBindingEntry.hash_next">
+	<div>
+		<i><em><code>BindingEntry.hash_next</code></em></i>
+		(<a title="Gtk.BindingEntry" href="gtkbindings.html#GtkBindingEntry">Gtk.BindingEntry</a>)
+		–
+	</div>
+			<p>implementation detail</p>
+
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GtkBindingEntry.signals">
+	<div>
+		<i><em><code>BindingEntry.signals</code></em></i>
+		(<a title="Gtk.BindingSignal" href="gtkbindings.html#GtkBindingSignal">Gtk.BindingSignal</a>)
+		–
+	</div>
+			<p>action signals of this entry</p>
+
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3>
+	Gtk.BindingEntry
+</h3>
+
+
+<p>Each key binding element of a binding sets binding list is
+represented by a GtkBindingEntry.</p>
+
+
+
+
+	<div class="members-container">
+		<h4>Attributes</h4>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkBindingEntry.keyval">
+	<div>
+		<i><em><code>BindingEntry.keyval</code></em></i>
+		(<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>)
+		–
+	</div>
+			<p>key value to match</p>
+
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GtkBindingEntry.modifiers">
+	<div>
+		<i><em><code>BindingEntry.modifiers</code></em></i>
+		(<a title="Gdk.ModifierType" href="https://developer.gnome.org/gdk3/gdk3-Windows.html#GdkModifierType">Gdk.ModifierType</a>)
+		–
+	</div>
+			<p>key modifiers to match</p>
+
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GtkBindingEntry.binding_set">
+	<div>
+		<i><em><code>BindingEntry.binding_set</code></em></i>
+		(<a title="Gtk.BindingSet" href="gtkbindings.html#GtkBindingSet">Gtk.BindingSet</a>)
+		–
+	</div>
+			<p>binding set this entry belongs to</p>
+
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GtkBindingEntry.destroyed">
+	<div>
+		<i><em><code>BindingEntry.destroyed</code></em></i>
+		(<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>)
+		–
+	</div>
+			<p>implementation detail</p>
+
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GtkBindingEntry.in_emission">
+	<div>
+		<i><em><code>BindingEntry.in_emission</code></em></i>
+		(<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>)
+		–
+	</div>
+			<p>implementation detail</p>
+
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GtkBindingEntry.marks_unbound">
+	<div>
+		<i><em><code>BindingEntry.marks_unbound</code></em></i>
+		(<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>)
+		–
+	</div>
+			<p>implementation detail</p>
+
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GtkBindingEntry.set_next">
+	<div>
+		<i><em><code>BindingEntry.set_next</code></em></i>
+		(<a title="Gtk.BindingEntry" href="gtkbindings.html#GtkBindingEntry">Gtk.BindingEntry</a>)
+		–
+	</div>
+			<p>linked list of entries maintained by binding set</p>
+
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GtkBindingEntry.hash_next">
+	<div>
+		<i><em><code>BindingEntry.hash_next</code></em></i>
+		(<a title="Gtk.BindingEntry" href="gtkbindings.html#GtkBindingEntry">Gtk.BindingEntry</a>)
+		–
+	</div>
+			<p>implementation detail</p>
+
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GtkBindingEntry.signals">
+	<div>
+		<i><em><code>BindingEntry.signals</code></em></i>
+		(<a title="Gtk.BindingSignal" href="gtkbindings.html#GtkBindingSignal">Gtk.BindingSignal</a>)
+		–
+	</div>
+			<p>action signals of this entry</p>
+
+	</div>
+
+			</div>
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="GtkBindingSignal">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h3 data-hotdoc-id="GtkBindingSignal">
+	<span><code>GtkBindingSignal</code></span>
+</h3>
+
+
+<p>A GtkBindingSignal stores the necessary information to
+activate a widget in response to a key press via a signal
+emission.</p>
+
+
+
+
+	<div class="members-container">
+		<h4>Fields</h4>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkBindingSignal.next">
+	<div>
+		<i><em><code>next</code></em></i>
+		(<a title="GtkBindingSignal" href="gtkbindings.html#GtkBindingSignal">GtkBindingSignal</a> *)
+		–
+	</div>
+			<p>implementation detail</p>
+
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GtkBindingSignal.signal_name">
+	<div>
+		<i><em><code>signal_name</code></em></i>
+		(<a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> *)
+		–
+	</div>
+			<p>the action signal to be emitted</p>
+
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GtkBindingSignal.n_args">
+	<div>
+		<i><em><code>n_args</code></em></i>
+		(<a title="guint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint">guint</a>)
+		–
+	</div>
+			<p>number of arguments specified for the signal</p>
+
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GtkBindingSignal.args">
+	<div>
+		<i><em><code>args</code></em></i>
+		(<a title="GtkBindingArg" href="gtkbindings.html#GtkBindingArg">GtkBindingArg</a> *)
+		–
+	</div>
+			<p>the arguments specified for the signal</p>
+
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h3>
+	Gtk.BindingSignal
+</h3>
+
+
+<p>A GtkBindingSignal stores the necessary information to
+activate a widget in response to a key press via a signal
+emission.</p>
+
+
+
+
+	<div class="members-container">
+		<h4>Attributes</h4>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkBindingSignal.next">
+	<div>
+		<i><em><code>BindingSignal.next</code></em></i>
+		(<a title="Gtk.BindingSignal" href="gtkbindings.html#GtkBindingSignal">Gtk.BindingSignal</a>)
+		–
+	</div>
+			<p>implementation detail</p>
+
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GtkBindingSignal.signal_name">
+	<div>
+		<i><em><code>BindingSignal.signal_name</code></em></i>
+		(<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)
+		–
+	</div>
+			<p>the action signal to be emitted</p>
+
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GtkBindingSignal.n_args">
+	<div>
+		<i><em><code>BindingSignal.n_args</code></em></i>
+		(<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>)
+		–
+	</div>
+			<p>number of arguments specified for the signal</p>
+
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GtkBindingSignal.args">
+	<div>
+		<i><em><code>BindingSignal.args</code></em></i>
+		([ <a title="Gtk.BindingArg" href="gtkbindings.html#GtkBindingArg">Gtk.BindingArg</a> ])
+		–
+	</div>
+			<p>the arguments specified for the signal</p>
+
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3>
+	Gtk.BindingSignal
+</h3>
+
+
+<p>A GtkBindingSignal stores the necessary information to
+activate a widget in response to a key press via a signal
+emission.</p>
+
+
+
+
+	<div class="members-container">
+		<h4>Attributes</h4>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkBindingSignal.next">
+	<div>
+		<i><em><code>BindingSignal.next</code></em></i>
+		(<a title="Gtk.BindingSignal" href="gtkbindings.html#GtkBindingSignal">Gtk.BindingSignal</a>)
+		–
+	</div>
+			<p>implementation detail</p>
+
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GtkBindingSignal.signal_name">
+	<div>
+		<i><em><code>BindingSignal.signal_name</code></em></i>
+		(<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>)
+		–
+	</div>
+			<p>the action signal to be emitted</p>
+
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GtkBindingSignal.n_args">
+	<div>
+		<i><em><code>BindingSignal.n_args</code></em></i>
+		(<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>)
+		–
+	</div>
+			<p>number of arguments specified for the signal</p>
+
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GtkBindingSignal.args">
+	<div>
+		<i><em><code>BindingSignal.args</code></em></i>
+		([ <a title="Gtk.BindingArg" href="gtkbindings.html#GtkBindingArg">Gtk.BindingArg</a> ])
+		–
+	</div>
+			<p>the arguments specified for the signal</p>
+
+	</div>
+
+			</div>
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="GtkBindingArg">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h3 data-hotdoc-id="GtkBindingArg">
+	<span><code>GtkBindingArg</code></span>
+</h3>
+
+
+<p>A <a href="gtkbindings.html#GtkBindingArg">GtkBindingArg</a> holds the data associated with
+an argument for a key binding signal emission as
+stored in <a href="gtkbindings.html#GtkBindingSignal">GtkBindingSignal</a>.</p>
+
+
+
+
+	<div class="members-container">
+		<h4>Fields</h4>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkBindingArg.arg_type">
+	<div>
+		<i><em><code>arg_type</code></em></i>
+		(<a title="GType" href="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#GType">GType</a>)
+		–
+	</div>
+			<p>implementation detail</p>
+
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GtkBindingArg.d.long_data">
+	<div>
+		<i><em><code>d.long_data</code></em></i>
+		(<a title="glong" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#glong">glong</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GtkBindingArg.d.double_data">
+	<div>
+		<i><em><code>d.double_data</code></em></i>
+		(<a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GtkBindingArg.d.string_data">
+	<div>
+		<i><em><code>d.string_data</code></em></i>
+		(<a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> *)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h3>
+	Gtk.BindingArg
+</h3>
+
+
+<p>A <a href="gtkbindings.html#GtkBindingArg">Gtk.BindingArg</a> holds the data associated with
+an argument for a key binding signal emission as
+stored in <a href="gtkbindings.html#GtkBindingSignal">Gtk.BindingSignal</a>.</p>
+
+
+
+
+	<div class="members-container">
+		<h4>Attributes</h4>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkBindingArg.arg_type">
+	<div>
+		<i><em><code>BindingArg.arg_type</code></em></i>
+		(<a title="GObject.Type" href="https://developer.gnome.org/gobject/stable/gobject-Type-Information.html#GType">GObject.Type</a>)
+		–
+	</div>
+			<p>implementation detail</p>
+
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3>
+	Gtk.BindingArg
+</h3>
+
+
+<p>A <a href="gtkbindings.html#GtkBindingArg">Gtk.BindingArg</a> holds the data associated with
+an argument for a key binding signal emission as
+stored in <a href="gtkbindings.html#GtkBindingSignal">Gtk.BindingSignal</a>.</p>
+
+
+
+
+	<div class="members-container">
+		<h4>Attributes</h4>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkBindingArg.arg_type">
+	<div>
+		<i><em><code>BindingArg.arg_type</code></em></i>
+		(<a title="GObject.Type" href="https://developer.gnome.org/gobject/stable/gobject-Type-Information.html#GType">GObject.Type</a>)
+		–
+	</div>
+			<p>implementation detail</p>
+
+	</div>
+
+			</div>
+
+
+
+        </div>
+
+</div>
+
+
+
+
+
+
+		
+	</div>
+	<div id="search_results">
+		<p>The results of the search are</p>
+	</div>
+	<hr>
+	<div id="footer">
+		    
+
+	</div>
+</div>
+
+<div id="toc-column">
+	
+		<div class="edit-button">
+		
+
+	</div>
+		<div id="toc-wrapper">
+		<nav id="toc"></nav>
+	</div>
+</div>
+</div>
+</main>
+
+</body>
+
+<script src="assets/js/navbar_offset_scroller.js"></script>
+</html>

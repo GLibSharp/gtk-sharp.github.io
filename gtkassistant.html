@@ -1,0 +1,5569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<base href=".">
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>gtkassistant</title>
+
+<link rel="stylesheet" href="assets/css/custom_bootstrap.css" type="text/css">
+<link rel="stylesheet" href="assets/css/bootstrap-toc.min.css" type="text/css">
+<link rel="stylesheet" href="assets/css/frontend.css" type="text/css">
+<link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
+
+<link rel="stylesheet" href="assets/css/prism.css" type="text/css">
+
+<script src="assets/js/mustache.min.js"></script>
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/scrollspy.js"></script>
+<script src="assets/js/bootstrap.js"></script>
+<script src="assets/js/typeahead.jquery.min.js"></script>
+<script src="assets/js/search.js"></script>
+<script src="assets/js/isotope.pkgd.min.js"></script>
+<script src="assets/js/compare-versions.js"></script>
+<script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="assets/js/bootstrap-toc.min.js"></script>
+<script src="assets/js/jquery.touchSwipe.min.js"></script>
+<script src="assets/js/anchor.min.js"></script>
+<script src="assets/js/tag_filtering.js"></script>
+<script src="assets/js/language_switching.js"></script>
+
+<script src="assets/js/lines_around_headings.js"></script>
+
+<script src="assets/js/prism-core.js"></script>
+<script src="assets/js/prism-autoloader.js"></script>
+<script src="assets/js/prism_autoloader_path_override.js"></script>
+<script src="assets/js/trie.js"></script>
+
+
+</head>
+
+<body class="no-script
+" data-spy="scroll" data-target="#toc" data-offset="70">
+
+<script>
+$('body').removeClass('no-script');
+</script>
+
+<nav class="navbar navbar-fixed-top navbar-default" id="topnav">
+	<div class="container-fluid">
+		<div class="navbar-right">
+			<a id="toc-toggle">
+				<span class="glyphicon glyphicon-menu-right"></span>
+				<span class="glyphicon glyphicon-menu-left"></span>
+			</a>
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-wrapper" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<form action="" class="navbar-form pull-right" id="navbar-search-form">
+                               <div class="form-group has-feedback">
+                                       <input type="text" class="form-control input-sm" name="search" id="sidenav-lookup-field" placeholder="search" disabled>
+				       <span class="glyphicon glyphicon-search form-control-feedback" id="search-mgn-glass"></span>
+                               </div>
+                        </form>
+		</div>
+		<div class="navbar-header">
+			<a id="sidenav-toggle">
+				<span class="glyphicon glyphicon-menu-right"></span>
+				<span class="glyphicon glyphicon-menu-left"></span>
+			</a>
+			<a id="home-link" href="index.html" class="hotdoc-navbar-brand">
+				<img src="assets/images/home.svg" alt="Home">
+			</a>
+		</div>
+		<div class="navbar-collapse collapse" id="navbar-wrapper">
+			<ul class="nav navbar-nav" id="menu">
+							</ul>
+			<div class="hidden-xs hidden-sm navbar-text navbar-center">
+							</div>
+		</div>
+	</div>
+</nav>
+
+<main>
+<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="gtkassistant.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['c', 'javascript', 'python']" data-hotdoc-meta-gi-language="c">
+<script src="assets/js/utils.js"></script>
+
+<div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
+	<script src="assets/js/navigation.js"></script>
+	<script src="assets/js/sitemap.js"></script>
+</div>
+
+<div id="body">
+	<div id="main">
+				    <div id="page-description" data-hotdoc-source="gtkassistant.markdown" data-hotdoc-role="main">
+    </div>
+        
+        
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="GtkAssistant">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h2 data-hotdoc-id="GtkAssistant">
+	<span><code>GtkAssistant</code></span>
+</h2>
+
+
+<div class="hierarchy_container">
+	<div class="hierarchy_details">
+<pre>
+<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object">GObject</a>
+    <span class="lineart">╰──</span><a title="GInitiallyUnowned" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-javascript="GObject.InitiallyUnowned" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-python="GObject.InitiallyUnowned">GInitiallyUnowned</a>
+        <span class="lineart">╰──</span><a title="GtkWidget" href="gtkwidget.html#GtkWidget" data-gi-href-javascript="gtkwidget.html#GtkWidget" data-gi-title-javascript="Gtk.Widget" data-gi-href-python="gtkwidget.html#GtkWidget" data-gi-title-python="Gtk.Widget">GtkWidget</a>
+            <span class="lineart">╰──</span><a title="GtkContainer" href="gtkcontainer.html#GtkContainer" data-gi-href-javascript="gtkcontainer.html#GtkContainer" data-gi-title-javascript="Gtk.Container" data-gi-href-python="gtkcontainer.html#GtkContainer" data-gi-title-python="Gtk.Container">GtkContainer</a>
+                <span class="lineart">╰──</span><a title="GtkBin" href="gtkbin.html#GtkBin" data-gi-href-javascript="gtkbin.html#GtkBin" data-gi-title-javascript="Gtk.Bin" data-gi-href-python="gtkbin.html#GtkBin" data-gi-title-python="Gtk.Bin">GtkBin</a>
+                    <span class="lineart">╰──</span><a title="GtkWindow" href="gtkwindow.html#GtkWindow" data-gi-href-javascript="gtkwindow.html#GtkWindow" data-gi-title-javascript="Gtk.Window" data-gi-href-python="gtkwindow.html#GtkWindow" data-gi-title-python="Gtk.Window">GtkWindow</a>
+                        <span class="lineart">╰──</span>GtkAssistant
+</pre>
+
+</div>
+
+</div>
+
+<div class="interfaces_container">
+	
+<p><b>Implemented interfaces:</b>
+    AtkImplementorIface, <a title="GtkBuildable" href="gtkbuildable.html#GtkBuildable" data-gi-href-javascript="gtkbuildable.html#GtkBuildable" data-gi-title-javascript="Gtk.Buildable" data-gi-href-python="gtkbuildable.html#GtkBuildable" data-gi-title-python="Gtk.Buildable">GtkBuildable</a>
+</p>
+
+</div>
+
+
+
+
+	<div class="members-container">
+		<h3>Members</h3>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkAssistant.parent">
+	<div>
+		<i><em><code>parent</code></em></i>
+		(<a title="GtkWindow" href="gtkwindow.html#GtkWindow" data-gi-href-javascript="gtkwindow.html#GtkWindow" data-gi-title-javascript="Gtk.Window" data-gi-href-python="gtkwindow.html#GtkWindow" data-gi-title-python="Gtk.Window">GtkWindow</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+<h3>Class structure</h3>
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="GtkAssistantClass">
+	<span><code>GtkAssistantClass</code></span>
+</h4>
+
+
+
+
+
+	<div class="members-container">
+		<h5>Fields</h5>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkAssistantClass.parent_class">
+	<div>
+		<i><em><code>parent_class</code></em></i>
+		(<a title="GtkWindowClass" href="GtkWindowClass">GtkWindowClass</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h3>
+	Gtk.AssistantClass
+</h3>
+
+
+
+
+
+	<div class="members-container">
+		<h5>Attributes</h5>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkAssistantClass.parent_class">
+	<div>
+		<i><em><code>AssistantClass.parent_class</code></em></i>
+		(<a title="Gtk.WindowClass" href="GtkWindowClass">Gtk.WindowClass</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3>
+	Gtk.AssistantClass
+</h3>
+
+
+
+
+
+	<div class="members-container">
+		<h5>Attributes</h5>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkAssistantClass.parent_class">
+	<div>
+		<i><em><code>AssistantClass.parent_class</code></em></i>
+		(<a title="Gtk.WindowClass" href="GtkWindowClass">Gtk.WindowClass</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h2 data-hotdoc-id="GtkAssistant">
+	<span><code>GtkAssistant</code></span>
+</h2>
+
+
+<div class="hierarchy_container">
+	<div class="hierarchy_details">
+<pre>
+<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object">GObject</a>
+    <span class="lineart">╰──</span><a title="GInitiallyUnowned" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-javascript="GObject.InitiallyUnowned" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-python="GObject.InitiallyUnowned">GInitiallyUnowned</a>
+        <span class="lineart">╰──</span><a title="GtkWidget" href="gtkwidget.html#GtkWidget" data-gi-href-javascript="gtkwidget.html#GtkWidget" data-gi-title-javascript="Gtk.Widget" data-gi-href-python="gtkwidget.html#GtkWidget" data-gi-title-python="Gtk.Widget">GtkWidget</a>
+            <span class="lineart">╰──</span><a title="GtkContainer" href="gtkcontainer.html#GtkContainer" data-gi-href-javascript="gtkcontainer.html#GtkContainer" data-gi-title-javascript="Gtk.Container" data-gi-href-python="gtkcontainer.html#GtkContainer" data-gi-title-python="Gtk.Container">GtkContainer</a>
+                <span class="lineart">╰──</span><a title="GtkBin" href="gtkbin.html#GtkBin" data-gi-href-javascript="gtkbin.html#GtkBin" data-gi-title-javascript="Gtk.Bin" data-gi-href-python="gtkbin.html#GtkBin" data-gi-title-python="Gtk.Bin">GtkBin</a>
+                    <span class="lineart">╰──</span><a title="GtkWindow" href="gtkwindow.html#GtkWindow" data-gi-href-javascript="gtkwindow.html#GtkWindow" data-gi-title-javascript="Gtk.Window" data-gi-href-python="gtkwindow.html#GtkWindow" data-gi-title-python="Gtk.Window">GtkWindow</a>
+                        <span class="lineart">╰──</span>GtkAssistant
+</pre>
+
+</div>
+
+</div>
+
+<div class="interfaces_container">
+	
+<p><b>Implemented interfaces:</b>
+    AtkImplementorIface, <a title="GtkBuildable" href="gtkbuildable.html#GtkBuildable" data-gi-href-javascript="gtkbuildable.html#GtkBuildable" data-gi-title-javascript="Gtk.Buildable" data-gi-href-python="gtkbuildable.html#GtkBuildable" data-gi-title-python="Gtk.Buildable">GtkBuildable</a>
+</p>
+
+</div>
+
+
+
+
+	<div class="members-container">
+		<h3>Members</h3>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkAssistant.parent">
+	<div>
+		<i><em><code>parent</code></em></i>
+		(<a title="GtkWindow" href="gtkwindow.html#GtkWindow" data-gi-href-javascript="gtkwindow.html#GtkWindow" data-gi-title-javascript="Gtk.Window" data-gi-href-python="gtkwindow.html#GtkWindow" data-gi-title-python="Gtk.Window">GtkWindow</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h2 data-hotdoc-id="GtkAssistant">
+	<span><code>GtkAssistant</code></span>
+</h2>
+
+
+<div class="hierarchy_container">
+	<div class="hierarchy_details">
+<pre>
+<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object">GObject</a>
+    <span class="lineart">╰──</span><a title="GInitiallyUnowned" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-javascript="GObject.InitiallyUnowned" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-python="GObject.InitiallyUnowned">GInitiallyUnowned</a>
+        <span class="lineart">╰──</span><a title="GtkWidget" href="gtkwidget.html#GtkWidget" data-gi-href-javascript="gtkwidget.html#GtkWidget" data-gi-title-javascript="Gtk.Widget" data-gi-href-python="gtkwidget.html#GtkWidget" data-gi-title-python="Gtk.Widget">GtkWidget</a>
+            <span class="lineart">╰──</span><a title="GtkContainer" href="gtkcontainer.html#GtkContainer" data-gi-href-javascript="gtkcontainer.html#GtkContainer" data-gi-title-javascript="Gtk.Container" data-gi-href-python="gtkcontainer.html#GtkContainer" data-gi-title-python="Gtk.Container">GtkContainer</a>
+                <span class="lineart">╰──</span><a title="GtkBin" href="gtkbin.html#GtkBin" data-gi-href-javascript="gtkbin.html#GtkBin" data-gi-title-javascript="Gtk.Bin" data-gi-href-python="gtkbin.html#GtkBin" data-gi-title-python="Gtk.Bin">GtkBin</a>
+                    <span class="lineart">╰──</span><a title="GtkWindow" href="gtkwindow.html#GtkWindow" data-gi-href-javascript="gtkwindow.html#GtkWindow" data-gi-title-javascript="Gtk.Window" data-gi-href-python="gtkwindow.html#GtkWindow" data-gi-title-python="Gtk.Window">GtkWindow</a>
+                        <span class="lineart">╰──</span>GtkAssistant
+</pre>
+
+</div>
+
+</div>
+
+<div class="interfaces_container">
+	
+<p><b>Implemented interfaces:</b>
+    AtkImplementorIface, <a title="GtkBuildable" href="gtkbuildable.html#GtkBuildable" data-gi-href-javascript="gtkbuildable.html#GtkBuildable" data-gi-title-javascript="Gtk.Buildable" data-gi-href-python="gtkbuildable.html#GtkBuildable" data-gi-title-python="Gtk.Buildable">GtkBuildable</a>
+</p>
+
+</div>
+
+
+
+
+	<div class="members-container">
+		<h3>Members</h3>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkAssistant.parent">
+	<div>
+		<i><em><code>parent</code></em></i>
+		(<a title="GtkWindow" href="gtkwindow.html#GtkWindow" data-gi-href-javascript="gtkwindow.html#GtkWindow" data-gi-title-javascript="Gtk.Window" data-gi-href-python="gtkwindow.html#GtkWindow" data-gi-title-python="Gtk.Window">GtkWindow</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+
+</div>
+
+
+            <h3 class="symbol_section">Constructors</h3>
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_assistant_new">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_assistant_new">
+	<span><code>gtk_assistant_new</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkWidget" href="gtkwidget.html#GtkWidget">GtkWidget</a> *
+gtk_assistant_new ()</pre>
+
+<p>Creates a new <a href="gtkassistant.html#GtkAssistant">GtkAssistant</a>.</p>
+
+
+
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>a newly created <a href="gtkassistant.html#GtkAssistant">GtkAssistant</a></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_assistant_new">
+	<span><code>Gtk.prototype.new</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.new(): {
+    // javascript wrapper for 'gtk_assistant_new'
+}</pre>
+
+<p>Creates a new <a href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a>.</p>
+
+
+
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>a newly created <a href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_assistant_new">
+	<span><code>Gtk.Assistant.new</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Assistant.new ():
+    #python wrapper for 'gtk_assistant_new'</pre>
+
+<p>Creates a new <a href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a>.</p>
+
+
+
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>a newly created <a href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+
+</div>
+
+
+            <h3 class="symbol_section">Methods</h3>
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_assistant_get_current_page">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_assistant_get_current_page">
+	<span><code>gtk_assistant_get_current_page</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a>
+gtk_assistant_get_current_page (<a title="GtkAssistant" href="gtkassistant.html#GtkAssistant">GtkAssistant</a> * assistant)</pre>
+
+<p>Returns the page number of the current page.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>assistant</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkassistant.html#GtkAssistant">GtkAssistant</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>The index (starting from 0) of the current
+page in the <em>assistant</em>, or -1 if the <em>assistant</em> has no pages,
+or no current page.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_assistant_get_current_page">
+	<span><code>Gtk.prototype.get_current_page</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_current_page(): {
+    // javascript wrapper for 'gtk_assistant_get_current_page'
+}</pre>
+
+<p>Returns the page number of the current page.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>assistant</code></em></i>
+					(
+						<a title="Gtk.Assistant" href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p>The index (starting from 0) of the current
+page in the <em>assistant</em>, or -1 if the <em>assistant</em> has no pages,
+or no current page.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_assistant_get_current_page">
+	<span><code>Gtk.Assistant.get_current_page</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Assistant.get_current_page (self):
+    #python wrapper for 'gtk_assistant_get_current_page'</pre>
+
+<p>Returns the page number of the current page.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>assistant</code></em></i>
+					(
+						<a title="Gtk.Assistant" href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+										)
+								–
+			</div>
+							<p>The index (starting from 0) of the current
+page in the <em>assistant</em>, or -1 if the <em>assistant</em> has no pages,
+or no current page.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_assistant_set_current_page">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_assistant_set_current_page">
+	<span><code>gtk_assistant_set_current_page</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_assistant_set_current_page (<a title="GtkAssistant" href="gtkassistant.html#GtkAssistant">GtkAssistant</a> * assistant,
+                                <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> page_num)</pre>
+
+<p>Switches the page to <em>page_num</em>.</p>
+<p>Note that this will only be necessary in custom buttons,
+as the <em>assistant</em> flow can be set with
+<a href="gtkassistant.html#gtk_assistant_set_forward_page_func">gtk_assistant_set_forward_page_func</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>assistant</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkassistant.html#GtkAssistant">GtkAssistant</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>page_num</code></em></i>
+				–
+	</div>
+			<p>index of the page to switch to, starting from 0.
+If negative, the last page will be used. If greater
+than the number of pages in the <em>assistant</em>, nothing
+will be done.</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_assistant_set_current_page">
+	<span><code>Gtk.prototype.set_current_page</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_current_page(page_num: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_assistant_set_current_page'
+}</pre>
+
+<p>Switches the page to <em>page_num</em>.</p>
+<p>Note that this will only be necessary in custom buttons,
+as the <em>assistant</em> flow can be set with
+<a href="gtkassistant.html#gtk_assistant_set_forward_page_func">Gtk.prototype.set_forward_page_func</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>assistant</code></em></i>
+					(
+						<a title="Gtk.Assistant" href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>page_num</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>index of the page to switch to, starting from 0.
+If negative, the last page will be used. If greater
+than the number of pages in the <em>assistant</em>, nothing
+will be done.</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_assistant_set_current_page">
+	<span><code>Gtk.Assistant.set_current_page</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Assistant.set_current_page (self, page_num):
+    #python wrapper for 'gtk_assistant_set_current_page'</pre>
+
+<p>Switches the page to <em>page_num</em>.</p>
+<p>Note that this will only be necessary in custom buttons,
+as the <em>assistant</em> flow can be set with
+<a href="gtkassistant.html#gtk_assistant_set_forward_page_func">Gtk.Assistant.set_forward_page_func</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>assistant</code></em></i>
+					(
+						<a title="Gtk.Assistant" href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>page_num</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>index of the page to switch to, starting from 0.
+If negative, the last page will be used. If greater
+than the number of pages in the <em>assistant</em>, nothing
+will be done.</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_assistant_get_n_pages">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_assistant_get_n_pages">
+	<span><code>gtk_assistant_get_n_pages</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a>
+gtk_assistant_get_n_pages (<a title="GtkAssistant" href="gtkassistant.html#GtkAssistant">GtkAssistant</a> * assistant)</pre>
+
+<p>Returns the number of pages in the <em>assistant</em></p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>assistant</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkassistant.html#GtkAssistant">GtkAssistant</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>the number of pages in the <em>assistant</em></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_assistant_get_n_pages">
+	<span><code>Gtk.prototype.get_n_pages</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_n_pages(): {
+    // javascript wrapper for 'gtk_assistant_get_n_pages'
+}</pre>
+
+<p>Returns the number of pages in the <em>assistant</em></p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>assistant</code></em></i>
+					(
+						<a title="Gtk.Assistant" href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p>the number of pages in the <em>assistant</em></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_assistant_get_n_pages">
+	<span><code>Gtk.Assistant.get_n_pages</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Assistant.get_n_pages (self):
+    #python wrapper for 'gtk_assistant_get_n_pages'</pre>
+
+<p>Returns the number of pages in the <em>assistant</em></p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>assistant</code></em></i>
+					(
+						<a title="Gtk.Assistant" href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+										)
+								–
+			</div>
+							<p>the number of pages in the <em>assistant</em></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_assistant_get_nth_page">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_assistant_get_nth_page">
+	<span><code>gtk_assistant_get_nth_page</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkWidget" href="gtkwidget.html#GtkWidget">GtkWidget</a> *
+gtk_assistant_get_nth_page (<a title="GtkAssistant" href="gtkassistant.html#GtkAssistant">GtkAssistant</a> * assistant,
+                            <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> page_num)</pre>
+
+<p>Returns the child widget contained in page number <em>page_num</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>assistant</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkassistant.html#GtkAssistant">GtkAssistant</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>page_num</code></em></i>
+				–
+	</div>
+			<p>the index of a page in the <em>assistant</em>,
+or -1 to get the last page</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					
+										
+<span class="annotation">[<abbr title="NULL may be passed to the value"><span class="acronym">nullable</span></abbr>]</span>
+<span class="annotation">[<abbr title="Don't free data after the code is done"><span class="acronym">transfer: none</span></abbr>]</span>
+
+										)
+								–
+			</div>
+							<p>the child widget, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a>
+if <em>page_num</em> is out of bounds</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_assistant_get_nth_page">
+	<span><code>Gtk.prototype.get_nth_page</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_nth_page(page_num: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_assistant_get_nth_page'
+}</pre>
+
+<p>Returns the child widget contained in page number <em>page_num</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>assistant</code></em></i>
+					(
+						<a title="Gtk.Assistant" href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>page_num</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the index of a page in the <em>assistant</em>,
+or -1 to get the last page</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>the child widget, or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a>
+if <em>page_num</em> is out of bounds</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_assistant_get_nth_page">
+	<span><code>Gtk.Assistant.get_nth_page</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Assistant.get_nth_page (self, page_num):
+    #python wrapper for 'gtk_assistant_get_nth_page'</pre>
+
+<p>Returns the child widget contained in page number <em>page_num</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>assistant</code></em></i>
+					(
+						<a title="Gtk.Assistant" href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>page_num</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>the index of a page in the <em>assistant</em>,
+or -1 to get the last page</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>the child widget, or <a href="https://docs.python.org/3/library/constants.html#None">None</a>
+if <em>page_num</em> is out of bounds</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_assistant_prepend_page">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_assistant_prepend_page">
+	<span><code>gtk_assistant_prepend_page</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a>
+gtk_assistant_prepend_page (<a title="GtkAssistant" href="gtkassistant.html#GtkAssistant">GtkAssistant</a> * assistant,
+                            <a title="GtkWidget" href="gtkwidget.html#GtkWidget">GtkWidget</a> * page)</pre>
+
+<p>Prepends a page to the <em>assistant</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>assistant</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkassistant.html#GtkAssistant">GtkAssistant</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>page</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkwidget.html#GtkWidget">GtkWidget</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>the index (starting at 0) of the inserted page</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_assistant_prepend_page">
+	<span><code>Gtk.prototype.prepend_page</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.prepend_page(page: <a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>): {
+    // javascript wrapper for 'gtk_assistant_prepend_page'
+}</pre>
+
+<p>Prepends a page to the <em>assistant</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>assistant</code></em></i>
+					(
+						<a title="Gtk.Assistant" href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>page</code></em></i>
+					(
+						<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkwidget.html#GtkWidget">Gtk.Widget</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p>the index (starting at 0) of the inserted page</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_assistant_prepend_page">
+	<span><code>Gtk.Assistant.prepend_page</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Assistant.prepend_page (self, page):
+    #python wrapper for 'gtk_assistant_prepend_page'</pre>
+
+<p>Prepends a page to the <em>assistant</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>assistant</code></em></i>
+					(
+						<a title="Gtk.Assistant" href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>page</code></em></i>
+					(
+						<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkwidget.html#GtkWidget">Gtk.Widget</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+										)
+								–
+			</div>
+							<p>the index (starting at 0) of the inserted page</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_assistant_append_page">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_assistant_append_page">
+	<span><code>gtk_assistant_append_page</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a>
+gtk_assistant_append_page (<a title="GtkAssistant" href="gtkassistant.html#GtkAssistant">GtkAssistant</a> * assistant,
+                           <a title="GtkWidget" href="gtkwidget.html#GtkWidget">GtkWidget</a> * page)</pre>
+
+<p>Appends a page to the <em>assistant</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>assistant</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkassistant.html#GtkAssistant">GtkAssistant</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>page</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkwidget.html#GtkWidget">GtkWidget</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>the index (starting at 0) of the inserted page</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_assistant_append_page">
+	<span><code>Gtk.prototype.append_page</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.append_page(page: <a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>): {
+    // javascript wrapper for 'gtk_assistant_append_page'
+}</pre>
+
+<p>Appends a page to the <em>assistant</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>assistant</code></em></i>
+					(
+						<a title="Gtk.Assistant" href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>page</code></em></i>
+					(
+						<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkwidget.html#GtkWidget">Gtk.Widget</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p>the index (starting at 0) of the inserted page</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_assistant_append_page">
+	<span><code>Gtk.Assistant.append_page</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Assistant.append_page (self, page):
+    #python wrapper for 'gtk_assistant_append_page'</pre>
+
+<p>Appends a page to the <em>assistant</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>assistant</code></em></i>
+					(
+						<a title="Gtk.Assistant" href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>page</code></em></i>
+					(
+						<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkwidget.html#GtkWidget">Gtk.Widget</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+										)
+								–
+			</div>
+							<p>the index (starting at 0) of the inserted page</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_assistant_insert_page">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_assistant_insert_page">
+	<span><code>gtk_assistant_insert_page</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a>
+gtk_assistant_insert_page (<a title="GtkAssistant" href="gtkassistant.html#GtkAssistant">GtkAssistant</a> * assistant,
+                           <a title="GtkWidget" href="gtkwidget.html#GtkWidget">GtkWidget</a> * page,
+                           <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> position)</pre>
+
+<p>Inserts a page in the <em>assistant</em> at a given position.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>assistant</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkassistant.html#GtkAssistant">GtkAssistant</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>page</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkwidget.html#GtkWidget">GtkWidget</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>position</code></em></i>
+				–
+	</div>
+			<p>the index (starting at 0) at which to insert the page,
+or -1 to append the page to the <em>assistant</em></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>the index (starting from 0) of the inserted page</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_assistant_insert_page">
+	<span><code>Gtk.prototype.insert_page</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.insert_page(page: <a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>, position: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_assistant_insert_page'
+}</pre>
+
+<p>Inserts a page in the <em>assistant</em> at a given position.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>assistant</code></em></i>
+					(
+						<a title="Gtk.Assistant" href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>page</code></em></i>
+					(
+						<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkwidget.html#GtkWidget">Gtk.Widget</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>position</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the index (starting at 0) at which to insert the page,
+or -1 to append the page to the <em>assistant</em></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p>the index (starting from 0) of the inserted page</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_assistant_insert_page">
+	<span><code>Gtk.Assistant.insert_page</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Assistant.insert_page (self, page, position):
+    #python wrapper for 'gtk_assistant_insert_page'</pre>
+
+<p>Inserts a page in the <em>assistant</em> at a given position.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>assistant</code></em></i>
+					(
+						<a title="Gtk.Assistant" href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>page</code></em></i>
+					(
+						<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkwidget.html#GtkWidget">Gtk.Widget</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>position</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>the index (starting at 0) at which to insert the page,
+or -1 to append the page to the <em>assistant</em></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+										)
+								–
+			</div>
+							<p>the index (starting from 0) of the inserted page</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.2;" id="gtk_assistant_remove_page">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_assistant_remove_page">
+	<span><code>gtk_assistant_remove_page</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_assistant_remove_page (<a title="GtkAssistant" href="gtkassistant.html#GtkAssistant">GtkAssistant</a> * assistant,
+                           <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> page_num)</pre>
+
+<p>Removes the <em>page_num</em>’s page from <em>assistant</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>assistant</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkassistant.html#GtkAssistant">GtkAssistant</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>page_num</code></em></i>
+				–
+	</div>
+			<p>the index of a page in the <em>assistant</em>,
+or -1 to remove the last page</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.2
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_assistant_remove_page">
+	<span><code>Gtk.prototype.remove_page</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.remove_page(page_num: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_assistant_remove_page'
+}</pre>
+
+<p>Removes the <em>page_num</em>’s page from <em>assistant</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>assistant</code></em></i>
+					(
+						<a title="Gtk.Assistant" href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>page_num</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the index of a page in the <em>assistant</em>,
+or -1 to remove the last page</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.2
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_assistant_remove_page">
+	<span><code>Gtk.Assistant.remove_page</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Assistant.remove_page (self, page_num):
+    #python wrapper for 'gtk_assistant_remove_page'</pre>
+
+<p>Removes the <em>page_num</em>’s page from <em>assistant</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>assistant</code></em></i>
+					(
+						<a title="Gtk.Assistant" href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>page_num</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>the index of a page in the <em>assistant</em>,
+or -1 to remove the last page</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.2
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_assistant_set_forward_page_func">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_assistant_set_forward_page_func">
+	<span><code>gtk_assistant_set_forward_page_func</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_assistant_set_forward_page_func (<a title="GtkAssistant" href="gtkassistant.html#GtkAssistant">GtkAssistant</a> * assistant,
+                                     <a title="GtkAssistantPageFunc" href="gtkassistant.html#GtkAssistantPageFunc">GtkAssistantPageFunc</a> page_func,
+                                     <a title="gpointer" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer">gpointer</a> data,
+                                     <a title="GDestroyNotify" href="https://developer.gnome.org/glib/unstable/glib-Datasets.html#GDestroyNotify">GDestroyNotify</a> destroy)</pre>
+
+<p>Sets the page forwarding function to be <em>page_func</em>.</p>
+<p>This function will be used to determine what will be
+the next page when the user presses the forward button.
+Setting <em>page_func</em> to <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> will make the assistant to
+use the default forward function, which just goes to the
+next visible page.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>assistant</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkassistant.html#GtkAssistant">GtkAssistant</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>page_func</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>the <a href="gtkassistant.html#GtkAssistantPageFunc">GtkAssistantPageFunc</a>, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a>
+to use the default one</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>data</code></em></i>
+				–
+	</div>
+			<p>user data for <em>page_func</em></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>destroy</code></em></i>
+				–
+	</div>
+			<p>destroy notifier for <em>data</em></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_assistant_set_forward_page_func">
+	<span><code>Gtk.prototype.set_forward_page_func</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_forward_page_func(page_func: <a title="Gtk.AssistantPageFunc" href="gtkassistant.html#GtkAssistantPageFunc">Gtk.AssistantPageFunc</a>, data: <a title="Object" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>, destroy: <a title="GLib.DestroyNotify" href="https://developer.gnome.org/glib/unstable/glib-Datasets.html#GDestroyNotify">GLib.DestroyNotify</a>): {
+    // javascript wrapper for 'gtk_assistant_set_forward_page_func'
+}</pre>
+
+<p>Sets the page forwarding function to be <em>page_func</em>.</p>
+<p>This function will be used to determine what will be
+the next page when the user presses the forward button.
+Setting <em>page_func</em> to <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a> will make the assistant to
+use the default forward function, which just goes to the
+next visible page.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>assistant</code></em></i>
+					(
+						<a title="Gtk.Assistant" href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>page_func</code></em></i>
+					(
+						<a title="Gtk.AssistantPageFunc" href="gtkassistant.html#GtkAssistantPageFunc">Gtk.AssistantPageFunc</a>
+						)
+				–
+	</div>
+			<p>the <a href="gtkassistant.html#GtkAssistantPageFunc">Gtk.AssistantPageFunc</a>, or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a>
+to use the default one</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>data</code></em></i>
+					(
+						<a title="Object" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>
+						)
+				–
+	</div>
+			<p>user data for <em>page_func</em></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>destroy</code></em></i>
+					(
+						<a title="GLib.DestroyNotify" href="https://developer.gnome.org/glib/unstable/glib-Datasets.html#GDestroyNotify">GLib.DestroyNotify</a>
+						)
+				–
+	</div>
+			<p>destroy notifier for <em>data</em></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_assistant_set_forward_page_func">
+	<span><code>Gtk.Assistant.set_forward_page_func</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Assistant.set_forward_page_func (self, page_func, data, destroy):
+    #python wrapper for 'gtk_assistant_set_forward_page_func'</pre>
+
+<p>Sets the page forwarding function to be <em>page_func</em>.</p>
+<p>This function will be used to determine what will be
+the next page when the user presses the forward button.
+Setting <em>page_func</em> to <a href="https://docs.python.org/3/library/constants.html#None">None</a> will make the assistant to
+use the default forward function, which just goes to the
+next visible page.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>assistant</code></em></i>
+					(
+						<a title="Gtk.Assistant" href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>page_func</code></em></i>
+					(
+						<a title="Gtk.AssistantPageFunc" href="gtkassistant.html#GtkAssistantPageFunc">Gtk.AssistantPageFunc</a>
+						)
+				–
+	</div>
+			<p>the <a href="gtkassistant.html#GtkAssistantPageFunc">Gtk.AssistantPageFunc</a>, or <a href="https://docs.python.org/3/library/constants.html#None">None</a>
+to use the default one</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>data</code></em></i>
+					(
+						<a title="object" href="https://docs.python.org/3/library/functions.html#object">object</a>
+						)
+				–
+	</div>
+			<p>user data for <em>page_func</em></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>destroy</code></em></i>
+					(
+						<a title="GLib.DestroyNotify" href="https://developer.gnome.org/glib/unstable/glib-Datasets.html#GDestroyNotify">GLib.DestroyNotify</a>
+						)
+				–
+	</div>
+			<p>destroy notifier for <em>data</em></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_assistant_set_page_type">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_assistant_set_page_type">
+	<span><code>gtk_assistant_set_page_type</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_assistant_set_page_type (<a title="GtkAssistant" href="gtkassistant.html#GtkAssistant">GtkAssistant</a> * assistant,
+                             <a title="GtkWidget" href="gtkwidget.html#GtkWidget">GtkWidget</a> * page,
+                             <a title="GtkAssistantPageType" href="gtkassistant.html#GtkAssistantPageType">GtkAssistantPageType</a> type)</pre>
+
+<p>Sets the page type for <em>page</em>.</p>
+<p>The page type determines the page behavior in the <em>assistant</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>assistant</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkassistant.html#GtkAssistant">GtkAssistant</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>page</code></em></i>
+				–
+	</div>
+			<p>a page of <em>assistant</em></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>type</code></em></i>
+				–
+	</div>
+			<p>the new type for <em>page</em></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_assistant_set_page_type">
+	<span><code>Gtk.prototype.set_page_type</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_page_type(page: <a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>, type: <a title="Gtk.AssistantPageType" href="gtkassistant.html#GtkAssistantPageType">Gtk.AssistantPageType</a>): {
+    // javascript wrapper for 'gtk_assistant_set_page_type'
+}</pre>
+
+<p>Sets the page type for <em>page</em>.</p>
+<p>The page type determines the page behavior in the <em>assistant</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>assistant</code></em></i>
+					(
+						<a title="Gtk.Assistant" href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>page</code></em></i>
+					(
+						<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>a page of <em>assistant</em></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>type</code></em></i>
+					(
+						<a title="Gtk.AssistantPageType" href="gtkassistant.html#GtkAssistantPageType">Gtk.AssistantPageType</a>
+						)
+				–
+	</div>
+			<p>the new type for <em>page</em></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_assistant_set_page_type">
+	<span><code>Gtk.Assistant.set_page_type</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Assistant.set_page_type (self, page, type):
+    #python wrapper for 'gtk_assistant_set_page_type'</pre>
+
+<p>Sets the page type for <em>page</em>.</p>
+<p>The page type determines the page behavior in the <em>assistant</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>assistant</code></em></i>
+					(
+						<a title="Gtk.Assistant" href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>page</code></em></i>
+					(
+						<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>a page of <em>assistant</em></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>type</code></em></i>
+					(
+						<a title="Gtk.AssistantPageType" href="gtkassistant.html#GtkAssistantPageType">Gtk.AssistantPageType</a>
+						)
+				–
+	</div>
+			<p>the new type for <em>page</em></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_assistant_get_page_type">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_assistant_get_page_type">
+	<span><code>gtk_assistant_get_page_type</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkAssistantPageType" href="gtkassistant.html#GtkAssistantPageType">GtkAssistantPageType</a>
+gtk_assistant_get_page_type (<a title="GtkAssistant" href="gtkassistant.html#GtkAssistant">GtkAssistant</a> * assistant,
+                             <a title="GtkWidget" href="gtkwidget.html#GtkWidget">GtkWidget</a> * page)</pre>
+
+<p>Gets the page type of <em>page</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>assistant</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkassistant.html#GtkAssistant">GtkAssistant</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>page</code></em></i>
+				–
+	</div>
+			<p>a page of <em>assistant</em></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>the page type of <em>page</em></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_assistant_get_page_type">
+	<span><code>Gtk.prototype.get_page_type</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_page_type(page: <a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>): {
+    // javascript wrapper for 'gtk_assistant_get_page_type'
+}</pre>
+
+<p>Gets the page type of <em>page</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>assistant</code></em></i>
+					(
+						<a title="Gtk.Assistant" href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>page</code></em></i>
+					(
+						<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>a page of <em>assistant</em></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.AssistantPageType" href="gtkassistant.html#GtkAssistantPageType">Gtk.AssistantPageType</a>
+										)
+								–
+			</div>
+							<p>the page type of <em>page</em></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_assistant_get_page_type">
+	<span><code>Gtk.Assistant.get_page_type</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Assistant.get_page_type (self, page):
+    #python wrapper for 'gtk_assistant_get_page_type'</pre>
+
+<p>Gets the page type of <em>page</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>assistant</code></em></i>
+					(
+						<a title="Gtk.Assistant" href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>page</code></em></i>
+					(
+						<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>a page of <em>assistant</em></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.AssistantPageType" href="gtkassistant.html#GtkAssistantPageType">Gtk.AssistantPageType</a>
+										)
+								–
+			</div>
+							<p>the page type of <em>page</em></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_assistant_set_page_title">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_assistant_set_page_title">
+	<span><code>gtk_assistant_set_page_title</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_assistant_set_page_title (<a title="GtkAssistant" href="gtkassistant.html#GtkAssistant">GtkAssistant</a> * assistant,
+                              <a title="GtkWidget" href="gtkwidget.html#GtkWidget">GtkWidget</a> * page,
+                              const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * title)</pre>
+
+<p>Sets a title for <em>page</em>.</p>
+<p>The title is displayed in the header area of the assistant
+when <em>page</em> is the current page.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>assistant</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkassistant.html#GtkAssistant">GtkAssistant</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>page</code></em></i>
+				–
+	</div>
+			<p>a page of <em>assistant</em></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>title</code></em></i>
+				–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_assistant_set_page_title">
+	<span><code>Gtk.prototype.set_page_title</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_page_title(page: <a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>, title: <a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>): {
+    // javascript wrapper for 'gtk_assistant_set_page_title'
+}</pre>
+
+<p>Sets a title for <em>page</em>.</p>
+<p>The title is displayed in the header area of the assistant
+when <em>page</em> is the current page.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>assistant</code></em></i>
+					(
+						<a title="Gtk.Assistant" href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>page</code></em></i>
+					(
+						<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>a page of <em>assistant</em></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>title</code></em></i>
+					(
+						<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
+						)
+				–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_assistant_set_page_title">
+	<span><code>Gtk.Assistant.set_page_title</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Assistant.set_page_title (self, page, title):
+    #python wrapper for 'gtk_assistant_set_page_title'</pre>
+
+<p>Sets a title for <em>page</em>.</p>
+<p>The title is displayed in the header area of the assistant
+when <em>page</em> is the current page.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>assistant</code></em></i>
+					(
+						<a title="Gtk.Assistant" href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>page</code></em></i>
+					(
+						<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>a page of <em>assistant</em></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>title</code></em></i>
+					(
+						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
+						)
+				–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_assistant_get_page_title">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_assistant_get_page_title">
+	<span><code>gtk_assistant_get_page_title</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> *
+gtk_assistant_get_page_title (<a title="GtkAssistant" href="gtkassistant.html#GtkAssistant">GtkAssistant</a> * assistant,
+                              <a title="GtkWidget" href="gtkwidget.html#GtkWidget">GtkWidget</a> * page)</pre>
+
+<p>Gets the title for <em>page</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>assistant</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkassistant.html#GtkAssistant">GtkAssistant</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>page</code></em></i>
+				–
+	</div>
+			<p>a page of <em>assistant</em></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>the title for <em>page</em></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_assistant_get_page_title">
+	<span><code>Gtk.prototype.get_page_title</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_page_title(page: <a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>): {
+    // javascript wrapper for 'gtk_assistant_get_page_title'
+}</pre>
+
+<p>Gets the title for <em>page</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>assistant</code></em></i>
+					(
+						<a title="Gtk.Assistant" href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>page</code></em></i>
+					(
+						<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>a page of <em>assistant</em></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
+										)
+								–
+			</div>
+							<p>the title for <em>page</em></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_assistant_get_page_title">
+	<span><code>Gtk.Assistant.get_page_title</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Assistant.get_page_title (self, page):
+    #python wrapper for 'gtk_assistant_get_page_title'</pre>
+
+<p>Gets the title for <em>page</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>assistant</code></em></i>
+					(
+						<a title="Gtk.Assistant" href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>page</code></em></i>
+					(
+						<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>a page of <em>assistant</em></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
+										)
+								–
+			</div>
+							<p>the title for <em>page</em></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_assistant_set_page_complete">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_assistant_set_page_complete">
+	<span><code>gtk_assistant_set_page_complete</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_assistant_set_page_complete (<a title="GtkAssistant" href="gtkassistant.html#GtkAssistant">GtkAssistant</a> * assistant,
+                                 <a title="GtkWidget" href="gtkwidget.html#GtkWidget">GtkWidget</a> * page,
+                                 <a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a> complete)</pre>
+
+<p>Sets whether <em>page</em> contents are complete.</p>
+<p>This will make <em>assistant</em> update the buttons state
+to be able to continue the task.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>assistant</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkassistant.html#GtkAssistant">GtkAssistant</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>page</code></em></i>
+				–
+	</div>
+			<p>a page of <em>assistant</em></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>complete</code></em></i>
+				–
+	</div>
+			<p>the completeness status of the page</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_assistant_set_page_complete">
+	<span><code>Gtk.prototype.set_page_complete</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_page_complete(page: <a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>, complete: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_assistant_set_page_complete'
+}</pre>
+
+<p>Sets whether <em>page</em> contents are complete.</p>
+<p>This will make <em>assistant</em> update the buttons state
+to be able to continue the task.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>assistant</code></em></i>
+					(
+						<a title="Gtk.Assistant" href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>page</code></em></i>
+					(
+						<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>a page of <em>assistant</em></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>complete</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the completeness status of the page</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_assistant_set_page_complete">
+	<span><code>Gtk.Assistant.set_page_complete</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Assistant.set_page_complete (self, page, complete):
+    #python wrapper for 'gtk_assistant_set_page_complete'</pre>
+
+<p>Sets whether <em>page</em> contents are complete.</p>
+<p>This will make <em>assistant</em> update the buttons state
+to be able to continue the task.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>assistant</code></em></i>
+					(
+						<a title="Gtk.Assistant" href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>page</code></em></i>
+					(
+						<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>a page of <em>assistant</em></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>complete</code></em></i>
+					(
+						<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+						)
+				–
+	</div>
+			<p>the completeness status of the page</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_assistant_get_page_complete">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_assistant_get_page_complete">
+	<span><code>gtk_assistant_get_page_complete</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_assistant_get_page_complete (<a title="GtkAssistant" href="gtkassistant.html#GtkAssistant">GtkAssistant</a> * assistant,
+                                 <a title="GtkWidget" href="gtkwidget.html#GtkWidget">GtkWidget</a> * page)</pre>
+
+<p>Gets whether <em>page</em> is complete.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>assistant</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkassistant.html#GtkAssistant">GtkAssistant</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>page</code></em></i>
+				–
+	</div>
+			<p>a page of <em>assistant</em></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if <em>page</em> is complete.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_assistant_get_page_complete">
+	<span><code>Gtk.prototype.get_page_complete</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_page_complete(page: <a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>): {
+    // javascript wrapper for 'gtk_assistant_get_page_complete'
+}</pre>
+
+<p>Gets whether <em>page</em> is complete.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>assistant</code></em></i>
+					(
+						<a title="Gtk.Assistant" href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>page</code></em></i>
+					(
+						<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>a page of <em>assistant</em></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if <em>page</em> is complete.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_assistant_get_page_complete">
+	<span><code>Gtk.Assistant.get_page_complete</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Assistant.get_page_complete (self, page):
+    #python wrapper for 'gtk_assistant_get_page_complete'</pre>
+
+<p>Gets whether <em>page</em> is complete.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>assistant</code></em></i>
+					(
+						<a title="Gtk.Assistant" href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>page</code></em></i>
+					(
+						<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>a page of <em>assistant</em></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+										)
+								–
+			</div>
+							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if <em>page</em> is complete.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.18;" id="gtk_assistant_set_page_has_padding">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_assistant_set_page_has_padding">
+	<span><code>gtk_assistant_set_page_has_padding</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_assistant_set_page_has_padding (<a title="GtkAssistant" href="gtkassistant.html#GtkAssistant">GtkAssistant</a> * assistant,
+                                    <a title="GtkWidget" href="gtkwidget.html#GtkWidget">GtkWidget</a> * page,
+                                    <a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a> has_padding)</pre>
+
+<p>Sets whether the assistant is adding padding around
+the page.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>assistant</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkassistant.html#GtkAssistant">GtkAssistant</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>page</code></em></i>
+				–
+	</div>
+			<p>a page of <em>assistant</em></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>has_padding</code></em></i>
+				–
+	</div>
+			<p>whether this page has padding</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.18
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_assistant_set_page_has_padding">
+	<span><code>Gtk.prototype.set_page_has_padding</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_page_has_padding(page: <a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>, has_padding: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_assistant_set_page_has_padding'
+}</pre>
+
+<p>Sets whether the assistant is adding padding around
+the page.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>assistant</code></em></i>
+					(
+						<a title="Gtk.Assistant" href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>page</code></em></i>
+					(
+						<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>a page of <em>assistant</em></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>has_padding</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>whether this page has padding</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.18
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_assistant_set_page_has_padding">
+	<span><code>Gtk.Assistant.set_page_has_padding</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Assistant.set_page_has_padding (self, page, has_padding):
+    #python wrapper for 'gtk_assistant_set_page_has_padding'</pre>
+
+<p>Sets whether the assistant is adding padding around
+the page.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>assistant</code></em></i>
+					(
+						<a title="Gtk.Assistant" href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>page</code></em></i>
+					(
+						<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>a page of <em>assistant</em></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>has_padding</code></em></i>
+					(
+						<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+						)
+				–
+	</div>
+			<p>whether this page has padding</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.18
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.18;" id="gtk_assistant_get_page_has_padding">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_assistant_get_page_has_padding">
+	<span><code>gtk_assistant_get_page_has_padding</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_assistant_get_page_has_padding (<a title="GtkAssistant" href="gtkassistant.html#GtkAssistant">GtkAssistant</a> * assistant,
+                                    <a title="GtkWidget" href="gtkwidget.html#GtkWidget">GtkWidget</a> * page)</pre>
+
+<p>Gets whether page has padding.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>assistant</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkassistant.html#GtkAssistant">GtkAssistant</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>page</code></em></i>
+				–
+	</div>
+			<p>a page of <em>assistant</em></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if <em>page</em> has padding</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.18
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_assistant_get_page_has_padding">
+	<span><code>Gtk.prototype.get_page_has_padding</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_page_has_padding(page: <a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>): {
+    // javascript wrapper for 'gtk_assistant_get_page_has_padding'
+}</pre>
+
+<p>Gets whether page has padding.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>assistant</code></em></i>
+					(
+						<a title="Gtk.Assistant" href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>page</code></em></i>
+					(
+						<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>a page of <em>assistant</em></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if <em>page</em> has padding</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.18
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_assistant_get_page_has_padding">
+	<span><code>Gtk.Assistant.get_page_has_padding</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Assistant.get_page_has_padding (self, page):
+    #python wrapper for 'gtk_assistant_get_page_has_padding'</pre>
+
+<p>Gets whether page has padding.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>assistant</code></em></i>
+					(
+						<a title="Gtk.Assistant" href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>page</code></em></i>
+					(
+						<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>a page of <em>assistant</em></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+										)
+								–
+			</div>
+							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if <em>page</em> has padding</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.18
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_assistant_add_action_widget">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_assistant_add_action_widget">
+	<span><code>gtk_assistant_add_action_widget</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_assistant_add_action_widget (<a title="GtkAssistant" href="gtkassistant.html#GtkAssistant">GtkAssistant</a> * assistant,
+                                 <a title="GtkWidget" href="gtkwidget.html#GtkWidget">GtkWidget</a> * child)</pre>
+
+<p>Adds a widget to the action area of a <a href="gtkassistant.html#GtkAssistant">GtkAssistant</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>assistant</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkassistant.html#GtkAssistant">GtkAssistant</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>child</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkwidget.html#GtkWidget">GtkWidget</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_assistant_add_action_widget">
+	<span><code>Gtk.prototype.add_action_widget</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.add_action_widget(child: <a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>): {
+    // javascript wrapper for 'gtk_assistant_add_action_widget'
+}</pre>
+
+<p>Adds a widget to the action area of a <a href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>assistant</code></em></i>
+					(
+						<a title="Gtk.Assistant" href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>child</code></em></i>
+					(
+						<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkwidget.html#GtkWidget">Gtk.Widget</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_assistant_add_action_widget">
+	<span><code>Gtk.Assistant.add_action_widget</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Assistant.add_action_widget (self, child):
+    #python wrapper for 'gtk_assistant_add_action_widget'</pre>
+
+<p>Adds a widget to the action area of a <a href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>assistant</code></em></i>
+					(
+						<a title="Gtk.Assistant" href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>child</code></em></i>
+					(
+						<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkwidget.html#GtkWidget">Gtk.Widget</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_assistant_remove_action_widget">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_assistant_remove_action_widget">
+	<span><code>gtk_assistant_remove_action_widget</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_assistant_remove_action_widget (<a title="GtkAssistant" href="gtkassistant.html#GtkAssistant">GtkAssistant</a> * assistant,
+                                    <a title="GtkWidget" href="gtkwidget.html#GtkWidget">GtkWidget</a> * child)</pre>
+
+<p>Removes a widget from the action area of a <a href="gtkassistant.html#GtkAssistant">GtkAssistant</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>assistant</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkassistant.html#GtkAssistant">GtkAssistant</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>child</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkwidget.html#GtkWidget">GtkWidget</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_assistant_remove_action_widget">
+	<span><code>Gtk.prototype.remove_action_widget</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.remove_action_widget(child: <a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>): {
+    // javascript wrapper for 'gtk_assistant_remove_action_widget'
+}</pre>
+
+<p>Removes a widget from the action area of a <a href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>assistant</code></em></i>
+					(
+						<a title="Gtk.Assistant" href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>child</code></em></i>
+					(
+						<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkwidget.html#GtkWidget">Gtk.Widget</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_assistant_remove_action_widget">
+	<span><code>Gtk.Assistant.remove_action_widget</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Assistant.remove_action_widget (self, child):
+    #python wrapper for 'gtk_assistant_remove_action_widget'</pre>
+
+<p>Removes a widget from the action area of a <a href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>assistant</code></em></i>
+					(
+						<a title="Gtk.Assistant" href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>child</code></em></i>
+					(
+						<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkwidget.html#GtkWidget">Gtk.Widget</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_assistant_update_buttons_state">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_assistant_update_buttons_state">
+	<span><code>gtk_assistant_update_buttons_state</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_assistant_update_buttons_state (<a title="GtkAssistant" href="gtkassistant.html#GtkAssistant">GtkAssistant</a> * assistant)</pre>
+
+<p>Forces <em>assistant</em> to recompute the buttons state.</p>
+<p>GTK+ automatically takes care of this in most situations,
+e.g. when the user goes to a different page, or when the
+visibility or completeness of a page changes.</p>
+<p>One situation where it can be necessary to call this
+function is when changing a value on the current page
+affects the future page flow of the assistant.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>assistant</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkassistant.html#GtkAssistant">GtkAssistant</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_assistant_update_buttons_state">
+	<span><code>Gtk.prototype.update_buttons_state</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.update_buttons_state(): {
+    // javascript wrapper for 'gtk_assistant_update_buttons_state'
+}</pre>
+
+<p>Forces <em>assistant</em> to recompute the buttons state.</p>
+<p>GTK+ automatically takes care of this in most situations,
+e.g. when the user goes to a different page, or when the
+visibility or completeness of a page changes.</p>
+<p>One situation where it can be necessary to call this
+function is when changing a value on the current page
+affects the future page flow of the assistant.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>assistant</code></em></i>
+					(
+						<a title="Gtk.Assistant" href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_assistant_update_buttons_state">
+	<span><code>Gtk.Assistant.update_buttons_state</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Assistant.update_buttons_state (self):
+    #python wrapper for 'gtk_assistant_update_buttons_state'</pre>
+
+<p>Forces <em>assistant</em> to recompute the buttons state.</p>
+<p>GTK+ automatically takes care of this in most situations,
+e.g. when the user goes to a different page, or when the
+visibility or completeness of a page changes.</p>
+<p>One situation where it can be necessary to call this
+function is when changing a value on the current page
+affects the future page flow of the assistant.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>assistant</code></em></i>
+					(
+						<a title="Gtk.Assistant" href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.22;" id="gtk_assistant_commit">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_assistant_commit">
+	<span><code>gtk_assistant_commit</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_assistant_commit (<a title="GtkAssistant" href="gtkassistant.html#GtkAssistant">GtkAssistant</a> * assistant)</pre>
+
+<p>Erases the visited page history so the back button is not
+shown on the current page, and removes the cancel button
+from subsequent pages.</p>
+<p>Use this when the information provided up to the current
+page is hereafter deemed permanent and cannot be modified
+or undone. For example, showing a progress page to track
+a long-running, unreversible operation after the user has
+clicked apply on a confirmation page.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>assistant</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkassistant.html#GtkAssistant">GtkAssistant</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.22
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_assistant_commit">
+	<span><code>Gtk.prototype.commit</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.commit(): {
+    // javascript wrapper for 'gtk_assistant_commit'
+}</pre>
+
+<p>Erases the visited page history so the back button is not
+shown on the current page, and removes the cancel button
+from subsequent pages.</p>
+<p>Use this when the information provided up to the current
+page is hereafter deemed permanent and cannot be modified
+or undone. For example, showing a progress page to track
+a long-running, unreversible operation after the user has
+clicked apply on a confirmation page.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>assistant</code></em></i>
+					(
+						<a title="Gtk.Assistant" href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.22
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_assistant_commit">
+	<span><code>Gtk.Assistant.commit</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Assistant.commit (self):
+    #python wrapper for 'gtk_assistant_commit'</pre>
+
+<p>Erases the visited page history so the back button is not
+shown on the current page, and removes the cancel button
+from subsequent pages.</p>
+<p>Use this when the information provided up to the current
+page is hereafter deemed permanent and cannot be modified
+or undone. For example, showing a progress page to track
+a long-running, unreversible operation after the user has
+clicked apply on a confirmation page.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>assistant</code></em></i>
+					(
+						<a title="Gtk.Assistant" href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.22
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_assistant_next_page">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_assistant_next_page">
+	<span><code>gtk_assistant_next_page</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_assistant_next_page (<a title="GtkAssistant" href="gtkassistant.html#GtkAssistant">GtkAssistant</a> * assistant)</pre>
+
+<p>Navigate to the next page.</p>
+<p>It is a programming error to call this function when
+there is no next page.</p>
+<p>This function is for use when creating pages of the
+<a href="gtkassistant.html#GTK_ASSISTANT_PAGE_CUSTOM">GTK_ASSISTANT_PAGE_CUSTOM</a> type.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>assistant</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkassistant.html#GtkAssistant">GtkAssistant</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_assistant_next_page">
+	<span><code>Gtk.prototype.next_page</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.next_page(): {
+    // javascript wrapper for 'gtk_assistant_next_page'
+}</pre>
+
+<p>Navigate to the next page.</p>
+<p>It is a programming error to call this function when
+there is no next page.</p>
+<p>This function is for use when creating pages of the
+<a href="gtkassistant.html#GTK_ASSISTANT_PAGE_CUSTOM">Gtk.AssistantPageType.CUSTOM</a> type.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>assistant</code></em></i>
+					(
+						<a title="Gtk.Assistant" href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_assistant_next_page">
+	<span><code>Gtk.Assistant.next_page</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Assistant.next_page (self):
+    #python wrapper for 'gtk_assistant_next_page'</pre>
+
+<p>Navigate to the next page.</p>
+<p>It is a programming error to call this function when
+there is no next page.</p>
+<p>This function is for use when creating pages of the
+<a href="gtkassistant.html#GTK_ASSISTANT_PAGE_CUSTOM">Gtk.AssistantPageType.CUSTOM</a> type.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>assistant</code></em></i>
+					(
+						<a title="Gtk.Assistant" href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_assistant_previous_page">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_assistant_previous_page">
+	<span><code>gtk_assistant_previous_page</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_assistant_previous_page (<a title="GtkAssistant" href="gtkassistant.html#GtkAssistant">GtkAssistant</a> * assistant)</pre>
+
+<p>Navigate to the previous visited page.</p>
+<p>It is a programming error to call this function when
+no previous page is available.</p>
+<p>This function is for use when creating pages of the
+<a href="gtkassistant.html#GTK_ASSISTANT_PAGE_CUSTOM">GTK_ASSISTANT_PAGE_CUSTOM</a> type.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>assistant</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkassistant.html#GtkAssistant">GtkAssistant</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_assistant_previous_page">
+	<span><code>Gtk.prototype.previous_page</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.previous_page(): {
+    // javascript wrapper for 'gtk_assistant_previous_page'
+}</pre>
+
+<p>Navigate to the previous visited page.</p>
+<p>It is a programming error to call this function when
+no previous page is available.</p>
+<p>This function is for use when creating pages of the
+<a href="gtkassistant.html#GTK_ASSISTANT_PAGE_CUSTOM">Gtk.AssistantPageType.CUSTOM</a> type.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>assistant</code></em></i>
+					(
+						<a title="Gtk.Assistant" href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_assistant_previous_page">
+	<span><code>Gtk.Assistant.previous_page</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Assistant.previous_page (self):
+    #python wrapper for 'gtk_assistant_previous_page'</pre>
+
+<p>Navigate to the previous visited page.</p>
+<p>It is a programming error to call this function when
+no previous page is available.</p>
+<p>This function is for use when creating pages of the
+<a href="gtkassistant.html#GTK_ASSISTANT_PAGE_CUSTOM">Gtk.AssistantPageType.CUSTOM</a> type.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>assistant</code></em></i>
+					(
+						<a title="Gtk.Assistant" href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+
+</div>
+
+
+        
+
+            <h2 class="symbol_section">Enumerations</h2>
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="GtkAssistantPageType">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h3 data-hotdoc-id="GtkAssistantPageType">
+	<span><code>GtkAssistantPageType</code></span>
+</h3>
+
+
+<p>An enum for determining the page role inside the <a href="gtkassistant.html#GtkAssistant">GtkAssistant</a>. It's
+used to handle buttons sensitivity and visibility.</p>
+<p>Note that an assistant needs to end its page flow with a page of type
+<a href="gtkassistant.html#GTK_ASSISTANT_PAGE_CONFIRM">GTK_ASSISTANT_PAGE_CONFIRM</a>, <a href="gtkassistant.html#GTK_ASSISTANT_PAGE_SUMMARY">GTK_ASSISTANT_PAGE_SUMMARY</a> or
+<a href="gtkassistant.html#GTK_ASSISTANT_PAGE_PROGRESS">GTK_ASSISTANT_PAGE_PROGRESS</a> to be correct.</p>
+<p>The Cancel button will only be shown if the page isn’t “committed”.
+See <a href="gtkassistant.html#gtk_assistant_commit">gtk_assistant_commit</a> for details.</p>
+
+
+
+
+	<div class="members-container">
+		<h4>Members</h4>
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_ASSISTANT_PAGE_CONTENT">
+	<div>
+		<i><em><code>GTK_ASSISTANT_PAGE_CONTENT</code></em></i>
+		(<span class="value">0</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_ASSISTANT_PAGE_INTRO">
+	<div>
+		<i><em><code>GTK_ASSISTANT_PAGE_INTRO</code></em></i>
+		(<span class="value">1</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_ASSISTANT_PAGE_CONFIRM">
+	<div>
+		<i><em><code>GTK_ASSISTANT_PAGE_CONFIRM</code></em></i>
+		(<span class="value">2</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_ASSISTANT_PAGE_SUMMARY">
+	<div>
+		<i><em><code>GTK_ASSISTANT_PAGE_SUMMARY</code></em></i>
+		(<span class="value">3</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_ASSISTANT_PAGE_PROGRESS">
+	<div>
+		<i><em><code>GTK_ASSISTANT_PAGE_PROGRESS</code></em></i>
+		(<span class="value">4</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_ASSISTANT_PAGE_CUSTOM">
+	<div>
+		<i><em><code>GTK_ASSISTANT_PAGE_CUSTOM</code></em></i>
+		(<span class="value">5</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h3 data-hotdoc-id="GtkAssistantPageType">
+	<span><code>Gtk.AssistantPageType</code></span>
+</h3>
+
+
+<p>An enum for determining the page role inside the <a href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a>. It's
+used to handle buttons sensitivity and visibility.</p>
+<p>Note that an assistant needs to end its page flow with a page of type
+<a href="gtkassistant.html#GTK_ASSISTANT_PAGE_CONFIRM">Gtk.AssistantPageType.CONFIRM</a>, <a href="gtkassistant.html#GTK_ASSISTANT_PAGE_SUMMARY">Gtk.AssistantPageType.SUMMARY</a> or
+<a href="gtkassistant.html#GTK_ASSISTANT_PAGE_PROGRESS">Gtk.AssistantPageType.PROGRESS</a> to be correct.</p>
+<p>The Cancel button will only be shown if the page isn’t “committed”.
+See <a href="gtkassistant.html#gtk_assistant_commit">Gtk.prototype.commit</a> for details.</p>
+
+
+
+
+	<div class="members-container">
+		<h4>Members</h4>
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_ASSISTANT_PAGE_CONTENT">
+	<div>
+		<i><em><code>Gtk.AssistantPageType.CONTENT</code></em></i>
+		(<span class="value">0</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_ASSISTANT_PAGE_INTRO">
+	<div>
+		<i><em><code>Gtk.AssistantPageType.INTRO</code></em></i>
+		(<span class="value">1</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_ASSISTANT_PAGE_CONFIRM">
+	<div>
+		<i><em><code>Gtk.AssistantPageType.CONFIRM</code></em></i>
+		(<span class="value">2</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_ASSISTANT_PAGE_SUMMARY">
+	<div>
+		<i><em><code>Gtk.AssistantPageType.SUMMARY</code></em></i>
+		(<span class="value">3</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_ASSISTANT_PAGE_PROGRESS">
+	<div>
+		<i><em><code>Gtk.AssistantPageType.PROGRESS</code></em></i>
+		(<span class="value">4</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_ASSISTANT_PAGE_CUSTOM">
+	<div>
+		<i><em><code>Gtk.AssistantPageType.CUSTOM</code></em></i>
+		(<span class="value">5</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="GtkAssistantPageType">
+	<span><code>Gtk.AssistantPageType</code></span>
+</h3>
+
+
+<p>An enum for determining the page role inside the <a href="gtkassistant.html#GtkAssistant">Gtk.Assistant</a>. It's
+used to handle buttons sensitivity and visibility.</p>
+<p>Note that an assistant needs to end its page flow with a page of type
+<a href="gtkassistant.html#GTK_ASSISTANT_PAGE_CONFIRM">Gtk.AssistantPageType.CONFIRM</a>, <a href="gtkassistant.html#GTK_ASSISTANT_PAGE_SUMMARY">Gtk.AssistantPageType.SUMMARY</a> or
+<a href="gtkassistant.html#GTK_ASSISTANT_PAGE_PROGRESS">Gtk.AssistantPageType.PROGRESS</a> to be correct.</p>
+<p>The Cancel button will only be shown if the page isn’t “committed”.
+See <a href="gtkassistant.html#gtk_assistant_commit">Gtk.Assistant.commit</a> for details.</p>
+
+
+
+
+	<div class="members-container">
+		<h4>Members</h4>
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_ASSISTANT_PAGE_CONTENT">
+	<div>
+		<i><em><code>Gtk.AssistantPageType.CONTENT</code></em></i>
+		(<span class="value">0</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_ASSISTANT_PAGE_INTRO">
+	<div>
+		<i><em><code>Gtk.AssistantPageType.INTRO</code></em></i>
+		(<span class="value">1</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_ASSISTANT_PAGE_CONFIRM">
+	<div>
+		<i><em><code>Gtk.AssistantPageType.CONFIRM</code></em></i>
+		(<span class="value">2</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_ASSISTANT_PAGE_SUMMARY">
+	<div>
+		<i><em><code>Gtk.AssistantPageType.SUMMARY</code></em></i>
+		(<span class="value">3</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_ASSISTANT_PAGE_PROGRESS">
+	<div>
+		<i><em><code>Gtk.AssistantPageType.PROGRESS</code></em></i>
+		(<span class="value">4</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_ASSISTANT_PAGE_CUSTOM">
+	<div>
+		<i><em><code>Gtk.AssistantPageType.CUSTOM</code></em></i>
+		(<span class="value">5</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+
+</div>
+
+
+            <h2 class="symbol_section">Callbacks</h2>
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="GtkAssistantPageFunc">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h3 data-hotdoc-id="GtkAssistantPageFunc">
+	<span><code>GtkAssistantPageFunc</code></span>
+</h3>
+
+
+
+
+<pre class="c-prototype">
+<a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a>
+(*GtkAssistantPageFunc) (<a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> current_page,
+                         <a title="gpointer" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer">gpointer</a> data)</pre>
+
+<p>A function used by <a href="gtkassistant.html#gtk_assistant_set_forward_page_func">gtk_assistant_set_forward_page_func</a> to know which
+is the next page given a current one. It’s called both for computing the
+next page when the user presses the “forward” button and for handling
+the behavior of the “last” button.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>current_page</code></em></i>
+				–
+	</div>
+			<p>The page number used to calculate the next page.</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>data</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="This parameter is a closure for callbacks, many bindings can pass NULL here"><span class="acronym">closure</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>user data.</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>The next page number.</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h3 data-hotdoc-id="GtkAssistantPageFunc">
+	<span><code>Gtk.AssistantPageFunc</code></span>
+</h3>
+
+
+
+
+<pre class="c-prototype">
+<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+(*Gtk.AssistantPageFunc) (<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>,
+                          <a title="Object" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</pre>
+
+<p>A function used by <a href="gtkassistant.html#gtk_assistant_set_forward_page_func">Gtk.prototype.set_forward_page_func</a> to know which
+is the next page given a current one. It’s called both for computing the
+next page when the user presses the “forward” button and for handling
+the behavior of the “last” button.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>current_page</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>The page number used to calculate the next page.</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>data</code></em></i>
+					(
+						<a title="Object" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>
+						)
+				–
+	</div>
+			<p>user data.</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p>The next page number.</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="GtkAssistantPageFunc">
+	<span><code>Gtk.AssistantPageFunc</code></span>
+</h3>
+
+
+
+
+<pre class="c-prototype">
+<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+(*Gtk.AssistantPageFunc) (<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>,
+                          <a title="object" href="https://docs.python.org/3/library/functions.html#object">object</a>)</pre>
+
+<p>A function used by <a href="gtkassistant.html#gtk_assistant_set_forward_page_func">Gtk.Assistant.set_forward_page_func</a> to know which
+is the next page given a current one. It’s called both for computing the
+next page when the user presses the “forward” button and for handling
+the behavior of the “last” button.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>current_page</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>The page number used to calculate the next page.</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>data</code></em></i>
+					(
+						<a title="object" href="https://docs.python.org/3/library/functions.html#object">object</a>
+						)
+				–
+	</div>
+			<p>user data.</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+										)
+								–
+			</div>
+							<p>The next page number.</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+
+
+
+
+
+		
+	</div>
+	<div id="search_results">
+		<p>The results of the search are</p>
+	</div>
+	<hr>
+	<div id="footer">
+		    
+
+	</div>
+</div>
+
+<div id="toc-column">
+	
+		<div class="edit-button">
+		
+
+	</div>
+		<div id="toc-wrapper">
+		<nav id="toc"></nav>
+	</div>
+</div>
+</div>
+</main>
+
+</body>
+
+<script src="assets/js/navbar_offset_scroller.js"></script>
+</html>

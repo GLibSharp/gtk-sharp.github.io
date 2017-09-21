@@ -1,0 +1,1383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<base href="..">
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>gtkeventcontroller</title>
+
+<link rel="stylesheet" href="assets/css/custom_bootstrap.css" type="text/css">
+<link rel="stylesheet" href="assets/css/bootstrap-toc.min.css" type="text/css">
+<link rel="stylesheet" href="assets/css/frontend.css" type="text/css">
+<link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
+
+<link rel="stylesheet" href="assets/css/prism.css" type="text/css">
+
+<script src="assets/js/mustache.min.js"></script>
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/scrollspy.js"></script>
+<script src="assets/js/bootstrap.js"></script>
+<script src="assets/js/typeahead.jquery.min.js"></script>
+<script src="assets/js/search.js"></script>
+<script src="assets/js/isotope.pkgd.min.js"></script>
+<script src="assets/js/compare-versions.js"></script>
+<script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="assets/js/bootstrap-toc.min.js"></script>
+<script src="assets/js/jquery.touchSwipe.min.js"></script>
+<script src="assets/js/anchor.min.js"></script>
+<script src="assets/js/tag_filtering.js"></script>
+<script src="assets/js/language_switching.js"></script>
+
+<script src="assets/js/lines_around_headings.js"></script>
+
+<script src="assets/js/prism-core.js"></script>
+<script src="assets/js/prism-autoloader.js"></script>
+<script src="assets/js/prism_autoloader_path_override.js"></script>
+<script src="assets/js/trie.js"></script>
+
+
+</head>
+
+<body class="no-script
+" data-spy="scroll" data-target="#toc" data-offset="70">
+
+<script>
+$('body').removeClass('no-script');
+</script>
+
+<nav class="navbar navbar-fixed-top navbar-default" id="topnav">
+	<div class="container-fluid">
+		<div class="navbar-right">
+			<a id="toc-toggle">
+				<span class="glyphicon glyphicon-menu-right"></span>
+				<span class="glyphicon glyphicon-menu-left"></span>
+			</a>
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-wrapper" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<form action="" class="navbar-form pull-right" id="navbar-search-form">
+                               <div class="form-group has-feedback">
+                                       <input type="text" class="form-control input-sm" name="search" id="sidenav-lookup-field" placeholder="search" disabled>
+				       <span class="glyphicon glyphicon-search form-control-feedback" id="search-mgn-glass"></span>
+                               </div>
+                        </form>
+		</div>
+		<div class="navbar-header">
+			<a id="sidenav-toggle">
+				<span class="glyphicon glyphicon-menu-right"></span>
+				<span class="glyphicon glyphicon-menu-left"></span>
+			</a>
+			<a id="home-link" href="index.html" class="hotdoc-navbar-brand">
+				<img src="assets/images/home.svg" alt="Home">
+			</a>
+		</div>
+		<div class="navbar-collapse collapse" id="navbar-wrapper">
+			<ul class="nav navbar-nav" id="menu">
+							</ul>
+			<div class="hidden-xs hidden-sm navbar-text navbar-center">
+							</div>
+		</div>
+	</div>
+</nav>
+
+<main>
+<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="hotdoc_markdown/gtkeventcontroller.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['c', 'javascript', 'python']" data-hotdoc-meta-gi-language="c">
+<script src="assets/js/utils.js"></script>
+
+<div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
+	<script src="assets/js/navigation.js"></script>
+	<script src="assets/js/sitemap.js"></script>
+</div>
+
+<div id="body">
+	<div id="main">
+				    <div id="page-description" data-hotdoc-source="gtkeventcontroller.markdown" data-hotdoc-role="main">
+    </div>
+        
+        
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="GtkEventController">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h2 data-hotdoc-id="GtkEventController">
+	<span><code>GtkEventController</code></span>
+</h2>
+
+
+<div class="hierarchy_container">
+	<div class="hierarchy_details">
+<pre>
+<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object">GObject</a>
+    <span class="lineart">╰──</span>GtkEventController
+        <span class="lineart">╰──</span><a title="GtkEventControllerScroll" href="Miscellaneous.html#GtkEventControllerScroll" data-gi-href-python="Miscellaneous.html#GtkEventControllerScroll" data-gi-title-python="Gtk.EventControllerScroll" data-gi-href-javascript="Miscellaneous.html#GtkEventControllerScroll" data-gi-title-javascript="Gtk.EventControllerScroll">GtkEventControllerScroll</a>
+        <span class="lineart">╰──</span><a title="GtkGesture" href="hotdoc_markdown/gtkgesture.html#GtkGesture" data-gi-href-python="hotdoc_markdown/gtkgesture.html#GtkGesture" data-gi-title-python="Gtk.Gesture" data-gi-href-javascript="hotdoc_markdown/gtkgesture.html#GtkGesture" data-gi-title-javascript="Gtk.Gesture">GtkGesture</a>
+        <span class="lineart">╰──</span><a title="GtkPadController" href="hotdoc_markdown/gtkpadcontroller.html#GtkPadController" data-gi-href-python="hotdoc_markdown/gtkpadcontroller.html#GtkPadController" data-gi-title-python="Gtk.PadController" data-gi-href-javascript="hotdoc_markdown/gtkpadcontroller.html#GtkPadController" data-gi-title-javascript="Gtk.PadController">GtkPadController</a>
+</pre>
+
+</div>
+
+</div>
+
+
+
+
+
+
+<h3>Class structure</h3>
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="GtkEventControllerClass">
+	<span><code>GtkEventControllerClass</code></span>
+</h4>
+
+
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h3>
+	Gtk.EventControllerClass
+</h3>
+
+
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3>
+	Gtk.EventControllerClass
+</h3>
+
+
+
+
+
+
+
+        </div>
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h2 data-hotdoc-id="GtkEventController">
+	<span><code>GtkEventController</code></span>
+</h2>
+
+
+<div class="hierarchy_container">
+	<div class="hierarchy_details">
+<pre>
+<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object">GObject</a>
+    <span class="lineart">╰──</span>GtkEventController
+        <span class="lineart">╰──</span><a title="GtkEventControllerScroll" href="Miscellaneous.html#GtkEventControllerScroll" data-gi-href-python="Miscellaneous.html#GtkEventControllerScroll" data-gi-title-python="Gtk.EventControllerScroll" data-gi-href-javascript="Miscellaneous.html#GtkEventControllerScroll" data-gi-title-javascript="Gtk.EventControllerScroll">GtkEventControllerScroll</a>
+        <span class="lineart">╰──</span><a title="GtkGesture" href="hotdoc_markdown/gtkgesture.html#GtkGesture" data-gi-href-python="hotdoc_markdown/gtkgesture.html#GtkGesture" data-gi-title-python="Gtk.Gesture" data-gi-href-javascript="hotdoc_markdown/gtkgesture.html#GtkGesture" data-gi-title-javascript="Gtk.Gesture">GtkGesture</a>
+        <span class="lineart">╰──</span><a title="GtkPadController" href="hotdoc_markdown/gtkpadcontroller.html#GtkPadController" data-gi-href-python="hotdoc_markdown/gtkpadcontroller.html#GtkPadController" data-gi-title-python="Gtk.PadController" data-gi-href-javascript="hotdoc_markdown/gtkpadcontroller.html#GtkPadController" data-gi-title-javascript="Gtk.PadController">GtkPadController</a>
+</pre>
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h2 data-hotdoc-id="GtkEventController">
+	<span><code>GtkEventController</code></span>
+</h2>
+
+
+<div class="hierarchy_container">
+	<div class="hierarchy_details">
+<pre>
+<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object">GObject</a>
+    <span class="lineart">╰──</span>GtkEventController
+        <span class="lineart">╰──</span><a title="GtkEventControllerScroll" href="Miscellaneous.html#GtkEventControllerScroll" data-gi-href-python="Miscellaneous.html#GtkEventControllerScroll" data-gi-title-python="Gtk.EventControllerScroll" data-gi-href-javascript="Miscellaneous.html#GtkEventControllerScroll" data-gi-title-javascript="Gtk.EventControllerScroll">GtkEventControllerScroll</a>
+        <span class="lineart">╰──</span><a title="GtkGesture" href="hotdoc_markdown/gtkgesture.html#GtkGesture" data-gi-href-python="hotdoc_markdown/gtkgesture.html#GtkGesture" data-gi-title-python="Gtk.Gesture" data-gi-href-javascript="hotdoc_markdown/gtkgesture.html#GtkGesture" data-gi-title-javascript="Gtk.Gesture">GtkGesture</a>
+        <span class="lineart">╰──</span><a title="GtkPadController" href="hotdoc_markdown/gtkpadcontroller.html#GtkPadController" data-gi-href-python="hotdoc_markdown/gtkpadcontroller.html#GtkPadController" data-gi-title-python="Gtk.PadController" data-gi-href-javascript="hotdoc_markdown/gtkpadcontroller.html#GtkPadController" data-gi-title-javascript="Gtk.PadController">GtkPadController</a>
+</pre>
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+        </div>
+
+</div>
+
+
+            <h3 class="symbol_section">Methods</h3>
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.14;" id="gtk_event_controller_get_propagation_phase">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_event_controller_get_propagation_phase">
+	<span><code>gtk_event_controller_get_propagation_phase</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkPropagationPhase" href="hotdoc_markdown/gtkeventcontroller.html#GtkPropagationPhase">GtkPropagationPhase</a>
+gtk_event_controller_get_propagation_phase (<a title="GtkEventController" href="hotdoc_markdown/gtkeventcontroller.html#GtkEventController">GtkEventController</a> * controller)</pre>
+
+<p>Gets the propagation phase at which <em>controller</em> handles events.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>controller</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkeventcontroller.html#GtkEventController">GtkEventController</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>the propagation phase</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.14
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_event_controller_get_propagation_phase">
+	<span><code>Gtk.prototype.get_propagation_phase</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_propagation_phase(): {
+    // javascript wrapper for 'gtk_event_controller_get_propagation_phase'
+}</pre>
+
+<p>Gets the propagation phase at which <em>controller</em> handles events.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>controller</code></em></i>
+					(
+						<a title="Gtk.EventController" href="hotdoc_markdown/gtkeventcontroller.html#GtkEventController">Gtk.EventController</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkeventcontroller.html#GtkEventController">Gtk.EventController</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.PropagationPhase" href="hotdoc_markdown/gtkeventcontroller.html#GtkPropagationPhase">Gtk.PropagationPhase</a>
+										)
+								–
+			</div>
+							<p>the propagation phase</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.14
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_event_controller_get_propagation_phase">
+	<span><code>Gtk.EventController.get_propagation_phase</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.EventController.get_propagation_phase (self):
+    #python wrapper for 'gtk_event_controller_get_propagation_phase'</pre>
+
+<p>Gets the propagation phase at which <em>controller</em> handles events.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>controller</code></em></i>
+					(
+						<a title="Gtk.EventController" href="hotdoc_markdown/gtkeventcontroller.html#GtkEventController">Gtk.EventController</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkeventcontroller.html#GtkEventController">Gtk.EventController</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.PropagationPhase" href="hotdoc_markdown/gtkeventcontroller.html#GtkPropagationPhase">Gtk.PropagationPhase</a>
+										)
+								–
+			</div>
+							<p>the propagation phase</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.14
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.14;" id="gtk_event_controller_set_propagation_phase">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_event_controller_set_propagation_phase">
+	<span><code>gtk_event_controller_set_propagation_phase</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_event_controller_set_propagation_phase (<a title="GtkEventController" href="hotdoc_markdown/gtkeventcontroller.html#GtkEventController">GtkEventController</a> * controller,
+                                            <a title="GtkPropagationPhase" href="hotdoc_markdown/gtkeventcontroller.html#GtkPropagationPhase">GtkPropagationPhase</a> phase)</pre>
+
+<p>Sets the propagation phase at which a controller handles events.</p>
+<p>If <em>phase</em> is <a href="gtkenums.html#GTK_PHASE_NONE">GTK_PHASE_NONE</a>, no automatic event handling will be
+performed, but other additional gesture maintenance will. In that phase,
+the events can be managed by calling <a href="hotdoc_markdown/gtkeventcontroller.html#gtk_event_controller_handle_event">gtk_event_controller_handle_event</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>controller</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkeventcontroller.html#GtkEventController">GtkEventController</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>phase</code></em></i>
+				–
+	</div>
+			<p>a propagation phase</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.14
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_event_controller_set_propagation_phase">
+	<span><code>Gtk.prototype.set_propagation_phase</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_propagation_phase(phase: <a title="Gtk.PropagationPhase" href="hotdoc_markdown/gtkeventcontroller.html#GtkPropagationPhase">Gtk.PropagationPhase</a>): {
+    // javascript wrapper for 'gtk_event_controller_set_propagation_phase'
+}</pre>
+
+<p>Sets the propagation phase at which a controller handles events.</p>
+<p>If <em>phase</em> is <a href="gtkenums.html#GTK_PHASE_NONE">Gtk.PropagationPhase.NONE</a>, no automatic event handling will be
+performed, but other additional gesture maintenance will. In that phase,
+the events can be managed by calling <a href="hotdoc_markdown/gtkeventcontroller.html#gtk_event_controller_handle_event">Gtk.prototype.handle_event</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>controller</code></em></i>
+					(
+						<a title="Gtk.EventController" href="hotdoc_markdown/gtkeventcontroller.html#GtkEventController">Gtk.EventController</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkeventcontroller.html#GtkEventController">Gtk.EventController</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>phase</code></em></i>
+					(
+						<a title="Gtk.PropagationPhase" href="hotdoc_markdown/gtkeventcontroller.html#GtkPropagationPhase">Gtk.PropagationPhase</a>
+						)
+				–
+	</div>
+			<p>a propagation phase</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.14
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_event_controller_set_propagation_phase">
+	<span><code>Gtk.EventController.set_propagation_phase</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.EventController.set_propagation_phase (self, phase):
+    #python wrapper for 'gtk_event_controller_set_propagation_phase'</pre>
+
+<p>Sets the propagation phase at which a controller handles events.</p>
+<p>If <em>phase</em> is <a href="gtkenums.html#GTK_PHASE_NONE">Gtk.PropagationPhase.NONE</a>, no automatic event handling will be
+performed, but other additional gesture maintenance will. In that phase,
+the events can be managed by calling <a href="hotdoc_markdown/gtkeventcontroller.html#gtk_event_controller_handle_event">Gtk.EventController.handle_event</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>controller</code></em></i>
+					(
+						<a title="Gtk.EventController" href="hotdoc_markdown/gtkeventcontroller.html#GtkEventController">Gtk.EventController</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkeventcontroller.html#GtkEventController">Gtk.EventController</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>phase</code></em></i>
+					(
+						<a title="Gtk.PropagationPhase" href="hotdoc_markdown/gtkeventcontroller.html#GtkPropagationPhase">Gtk.PropagationPhase</a>
+						)
+				–
+	</div>
+			<p>a propagation phase</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.14
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.14;" id="gtk_event_controller_handle_event">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_event_controller_handle_event">
+	<span><code>gtk_event_controller_handle_event</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_event_controller_handle_event (<a title="GtkEventController" href="hotdoc_markdown/gtkeventcontroller.html#GtkEventController">GtkEventController</a> * controller,
+                                   const GdkEvent* event)</pre>
+
+<p>Feeds an events into <em>controller</em>, so it can be interpreted
+and the controller actions triggered.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>controller</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkeventcontroller.html#GtkEventController">GtkEventController</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>event</code></em></i>
+				–
+	</div>
+			<p>a GdkEvent</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if the event was potentially useful to trigger the
+controller action</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.14
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_event_controller_handle_event">
+	<span><code>Gtk.prototype.handle_event</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.handle_event(event: Gdk.Event): {
+    // javascript wrapper for 'gtk_event_controller_handle_event'
+}</pre>
+
+<p>Feeds an events into <em>controller</em>, so it can be interpreted
+and the controller actions triggered.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>controller</code></em></i>
+					(
+						<a title="Gtk.EventController" href="hotdoc_markdown/gtkeventcontroller.html#GtkEventController">Gtk.EventController</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkeventcontroller.html#GtkEventController">Gtk.EventController</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>event</code></em></i>
+					(
+						Gdk.Event
+						)
+				–
+	</div>
+			<p>a GdkEvent</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if the event was potentially useful to trigger the
+controller action</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.14
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_event_controller_handle_event">
+	<span><code>Gtk.EventController.handle_event</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.EventController.handle_event (self, event):
+    #python wrapper for 'gtk_event_controller_handle_event'</pre>
+
+<p>Feeds an events into <em>controller</em>, so it can be interpreted
+and the controller actions triggered.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>controller</code></em></i>
+					(
+						<a title="Gtk.EventController" href="hotdoc_markdown/gtkeventcontroller.html#GtkEventController">Gtk.EventController</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkeventcontroller.html#GtkEventController">Gtk.EventController</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>event</code></em></i>
+					(
+						Gdk.Event
+						)
+				–
+	</div>
+			<p>a GdkEvent</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+										)
+								–
+			</div>
+							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if the event was potentially useful to trigger the
+controller action</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.14
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.14;" id="gtk_event_controller_get_widget">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_event_controller_get_widget">
+	<span><code>gtk_event_controller_get_widget</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkWidget" href="hotdoc_markdown/gtkwidget.html#GtkWidget">GtkWidget</a> *
+gtk_event_controller_get_widget (<a title="GtkEventController" href="hotdoc_markdown/gtkeventcontroller.html#GtkEventController">GtkEventController</a> * controller)</pre>
+
+<p>Returns the <a href="hotdoc_markdown/gtkwidget.html#GtkWidget">GtkWidget</a> this controller relates to.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>controller</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkeventcontroller.html#GtkEventController">GtkEventController</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					
+										
+<span class="annotation">[<abbr title="Don't free data after the code is done"><span class="acronym">transfer: none</span></abbr>]</span>
+
+										)
+								–
+			</div>
+							<p>a <a href="hotdoc_markdown/gtkwidget.html#GtkWidget">GtkWidget</a></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.14
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_event_controller_get_widget">
+	<span><code>Gtk.prototype.get_widget</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_widget(): {
+    // javascript wrapper for 'gtk_event_controller_get_widget'
+}</pre>
+
+<p>Returns the <a href="hotdoc_markdown/gtkwidget.html#GtkWidget">Gtk.Widget</a> this controller relates to.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>controller</code></em></i>
+					(
+						<a title="Gtk.EventController" href="hotdoc_markdown/gtkeventcontroller.html#GtkEventController">Gtk.EventController</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkeventcontroller.html#GtkEventController">Gtk.EventController</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="hotdoc_markdown/gtkwidget.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>a <a href="hotdoc_markdown/gtkwidget.html#GtkWidget">Gtk.Widget</a></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.14
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_event_controller_get_widget">
+	<span><code>Gtk.EventController.get_widget</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.EventController.get_widget (self):
+    #python wrapper for 'gtk_event_controller_get_widget'</pre>
+
+<p>Returns the <a href="hotdoc_markdown/gtkwidget.html#GtkWidget">Gtk.Widget</a> this controller relates to.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>controller</code></em></i>
+					(
+						<a title="Gtk.EventController" href="hotdoc_markdown/gtkeventcontroller.html#GtkEventController">Gtk.EventController</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkeventcontroller.html#GtkEventController">Gtk.EventController</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="hotdoc_markdown/gtkwidget.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>a <a href="hotdoc_markdown/gtkwidget.html#GtkWidget">Gtk.Widget</a></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.14
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.14;" id="gtk_event_controller_reset">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_event_controller_reset">
+	<span><code>gtk_event_controller_reset</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_event_controller_reset (<a title="GtkEventController" href="hotdoc_markdown/gtkeventcontroller.html#GtkEventController">GtkEventController</a> * controller)</pre>
+
+<p>Resets the <em>controller</em> to a clean state. Every interaction
+the controller did through gtk_event_controll_handle_event
+will be dropped at this point.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>controller</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkeventcontroller.html#GtkEventController">GtkEventController</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.14
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_event_controller_reset">
+	<span><code>Gtk.prototype.reset</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.reset(): {
+    // javascript wrapper for 'gtk_event_controller_reset'
+}</pre>
+
+<p>Resets the <em>controller</em> to a clean state. Every interaction
+the controller did through gtk_event_controll_handle_event
+will be dropped at this point.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>controller</code></em></i>
+					(
+						<a title="Gtk.EventController" href="hotdoc_markdown/gtkeventcontroller.html#GtkEventController">Gtk.EventController</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkeventcontroller.html#GtkEventController">Gtk.EventController</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.14
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_event_controller_reset">
+	<span><code>Gtk.EventController.reset</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.EventController.reset (self):
+    #python wrapper for 'gtk_event_controller_reset'</pre>
+
+<p>Resets the <em>controller</em> to a clean state. Every interaction
+the controller did through gtk_event_controll_handle_event
+will be dropped at this point.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>controller</code></em></i>
+					(
+						<a title="Gtk.EventController" href="hotdoc_markdown/gtkeventcontroller.html#GtkEventController">Gtk.EventController</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkeventcontroller.html#GtkEventController">Gtk.EventController</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.14
+		</p>
+
+
+        </div>
+
+</div>
+
+
+        
+
+            <h2 class="symbol_section">Enumerations</h2>
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.14;" id="GtkPropagationPhase">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h3 data-hotdoc-id="GtkPropagationPhase">
+	<span><code>GtkPropagationPhase</code></span>
+</h3>
+
+
+<p>Describes the stage at which events are fed into a <a href="hotdoc_markdown/gtkeventcontroller.html#GtkEventController">GtkEventController</a>.</p>
+
+
+
+
+	<div class="members-container">
+		<h4>Members</h4>
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_PHASE_NONE">
+	<div>
+		<i><em><code>GTK_PHASE_NONE</code></em></i>
+		(<span class="value">0</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_PHASE_CAPTURE">
+	<div>
+		<i><em><code>GTK_PHASE_CAPTURE</code></em></i>
+		(<span class="value">1</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_PHASE_BUBBLE">
+	<div>
+		<i><em><code>GTK_PHASE_BUBBLE</code></em></i>
+		(<span class="value">2</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_PHASE_TARGET">
+	<div>
+		<i><em><code>GTK_PHASE_TARGET</code></em></i>
+		(<span class="value">3</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h3 data-hotdoc-id="GtkPropagationPhase">
+	<span><code>Gtk.PropagationPhase</code></span>
+</h3>
+
+
+<p>Describes the stage at which events are fed into a <a href="hotdoc_markdown/gtkeventcontroller.html#GtkEventController">Gtk.EventController</a>.</p>
+
+
+
+
+	<div class="members-container">
+		<h4>Members</h4>
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_PHASE_NONE">
+	<div>
+		<i><em><code>Gtk.PropagationPhase.NONE</code></em></i>
+		(<span class="value">0</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_PHASE_CAPTURE">
+	<div>
+		<i><em><code>Gtk.PropagationPhase.CAPTURE</code></em></i>
+		(<span class="value">1</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_PHASE_BUBBLE">
+	<div>
+		<i><em><code>Gtk.PropagationPhase.BUBBLE</code></em></i>
+		(<span class="value">2</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_PHASE_TARGET">
+	<div>
+		<i><em><code>Gtk.PropagationPhase.TARGET</code></em></i>
+		(<span class="value">3</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="GtkPropagationPhase">
+	<span><code>Gtk.PropagationPhase</code></span>
+</h3>
+
+
+<p>Describes the stage at which events are fed into a <a href="hotdoc_markdown/gtkeventcontroller.html#GtkEventController">Gtk.EventController</a>.</p>
+
+
+
+
+	<div class="members-container">
+		<h4>Members</h4>
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_PHASE_NONE">
+	<div>
+		<i><em><code>Gtk.PropagationPhase.NONE</code></em></i>
+		(<span class="value">0</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_PHASE_CAPTURE">
+	<div>
+		<i><em><code>Gtk.PropagationPhase.CAPTURE</code></em></i>
+		(<span class="value">1</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_PHASE_BUBBLE">
+	<div>
+		<i><em><code>Gtk.PropagationPhase.BUBBLE</code></em></i>
+		(<span class="value">2</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_PHASE_TARGET">
+	<div>
+		<i><em><code>Gtk.PropagationPhase.TARGET</code></em></i>
+		(<span class="value">3</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+
+</div>
+
+
+
+
+
+
+		
+	</div>
+	<div id="search_results">
+		<p>The results of the search are</p>
+	</div>
+	<hr>
+	<div id="footer">
+		    
+
+	</div>
+</div>
+
+<div id="toc-column">
+	
+		<div class="edit-button">
+		
+
+	</div>
+		<div id="toc-wrapper">
+		<nav id="toc"></nav>
+	</div>
+</div>
+</div>
+</main>
+
+</body>
+
+<script src="assets/js/navbar_offset_scroller.js"></script>
+</html>

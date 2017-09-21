@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<base href="..">
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>Mailing lists and bug reports</title>
+
+<link rel="stylesheet" href="assets/css/custom_bootstrap.css" type="text/css">
+<link rel="stylesheet" href="assets/css/bootstrap-toc.min.css" type="text/css">
+<link rel="stylesheet" href="assets/css/frontend.css" type="text/css">
+<link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
+
+<link rel="stylesheet" href="assets/css/prism.css" type="text/css">
+
+<script src="assets/js/mustache.min.js"></script>
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/scrollspy.js"></script>
+<script src="assets/js/bootstrap.js"></script>
+<script src="assets/js/typeahead.jquery.min.js"></script>
+<script src="assets/js/search.js"></script>
+<script src="assets/js/isotope.pkgd.min.js"></script>
+<script src="assets/js/compare-versions.js"></script>
+<script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="assets/js/bootstrap-toc.min.js"></script>
+<script src="assets/js/jquery.touchSwipe.min.js"></script>
+<script src="assets/js/anchor.min.js"></script>
+<script src="assets/js/tag_filtering.js"></script>
+<script src="assets/js/language_switching.js"></script>
+
+<script src="assets/js/lines_around_headings.js"></script>
+
+<script src="assets/js/prism-core.js"></script>
+<script src="assets/js/prism-autoloader.js"></script>
+<script src="assets/js/prism_autoloader_path_override.js"></script>
+<script src="assets/js/trie.js"></script>
+
+
+</head>
+
+<body class="no-script
+" data-spy="scroll" data-target="#toc" data-offset="70">
+
+<script>
+$('body').removeClass('no-script');
+</script>
+
+<nav class="navbar navbar-fixed-top navbar-default" id="topnav">
+	<div class="container-fluid">
+		<div class="navbar-right">
+			<a id="toc-toggle">
+				<span class="glyphicon glyphicon-menu-right"></span>
+				<span class="glyphicon glyphicon-menu-left"></span>
+			</a>
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-wrapper" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<form action="" class="navbar-form pull-right" id="navbar-search-form">
+                               <div class="form-group has-feedback">
+                                       <input type="text" class="form-control input-sm" name="search" id="sidenav-lookup-field" placeholder="search" disabled>
+				       <span class="glyphicon glyphicon-search form-control-feedback" id="search-mgn-glass"></span>
+                               </div>
+                        </form>
+		</div>
+		<div class="navbar-header">
+			<a id="sidenav-toggle">
+				<span class="glyphicon glyphicon-menu-right"></span>
+				<span class="glyphicon glyphicon-menu-left"></span>
+			</a>
+			<a id="home-link" href="index.html" class="hotdoc-navbar-brand">
+				<img src="assets/images/home.svg" alt="Home">
+			</a>
+		</div>
+		<div class="navbar-collapse collapse" id="navbar-wrapper">
+			<ul class="nav navbar-nav" id="menu">
+							</ul>
+			<div class="hidden-xs hidden-sm navbar-text navbar-center">
+							</div>
+		</div>
+	</div>
+</nav>
+
+<main>
+<div data-extension="core" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="hotdoc_markdown/resources.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['c', 'javascript', 'python']">
+<script src="assets/js/utils.js"></script>
+
+<div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
+	<script src="assets/js/navigation.js"></script>
+	<script src="assets/js/sitemap.js"></script>
+</div>
+
+<div id="body">
+	<div id="main">
+				    <div id="page-description" data-hotdoc-source="resources.markdown" data-hotdoc-role="main">
+        <h1 id="filing-a-bug-report-or-feature-request">Filing a bug report or feature request</h1>
+<p>If you encounter a bug, misfeature, or missing feature in GTK+, please
+file a bug report on <a href="https://bugzilla.gnome.org">https://bugzilla.gnome.org</a>. We'd also appreciate
+reports of incomplete or misleading information in the GTK+
+documentation; file those against the "docs" component of the "gtk+"
+product in Bugzilla.</p>
+<p>Don't hesitate to file a bug report, even if you think we may know about
+it already, or aren't sure of the details. Just give us as much
+information as you have, and if it's already fixed or has already been
+discussed, we'll add a note to that effect in the report.</p>
+<p>The bug tracker should definitely be used for feature requests, it's not
+only for bugs. We track all GTK+ development in Bugzilla, so it's the
+way to be sure the GTK+ developers won't forget about an issue.</p>
+<h1 id="submitting-patches">Submitting Patches</h1>
+<p>If you develop a bugfix or enhancement for GTK+, please file that in
+Bugzilla as well. Bugzilla allows you to attach files; please attach a
+patch generated by the <code>diff</code> utility, using the <code>-u</code> option to make the
+patch more readable. All patches must be offered under the terms of the
+GNU LGPL license, so be sure you are authorized to give us the patch
+under those terms.</p>
+<p>If you want to discuss your patch before or after developing it, mail
+<a href="mailto:gtk-devel-list@gnome.org">gtk-devel-list@gnome.org</a>. But be sure to file the Bugzilla report as
+well; if the patch is only on the list and not in Bugzilla, it's likely
+to slip through the cracks.</p>
+<h1 id="mailing-lists">Mailing lists</h1>
+<p>There are several mailing lists dedicated to GTK+ and related libraries.
+Discussion of GLib, Pango, and ATK in addition to GTK+ proper is welcome
+on these lists. You can subscribe or view the archives of these lists on
+<a href="https://mail.gnome.org">http://mail.gnome.org</a>. If you aren't
+subscribed to the list, any message you post to the list will be held
+for manual moderation, which might take some days to happen.</p>
+<ul>
+<li>
+<p><a href="mailto:gtk-list@gnome.org">gtk-list@gnome.org</a><br>
+gtk-list covers general GTK+ topics; questions about using GTK+ in
+programs, GTK+ from a user standpoint, announcements of GTK+-related
+projects such as themes or GTK+ modules would all be on-topic. The
+bulk of the traffic consists of GTK+ programming questions.</p>
+</li>
+<li>
+<p><a href="mailto:gtk-app-devel-list@gnome.org">gtk-app-devel-list@gnome.org</a><br>
+gtk-app-devel-list covers writing applications in GTK+. It's
+narrower in scope than gtk-list, but the two lists overlap quite a
+bit. gtk-app-devel-list is a good place to ask questions about GTK+
+programming.</p>
+</li>
+<li>
+<p><a href="mailto:gtk-devel-list@gnome.org">gtk-devel-list@gnome.org</a><br>
+gtk-devel-list is for discussion of work on GTK+ itself, it is <em>not</em>
+for asking questions about how to use GTK+ in applications.
+gtk-devel-list is appropriate for discussion of patches, bugs,
+proposed features, and so on.</p>
+</li>
+<li>
+<p><a href="mailto:gtk-i18n-list@gnome.org">gtk-i18n-list@gnome.org</a><br>
+gtk-i18n-list is for discussion of internationalization in GTK+;
+Pango is the main focus of the list. Questions about the details of
+using Pango, and discussion of proposed Pango patches or features,
+are all on topic.</p>
+</li>
+<li>
+<p><a href="mailto:gtk-doc-list@gnome.org">gtk-doc-list@gnome.org</a><br>
+gtk-doc-list is for discussion of the gtk-doc documentation system
+(used to document GTK+), and for work on the GTK+ documentation.</p>
+</li>
+</ul>
+
+    </div>
+        
+
+
+
+
+		
+	</div>
+	<div id="search_results">
+		<p>The results of the search are</p>
+	</div>
+	<hr>
+	<div id="footer">
+		    
+
+	</div>
+</div>
+
+<div id="toc-column">
+	
+		<div class="edit-button">
+		
+
+	</div>
+		<div id="toc-wrapper">
+		<nav id="toc"></nav>
+	</div>
+</div>
+</div>
+</main>
+
+</body>
+
+<script src="assets/js/navbar_offset_scroller.js"></script>
+</html>

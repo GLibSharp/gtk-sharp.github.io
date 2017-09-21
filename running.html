@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<base href=".">
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>Running GTK+ Applications</title>
+
+<link rel="stylesheet" href="assets/css/custom_bootstrap.css" type="text/css">
+<link rel="stylesheet" href="assets/css/bootstrap-toc.min.css" type="text/css">
+<link rel="stylesheet" href="assets/css/frontend.css" type="text/css">
+<link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
+
+<link rel="stylesheet" href="assets/css/prism.css" type="text/css">
+
+<script src="assets/js/mustache.min.js"></script>
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/scrollspy.js"></script>
+<script src="assets/js/bootstrap.js"></script>
+<script src="assets/js/typeahead.jquery.min.js"></script>
+<script src="assets/js/search.js"></script>
+<script src="assets/js/isotope.pkgd.min.js"></script>
+<script src="assets/js/compare-versions.js"></script>
+<script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="assets/js/bootstrap-toc.min.js"></script>
+<script src="assets/js/jquery.touchSwipe.min.js"></script>
+<script src="assets/js/anchor.min.js"></script>
+<script src="assets/js/tag_filtering.js"></script>
+<script src="assets/js/language_switching.js"></script>
+
+<script src="assets/js/lines_around_headings.js"></script>
+
+<script src="assets/js/prism-core.js"></script>
+<script src="assets/js/prism-autoloader.js"></script>
+<script src="assets/js/prism_autoloader_path_override.js"></script>
+<script src="assets/js/trie.js"></script>
+
+
+</head>
+
+<body class="no-script
+" data-spy="scroll" data-target="#toc" data-offset="70">
+
+<script>
+$('body').removeClass('no-script');
+</script>
+
+<nav class="navbar navbar-fixed-top navbar-default" id="topnav">
+	<div class="container-fluid">
+		<div class="navbar-right">
+			<a id="toc-toggle">
+				<span class="glyphicon glyphicon-menu-right"></span>
+				<span class="glyphicon glyphicon-menu-left"></span>
+			</a>
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-wrapper" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<form action="" class="navbar-form pull-right" id="navbar-search-form">
+                               <div class="form-group has-feedback">
+                                       <input type="text" class="form-control input-sm" name="search" id="sidenav-lookup-field" placeholder="search" disabled>
+				       <span class="glyphicon glyphicon-search form-control-feedback" id="search-mgn-glass"></span>
+                               </div>
+                        </form>
+		</div>
+		<div class="navbar-header">
+			<a id="sidenav-toggle">
+				<span class="glyphicon glyphicon-menu-right"></span>
+				<span class="glyphicon glyphicon-menu-left"></span>
+			</a>
+			<a id="home-link" href="index.html" class="hotdoc-navbar-brand">
+				<img src="assets/images/home.svg" alt="Home">
+			</a>
+		</div>
+		<div class="navbar-collapse collapse" id="navbar-wrapper">
+			<ul class="nav navbar-nav" id="menu">
+							</ul>
+			<div class="hidden-xs hidden-sm navbar-text navbar-center">
+							</div>
+		</div>
+	</div>
+</nav>
+
+<main>
+<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="running.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['c', 'javascript', 'python']" data-hotdoc-meta-gi-language="c">
+<script src="assets/js/utils.js"></script>
+
+<div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
+	<script src="assets/js/navigation.js"></script>
+	<script src="assets/js/sitemap.js"></script>
+</div>
+
+<div id="body">
+	<div id="main">
+				    <div id="page-description" data-hotdoc-source="running.markdown" data-hotdoc-role="main">
+        <h1 id="running-and-debugging-gtk-applications">Running and debugging GTK+ Applications</h1>
+<h2 id="common-commandline-options">Common commandline options</h2>
+<p>All GTK+ applications support a number of standard commandline options.
+These are removed from <code>argv</code> by gtk_init(). Modules may parse and
+remove further options. The
+<a href="x11.html#x11-specific-commandline-options">X11</a> and
+<a href="windows.html#windows-specific-commandline-options">Windows</a> GDK
+backends parse some additional commandline options.</p>
+<p><strong>--gtk-module module.</strong></p>
+<p>A list of modules to load in addition to those specified in the
+GTK3_MODULES environment variable and the <code>gtk-modules</code> setting.</p>
+<p><strong>--g-fatal-warnings.</strong></p>
+<p>Make GTK+ abort on all warnings. This is useful to stop on the first
+warning in a debugger, if your application is printing multiple
+warnings. It's almost always best to start debugging with the first
+warning that occurs.</p>
+<p><strong>--gtk-debug options.</strong></p>
+<p>A list of <a href="running.html#gtk_debug">debug options</a> to turn on in
+addition to those specified in the GTK_DEBUG environment variable. This
+option is not available if GTK+ has been configured with
+<code>--enable-debug=no</code>.</p>
+<p><strong>--gtk-no-debug options.</strong></p>
+<p>A list of <a href="running.html#gtk_debug">debug options</a> to turn off. This
+option is only available if GTK+ has been configured with
+<code>--enable-debug=yes</code>.</p>
+<p>The following options are really used by GDK, not by GTK+, but we list
+them here for completeness nevertheless.</p>
+<p><strong>--class class.</strong></p>
+<p>Sets the program class; see gdk_set_program_class().</p>
+<p><strong>--name name.</strong></p>
+<p>Sets the program name.</p>
+<p><strong>--gdk-debug options.</strong></p>
+<p>A list of <a href="running.html#gdk_debug">debug options</a> to turn on in
+addition to those specified in the GDK_DEBUG environment variable. This
+option is only available if GTK+ has been configured with
+<code>--enable-debug=yes</code>.</p>
+<p><strong>--gdk-no-debug options.</strong></p>
+<p>A list of <a href="running.html#gdk_debug">debug options</a> to turn off. This
+option is only available if GTK+ has been configured with
+<code>--enable-debug=yes</code>.</p>
+<h2 id="environment-variables">Environment variables</h2>
+<p>GTK+ inspects a number of environment variables in addition to standard
+variables like LANG, PATH, HOME or DISPLAY; mostly to determine paths to
+look for certain files. The
+<a href="x11.html#x11-specific-environment-variables">X11</a>,
+<a href="windows.html#windows-specific-environment-variables">Windows</a> and
+<a href="broadway.html#broadway-specific-environment-variables">Broadway</a>
+GDK backends use some additional environment variables.</p>
+<p><strong>GTK_DEBUG.</strong></p>
+<p>Unless GTK+ has been configured with <code>--enable-debug=no</code>, this variable
+can be set to a list of debug options, which cause GTK+ to print out
+different types of debugging information.</p>
+<ul>
+<li>
+<p>actions<br>
+Actions and menu models</p>
+</li>
+<li>
+<p>baselines<br>
+Show baselines</p>
+</li>
+<li>
+<p>builder<br>
+GtkBuilder support</p>
+</li>
+<li>
+<p>geometry<br>
+Size allocation</p>
+</li>
+<li>
+<p>icontheme<br>
+Icon themes</p>
+</li>
+<li>
+<p>interactive<br>
+Open the <a href="running.html#interactive-debugging">interactive
+debugger</a></p>
+</li>
+<li>
+<p>keybindings<br>
+Keybindings</p>
+</li>
+<li>
+<p>misc<br>
+Miscellaneous information</p>
+</li>
+<li>
+<p>modules<br>
+Loading of modules</p>
+</li>
+<li>
+<p>no-css-cache<br>
+Bypass caching for CSS style properties</p>
+</li>
+<li>
+<p>printing<br>
+Printing support</p>
+</li>
+<li>
+<p>size-request<br>
+Size requests</p>
+</li>
+<li>
+<p>text<br>
+Text widget internals</p>
+</li>
+<li>
+<p>touchscreen<br>
+Pretend the pointer is a touchscreen device</p>
+</li>
+<li>
+<p>tree<br>
+Tree widget internals</p>
+</li>
+<li>
+<p>updates<br>
+Visual feedback about window updates</p>
+</li>
+<li>
+<p>resize<br>
+Highlight resizing widgets</p>
+</li>
+<li>
+<p>layout<br>
+Show layout borders</p>
+</li>
+<li>
+<p>snapshot<br>
+Include debug render nodes in the generated snapshots</p>
+</li>
+</ul>
+<p>The special value <code>all</code> can be used to turn on all debug options. The
+special value <code>help</code> can be used to obtain a list of all supported debug
+options.</p>
+<p><strong>GTK3_MODULES.</strong></p>
+<p>A list of modules to load. Note that GTK+ also allows to specify modules
+to load via a commandline option (<code>--gtk-module</code>) and with the
+<code>gtk-modules</code> setting.</p>
+<p><strong>GTK_MODULES.</strong></p>
+<p>A list of modules to load in addition to the ones in the GTK3_MODULES
+variable.</p>
+<blockquote>
+<p><strong>Warning</strong></p>
+<p>Note that this environment variable is read by GTK+ 2.x too, which may
+not have the same set of modules available for loading. Use</p>
+<p>GTK3_MODULES</p>
+<p>for modules that are only compatible with GTK+ 3.</p>
+</blockquote>
+<p><strong>GTK_PATH.</strong></p>
+<p>Specifies a list of directories to search when GTK+ is looking for
+dynamically loaded objects such as the modules specified by
+GTK_MODULES, theme engines, input method modules, file system backends
+and print backends. If the path to the dynamically loaded object is
+given as an absolute path name, then GTK+ loads it directly. Otherwise,
+GTK+ goes in turn through the directories in GTK_PATH, followed by the
+directory <code>.gtk-4.0</code> in the user's home directory, followed by the
+system default directory, which is <code>libdir/gtk-4.0/modules</code>. (If
+GTK_EXE_PREFIX is defined, libdir is <code>$GTK_EXE_PREFIX/lib</code>. Otherwise
+it is the libdir specified when GTK+ was configured, usually <code>/usr/lib</code>,
+or <code>/usr/local/lib</code>.) For each directory in this list, GTK+ actually
+looks in a subdirectory <code>directory/version/host/type</code> Where version is
+derived from the version of GTK+ (use <code>pkg-config --variable=gtk_binary_version gtk+-3.0</code> to determine this from a
+script), host is the architecture on which GTK+ was built. (use
+<code>pkg-config --variable=gtk_host gtk+-3.0</code> to determine this from a script), and type
+is a directory specific to the type of modules; currently it can be
+<code>modules</code>, <code>engines</code>, <code>immodules</code>, <code>filesystems</code> or <code>printbackends</code>,
+corresponding to the types of modules mentioned above. Either version,
+host, or both may be omitted. GTK+ looks first in the most specific
+directory, then in directories with fewer components. The components of
+GTK_PATH are separated by the ':' character on Linux and Unix, and the
+';' character on Windows.</p>
+<blockquote>
+<p><strong>Warning</strong></p>
+<p>Note that this environment variable is read by GTK+ 2.x too, which
+makes it unsuitable for setting it system-wide (or session-wide),
+since doing so will cause either GTK+ 2.x applications or GTK+ 3
+applications to see incompatible modules.</p>
+</blockquote>
+<p><strong>GTK_IM_MODULE.</strong></p>
+<p>Specifies an IM module to use in preference to the one determined from
+the locale. If this isn't set and you are running on the system that
+enables <code>XSETTINGS</code> and has a value in <code>Gtk/IMModule</code>, that will be used
+for the default IM module. This also can be a colon-separated list of
+input-methods, which GTK+ will try in turn until it finds one available
+on the system.</p>
+<p><strong>GTK_IM_MODULE_FILE.</strong></p>
+<p>Specifies the file listing the IM modules to load. This environment
+variable the default value <code>libdir/gtk-4.0/4.0.0/immodules.cache</code>
+(libdir has the same meaning here as explained for GTK_PATH).</p>
+<p>The <code>immodules.cache</code> file is generated by the <code>gtk-query-immodules-3.0</code>
+utility.</p>
+<blockquote>
+<p><strong>Warning</strong></p>
+<p>Note that this environment variable is read by GTK+ 2.x too, which
+makes it unsuitable for setting it system-wide (or session-wide),
+since doing so will cause either GTK+ 2.x applications or GTK+ 3
+applications to see the wrong list of IM modules.</p>
+</blockquote>
+<p><strong>GTK_EXE_PREFIX.</strong></p>
+<p>If set, GTK+ uses <code>$GTK_EXE_PREFIX/lib</code> instead of the libdir configured
+when GTK+ was compiled.</p>
+<p><strong>GTK_DATA_PREFIX.</strong></p>
+<p>If set, makes GTK+ use <code>$GTK_DATA_PREFIX</code> instead of the prefix
+configured when GTK+ was compiled.</p>
+<p><strong>GTK_THEME.</strong></p>
+<p>If set, makes GTK+ use the named theme instead of the theme that is
+specified by the gtk-theme-name setting. This is intended mainly for
+easy debugging of theme issues.</p>
+<p>It is also possible to specify a theme variant to load, by appending the
+variant name with a colon, like this: `GTK_THEME=Adwaita:dark`.</p>
+<p>The following environment variables are used by GdkPixbuf, GDK or Pango,
+not by GTK+ itself, but we list them here for completeness nevertheless.</p>
+<p><strong>GDK_PIXBUF_MODULE_FILE.</strong></p>
+<p>Specifies the file listing the GdkPixbuf loader modules to load. This
+environment variable overrides the default value
+<code>libdir/gtk-4.0/4.0.0/loaders.cache</code> (libdir is the sysconfdir specified
+when GTK+ was configured, usually <code>/usr/local/lib</code>.)</p>
+<p>The <code>loaders.cache</code> file is generated by the <code>gdk-pixbuf-query-loaders</code>
+utility.</p>
+<p><strong>GDK_DEBUG.</strong></p>
+<p>If GTK+ has been configured with <code>--enable-debug=yes</code>, this variable can
+be set to a list of debug options, which cause GDK to print out
+different types of debugging information.</p>
+<ul>
+<li>
+<p>cursor<br>
+Information about cursor objects (only win32)</p>
+</li>
+<li>
+<p>dnd<br>
+Information about drag-and-drop</p>
+</li>
+<li>
+<p>draw<br>
+Information about drawing operations (only win32)</p>
+</li>
+<li>
+<p>eventloop<br>
+Information about event loop operation (mostly Quartz)</p>
+</li>
+<li>
+<p>misc<br>
+Miscellaneous information</p>
+</li>
+<li>
+<p>nogl<br>
+Turn off OpenGL. GDK will behave as if OpenGL support was not
+available.</p>
+</li>
+<li>
+<p>nograbs<br>
+Turn off all pointer and keyboard grabs</p>
+</li>
+<li>
+<p>xinerama<br>
+Simulate a multi-monitor setup</p>
+</li>
+<li>
+<p>xim<br>
+Information about XIM support</p>
+</li>
+</ul>
+<p>The special value <code>all</code> can be used to turn on all debug options.</p>
+<p><strong>GDK_RENDERING.</strong></p>
+<p>If set, selects the way how GDK creates similar surfaces. This affects
+both the functionality of the function
+gdk_window_create_similar_surface() as well as the way GDK creates
+backing surfaces for double buffering. The following values can be used:</p>
+<ul>
+<li>
+<p>similar<br>
+Create similar surfaces to the window in use. This is the default
+behavior when the variable is not set.</p>
+</li>
+<li>
+<p>image<br>
+Always create image surfaces. This essentially turns off all
+hardware acceleration inside GTK.</p>
+</li>
+<li>
+<p>recording<br>
+Always create recording surfaces. This causes bare rendering to the
+backend without the creation of intermediate surfaces (Pixmaps in X)
+and will likely cause flicker.</p>
+</li>
+</ul>
+<p>All other values will be ignored and fall back to the default behavior.
+More values might be added in the future.</p>
+<p><strong>GDK_BACKEND.</strong></p>
+<p>If set, selects the GDK backend to use. Selecting a backend requires
+that GTK+ is compiled with support for that backend. The following
+backends can be selected, provided they are included in the GDK
+libraries you are using:</p>
+<ul>
+<li>
+<p>quartz<br>
+Selects the native Quartz backend</p>
+</li>
+<li>
+<p>win32<br>
+Selects the native backend for Microsoft Windows</p>
+</li>
+<li>
+<p>x11<br>
+Selects the native backend for connecting to X11 servers.</p>
+</li>
+<li>
+<p>broadway<br>
+Selects the Broadway backend for display in web browsers</p>
+</li>
+<li>
+<p>wayland<br>
+Selects the Wayland backend for connecting to Wayland display
+servers</p>
+</li>
+<li>
+<p>mir<br>
+Selects the Mir backend for connecting to Mir display servers</p>
+</li>
+</ul>
+<p>Since 3.10, this environment variable can contain a comma-separated list
+of backend names, which are tried in order. The list may also contain a
+*, which means: try all remaining backends. The special value "help"
+can be used to make GDK print out a list of all available backends. For
+more information about selecting backends, see the
+gdk_display_manager_get() function.</p>
+<p><strong>GTK_CSD.</strong></p>
+<p>The default value of this environment variable is 1. If changed to 0,
+this disables the default use of client-side decorations on GTK+
+windows, thus making the window manager responsible for drawing the
+decorations of windows that do not have a custom titlebar widget.</p>
+<p>CSD is always used for windows with a custom titlebar widget set, as the
+WM should not draw another titlebar or other decorations around the
+custom one.</p>
+<p><strong>XDG_DATA_HOME, XDG_DATA_DIRS.</strong></p>
+<p>GTK+ uses these environment variables to locate icon themes and MIME
+information. For more information, see <a href="https://freedesktop.org/Standards/icon-theme-spec">Icon Theme
+Specification</a>, the
+<a href="https://freedesktop.org/Standards/shared-mime-info-spec">Shared MIME-info
+Database</a> and
+the <a href="https://freedesktop.org/Standards/basedir-spec">Base Directory
+Specification</a>.</p>
+<p><strong>DESKTOP_STARTUP_ID.</strong></p>
+<p>GTK+ uses this environment variable to provide startup notification
+according to the <a href="https://standards.freedesktop.org/startup-notification-spec/startup-notification-latest.txt">Startup Notification
+Spec</a>.
+Following the specification, GTK+ unsets this variable after reading it
+(to keep it from leaking to child processes). So, if you need its value
+for your own purposes, you have to read it before calling gtk_init().</p>
+<h2 id="interactive-debugging">Interactive debugging</h2>
+<p>GTK+ includes an interactive debugger, called the GTK+ Inspector, which
+lets you explore the widget tree of any GTK+ application at runtime, as
+well as tweak the theme and trigger visual debugging aids. You can
+easily try out changes at runtime before putting them into the code.</p>
+<p>Note that the GTK+ inspector can only show GTK+ internals. It can not
+understand the application-specific logic of a GTK+ application. Also,
+the fact that the GTK+ inspector is running in the application process
+limits what it can do. It is meant as a complement to full-blown
+debuggers and system tracing facilities such as DTrace, not as a
+replacement.</p>
+<p>To enable the GTK+ inspector, you can use the Control-Shift-I or
+Control-Shift-D keyboard shortcuts, or set the GTK_DEBUG=interactive
+environment variable.</p>
+<p>There are a few more environment variables that can be set to influence
+how the inspector renders its UI. GTK_INSPECTOR_DISPLAY and
+GTK_INSPECTOR_RENDERER determine the GDK display and the GSK renderer
+that the inspector is using.</p>
+<p>In some situations, it may be inappropriate to give users access to the
+GTK+ inspector. The keyboard shortcuts can be disabled with the
+`enable-inspector-keybinding` key in the `org.gtk.Settings.Debug`
+GSettings schema.</p>
+
+    </div>
+        
+
+
+
+
+		
+	</div>
+	<div id="search_results">
+		<p>The results of the search are</p>
+	</div>
+	<hr>
+	<div id="footer">
+		    
+
+	</div>
+</div>
+
+<div id="toc-column">
+	
+		<div class="edit-button">
+		
+
+	</div>
+		<div id="toc-wrapper">
+		<nav id="toc"></nav>
+	</div>
+</div>
+</div>
+</main>
+
+</body>
+
+<script src="assets/js/navbar_offset_scroller.js"></script>
+</html>

@@ -1,0 +1,2463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<base href=".">
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>GtkCellLayout</title>
+
+<link rel="stylesheet" href="assets/css/custom_bootstrap.css" type="text/css">
+<link rel="stylesheet" href="assets/css/bootstrap-toc.min.css" type="text/css">
+<link rel="stylesheet" href="assets/css/frontend.css" type="text/css">
+<link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
+
+<link rel="stylesheet" href="assets/css/prism.css" type="text/css">
+
+<script src="assets/js/mustache.min.js"></script>
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/scrollspy.js"></script>
+<script src="assets/js/bootstrap.js"></script>
+<script src="assets/js/typeahead.jquery.min.js"></script>
+<script src="assets/js/search.js"></script>
+<script src="assets/js/isotope.pkgd.min.js"></script>
+<script src="assets/js/compare-versions.js"></script>
+<script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="assets/js/bootstrap-toc.min.js"></script>
+<script src="assets/js/jquery.touchSwipe.min.js"></script>
+<script src="assets/js/anchor.min.js"></script>
+<script src="assets/js/tag_filtering.js"></script>
+<script src="assets/js/language_switching.js"></script>
+
+<script src="assets/js/lines_around_headings.js"></script>
+
+<script src="assets/js/prism-core.js"></script>
+<script src="assets/js/prism-autoloader.js"></script>
+<script src="assets/js/prism_autoloader_path_override.js"></script>
+<script src="assets/js/trie.js"></script>
+
+
+</head>
+
+<body class="no-script
+" data-spy="scroll" data-target="#toc" data-offset="70">
+
+<script>
+$('body').removeClass('no-script');
+</script>
+
+<nav class="navbar navbar-fixed-top navbar-default" id="topnav">
+	<div class="container-fluid">
+		<div class="navbar-right">
+			<a id="toc-toggle">
+				<span class="glyphicon glyphicon-menu-right"></span>
+				<span class="glyphicon glyphicon-menu-left"></span>
+			</a>
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-wrapper" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<form action="" class="navbar-form pull-right" id="navbar-search-form">
+                               <div class="form-group has-feedback">
+                                       <input type="text" class="form-control input-sm" name="search" id="sidenav-lookup-field" placeholder="search" disabled>
+				       <span class="glyphicon glyphicon-search form-control-feedback" id="search-mgn-glass"></span>
+                               </div>
+                        </form>
+		</div>
+		<div class="navbar-header">
+			<a id="sidenav-toggle">
+				<span class="glyphicon glyphicon-menu-right"></span>
+				<span class="glyphicon glyphicon-menu-left"></span>
+			</a>
+			<a id="home-link" href="index.html" class="hotdoc-navbar-brand">
+				<img src="assets/images/home.svg" alt="Home">
+			</a>
+		</div>
+		<div class="navbar-collapse collapse" id="navbar-wrapper">
+			<ul class="nav navbar-nav" id="menu">
+							</ul>
+			<div class="hidden-xs hidden-sm navbar-text navbar-center">
+							</div>
+		</div>
+	</div>
+</nav>
+
+<main>
+<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="gtkcelllayout.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['c', 'javascript', 'python']" data-hotdoc-meta-gi-language="c">
+<script src="assets/js/utils.js"></script>
+
+<div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
+	<script src="assets/js/navigation.js"></script>
+	<script src="assets/js/sitemap.js"></script>
+</div>
+
+<div id="body">
+	<div id="main">
+				    <div id="page-description" data-hotdoc-source="gtkcelllayout.markdown" data-hotdoc-role="main">
+        <h1 id="gtkcelllayout-page">GtkCellLayout</h1>
+    </div>
+        
+        
+
+            <h3 class="symbol_section">Methods</h3>
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.4;" id="gtk_cell_layout_pack_start">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_layout_pack_start">
+	<span><code>gtk_cell_layout_pack_start</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_cell_layout_pack_start (<a title="GtkCellLayout" href="gtkcelllayout.html#GtkCellLayout">GtkCellLayout</a> * cell_layout,
+                            <a title="GtkCellRenderer" href="gtkcellrenderer.html#GtkCellRenderer">GtkCellRenderer</a> * cell,
+                            <a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a> expand)</pre>
+
+<p>Packs the <em>cell</em> into the beginning of <em>cell_layout</em>. If <em>expand</em> is <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS">FALSE</a>,
+then the <em>cell</em> is allocated no more space than it needs. Any unused space
+is divided evenly between cells for which <em>expand</em> is <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a>.</p>
+<p>Note that reusing the same cell renderer is not supported.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell_layout</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkcelllayout.html#GtkCellLayout">GtkCellLayout</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkcellrenderer.html#GtkCellRenderer">GtkCellRenderer</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>expand</code></em></i>
+				–
+	</div>
+			<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if <em>cell</em> is to be given extra space allocated to <em>cell_layout</em></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.4
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_layout_pack_start">
+	<span><code>Gtk.prototype.pack_start</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.pack_start(cell: <a title="Gtk.CellRenderer" href="gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a>, expand: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_cell_layout_pack_start'
+}</pre>
+
+<p>Packs the <em>cell</em> into the beginning of <em>cell_layout</em>. If <em>expand</em> is <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">false</a>,
+then the <em>cell</em> is allocated no more space than it needs. Any unused space
+is divided evenly between cells for which <em>expand</em> is <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a>.</p>
+<p>Note that reusing the same cell renderer is not supported.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell_layout</code></em></i>
+					(
+						<a title="Gtk.CellLayout" href="gtkcelllayout.html#GtkCellLayout">Gtk.CellLayout</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkcelllayout.html#GtkCellLayout">Gtk.CellLayout</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+					(
+						<a title="Gtk.CellRenderer" href="gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>expand</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if <em>cell</em> is to be given extra space allocated to <em>cell_layout</em></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.4
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_layout_pack_start">
+	<span><code>Gtk.CellLayout.pack_start</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.CellLayout.pack_start (self, cell, expand):
+    #python wrapper for 'gtk_cell_layout_pack_start'</pre>
+
+<p>Packs the <em>cell</em> into the beginning of <em>cell_layout</em>. If <em>expand</em> is <a href="https://docs.python.org/3/library/constants.html#False">False</a>,
+then the <em>cell</em> is allocated no more space than it needs. Any unused space
+is divided evenly between cells for which <em>expand</em> is <a href="https://docs.python.org/3/library/constants.html#True">True</a>.</p>
+<p>Note that reusing the same cell renderer is not supported.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell_layout</code></em></i>
+					(
+						<a title="Gtk.CellLayout" href="gtkcelllayout.html#GtkCellLayout">Gtk.CellLayout</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkcelllayout.html#GtkCellLayout">Gtk.CellLayout</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+					(
+						<a title="Gtk.CellRenderer" href="gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>expand</code></em></i>
+					(
+						<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+						)
+				–
+	</div>
+			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if <em>cell</em> is to be given extra space allocated to <em>cell_layout</em></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.4
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.4;" id="gtk_cell_layout_pack_end">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_layout_pack_end">
+	<span><code>gtk_cell_layout_pack_end</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_cell_layout_pack_end (<a title="GtkCellLayout" href="gtkcelllayout.html#GtkCellLayout">GtkCellLayout</a> * cell_layout,
+                          <a title="GtkCellRenderer" href="gtkcellrenderer.html#GtkCellRenderer">GtkCellRenderer</a> * cell,
+                          <a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a> expand)</pre>
+
+<p>Adds the <em>cell</em> to the end of <em>cell_layout</em>. If <em>expand</em> is <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS">FALSE</a>, then the
+<em>cell</em> is allocated no more space than it needs. Any unused space is
+divided evenly between cells for which <em>expand</em> is <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a>.</p>
+<p>Note that reusing the same cell renderer is not supported.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell_layout</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkcelllayout.html#GtkCellLayout">GtkCellLayout</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkcellrenderer.html#GtkCellRenderer">GtkCellRenderer</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>expand</code></em></i>
+				–
+	</div>
+			<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if <em>cell</em> is to be given extra space allocated to <em>cell_layout</em></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.4
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_layout_pack_end">
+	<span><code>Gtk.prototype.pack_end</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.pack_end(cell: <a title="Gtk.CellRenderer" href="gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a>, expand: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_cell_layout_pack_end'
+}</pre>
+
+<p>Adds the <em>cell</em> to the end of <em>cell_layout</em>. If <em>expand</em> is <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">false</a>, then the
+<em>cell</em> is allocated no more space than it needs. Any unused space is
+divided evenly between cells for which <em>expand</em> is <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a>.</p>
+<p>Note that reusing the same cell renderer is not supported.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell_layout</code></em></i>
+					(
+						<a title="Gtk.CellLayout" href="gtkcelllayout.html#GtkCellLayout">Gtk.CellLayout</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkcelllayout.html#GtkCellLayout">Gtk.CellLayout</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+					(
+						<a title="Gtk.CellRenderer" href="gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>expand</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if <em>cell</em> is to be given extra space allocated to <em>cell_layout</em></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.4
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_layout_pack_end">
+	<span><code>Gtk.CellLayout.pack_end</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.CellLayout.pack_end (self, cell, expand):
+    #python wrapper for 'gtk_cell_layout_pack_end'</pre>
+
+<p>Adds the <em>cell</em> to the end of <em>cell_layout</em>. If <em>expand</em> is <a href="https://docs.python.org/3/library/constants.html#False">False</a>, then the
+<em>cell</em> is allocated no more space than it needs. Any unused space is
+divided evenly between cells for which <em>expand</em> is <a href="https://docs.python.org/3/library/constants.html#True">True</a>.</p>
+<p>Note that reusing the same cell renderer is not supported.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell_layout</code></em></i>
+					(
+						<a title="Gtk.CellLayout" href="gtkcelllayout.html#GtkCellLayout">Gtk.CellLayout</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkcelllayout.html#GtkCellLayout">Gtk.CellLayout</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+					(
+						<a title="Gtk.CellRenderer" href="gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>expand</code></em></i>
+					(
+						<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+						)
+				–
+	</div>
+			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if <em>cell</em> is to be given extra space allocated to <em>cell_layout</em></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.4
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_cell_layout_get_area">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_layout_get_area">
+	<span><code>gtk_cell_layout_get_area</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkCellArea" href="gtkcellarea.html#GtkCellArea">GtkCellArea</a> *
+gtk_cell_layout_get_area (<a title="GtkCellLayout" href="gtkcelllayout.html#GtkCellLayout">GtkCellLayout</a> * cell_layout)</pre>
+
+<p>Returns the underlying <a href="gtkcellarea.html#GtkCellArea">GtkCellArea</a> which might be <em>cell_layout</em>
+if called on a <a href="gtkcellarea.html#GtkCellArea">GtkCellArea</a> or might be <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> if no <a href="gtkcellarea.html#GtkCellArea">GtkCellArea</a>
+is used by <em>cell_layout</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell_layout</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkcelllayout.html#GtkCellLayout">GtkCellLayout</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					
+										
+<span class="annotation">[<abbr title="Don't free data after the code is done"><span class="acronym">transfer: none</span></abbr>]</span>
+<span class="annotation">[<abbr title="NULL may be passed to the value"><span class="acronym">nullable</span></abbr>]</span>
+
+										)
+								–
+			</div>
+							<p>the cell area used by <em>cell_layout</em>,
+or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> in case no cell area is used.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_layout_get_area">
+	<span><code>Gtk.prototype.get_area</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_area(): {
+    // javascript wrapper for 'gtk_cell_layout_get_area'
+}</pre>
+
+<p>Returns the underlying <a href="gtkcellarea.html#GtkCellArea">Gtk.CellArea</a> which might be <em>cell_layout</em>
+if called on a <a href="gtkcellarea.html#GtkCellArea">Gtk.CellArea</a> or might be <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a> if no <a href="gtkcellarea.html#GtkCellArea">Gtk.CellArea</a>
+is used by <em>cell_layout</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell_layout</code></em></i>
+					(
+						<a title="Gtk.CellLayout" href="gtkcelllayout.html#GtkCellLayout">Gtk.CellLayout</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkcelllayout.html#GtkCellLayout">Gtk.CellLayout</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.CellArea" href="gtkcellarea.html#GtkCellArea">Gtk.CellArea</a>
+										)
+								–
+			</div>
+							<p>the cell area used by <em>cell_layout</em>,
+or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a> in case no cell area is used.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_layout_get_area">
+	<span><code>Gtk.CellLayout.get_area</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.CellLayout.get_area (self):
+    #python wrapper for 'gtk_cell_layout_get_area'</pre>
+
+<p>Returns the underlying <a href="gtkcellarea.html#GtkCellArea">Gtk.CellArea</a> which might be <em>cell_layout</em>
+if called on a <a href="gtkcellarea.html#GtkCellArea">Gtk.CellArea</a> or might be <a href="https://docs.python.org/3/library/constants.html#None">None</a> if no <a href="gtkcellarea.html#GtkCellArea">Gtk.CellArea</a>
+is used by <em>cell_layout</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell_layout</code></em></i>
+					(
+						<a title="Gtk.CellLayout" href="gtkcelllayout.html#GtkCellLayout">Gtk.CellLayout</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkcelllayout.html#GtkCellLayout">Gtk.CellLayout</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.CellArea" href="gtkcellarea.html#GtkCellArea">Gtk.CellArea</a>
+										)
+								–
+			</div>
+							<p>the cell area used by <em>cell_layout</em>,
+or <a href="https://docs.python.org/3/library/constants.html#None">None</a> in case no cell area is used.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.12;" id="gtk_cell_layout_get_cells">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_layout_get_cells">
+	<span><code>gtk_cell_layout_get_cells</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GList" href="https://developer.gnome.org/glib/unstable/glib-Doubly-Linked-Lists.html#GList">GList</a> *
+gtk_cell_layout_get_cells (<a title="GtkCellLayout" href="gtkcelllayout.html#GtkCellLayout">GtkCellLayout</a> * cell_layout)</pre>
+
+<p>Returns the cell renderers which have been added to <em>cell_layout</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell_layout</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkcelllayout.html#GtkCellLayout">GtkCellLayout</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>(element-type GtkCellRenderer) (transfer container):
+a list of cell renderers. The list, but not the renderers has
+been newly allocated and should be freed with <a href="https://developer.gnome.org/glib/unstable/glib-Doubly-Linked-Lists.html#g-list-free">g_list_free</a>
+when no longer needed.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.12
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_layout_get_cells">
+	<span><code>Gtk.prototype.get_cells</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_cells(): {
+    // javascript wrapper for 'gtk_cell_layout_get_cells'
+}</pre>
+
+<p>Returns the cell renderers which have been added to <em>cell_layout</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell_layout</code></em></i>
+					(
+						<a title="Gtk.CellLayout" href="gtkcelllayout.html#GtkCellLayout">Gtk.CellLayout</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkcelllayout.html#GtkCellLayout">Gtk.CellLayout</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					[ <a title="Gtk.CellRenderer" href="gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a> ]
+										)
+								–
+			</div>
+							<p>(element-type GtkCellRenderer) (transfer container):
+a list of cell renderers. The list, but not the renderers has
+been newly allocated and should be freed with <a href="https://developer.gnome.org/glib/unstable/glib-Doubly-Linked-Lists.html#g-list-free">g_list_free (not introspectable)</a>
+when no longer needed.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.12
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_layout_get_cells">
+	<span><code>Gtk.CellLayout.get_cells</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.CellLayout.get_cells (self):
+    #python wrapper for 'gtk_cell_layout_get_cells'</pre>
+
+<p>Returns the cell renderers which have been added to <em>cell_layout</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell_layout</code></em></i>
+					(
+						<a title="Gtk.CellLayout" href="gtkcelllayout.html#GtkCellLayout">Gtk.CellLayout</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkcelllayout.html#GtkCellLayout">Gtk.CellLayout</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					[ <a title="Gtk.CellRenderer" href="gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a> ]
+										)
+								–
+			</div>
+							<p>(element-type GtkCellRenderer) (transfer container):
+a list of cell renderers. The list, but not the renderers has
+been newly allocated and should be freed with <a href="https://developer.gnome.org/glib/unstable/glib-Doubly-Linked-Lists.html#g-list-free">g_list_free (not introspectable)</a>
+when no longer needed.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.12
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.4;" id="gtk_cell_layout_reorder">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_layout_reorder">
+	<span><code>gtk_cell_layout_reorder</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_cell_layout_reorder (<a title="GtkCellLayout" href="gtkcelllayout.html#GtkCellLayout">GtkCellLayout</a> * cell_layout,
+                         <a title="GtkCellRenderer" href="gtkcellrenderer.html#GtkCellRenderer">GtkCellRenderer</a> * cell,
+                         <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> position)</pre>
+
+<p>Re-inserts <em>cell</em> at <em>position</em>.</p>
+<p>Note that <em>cell</em> has already to be packed into <em>cell_layout</em>
+for this to function properly.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell_layout</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkcelllayout.html#GtkCellLayout">GtkCellLayout</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkcellrenderer.html#GtkCellRenderer">GtkCellRenderer</a> to reorder</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>position</code></em></i>
+				–
+	</div>
+			<p>new position to insert <em>cell</em> at</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.4
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_layout_reorder">
+	<span><code>Gtk.prototype.reorder</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.reorder(cell: <a title="Gtk.CellRenderer" href="gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a>, position: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_cell_layout_reorder'
+}</pre>
+
+<p>Re-inserts <em>cell</em> at <em>position</em>.</p>
+<p>Note that <em>cell</em> has already to be packed into <em>cell_layout</em>
+for this to function properly.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell_layout</code></em></i>
+					(
+						<a title="Gtk.CellLayout" href="gtkcelllayout.html#GtkCellLayout">Gtk.CellLayout</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkcelllayout.html#GtkCellLayout">Gtk.CellLayout</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+					(
+						<a title="Gtk.CellRenderer" href="gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a> to reorder</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>position</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>new position to insert <em>cell</em> at</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.4
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_layout_reorder">
+	<span><code>Gtk.CellLayout.reorder</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.CellLayout.reorder (self, cell, position):
+    #python wrapper for 'gtk_cell_layout_reorder'</pre>
+
+<p>Re-inserts <em>cell</em> at <em>position</em>.</p>
+<p>Note that <em>cell</em> has already to be packed into <em>cell_layout</em>
+for this to function properly.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell_layout</code></em></i>
+					(
+						<a title="Gtk.CellLayout" href="gtkcelllayout.html#GtkCellLayout">Gtk.CellLayout</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkcelllayout.html#GtkCellLayout">Gtk.CellLayout</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+					(
+						<a title="Gtk.CellRenderer" href="gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a> to reorder</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>position</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>new position to insert <em>cell</em> at</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.4
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.4;" id="gtk_cell_layout_clear">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_layout_clear">
+	<span><code>gtk_cell_layout_clear</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_cell_layout_clear (<a title="GtkCellLayout" href="gtkcelllayout.html#GtkCellLayout">GtkCellLayout</a> * cell_layout)</pre>
+
+<p>Unsets all the mappings on all renderers on <em>cell_layout</em> and
+removes all renderers from <em>cell_layout</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell_layout</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkcelllayout.html#GtkCellLayout">GtkCellLayout</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.4
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_layout_clear">
+	<span><code>Gtk.prototype.clear</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.clear(): {
+    // javascript wrapper for 'gtk_cell_layout_clear'
+}</pre>
+
+<p>Unsets all the mappings on all renderers on <em>cell_layout</em> and
+removes all renderers from <em>cell_layout</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell_layout</code></em></i>
+					(
+						<a title="Gtk.CellLayout" href="gtkcelllayout.html#GtkCellLayout">Gtk.CellLayout</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkcelllayout.html#GtkCellLayout">Gtk.CellLayout</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.4
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_layout_clear">
+	<span><code>Gtk.CellLayout.clear</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.CellLayout.clear (self):
+    #python wrapper for 'gtk_cell_layout_clear'</pre>
+
+<p>Unsets all the mappings on all renderers on <em>cell_layout</em> and
+removes all renderers from <em>cell_layout</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell_layout</code></em></i>
+					(
+						<a title="Gtk.CellLayout" href="gtkcelllayout.html#GtkCellLayout">Gtk.CellLayout</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkcelllayout.html#GtkCellLayout">Gtk.CellLayout</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.4
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.4;" id="gtk_cell_layout_set_attributes">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_layout_set_attributes">
+	<span><code>gtk_cell_layout_set_attributes</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_cell_layout_set_attributes (<a title="GtkCellLayout" href="gtkcelllayout.html#GtkCellLayout">GtkCellLayout</a> * cell_layout,
+                                <a title="GtkCellRenderer" href="gtkcellrenderer.html#GtkCellRenderer">GtkCellRenderer</a> * cell,
+                                ... ...)</pre>
+
+<p>Sets the attributes in list as the attributes of <em>cell_layout</em>.</p>
+<p>The attributes should be in attribute/column order, as in
+<a href="gtkcelllayout.html#gtk_cell_layout_add_attribute">gtk_cell_layout_add_attribute</a>. All existing attributes are
+removed, and replaced with the new attributes.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell_layout</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkcelllayout.html#GtkCellLayout">GtkCellLayout</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkcellrenderer.html#GtkCellRenderer">GtkCellRenderer</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>...</code></em></i>
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a>-terminated list of attributes</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.4
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.4;" id="gtk_cell_layout_add_attribute">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_layout_add_attribute">
+	<span><code>gtk_cell_layout_add_attribute</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_cell_layout_add_attribute (<a title="GtkCellLayout" href="gtkcelllayout.html#GtkCellLayout">GtkCellLayout</a> * cell_layout,
+                               <a title="GtkCellRenderer" href="gtkcellrenderer.html#GtkCellRenderer">GtkCellRenderer</a> * cell,
+                               const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * attribute,
+                               <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> column)</pre>
+
+<p>Adds an attribute mapping to the list in <em>cell_layout</em>.</p>
+<p>The <em>column</em> is the column of the model to get a value from, and the
+<em>attribute</em> is the parameter on <em>cell</em> to be set from the value. So for
+example if column 2 of the model contains strings, you could have the
+“text” attribute of a <a href="gtkcellrenderertext.html#GtkCellRendererText">GtkCellRendererText</a> get its values from column 2.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell_layout</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkcelllayout.html#GtkCellLayout">GtkCellLayout</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkcellrenderer.html#GtkCellRenderer">GtkCellRenderer</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>attribute</code></em></i>
+				–
+	</div>
+			<p>an attribute on the renderer</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>column</code></em></i>
+				–
+	</div>
+			<p>the column position on the model to get the attribute from</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.4
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_layout_add_attribute">
+	<span><code>Gtk.prototype.add_attribute</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.add_attribute(cell: <a title="Gtk.CellRenderer" href="gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a>, attribute: <a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>, column: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_cell_layout_add_attribute'
+}</pre>
+
+<p>Adds an attribute mapping to the list in <em>cell_layout</em>.</p>
+<p>The <em>column</em> is the column of the model to get a value from, and the
+<em>attribute</em> is the parameter on <em>cell</em> to be set from the value. So for
+example if column 2 of the model contains strings, you could have the
+“text” attribute of a <a href="gtkcellrenderertext.html#GtkCellRendererText">Gtk.CellRendererText</a> get its values from column 2.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell_layout</code></em></i>
+					(
+						<a title="Gtk.CellLayout" href="gtkcelllayout.html#GtkCellLayout">Gtk.CellLayout</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkcelllayout.html#GtkCellLayout">Gtk.CellLayout</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+					(
+						<a title="Gtk.CellRenderer" href="gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>attribute</code></em></i>
+					(
+						<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
+						)
+				–
+	</div>
+			<p>an attribute on the renderer</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>column</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the column position on the model to get the attribute from</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.4
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_layout_add_attribute">
+	<span><code>Gtk.CellLayout.add_attribute</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.CellLayout.add_attribute (self, cell, attribute, column):
+    #python wrapper for 'gtk_cell_layout_add_attribute'</pre>
+
+<p>Adds an attribute mapping to the list in <em>cell_layout</em>.</p>
+<p>The <em>column</em> is the column of the model to get a value from, and the
+<em>attribute</em> is the parameter on <em>cell</em> to be set from the value. So for
+example if column 2 of the model contains strings, you could have the
+“text” attribute of a <a href="gtkcellrenderertext.html#GtkCellRendererText">Gtk.CellRendererText</a> get its values from column 2.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell_layout</code></em></i>
+					(
+						<a title="Gtk.CellLayout" href="gtkcelllayout.html#GtkCellLayout">Gtk.CellLayout</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkcelllayout.html#GtkCellLayout">Gtk.CellLayout</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+					(
+						<a title="Gtk.CellRenderer" href="gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>attribute</code></em></i>
+					(
+						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
+						)
+				–
+	</div>
+			<p>an attribute on the renderer</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>column</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>the column position on the model to get the attribute from</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.4
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.4;" id="gtk_cell_layout_set_cell_data_func">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_layout_set_cell_data_func">
+	<span><code>gtk_cell_layout_set_cell_data_func</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_cell_layout_set_cell_data_func (<a title="GtkCellLayout" href="gtkcelllayout.html#GtkCellLayout">GtkCellLayout</a> * cell_layout,
+                                    <a title="GtkCellRenderer" href="gtkcellrenderer.html#GtkCellRenderer">GtkCellRenderer</a> * cell,
+                                    <a title="GtkCellLayoutDataFunc" href="gtkcelllayout.html#GtkCellLayoutDataFunc">GtkCellLayoutDataFunc</a> func,
+                                    <a title="gpointer" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer">gpointer</a> func_data,
+                                    <a title="GDestroyNotify" href="https://developer.gnome.org/glib/unstable/glib-Datasets.html#GDestroyNotify">GDestroyNotify</a> destroy)</pre>
+
+<p>Sets the <a href="gtkcelllayout.html#GtkCellLayoutDataFunc">GtkCellLayoutDataFunc</a> to use for <em>cell_layout</em>.</p>
+<p>This function is used instead of the standard attributes mapping
+for setting the column value, and should set the value of <em>cell_layout</em>’s
+cell renderer(s) as appropriate.</p>
+<p><em>func</em> may be <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> to remove a previously set function.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell_layout</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkcelllayout.html#GtkCellLayout">GtkCellLayout</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkcellrenderer.html#GtkCellRenderer">GtkCellRenderer</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>func</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>the <a href="gtkcelllayout.html#GtkCellLayoutDataFunc">GtkCellLayoutDataFunc</a> to use, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>func_data</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="This parameter is a closure for callbacks, many bindings can pass NULL here"><span class="acronym">closure</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>user data for <em>func</em></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>destroy</code></em></i>
+				–
+	</div>
+			<p>destroy notify for <em>func_data</em></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.4
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_layout_set_cell_data_func">
+	<span><code>Gtk.prototype.set_cell_data_func</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_cell_data_func(cell: <a title="Gtk.CellRenderer" href="gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a>, func: <a title="Gtk.CellLayoutDataFunc" href="gtkcelllayout.html#GtkCellLayoutDataFunc">Gtk.CellLayoutDataFunc</a>, func_data: <a title="Object" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>, destroy: <a title="GLib.DestroyNotify" href="https://developer.gnome.org/glib/unstable/glib-Datasets.html#GDestroyNotify">GLib.DestroyNotify</a>): {
+    // javascript wrapper for 'gtk_cell_layout_set_cell_data_func'
+}</pre>
+
+<p>Sets the <a href="gtkcelllayout.html#GtkCellLayoutDataFunc">Gtk.CellLayoutDataFunc</a> to use for <em>cell_layout</em>.</p>
+<p>This function is used instead of the standard attributes mapping
+for setting the column value, and should set the value of <em>cell_layout</em>’s
+cell renderer(s) as appropriate.</p>
+<p><em>func</em> may be <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a> to remove a previously set function.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell_layout</code></em></i>
+					(
+						<a title="Gtk.CellLayout" href="gtkcelllayout.html#GtkCellLayout">Gtk.CellLayout</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkcelllayout.html#GtkCellLayout">Gtk.CellLayout</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+					(
+						<a title="Gtk.CellRenderer" href="gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>func</code></em></i>
+					(
+						<a title="Gtk.CellLayoutDataFunc" href="gtkcelllayout.html#GtkCellLayoutDataFunc">Gtk.CellLayoutDataFunc</a>
+						)
+				–
+	</div>
+			<p>the <a href="gtkcelllayout.html#GtkCellLayoutDataFunc">Gtk.CellLayoutDataFunc</a> to use, or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>func_data</code></em></i>
+					(
+						<a title="Object" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>
+						)
+				–
+	</div>
+			<p>user data for <em>func</em></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>destroy</code></em></i>
+					(
+						<a title="GLib.DestroyNotify" href="https://developer.gnome.org/glib/unstable/glib-Datasets.html#GDestroyNotify">GLib.DestroyNotify</a>
+						)
+				–
+	</div>
+			<p>destroy notify for <em>func_data</em></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.4
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_layout_set_cell_data_func">
+	<span><code>Gtk.CellLayout.set_cell_data_func</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.CellLayout.set_cell_data_func (self, cell, func, func_data, destroy):
+    #python wrapper for 'gtk_cell_layout_set_cell_data_func'</pre>
+
+<p>Sets the <a href="gtkcelllayout.html#GtkCellLayoutDataFunc">Gtk.CellLayoutDataFunc</a> to use for <em>cell_layout</em>.</p>
+<p>This function is used instead of the standard attributes mapping
+for setting the column value, and should set the value of <em>cell_layout</em>’s
+cell renderer(s) as appropriate.</p>
+<p><em>func</em> may be <a href="https://docs.python.org/3/library/constants.html#None">None</a> to remove a previously set function.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell_layout</code></em></i>
+					(
+						<a title="Gtk.CellLayout" href="gtkcelllayout.html#GtkCellLayout">Gtk.CellLayout</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkcelllayout.html#GtkCellLayout">Gtk.CellLayout</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+					(
+						<a title="Gtk.CellRenderer" href="gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>func</code></em></i>
+					(
+						<a title="Gtk.CellLayoutDataFunc" href="gtkcelllayout.html#GtkCellLayoutDataFunc">Gtk.CellLayoutDataFunc</a>
+						)
+				–
+	</div>
+			<p>the <a href="gtkcelllayout.html#GtkCellLayoutDataFunc">Gtk.CellLayoutDataFunc</a> to use, or <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>func_data</code></em></i>
+					(
+						<a title="object" href="https://docs.python.org/3/library/functions.html#object">object</a>
+						)
+				–
+	</div>
+			<p>user data for <em>func</em></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>destroy</code></em></i>
+					(
+						<a title="GLib.DestroyNotify" href="https://developer.gnome.org/glib/unstable/glib-Datasets.html#GDestroyNotify">GLib.DestroyNotify</a>
+						)
+				–
+	</div>
+			<p>destroy notify for <em>func_data</em></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.4
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.4;" id="gtk_cell_layout_clear_attributes">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_layout_clear_attributes">
+	<span><code>gtk_cell_layout_clear_attributes</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_cell_layout_clear_attributes (<a title="GtkCellLayout" href="gtkcelllayout.html#GtkCellLayout">GtkCellLayout</a> * cell_layout,
+                                  <a title="GtkCellRenderer" href="gtkcellrenderer.html#GtkCellRenderer">GtkCellRenderer</a> * cell)</pre>
+
+<p>Clears all existing attributes previously set with
+<a href="gtkcelllayout.html#gtk_cell_layout_set_attributes">gtk_cell_layout_set_attributes</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell_layout</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkcelllayout.html#GtkCellLayout">GtkCellLayout</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkcellrenderer.html#GtkCellRenderer">GtkCellRenderer</a> to clear the attribute mapping on</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.4
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_layout_clear_attributes">
+	<span><code>Gtk.prototype.clear_attributes</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.clear_attributes(cell: <a title="Gtk.CellRenderer" href="gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a>): {
+    // javascript wrapper for 'gtk_cell_layout_clear_attributes'
+}</pre>
+
+<p>Clears all existing attributes previously set with
+<a href="gtkcelllayout.html#gtk_cell_layout_set_attributes">gtk_cell_layout_set_attributes (not introspectable)</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell_layout</code></em></i>
+					(
+						<a title="Gtk.CellLayout" href="gtkcelllayout.html#GtkCellLayout">Gtk.CellLayout</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkcelllayout.html#GtkCellLayout">Gtk.CellLayout</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+					(
+						<a title="Gtk.CellRenderer" href="gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a> to clear the attribute mapping on</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.4
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_layout_clear_attributes">
+	<span><code>Gtk.CellLayout.clear_attributes</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.CellLayout.clear_attributes (self, cell):
+    #python wrapper for 'gtk_cell_layout_clear_attributes'</pre>
+
+<p>Clears all existing attributes previously set with
+<a href="gtkcelllayout.html#gtk_cell_layout_set_attributes">gtk_cell_layout_set_attributes (not introspectable)</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell_layout</code></em></i>
+					(
+						<a title="Gtk.CellLayout" href="gtkcelllayout.html#GtkCellLayout">Gtk.CellLayout</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkcelllayout.html#GtkCellLayout">Gtk.CellLayout</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+					(
+						<a title="Gtk.CellRenderer" href="gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a> to clear the attribute mapping on</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.4
+		</p>
+
+
+        </div>
+
+</div>
+
+
+        
+
+            <h2 class="symbol_section">Interfaces</h2>
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="GtkCellLayout">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h3 data-hotdoc-id="GtkCellLayout">
+	<span><code>GtkCellLayout</code></span>
+</h3>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h3 data-hotdoc-id="GtkCellLayout">
+	<span><code>Gtk.CellLayout</code></span>
+</h3>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="GtkCellLayout">
+	<span><code>Gtk.CellLayout</code></span>
+</h3>
+
+
+
+
+
+        </div>
+
+</div>
+
+
+            <h2 class="symbol_section">Callbacks</h2>
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="GtkCellLayoutDataFunc">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h3 data-hotdoc-id="GtkCellLayoutDataFunc">
+	<span><code>GtkCellLayoutDataFunc</code></span>
+</h3>
+
+
+
+
+<pre class="c-prototype">
+(*GtkCellLayoutDataFunc) (<a title="GtkCellLayout" href="gtkcelllayout.html#GtkCellLayout">GtkCellLayout</a> * cell_layout,
+                          <a title="GtkCellRenderer" href="gtkcellrenderer.html#GtkCellRenderer">GtkCellRenderer</a> * cell,
+                          <a title="GtkTreeModel" href="gtktreemodel.html#GtkTreeModel">GtkTreeModel</a> * tree_model,
+                          <a title="GtkTreeIter" href="gtktreemodel.html#GtkTreeIter">GtkTreeIter</a> * iter,
+                          <a title="gpointer" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer">gpointer</a> data)</pre>
+
+<p>A function which should set the value of <em>cell_layout</em>’s cell renderer(s)
+as appropriate.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell_layout</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkcelllayout.html#GtkCellLayout">GtkCellLayout</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+				–
+	</div>
+			<p>the cell renderer whose value is to be set</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>tree_model</code></em></i>
+				–
+	</div>
+			<p>the model</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>iter</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtktreemodel.html#GtkTreeIter">GtkTreeIter</a> indicating the row to set the value for</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>data</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="This parameter is a closure for callbacks, many bindings can pass NULL here"><span class="acronym">closure</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>user data passed to <a href="gtkcelllayout.html#gtk_cell_layout_set_cell_data_func">gtk_cell_layout_set_cell_data_func</a></p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h3 data-hotdoc-id="GtkCellLayoutDataFunc">
+	<span><code>Gtk.CellLayoutDataFunc</code></span>
+</h3>
+
+
+
+
+<pre class="c-prototype">
+(*Gtk.CellLayoutDataFunc) (<a title="Gtk.CellLayout" href="gtkcelllayout.html#GtkCellLayout">Gtk.CellLayout</a>,
+                           <a title="Gtk.CellRenderer" href="gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a>,
+                           <a title="Gtk.TreeModel" href="gtktreemodel.html#GtkTreeModel">Gtk.TreeModel</a>,
+                           <a title="Gtk.TreeIter" href="gtktreemodel.html#GtkTreeIter">Gtk.TreeIter</a>,
+                           <a title="Object" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</pre>
+
+<p>A function which should set the value of <em>cell_layout</em>’s cell renderer(s)
+as appropriate.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell_layout</code></em></i>
+					(
+						<a title="Gtk.CellLayout" href="gtkcelllayout.html#GtkCellLayout">Gtk.CellLayout</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkcelllayout.html#GtkCellLayout">Gtk.CellLayout</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+					(
+						<a title="Gtk.CellRenderer" href="gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a>
+						)
+				–
+	</div>
+			<p>the cell renderer whose value is to be set</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>tree_model</code></em></i>
+					(
+						<a title="Gtk.TreeModel" href="gtktreemodel.html#GtkTreeModel">Gtk.TreeModel</a>
+						)
+				–
+	</div>
+			<p>the model</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>iter</code></em></i>
+					(
+						<a title="Gtk.TreeIter" href="gtktreemodel.html#GtkTreeIter">Gtk.TreeIter</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtktreemodel.html#GtkTreeIter">Gtk.TreeIter</a> indicating the row to set the value for</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>data</code></em></i>
+					(
+						<a title="Object" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>
+						)
+				–
+	</div>
+			<p>user data passed to <a href="gtkcelllayout.html#gtk_cell_layout_set_cell_data_func">Gtk.prototype.set_cell_data_func</a></p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="GtkCellLayoutDataFunc">
+	<span><code>Gtk.CellLayoutDataFunc</code></span>
+</h3>
+
+
+
+
+<pre class="c-prototype">
+(*Gtk.CellLayoutDataFunc) (<a title="Gtk.CellLayout" href="gtkcelllayout.html#GtkCellLayout">Gtk.CellLayout</a>,
+                           <a title="Gtk.CellRenderer" href="gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a>,
+                           <a title="Gtk.TreeModel" href="gtktreemodel.html#GtkTreeModel">Gtk.TreeModel</a>,
+                           <a title="Gtk.TreeIter" href="gtktreemodel.html#GtkTreeIter">Gtk.TreeIter</a>,
+                           <a title="object" href="https://docs.python.org/3/library/functions.html#object">object</a>)</pre>
+
+<p>A function which should set the value of <em>cell_layout</em>’s cell renderer(s)
+as appropriate.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell_layout</code></em></i>
+					(
+						<a title="Gtk.CellLayout" href="gtkcelllayout.html#GtkCellLayout">Gtk.CellLayout</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkcelllayout.html#GtkCellLayout">Gtk.CellLayout</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+					(
+						<a title="Gtk.CellRenderer" href="gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a>
+						)
+				–
+	</div>
+			<p>the cell renderer whose value is to be set</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>tree_model</code></em></i>
+					(
+						<a title="Gtk.TreeModel" href="gtktreemodel.html#GtkTreeModel">Gtk.TreeModel</a>
+						)
+				–
+	</div>
+			<p>the model</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>iter</code></em></i>
+					(
+						<a title="Gtk.TreeIter" href="gtktreemodel.html#GtkTreeIter">Gtk.TreeIter</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtktreemodel.html#GtkTreeIter">Gtk.TreeIter</a> indicating the row to set the value for</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>data</code></em></i>
+					(
+						<a title="object" href="https://docs.python.org/3/library/functions.html#object">object</a>
+						)
+				–
+	</div>
+			<p>user data passed to <a href="gtkcelllayout.html#gtk_cell_layout_set_cell_data_func">Gtk.CellLayout.set_cell_data_func</a></p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+
+
+
+
+
+		
+	</div>
+	<div id="search_results">
+		<p>The results of the search are</p>
+	</div>
+	<hr>
+	<div id="footer">
+		    
+
+	</div>
+</div>
+
+<div id="toc-column">
+	
+		<div class="edit-button">
+		
+
+	</div>
+		<div id="toc-wrapper">
+		<nav id="toc"></nav>
+	</div>
+</div>
+</div>
+</main>
+
+</body>
+
+<script src="assets/js/navbar_offset_scroller.js"></script>
+</html>

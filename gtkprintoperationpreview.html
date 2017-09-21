@@ -1,0 +1,1464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<base href=".">
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>gtkprintoperationpreview</title>
+
+<link rel="stylesheet" href="assets/css/custom_bootstrap.css" type="text/css">
+<link rel="stylesheet" href="assets/css/bootstrap-toc.min.css" type="text/css">
+<link rel="stylesheet" href="assets/css/frontend.css" type="text/css">
+<link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
+
+<link rel="stylesheet" href="assets/css/prism.css" type="text/css">
+
+<script src="assets/js/mustache.min.js"></script>
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/scrollspy.js"></script>
+<script src="assets/js/bootstrap.js"></script>
+<script src="assets/js/typeahead.jquery.min.js"></script>
+<script src="assets/js/search.js"></script>
+<script src="assets/js/isotope.pkgd.min.js"></script>
+<script src="assets/js/compare-versions.js"></script>
+<script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="assets/js/bootstrap-toc.min.js"></script>
+<script src="assets/js/jquery.touchSwipe.min.js"></script>
+<script src="assets/js/anchor.min.js"></script>
+<script src="assets/js/tag_filtering.js"></script>
+<script src="assets/js/language_switching.js"></script>
+
+<script src="assets/js/lines_around_headings.js"></script>
+
+<script src="assets/js/prism-core.js"></script>
+<script src="assets/js/prism-autoloader.js"></script>
+<script src="assets/js/prism_autoloader_path_override.js"></script>
+<script src="assets/js/trie.js"></script>
+
+
+</head>
+
+<body class="no-script
+" data-spy="scroll" data-target="#toc" data-offset="70">
+
+<script>
+$('body').removeClass('no-script');
+</script>
+
+<nav class="navbar navbar-fixed-top navbar-default" id="topnav">
+	<div class="container-fluid">
+		<div class="navbar-right">
+			<a id="toc-toggle">
+				<span class="glyphicon glyphicon-menu-right"></span>
+				<span class="glyphicon glyphicon-menu-left"></span>
+			</a>
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-wrapper" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<form action="" class="navbar-form pull-right" id="navbar-search-form">
+                               <div class="form-group has-feedback">
+                                       <input type="text" class="form-control input-sm" name="search" id="sidenav-lookup-field" placeholder="search" disabled>
+				       <span class="glyphicon glyphicon-search form-control-feedback" id="search-mgn-glass"></span>
+                               </div>
+                        </form>
+		</div>
+		<div class="navbar-header">
+			<a id="sidenav-toggle">
+				<span class="glyphicon glyphicon-menu-right"></span>
+				<span class="glyphicon glyphicon-menu-left"></span>
+			</a>
+			<a id="home-link" href="index.html" class="hotdoc-navbar-brand">
+				<img src="assets/images/home.svg" alt="Home">
+			</a>
+		</div>
+		<div class="navbar-collapse collapse" id="navbar-wrapper">
+			<ul class="nav navbar-nav" id="menu">
+							</ul>
+			<div class="hidden-xs hidden-sm navbar-text navbar-center">
+							</div>
+		</div>
+	</div>
+</nav>
+
+<main>
+<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="gtkprintoperationpreview.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['javascript', 'python', 'c']" data-hotdoc-meta-gi-language="c">
+<script src="assets/js/utils.js"></script>
+
+<div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
+	<script src="assets/js/navigation.js"></script>
+	<script src="assets/js/sitemap.js"></script>
+</div>
+
+<div id="body">
+	<div id="main">
+				    <div id="page-description" data-hotdoc-source="gtkprintoperationpreview.h" data-hotdoc-role="main">
+    </div>
+        
+        
+
+            <h3 class="symbol_section">Signals</h3>
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="GtkPrintOperationPreview::got-page-size">
+	
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="GtkPrintOperationPreview::got-page-size">
+	<span><code>got-page-size</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function got_page_size_callback(self: <a title="Gtk.PrintOperationPreview" href="gtkprintoperation.html#GtkPrintOperationPreview">Gtk.PrintOperationPreview</a>, context: <a title="Gtk.PrintContext" href="gtkprintcontext.html#GtkPrintContext">Gtk.PrintContext</a>, page_setup: <a title="Gtk.PageSetup" href="gtkpagesetup.html#GtkPageSetup">Gtk.PageSetup</a>, user_data: <a title="Object" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>): {
+    // javascript callback for the 'got-page-size' signal
+}</pre>
+
+<p>The ::got-page-size signal is emitted once for each page
+that gets rendered to the preview.</p>
+<p>A handler for this signal should update the <em>context</em>
+according to <em>page_setup</em> and set up a suitable cairo
+context, using <a href="gtkprintcontext.html#gtk_print_context_set_cairo_context">Gtk.prototype.set_cairo_context</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>self</code></em></i>
+					(
+						<a title="Gtk.PrintOperationPreview" href="gtkprintoperation.html#GtkPrintOperationPreview">Gtk.PrintOperationPreview</a>
+						)
+				–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+					(
+						<a title="Gtk.PrintContext" href="gtkprintcontext.html#GtkPrintContext">Gtk.PrintContext</a>
+						)
+				–
+	</div>
+			<p>the current <a href="gtkprintcontext.html#GtkPrintContext">Gtk.PrintContext</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>page_setup</code></em></i>
+					(
+						<a title="Gtk.PageSetup" href="gtkpagesetup.html#GtkPageSetup">Gtk.PageSetup</a>
+						)
+				–
+	</div>
+			<p>the <a href="gtkpagesetup.html#GtkPageSetup">Gtk.PageSetup</a> for the current page</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>user_data</code></em></i>
+					(
+						<a title="Object" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>
+						)
+				–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+<p>
+	<b>Flags:</b>	
+	
+		
+				<a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a>
+			
+</p>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="GtkPrintOperationPreview::got-page-size">
+	<span><code>got-page-size</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def got_page_size_callback (self, context, page_setup, user_data):
+    #python callback for the 'got-page-size' signal</pre>
+
+<p>The ::got-page-size signal is emitted once for each page
+that gets rendered to the preview.</p>
+<p>A handler for this signal should update the <em>context</em>
+according to <em>page_setup</em> and set up a suitable cairo
+context, using <a href="gtkprintcontext.html#gtk_print_context_set_cairo_context">Gtk.PrintContext.set_cairo_context</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>self</code></em></i>
+					(
+						<a title="Gtk.PrintOperationPreview" href="gtkprintoperation.html#GtkPrintOperationPreview">Gtk.PrintOperationPreview</a>
+						)
+				–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+					(
+						<a title="Gtk.PrintContext" href="gtkprintcontext.html#GtkPrintContext">Gtk.PrintContext</a>
+						)
+				–
+	</div>
+			<p>the current <a href="gtkprintcontext.html#GtkPrintContext">Gtk.PrintContext</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>page_setup</code></em></i>
+					(
+						<a title="Gtk.PageSetup" href="gtkpagesetup.html#GtkPageSetup">Gtk.PageSetup</a>
+						)
+				–
+	</div>
+			<p>the <a href="gtkpagesetup.html#GtkPageSetup">Gtk.PageSetup</a> for the current page</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>user_data</code></em></i>
+					(
+						<a title="object" href="https://docs.python.org/3/library/functions.html#object">object</a>
+						)
+				–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+<p>
+	<b>Flags:</b>	
+	
+		
+				<a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a>
+			
+</p>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="GtkPrintOperationPreview::got-page-size">
+	<span><code>got-page-size</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+got_page_size_callback (<a title="GtkPrintOperationPreview" href="gtkprintoperation.html#GtkPrintOperationPreview">GtkPrintOperationPreview</a> * self,
+                        <a title="GtkPrintContext" href="gtkprintcontext.html#GtkPrintContext">GtkPrintContext</a> * context,
+                        <a title="GtkPageSetup" href="gtkpagesetup.html#GtkPageSetup">GtkPageSetup</a> * page_setup,
+                        <a title="gpointer" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer">gpointer</a> user_data)</pre>
+
+<p>The ::got-page-size signal is emitted once for each page
+that gets rendered to the preview.</p>
+<p>A handler for this signal should update the <em>context</em>
+according to <em>page_setup</em> and set up a suitable cairo
+context, using <a href="gtkprintcontext.html#gtk_print_context_set_cairo_context">gtk_print_context_set_cairo_context</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>self</code></em></i>
+				–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+				–
+	</div>
+			<p>the current <a href="gtkprintcontext.html#GtkPrintContext">GtkPrintContext</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>page_setup</code></em></i>
+				–
+	</div>
+			<p>the <a href="gtkpagesetup.html#GtkPageSetup">GtkPageSetup</a> for the current page</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>user_data</code></em></i>
+				–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+<p>
+	<b>Flags:</b>	
+	
+		
+				<a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a>
+			
+</p>
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="GtkPrintOperationPreview::ready">
+	
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="GtkPrintOperationPreview::ready">
+	<span><code>ready</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function ready_callback(self: <a title="Gtk.PrintOperationPreview" href="gtkprintoperation.html#GtkPrintOperationPreview">Gtk.PrintOperationPreview</a>, context: <a title="Gtk.PrintContext" href="gtkprintcontext.html#GtkPrintContext">Gtk.PrintContext</a>, user_data: <a title="Object" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>): {
+    // javascript callback for the 'ready' signal
+}</pre>
+
+<p>The ::ready signal gets emitted once per preview operation,
+before the first page is rendered.</p>
+<p>A handler for this signal can be used for setup tasks.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>self</code></em></i>
+					(
+						<a title="Gtk.PrintOperationPreview" href="gtkprintoperation.html#GtkPrintOperationPreview">Gtk.PrintOperationPreview</a>
+						)
+				–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+					(
+						<a title="Gtk.PrintContext" href="gtkprintcontext.html#GtkPrintContext">Gtk.PrintContext</a>
+						)
+				–
+	</div>
+			<p>the current <a href="gtkprintcontext.html#GtkPrintContext">Gtk.PrintContext</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>user_data</code></em></i>
+					(
+						<a title="Object" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>
+						)
+				–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+<p>
+	<b>Flags:</b>	
+	
+		
+				<a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a>
+			
+</p>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="GtkPrintOperationPreview::ready">
+	<span><code>ready</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def ready_callback (self, context, user_data):
+    #python callback for the 'ready' signal</pre>
+
+<p>The ::ready signal gets emitted once per preview operation,
+before the first page is rendered.</p>
+<p>A handler for this signal can be used for setup tasks.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>self</code></em></i>
+					(
+						<a title="Gtk.PrintOperationPreview" href="gtkprintoperation.html#GtkPrintOperationPreview">Gtk.PrintOperationPreview</a>
+						)
+				–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+					(
+						<a title="Gtk.PrintContext" href="gtkprintcontext.html#GtkPrintContext">Gtk.PrintContext</a>
+						)
+				–
+	</div>
+			<p>the current <a href="gtkprintcontext.html#GtkPrintContext">Gtk.PrintContext</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>user_data</code></em></i>
+					(
+						<a title="object" href="https://docs.python.org/3/library/functions.html#object">object</a>
+						)
+				–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+<p>
+	<b>Flags:</b>	
+	
+		
+				<a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a>
+			
+</p>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="GtkPrintOperationPreview::ready">
+	<span><code>ready</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+ready_callback (<a title="GtkPrintOperationPreview" href="gtkprintoperation.html#GtkPrintOperationPreview">GtkPrintOperationPreview</a> * self,
+                <a title="GtkPrintContext" href="gtkprintcontext.html#GtkPrintContext">GtkPrintContext</a> * context,
+                <a title="gpointer" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer">gpointer</a> user_data)</pre>
+
+<p>The ::ready signal gets emitted once per preview operation,
+before the first page is rendered.</p>
+<p>A handler for this signal can be used for setup tasks.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>self</code></em></i>
+				–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+				–
+	</div>
+			<p>the current <a href="gtkprintcontext.html#GtkPrintContext">GtkPrintContext</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>user_data</code></em></i>
+				–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+<p>
+	<b>Flags:</b>	
+	
+		
+				<a href="https://developer.gnome.org/gobject/unstable/gobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a>
+			
+</p>
+
+
+
+        </div>
+
+</div>
+
+
+            <h3 class="symbol_section">Virtual Methods</h3>
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="GtkPrintOperationPreviewIface::end_preview">
+	
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="GtkPrintOperationPreviewIface::end_preview">
+	<span><code>end_preview</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function end_preview(preview: <a title="Gtk.PrintOperationPreview" href="gtkprintoperation.html#GtkPrintOperationPreview">Gtk.PrintOperationPreview</a>): {
+    // javascript implementation of the 'end_preview' virtual method
+}</pre>
+
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>preview</code></em></i>
+					(
+						<a title="Gtk.PrintOperationPreview" href="gtkprintoperation.html#GtkPrintOperationPreview">Gtk.PrintOperationPreview</a>
+						)
+				–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="GtkPrintOperationPreviewIface::end_preview">
+	<span><code>end_preview</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def end_preview (preview):
+    #python implementation of the 'end_preview' virtual method</pre>
+
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>preview</code></em></i>
+					(
+						<a title="Gtk.PrintOperationPreview" href="gtkprintoperation.html#GtkPrintOperationPreview">Gtk.PrintOperationPreview</a>
+						)
+				–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="GtkPrintOperationPreviewIface::end_preview">
+	<span><code>end_preview</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+end_preview (<a title="GtkPrintOperationPreview" href="gtkprintoperation.html#GtkPrintOperationPreview">GtkPrintOperationPreview</a> * preview)</pre>
+
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>preview</code></em></i>
+				–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="GtkPrintOperationPreviewIface::got_page_size">
+	
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="GtkPrintOperationPreviewIface::got_page_size">
+	<span><code>got_page_size</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function got_page_size(preview: <a title="Gtk.PrintOperationPreview" href="gtkprintoperation.html#GtkPrintOperationPreview">Gtk.PrintOperationPreview</a>, context: <a title="Gtk.PrintContext" href="gtkprintcontext.html#GtkPrintContext">Gtk.PrintContext</a>, page_setup: <a title="Gtk.PageSetup" href="gtkpagesetup.html#GtkPageSetup">Gtk.PageSetup</a>): {
+    // javascript implementation of the 'got_page_size' virtual method
+}</pre>
+
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>preview</code></em></i>
+					(
+						<a title="Gtk.PrintOperationPreview" href="gtkprintoperation.html#GtkPrintOperationPreview">Gtk.PrintOperationPreview</a>
+						)
+				–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+					(
+						<a title="Gtk.PrintContext" href="gtkprintcontext.html#GtkPrintContext">Gtk.PrintContext</a>
+						)
+				–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>page_setup</code></em></i>
+					(
+						<a title="Gtk.PageSetup" href="gtkpagesetup.html#GtkPageSetup">Gtk.PageSetup</a>
+						)
+				–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="GtkPrintOperationPreviewIface::got_page_size">
+	<span><code>got_page_size</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def got_page_size (preview, context, page_setup):
+    #python implementation of the 'got_page_size' virtual method</pre>
+
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>preview</code></em></i>
+					(
+						<a title="Gtk.PrintOperationPreview" href="gtkprintoperation.html#GtkPrintOperationPreview">Gtk.PrintOperationPreview</a>
+						)
+				–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+					(
+						<a title="Gtk.PrintContext" href="gtkprintcontext.html#GtkPrintContext">Gtk.PrintContext</a>
+						)
+				–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>page_setup</code></em></i>
+					(
+						<a title="Gtk.PageSetup" href="gtkpagesetup.html#GtkPageSetup">Gtk.PageSetup</a>
+						)
+				–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="GtkPrintOperationPreviewIface::got_page_size">
+	<span><code>got_page_size</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+got_page_size (<a title="GtkPrintOperationPreview" href="gtkprintoperation.html#GtkPrintOperationPreview">GtkPrintOperationPreview</a> * preview,
+               <a title="GtkPrintContext" href="gtkprintcontext.html#GtkPrintContext">GtkPrintContext</a> * context,
+               <a title="GtkPageSetup" href="gtkpagesetup.html#GtkPageSetup">GtkPageSetup</a> * page_setup)</pre>
+
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>preview</code></em></i>
+				–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+				–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>page_setup</code></em></i>
+				–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="GtkPrintOperationPreviewIface::is_selected">
+	
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="GtkPrintOperationPreviewIface::is_selected">
+	<span><code>is_selected</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function is_selected(preview: <a title="Gtk.PrintOperationPreview" href="gtkprintoperation.html#GtkPrintOperationPreview">Gtk.PrintOperationPreview</a>, page_nr: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript implementation of the 'is_selected' virtual method
+}</pre>
+
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>preview</code></em></i>
+					(
+						<a title="Gtk.PrintOperationPreview" href="gtkprintoperation.html#GtkPrintOperationPreview">Gtk.PrintOperationPreview</a>
+						)
+				–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>page_nr</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<i>No description available</i>
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="GtkPrintOperationPreviewIface::is_selected">
+	<span><code>is_selected</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def is_selected (preview, page_nr):
+    #python implementation of the 'is_selected' virtual method</pre>
+
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>preview</code></em></i>
+					(
+						<a title="Gtk.PrintOperationPreview" href="gtkprintoperation.html#GtkPrintOperationPreview">Gtk.PrintOperationPreview</a>
+						)
+				–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>page_nr</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+										)
+								–
+			</div>
+							<i>No description available</i>
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="GtkPrintOperationPreviewIface::is_selected">
+	<span><code>is_selected</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+is_selected (<a title="GtkPrintOperationPreview" href="gtkprintoperation.html#GtkPrintOperationPreview">GtkPrintOperationPreview</a> * preview,
+             <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> page_nr)</pre>
+
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>preview</code></em></i>
+				–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>page_nr</code></em></i>
+				–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<i>No description available</i>
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="GtkPrintOperationPreviewIface::ready">
+	
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="GtkPrintOperationPreviewIface::ready">
+	<span><code>ready</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function ready(preview: <a title="Gtk.PrintOperationPreview" href="gtkprintoperation.html#GtkPrintOperationPreview">Gtk.PrintOperationPreview</a>, context: <a title="Gtk.PrintContext" href="gtkprintcontext.html#GtkPrintContext">Gtk.PrintContext</a>): {
+    // javascript implementation of the 'ready' virtual method
+}</pre>
+
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>preview</code></em></i>
+					(
+						<a title="Gtk.PrintOperationPreview" href="gtkprintoperation.html#GtkPrintOperationPreview">Gtk.PrintOperationPreview</a>
+						)
+				–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+					(
+						<a title="Gtk.PrintContext" href="gtkprintcontext.html#GtkPrintContext">Gtk.PrintContext</a>
+						)
+				–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="GtkPrintOperationPreviewIface::ready">
+	<span><code>ready</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def ready (preview, context):
+    #python implementation of the 'ready' virtual method</pre>
+
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>preview</code></em></i>
+					(
+						<a title="Gtk.PrintOperationPreview" href="gtkprintoperation.html#GtkPrintOperationPreview">Gtk.PrintOperationPreview</a>
+						)
+				–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+					(
+						<a title="Gtk.PrintContext" href="gtkprintcontext.html#GtkPrintContext">Gtk.PrintContext</a>
+						)
+				–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="GtkPrintOperationPreviewIface::ready">
+	<span><code>ready</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+ready (<a title="GtkPrintOperationPreview" href="gtkprintoperation.html#GtkPrintOperationPreview">GtkPrintOperationPreview</a> * preview,
+       <a title="GtkPrintContext" href="gtkprintcontext.html#GtkPrintContext">GtkPrintContext</a> * context)</pre>
+
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>preview</code></em></i>
+				–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+				–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="GtkPrintOperationPreviewIface::render_page">
+	
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="GtkPrintOperationPreviewIface::render_page">
+	<span><code>render_page</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function render_page(preview: <a title="Gtk.PrintOperationPreview" href="gtkprintoperation.html#GtkPrintOperationPreview">Gtk.PrintOperationPreview</a>, page_nr: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript implementation of the 'render_page' virtual method
+}</pre>
+
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>preview</code></em></i>
+					(
+						<a title="Gtk.PrintOperationPreview" href="gtkprintoperation.html#GtkPrintOperationPreview">Gtk.PrintOperationPreview</a>
+						)
+				–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>page_nr</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="GtkPrintOperationPreviewIface::render_page">
+	<span><code>render_page</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def render_page (preview, page_nr):
+    #python implementation of the 'render_page' virtual method</pre>
+
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>preview</code></em></i>
+					(
+						<a title="Gtk.PrintOperationPreview" href="gtkprintoperation.html#GtkPrintOperationPreview">Gtk.PrintOperationPreview</a>
+						)
+				–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>page_nr</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="GtkPrintOperationPreviewIface::render_page">
+	<span><code>render_page</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+render_page (<a title="GtkPrintOperationPreview" href="gtkprintoperation.html#GtkPrintOperationPreview">GtkPrintOperationPreview</a> * preview,
+             <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> page_nr)</pre>
+
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>preview</code></em></i>
+				–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>page_nr</code></em></i>
+				–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+
+        
+
+            <h2 class="symbol_section">Constants</h2>
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="GTK_TYPE_PRINT_OPERATION_PREVIEW">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h3 data-hotdoc-id="GTK_TYPE_PRINT_OPERATION_PREVIEW">
+	<span><code>GTK_TYPE_PRINT_OPERATION_PREVIEW</code></span>
+</h3>
+
+
+<pre class="raw_code">
+#define GTK_TYPE_PRINT_OPERATION_PREVIEW                  (gtk_print_operation_preview_get_type ())
+</pre>
+
+
+
+
+        </div>
+
+</div>
+
+
+
+
+
+
+		
+	</div>
+	<div id="search_results">
+		<p>The results of the search are</p>
+	</div>
+	<hr>
+	<div id="footer">
+		    
+
+	</div>
+</div>
+
+<div id="toc-column">
+	
+		<div class="edit-button">
+		
+
+	</div>
+		<div id="toc-wrapper">
+		<nav id="toc"></nav>
+	</div>
+</div>
+</div>
+</main>
+
+</body>
+
+<script src="assets/js/navbar_offset_scroller.js"></script>
+</html>

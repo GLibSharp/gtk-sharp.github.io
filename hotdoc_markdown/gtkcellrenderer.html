@@ -1,0 +1,6345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<base href="..">
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>gtkcellrenderer</title>
+
+<link rel="stylesheet" href="assets/css/custom_bootstrap.css" type="text/css">
+<link rel="stylesheet" href="assets/css/bootstrap-toc.min.css" type="text/css">
+<link rel="stylesheet" href="assets/css/frontend.css" type="text/css">
+<link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
+
+<link rel="stylesheet" href="assets/css/prism.css" type="text/css">
+
+<script src="assets/js/mustache.min.js"></script>
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/scrollspy.js"></script>
+<script src="assets/js/bootstrap.js"></script>
+<script src="assets/js/typeahead.jquery.min.js"></script>
+<script src="assets/js/search.js"></script>
+<script src="assets/js/isotope.pkgd.min.js"></script>
+<script src="assets/js/compare-versions.js"></script>
+<script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="assets/js/bootstrap-toc.min.js"></script>
+<script src="assets/js/jquery.touchSwipe.min.js"></script>
+<script src="assets/js/anchor.min.js"></script>
+<script src="assets/js/tag_filtering.js"></script>
+<script src="assets/js/language_switching.js"></script>
+
+<script src="assets/js/lines_around_headings.js"></script>
+
+<script src="assets/js/prism-core.js"></script>
+<script src="assets/js/prism-autoloader.js"></script>
+<script src="assets/js/prism_autoloader_path_override.js"></script>
+<script src="assets/js/trie.js"></script>
+
+
+</head>
+
+<body class="no-script
+" data-spy="scroll" data-target="#toc" data-offset="70">
+
+<script>
+$('body').removeClass('no-script');
+</script>
+
+<nav class="navbar navbar-fixed-top navbar-default" id="topnav">
+	<div class="container-fluid">
+		<div class="navbar-right">
+			<a id="toc-toggle">
+				<span class="glyphicon glyphicon-menu-right"></span>
+				<span class="glyphicon glyphicon-menu-left"></span>
+			</a>
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-wrapper" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<form action="" class="navbar-form pull-right" id="navbar-search-form">
+                               <div class="form-group has-feedback">
+                                       <input type="text" class="form-control input-sm" name="search" id="sidenav-lookup-field" placeholder="search" disabled>
+				       <span class="glyphicon glyphicon-search form-control-feedback" id="search-mgn-glass"></span>
+                               </div>
+                        </form>
+		</div>
+		<div class="navbar-header">
+			<a id="sidenav-toggle">
+				<span class="glyphicon glyphicon-menu-right"></span>
+				<span class="glyphicon glyphicon-menu-left"></span>
+			</a>
+			<a id="home-link" href="index.html" class="hotdoc-navbar-brand">
+				<img src="assets/images/home.svg" alt="Home">
+			</a>
+		</div>
+		<div class="navbar-collapse collapse" id="navbar-wrapper">
+			<ul class="nav navbar-nav" id="menu">
+							</ul>
+			<div class="hidden-xs hidden-sm navbar-text navbar-center">
+							</div>
+		</div>
+	</div>
+</nav>
+
+<main>
+<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="hotdoc_markdown/gtkcellrenderer.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['c', 'javascript', 'python']" data-hotdoc-meta-gi-language="c">
+<script src="assets/js/utils.js"></script>
+
+<div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
+	<script src="assets/js/navigation.js"></script>
+	<script src="assets/js/sitemap.js"></script>
+</div>
+
+<div id="body">
+	<div id="main">
+				    <div id="page-description" data-hotdoc-source="gtkcellrenderer.markdown" data-hotdoc-role="main">
+    </div>
+        
+        
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="GtkCellRenderer">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h2 data-hotdoc-id="GtkCellRenderer">
+	<span><code>GtkCellRenderer</code></span>
+</h2>
+
+
+<div class="hierarchy_container">
+	<div class="hierarchy_details">
+<pre>
+<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object">GObject</a>
+    <span class="lineart">╰──</span><a title="GInitiallyUnowned" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-python="GObject.InitiallyUnowned" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-javascript="GObject.InitiallyUnowned">GInitiallyUnowned</a>
+        <span class="lineart">╰──</span>GtkCellRenderer
+            <span class="lineart">╰──</span><a title="GtkCellRendererPixbuf" href="hotdoc_markdown/gtkcellrendererpixbuf.html#GtkCellRendererPixbuf" data-gi-href-python="hotdoc_markdown/gtkcellrendererpixbuf.html#GtkCellRendererPixbuf" data-gi-title-python="Gtk.CellRendererPixbuf" data-gi-href-javascript="hotdoc_markdown/gtkcellrendererpixbuf.html#GtkCellRendererPixbuf" data-gi-title-javascript="Gtk.CellRendererPixbuf">GtkCellRendererPixbuf</a>
+            <span class="lineart">╰──</span><a title="GtkCellRendererProgress" href="hotdoc_markdown/gtkcellrendererprogress.html#GtkCellRendererProgress" data-gi-href-python="hotdoc_markdown/gtkcellrendererprogress.html#GtkCellRendererProgress" data-gi-title-python="Gtk.CellRendererProgress" data-gi-href-javascript="hotdoc_markdown/gtkcellrendererprogress.html#GtkCellRendererProgress" data-gi-title-javascript="Gtk.CellRendererProgress">GtkCellRendererProgress</a>
+            <span class="lineart">╰──</span><a title="GtkCellRendererSpinner" href="hotdoc_markdown/gtkcellrendererspinner.html#GtkCellRendererSpinner" data-gi-href-python="hotdoc_markdown/gtkcellrendererspinner.html#GtkCellRendererSpinner" data-gi-title-python="Gtk.CellRendererSpinner" data-gi-href-javascript="hotdoc_markdown/gtkcellrendererspinner.html#GtkCellRendererSpinner" data-gi-title-javascript="Gtk.CellRendererSpinner">GtkCellRendererSpinner</a>
+            <span class="lineart">╰──</span><a title="GtkCellRendererText" href="hotdoc_markdown/gtkcellrenderertext.html#GtkCellRendererText" data-gi-href-python="hotdoc_markdown/gtkcellrenderertext.html#GtkCellRendererText" data-gi-title-python="Gtk.CellRendererText" data-gi-href-javascript="hotdoc_markdown/gtkcellrenderertext.html#GtkCellRendererText" data-gi-title-javascript="Gtk.CellRendererText">GtkCellRendererText</a>
+            <span class="lineart">╰──</span><a title="GtkCellRendererToggle" href="hotdoc_markdown/gtkcellrenderertoggle.html#GtkCellRendererToggle" data-gi-href-python="hotdoc_markdown/gtkcellrenderertoggle.html#GtkCellRendererToggle" data-gi-title-python="Gtk.CellRendererToggle" data-gi-href-javascript="hotdoc_markdown/gtkcellrenderertoggle.html#GtkCellRendererToggle" data-gi-title-javascript="Gtk.CellRendererToggle">GtkCellRendererToggle</a>
+</pre>
+
+</div>
+
+</div>
+
+
+
+
+
+	<div class="members-container">
+		<h3>Members</h3>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkCellRenderer.parent_instance">
+	<div>
+		<i><em><code>parent_instance</code></em></i>
+		(<a title="GInitiallyUnowned" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-python="GObject.InitiallyUnowned" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-javascript="GObject.InitiallyUnowned">GInitiallyUnowned</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+<h3>Class structure</h3>
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="GtkCellRendererClass">
+	<span><code>GtkCellRendererClass</code></span>
+</h4>
+
+
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h3>
+	Gtk.CellRendererClass
+</h3>
+
+
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3>
+	Gtk.CellRendererClass
+</h3>
+
+
+
+
+
+
+
+        </div>
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h2 data-hotdoc-id="GtkCellRenderer">
+	<span><code>GtkCellRenderer</code></span>
+</h2>
+
+
+<div class="hierarchy_container">
+	<div class="hierarchy_details">
+<pre>
+<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object">GObject</a>
+    <span class="lineart">╰──</span><a title="GInitiallyUnowned" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-python="GObject.InitiallyUnowned" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-javascript="GObject.InitiallyUnowned">GInitiallyUnowned</a>
+        <span class="lineart">╰──</span>GtkCellRenderer
+            <span class="lineart">╰──</span><a title="GtkCellRendererPixbuf" href="hotdoc_markdown/gtkcellrendererpixbuf.html#GtkCellRendererPixbuf" data-gi-href-python="hotdoc_markdown/gtkcellrendererpixbuf.html#GtkCellRendererPixbuf" data-gi-title-python="Gtk.CellRendererPixbuf" data-gi-href-javascript="hotdoc_markdown/gtkcellrendererpixbuf.html#GtkCellRendererPixbuf" data-gi-title-javascript="Gtk.CellRendererPixbuf">GtkCellRendererPixbuf</a>
+            <span class="lineart">╰──</span><a title="GtkCellRendererProgress" href="hotdoc_markdown/gtkcellrendererprogress.html#GtkCellRendererProgress" data-gi-href-python="hotdoc_markdown/gtkcellrendererprogress.html#GtkCellRendererProgress" data-gi-title-python="Gtk.CellRendererProgress" data-gi-href-javascript="hotdoc_markdown/gtkcellrendererprogress.html#GtkCellRendererProgress" data-gi-title-javascript="Gtk.CellRendererProgress">GtkCellRendererProgress</a>
+            <span class="lineart">╰──</span><a title="GtkCellRendererSpinner" href="hotdoc_markdown/gtkcellrendererspinner.html#GtkCellRendererSpinner" data-gi-href-python="hotdoc_markdown/gtkcellrendererspinner.html#GtkCellRendererSpinner" data-gi-title-python="Gtk.CellRendererSpinner" data-gi-href-javascript="hotdoc_markdown/gtkcellrendererspinner.html#GtkCellRendererSpinner" data-gi-title-javascript="Gtk.CellRendererSpinner">GtkCellRendererSpinner</a>
+            <span class="lineart">╰──</span><a title="GtkCellRendererText" href="hotdoc_markdown/gtkcellrenderertext.html#GtkCellRendererText" data-gi-href-python="hotdoc_markdown/gtkcellrenderertext.html#GtkCellRendererText" data-gi-title-python="Gtk.CellRendererText" data-gi-href-javascript="hotdoc_markdown/gtkcellrenderertext.html#GtkCellRendererText" data-gi-title-javascript="Gtk.CellRendererText">GtkCellRendererText</a>
+            <span class="lineart">╰──</span><a title="GtkCellRendererToggle" href="hotdoc_markdown/gtkcellrenderertoggle.html#GtkCellRendererToggle" data-gi-href-python="hotdoc_markdown/gtkcellrenderertoggle.html#GtkCellRendererToggle" data-gi-title-python="Gtk.CellRendererToggle" data-gi-href-javascript="hotdoc_markdown/gtkcellrenderertoggle.html#GtkCellRendererToggle" data-gi-title-javascript="Gtk.CellRendererToggle">GtkCellRendererToggle</a>
+</pre>
+
+</div>
+
+</div>
+
+
+
+
+
+	<div class="members-container">
+		<h3>Members</h3>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkCellRenderer.parent_instance">
+	<div>
+		<i><em><code>parent_instance</code></em></i>
+		(<a title="GInitiallyUnowned" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-python="GObject.InitiallyUnowned" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-javascript="GObject.InitiallyUnowned">GInitiallyUnowned</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h2 data-hotdoc-id="GtkCellRenderer">
+	<span><code>GtkCellRenderer</code></span>
+</h2>
+
+
+<div class="hierarchy_container">
+	<div class="hierarchy_details">
+<pre>
+<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object">GObject</a>
+    <span class="lineart">╰──</span><a title="GInitiallyUnowned" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-python="GObject.InitiallyUnowned" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-javascript="GObject.InitiallyUnowned">GInitiallyUnowned</a>
+        <span class="lineart">╰──</span>GtkCellRenderer
+            <span class="lineart">╰──</span><a title="GtkCellRendererPixbuf" href="hotdoc_markdown/gtkcellrendererpixbuf.html#GtkCellRendererPixbuf" data-gi-href-python="hotdoc_markdown/gtkcellrendererpixbuf.html#GtkCellRendererPixbuf" data-gi-title-python="Gtk.CellRendererPixbuf" data-gi-href-javascript="hotdoc_markdown/gtkcellrendererpixbuf.html#GtkCellRendererPixbuf" data-gi-title-javascript="Gtk.CellRendererPixbuf">GtkCellRendererPixbuf</a>
+            <span class="lineart">╰──</span><a title="GtkCellRendererProgress" href="hotdoc_markdown/gtkcellrendererprogress.html#GtkCellRendererProgress" data-gi-href-python="hotdoc_markdown/gtkcellrendererprogress.html#GtkCellRendererProgress" data-gi-title-python="Gtk.CellRendererProgress" data-gi-href-javascript="hotdoc_markdown/gtkcellrendererprogress.html#GtkCellRendererProgress" data-gi-title-javascript="Gtk.CellRendererProgress">GtkCellRendererProgress</a>
+            <span class="lineart">╰──</span><a title="GtkCellRendererSpinner" href="hotdoc_markdown/gtkcellrendererspinner.html#GtkCellRendererSpinner" data-gi-href-python="hotdoc_markdown/gtkcellrendererspinner.html#GtkCellRendererSpinner" data-gi-title-python="Gtk.CellRendererSpinner" data-gi-href-javascript="hotdoc_markdown/gtkcellrendererspinner.html#GtkCellRendererSpinner" data-gi-title-javascript="Gtk.CellRendererSpinner">GtkCellRendererSpinner</a>
+            <span class="lineart">╰──</span><a title="GtkCellRendererText" href="hotdoc_markdown/gtkcellrenderertext.html#GtkCellRendererText" data-gi-href-python="hotdoc_markdown/gtkcellrenderertext.html#GtkCellRendererText" data-gi-title-python="Gtk.CellRendererText" data-gi-href-javascript="hotdoc_markdown/gtkcellrenderertext.html#GtkCellRendererText" data-gi-title-javascript="Gtk.CellRendererText">GtkCellRendererText</a>
+            <span class="lineart">╰──</span><a title="GtkCellRendererToggle" href="hotdoc_markdown/gtkcellrenderertoggle.html#GtkCellRendererToggle" data-gi-href-python="hotdoc_markdown/gtkcellrenderertoggle.html#GtkCellRendererToggle" data-gi-title-python="Gtk.CellRendererToggle" data-gi-href-javascript="hotdoc_markdown/gtkcellrenderertoggle.html#GtkCellRendererToggle" data-gi-title-javascript="Gtk.CellRendererToggle">GtkCellRendererToggle</a>
+</pre>
+
+</div>
+
+</div>
+
+
+
+
+
+	<div class="members-container">
+		<h3>Members</h3>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkCellRenderer.parent_instance">
+	<div>
+		<i><em><code>parent_instance</code></em></i>
+		(<a title="GInitiallyUnowned" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-python="GObject.InitiallyUnowned" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-javascript="GObject.InitiallyUnowned">GInitiallyUnowned</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+
+</div>
+
+
+            <h3 class="symbol_section">Methods</h3>
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_cell_renderer_get_aligned_area">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_renderer_get_aligned_area">
+	<span><code>gtk_cell_renderer_get_aligned_area</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_cell_renderer_get_aligned_area (<a title="GtkCellRenderer" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">GtkCellRenderer</a> * cell,
+                                    <a title="GtkWidget" href="hotdoc_markdown/gtkwidget.html#GtkWidget">GtkWidget</a> * widget,
+                                    <a title="GtkCellRendererState" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRendererState">GtkCellRendererState</a> flags,
+                                    const <a title="GdkRectangle" href="https://developer.gnome.org/gdk3/gdk3-Points-Rectangles-and-Regions.html#GdkRectangle">GdkRectangle</a> * cell_area,
+                                    <a title="GdkRectangle" href="https://developer.gnome.org/gdk3/gdk3-Points-Rectangles-and-Regions.html#GdkRectangle">GdkRectangle</a> * aligned_area)</pre>
+
+<p>Gets the aligned area used by <em>cell</em> inside <em>cell_area</em>. Used for finding
+the appropriate edit and focus rectangle.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">GtkCellRenderer</a> instance</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>widget</code></em></i>
+				–
+	</div>
+			<p>the <a href="hotdoc_markdown/gtkwidget.html#GtkWidget">GtkWidget</a> this cell will be rendering to</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>flags</code></em></i>
+				–
+	</div>
+			<p>render flags</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell_area</code></em></i>
+				–
+	</div>
+			<p>cell area which would be passed to <a href="https://developer.gnome.org/gtk3/GtkCellRenderer.html#gtk-cell-renderer-render">gtk_cell_renderer_render</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>aligned_area</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="Parameter for returning results"><span class="acronym">out</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>the return location for the space inside <em>cell_area</em>
+that would acually be used to render.</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_renderer_get_aligned_area">
+	<span><code>Gtk.prototype.get_aligned_area</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_aligned_area(widget: <a title="Gtk.Widget" href="hotdoc_markdown/gtkwidget.html#GtkWidget">Gtk.Widget</a>, flags: <a title="Gtk.CellRendererState" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRendererState">Gtk.CellRendererState</a>, cell_area: <a title="Gdk.Rectangle" href="https://developer.gnome.org/gdk3/gdk3-Points-Rectangles-and-Regions.html#GdkRectangle">Gdk.Rectangle</a>): {
+    // javascript wrapper for 'gtk_cell_renderer_get_aligned_area'
+}</pre>
+
+<p>Gets the aligned area used by <em>cell</em> inside <em>cell_area</em>. Used for finding
+the appropriate edit and focus rectangle.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+					(
+						<a title="Gtk.CellRenderer" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a> instance</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>widget</code></em></i>
+					(
+						<a title="Gtk.Widget" href="hotdoc_markdown/gtkwidget.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>the <a href="hotdoc_markdown/gtkwidget.html#GtkWidget">Gtk.Widget</a> this cell will be rendering to</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>flags</code></em></i>
+					(
+						<a title="Gtk.CellRendererState" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRendererState">Gtk.CellRendererState</a>
+						)
+				–
+	</div>
+			<p>render flags</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell_area</code></em></i>
+					(
+						<a title="Gdk.Rectangle" href="https://developer.gnome.org/gdk3/gdk3-Points-Rectangles-and-Regions.html#GdkRectangle">Gdk.Rectangle</a>
+						)
+				–
+	</div>
+			<p>cell area which would be passed to <a href="https://developer.gnome.org/gtk3/GtkCellRenderer.html#gtk-cell-renderer-render">gtk_cell_renderer_render (not introspectable)</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_renderer_get_aligned_area">
+	<span><code>Gtk.CellRenderer.get_aligned_area</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.CellRenderer.get_aligned_area (self, widget, flags, cell_area):
+    #python wrapper for 'gtk_cell_renderer_get_aligned_area'</pre>
+
+<p>Gets the aligned area used by <em>cell</em> inside <em>cell_area</em>. Used for finding
+the appropriate edit and focus rectangle.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+					(
+						<a title="Gtk.CellRenderer" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a> instance</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>widget</code></em></i>
+					(
+						<a title="Gtk.Widget" href="hotdoc_markdown/gtkwidget.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>the <a href="hotdoc_markdown/gtkwidget.html#GtkWidget">Gtk.Widget</a> this cell will be rendering to</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>flags</code></em></i>
+					(
+						<a title="Gtk.CellRendererState" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRendererState">Gtk.CellRendererState</a>
+						)
+				–
+	</div>
+			<p>render flags</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell_area</code></em></i>
+					(
+						<a title="Gdk.Rectangle" href="https://developer.gnome.org/gdk3/gdk3-Points-Rectangles-and-Regions.html#GdkRectangle">Gdk.Rectangle</a>
+						)
+				–
+	</div>
+			<p>cell area which would be passed to <a href="https://developer.gnome.org/gtk3/GtkCellRenderer.html#gtk-cell-renderer-render">gtk_cell_renderer_render (not introspectable)</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="deprecated:3.0;" id="gtk_cell_renderer_get_size">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_renderer_get_size">
+	<span><code>gtk_cell_renderer_get_size</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_cell_renderer_get_size (<a title="GtkCellRenderer" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">GtkCellRenderer</a> * cell,
+                            <a title="GtkWidget" href="hotdoc_markdown/gtkwidget.html#GtkWidget">GtkWidget</a> * widget,
+                            const <a title="GdkRectangle" href="https://developer.gnome.org/gdk3/gdk3-Points-Rectangles-and-Regions.html#GdkRectangle">GdkRectangle</a> * cell_area,
+                            <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> * x_offset,
+                            <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> * y_offset,
+                            <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> * width,
+                            <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> * height)</pre>
+
+<p>Obtains the width and height needed to render the cell. Used by view
+widgets to determine the appropriate size for the cell_area passed to
+<a href="hotdoc_markdown/gtkcellrenderer.html#gtk_cell_renderer_snapshot">gtk_cell_renderer_snapshot</a>.  If <em>cell_area</em> is not <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a>, fills in the
+x and y offsets (if set) of the cell relative to this location.</p>
+<p>Please note that the values set in <em>width</em> and <em>height</em>, as well as those
+in <em>x_offset</em> and <em>y_offset</em> are inclusive of the xpad and ypad properties.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">GtkCellRenderer</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>widget</code></em></i>
+				–
+	</div>
+			<p>the widget the renderer is rendering to</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell_area</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>The area a cell will be allocated, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>x_offset</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="Parameter for returning results"><span class="acronym">out</span></abbr>]</span>
+<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>location to return x offset of cell relative to <em>cell_area</em>, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>y_offset</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="Parameter for returning results"><span class="acronym">out</span></abbr>]</span>
+<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>location to return y offset of cell relative to <em>cell_area</em>, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>width</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="Parameter for returning results"><span class="acronym">out</span></abbr>]</span>
+<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>location to return width needed to render a cell, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>height</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="Parameter for returning results"><span class="acronym">out</span></abbr>]</span>
+<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>location to return height needed to render a cell, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>deprecated</b>			: 3.0: Use gtk_cell_renderer_get_preferred_size() instead.
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_renderer_get_size">
+	<span><code>Gtk.prototype.get_size</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_size(widget: <a title="Gtk.Widget" href="hotdoc_markdown/gtkwidget.html#GtkWidget">Gtk.Widget</a>, cell_area: <a title="Gdk.Rectangle" href="https://developer.gnome.org/gdk3/gdk3-Points-Rectangles-and-Regions.html#GdkRectangle">Gdk.Rectangle</a>): {
+    // javascript wrapper for 'gtk_cell_renderer_get_size'
+}</pre>
+
+<p>Obtains the width and height needed to render the cell. Used by view
+widgets to determine the appropriate size for the cell_area passed to
+<a href="hotdoc_markdown/gtkcellrenderer.html#gtk_cell_renderer_snapshot">Gtk.prototype.snapshot</a>.  If <em>cell_area</em> is not <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a>, fills in the
+x and y offsets (if set) of the cell relative to this location.</p>
+<p>Please note that the values set in <em>width</em> and <em>height</em>, as well as those
+in <em>x_offset</em> and <em>y_offset</em> are inclusive of the xpad and ypad properties.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+					(
+						<a title="Gtk.CellRenderer" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>widget</code></em></i>
+					(
+						<a title="Gtk.Widget" href="hotdoc_markdown/gtkwidget.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>the widget the renderer is rendering to</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell_area</code></em></i>
+					(
+						<a title="Gdk.Rectangle" href="https://developer.gnome.org/gdk3/gdk3-Points-Rectangles-and-Regions.html#GdkRectangle">Gdk.Rectangle</a>
+						)
+				–
+	</div>
+			<p>The area a cell will be allocated, or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>deprecated</b>			: 3.0: Use gtk_cell_renderer_get_preferred_size() instead.
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_renderer_get_size">
+	<span><code>Gtk.CellRenderer.get_size</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.CellRenderer.get_size (self, widget, cell_area):
+    #python wrapper for 'gtk_cell_renderer_get_size'</pre>
+
+<p>Obtains the width and height needed to render the cell. Used by view
+widgets to determine the appropriate size for the cell_area passed to
+<a href="hotdoc_markdown/gtkcellrenderer.html#gtk_cell_renderer_snapshot">Gtk.CellRenderer.snapshot</a>.  If <em>cell_area</em> is not <a href="https://docs.python.org/3/library/constants.html#None">None</a>, fills in the
+x and y offsets (if set) of the cell relative to this location.</p>
+<p>Please note that the values set in <em>width</em> and <em>height</em>, as well as those
+in <em>x_offset</em> and <em>y_offset</em> are inclusive of the xpad and ypad properties.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+					(
+						<a title="Gtk.CellRenderer" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>widget</code></em></i>
+					(
+						<a title="Gtk.Widget" href="hotdoc_markdown/gtkwidget.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>the widget the renderer is rendering to</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell_area</code></em></i>
+					(
+						<a title="Gdk.Rectangle" href="https://developer.gnome.org/gdk3/gdk3-Points-Rectangles-and-Regions.html#GdkRectangle">Gdk.Rectangle</a>
+						)
+				–
+	</div>
+			<p>The area a cell will be allocated, or <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>deprecated</b>			: 3.0: Use gtk_cell_renderer_get_preferred_size() instead.
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.90;" id="gtk_cell_renderer_snapshot">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_renderer_snapshot">
+	<span><code>gtk_cell_renderer_snapshot</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_cell_renderer_snapshot (<a title="GtkCellRenderer" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">GtkCellRenderer</a> * cell,
+                            <a title="GtkSnapshot" href="hotdoc_markdown/gtksnapshot.html#GtkSnapshot">GtkSnapshot</a> * snapshot,
+                            <a title="GtkWidget" href="hotdoc_markdown/gtkwidget.html#GtkWidget">GtkWidget</a> * widget,
+                            const <a title="GdkRectangle" href="https://developer.gnome.org/gdk3/gdk3-Points-Rectangles-and-Regions.html#GdkRectangle">GdkRectangle</a> * background_area,
+                            const <a title="GdkRectangle" href="https://developer.gnome.org/gdk3/gdk3-Points-Rectangles-and-Regions.html#GdkRectangle">GdkRectangle</a> * cell_area,
+                            <a title="GtkCellRendererState" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRendererState">GtkCellRendererState</a> flags)</pre>
+
+<p>Invokes the virtual render function of the <a href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">GtkCellRenderer</a>. The three
+passed-in rectangles are areas in <em>cr</em>. Most renderers will draw within
+<em>cell_area</em>; the xalign, yalign, xpad, and ypad fields of the <a href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">GtkCellRenderer</a>
+should be honored with respect to <em>cell_area</em>. <em>background_area</em> includes the
+blank space around the cell, and also the area containing the tree expander;
+so the <em>background_area</em> rectangles for all cells tile to cover the entire
+<em>window</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">GtkCellRenderer</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>snapshot</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtksnapshot.html#GtkSnapshot">GtkSnapshot</a> to draw to</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>widget</code></em></i>
+				–
+	</div>
+			<p>the widget owning <em>window</em></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>background_area</code></em></i>
+				–
+	</div>
+			<p>entire cell area (including tree expanders and maybe
+padding on the sides)</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell_area</code></em></i>
+				–
+	</div>
+			<p>area normally rendered by a cell renderer</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>flags</code></em></i>
+				–
+	</div>
+			<p>flags that affect rendering</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.90
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_renderer_snapshot">
+	<span><code>Gtk.prototype.snapshot</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.snapshot(snapshot: <a title="Gtk.Snapshot" href="hotdoc_markdown/gtksnapshot.html#GtkSnapshot">Gtk.Snapshot</a>, widget: <a title="Gtk.Widget" href="hotdoc_markdown/gtkwidget.html#GtkWidget">Gtk.Widget</a>, background_area: <a title="Gdk.Rectangle" href="https://developer.gnome.org/gdk3/gdk3-Points-Rectangles-and-Regions.html#GdkRectangle">Gdk.Rectangle</a>, cell_area: <a title="Gdk.Rectangle" href="https://developer.gnome.org/gdk3/gdk3-Points-Rectangles-and-Regions.html#GdkRectangle">Gdk.Rectangle</a>, flags: <a title="Gtk.CellRendererState" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRendererState">Gtk.CellRendererState</a>): {
+    // javascript wrapper for 'gtk_cell_renderer_snapshot'
+}</pre>
+
+<p>Invokes the virtual render function of the <a href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a>. The three
+passed-in rectangles are areas in <em>cr</em>. Most renderers will draw within
+<em>cell_area</em>; the xalign, yalign, xpad, and ypad fields of the <a href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a>
+should be honored with respect to <em>cell_area</em>. <em>background_area</em> includes the
+blank space around the cell, and also the area containing the tree expander;
+so the <em>background_area</em> rectangles for all cells tile to cover the entire
+<em>window</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+					(
+						<a title="Gtk.CellRenderer" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>snapshot</code></em></i>
+					(
+						<a title="Gtk.Snapshot" href="hotdoc_markdown/gtksnapshot.html#GtkSnapshot">Gtk.Snapshot</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtksnapshot.html#GtkSnapshot">Gtk.Snapshot</a> to draw to</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>widget</code></em></i>
+					(
+						<a title="Gtk.Widget" href="hotdoc_markdown/gtkwidget.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>the widget owning <em>window</em></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>background_area</code></em></i>
+					(
+						<a title="Gdk.Rectangle" href="https://developer.gnome.org/gdk3/gdk3-Points-Rectangles-and-Regions.html#GdkRectangle">Gdk.Rectangle</a>
+						)
+				–
+	</div>
+			<p>entire cell area (including tree expanders and maybe
+padding on the sides)</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell_area</code></em></i>
+					(
+						<a title="Gdk.Rectangle" href="https://developer.gnome.org/gdk3/gdk3-Points-Rectangles-and-Regions.html#GdkRectangle">Gdk.Rectangle</a>
+						)
+				–
+	</div>
+			<p>area normally rendered by a cell renderer</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>flags</code></em></i>
+					(
+						<a title="Gtk.CellRendererState" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRendererState">Gtk.CellRendererState</a>
+						)
+				–
+	</div>
+			<p>flags that affect rendering</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.90
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_renderer_snapshot">
+	<span><code>Gtk.CellRenderer.snapshot</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.CellRenderer.snapshot (self, snapshot, widget, background_area, cell_area, flags):
+    #python wrapper for 'gtk_cell_renderer_snapshot'</pre>
+
+<p>Invokes the virtual render function of the <a href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a>. The three
+passed-in rectangles are areas in <em>cr</em>. Most renderers will draw within
+<em>cell_area</em>; the xalign, yalign, xpad, and ypad fields of the <a href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a>
+should be honored with respect to <em>cell_area</em>. <em>background_area</em> includes the
+blank space around the cell, and also the area containing the tree expander;
+so the <em>background_area</em> rectangles for all cells tile to cover the entire
+<em>window</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+					(
+						<a title="Gtk.CellRenderer" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>snapshot</code></em></i>
+					(
+						<a title="Gtk.Snapshot" href="hotdoc_markdown/gtksnapshot.html#GtkSnapshot">Gtk.Snapshot</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtksnapshot.html#GtkSnapshot">Gtk.Snapshot</a> to draw to</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>widget</code></em></i>
+					(
+						<a title="Gtk.Widget" href="hotdoc_markdown/gtkwidget.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>the widget owning <em>window</em></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>background_area</code></em></i>
+					(
+						<a title="Gdk.Rectangle" href="https://developer.gnome.org/gdk3/gdk3-Points-Rectangles-and-Regions.html#GdkRectangle">Gdk.Rectangle</a>
+						)
+				–
+	</div>
+			<p>entire cell area (including tree expanders and maybe
+padding on the sides)</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell_area</code></em></i>
+					(
+						<a title="Gdk.Rectangle" href="https://developer.gnome.org/gdk3/gdk3-Points-Rectangles-and-Regions.html#GdkRectangle">Gdk.Rectangle</a>
+						)
+				–
+	</div>
+			<p>area normally rendered by a cell renderer</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>flags</code></em></i>
+					(
+						<a title="Gtk.CellRendererState" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRendererState">Gtk.CellRendererState</a>
+						)
+				–
+	</div>
+			<p>flags that affect rendering</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.90
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_cell_renderer_activate">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_renderer_activate">
+	<span><code>gtk_cell_renderer_activate</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_cell_renderer_activate (<a title="GtkCellRenderer" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">GtkCellRenderer</a> * cell,
+                            GdkEvent* event,
+                            <a title="GtkWidget" href="hotdoc_markdown/gtkwidget.html#GtkWidget">GtkWidget</a> * widget,
+                            const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * path,
+                            const <a title="GdkRectangle" href="https://developer.gnome.org/gdk3/gdk3-Points-Rectangles-and-Regions.html#GdkRectangle">GdkRectangle</a> * background_area,
+                            const <a title="GdkRectangle" href="https://developer.gnome.org/gdk3/gdk3-Points-Rectangles-and-Regions.html#GdkRectangle">GdkRectangle</a> * cell_area,
+                            <a title="GtkCellRendererState" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRendererState">GtkCellRendererState</a> flags)</pre>
+
+<p>Passes an activate event to the cell renderer for possible processing.<br>
+Some cell renderers may use events; for example, <a href="hotdoc_markdown/gtkcellrenderertoggle.html#GtkCellRendererToggle">GtkCellRendererToggle</a>
+toggles when it gets a mouse click.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">GtkCellRenderer</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>event</code></em></i>
+				–
+	</div>
+			<p>a GdkEvent</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>widget</code></em></i>
+				–
+	</div>
+			<p>widget that received the event</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>path</code></em></i>
+				–
+	</div>
+			<p>widget-dependent string representation of the event location;
+e.g. for <a href="hotdoc_markdown/gtktreeview.html#GtkTreeView">GtkTreeView</a>, a string representation of <a href="hotdoc_markdown/gtktreemodel.html#GtkTreePath">GtkTreePath</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>background_area</code></em></i>
+				–
+	</div>
+			<p>background area as passed to <a href="https://developer.gnome.org/gtk3/GtkCellRenderer.html#gtk-cell-renderer-render">gtk_cell_renderer_render</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell_area</code></em></i>
+				–
+	</div>
+			<p>cell area as passed to <a href="https://developer.gnome.org/gtk3/GtkCellRenderer.html#gtk-cell-renderer-render">gtk_cell_renderer_render</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>flags</code></em></i>
+				–
+	</div>
+			<p>render flags</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if the event was consumed/handled</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_renderer_activate">
+	<span><code>Gtk.prototype.activate</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.activate(event: Gdk.Event, widget: <a title="Gtk.Widget" href="hotdoc_markdown/gtkwidget.html#GtkWidget">Gtk.Widget</a>, path: <a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>, background_area: <a title="Gdk.Rectangle" href="https://developer.gnome.org/gdk3/gdk3-Points-Rectangles-and-Regions.html#GdkRectangle">Gdk.Rectangle</a>, cell_area: <a title="Gdk.Rectangle" href="https://developer.gnome.org/gdk3/gdk3-Points-Rectangles-and-Regions.html#GdkRectangle">Gdk.Rectangle</a>, flags: <a title="Gtk.CellRendererState" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRendererState">Gtk.CellRendererState</a>): {
+    // javascript wrapper for 'gtk_cell_renderer_activate'
+}</pre>
+
+<p>Passes an activate event to the cell renderer for possible processing.<br>
+Some cell renderers may use events; for example, <a href="hotdoc_markdown/gtkcellrenderertoggle.html#GtkCellRendererToggle">Gtk.CellRendererToggle</a>
+toggles when it gets a mouse click.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+					(
+						<a title="Gtk.CellRenderer" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>event</code></em></i>
+					(
+						Gdk.Event
+						)
+				–
+	</div>
+			<p>a GdkEvent</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>widget</code></em></i>
+					(
+						<a title="Gtk.Widget" href="hotdoc_markdown/gtkwidget.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>widget that received the event</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>path</code></em></i>
+					(
+						<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
+						)
+				–
+	</div>
+			<p>widget-dependent string representation of the event location;
+e.g. for <a href="hotdoc_markdown/gtktreeview.html#GtkTreeView">Gtk.TreeView</a>, a string representation of <a href="hotdoc_markdown/gtktreemodel.html#GtkTreePath">Gtk.TreePath</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>background_area</code></em></i>
+					(
+						<a title="Gdk.Rectangle" href="https://developer.gnome.org/gdk3/gdk3-Points-Rectangles-and-Regions.html#GdkRectangle">Gdk.Rectangle</a>
+						)
+				–
+	</div>
+			<p>background area as passed to <a href="https://developer.gnome.org/gtk3/GtkCellRenderer.html#gtk-cell-renderer-render">gtk_cell_renderer_render (not introspectable)</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell_area</code></em></i>
+					(
+						<a title="Gdk.Rectangle" href="https://developer.gnome.org/gdk3/gdk3-Points-Rectangles-and-Regions.html#GdkRectangle">Gdk.Rectangle</a>
+						)
+				–
+	</div>
+			<p>cell area as passed to <a href="https://developer.gnome.org/gtk3/GtkCellRenderer.html#gtk-cell-renderer-render">gtk_cell_renderer_render (not introspectable)</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>flags</code></em></i>
+					(
+						<a title="Gtk.CellRendererState" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRendererState">Gtk.CellRendererState</a>
+						)
+				–
+	</div>
+			<p>render flags</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if the event was consumed/handled</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_renderer_activate">
+	<span><code>Gtk.CellRenderer.activate</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.CellRenderer.activate (self, event, widget, path, background_area, cell_area, flags):
+    #python wrapper for 'gtk_cell_renderer_activate'</pre>
+
+<p>Passes an activate event to the cell renderer for possible processing.<br>
+Some cell renderers may use events; for example, <a href="hotdoc_markdown/gtkcellrenderertoggle.html#GtkCellRendererToggle">Gtk.CellRendererToggle</a>
+toggles when it gets a mouse click.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+					(
+						<a title="Gtk.CellRenderer" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>event</code></em></i>
+					(
+						Gdk.Event
+						)
+				–
+	</div>
+			<p>a GdkEvent</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>widget</code></em></i>
+					(
+						<a title="Gtk.Widget" href="hotdoc_markdown/gtkwidget.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>widget that received the event</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>path</code></em></i>
+					(
+						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
+						)
+				–
+	</div>
+			<p>widget-dependent string representation of the event location;
+e.g. for <a href="hotdoc_markdown/gtktreeview.html#GtkTreeView">Gtk.TreeView</a>, a string representation of <a href="hotdoc_markdown/gtktreemodel.html#GtkTreePath">Gtk.TreePath</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>background_area</code></em></i>
+					(
+						<a title="Gdk.Rectangle" href="https://developer.gnome.org/gdk3/gdk3-Points-Rectangles-and-Regions.html#GdkRectangle">Gdk.Rectangle</a>
+						)
+				–
+	</div>
+			<p>background area as passed to <a href="https://developer.gnome.org/gtk3/GtkCellRenderer.html#gtk-cell-renderer-render">gtk_cell_renderer_render (not introspectable)</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell_area</code></em></i>
+					(
+						<a title="Gdk.Rectangle" href="https://developer.gnome.org/gdk3/gdk3-Points-Rectangles-and-Regions.html#GdkRectangle">Gdk.Rectangle</a>
+						)
+				–
+	</div>
+			<p>cell area as passed to <a href="https://developer.gnome.org/gtk3/GtkCellRenderer.html#gtk-cell-renderer-render">gtk_cell_renderer_render (not introspectable)</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>flags</code></em></i>
+					(
+						<a title="Gtk.CellRendererState" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRendererState">Gtk.CellRendererState</a>
+						)
+				–
+	</div>
+			<p>render flags</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+										)
+								–
+			</div>
+							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if the event was consumed/handled</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_cell_renderer_start_editing">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_renderer_start_editing">
+	<span><code>gtk_cell_renderer_start_editing</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkCellEditable" href="hotdoc_markdown/gtkcelleditable.html#GtkCellEditable">GtkCellEditable</a> *
+gtk_cell_renderer_start_editing (<a title="GtkCellRenderer" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">GtkCellRenderer</a> * cell,
+                                 GdkEvent* event,
+                                 <a title="GtkWidget" href="hotdoc_markdown/gtkwidget.html#GtkWidget">GtkWidget</a> * widget,
+                                 const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * path,
+                                 const <a title="GdkRectangle" href="https://developer.gnome.org/gdk3/gdk3-Points-Rectangles-and-Regions.html#GdkRectangle">GdkRectangle</a> * background_area,
+                                 const <a title="GdkRectangle" href="https://developer.gnome.org/gdk3/gdk3-Points-Rectangles-and-Regions.html#GdkRectangle">GdkRectangle</a> * cell_area,
+                                 <a title="GtkCellRendererState" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRendererState">GtkCellRendererState</a> flags)</pre>
+
+<p>Passes an activate event to the cell renderer for possible processing.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">GtkCellRenderer</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>event</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="NULL may be passed to the value"><span class="acronym">nullable</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>a GdkEvent</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>widget</code></em></i>
+				–
+	</div>
+			<p>widget that received the event</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>path</code></em></i>
+				–
+	</div>
+			<p>widget-dependent string representation of the event location;
+e.g. for <a href="hotdoc_markdown/gtktreeview.html#GtkTreeView">GtkTreeView</a>, a string representation of <a href="hotdoc_markdown/gtktreemodel.html#GtkTreePath">GtkTreePath</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>background_area</code></em></i>
+				–
+	</div>
+			<p>background area as passed to <a href="https://developer.gnome.org/gtk3/GtkCellRenderer.html#gtk-cell-renderer-render">gtk_cell_renderer_render</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell_area</code></em></i>
+				–
+	</div>
+			<p>cell area as passed to <a href="https://developer.gnome.org/gtk3/GtkCellRenderer.html#gtk-cell-renderer-render">gtk_cell_renderer_render</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>flags</code></em></i>
+				–
+	</div>
+			<p>render flags</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					
+										
+<span class="annotation">[<abbr title="NULL may be passed to the value"><span class="acronym">nullable</span></abbr>]</span>
+<span class="annotation">[<abbr title="Don't free data after the code is done"><span class="acronym">transfer: none</span></abbr>]</span>
+
+										)
+								–
+			</div>
+							<p>A new <a href="hotdoc_markdown/gtkcelleditable.html#GtkCellEditable">GtkCellEditable</a>, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_renderer_start_editing">
+	<span><code>Gtk.prototype.start_editing</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.start_editing(event: Gdk.Event, widget: <a title="Gtk.Widget" href="hotdoc_markdown/gtkwidget.html#GtkWidget">Gtk.Widget</a>, path: <a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>, background_area: <a title="Gdk.Rectangle" href="https://developer.gnome.org/gdk3/gdk3-Points-Rectangles-and-Regions.html#GdkRectangle">Gdk.Rectangle</a>, cell_area: <a title="Gdk.Rectangle" href="https://developer.gnome.org/gdk3/gdk3-Points-Rectangles-and-Regions.html#GdkRectangle">Gdk.Rectangle</a>, flags: <a title="Gtk.CellRendererState" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRendererState">Gtk.CellRendererState</a>): {
+    // javascript wrapper for 'gtk_cell_renderer_start_editing'
+}</pre>
+
+<p>Passes an activate event to the cell renderer for possible processing.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+					(
+						<a title="Gtk.CellRenderer" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>event</code></em></i>
+					(
+						Gdk.Event
+						)
+				–
+	</div>
+			<p>a GdkEvent</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>widget</code></em></i>
+					(
+						<a title="Gtk.Widget" href="hotdoc_markdown/gtkwidget.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>widget that received the event</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>path</code></em></i>
+					(
+						<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
+						)
+				–
+	</div>
+			<p>widget-dependent string representation of the event location;
+e.g. for <a href="hotdoc_markdown/gtktreeview.html#GtkTreeView">Gtk.TreeView</a>, a string representation of <a href="hotdoc_markdown/gtktreemodel.html#GtkTreePath">Gtk.TreePath</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>background_area</code></em></i>
+					(
+						<a title="Gdk.Rectangle" href="https://developer.gnome.org/gdk3/gdk3-Points-Rectangles-and-Regions.html#GdkRectangle">Gdk.Rectangle</a>
+						)
+				–
+	</div>
+			<p>background area as passed to <a href="https://developer.gnome.org/gtk3/GtkCellRenderer.html#gtk-cell-renderer-render">gtk_cell_renderer_render (not introspectable)</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell_area</code></em></i>
+					(
+						<a title="Gdk.Rectangle" href="https://developer.gnome.org/gdk3/gdk3-Points-Rectangles-and-Regions.html#GdkRectangle">Gdk.Rectangle</a>
+						)
+				–
+	</div>
+			<p>cell area as passed to <a href="https://developer.gnome.org/gtk3/GtkCellRenderer.html#gtk-cell-renderer-render">gtk_cell_renderer_render (not introspectable)</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>flags</code></em></i>
+					(
+						<a title="Gtk.CellRendererState" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRendererState">Gtk.CellRendererState</a>
+						)
+				–
+	</div>
+			<p>render flags</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.CellEditable" href="hotdoc_markdown/gtkcelleditable.html#GtkCellEditable">Gtk.CellEditable</a>
+										)
+								–
+			</div>
+							<p>A new <a href="hotdoc_markdown/gtkcelleditable.html#GtkCellEditable">Gtk.CellEditable</a>, or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_renderer_start_editing">
+	<span><code>Gtk.CellRenderer.start_editing</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.CellRenderer.start_editing (self, event, widget, path, background_area, cell_area, flags):
+    #python wrapper for 'gtk_cell_renderer_start_editing'</pre>
+
+<p>Passes an activate event to the cell renderer for possible processing.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+					(
+						<a title="Gtk.CellRenderer" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>event</code></em></i>
+					(
+						Gdk.Event
+						)
+				–
+	</div>
+			<p>a GdkEvent</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>widget</code></em></i>
+					(
+						<a title="Gtk.Widget" href="hotdoc_markdown/gtkwidget.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>widget that received the event</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>path</code></em></i>
+					(
+						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
+						)
+				–
+	</div>
+			<p>widget-dependent string representation of the event location;
+e.g. for <a href="hotdoc_markdown/gtktreeview.html#GtkTreeView">Gtk.TreeView</a>, a string representation of <a href="hotdoc_markdown/gtktreemodel.html#GtkTreePath">Gtk.TreePath</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>background_area</code></em></i>
+					(
+						<a title="Gdk.Rectangle" href="https://developer.gnome.org/gdk3/gdk3-Points-Rectangles-and-Regions.html#GdkRectangle">Gdk.Rectangle</a>
+						)
+				–
+	</div>
+			<p>background area as passed to <a href="https://developer.gnome.org/gtk3/GtkCellRenderer.html#gtk-cell-renderer-render">gtk_cell_renderer_render (not introspectable)</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell_area</code></em></i>
+					(
+						<a title="Gdk.Rectangle" href="https://developer.gnome.org/gdk3/gdk3-Points-Rectangles-and-Regions.html#GdkRectangle">Gdk.Rectangle</a>
+						)
+				–
+	</div>
+			<p>cell area as passed to <a href="https://developer.gnome.org/gtk3/GtkCellRenderer.html#gtk-cell-renderer-render">gtk_cell_renderer_render (not introspectable)</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>flags</code></em></i>
+					(
+						<a title="Gtk.CellRendererState" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRendererState">Gtk.CellRendererState</a>
+						)
+				–
+	</div>
+			<p>render flags</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.CellEditable" href="hotdoc_markdown/gtkcelleditable.html#GtkCellEditable">Gtk.CellEditable</a>
+										)
+								–
+			</div>
+							<p>A new <a href="hotdoc_markdown/gtkcelleditable.html#GtkCellEditable">Gtk.CellEditable</a>, or <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.6;" id="gtk_cell_renderer_stop_editing">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_renderer_stop_editing">
+	<span><code>gtk_cell_renderer_stop_editing</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_cell_renderer_stop_editing (<a title="GtkCellRenderer" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">GtkCellRenderer</a> * cell,
+                                <a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a> canceled)</pre>
+
+<p>Informs the cell renderer that the editing is stopped.
+If <em>canceled</em> is <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a>, the cell renderer will emit the
+<a href="gtkcellrenderer.html#GtkCellRenderer::editing-canceled">editing-canceled</a> signal.</p>
+<p>This function should be called by cell renderer implementations
+in response to the <a href="gtkcelleditable.html#GtkCellEditable::editing-done">editing-done</a> signal of
+<a href="hotdoc_markdown/gtkcelleditable.html#GtkCellEditable">GtkCellEditable</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+				–
+	</div>
+			<p>A <a href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">GtkCellRenderer</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>canceled</code></em></i>
+				–
+	</div>
+			<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if the editing has been canceled</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.6
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_renderer_stop_editing">
+	<span><code>Gtk.prototype.stop_editing</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.stop_editing(canceled: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_cell_renderer_stop_editing'
+}</pre>
+
+<p>Informs the cell renderer that the editing is stopped.
+If <em>canceled</em> is <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a>, the cell renderer will emit the
+<a href="gtkcellrenderer.html#GtkCellRenderer::editing-canceled">editing-canceled</a> signal.</p>
+<p>This function should be called by cell renderer implementations
+in response to the <a href="gtkcelleditable.html#GtkCellEditable::editing-done">editing-done</a> signal of
+<a href="hotdoc_markdown/gtkcelleditable.html#GtkCellEditable">Gtk.CellEditable</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+					(
+						<a title="Gtk.CellRenderer" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a>
+						)
+				–
+	</div>
+			<p>A <a href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>canceled</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if the editing has been canceled</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.6
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_renderer_stop_editing">
+	<span><code>Gtk.CellRenderer.stop_editing</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.CellRenderer.stop_editing (self, canceled):
+    #python wrapper for 'gtk_cell_renderer_stop_editing'</pre>
+
+<p>Informs the cell renderer that the editing is stopped.
+If <em>canceled</em> is <a href="https://docs.python.org/3/library/constants.html#True">True</a>, the cell renderer will emit the
+<a href="gtkcellrenderer.html#GtkCellRenderer::editing-canceled">editing-canceled</a> signal.</p>
+<p>This function should be called by cell renderer implementations
+in response to the <a href="gtkcelleditable.html#GtkCellEditable::editing-done">editing-done</a> signal of
+<a href="hotdoc_markdown/gtkcelleditable.html#GtkCellEditable">Gtk.CellEditable</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+					(
+						<a title="Gtk.CellRenderer" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a>
+						)
+				–
+	</div>
+			<p>A <a href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>canceled</code></em></i>
+					(
+						<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+						)
+				–
+	</div>
+			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if the editing has been canceled</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.6
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_cell_renderer_get_fixed_size">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_renderer_get_fixed_size">
+	<span><code>gtk_cell_renderer_get_fixed_size</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_cell_renderer_get_fixed_size (<a title="GtkCellRenderer" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">GtkCellRenderer</a> * cell,
+                                  <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> * width,
+                                  <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> * height)</pre>
+
+<p>Fills in <em>width</em> and <em>height</em> with the appropriate size of <em>cell</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+				–
+	</div>
+			<p>A <a href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">GtkCellRenderer</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>width</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="Parameter for returning results"><span class="acronym">out</span></abbr>]</span>
+<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>location to fill in with the fixed width of the cell, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>height</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="Parameter for returning results"><span class="acronym">out</span></abbr>]</span>
+<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>location to fill in with the fixed height of the cell, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_renderer_get_fixed_size">
+	<span><code>Gtk.prototype.get_fixed_size</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_fixed_size(): {
+    // javascript wrapper for 'gtk_cell_renderer_get_fixed_size'
+}</pre>
+
+<p>Fills in <em>width</em> and <em>height</em> with the appropriate size of <em>cell</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+					(
+						<a title="Gtk.CellRenderer" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a>
+						)
+				–
+	</div>
+			<p>A <a href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a></p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_renderer_get_fixed_size">
+	<span><code>Gtk.CellRenderer.get_fixed_size</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.CellRenderer.get_fixed_size (self):
+    #python wrapper for 'gtk_cell_renderer_get_fixed_size'</pre>
+
+<p>Fills in <em>width</em> and <em>height</em> with the appropriate size of <em>cell</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+					(
+						<a title="Gtk.CellRenderer" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a>
+						)
+				–
+	</div>
+			<p>A <a href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a></p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_cell_renderer_set_fixed_size">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_renderer_set_fixed_size">
+	<span><code>gtk_cell_renderer_set_fixed_size</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_cell_renderer_set_fixed_size (<a title="GtkCellRenderer" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">GtkCellRenderer</a> * cell,
+                                  <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> width,
+                                  <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> height)</pre>
+
+<p>Sets the renderer size to be explicit, independent of the properties set.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+				–
+	</div>
+			<p>A <a href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">GtkCellRenderer</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>width</code></em></i>
+				–
+	</div>
+			<p>the width of the cell renderer, or -1</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>height</code></em></i>
+				–
+	</div>
+			<p>the height of the cell renderer, or -1</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_renderer_set_fixed_size">
+	<span><code>Gtk.prototype.set_fixed_size</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_fixed_size(width: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, height: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_cell_renderer_set_fixed_size'
+}</pre>
+
+<p>Sets the renderer size to be explicit, independent of the properties set.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+					(
+						<a title="Gtk.CellRenderer" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a>
+						)
+				–
+	</div>
+			<p>A <a href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>width</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the width of the cell renderer, or -1</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>height</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the height of the cell renderer, or -1</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_renderer_set_fixed_size">
+	<span><code>Gtk.CellRenderer.set_fixed_size</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.CellRenderer.set_fixed_size (self, width, height):
+    #python wrapper for 'gtk_cell_renderer_set_fixed_size'</pre>
+
+<p>Sets the renderer size to be explicit, independent of the properties set.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+					(
+						<a title="Gtk.CellRenderer" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a>
+						)
+				–
+	</div>
+			<p>A <a href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>width</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>the width of the cell renderer, or -1</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>height</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>the height of the cell renderer, or -1</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.18;" id="gtk_cell_renderer_get_visible">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_renderer_get_visible">
+	<span><code>gtk_cell_renderer_get_visible</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_cell_renderer_get_visible (<a title="GtkCellRenderer" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">GtkCellRenderer</a> * cell)</pre>
+
+<p>Returns the cell renderer’s visibility.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+				–
+	</div>
+			<p>A <a href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">GtkCellRenderer</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if the cell renderer is visible</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.18
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_renderer_get_visible">
+	<span><code>Gtk.prototype.get_visible</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_visible(): {
+    // javascript wrapper for 'gtk_cell_renderer_get_visible'
+}</pre>
+
+<p>Returns the cell renderer’s visibility.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+					(
+						<a title="Gtk.CellRenderer" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a>
+						)
+				–
+	</div>
+			<p>A <a href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if the cell renderer is visible</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.18
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_renderer_get_visible">
+	<span><code>Gtk.CellRenderer.get_visible</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.CellRenderer.get_visible (self):
+    #python wrapper for 'gtk_cell_renderer_get_visible'</pre>
+
+<p>Returns the cell renderer’s visibility.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+					(
+						<a title="Gtk.CellRenderer" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a>
+						)
+				–
+	</div>
+			<p>A <a href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+										)
+								–
+			</div>
+							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if the cell renderer is visible</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.18
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.18;" id="gtk_cell_renderer_set_visible">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_renderer_set_visible">
+	<span><code>gtk_cell_renderer_set_visible</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_cell_renderer_set_visible (<a title="GtkCellRenderer" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">GtkCellRenderer</a> * cell,
+                               <a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a> visible)</pre>
+
+<p>Sets the cell renderer’s visibility.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+				–
+	</div>
+			<p>A <a href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">GtkCellRenderer</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>visible</code></em></i>
+				–
+	</div>
+			<p>the visibility of the cell</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.18
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_renderer_set_visible">
+	<span><code>Gtk.prototype.set_visible</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_visible(visible: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_cell_renderer_set_visible'
+}</pre>
+
+<p>Sets the cell renderer’s visibility.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+					(
+						<a title="Gtk.CellRenderer" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a>
+						)
+				–
+	</div>
+			<p>A <a href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>visible</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the visibility of the cell</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.18
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_renderer_set_visible">
+	<span><code>Gtk.CellRenderer.set_visible</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.CellRenderer.set_visible (self, visible):
+    #python wrapper for 'gtk_cell_renderer_set_visible'</pre>
+
+<p>Sets the cell renderer’s visibility.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+					(
+						<a title="Gtk.CellRenderer" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a>
+						)
+				–
+	</div>
+			<p>A <a href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>visible</code></em></i>
+					(
+						<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+						)
+				–
+	</div>
+			<p>the visibility of the cell</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.18
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.18;" id="gtk_cell_renderer_get_sensitive">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_renderer_get_sensitive">
+	<span><code>gtk_cell_renderer_get_sensitive</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_cell_renderer_get_sensitive (<a title="GtkCellRenderer" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">GtkCellRenderer</a> * cell)</pre>
+
+<p>Returns the cell renderer’s sensitivity.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+				–
+	</div>
+			<p>A <a href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">GtkCellRenderer</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if the cell renderer is sensitive</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.18
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_renderer_get_sensitive">
+	<span><code>Gtk.prototype.get_sensitive</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_sensitive(): {
+    // javascript wrapper for 'gtk_cell_renderer_get_sensitive'
+}</pre>
+
+<p>Returns the cell renderer’s sensitivity.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+					(
+						<a title="Gtk.CellRenderer" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a>
+						)
+				–
+	</div>
+			<p>A <a href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if the cell renderer is sensitive</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.18
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_renderer_get_sensitive">
+	<span><code>Gtk.CellRenderer.get_sensitive</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.CellRenderer.get_sensitive (self):
+    #python wrapper for 'gtk_cell_renderer_get_sensitive'</pre>
+
+<p>Returns the cell renderer’s sensitivity.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+					(
+						<a title="Gtk.CellRenderer" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a>
+						)
+				–
+	</div>
+			<p>A <a href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+										)
+								–
+			</div>
+							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if the cell renderer is sensitive</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.18
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.18;" id="gtk_cell_renderer_set_sensitive">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_renderer_set_sensitive">
+	<span><code>gtk_cell_renderer_set_sensitive</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_cell_renderer_set_sensitive (<a title="GtkCellRenderer" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">GtkCellRenderer</a> * cell,
+                                 <a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a> sensitive)</pre>
+
+<p>Sets the cell renderer’s sensitivity.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+				–
+	</div>
+			<p>A <a href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">GtkCellRenderer</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>sensitive</code></em></i>
+				–
+	</div>
+			<p>the sensitivity of the cell</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.18
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_renderer_set_sensitive">
+	<span><code>Gtk.prototype.set_sensitive</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_sensitive(sensitive: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_cell_renderer_set_sensitive'
+}</pre>
+
+<p>Sets the cell renderer’s sensitivity.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+					(
+						<a title="Gtk.CellRenderer" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a>
+						)
+				–
+	</div>
+			<p>A <a href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>sensitive</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the sensitivity of the cell</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.18
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_renderer_set_sensitive">
+	<span><code>Gtk.CellRenderer.set_sensitive</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.CellRenderer.set_sensitive (self, sensitive):
+    #python wrapper for 'gtk_cell_renderer_set_sensitive'</pre>
+
+<p>Sets the cell renderer’s sensitivity.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+					(
+						<a title="Gtk.CellRenderer" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a>
+						)
+				–
+	</div>
+			<p>A <a href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>sensitive</code></em></i>
+					(
+						<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+						)
+				–
+	</div>
+			<p>the sensitivity of the cell</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.18
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.18;" id="gtk_cell_renderer_get_alignment">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_renderer_get_alignment">
+	<span><code>gtk_cell_renderer_get_alignment</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_cell_renderer_get_alignment (<a title="GtkCellRenderer" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">GtkCellRenderer</a> * cell,
+                                 <a title="gfloat" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gfloat">gfloat</a> * xalign,
+                                 <a title="gfloat" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gfloat">gfloat</a> * yalign)</pre>
+
+<p>Fills in <em>xalign</em> and <em>yalign</em> with the appropriate values of <em>cell</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+				–
+	</div>
+			<p>A <a href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">GtkCellRenderer</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>xalign</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="Parameter for returning results"><span class="acronym">out</span></abbr>]</span>
+<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>location to fill in with the x alignment of the cell, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>yalign</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="Parameter for returning results"><span class="acronym">out</span></abbr>]</span>
+<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>location to fill in with the y alignment of the cell, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.18
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_renderer_get_alignment">
+	<span><code>Gtk.prototype.get_alignment</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_alignment(): {
+    // javascript wrapper for 'gtk_cell_renderer_get_alignment'
+}</pre>
+
+<p>Fills in <em>xalign</em> and <em>yalign</em> with the appropriate values of <em>cell</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+					(
+						<a title="Gtk.CellRenderer" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a>
+						)
+				–
+	</div>
+			<p>A <a href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.18
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_renderer_get_alignment">
+	<span><code>Gtk.CellRenderer.get_alignment</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.CellRenderer.get_alignment (self):
+    #python wrapper for 'gtk_cell_renderer_get_alignment'</pre>
+
+<p>Fills in <em>xalign</em> and <em>yalign</em> with the appropriate values of <em>cell</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+					(
+						<a title="Gtk.CellRenderer" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a>
+						)
+				–
+	</div>
+			<p>A <a href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.18
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.18;" id="gtk_cell_renderer_set_alignment">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_renderer_set_alignment">
+	<span><code>gtk_cell_renderer_set_alignment</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_cell_renderer_set_alignment (<a title="GtkCellRenderer" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">GtkCellRenderer</a> * cell,
+                                 <a title="gfloat" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gfloat">gfloat</a> xalign,
+                                 <a title="gfloat" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gfloat">gfloat</a> yalign)</pre>
+
+<p>Sets the renderer’s alignment within its available space.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+				–
+	</div>
+			<p>A <a href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">GtkCellRenderer</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>xalign</code></em></i>
+				–
+	</div>
+			<p>the x alignment of the cell renderer</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>yalign</code></em></i>
+				–
+	</div>
+			<p>the y alignment of the cell renderer</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.18
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_renderer_set_alignment">
+	<span><code>Gtk.prototype.set_alignment</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_alignment(xalign: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, yalign: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_cell_renderer_set_alignment'
+}</pre>
+
+<p>Sets the renderer’s alignment within its available space.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+					(
+						<a title="Gtk.CellRenderer" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a>
+						)
+				–
+	</div>
+			<p>A <a href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>xalign</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the x alignment of the cell renderer</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>yalign</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the y alignment of the cell renderer</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.18
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_renderer_set_alignment">
+	<span><code>Gtk.CellRenderer.set_alignment</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.CellRenderer.set_alignment (self, xalign, yalign):
+    #python wrapper for 'gtk_cell_renderer_set_alignment'</pre>
+
+<p>Sets the renderer’s alignment within its available space.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+					(
+						<a title="Gtk.CellRenderer" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a>
+						)
+				–
+	</div>
+			<p>A <a href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>xalign</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>the x alignment of the cell renderer</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>yalign</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>the y alignment of the cell renderer</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.18
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.18;" id="gtk_cell_renderer_get_padding">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_renderer_get_padding">
+	<span><code>gtk_cell_renderer_get_padding</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_cell_renderer_get_padding (<a title="GtkCellRenderer" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">GtkCellRenderer</a> * cell,
+                               <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> * xpad,
+                               <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> * ypad)</pre>
+
+<p>Fills in <em>xpad</em> and <em>ypad</em> with the appropriate values of <em>cell</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+				–
+	</div>
+			<p>A <a href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">GtkCellRenderer</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>xpad</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="Parameter for returning results"><span class="acronym">out</span></abbr>]</span>
+<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>location to fill in with the x padding of the cell, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>ypad</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="Parameter for returning results"><span class="acronym">out</span></abbr>]</span>
+<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>location to fill in with the y padding of the cell, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.18
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_renderer_get_padding">
+	<span><code>Gtk.prototype.get_padding</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_padding(): {
+    // javascript wrapper for 'gtk_cell_renderer_get_padding'
+}</pre>
+
+<p>Fills in <em>xpad</em> and <em>ypad</em> with the appropriate values of <em>cell</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+					(
+						<a title="Gtk.CellRenderer" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a>
+						)
+				–
+	</div>
+			<p>A <a href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.18
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_renderer_get_padding">
+	<span><code>Gtk.CellRenderer.get_padding</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.CellRenderer.get_padding (self):
+    #python wrapper for 'gtk_cell_renderer_get_padding'</pre>
+
+<p>Fills in <em>xpad</em> and <em>ypad</em> with the appropriate values of <em>cell</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+					(
+						<a title="Gtk.CellRenderer" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a>
+						)
+				–
+	</div>
+			<p>A <a href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.18
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.18;" id="gtk_cell_renderer_set_padding">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_renderer_set_padding">
+	<span><code>gtk_cell_renderer_set_padding</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_cell_renderer_set_padding (<a title="GtkCellRenderer" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">GtkCellRenderer</a> * cell,
+                               <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> xpad,
+                               <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> ypad)</pre>
+
+<p>Sets the renderer’s padding.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+				–
+	</div>
+			<p>A <a href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">GtkCellRenderer</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>xpad</code></em></i>
+				–
+	</div>
+			<p>the x padding of the cell renderer</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>ypad</code></em></i>
+				–
+	</div>
+			<p>the y padding of the cell renderer</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.18
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_renderer_set_padding">
+	<span><code>Gtk.prototype.set_padding</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_padding(xpad: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, ypad: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_cell_renderer_set_padding'
+}</pre>
+
+<p>Sets the renderer’s padding.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+					(
+						<a title="Gtk.CellRenderer" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a>
+						)
+				–
+	</div>
+			<p>A <a href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>xpad</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the x padding of the cell renderer</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>ypad</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the y padding of the cell renderer</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.18
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_renderer_set_padding">
+	<span><code>Gtk.CellRenderer.set_padding</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.CellRenderer.set_padding (self, xpad, ypad):
+    #python wrapper for 'gtk_cell_renderer_set_padding'</pre>
+
+<p>Sets the renderer’s padding.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+					(
+						<a title="Gtk.CellRenderer" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a>
+						)
+				–
+	</div>
+			<p>A <a href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>xpad</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>the x padding of the cell renderer</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>ypad</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>the y padding of the cell renderer</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.18
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_cell_renderer_get_state">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_renderer_get_state">
+	<span><code>gtk_cell_renderer_get_state</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkStateFlags" href="hotdoc_markdown/gtkenums.html#GtkStateFlags">GtkStateFlags</a>
+gtk_cell_renderer_get_state (<a title="GtkCellRenderer" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">GtkCellRenderer</a> * cell,
+                             <a title="GtkWidget" href="hotdoc_markdown/gtkwidget.html#GtkWidget">GtkWidget</a> * widget,
+                             <a title="GtkCellRendererState" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRendererState">GtkCellRendererState</a> cell_state)</pre>
+
+<p>Translates the cell renderer state to <a href="hotdoc_markdown/gtkenums.html#GtkStateFlags">GtkStateFlags</a>,
+based on the cell renderer and widget sensitivity, and
+the given <a href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRendererState">GtkCellRendererState</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="NULL may be passed to the value"><span class="acronym">nullable</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">GtkCellRenderer</a>, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>widget</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="NULL may be passed to the value"><span class="acronym">nullable</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkwidget.html#GtkWidget">GtkWidget</a>, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell_state</code></em></i>
+				–
+	</div>
+			<p>cell renderer state</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>the widget state flags applying to <em>cell</em></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_renderer_get_state">
+	<span><code>Gtk.prototype.get_state</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_state(widget: <a title="Gtk.Widget" href="hotdoc_markdown/gtkwidget.html#GtkWidget">Gtk.Widget</a>, cell_state: <a title="Gtk.CellRendererState" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRendererState">Gtk.CellRendererState</a>): {
+    // javascript wrapper for 'gtk_cell_renderer_get_state'
+}</pre>
+
+<p>Translates the cell renderer state to <a href="hotdoc_markdown/gtkenums.html#GtkStateFlags">Gtk.StateFlags</a>,
+based on the cell renderer and widget sensitivity, and
+the given <a href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRendererState">Gtk.CellRendererState</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+					(
+						<a title="Gtk.CellRenderer" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a>, or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>widget</code></em></i>
+					(
+						<a title="Gtk.Widget" href="hotdoc_markdown/gtkwidget.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkwidget.html#GtkWidget">Gtk.Widget</a>, or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell_state</code></em></i>
+					(
+						<a title="Gtk.CellRendererState" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRendererState">Gtk.CellRendererState</a>
+						)
+				–
+	</div>
+			<p>cell renderer state</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.StateFlags" href="hotdoc_markdown/gtkenums.html#GtkStateFlags">Gtk.StateFlags</a>
+										)
+								–
+			</div>
+							<p>the widget state flags applying to <em>cell</em></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_renderer_get_state">
+	<span><code>Gtk.CellRenderer.get_state</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.CellRenderer.get_state (self, widget, cell_state):
+    #python wrapper for 'gtk_cell_renderer_get_state'</pre>
+
+<p>Translates the cell renderer state to <a href="hotdoc_markdown/gtkenums.html#GtkStateFlags">Gtk.StateFlags</a>,
+based on the cell renderer and widget sensitivity, and
+the given <a href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRendererState">Gtk.CellRendererState</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+					(
+						<a title="Gtk.CellRenderer" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a>, or <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>widget</code></em></i>
+					(
+						<a title="Gtk.Widget" href="hotdoc_markdown/gtkwidget.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkwidget.html#GtkWidget">Gtk.Widget</a>, or <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell_state</code></em></i>
+					(
+						<a title="Gtk.CellRendererState" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRendererState">Gtk.CellRendererState</a>
+						)
+				–
+	</div>
+			<p>cell renderer state</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.StateFlags" href="hotdoc_markdown/gtkenums.html#GtkStateFlags">Gtk.StateFlags</a>
+										)
+								–
+			</div>
+							<p>the widget state flags applying to <em>cell</em></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_cell_renderer_is_activatable">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_renderer_is_activatable">
+	<span><code>gtk_cell_renderer_is_activatable</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_cell_renderer_is_activatable (<a title="GtkCellRenderer" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">GtkCellRenderer</a> * cell)</pre>
+
+<p>Checks whether the cell renderer can do something when activated.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+				–
+	</div>
+			<p>A <a href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">GtkCellRenderer</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if the cell renderer can do anything when activated</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_renderer_is_activatable">
+	<span><code>Gtk.prototype.is_activatable</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.is_activatable(): {
+    // javascript wrapper for 'gtk_cell_renderer_is_activatable'
+}</pre>
+
+<p>Checks whether the cell renderer can do something when activated.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+					(
+						<a title="Gtk.CellRenderer" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a>
+						)
+				–
+	</div>
+			<p>A <a href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if the cell renderer can do anything when activated</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_renderer_is_activatable">
+	<span><code>Gtk.CellRenderer.is_activatable</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.CellRenderer.is_activatable (self):
+    #python wrapper for 'gtk_cell_renderer_is_activatable'</pre>
+
+<p>Checks whether the cell renderer can do something when activated.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+					(
+						<a title="Gtk.CellRenderer" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a>
+						)
+				–
+	</div>
+			<p>A <a href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+										)
+								–
+			</div>
+							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if the cell renderer can do anything when activated</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_cell_renderer_get_preferred_height">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_renderer_get_preferred_height">
+	<span><code>gtk_cell_renderer_get_preferred_height</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_cell_renderer_get_preferred_height (<a title="GtkCellRenderer" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">GtkCellRenderer</a> * cell,
+                                        <a title="GtkWidget" href="hotdoc_markdown/gtkwidget.html#GtkWidget">GtkWidget</a> * widget,
+                                        <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> * minimum_size,
+                                        <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> * natural_size)</pre>
+
+<p>Retreives a renderer’s natural size when rendered to <em>widget</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">GtkCellRenderer</a> instance</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>widget</code></em></i>
+				–
+	</div>
+			<p>the <a href="hotdoc_markdown/gtkwidget.html#GtkWidget">GtkWidget</a> this cell will be rendering to</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>minimum_size</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="Parameter for returning results"><span class="acronym">out</span></abbr>]</span>
+<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>location to store the minimum size, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>natural_size</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="Parameter for returning results"><span class="acronym">out</span></abbr>]</span>
+<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>location to store the natural size, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_renderer_get_preferred_height">
+	<span><code>Gtk.prototype.get_preferred_height</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_preferred_height(widget: <a title="Gtk.Widget" href="hotdoc_markdown/gtkwidget.html#GtkWidget">Gtk.Widget</a>): {
+    // javascript wrapper for 'gtk_cell_renderer_get_preferred_height'
+}</pre>
+
+<p>Retreives a renderer’s natural size when rendered to <em>widget</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+					(
+						<a title="Gtk.CellRenderer" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a> instance</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>widget</code></em></i>
+					(
+						<a title="Gtk.Widget" href="hotdoc_markdown/gtkwidget.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>the <a href="hotdoc_markdown/gtkwidget.html#GtkWidget">Gtk.Widget</a> this cell will be rendering to</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_renderer_get_preferred_height">
+	<span><code>Gtk.CellRenderer.get_preferred_height</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.CellRenderer.get_preferred_height (self, widget):
+    #python wrapper for 'gtk_cell_renderer_get_preferred_height'</pre>
+
+<p>Retreives a renderer’s natural size when rendered to <em>widget</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+					(
+						<a title="Gtk.CellRenderer" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a> instance</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>widget</code></em></i>
+					(
+						<a title="Gtk.Widget" href="hotdoc_markdown/gtkwidget.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>the <a href="hotdoc_markdown/gtkwidget.html#GtkWidget">Gtk.Widget</a> this cell will be rendering to</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_cell_renderer_get_preferred_height_for_width">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_renderer_get_preferred_height_for_width">
+	<span><code>gtk_cell_renderer_get_preferred_height_for_width</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_cell_renderer_get_preferred_height_for_width (<a title="GtkCellRenderer" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">GtkCellRenderer</a> * cell,
+                                                  <a title="GtkWidget" href="hotdoc_markdown/gtkwidget.html#GtkWidget">GtkWidget</a> * widget,
+                                                  <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> width,
+                                                  <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> * minimum_height,
+                                                  <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> * natural_height)</pre>
+
+<p>Retreives a cell renderers’s minimum and natural height if it were rendered to
+<em>widget</em> with the specified <em>width</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">GtkCellRenderer</a> instance</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>widget</code></em></i>
+				–
+	</div>
+			<p>the <a href="hotdoc_markdown/gtkwidget.html#GtkWidget">GtkWidget</a> this cell will be rendering to</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>width</code></em></i>
+				–
+	</div>
+			<p>the size which is available for allocation</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>minimum_height</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="Parameter for returning results"><span class="acronym">out</span></abbr>]</span>
+<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>location for storing the minimum size, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>natural_height</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="Parameter for returning results"><span class="acronym">out</span></abbr>]</span>
+<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>location for storing the preferred size, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_renderer_get_preferred_height_for_width">
+	<span><code>Gtk.prototype.get_preferred_height_for_width</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_preferred_height_for_width(widget: <a title="Gtk.Widget" href="hotdoc_markdown/gtkwidget.html#GtkWidget">Gtk.Widget</a>, width: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_cell_renderer_get_preferred_height_for_width'
+}</pre>
+
+<p>Retreives a cell renderers’s minimum and natural height if it were rendered to
+<em>widget</em> with the specified <em>width</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+					(
+						<a title="Gtk.CellRenderer" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a> instance</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>widget</code></em></i>
+					(
+						<a title="Gtk.Widget" href="hotdoc_markdown/gtkwidget.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>the <a href="hotdoc_markdown/gtkwidget.html#GtkWidget">Gtk.Widget</a> this cell will be rendering to</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>width</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the size which is available for allocation</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_renderer_get_preferred_height_for_width">
+	<span><code>Gtk.CellRenderer.get_preferred_height_for_width</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.CellRenderer.get_preferred_height_for_width (self, widget, width):
+    #python wrapper for 'gtk_cell_renderer_get_preferred_height_for_width'</pre>
+
+<p>Retreives a cell renderers’s minimum and natural height if it were rendered to
+<em>widget</em> with the specified <em>width</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+					(
+						<a title="Gtk.CellRenderer" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a> instance</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>widget</code></em></i>
+					(
+						<a title="Gtk.Widget" href="hotdoc_markdown/gtkwidget.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>the <a href="hotdoc_markdown/gtkwidget.html#GtkWidget">Gtk.Widget</a> this cell will be rendering to</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>width</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>the size which is available for allocation</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_cell_renderer_get_preferred_size">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_renderer_get_preferred_size">
+	<span><code>gtk_cell_renderer_get_preferred_size</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_cell_renderer_get_preferred_size (<a title="GtkCellRenderer" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">GtkCellRenderer</a> * cell,
+                                      <a title="GtkWidget" href="hotdoc_markdown/gtkwidget.html#GtkWidget">GtkWidget</a> * widget,
+                                      <a title="GtkRequisition" href="hotdoc_markdown/gtkwidget.html#GtkRequisition">GtkRequisition</a> * minimum_size,
+                                      <a title="GtkRequisition" href="hotdoc_markdown/gtkwidget.html#GtkRequisition">GtkRequisition</a> * natural_size)</pre>
+
+<p>Retrieves the minimum and natural size of a cell taking
+into account the widget’s preference for height-for-width management.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">GtkCellRenderer</a> instance</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>widget</code></em></i>
+				–
+	</div>
+			<p>the <a href="hotdoc_markdown/gtkwidget.html#GtkWidget">GtkWidget</a> this cell will be rendering to</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>minimum_size</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="Parameter for returning results"><span class="acronym">out</span></abbr>]</span>
+<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>location for storing the minimum size, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>natural_size</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="Parameter for returning results"><span class="acronym">out</span></abbr>]</span>
+<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>location for storing the natural size, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_renderer_get_preferred_size">
+	<span><code>Gtk.prototype.get_preferred_size</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_preferred_size(widget: <a title="Gtk.Widget" href="hotdoc_markdown/gtkwidget.html#GtkWidget">Gtk.Widget</a>): {
+    // javascript wrapper for 'gtk_cell_renderer_get_preferred_size'
+}</pre>
+
+<p>Retrieves the minimum and natural size of a cell taking
+into account the widget’s preference for height-for-width management.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+					(
+						<a title="Gtk.CellRenderer" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a> instance</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>widget</code></em></i>
+					(
+						<a title="Gtk.Widget" href="hotdoc_markdown/gtkwidget.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>the <a href="hotdoc_markdown/gtkwidget.html#GtkWidget">Gtk.Widget</a> this cell will be rendering to</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_renderer_get_preferred_size">
+	<span><code>Gtk.CellRenderer.get_preferred_size</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.CellRenderer.get_preferred_size (self, widget):
+    #python wrapper for 'gtk_cell_renderer_get_preferred_size'</pre>
+
+<p>Retrieves the minimum and natural size of a cell taking
+into account the widget’s preference for height-for-width management.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+					(
+						<a title="Gtk.CellRenderer" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a> instance</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>widget</code></em></i>
+					(
+						<a title="Gtk.Widget" href="hotdoc_markdown/gtkwidget.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>the <a href="hotdoc_markdown/gtkwidget.html#GtkWidget">Gtk.Widget</a> this cell will be rendering to</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_cell_renderer_get_preferred_width">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_renderer_get_preferred_width">
+	<span><code>gtk_cell_renderer_get_preferred_width</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_cell_renderer_get_preferred_width (<a title="GtkCellRenderer" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">GtkCellRenderer</a> * cell,
+                                       <a title="GtkWidget" href="hotdoc_markdown/gtkwidget.html#GtkWidget">GtkWidget</a> * widget,
+                                       <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> * minimum_size,
+                                       <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> * natural_size)</pre>
+
+<p>Retreives a renderer’s natural size when rendered to <em>widget</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">GtkCellRenderer</a> instance</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>widget</code></em></i>
+				–
+	</div>
+			<p>the <a href="hotdoc_markdown/gtkwidget.html#GtkWidget">GtkWidget</a> this cell will be rendering to</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>minimum_size</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="Parameter for returning results"><span class="acronym">out</span></abbr>]</span>
+<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>location to store the minimum size, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>natural_size</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="Parameter for returning results"><span class="acronym">out</span></abbr>]</span>
+<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>location to store the natural size, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_renderer_get_preferred_width">
+	<span><code>Gtk.prototype.get_preferred_width</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_preferred_width(widget: <a title="Gtk.Widget" href="hotdoc_markdown/gtkwidget.html#GtkWidget">Gtk.Widget</a>): {
+    // javascript wrapper for 'gtk_cell_renderer_get_preferred_width'
+}</pre>
+
+<p>Retreives a renderer’s natural size when rendered to <em>widget</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+					(
+						<a title="Gtk.CellRenderer" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a> instance</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>widget</code></em></i>
+					(
+						<a title="Gtk.Widget" href="hotdoc_markdown/gtkwidget.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>the <a href="hotdoc_markdown/gtkwidget.html#GtkWidget">Gtk.Widget</a> this cell will be rendering to</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_renderer_get_preferred_width">
+	<span><code>Gtk.CellRenderer.get_preferred_width</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.CellRenderer.get_preferred_width (self, widget):
+    #python wrapper for 'gtk_cell_renderer_get_preferred_width'</pre>
+
+<p>Retreives a renderer’s natural size when rendered to <em>widget</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+					(
+						<a title="Gtk.CellRenderer" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a> instance</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>widget</code></em></i>
+					(
+						<a title="Gtk.Widget" href="hotdoc_markdown/gtkwidget.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>the <a href="hotdoc_markdown/gtkwidget.html#GtkWidget">Gtk.Widget</a> this cell will be rendering to</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_cell_renderer_get_preferred_width_for_height">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_renderer_get_preferred_width_for_height">
+	<span><code>gtk_cell_renderer_get_preferred_width_for_height</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_cell_renderer_get_preferred_width_for_height (<a title="GtkCellRenderer" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">GtkCellRenderer</a> * cell,
+                                                  <a title="GtkWidget" href="hotdoc_markdown/gtkwidget.html#GtkWidget">GtkWidget</a> * widget,
+                                                  <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> height,
+                                                  <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> * minimum_width,
+                                                  <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> * natural_width)</pre>
+
+<p>Retreives a cell renderers’s minimum and natural width if it were rendered to
+<em>widget</em> with the specified <em>height</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">GtkCellRenderer</a> instance</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>widget</code></em></i>
+				–
+	</div>
+			<p>the <a href="hotdoc_markdown/gtkwidget.html#GtkWidget">GtkWidget</a> this cell will be rendering to</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>height</code></em></i>
+				–
+	</div>
+			<p>the size which is available for allocation</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>minimum_width</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="Parameter for returning results"><span class="acronym">out</span></abbr>]</span>
+<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>location for storing the minimum size, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>natural_width</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="Parameter for returning results"><span class="acronym">out</span></abbr>]</span>
+<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>location for storing the preferred size, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_renderer_get_preferred_width_for_height">
+	<span><code>Gtk.prototype.get_preferred_width_for_height</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_preferred_width_for_height(widget: <a title="Gtk.Widget" href="hotdoc_markdown/gtkwidget.html#GtkWidget">Gtk.Widget</a>, height: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_cell_renderer_get_preferred_width_for_height'
+}</pre>
+
+<p>Retreives a cell renderers’s minimum and natural width if it were rendered to
+<em>widget</em> with the specified <em>height</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+					(
+						<a title="Gtk.CellRenderer" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a> instance</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>widget</code></em></i>
+					(
+						<a title="Gtk.Widget" href="hotdoc_markdown/gtkwidget.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>the <a href="hotdoc_markdown/gtkwidget.html#GtkWidget">Gtk.Widget</a> this cell will be rendering to</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>height</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the size which is available for allocation</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_renderer_get_preferred_width_for_height">
+	<span><code>Gtk.CellRenderer.get_preferred_width_for_height</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.CellRenderer.get_preferred_width_for_height (self, widget, height):
+    #python wrapper for 'gtk_cell_renderer_get_preferred_width_for_height'</pre>
+
+<p>Retreives a cell renderers’s minimum and natural width if it were rendered to
+<em>widget</em> with the specified <em>height</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+					(
+						<a title="Gtk.CellRenderer" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a> instance</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>widget</code></em></i>
+					(
+						<a title="Gtk.Widget" href="hotdoc_markdown/gtkwidget.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>the <a href="hotdoc_markdown/gtkwidget.html#GtkWidget">Gtk.Widget</a> this cell will be rendering to</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>height</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>the size which is available for allocation</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_cell_renderer_get_request_mode">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_renderer_get_request_mode">
+	<span><code>gtk_cell_renderer_get_request_mode</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkSizeRequestMode" href="hotdoc_markdown/gtkwidget.html#GtkSizeRequestMode">GtkSizeRequestMode</a>
+gtk_cell_renderer_get_request_mode (<a title="GtkCellRenderer" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">GtkCellRenderer</a> * cell)</pre>
+
+<p>Gets whether the cell renderer prefers a height-for-width layout
+or a width-for-height layout.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">GtkCellRenderer</a>    instance</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>The <a href="hotdoc_markdown/gtkwidget.html#GtkSizeRequestMode">GtkSizeRequestMode</a> preferred by this renderer.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_renderer_get_request_mode">
+	<span><code>Gtk.prototype.get_request_mode</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_request_mode(): {
+    // javascript wrapper for 'gtk_cell_renderer_get_request_mode'
+}</pre>
+
+<p>Gets whether the cell renderer prefers a height-for-width layout
+or a width-for-height layout.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+					(
+						<a title="Gtk.CellRenderer" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a>    instance</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.SizeRequestMode" href="hotdoc_markdown/gtkwidget.html#GtkSizeRequestMode">Gtk.SizeRequestMode</a>
+										)
+								–
+			</div>
+							<p>The <a href="hotdoc_markdown/gtkwidget.html#GtkSizeRequestMode">Gtk.SizeRequestMode</a> preferred by this renderer.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_cell_renderer_get_request_mode">
+	<span><code>Gtk.CellRenderer.get_request_mode</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.CellRenderer.get_request_mode (self):
+    #python wrapper for 'gtk_cell_renderer_get_request_mode'</pre>
+
+<p>Gets whether the cell renderer prefers a height-for-width layout
+or a width-for-height layout.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>cell</code></em></i>
+					(
+						<a title="Gtk.CellRenderer" href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkcellrenderer.html#GtkCellRenderer">Gtk.CellRenderer</a>    instance</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.SizeRequestMode" href="hotdoc_markdown/gtkwidget.html#GtkSizeRequestMode">Gtk.SizeRequestMode</a>
+										)
+								–
+			</div>
+							<p>The <a href="hotdoc_markdown/gtkwidget.html#GtkSizeRequestMode">Gtk.SizeRequestMode</a> preferred by this renderer.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+
+</div>
+
+
+        
+
+            <h2 class="symbol_section">Class Methods</h2>
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_cell_renderer_class_set_accessible_type">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_cell_renderer_class_set_accessible_type">
+	<span><code>gtk_cell_renderer_class_set_accessible_type</code></span>
+</h3>
+
+
+
+
+<pre class="c-prototype">
+gtk_cell_renderer_class_set_accessible_type (<a title="GtkCellRendererClass" href="GtkCellRendererClass">GtkCellRendererClass</a> * renderer_class,
+                                             <a title="GType" href="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#GType">GType</a> type)</pre>
+
+<p>Sets the type to be used for creating accessibles for cells rendered by
+cell renderers of <em>renderer_class</em>. Note that multiple accessibles will
+be created.</p>
+<p>This function should only be called from class init functions of cell
+renderers.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>renderer_class</code></em></i>
+				–
+	</div>
+			<p>class to set the accessible type for</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>type</code></em></i>
+				–
+	</div>
+			<p>The object type that implements the accessible for <em>widget_class</em>.
+The type must be a subtype of <a href="Miscellaneous.html#GtkRendererCellAccessible">GtkRendererCellAccessible</a></p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_cell_renderer_class_set_accessible_type">
+	<span><code>Gtk.prototype.set_accessible_type</code></span>
+</h3>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_accessible_type(renderer_class: <a title="Gtk.CellRendererClass" href="GtkCellRendererClass">Gtk.CellRendererClass</a>, type: <a title="GObject.Type" href="https://developer.gnome.org/gobject/stable/gobject-Type-Information.html#GType">GObject.Type</a>): {
+    // javascript wrapper for 'gtk_cell_renderer_class_set_accessible_type'
+}</pre>
+
+<p>Sets the type to be used for creating accessibles for cells rendered by
+cell renderers of <em>renderer_class</em>. Note that multiple accessibles will
+be created.</p>
+<p>This function should only be called from class init functions of cell
+renderers.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>renderer_class</code></em></i>
+					(
+						<a title="Gtk.CellRendererClass" href="GtkCellRendererClass">Gtk.CellRendererClass</a>
+						)
+				–
+	</div>
+			<p>class to set the accessible type for</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>type</code></em></i>
+					(
+						<a title="GObject.Type" href="https://developer.gnome.org/gobject/stable/gobject-Type-Information.html#GType">GObject.Type</a>
+						)
+				–
+	</div>
+			<p>The object type that implements the accessible for <em>widget_class</em>.
+The type must be a subtype of <a href="Miscellaneous.html#GtkRendererCellAccessible">Gtk.RendererCellAccessible</a></p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+
+            <h2 class="symbol_section">Enumerations</h2>
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="GtkCellRendererState">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h3 data-hotdoc-id="GtkCellRendererState">
+	<span><code>GtkCellRendererState</code></span>
+</h3>
+
+
+<p>Tells how a cell is to be rendered.</p>
+
+
+
+
+	<div class="members-container">
+		<h4>Members</h4>
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_CELL_RENDERER_SELECTED">
+	<div>
+		<i><em><code>GTK_CELL_RENDERER_SELECTED</code></em></i>
+		(<span class="value">1</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_CELL_RENDERER_PRELIT">
+	<div>
+		<i><em><code>GTK_CELL_RENDERER_PRELIT</code></em></i>
+		(<span class="value">2</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_CELL_RENDERER_INSENSITIVE">
+	<div>
+		<i><em><code>GTK_CELL_RENDERER_INSENSITIVE</code></em></i>
+		(<span class="value">4</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_CELL_RENDERER_SORTED">
+	<div>
+		<i><em><code>GTK_CELL_RENDERER_SORTED</code></em></i>
+		(<span class="value">8</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_CELL_RENDERER_FOCUSED">
+	<div>
+		<i><em><code>GTK_CELL_RENDERER_FOCUSED</code></em></i>
+		(<span class="value">16</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_CELL_RENDERER_EXPANDABLE">
+	<div>
+		<i><em><code>GTK_CELL_RENDERER_EXPANDABLE</code></em></i>
+		(<span class="value">32</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_CELL_RENDERER_EXPANDED">
+	<div>
+		<i><em><code>GTK_CELL_RENDERER_EXPANDED</code></em></i>
+		(<span class="value">64</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h3 data-hotdoc-id="GtkCellRendererState">
+	<span><code>Gtk.CellRendererState</code></span>
+</h3>
+
+
+<p>Tells how a cell is to be rendered.</p>
+
+
+
+
+	<div class="members-container">
+		<h4>Members</h4>
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_CELL_RENDERER_SELECTED">
+	<div>
+		<i><em><code>Gtk.CellRendererState.SELECTED</code></em></i>
+		(<span class="value">1</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_CELL_RENDERER_PRELIT">
+	<div>
+		<i><em><code>Gtk.CellRendererState.PRELIT</code></em></i>
+		(<span class="value">2</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_CELL_RENDERER_INSENSITIVE">
+	<div>
+		<i><em><code>Gtk.CellRendererState.INSENSITIVE</code></em></i>
+		(<span class="value">4</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_CELL_RENDERER_SORTED">
+	<div>
+		<i><em><code>Gtk.CellRendererState.SORTED</code></em></i>
+		(<span class="value">8</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_CELL_RENDERER_FOCUSED">
+	<div>
+		<i><em><code>Gtk.CellRendererState.FOCUSED</code></em></i>
+		(<span class="value">16</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_CELL_RENDERER_EXPANDABLE">
+	<div>
+		<i><em><code>Gtk.CellRendererState.EXPANDABLE</code></em></i>
+		(<span class="value">32</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_CELL_RENDERER_EXPANDED">
+	<div>
+		<i><em><code>Gtk.CellRendererState.EXPANDED</code></em></i>
+		(<span class="value">64</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="GtkCellRendererState">
+	<span><code>Gtk.CellRendererState</code></span>
+</h3>
+
+
+<p>Tells how a cell is to be rendered.</p>
+
+
+
+
+	<div class="members-container">
+		<h4>Members</h4>
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_CELL_RENDERER_SELECTED">
+	<div>
+		<i><em><code>Gtk.CellRendererState.SELECTED</code></em></i>
+		(<span class="value">1</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_CELL_RENDERER_PRELIT">
+	<div>
+		<i><em><code>Gtk.CellRendererState.PRELIT</code></em></i>
+		(<span class="value">2</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_CELL_RENDERER_INSENSITIVE">
+	<div>
+		<i><em><code>Gtk.CellRendererState.INSENSITIVE</code></em></i>
+		(<span class="value">4</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_CELL_RENDERER_SORTED">
+	<div>
+		<i><em><code>Gtk.CellRendererState.SORTED</code></em></i>
+		(<span class="value">8</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_CELL_RENDERER_FOCUSED">
+	<div>
+		<i><em><code>Gtk.CellRendererState.FOCUSED</code></em></i>
+		(<span class="value">16</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_CELL_RENDERER_EXPANDABLE">
+	<div>
+		<i><em><code>Gtk.CellRendererState.EXPANDABLE</code></em></i>
+		(<span class="value">32</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_CELL_RENDERER_EXPANDED">
+	<div>
+		<i><em><code>Gtk.CellRendererState.EXPANDED</code></em></i>
+		(<span class="value">64</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="GtkCellRendererMode">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h3 data-hotdoc-id="GtkCellRendererMode">
+	<span><code>GtkCellRendererMode</code></span>
+</h3>
+
+
+<p>Identifies how the user can interact with a particular cell.</p>
+
+
+
+
+	<div class="members-container">
+		<h4>Members</h4>
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_CELL_RENDERER_MODE_INERT">
+	<div>
+		<i><em><code>GTK_CELL_RENDERER_MODE_INERT</code></em></i>
+		(<span class="value">0</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_CELL_RENDERER_MODE_ACTIVATABLE">
+	<div>
+		<i><em><code>GTK_CELL_RENDERER_MODE_ACTIVATABLE</code></em></i>
+		(<span class="value">1</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_CELL_RENDERER_MODE_EDITABLE">
+	<div>
+		<i><em><code>GTK_CELL_RENDERER_MODE_EDITABLE</code></em></i>
+		(<span class="value">2</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h3 data-hotdoc-id="GtkCellRendererMode">
+	<span><code>Gtk.CellRendererMode</code></span>
+</h3>
+
+
+<p>Identifies how the user can interact with a particular cell.</p>
+
+
+
+
+	<div class="members-container">
+		<h4>Members</h4>
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_CELL_RENDERER_MODE_INERT">
+	<div>
+		<i><em><code>Gtk.CellRendererMode.INERT</code></em></i>
+		(<span class="value">0</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_CELL_RENDERER_MODE_ACTIVATABLE">
+	<div>
+		<i><em><code>Gtk.CellRendererMode.ACTIVATABLE</code></em></i>
+		(<span class="value">1</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_CELL_RENDERER_MODE_EDITABLE">
+	<div>
+		<i><em><code>Gtk.CellRendererMode.EDITABLE</code></em></i>
+		(<span class="value">2</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="GtkCellRendererMode">
+	<span><code>Gtk.CellRendererMode</code></span>
+</h3>
+
+
+<p>Identifies how the user can interact with a particular cell.</p>
+
+
+
+
+	<div class="members-container">
+		<h4>Members</h4>
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_CELL_RENDERER_MODE_INERT">
+	<div>
+		<i><em><code>Gtk.CellRendererMode.INERT</code></em></i>
+		(<span class="value">0</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_CELL_RENDERER_MODE_ACTIVATABLE">
+	<div>
+		<i><em><code>Gtk.CellRendererMode.ACTIVATABLE</code></em></i>
+		(<span class="value">1</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_CELL_RENDERER_MODE_EDITABLE">
+	<div>
+		<i><em><code>Gtk.CellRendererMode.EDITABLE</code></em></i>
+		(<span class="value">2</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+
+</div>
+
+
+
+
+
+
+		
+	</div>
+	<div id="search_results">
+		<p>The results of the search are</p>
+	</div>
+	<hr>
+	<div id="footer">
+		    
+
+	</div>
+</div>
+
+<div id="toc-column">
+	
+		<div class="edit-button">
+		
+
+	</div>
+		<div id="toc-wrapper">
+		<nav id="toc"></nav>
+	</div>
+</div>
+</div>
+</main>
+
+</body>
+
+<script src="assets/js/navbar_offset_scroller.js"></script>
+</html>

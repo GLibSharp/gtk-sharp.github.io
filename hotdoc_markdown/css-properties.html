@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<base href="..">
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>GTK+ CSS</title>
+
+<link rel="stylesheet" href="assets/css/custom_bootstrap.css" type="text/css">
+<link rel="stylesheet" href="assets/css/bootstrap-toc.min.css" type="text/css">
+<link rel="stylesheet" href="assets/css/frontend.css" type="text/css">
+<link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
+
+<link rel="stylesheet" href="assets/css/prism.css" type="text/css">
+
+<script src="assets/js/mustache.min.js"></script>
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/scrollspy.js"></script>
+<script src="assets/js/bootstrap.js"></script>
+<script src="assets/js/typeahead.jquery.min.js"></script>
+<script src="assets/js/search.js"></script>
+<script src="assets/js/isotope.pkgd.min.js"></script>
+<script src="assets/js/compare-versions.js"></script>
+<script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="assets/js/bootstrap-toc.min.js"></script>
+<script src="assets/js/jquery.touchSwipe.min.js"></script>
+<script src="assets/js/anchor.min.js"></script>
+<script src="assets/js/tag_filtering.js"></script>
+<script src="assets/js/language_switching.js"></script>
+
+<script src="assets/js/lines_around_headings.js"></script>
+
+<script src="assets/js/prism-core.js"></script>
+<script src="assets/js/prism-autoloader.js"></script>
+<script src="assets/js/prism_autoloader_path_override.js"></script>
+<script src="assets/js/trie.js"></script>
+
+
+</head>
+
+<body class="no-script
+" data-spy="scroll" data-target="#toc" data-offset="70">
+
+<script>
+$('body').removeClass('no-script');
+</script>
+
+<nav class="navbar navbar-fixed-top navbar-default" id="topnav">
+	<div class="container-fluid">
+		<div class="navbar-right">
+			<a id="toc-toggle">
+				<span class="glyphicon glyphicon-menu-right"></span>
+				<span class="glyphicon glyphicon-menu-left"></span>
+			</a>
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-wrapper" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<form action="" class="navbar-form pull-right" id="navbar-search-form">
+                               <div class="form-group has-feedback">
+                                       <input type="text" class="form-control input-sm" name="search" id="sidenav-lookup-field" placeholder="search" disabled>
+				       <span class="glyphicon glyphicon-search form-control-feedback" id="search-mgn-glass"></span>
+                               </div>
+                        </form>
+		</div>
+		<div class="navbar-header">
+			<a id="sidenav-toggle">
+				<span class="glyphicon glyphicon-menu-right"></span>
+				<span class="glyphicon glyphicon-menu-left"></span>
+			</a>
+			<a id="home-link" href="index.html" class="hotdoc-navbar-brand">
+				<img src="assets/images/home.svg" alt="Home">
+			</a>
+		</div>
+		<div class="navbar-collapse collapse" id="navbar-wrapper">
+			<ul class="nav navbar-nav" id="menu">
+							</ul>
+			<div class="hidden-xs hidden-sm navbar-text navbar-center">
+							</div>
+		</div>
+	</div>
+</nav>
+
+<main>
+<div data-extension="core" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="hotdoc_markdown/css-properties.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['c', 'javascript', 'python']">
+<script src="assets/js/utils.js"></script>
+
+<div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
+	<script src="assets/js/navigation.js"></script>
+	<script src="assets/js/sitemap.js"></script>
+</div>
+
+<div id="body">
+	<div id="main">
+				    <div id="page-description" data-hotdoc-source="css-properties.markdown" data-hotdoc-role="main">
+        <h1 id="supported-css-properties">Supported CSS Properties</h1>
+<p>GTK+ supports CSS properties and shorthands as far as they can be
+applied in the context of widgets, and adds its own properties only when
+needed. All GTK+-specific properties have a -gtk prefix.</p>
+<p>All properties support the following keywords: inherit, initial, unset,
+with the same meaning as in
+<a href="https://www.w3.org/TR/css3-cascade/#defaulting-keywords">CSS</a>.</p>
+<p>The following basic datatypes are used
+throughout:</p>
+<pre><code>〈length〉 = 〈number〉 [ px | pt | em | ex |rem | pc | in | cm | mm ] | 〈calc expression〉
+〈percentage〉 = 〈number〉 % | 〈calc expression〉
+〈angle〉 = 〈number〉 [ deg | grad | turn ] | 〈calc expression〉
+〈time〉 = 〈number〉 [ s | ms ] | 〈calc expression〉
+</code></pre>
+<p>Length values with the em or ex units are resolved using the font size
+value, unless they occur in setting the font-size itself, in which case
+they are resolved using the inherited font size value.</p>
+<p>The rem unit is resolved using the initial font size value, which is not
+quite the same as the CSS definition of rem.</p>
+<p>Whereever a number is allowed, GTK+ also accepts a Windows-specific
+theme size:</p>
+<pre><code>〈win32 theme size〉 = 〈win32 size〉| 〈win32 part size〉
+〈win32 size〉 = -gtk-win32-size ( 〈theme name〉, 〈metric id〉 )
+〈win32 part size〉 = [ -gtk-win32-part-width | -gtk-win32-part-height |
+                         -gtk-win32-part-border-top | -gtk-win32-part-border-right |
+                         -gtk-win32-part-border-bottom | -gtk-win32-part-border-left ] ( 〈theme name〉 , 〈integer〉 , 〈integer〉 )
+
+〈calc expression〉 = calc( 〈calc sum〉 )
+〈calc sum〉 = 〈calc product〉 [ [ + | - ] 〈calc product〉 ]*
+〈calc product〉 = 〈calc value〉 [ * 〈calc value〉 | / 〈number〉 ]*
+〈calc value〉 = 〈number〉 | 〈length〉 | 〈percentage〉 | 〈angle〉 | 〈time〉 | ( 〈calc sum〉 )
+</code></pre>
+<p>The calc() notation adds considerable expressive power. There are limits
+on what types can be combined in such an expression (e.g. it does not
+make sense to add a number and a time). For the full details, see the
+<a href="https://www.w3.org/TR/css3-values/#calc-notation">CSS3 Values and
+Units</a> spec.</p>
+<p>A common pattern among shorthand properties (called 'four sides') is one
+where one to four values can be specified, to determine a value for each
+side of an area. In this case, the specified values are interpreted as
+follows:</p>
+<ul>
+<li>4 values:<br>
+top right bottom left</li>
+<li>3 values:<br>
+top horizontal bottom</li>
+<li>2 values:<br>
+vertical horizontal</li>
+<li>1 value:<br>
+all</li>
+</ul>
+<table>
+<caption>Color and Filter Properties</caption>
+<thead>
+<tr class="header">
+<th align="center">Name</th>
+<th align="center">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">color</td>
+<td align="center"><code>〈color〉</code></td>
+</tr>
+<tr class="even">
+<td align="center">opacity</td>
+<td align="center"><code>〈alpha value〉</code></td>
+</tr>
+<tr class="odd">
+<td align="center">filter</td>
+<td align="center"><code>none | 〈filter-function-list〉</code></td>
+</tr>
+</tbody>
+</table>
+<pre><code>〈filter-function-list〉 = [ 〈filter〉]+
+〈filter〉 = brightness( 〈number〉 ) |
+             contrast( 〈number〉 ) |
+             grayscale( 〈number〉 ) |
+             hue-rotate( 〈number〉 ) |
+             invert( 〈number〉 ) |
+             opacity( 〈number〉 ) |
+             saturate( 〈number〉 ) |
+             sepia( 〈number〉 )
+</code></pre>
+<p>The color property specifies the color to use for text, icons and other
+foreground rendering. The opacity property specifies the opacity that is
+used to composite the widget onto its parent widget. The filter property
+specifies filters to be applied to the rendering.</p>
+<table>
+<caption>Font Properties</caption>
+<thead>
+<tr class="header">
+<th align="center">Name</th>
+<th align="center">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">font‑family</td>
+<td align="center"><code>〈family name〉 [ , 〈family name〉 ]*</code></td>
+</tr>
+<tr class="even">
+<td align="center">font‑size</td>
+<td align="center"><code>〈absolute size〉 | 〈relative size〉 | 〈length〉 | 〈percentage〉</code></td>
+</tr>
+<tr class="odd">
+<td align="center">font‑style</td>
+<td align="center"><code>normal | oblique | italic</code></td>
+</tr>
+<tr class="even">
+<td align="center">font‑variant</td>
+<td align="center"><code>normal | small-caps</code></td>
+</tr>
+<tr class="odd">
+<td align="center">font‑weight</td>
+<td align="center"><code>normal | bold | bolder | lighter | 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900</code></td>
+</tr>
+<tr class="even">
+<td align="center">font‑stretch</td>
+<td align="center"><code>ultra-condensed | extra-condensed | condensed | semi-condensed | normal | semi-expanded | expanded | extra-expanded | ultra-expanded</code></td>
+</tr>
+<tr class="odd">
+<td align="center">‑gtk‑dpi</td>
+<td align="center"><code>〈number〉</code></td>
+</tr>
+</tbody>
+</table>
+<pre><code>〈absolute size〉 = xx-small | x-small | small | medium | large | x-large | xx-large
+〈relative size〉 = larger | smaller
+</code></pre>
+<p>The font properties determine the font to use for rendering text.
+Relative font sizes and weights are resolved relative to the inherited
+value for these properties.</p>
+<table>
+<caption>Text caret properties</caption>
+<thead>
+<tr class="header">
+<th align="center">Name</th>
+<th align="center">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">caret-color</td>
+<td align="center"><code>〈color〉</code></td>
+</tr>
+<tr class="even">
+<td align="center">-gtk-secondary-caret-color</td>
+<td align="center"><code>〈color〉</code></td>
+</tr>
+</tbody>
+</table>
+<p>The caret properties provide a way to change the appearance of the
+insertion caret in editable text.</p>
+<table>
+<caption>Text decoration properties</caption>
+<thead>
+<tr class="header">
+<th align="center">Name</th>
+<th align="center">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">letter‑spacing</td>
+<td align="center"><code>〈length〉</code></td>
+</tr>
+<tr class="even">
+<td align="center">text‑decoration‑line</td>
+<td align="center"><code>none | underline | line-through</code></td>
+</tr>
+<tr class="odd">
+<td align="center">text‑decoration‑color</td>
+<td align="center"><code>〈color〉</code></td>
+</tr>
+<tr class="even">
+<td align="center">text‑decoration‑style</td>
+<td align="center"><code>solid | double | wavy</code></td>
+</tr>
+<tr class="odd">
+<td align="center">text‑shadow</td>
+<td align="center"><code>none | 〈shadow〉</code></td>
+</tr>
+</tbody>
+</table>
+<pre><code>〈shadow〉 = 〈length〉 〈length〉 〈color〉?
+</code></pre>
+<p>The text decoration properties determine whether to apply extra
+decorations when rendering text.</p>
+<table>
+<caption>Icon Properties</caption>
+<thead>
+<tr class="header">
+<th align="center">Name</th>
+<th align="center">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">‑gtk‑icon‑source</td>
+<td align="center"><code>builtin | 〈image〉 | none</code></td>
+</tr>
+<tr class="even">
+<td align="center">‑gtk‑icon‑transform</td>
+<td align="center"><code>none | 〈transform〉+</code></td>
+</tr>
+<tr class="odd">
+<td align="center">‑gtk‑icon‑style</td>
+<td align="center"><code>requested | regular | symbolic</code></td>
+</tr>
+<tr class="even">
+<td align="center">‑gtk‑icon‑theme</td>
+<td align="center"><code>〈name〉</code></td>
+</tr>
+<tr class="odd">
+<td align="center">‑gtk‑icon‑palette</td>
+<td align="center"><code>〈color palette〉</code></td>
+</tr>
+<tr class="even">
+<td align="center">‑gtk‑icon‑shadow</td>
+<td align="center"><code>none | 〈shadow〉</code></td>
+</tr>
+<tr class="odd">
+<td align="center">‑gtk‑icon‑filter</td>
+<td align="center"><code>none | 〈filter-function-list〉</code></td>
+</tr>
+</tbody>
+</table>
+<pre><code>〈transform〉 = matrix( 〈number〉 [ , 〈number〉 ]{5} ) |
+                matrix3d( 〈number〉 [ , 〈number〉 ]{15} ) |
+                translate( 〈length〉, 〈length〉 ) | translate3d( 〈length〉, 〈length〉, 〈length〉 ) |
+                translateX( 〈length〉 ) | translateY( 〈length〉 ) | translateZ( 〈length〉 ) |
+                scale( 〈number〉[ , 〈number〉 ]? ) | scale3d( 〈number〉, 〈number〉, 〈number〉) |
+                scaleX( 〈number〉 ) | scaleY( 〈number〉 ) | scaleZ( 〈number〉 ) |
+                rotate( 〈angle〉 ) | rotate3d( 〈number〉, 〈number〉, 〈number〉, 〈angle〉 ) |
+                rotateX( 〈angle〉 ) | rotateY( 〈angle〉 ) | rotateZ( 〈angle〉 ) |
+                skew( 〈angle〉 [ , 〈angle〉 ]? ) | skewX( 〈angle〉 ) |  skewY( 〈angle〉 )
+〈color palette〉 = default | 〈name〉 〈color〉 [ , 〈name〉 〈color〉 ]*
+</code></pre>
+<p>The -gtk-icon-source property is used by widgets that are rendering
+'built-in' icons, such as arrows, expanders, spinners, checks or radios.</p>
+<p>The -gtk-icon-style property determines the preferred style for
+application-provided icons.</p>
+<p>The -gtk-icon-transform and -gtk-icon-shadow properties affect the
+rendering of both built-in and application-provided icons.</p>
+<p>-gtk-icon-palette defines a color palette for recoloring symbolic
+icons. The recognized names for colors in symbolic icons are error,
+warning and success. The default palette maps these three names to
+symbolic colors with the names @error_color, @warning_color and
+@error_color.</p>
+<table>
+<caption>Box properties</caption>
+<thead>
+<tr class="header">
+<th align="center">Name</th>
+<th align="center">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">min‑width</td>
+<td align="center"><code>〈length〉</code></td>
+</tr>
+<tr class="even">
+<td align="center">min‑height</td>
+<td align="center"><code>〈length〉</code></td>
+</tr>
+<tr class="odd">
+<td align="center">margin‑top</td>
+<td align="center"><code>〈length〉</code></td>
+</tr>
+<tr class="even">
+<td align="center">margin‑right</td>
+<td align="center"><code>〈length〉</code></td>
+</tr>
+<tr class="odd">
+<td align="center">margin‑bottom</td>
+<td align="center"><code>〈length〉</code></td>
+</tr>
+<tr class="even">
+<td align="center">margin‑left</td>
+<td align="center"><code>〈length〉</code></td>
+</tr>
+<tr class="odd">
+<td align="center">padding‑top</td>
+<td align="center"><code>〈length〉</code></td>
+</tr>
+<tr class="even">
+<td align="center">padding‑right</td>
+<td align="center"><code>〈length〉</code></td>
+</tr>
+<tr class="odd">
+<td align="center">padding‑bottom</td>
+<td align="center"><code>〈length〉</code></td>
+</tr>
+<tr class="even">
+<td align="center">padding‑left</td>
+<td align="center"><code>〈length〉</code></td>
+</tr>
+</tbody>
+</table>
+<table>
+<caption>Border properties</caption>
+<thead>
+<tr class="header">
+<th align="center">Name</th>
+<th align="center">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">border‑top‑width</td>
+<td align="center"><code>〈length〉</code></td>
+</tr>
+<tr class="even">
+<td align="center">border‑right‑width</td>
+<td align="center"><code>〈length〉</code></td>
+</tr>
+<tr class="odd">
+<td align="center">border‑bottom‑width</td>
+<td align="center"><code>〈length〉</code></td>
+</tr>
+<tr class="even">
+<td align="center">border‑right‑width</td>
+<td align="center"><code>〈length〉</code></td>
+</tr>
+<tr class="odd">
+<td align="center">border‑top‑style</td>
+<td align="center"><code>〈border style〉</code></td>
+</tr>
+<tr class="even">
+<td align="center">border‑right‑style</td>
+<td align="center"><code>〈border style〉</code></td>
+</tr>
+<tr class="odd">
+<td align="center">border‑bottom‑style</td>
+<td align="center"><code>〈border style〉</code></td>
+</tr>
+<tr class="even">
+<td align="center">border‑left‑style</td>
+<td align="center"><code>〈border style〉</code></td>
+</tr>
+<tr class="odd">
+<td align="center">border‑top‑right‑radius</td>
+<td align="center"><code>〈corner radius〉</code></td>
+</tr>
+<tr class="even">
+<td align="center">border‑bottom‑right‑radius</td>
+<td align="center"><code>〈corner radius〉</code></td>
+</tr>
+<tr class="odd">
+<td align="center">border‑bottom‑left‑radius</td>
+<td align="center"><code>〈corner radius〉</code></td>
+</tr>
+<tr class="even">
+<td align="center">border‑top‑left‑radius</td>
+<td align="center"><code>〈corner radius〉</code></td>
+</tr>
+<tr class="odd">
+<td align="center">border‑top‑color</td>
+<td align="center"><code>〈color〉</code></td>
+</tr>
+<tr class="even">
+<td align="center">border‑right‑color</td>
+<td align="center"><code>〈color〉</code></td>
+</tr>
+<tr class="odd">
+<td align="center">border‑bottom‑color</td>
+<td align="center"><code>〈color〉</code></td>
+</tr>
+<tr class="even">
+<td align="center">border‑left‑color</td>
+<td align="center"><code>〈color〉</code></td>
+</tr>
+<tr class="odd">
+<td align="center">border‑image‑source</td>
+<td align="center"><code>〈image〉 | none</code></td>
+</tr>
+<tr class="even">
+<td align="center">border‑image‑repeat</td>
+<td align="center"><code>〈border repeat〉{1,2}</code></td>
+</tr>
+<tr class="odd">
+<td align="center">border‑image‑slice</td>
+<td align="center"><code>[ 〈number〉 | 〈percentage〉 ]{1,4} &amp;&amp; fill?</code></td>
+</tr>
+<tr class="even">
+<td align="center">border‑image‑width</td>
+<td align="center"><code>[ 〈length〉 | 〈number〉 | 〈percentage〉 | auto ]{1,4}</code></td>
+</tr>
+</tbody>
+</table>
+<pre><code>〈border style〉 = none | solid | inset | outset | hidden | dotted | dashed | double | groove | ridge
+〈corner radius〉 = [ 〈length〉 | 〈percentage〉 ]{1,2}
+</code></pre>
+<table>
+<caption>Outline properties</caption>
+<thead>
+<tr class="header">
+<th align="center">Name</th>
+<th align="center">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">outline‑style</td>
+<td align="center"><code>none | solid | inset | outset | hidden | dotted | dashed | double  | groove | ridge</code></td>
+</tr>
+<tr class="even">
+<td align="center">outline‑width</td>
+<td align="center"><code>〈length〉</code></td>
+</tr>
+<tr class="odd">
+<td align="center">outline‑color</td>
+<td align="center"><code>〈color〉</code></td>
+</tr>
+<tr class="even">
+<td align="center">outline‑offset</td>
+<td align="center"><code>〈length〉</code></td>
+</tr>
+<tr class="odd">
+<td align="center">‑gtk‑outline‑top‑left‑radius</td>
+<td align="center"><code>〈corner radius〉</code></td>
+</tr>
+<tr class="even">
+<td align="center">‑gtk‑outline‑top‑right‑radius</td>
+<td align="center"><code>〈corner radius〉</code></td>
+</tr>
+<tr class="odd">
+<td align="center">‑gtk‑outline‑bottom‑right‑radius</td>
+<td align="center"><code>〈corner radius〉</code></td>
+</tr>
+<tr class="even">
+<td align="center">‑gtk‑outline‑bottom‑left‑radius</td>
+<td align="center"><code>〈corner radius〉</code></td>
+</tr>
+</tbody>
+</table>
+<p>GTK+ uses the CSS outline properties to render the 'focus rectangle'.</p>
+<table>
+<caption>Background properties</caption>
+<thead>
+<tr class="header">
+<th align="center">Name</th>
+<th align="center">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">background‑color</td>
+<td align="center"><code>〈color〉</code></td>
+</tr>
+<tr class="even">
+<td align="center">background‑clip</td>
+<td align="center"><code>〈box〉 [ , 〈box〉 ]*</code></td>
+</tr>
+<tr class="odd">
+<td align="center">background‑origin</td>
+<td align="center"><code>〈box〉 [ , 〈box〉 ]*</code></td>
+</tr>
+<tr class="even">
+<td align="center">background‑size</td>
+<td align="center"><code>〈bg-size〉 [ , 〈bg-size〉 ]*</code></td>
+</tr>
+<tr class="odd">
+<td align="center">background‑position</td>
+<td align="center"><code>〈position〉 [ , 〈position〉 ]*</code></td>
+</tr>
+<tr class="even">
+<td align="center">background‑repeat</td>
+<td align="center"><code>〈bg-repeat 〉[ , 〈bg-repeat〉 ]*</code></td>
+</tr>
+<tr class="odd">
+<td align="center">background‑image</td>
+<td align="center"><code>〈bg-image〉[ , 〈bg-image〉 ]*</code></td>
+</tr>
+<tr class="even">
+<td align="center">background-blend-mode</td>
+<td align="center"><code>〈blend-mode〉 [ , 〈blend-mode〉 ]*</code></td>
+</tr>
+<tr class="odd">
+<td align="center">box‑shadow</td>
+<td align="center"><code>none | 〈box shadow〉 [ , 〈box shadow〉 ]*</code></td>
+</tr>
+</tbody>
+</table>
+<pre><code>〈box〉 = border-box | padding-box | content-box
+〈bg-size〉 = [ 〈length〉 | 〈percentage〉 | auto ]{1,2} | cover | contain
+〈position〉 = [ left | right | center | top | bottom | 〈percentage〉 | 〈length〉 ]{1,2,3,4}
+〈bg-repeat〉 = repeat-x | repeat-y | [ no-repeat | repeat | round | space ]{1,2}
+〈bg-image〉 = 〈image〉 | none
+〈bg-layer〉 = 〈bg-image〉 || 〈position〉 [ / 〈bg-size〉 ]? || 〈bg-repeat〉 || 〈box〉 || 〈box〉
+〈final-bg-layer〉 = 〈bg-image〉 || 〈position〉 [ / 〈bg-size〉 ]? || 〈bg-repeat〉 || 〈box〉 || 〈box〉|| 〈color〉
+〈blend-mode〉 = color || color-burn || color-dodge || darken || difference || exclusion || hard-light || hue || lighten || luminosity || multiply || normal || overlay || saturate || screen || soft-light
+〈box shadow〉 = inset? &amp;&amp; 〈length〉{2,4}? &amp;&amp; 〈color〉?
+</code></pre>
+<p>As in CSS, the background color is rendered underneath all the
+background image layers, so it will only be visible if background images
+are absent or have transparency.</p>
+<p>Alternatively, multiple backgrounds can be blended using the
+<code>background-blend-mode</code> property.</p>
+<table>
+<caption>Transition properties</caption>
+<thead>
+<tr class="header">
+<th align="center">Name</th>
+<th align="center">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">transition‑property</td>
+<td align="center"><code>none | all | 〈property name〉 [ , 〈property name〉 ]*</code></td>
+</tr>
+<tr class="even">
+<td align="center">transition‑duration</td>
+<td align="center"><code>〈time〉 [ , 〈time〉 ]*</code></td>
+</tr>
+<tr class="odd">
+<td align="center">transition‑timing‑function</td>
+<td align="center"><code>〈single‑timing‑function〉[ , 〈single‑timing‑function〉 ]*</code></td>
+</tr>
+<tr class="even">
+<td align="center">transition‑delay</td>
+<td align="center"><code>〈time〉 [ , 〈time〉 ]*</code></td>
+</tr>
+</tbody>
+</table>
+<pre><code>〈single-timing-function〉 = ease | linear | ease-in | ease-out | ease-in-out |
+                             step-start | step-end | steps( 〈integer〉 [ , [ start | end ] ]? ) |
+                             cubic-bezier( 〈number〉, 〈number〉, 〈number〉, 〈number〉 )
+〈single-transition〉 = [ none | 〈property name〉 ] || 〈time〉 || 〈single-transition-timing-function〉 || 〈time〉
+</code></pre>
+<table>
+<caption>Animation properties</caption>
+<thead>
+<tr class="header">
+<th align="center">Name</th>
+<th align="center">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">animation‑name</td>
+<td align="center"><code>〈single-animation-name〉 [ , 〈single-animation-name〉 ]*</code></td>
+</tr>
+<tr class="even">
+<td align="center">animation‑duration</td>
+<td align="center"><code>〈time〉 [ , 〈time〉 ]*</code></td>
+</tr>
+<tr class="odd">
+<td align="center">animation‑timing‑function</td>
+<td align="center"><code>〈single‑timing‑function〉 [ , 〈single‑timing‑function〉 ]*</code></td>
+</tr>
+<tr class="even">
+<td align="center">animation‑iteration-count</td>
+<td align="center"><code>〈single‑animation‑iteration‑count〉 [ , 〈single‑animation‑iteration‑count〉 ]*</code></td>
+</tr>
+<tr class="odd">
+<td align="center">animation‑direction</td>
+<td align="center"><code>〈single‑animation‑direction〉 [ , 〈single‑animation‑direction〉 ]*</code></td>
+</tr>
+<tr class="even">
+<td align="center">animation‑play‑state</td>
+<td align="center"><code>〈single‑animation‑play‑state〉 [ , 〈single‑animation‑play‑state〉 ]*</code></td>
+</tr>
+<tr class="odd">
+<td align="center">animation‑delay</td>
+<td align="center"><code>〈time〉 [ , 〈time〉 ]*</code></td>
+</tr>
+<tr class="even">
+<td align="center">animation‑fill‑mode</td>
+<td align="center"><code>〈single‑animation‑fill‑mode〉 [ , 〈single‑animation‑fill‑mode〉 ]*</code></td>
+</tr>
+</tbody>
+</table>
+<pre><code>〈single-animation-name〉 = none | 〈property name〉
+〈single-animation-iteration-count〉 = infinite | 〈number〉
+〈single-animation-direction〉 = normal | reverse | alternate | alternate-reverse
+〈single-animation-play-state〉 = running | paused
+〈single-animation-fill-mode〉 = none | forwards | backwards | both
+〈single-animation〉 = 〈single-animation-name〉 || 〈time〉 || 〈single-timing-function〉 || 〈time〉 ||
+                       〈single-animation-iteration-count〉 || 〈single-animation-direction〉 || 〈single-animation-play-state〉 || 〈single-animation-fill-mode〉
+</code></pre>
+<table>
+<caption>Key binding properties</caption>
+<thead>
+<tr class="header">
+<th align="center">Name</th>
+<th align="center">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">‑gtk‑key‑bindings</td>
+<td align="center"><code>none | 〈binding name〉 [ , 〈binding name〉 ]*</code></td>
+</tr>
+</tbody>
+</table>
+<p>〈binding name〉 must have been assigned to a binding set with a
+@binding-set rule.</p>
+<table>
+<caption>Table-related properties</caption>
+<thead>
+<tr class="header">
+<th align="center">Name</th>
+<th align="center">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">border‑spacing</td>
+<td align="center"><code>〈length〉{1,2}</code></td>
+</tr>
+</tbody>
+</table>
+<p>The border-spacing property is respected by GtkBox and GtkGrid, and by
+box gadgets that are used internally in complex widgets.</p>
+
+    </div>
+        
+
+
+
+
+		
+	</div>
+	<div id="search_results">
+		<p>The results of the search are</p>
+	</div>
+	<hr>
+	<div id="footer">
+		    
+
+	</div>
+</div>
+
+<div id="toc-column">
+	
+		<div class="edit-button">
+		
+
+	</div>
+		<div id="toc-wrapper">
+		<nav id="toc"></nav>
+	</div>
+</div>
+</div>
+</main>
+
+</body>
+
+<script src="assets/js/navbar_offset_scroller.js"></script>
+</html>

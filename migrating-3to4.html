@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<base href=".">
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>Migrating from GTK+ 3.x to GTK+ 4</title>
+
+<link rel="stylesheet" href="assets/css/custom_bootstrap.css" type="text/css">
+<link rel="stylesheet" href="assets/css/bootstrap-toc.min.css" type="text/css">
+<link rel="stylesheet" href="assets/css/frontend.css" type="text/css">
+<link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
+
+<link rel="stylesheet" href="assets/css/prism.css" type="text/css">
+
+<script src="assets/js/mustache.min.js"></script>
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/scrollspy.js"></script>
+<script src="assets/js/bootstrap.js"></script>
+<script src="assets/js/typeahead.jquery.min.js"></script>
+<script src="assets/js/search.js"></script>
+<script src="assets/js/isotope.pkgd.min.js"></script>
+<script src="assets/js/compare-versions.js"></script>
+<script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="assets/js/bootstrap-toc.min.js"></script>
+<script src="assets/js/jquery.touchSwipe.min.js"></script>
+<script src="assets/js/anchor.min.js"></script>
+<script src="assets/js/tag_filtering.js"></script>
+<script src="assets/js/language_switching.js"></script>
+
+<script src="assets/js/lines_around_headings.js"></script>
+
+<script src="assets/js/prism-core.js"></script>
+<script src="assets/js/prism-autoloader.js"></script>
+<script src="assets/js/prism_autoloader_path_override.js"></script>
+<script src="assets/js/trie.js"></script>
+
+
+</head>
+
+<body class="no-script
+" data-spy="scroll" data-target="#toc" data-offset="70">
+
+<script>
+$('body').removeClass('no-script');
+</script>
+
+<nav class="navbar navbar-fixed-top navbar-default" id="topnav">
+	<div class="container-fluid">
+		<div class="navbar-right">
+			<a id="toc-toggle">
+				<span class="glyphicon glyphicon-menu-right"></span>
+				<span class="glyphicon glyphicon-menu-left"></span>
+			</a>
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-wrapper" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<form action="" class="navbar-form pull-right" id="navbar-search-form">
+                               <div class="form-group has-feedback">
+                                       <input type="text" class="form-control input-sm" name="search" id="sidenav-lookup-field" placeholder="search" disabled>
+				       <span class="glyphicon glyphicon-search form-control-feedback" id="search-mgn-glass"></span>
+                               </div>
+                        </form>
+		</div>
+		<div class="navbar-header">
+			<a id="sidenav-toggle">
+				<span class="glyphicon glyphicon-menu-right"></span>
+				<span class="glyphicon glyphicon-menu-left"></span>
+			</a>
+			<a id="home-link" href="index.html" class="hotdoc-navbar-brand">
+				<img src="assets/images/home.svg" alt="Home">
+			</a>
+		</div>
+		<div class="navbar-collapse collapse" id="navbar-wrapper">
+			<ul class="nav navbar-nav" id="menu">
+							</ul>
+			<div class="hidden-xs hidden-sm navbar-text navbar-center">
+							</div>
+		</div>
+	</div>
+</nav>
+
+<main>
+<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="migrating-3to4.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['c', 'javascript', 'python']" data-hotdoc-meta-gi-language="c">
+<script src="assets/js/utils.js"></script>
+
+<div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
+	<script src="assets/js/navigation.js"></script>
+	<script src="assets/js/sitemap.js"></script>
+</div>
+
+<div id="body">
+	<div id="main">
+				    <div id="page-description" data-hotdoc-source="migrating-3to4.markdown" data-hotdoc-role="main">
+        <h1 id="migrating-from-gtk-3x-to-gtk-4">Migrating from GTK+ 3.x to GTK+ 4</h1>
+<p>GTK+ 4 is a major new version of GTK+ that breaks both API and ABI
+compared to GTK+ 3.x. Thankfully, most of the changes are not hard to
+adapt to and there are a number of steps that you can take to prepare
+your GTK+ 3.x application for the switch to GTK+ 4. After that, there's
+a small number of adjustments that you may have to do when you actually
+switch your application to build against GTK+ 4.</p>
+<h1 id="preparation-in-gtk-3x">Preparation in GTK+ 3.x</h1>
+<p>The steps outlined in the following sections assume that your
+application is working with GTK+ 3.22, which is the final stable release
+of GTK+ 3.x. It includes all the necessary APIs and tools to help you
+port your application to GTK+ 4. If you are still using an older version
+of GTK+ 3.x, you should first get your application to build and work
+with 3.22.</p>
+<h2 id="do-not-use-deprecated-symbols">Do not use deprecated symbols</h2>
+<p>Over the years, a number of functions, and in some cases, entire widgets
+have been deprecated. These deprecations are clearly spelled out in the
+API reference, with hints about the recommended replacements. The API
+reference for GTK+ 3 also includes an
+<a href="https://developer.gnome.org/gtk3/3.22/api-index-deprecated.html">index</a>
+of all deprecated symbols.</p>
+<p>To verify that your program does not use any deprecated symbols, you can
+use defines to remove deprecated symbols from the header files, as
+follows:</p>
+<pre><code>        make CFLAGS+="-DGDK_DISABLE_DEPRECATED -DGTK_DISABLE_DEPRECATED"
+        
+</code></pre>
+<p>Note that some parts of our API, such as enumeration values, are not
+well covered by the deprecation warnings. In most cases, using them will
+require you to also use deprecated functions, which will trigger
+warnings.</p>
+<h2 id="do-not-use-widget-style-properties">Do not use widget style properties</h2>
+<p>Style properties do not exist in GTK+ 4. You should stop using them in
+your custom CSS.</p>
+<h2 id="review-your-window-creation-flags">Review your window creation flags</h2>
+<p>GTK+ 4 removes the GDK_WA_CURSOR flag. Instead, just use
+gdk_window_set_cursor() to set a cursor on the window after creating
+it.</p>
+<p>GTK+ 4 also removes the GDK_WA_VISUAL flag, and always uses an RGBA
+visual for windows. To prepare your code for this, use
+gdk_window_set_visual (gdk_screen_get_rgba_visual ()) after
+creating your window.</p>
+<p>GTK+ 4 also removes the GDK_WA_WMCLASS flag. If you need this
+X11-specific functionality, use XSetClassHint() directly.</p>
+<h2 id="stop-using-nonrgba-visuals">Stop using non-RGBA visuals</h2>
+<p>GTK+ 4 always uses RGBA visuals for its windows; you should make sure
+that your code works with that.</p>
+<h2 id="stop-using-gtkboxpadding-gtkboxfill-and-gtkboxexpand">Stop using GtkBox:padding, GtkBox:fill and GtkBox:expand</h2>
+<p>GTK+4 removes these #GtkBox child properties, so you should not use
+them. You can replace GtkBox:padding using the #GtkWidget:margin
+properties on your #GtkBox child widgets.</p>
+<p>The fill child property can be replaced by setting appropriate values
+for the #GtkWidget:halign and #GtkWidget:valign properties of the
+child widgets. If you previously set the fill child property to %TRUE,
+you can achieve the same effect by setting the halign or valign
+properties to %GTK_ALIGN_FILL, depending on the parent box -- halign
+for a horizontal box, valign for a vertial one.</p>
+<p>#GtkBox also uses the expand child property. It can be replaced by
+setting #GtkWidget:hexpand or #GtkWidget:vexpand on the child widgets.
+To match the old behavior of the #GtkBox's expand child property, you
+need to set #GtkWidget:hexpand on the child widgets of a horizontal
+#GtkBox and #GtkWidget:vexpand on the child widgets of a vertical
+#GtkBox. Note that there's a subtle but important difference between
+#GtkBox's expand and fill child properties and the ones in #GtkWidget:
+setting #GtkWidget:hexpand or #GtkWidget:vexpand to %TRUE will
+propagate up the widget hierarchy, so a pixel-perfect port migth require
+a reset of the expansion flags to %FALSE in a parent widget higher up
+the hierarchy.</p>
+<h2 id="stop-using-the-state-argument-of-gtkstylecontext-getters">Stop using the state argument of GtkStyleContext getters</h2>
+<p>The getters in the GtkStyleContext API, such as
+gtk_style_context_get_property(), gtk_style_context_get(), or
+gtk_style_context_get_color() only accept the context's current
+state for their state argument. Update all callers to pass the current
+state.</p>
+<h2 id="stop-using-gdk_pixbuf_get_from_window-and-gdk_cairo_set_source_window">Stop using gdk_pixbuf_get_from_window() and gdk_cairo_set_source_window()</h2>
+<p>These functions are not supported in GTK+ 4. Instead, either use
+backend-specific APIs, or render your widgets using
+gtk_widget_render().</p>
+<h1 id="changes-that-need-to-be-done-at-the-time-of-the-switch">Changes that need to be done at the time of the switch</h1>
+<p>This section outlines porting tasks that you need to tackle when you get
+to the point that you actually build your application against GTK+ 4.
+Making it possible to prepare for these in GTK+ 3 would have been either
+impossible or impractical.</p>
+<h2 id="adapt-to-gdkwindow-api-changes">Adapt to GdkWindow API changes</h2>
+<p>The gdk_window_new() function has been replaced by a number of more
+specialized constructors: gdk_window_new_toplevel(),
+gdk_window_new_popup(), gdk_window_new_temp(),
+gdk_window_new_child(), gdk_window_new_input(),
+gdk_wayland_window_new_subsurface(). Use the appropriate ones to
+create your windows.</p>
+<p>Native and foreign subwindows are no longer supported. These concepts
+were complicating the code and could not be supported across backends.</p>
+<p>gdk_window_reparent() is no longer available.</p>
+<h2 id="adapt-to-gtkstylecontext-api-changes">Adapt to GtkStyleContext API changes</h2>
+<p>The getters in the GtkStyleContext API, such as
+gtk_style_context_get_property(), gtk_style_context_get(), or
+gtk_style_context_get_color() have lost their state argument, and
+always use the context's current state. Update all callers to omit the
+state argument.</p>
+<h2 id="adapt-to-gtkcssprovider-api-changes">Adapt to GtkCssProvider API changes</h2>
+<p>In GTK+ 4, the various #GtkCssProvider load functions have lost their
+#GError argument. If you want to handle CSS loading errors, use the
+#GtkCssProvider::parsing-error signal instead.</p>
+<h2 id="stop-using-gtkcontainerborderwidth">Stop using GtkContainer::border-width</h2>
+<p>GTK+ 4 has removed the #GtkContainer::border-width property. Use other
+means to influence the spacing of your containers, such as the CSS
+margin and padding properties on child widgets.</p>
+<h2 id="adapt-to-gtkwidgets-size-request-changes">Adapt to GtkWidget's size request changes</h2>
+<p>GTK+ 3 used five different virtual functions in GtkWidget to implement
+size requisition, namely the gtk_widget_get_preferred_width() family
+of functions. To simplify widget implementations, GTK+4 uses only one
+virtual function, GtkWidgetClass::measure() that widgets have to
+implement.</p>
+<h2 id="switch-to-gtkwidgets-children-apis">Switch to GtkWidget's children APIs</h2>
+<p>Instead of the GtkContainer subclass, in GTK+ 4, any widget can have
+children, and there is new API to navigate the widget tree:
+gtk_widget_get_first_child(), gtk_widget_get_last_child(),
+gtk_widget_get_next_sibling(), gtk_widget_get_prev_sibling().
+The GtkContainer API still works, but if you are implementing your own
+widgets, you should consider using the new APIs.</p>
+<h2 id="dont-use-gtkgradient-in-your-css">Don't use -gtk-gradient in your CSS</h2>
+<p>GTK+ now supports standard CSS syntax for both linear and radial
+gradients, just use those.</p>
+<h2 id="dont-use-gtkiconeffect-in-your-css">Don't use -gtk-icon-effect in your CSS</h2>
+<p>GTK+ now supports a more versatile -gtk-icon-filter instead. Replace
+-gtk-icon-effect: dim; with -gtk-icon-filter: opacity(0.5); and
+-gtk-icon-effect: hilight; with -gtk-icon-filter: brightness(1.2);.</p>
+<h2 id="use-gtk_widget_measure">Use gtk_widget_measure</h2>
+<p>gtk_widget_measure replaces the various gtk_widget_get_preferred_
+functions for querying sizes.</p>
+<h2 id="adapt-to-drawing-model-changes">Adapt to drawing model changes</h2>
+<p>This area has seen the most radical changes in the transition from GTK+
+3 to GTK+ 4. Widgets no longer use a draw() function to render their
+contents to a cairo surface. Instead, they have a snapshot() function
+that creates one or more GskRenderNodes to represent their content.
+Third-party widgets that use a draw() function or a #GtkWidget::draw
+signal handler for custom drawing will need to be converted to use
+gtk_snapshot_append_cairo().</p>
+<p>The auxiliary #GtkSnapshot object has APIs to help with creating render
+nodes.</p>
+<p>If you are using a #GtkDrawingArea for custom drawing, you need to
+switch to using gtk_drawing_area_set_draw_func() to set a draw
+function. This is pretty much a direct replacement for a
+#GtkWidget::draw signal handler.</p>
+<h2 id="stop-using-apis-to-query-gdkwindows">Stop using APIs to query GdkWindows</h2>
+<p>A number of APIs for querying special-purpose windows have been removed,
+since these windows are no longer publically available:
+gtk_tree_view_get_pin_window(), gtk_viewport_get_bin_window(),
+gtk_viewport_get_view_window().</p>
+<h2 id="adapt-to-changes-in-animated-hiding-and-showing-of-widgets">Adapt to changes in animated hiding and showing of widgets</h2>
+<p>Widgets that appear and disappear with an animation, such as GtkPopover,
+GtkInfoBar, GtkRevealer no longer use gtk_widget_show() and
+gtk_widget_hide() for this, but have gained dedicated APIs for this
+purpose that you should use.</p>
+<h2 id="stop-passing-commandline-arguments-to-gtk_init">Stop passing commandline arguments to gtk_init()</h2>
+<p>The gtk_init() and gtk_init_check() functions no longer accept
+commandline arguments. Just call them without arguments. Other
+initialization functions that were purely related to commandline
+argument handling, such as gtk_parse_args() and
+gtk_get_option_group(), are gone. The APIs to initialize GDK
+separately are also gone, but it is very unlikely that you are affected
+by that.</p>
+
+    </div>
+        
+
+
+
+
+		
+	</div>
+	<div id="search_results">
+		<p>The results of the search are</p>
+	</div>
+	<hr>
+	<div id="footer">
+		    
+
+	</div>
+</div>
+
+<div id="toc-column">
+	
+		<div class="edit-button">
+		
+
+	</div>
+		<div id="toc-wrapper">
+		<nav id="toc"></nav>
+	</div>
+</div>
+</div>
+</main>
+
+</body>
+
+<script src="assets/js/navbar_offset_scroller.js"></script>
+</html>

@@ -1,0 +1,3085 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<base href=".">
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>gtkscale</title>
+
+<link rel="stylesheet" href="assets/css/custom_bootstrap.css" type="text/css">
+<link rel="stylesheet" href="assets/css/bootstrap-toc.min.css" type="text/css">
+<link rel="stylesheet" href="assets/css/frontend.css" type="text/css">
+<link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
+
+<link rel="stylesheet" href="assets/css/prism.css" type="text/css">
+
+<script src="assets/js/mustache.min.js"></script>
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/scrollspy.js"></script>
+<script src="assets/js/bootstrap.js"></script>
+<script src="assets/js/typeahead.jquery.min.js"></script>
+<script src="assets/js/search.js"></script>
+<script src="assets/js/isotope.pkgd.min.js"></script>
+<script src="assets/js/compare-versions.js"></script>
+<script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="assets/js/bootstrap-toc.min.js"></script>
+<script src="assets/js/jquery.touchSwipe.min.js"></script>
+<script src="assets/js/anchor.min.js"></script>
+<script src="assets/js/tag_filtering.js"></script>
+<script src="assets/js/language_switching.js"></script>
+
+<script src="assets/js/lines_around_headings.js"></script>
+
+<script src="assets/js/prism-core.js"></script>
+<script src="assets/js/prism-autoloader.js"></script>
+<script src="assets/js/prism_autoloader_path_override.js"></script>
+<script src="assets/js/trie.js"></script>
+
+
+</head>
+
+<body class="no-script
+" data-spy="scroll" data-target="#toc" data-offset="70">
+
+<script>
+$('body').removeClass('no-script');
+</script>
+
+<nav class="navbar navbar-fixed-top navbar-default" id="topnav">
+	<div class="container-fluid">
+		<div class="navbar-right">
+			<a id="toc-toggle">
+				<span class="glyphicon glyphicon-menu-right"></span>
+				<span class="glyphicon glyphicon-menu-left"></span>
+			</a>
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-wrapper" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<form action="" class="navbar-form pull-right" id="navbar-search-form">
+                               <div class="form-group has-feedback">
+                                       <input type="text" class="form-control input-sm" name="search" id="sidenav-lookup-field" placeholder="search" disabled>
+				       <span class="glyphicon glyphicon-search form-control-feedback" id="search-mgn-glass"></span>
+                               </div>
+                        </form>
+		</div>
+		<div class="navbar-header">
+			<a id="sidenav-toggle">
+				<span class="glyphicon glyphicon-menu-right"></span>
+				<span class="glyphicon glyphicon-menu-left"></span>
+			</a>
+			<a id="home-link" href="index.html" class="hotdoc-navbar-brand">
+				<img src="assets/images/home.svg" alt="Home">
+			</a>
+		</div>
+		<div class="navbar-collapse collapse" id="navbar-wrapper">
+			<ul class="nav navbar-nav" id="menu">
+							</ul>
+			<div class="hidden-xs hidden-sm navbar-text navbar-center">
+							</div>
+		</div>
+	</div>
+</nav>
+
+<main>
+<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="gtkscale.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['c', 'javascript', 'python']" data-hotdoc-meta-gi-language="c">
+<script src="assets/js/utils.js"></script>
+
+<div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
+	<script src="assets/js/navigation.js"></script>
+	<script src="assets/js/sitemap.js"></script>
+</div>
+
+<div id="body">
+	<div id="main">
+				    <div id="page-description" data-hotdoc-source="gtkscale.markdown" data-hotdoc-role="main">
+    </div>
+        
+        
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="GtkScale">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h2 data-hotdoc-id="GtkScale">
+	<span><code>GtkScale</code></span>
+</h2>
+
+
+<div class="hierarchy_container">
+	<div class="hierarchy_details">
+<pre>
+<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object">GObject</a>
+    <span class="lineart">╰──</span><a title="GInitiallyUnowned" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-javascript="GObject.InitiallyUnowned" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-python="GObject.InitiallyUnowned">GInitiallyUnowned</a>
+        <span class="lineart">╰──</span><a title="GtkWidget" href="gtkwidget.html#GtkWidget" data-gi-href-javascript="gtkwidget.html#GtkWidget" data-gi-title-javascript="Gtk.Widget" data-gi-href-python="gtkwidget.html#GtkWidget" data-gi-title-python="Gtk.Widget">GtkWidget</a>
+            <span class="lineart">╰──</span><a title="GtkRange" href="gtkrange.html#GtkRange" data-gi-href-javascript="gtkrange.html#GtkRange" data-gi-title-javascript="Gtk.Range" data-gi-href-python="gtkrange.html#GtkRange" data-gi-title-python="Gtk.Range">GtkRange</a>
+                <span class="lineart">╰──</span>GtkScale
+</pre>
+
+</div>
+
+</div>
+
+<div class="interfaces_container">
+	
+<p><b>Implemented interfaces:</b>
+    AtkImplementorIface, <a title="GtkBuildable" href="gtkbuildable.html#GtkBuildable" data-gi-href-javascript="gtkbuildable.html#GtkBuildable" data-gi-title-javascript="Gtk.Buildable" data-gi-href-python="gtkbuildable.html#GtkBuildable" data-gi-title-python="Gtk.Buildable">GtkBuildable</a>, <a title="GtkOrientable" href="gtkorientable.html#GtkOrientable" data-gi-href-javascript="gtkorientable.html#GtkOrientable" data-gi-title-javascript="Gtk.Orientable" data-gi-href-python="gtkorientable.html#GtkOrientable" data-gi-title-python="Gtk.Orientable">GtkOrientable</a>
+</p>
+
+</div>
+
+
+
+
+	<div class="members-container">
+		<h3>Members</h3>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkScale.range">
+	<div>
+		<i><em><code>range</code></em></i>
+		(<a title="GtkRange" href="gtkrange.html#GtkRange" data-gi-href-javascript="gtkrange.html#GtkRange" data-gi-title-javascript="Gtk.Range" data-gi-href-python="gtkrange.html#GtkRange" data-gi-title-python="Gtk.Range">GtkRange</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+<h3>Class structure</h3>
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="GtkScaleClass">
+	<span><code>GtkScaleClass</code></span>
+</h4>
+
+
+
+
+
+	<div class="members-container">
+		<h5>Fields</h5>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkScaleClass.parent_class">
+	<div>
+		<i><em><code>parent_class</code></em></i>
+		(<a title="GtkRangeClass" href="GtkRangeClass">GtkRangeClass</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h3>
+	Gtk.ScaleClass
+</h3>
+
+
+
+
+
+	<div class="members-container">
+		<h5>Attributes</h5>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkScaleClass.parent_class">
+	<div>
+		<i><em><code>ScaleClass.parent_class</code></em></i>
+		(<a title="Gtk.RangeClass" href="GtkRangeClass">Gtk.RangeClass</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3>
+	Gtk.ScaleClass
+</h3>
+
+
+
+
+
+	<div class="members-container">
+		<h5>Attributes</h5>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkScaleClass.parent_class">
+	<div>
+		<i><em><code>ScaleClass.parent_class</code></em></i>
+		(<a title="Gtk.RangeClass" href="GtkRangeClass">Gtk.RangeClass</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h2 data-hotdoc-id="GtkScale">
+	<span><code>GtkScale</code></span>
+</h2>
+
+
+<div class="hierarchy_container">
+	<div class="hierarchy_details">
+<pre>
+<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object">GObject</a>
+    <span class="lineart">╰──</span><a title="GInitiallyUnowned" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-javascript="GObject.InitiallyUnowned" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-python="GObject.InitiallyUnowned">GInitiallyUnowned</a>
+        <span class="lineart">╰──</span><a title="GtkWidget" href="gtkwidget.html#GtkWidget" data-gi-href-javascript="gtkwidget.html#GtkWidget" data-gi-title-javascript="Gtk.Widget" data-gi-href-python="gtkwidget.html#GtkWidget" data-gi-title-python="Gtk.Widget">GtkWidget</a>
+            <span class="lineart">╰──</span><a title="GtkRange" href="gtkrange.html#GtkRange" data-gi-href-javascript="gtkrange.html#GtkRange" data-gi-title-javascript="Gtk.Range" data-gi-href-python="gtkrange.html#GtkRange" data-gi-title-python="Gtk.Range">GtkRange</a>
+                <span class="lineart">╰──</span>GtkScale
+</pre>
+
+</div>
+
+</div>
+
+<div class="interfaces_container">
+	
+<p><b>Implemented interfaces:</b>
+    AtkImplementorIface, <a title="GtkBuildable" href="gtkbuildable.html#GtkBuildable" data-gi-href-javascript="gtkbuildable.html#GtkBuildable" data-gi-title-javascript="Gtk.Buildable" data-gi-href-python="gtkbuildable.html#GtkBuildable" data-gi-title-python="Gtk.Buildable">GtkBuildable</a>, <a title="GtkOrientable" href="gtkorientable.html#GtkOrientable" data-gi-href-javascript="gtkorientable.html#GtkOrientable" data-gi-title-javascript="Gtk.Orientable" data-gi-href-python="gtkorientable.html#GtkOrientable" data-gi-title-python="Gtk.Orientable">GtkOrientable</a>
+</p>
+
+</div>
+
+
+
+
+	<div class="members-container">
+		<h3>Members</h3>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkScale.range">
+	<div>
+		<i><em><code>range</code></em></i>
+		(<a title="GtkRange" href="gtkrange.html#GtkRange" data-gi-href-javascript="gtkrange.html#GtkRange" data-gi-title-javascript="Gtk.Range" data-gi-href-python="gtkrange.html#GtkRange" data-gi-title-python="Gtk.Range">GtkRange</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h2 data-hotdoc-id="GtkScale">
+	<span><code>GtkScale</code></span>
+</h2>
+
+
+<div class="hierarchy_container">
+	<div class="hierarchy_details">
+<pre>
+<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object">GObject</a>
+    <span class="lineart">╰──</span><a title="GInitiallyUnowned" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-javascript="GObject.InitiallyUnowned" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-python="GObject.InitiallyUnowned">GInitiallyUnowned</a>
+        <span class="lineart">╰──</span><a title="GtkWidget" href="gtkwidget.html#GtkWidget" data-gi-href-javascript="gtkwidget.html#GtkWidget" data-gi-title-javascript="Gtk.Widget" data-gi-href-python="gtkwidget.html#GtkWidget" data-gi-title-python="Gtk.Widget">GtkWidget</a>
+            <span class="lineart">╰──</span><a title="GtkRange" href="gtkrange.html#GtkRange" data-gi-href-javascript="gtkrange.html#GtkRange" data-gi-title-javascript="Gtk.Range" data-gi-href-python="gtkrange.html#GtkRange" data-gi-title-python="Gtk.Range">GtkRange</a>
+                <span class="lineart">╰──</span>GtkScale
+</pre>
+
+</div>
+
+</div>
+
+<div class="interfaces_container">
+	
+<p><b>Implemented interfaces:</b>
+    AtkImplementorIface, <a title="GtkBuildable" href="gtkbuildable.html#GtkBuildable" data-gi-href-javascript="gtkbuildable.html#GtkBuildable" data-gi-title-javascript="Gtk.Buildable" data-gi-href-python="gtkbuildable.html#GtkBuildable" data-gi-title-python="Gtk.Buildable">GtkBuildable</a>, <a title="GtkOrientable" href="gtkorientable.html#GtkOrientable" data-gi-href-javascript="gtkorientable.html#GtkOrientable" data-gi-title-javascript="Gtk.Orientable" data-gi-href-python="gtkorientable.html#GtkOrientable" data-gi-title-python="Gtk.Orientable">GtkOrientable</a>
+</p>
+
+</div>
+
+
+
+
+	<div class="members-container">
+		<h3>Members</h3>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkScale.range">
+	<div>
+		<i><em><code>range</code></em></i>
+		(<a title="GtkRange" href="gtkrange.html#GtkRange" data-gi-href-javascript="gtkrange.html#GtkRange" data-gi-title-javascript="Gtk.Range" data-gi-href-python="gtkrange.html#GtkRange" data-gi-title-python="Gtk.Range">GtkRange</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+
+</div>
+
+
+            <h3 class="symbol_section">Constructors</h3>
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_scale_new">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scale_new">
+	<span><code>gtk_scale_new</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkWidget" href="gtkwidget.html#GtkWidget">GtkWidget</a> *
+gtk_scale_new (<a title="GtkOrientation" href="gtkenums.html#GtkOrientation">GtkOrientation</a> orientation,
+               <a title="GtkAdjustment" href="gtkadjustment.html#GtkAdjustment">GtkAdjustment</a> * adjustment)</pre>
+
+<p>Creates a new <a href="gtkscale.html#GtkScale">GtkScale</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>orientation</code></em></i>
+				–
+	</div>
+			<p>the scale’s orientation.</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>adjustment</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="NULL may be passed to the value"><span class="acronym">nullable</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>the <a href="gtkadjustment.html#GtkAdjustment">GtkAdjustment</a> which sets the range
+of the scale, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> to create a new adjustment.</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>a new <a href="gtkscale.html#GtkScale">GtkScale</a></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scale_new">
+	<span><code>Gtk.prototype.new</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.new(orientation: <a title="Gtk.Orientation" href="gtkenums.html#GtkOrientation">Gtk.Orientation</a>, adjustment: <a title="Gtk.Adjustment" href="gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a>): {
+    // javascript wrapper for 'gtk_scale_new'
+}</pre>
+
+<p>Creates a new <a href="gtkscale.html#GtkScale">Gtk.Scale</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>orientation</code></em></i>
+					(
+						<a title="Gtk.Orientation" href="gtkenums.html#GtkOrientation">Gtk.Orientation</a>
+						)
+				–
+	</div>
+			<p>the scale’s orientation.</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>adjustment</code></em></i>
+					(
+						<a title="Gtk.Adjustment" href="gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a>
+						)
+				–
+	</div>
+			<p>the <a href="gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a> which sets the range
+of the scale, or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a> to create a new adjustment.</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>a new <a href="gtkscale.html#GtkScale">Gtk.Scale</a></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scale_new">
+	<span><code>Gtk.Scale.new</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Scale.new (orientation, adjustment):
+    #python wrapper for 'gtk_scale_new'</pre>
+
+<p>Creates a new <a href="gtkscale.html#GtkScale">Gtk.Scale</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>orientation</code></em></i>
+					(
+						<a title="Gtk.Orientation" href="gtkenums.html#GtkOrientation">Gtk.Orientation</a>
+						)
+				–
+	</div>
+			<p>the scale’s orientation.</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>adjustment</code></em></i>
+					(
+						<a title="Gtk.Adjustment" href="gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a>
+						)
+				–
+	</div>
+			<p>the <a href="gtkadjustment.html#GtkAdjustment">Gtk.Adjustment</a> which sets the range
+of the scale, or <a href="https://docs.python.org/3/library/constants.html#None">None</a> to create a new adjustment.</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>a new <a href="gtkscale.html#GtkScale">Gtk.Scale</a></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_scale_new_with_range">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scale_new_with_range">
+	<span><code>gtk_scale_new_with_range</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkWidget" href="gtkwidget.html#GtkWidget">GtkWidget</a> *
+gtk_scale_new_with_range (<a title="GtkOrientation" href="gtkenums.html#GtkOrientation">GtkOrientation</a> orientation,
+                          <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> min,
+                          <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> max,
+                          <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> step)</pre>
+
+<p>Creates a new scale widget with the given orientation that lets the
+user input a number between <em>min</em> and <em>max</em> (including <em>min</em> and <em>max</em>)
+with the increment <em>step</em>.  <em>step</em> must be nonzero; it’s the distance
+the slider moves when using the arrow keys to adjust the scale
+value.</p>
+<p>Note that the way in which the precision is derived works best if <em>step</em>
+is a power of ten. If the resulting precision is not suitable for your
+needs, use <a href="gtkscale.html#gtk_scale_set_digits">gtk_scale_set_digits</a> to correct it.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>orientation</code></em></i>
+				–
+	</div>
+			<p>the scale’s orientation.</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>min</code></em></i>
+				–
+	</div>
+			<p>minimum value</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>max</code></em></i>
+				–
+	</div>
+			<p>maximum value</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>step</code></em></i>
+				–
+	</div>
+			<p>step increment (tick size) used with keyboard shortcuts</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>a new <a href="gtkscale.html#GtkScale">GtkScale</a></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scale_new_with_range">
+	<span><code>Gtk.prototype.new_with_range</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.new_with_range(orientation: <a title="Gtk.Orientation" href="gtkenums.html#GtkOrientation">Gtk.Orientation</a>, min: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, max: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, step: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_scale_new_with_range'
+}</pre>
+
+<p>Creates a new scale widget with the given orientation that lets the
+user input a number between <em>min</em> and <em>max</em> (including <em>min</em> and <em>max</em>)
+with the increment <em>step</em>.  <em>step</em> must be nonzero; it’s the distance
+the slider moves when using the arrow keys to adjust the scale
+value.</p>
+<p>Note that the way in which the precision is derived works best if <em>step</em>
+is a power of ten. If the resulting precision is not suitable for your
+needs, use <a href="gtkscale.html#gtk_scale_set_digits">Gtk.prototype.set_digits</a> to correct it.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>orientation</code></em></i>
+					(
+						<a title="Gtk.Orientation" href="gtkenums.html#GtkOrientation">Gtk.Orientation</a>
+						)
+				–
+	</div>
+			<p>the scale’s orientation.</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>min</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>minimum value</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>max</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>maximum value</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>step</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>step increment (tick size) used with keyboard shortcuts</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>a new <a href="gtkscale.html#GtkScale">Gtk.Scale</a></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scale_new_with_range">
+	<span><code>Gtk.Scale.new_with_range</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Scale.new_with_range (orientation, min, max, step):
+    #python wrapper for 'gtk_scale_new_with_range'</pre>
+
+<p>Creates a new scale widget with the given orientation that lets the
+user input a number between <em>min</em> and <em>max</em> (including <em>min</em> and <em>max</em>)
+with the increment <em>step</em>.  <em>step</em> must be nonzero; it’s the distance
+the slider moves when using the arrow keys to adjust the scale
+value.</p>
+<p>Note that the way in which the precision is derived works best if <em>step</em>
+is a power of ten. If the resulting precision is not suitable for your
+needs, use <a href="gtkscale.html#gtk_scale_set_digits">Gtk.Scale.set_digits</a> to correct it.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>orientation</code></em></i>
+					(
+						<a title="Gtk.Orientation" href="gtkenums.html#GtkOrientation">Gtk.Orientation</a>
+						)
+				–
+	</div>
+			<p>the scale’s orientation.</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>min</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>minimum value</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>max</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>maximum value</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>step</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>step increment (tick size) used with keyboard shortcuts</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>a new <a href="gtkscale.html#GtkScale">Gtk.Scale</a></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+
+</div>
+
+
+            <h3 class="symbol_section">Methods</h3>
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_scale_set_digits">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scale_set_digits">
+	<span><code>gtk_scale_set_digits</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_scale_set_digits (<a title="GtkScale" href="gtkscale.html#GtkScale">GtkScale</a> * scale,
+                      <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> digits)</pre>
+
+<p>Sets the number of decimal places that are displayed in the value. Also
+causes the value of the adjustment to be rounded to this number of digits,
+so the retrieved value matches the displayed one, if <a href="https://developer.gnome.org/gtk3/GtkScale.html#GtkScale--draw-value">draw-value</a> is
+<a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> when the value changes. If you want to enforce rounding the value when
+<a href="https://developer.gnome.org/gtk3/GtkScale.html#GtkScale--draw-value">draw-value</a> is <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS">FALSE</a>, you can set <a href="https://developer.gnome.org/gtk3/GtkRange.html#GtkRange--round-digits">round-digits</a> instead.</p>
+<p>Note that rounding to a small number of digits can interfere with
+the smooth autoscrolling that is built into <a href="gtkscale.html#GtkScale">GtkScale</a>. As an alternative,
+you can use the <a href="https://developer.gnome.org/gtk3/GtkScale.html#GtkScale-format-value">format-value</a> signal to format the displayed
+value yourself.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scale</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkscale.html#GtkScale">GtkScale</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>digits</code></em></i>
+				–
+	</div>
+			<p>the number of decimal places to display,
+e.g. use 1 to display 1.0, 2 to display 1.00, etc</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scale_set_digits">
+	<span><code>Gtk.prototype.set_digits</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_digits(digits: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_scale_set_digits'
+}</pre>
+
+<p>Sets the number of decimal places that are displayed in the value. Also
+causes the value of the adjustment to be rounded to this number of digits,
+so the retrieved value matches the displayed one, if <a href="https://developer.gnome.org/gtk3/GtkScale.html#GtkScale--draw-value">draw-value</a> is
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> when the value changes. If you want to enforce rounding the value when
+<a href="https://developer.gnome.org/gtk3/GtkScale.html#GtkScale--draw-value">draw-value</a> is <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">false</a>, you can set <a href="https://developer.gnome.org/gtk3/GtkRange.html#GtkRange--round-digits">round-digits</a> instead.</p>
+<p>Note that rounding to a small number of digits can interfere with
+the smooth autoscrolling that is built into <a href="gtkscale.html#GtkScale">Gtk.Scale</a>. As an alternative,
+you can use the <a href="https://developer.gnome.org/gtk3/GtkScale.html#GtkScale-format-value">format-value</a> signal to format the displayed
+value yourself.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scale</code></em></i>
+					(
+						<a title="Gtk.Scale" href="gtkscale.html#GtkScale">Gtk.Scale</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscale.html#GtkScale">Gtk.Scale</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>digits</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the number of decimal places to display,
+e.g. use 1 to display 1.0, 2 to display 1.00, etc</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scale_set_digits">
+	<span><code>Gtk.Scale.set_digits</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Scale.set_digits (self, digits):
+    #python wrapper for 'gtk_scale_set_digits'</pre>
+
+<p>Sets the number of decimal places that are displayed in the value. Also
+causes the value of the adjustment to be rounded to this number of digits,
+so the retrieved value matches the displayed one, if <a href="https://developer.gnome.org/gtk3/GtkScale.html#GtkScale--draw-value">draw-value</a> is
+<a href="https://docs.python.org/3/library/constants.html#True">True</a> when the value changes. If you want to enforce rounding the value when
+<a href="https://developer.gnome.org/gtk3/GtkScale.html#GtkScale--draw-value">draw-value</a> is <a href="https://docs.python.org/3/library/constants.html#False">False</a>, you can set <a href="https://developer.gnome.org/gtk3/GtkRange.html#GtkRange--round-digits">round-digits</a> instead.</p>
+<p>Note that rounding to a small number of digits can interfere with
+the smooth autoscrolling that is built into <a href="gtkscale.html#GtkScale">Gtk.Scale</a>. As an alternative,
+you can use the <a href="https://developer.gnome.org/gtk3/GtkScale.html#GtkScale-format-value">format-value</a> signal to format the displayed
+value yourself.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scale</code></em></i>
+					(
+						<a title="Gtk.Scale" href="gtkscale.html#GtkScale">Gtk.Scale</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscale.html#GtkScale">Gtk.Scale</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>digits</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>the number of decimal places to display,
+e.g. use 1 to display 1.0, 2 to display 1.00, etc</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_scale_set_draw_value">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scale_set_draw_value">
+	<span><code>gtk_scale_set_draw_value</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_scale_set_draw_value (<a title="GtkScale" href="gtkscale.html#GtkScale">GtkScale</a> * scale,
+                          <a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a> draw_value)</pre>
+
+<p>Specifies whether the current value is displayed as a string next
+to the slider.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scale</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkscale.html#GtkScale">GtkScale</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>draw_value</code></em></i>
+				–
+	</div>
+			<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> to draw the value</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scale_set_draw_value">
+	<span><code>Gtk.prototype.set_draw_value</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_draw_value(draw_value: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_scale_set_draw_value'
+}</pre>
+
+<p>Specifies whether the current value is displayed as a string next
+to the slider.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scale</code></em></i>
+					(
+						<a title="Gtk.Scale" href="gtkscale.html#GtkScale">Gtk.Scale</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscale.html#GtkScale">Gtk.Scale</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>draw_value</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> to draw the value</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scale_set_draw_value">
+	<span><code>Gtk.Scale.set_draw_value</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Scale.set_draw_value (self, draw_value):
+    #python wrapper for 'gtk_scale_set_draw_value'</pre>
+
+<p>Specifies whether the current value is displayed as a string next
+to the slider.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scale</code></em></i>
+					(
+						<a title="Gtk.Scale" href="gtkscale.html#GtkScale">Gtk.Scale</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscale.html#GtkScale">Gtk.Scale</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>draw_value</code></em></i>
+					(
+						<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+						)
+				–
+	</div>
+			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> to draw the value</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.4;" id="gtk_scale_set_has_origin">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scale_set_has_origin">
+	<span><code>gtk_scale_set_has_origin</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_scale_set_has_origin (<a title="GtkScale" href="gtkscale.html#GtkScale">GtkScale</a> * scale,
+                          <a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a> has_origin)</pre>
+
+<p>If <a href="https://developer.gnome.org/gtk3/GtkScale.html#GtkScale--has-origin">has-origin</a> is set to <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> (the default), the scale will
+highlight the part of the trough between the origin (bottom or left side)
+and the current value.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scale</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkscale.html#GtkScale">GtkScale</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>has_origin</code></em></i>
+				–
+	</div>
+			<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if the scale has an origin</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.4
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scale_set_has_origin">
+	<span><code>Gtk.prototype.set_has_origin</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_has_origin(has_origin: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_scale_set_has_origin'
+}</pre>
+
+<p>If <a href="https://developer.gnome.org/gtk3/GtkScale.html#GtkScale--has-origin">has-origin</a> is set to <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> (the default), the scale will
+highlight the part of the trough between the origin (bottom or left side)
+and the current value.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scale</code></em></i>
+					(
+						<a title="Gtk.Scale" href="gtkscale.html#GtkScale">Gtk.Scale</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscale.html#GtkScale">Gtk.Scale</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>has_origin</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if the scale has an origin</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.4
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scale_set_has_origin">
+	<span><code>Gtk.Scale.set_has_origin</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Scale.set_has_origin (self, has_origin):
+    #python wrapper for 'gtk_scale_set_has_origin'</pre>
+
+<p>If <a href="https://developer.gnome.org/gtk3/GtkScale.html#GtkScale--has-origin">has-origin</a> is set to <a href="https://docs.python.org/3/library/constants.html#True">True</a> (the default), the scale will
+highlight the part of the trough between the origin (bottom or left side)
+and the current value.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scale</code></em></i>
+					(
+						<a title="Gtk.Scale" href="gtkscale.html#GtkScale">Gtk.Scale</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscale.html#GtkScale">Gtk.Scale</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>has_origin</code></em></i>
+					(
+						<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+						)
+				–
+	</div>
+			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if the scale has an origin</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.4
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_scale_set_value_pos">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scale_set_value_pos">
+	<span><code>gtk_scale_set_value_pos</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_scale_set_value_pos (<a title="GtkScale" href="gtkscale.html#GtkScale">GtkScale</a> * scale,
+                         <a title="GtkPositionType" href="gtkenums.html#GtkPositionType">GtkPositionType</a> pos)</pre>
+
+<p>Sets the position in which the current value is displayed.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scale</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkscale.html#GtkScale">GtkScale</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>pos</code></em></i>
+				–
+	</div>
+			<p>the position in which the current value is displayed</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scale_set_value_pos">
+	<span><code>Gtk.prototype.set_value_pos</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_value_pos(pos: <a title="Gtk.PositionType" href="gtkenums.html#GtkPositionType">Gtk.PositionType</a>): {
+    // javascript wrapper for 'gtk_scale_set_value_pos'
+}</pre>
+
+<p>Sets the position in which the current value is displayed.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scale</code></em></i>
+					(
+						<a title="Gtk.Scale" href="gtkscale.html#GtkScale">Gtk.Scale</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscale.html#GtkScale">Gtk.Scale</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>pos</code></em></i>
+					(
+						<a title="Gtk.PositionType" href="gtkenums.html#GtkPositionType">Gtk.PositionType</a>
+						)
+				–
+	</div>
+			<p>the position in which the current value is displayed</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scale_set_value_pos">
+	<span><code>Gtk.Scale.set_value_pos</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Scale.set_value_pos (self, pos):
+    #python wrapper for 'gtk_scale_set_value_pos'</pre>
+
+<p>Sets the position in which the current value is displayed.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scale</code></em></i>
+					(
+						<a title="Gtk.Scale" href="gtkscale.html#GtkScale">Gtk.Scale</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscale.html#GtkScale">Gtk.Scale</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>pos</code></em></i>
+					(
+						<a title="Gtk.PositionType" href="gtkenums.html#GtkPositionType">Gtk.PositionType</a>
+						)
+				–
+	</div>
+			<p>the position in which the current value is displayed</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_scale_get_digits">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scale_get_digits">
+	<span><code>gtk_scale_get_digits</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a>
+gtk_scale_get_digits (<a title="GtkScale" href="gtkscale.html#GtkScale">GtkScale</a> * scale)</pre>
+
+<p>Gets the number of decimal places that are displayed in the value.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scale</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkscale.html#GtkScale">GtkScale</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>the number of decimal places that are displayed</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scale_get_digits">
+	<span><code>Gtk.prototype.get_digits</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_digits(): {
+    // javascript wrapper for 'gtk_scale_get_digits'
+}</pre>
+
+<p>Gets the number of decimal places that are displayed in the value.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scale</code></em></i>
+					(
+						<a title="Gtk.Scale" href="gtkscale.html#GtkScale">Gtk.Scale</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscale.html#GtkScale">Gtk.Scale</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p>the number of decimal places that are displayed</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scale_get_digits">
+	<span><code>Gtk.Scale.get_digits</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Scale.get_digits (self):
+    #python wrapper for 'gtk_scale_get_digits'</pre>
+
+<p>Gets the number of decimal places that are displayed in the value.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scale</code></em></i>
+					(
+						<a title="Gtk.Scale" href="gtkscale.html#GtkScale">Gtk.Scale</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscale.html#GtkScale">Gtk.Scale</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+										)
+								–
+			</div>
+							<p>the number of decimal places that are displayed</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_scale_get_draw_value">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scale_get_draw_value">
+	<span><code>gtk_scale_get_draw_value</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_scale_get_draw_value (<a title="GtkScale" href="gtkscale.html#GtkScale">GtkScale</a> * scale)</pre>
+
+<p>Returns whether the current value is displayed as a string
+next to the slider.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scale</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkscale.html#GtkScale">GtkScale</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>whether the current value is displayed as a string</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scale_get_draw_value">
+	<span><code>Gtk.prototype.get_draw_value</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_draw_value(): {
+    // javascript wrapper for 'gtk_scale_get_draw_value'
+}</pre>
+
+<p>Returns whether the current value is displayed as a string
+next to the slider.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scale</code></em></i>
+					(
+						<a title="Gtk.Scale" href="gtkscale.html#GtkScale">Gtk.Scale</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscale.html#GtkScale">Gtk.Scale</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p>whether the current value is displayed as a string</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scale_get_draw_value">
+	<span><code>Gtk.Scale.get_draw_value</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Scale.get_draw_value (self):
+    #python wrapper for 'gtk_scale_get_draw_value'</pre>
+
+<p>Returns whether the current value is displayed as a string
+next to the slider.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scale</code></em></i>
+					(
+						<a title="Gtk.Scale" href="gtkscale.html#GtkScale">Gtk.Scale</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscale.html#GtkScale">Gtk.Scale</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+										)
+								–
+			</div>
+							<p>whether the current value is displayed as a string</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.4;" id="gtk_scale_get_has_origin">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scale_get_has_origin">
+	<span><code>gtk_scale_get_has_origin</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_scale_get_has_origin (<a title="GtkScale" href="gtkscale.html#GtkScale">GtkScale</a> * scale)</pre>
+
+<p>Returns whether the scale has an origin.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scale</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkscale.html#GtkScale">GtkScale</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if the scale has an origin.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.4
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scale_get_has_origin">
+	<span><code>Gtk.prototype.get_has_origin</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_has_origin(): {
+    // javascript wrapper for 'gtk_scale_get_has_origin'
+}</pre>
+
+<p>Returns whether the scale has an origin.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scale</code></em></i>
+					(
+						<a title="Gtk.Scale" href="gtkscale.html#GtkScale">Gtk.Scale</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscale.html#GtkScale">Gtk.Scale</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if the scale has an origin.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.4
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scale_get_has_origin">
+	<span><code>Gtk.Scale.get_has_origin</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Scale.get_has_origin (self):
+    #python wrapper for 'gtk_scale_get_has_origin'</pre>
+
+<p>Returns whether the scale has an origin.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scale</code></em></i>
+					(
+						<a title="Gtk.Scale" href="gtkscale.html#GtkScale">Gtk.Scale</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscale.html#GtkScale">Gtk.Scale</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+										)
+								–
+			</div>
+							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if the scale has an origin.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.4
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_scale_get_value_pos">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scale_get_value_pos">
+	<span><code>gtk_scale_get_value_pos</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkPositionType" href="gtkenums.html#GtkPositionType">GtkPositionType</a>
+gtk_scale_get_value_pos (<a title="GtkScale" href="gtkscale.html#GtkScale">GtkScale</a> * scale)</pre>
+
+<p>Gets the position in which the current value is displayed.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scale</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkscale.html#GtkScale">GtkScale</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>the position in which the current value is displayed</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scale_get_value_pos">
+	<span><code>Gtk.prototype.get_value_pos</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_value_pos(): {
+    // javascript wrapper for 'gtk_scale_get_value_pos'
+}</pre>
+
+<p>Gets the position in which the current value is displayed.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scale</code></em></i>
+					(
+						<a title="Gtk.Scale" href="gtkscale.html#GtkScale">Gtk.Scale</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscale.html#GtkScale">Gtk.Scale</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.PositionType" href="gtkenums.html#GtkPositionType">Gtk.PositionType</a>
+										)
+								–
+			</div>
+							<p>the position in which the current value is displayed</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scale_get_value_pos">
+	<span><code>Gtk.Scale.get_value_pos</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Scale.get_value_pos (self):
+    #python wrapper for 'gtk_scale_get_value_pos'</pre>
+
+<p>Gets the position in which the current value is displayed.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scale</code></em></i>
+					(
+						<a title="Gtk.Scale" href="gtkscale.html#GtkScale">Gtk.Scale</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscale.html#GtkScale">Gtk.Scale</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.PositionType" href="gtkenums.html#GtkPositionType">Gtk.PositionType</a>
+										)
+								–
+			</div>
+							<p>the position in which the current value is displayed</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.4;" id="gtk_scale_get_layout">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scale_get_layout">
+	<span><code>gtk_scale_get_layout</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="PangoLayout" href="https://developer.gnome.org/pango/unstable/pango-Layout-Objects.html#PangoLayout-struct">PangoLayout</a> *
+gtk_scale_get_layout (<a title="GtkScale" href="gtkscale.html#GtkScale">GtkScale</a> * scale)</pre>
+
+<p>Gets the <a href="https://developer.gnome.org/pango/unstable/pango-Layout-Objects.html#PangoLayout-struct">PangoLayout</a> used to display the scale. The returned
+object is owned by the scale so does not need to be freed by
+the caller.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scale</code></em></i>
+				–
+	</div>
+			<p>A <a href="gtkscale.html#GtkScale">GtkScale</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					
+										
+<span class="annotation">[<abbr title="Don't free data after the code is done"><span class="acronym">transfer: none</span></abbr>]</span>
+<span class="annotation">[<abbr title="NULL may be passed to the value"><span class="acronym">nullable</span></abbr>]</span>
+
+										)
+								–
+			</div>
+							<p>the <a href="https://developer.gnome.org/pango/unstable/pango-Layout-Objects.html#PangoLayout-struct">PangoLayout</a> for this scale,
+or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> if the <a href="https://developer.gnome.org/gtk3/GtkScale.html#GtkScale--draw-value">draw-value</a> property is <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS">FALSE</a>.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.4
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scale_get_layout">
+	<span><code>Gtk.prototype.get_layout</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_layout(): {
+    // javascript wrapper for 'gtk_scale_get_layout'
+}</pre>
+
+<p>Gets the <a href="https://developer.gnome.org/pango/unstable/pango-Layout-Objects.html#PangoLayout-struct">Pango.Layout</a> used to display the scale. The returned
+object is owned by the scale so does not need to be freed by
+the caller.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scale</code></em></i>
+					(
+						<a title="Gtk.Scale" href="gtkscale.html#GtkScale">Gtk.Scale</a>
+						)
+				–
+	</div>
+			<p>A <a href="gtkscale.html#GtkScale">Gtk.Scale</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Pango.Layout" href="https://developer.gnome.org/pango/unstable/pango-Layout-Objects.html#PangoLayout-struct">Pango.Layout</a>
+										)
+								–
+			</div>
+							<p>the <a href="https://developer.gnome.org/pango/unstable/pango-Layout-Objects.html#PangoLayout-struct">Pango.Layout</a> for this scale,
+or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a> if the <a href="https://developer.gnome.org/gtk3/GtkScale.html#GtkScale--draw-value">draw-value</a> property is <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">false</a>.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.4
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scale_get_layout">
+	<span><code>Gtk.Scale.get_layout</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Scale.get_layout (self):
+    #python wrapper for 'gtk_scale_get_layout'</pre>
+
+<p>Gets the <a href="https://developer.gnome.org/pango/unstable/pango-Layout-Objects.html#PangoLayout-struct">Pango.Layout</a> used to display the scale. The returned
+object is owned by the scale so does not need to be freed by
+the caller.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scale</code></em></i>
+					(
+						<a title="Gtk.Scale" href="gtkscale.html#GtkScale">Gtk.Scale</a>
+						)
+				–
+	</div>
+			<p>A <a href="gtkscale.html#GtkScale">Gtk.Scale</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Pango.Layout" href="https://developer.gnome.org/pango/unstable/pango-Layout-Objects.html#PangoLayout-struct">Pango.Layout</a>
+										)
+								–
+			</div>
+							<p>the <a href="https://developer.gnome.org/pango/unstable/pango-Layout-Objects.html#PangoLayout-struct">Pango.Layout</a> for this scale,
+or <a href="https://docs.python.org/3/library/constants.html#None">None</a> if the <a href="https://developer.gnome.org/gtk3/GtkScale.html#GtkScale--draw-value">draw-value</a> property is <a href="https://docs.python.org/3/library/constants.html#False">False</a>.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.4
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.4;" id="gtk_scale_get_layout_offsets">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scale_get_layout_offsets">
+	<span><code>gtk_scale_get_layout_offsets</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_scale_get_layout_offsets (<a title="GtkScale" href="gtkscale.html#GtkScale">GtkScale</a> * scale,
+                              <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> * x,
+                              <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> * y)</pre>
+
+<p>Obtains the coordinates where the scale will draw the
+<a href="https://developer.gnome.org/pango/unstable/pango-Layout-Objects.html#PangoLayout-struct">PangoLayout</a> representing the text in the scale. Remember
+when using the <a href="https://developer.gnome.org/pango/unstable/pango-Layout-Objects.html#PangoLayout-struct">PangoLayout</a> function you need to convert to
+and from pixels using <a href="https://developer.gnome.org/pango/unstable/pango-Glyph-Storage.html#PANGO-PIXELS:CAPS">PANGO_PIXELS</a> or <a href="https://developer.gnome.org/pango/unstable/pango-Glyph-Storage.html#PANGO-SCALE:CAPS">PANGO_SCALE</a>.</p>
+<p>If the <a href="https://developer.gnome.org/gtk3/GtkScale.html#GtkScale--draw-value">draw-value</a> property is <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS">FALSE</a>, the return
+values are undefined.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scale</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkscale.html#GtkScale">GtkScale</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>x</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="Parameter for returning results"><span class="acronym">out</span></abbr>]</span>
+<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>location to store X offset of layout, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>y</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="Parameter for returning results"><span class="acronym">out</span></abbr>]</span>
+<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>location to store Y offset of layout, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.4
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scale_get_layout_offsets">
+	<span><code>Gtk.prototype.get_layout_offsets</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_layout_offsets(): {
+    // javascript wrapper for 'gtk_scale_get_layout_offsets'
+}</pre>
+
+<p>Obtains the coordinates where the scale will draw the
+<a href="https://developer.gnome.org/pango/unstable/pango-Layout-Objects.html#PangoLayout-struct">Pango.Layout</a> representing the text in the scale. Remember
+when using the <a href="https://developer.gnome.org/pango/unstable/pango-Layout-Objects.html#PangoLayout-struct">Pango.Layout</a> function you need to convert to
+and from pixels using <a href="https://developer.gnome.org/pango/unstable/pango-Glyph-Storage.html#PANGO-PIXELS:CAPS">PANGO_PIXELS (not introspectable)</a> or <a href="https://developer.gnome.org/pango/unstable/pango-Glyph-Storage.html#PANGO-SCALE:CAPS">Pango.SCALE</a>.</p>
+<p>If the <a href="https://developer.gnome.org/gtk3/GtkScale.html#GtkScale--draw-value">draw-value</a> property is <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">false</a>, the return
+values are undefined.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scale</code></em></i>
+					(
+						<a title="Gtk.Scale" href="gtkscale.html#GtkScale">Gtk.Scale</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscale.html#GtkScale">Gtk.Scale</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.4
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scale_get_layout_offsets">
+	<span><code>Gtk.Scale.get_layout_offsets</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Scale.get_layout_offsets (self):
+    #python wrapper for 'gtk_scale_get_layout_offsets'</pre>
+
+<p>Obtains the coordinates where the scale will draw the
+<a href="https://developer.gnome.org/pango/unstable/pango-Layout-Objects.html#PangoLayout-struct">Pango.Layout</a> representing the text in the scale. Remember
+when using the <a href="https://developer.gnome.org/pango/unstable/pango-Layout-Objects.html#PangoLayout-struct">Pango.Layout</a> function you need to convert to
+and from pixels using <a href="https://developer.gnome.org/pango/unstable/pango-Glyph-Storage.html#PANGO-PIXELS:CAPS">PANGO_PIXELS (not introspectable)</a> or <a href="https://developer.gnome.org/pango/unstable/pango-Glyph-Storage.html#PANGO-SCALE:CAPS">Pango.SCALE</a>.</p>
+<p>If the <a href="https://developer.gnome.org/gtk3/GtkScale.html#GtkScale--draw-value">draw-value</a> property is <a href="https://docs.python.org/3/library/constants.html#False">False</a>, the return
+values are undefined.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scale</code></em></i>
+					(
+						<a title="Gtk.Scale" href="gtkscale.html#GtkScale">Gtk.Scale</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscale.html#GtkScale">Gtk.Scale</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.4
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.16;" id="gtk_scale_add_mark">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scale_add_mark">
+	<span><code>gtk_scale_add_mark</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_scale_add_mark (<a title="GtkScale" href="gtkscale.html#GtkScale">GtkScale</a> * scale,
+                    <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> value,
+                    <a title="GtkPositionType" href="gtkenums.html#GtkPositionType">GtkPositionType</a> position,
+                    const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * markup)</pre>
+
+<p>Adds a mark at <em>value</em>.</p>
+<p>A mark is indicated visually by drawing a tick mark next to the scale,
+and GTK+ makes it easy for the user to position the scale exactly at the
+marks value.</p>
+<p>If <em>markup</em> is not <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a>, text is shown next to the tick mark.</p>
+<p>To remove marks from a scale, use <a href="gtkscale.html#gtk_scale_clear_marks">gtk_scale_clear_marks</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scale</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkscale.html#GtkScale">GtkScale</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>value</code></em></i>
+				–
+	</div>
+			<p>the value at which the mark is placed, must be between
+the lower and upper limits of the scales’ adjustment</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>position</code></em></i>
+				–
+	</div>
+			<p>where to draw the mark. For a horizontal scale, <a href="gtkenums.html#GTK_POS_TOP">GTK_POS_TOP</a>
+and <a href="gtkenums.html#GTK_POS_LEFT">GTK_POS_LEFT</a> are drawn above the scale, anything else below.
+For a vertical scale, <a href="gtkenums.html#GTK_POS_LEFT">GTK_POS_LEFT</a> and <a href="gtkenums.html#GTK_POS_TOP">GTK_POS_TOP</a> are drawn to
+the left of the scale, anything else to the right.</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>markup</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>Text to be shown at the mark, using [Pango markup][PangoMarkupFormat], or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.16
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scale_add_mark">
+	<span><code>Gtk.prototype.add_mark</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.add_mark(value: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, position: <a title="Gtk.PositionType" href="gtkenums.html#GtkPositionType">Gtk.PositionType</a>, markup: <a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>): {
+    // javascript wrapper for 'gtk_scale_add_mark'
+}</pre>
+
+<p>Adds a mark at <em>value</em>.</p>
+<p>A mark is indicated visually by drawing a tick mark next to the scale,
+and GTK+ makes it easy for the user to position the scale exactly at the
+marks value.</p>
+<p>If <em>markup</em> is not <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a>, text is shown next to the tick mark.</p>
+<p>To remove marks from a scale, use <a href="gtkscale.html#gtk_scale_clear_marks">Gtk.prototype.clear_marks</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scale</code></em></i>
+					(
+						<a title="Gtk.Scale" href="gtkscale.html#GtkScale">Gtk.Scale</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscale.html#GtkScale">Gtk.Scale</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>value</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the value at which the mark is placed, must be between
+the lower and upper limits of the scales’ adjustment</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>position</code></em></i>
+					(
+						<a title="Gtk.PositionType" href="gtkenums.html#GtkPositionType">Gtk.PositionType</a>
+						)
+				–
+	</div>
+			<p>where to draw the mark. For a horizontal scale, <a href="gtkenums.html#GTK_POS_TOP">Gtk.PositionType.TOP</a>
+and <a href="gtkenums.html#GTK_POS_LEFT">Gtk.PositionType.LEFT</a> are drawn above the scale, anything else below.
+For a vertical scale, <a href="gtkenums.html#GTK_POS_LEFT">Gtk.PositionType.LEFT</a> and <a href="gtkenums.html#GTK_POS_TOP">Gtk.PositionType.TOP</a> are drawn to
+the left of the scale, anything else to the right.</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>markup</code></em></i>
+					(
+						<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
+						)
+				–
+	</div>
+			<p>Text to be shown at the mark, using [Pango markup][PangoMarkupFormat], or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.16
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scale_add_mark">
+	<span><code>Gtk.Scale.add_mark</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Scale.add_mark (self, value, position, markup):
+    #python wrapper for 'gtk_scale_add_mark'</pre>
+
+<p>Adds a mark at <em>value</em>.</p>
+<p>A mark is indicated visually by drawing a tick mark next to the scale,
+and GTK+ makes it easy for the user to position the scale exactly at the
+marks value.</p>
+<p>If <em>markup</em> is not <a href="https://docs.python.org/3/library/constants.html#None">None</a>, text is shown next to the tick mark.</p>
+<p>To remove marks from a scale, use <a href="gtkscale.html#gtk_scale_clear_marks">Gtk.Scale.clear_marks</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scale</code></em></i>
+					(
+						<a title="Gtk.Scale" href="gtkscale.html#GtkScale">Gtk.Scale</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscale.html#GtkScale">Gtk.Scale</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>value</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>the value at which the mark is placed, must be between
+the lower and upper limits of the scales’ adjustment</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>position</code></em></i>
+					(
+						<a title="Gtk.PositionType" href="gtkenums.html#GtkPositionType">Gtk.PositionType</a>
+						)
+				–
+	</div>
+			<p>where to draw the mark. For a horizontal scale, <a href="gtkenums.html#GTK_POS_TOP">Gtk.PositionType.TOP</a>
+and <a href="gtkenums.html#GTK_POS_LEFT">Gtk.PositionType.LEFT</a> are drawn above the scale, anything else below.
+For a vertical scale, <a href="gtkenums.html#GTK_POS_LEFT">Gtk.PositionType.LEFT</a> and <a href="gtkenums.html#GTK_POS_TOP">Gtk.PositionType.TOP</a> are drawn to
+the left of the scale, anything else to the right.</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>markup</code></em></i>
+					(
+						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
+						)
+				–
+	</div>
+			<p>Text to be shown at the mark, using [Pango markup][PangoMarkupFormat], or <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.16
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.16;" id="gtk_scale_clear_marks">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scale_clear_marks">
+	<span><code>gtk_scale_clear_marks</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_scale_clear_marks (<a title="GtkScale" href="gtkscale.html#GtkScale">GtkScale</a> * scale)</pre>
+
+<p>Removes any marks that have been added with <a href="gtkscale.html#gtk_scale_add_mark">gtk_scale_add_mark</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scale</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkscale.html#GtkScale">GtkScale</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.16
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scale_clear_marks">
+	<span><code>Gtk.prototype.clear_marks</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.clear_marks(): {
+    // javascript wrapper for 'gtk_scale_clear_marks'
+}</pre>
+
+<p>Removes any marks that have been added with <a href="gtkscale.html#gtk_scale_add_mark">Gtk.prototype.add_mark</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scale</code></em></i>
+					(
+						<a title="Gtk.Scale" href="gtkscale.html#GtkScale">Gtk.Scale</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscale.html#GtkScale">Gtk.Scale</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.16
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_scale_clear_marks">
+	<span><code>Gtk.Scale.clear_marks</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Scale.clear_marks (self):
+    #python wrapper for 'gtk_scale_clear_marks'</pre>
+
+<p>Removes any marks that have been added with <a href="gtkscale.html#gtk_scale_add_mark">Gtk.Scale.add_mark</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>scale</code></em></i>
+					(
+						<a title="Gtk.Scale" href="gtkscale.html#GtkScale">Gtk.Scale</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkscale.html#GtkScale">Gtk.Scale</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.16
+		</p>
+
+
+        </div>
+
+</div>
+
+
+
+
+
+
+		
+	</div>
+	<div id="search_results">
+		<p>The results of the search are</p>
+	</div>
+	<hr>
+	<div id="footer">
+		    
+
+	</div>
+</div>
+
+<div id="toc-column">
+	
+		<div class="edit-button">
+		
+
+	</div>
+		<div id="toc-wrapper">
+		<nav id="toc"></nav>
+	</div>
+</div>
+</div>
+</main>
+
+</body>
+
+<script src="assets/js/navbar_offset_scroller.js"></script>
+</html>

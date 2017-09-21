@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<base href="..">
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>The GTK+ Input and Event Handling Model</title>
+
+<link rel="stylesheet" href="assets/css/custom_bootstrap.css" type="text/css">
+<link rel="stylesheet" href="assets/css/bootstrap-toc.min.css" type="text/css">
+<link rel="stylesheet" href="assets/css/frontend.css" type="text/css">
+<link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
+
+<link rel="stylesheet" href="assets/css/prism.css" type="text/css">
+
+<script src="assets/js/mustache.min.js"></script>
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/scrollspy.js"></script>
+<script src="assets/js/bootstrap.js"></script>
+<script src="assets/js/typeahead.jquery.min.js"></script>
+<script src="assets/js/search.js"></script>
+<script src="assets/js/isotope.pkgd.min.js"></script>
+<script src="assets/js/compare-versions.js"></script>
+<script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="assets/js/bootstrap-toc.min.js"></script>
+<script src="assets/js/jquery.touchSwipe.min.js"></script>
+<script src="assets/js/anchor.min.js"></script>
+<script src="assets/js/tag_filtering.js"></script>
+<script src="assets/js/language_switching.js"></script>
+
+<script src="assets/js/lines_around_headings.js"></script>
+
+<script src="assets/js/prism-core.js"></script>
+<script src="assets/js/prism-autoloader.js"></script>
+<script src="assets/js/prism_autoloader_path_override.js"></script>
+<script src="assets/js/trie.js"></script>
+
+
+</head>
+
+<body class="no-script
+" data-spy="scroll" data-target="#toc" data-offset="70">
+
+<script>
+$('body').removeClass('no-script');
+</script>
+
+<nav class="navbar navbar-fixed-top navbar-default" id="topnav">
+	<div class="container-fluid">
+		<div class="navbar-right">
+			<a id="toc-toggle">
+				<span class="glyphicon glyphicon-menu-right"></span>
+				<span class="glyphicon glyphicon-menu-left"></span>
+			</a>
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-wrapper" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<form action="" class="navbar-form pull-right" id="navbar-search-form">
+                               <div class="form-group has-feedback">
+                                       <input type="text" class="form-control input-sm" name="search" id="sidenav-lookup-field" placeholder="search" disabled>
+				       <span class="glyphicon glyphicon-search form-control-feedback" id="search-mgn-glass"></span>
+                               </div>
+                        </form>
+		</div>
+		<div class="navbar-header">
+			<a id="sidenav-toggle">
+				<span class="glyphicon glyphicon-menu-right"></span>
+				<span class="glyphicon glyphicon-menu-left"></span>
+			</a>
+			<a id="home-link" href="index.html" class="hotdoc-navbar-brand">
+				<img src="assets/images/home.svg" alt="Home">
+			</a>
+		</div>
+		<div class="navbar-collapse collapse" id="navbar-wrapper">
+			<ul class="nav navbar-nav" id="menu">
+							</ul>
+			<div class="hidden-xs hidden-sm navbar-text navbar-center">
+							</div>
+		</div>
+	</div>
+</nav>
+
+<main>
+<div data-extension="core" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="hotdoc_markdown/input-handling.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['c', 'javascript', 'python']">
+<script src="assets/js/utils.js"></script>
+
+<div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
+	<script src="assets/js/navigation.js"></script>
+	<script src="assets/js/sitemap.js"></script>
+</div>
+
+<div id="body">
+	<div id="main">
+				    <div id="page-description" data-hotdoc-source="input-handling.markdown" data-hotdoc-role="main">
+        <h1 id="overview-of-gtk-input-and-event-handling">Overview of GTK+ input and event handling</h1>
+<p>This chapter describes in detail how GTK+ handles input. If you are
+interested in what happens to translate a key press or mouse motion of
+the users into a change of a GTK+ widget, you should read this chapter.
+This knowledge will also be useful if you decide to implement your own
+widgets.</p>
+<h2 id="devices-and-events">Devices and events</h2>
+<p>The most basic input devices that every computer user has interacted
+with are keyboards and mice; beyond these, GTK+ supports touchpads,
+touchscreens and more exotic input devices such as graphics tablets.
+Inside GTK+, every such input device is represented by a #GdkDevice
+object.</p>
+<p>To simplify dealing with the variability between these input devices,
+GTK+ has a concept of master and slave devices. The concrete physical
+devices that have many different characteristics (mice may have 2 or 3
+or 8 buttons, keyboards have different layouts and may or may not have a
+separate number block, etc) are represented as slave devices. Each slave
+device is associated with a virtual master device. Master devices always
+come in pointer/keyboard pairs - you can think of such a pair as a
+'seat'.</p>
+<p>GTK+ widgets generally deal with the master devices, and thus can be
+used with any pointing device or keyboard.</p>
+<p>When a user interacts with an input device (e.g. moves a mouse or
+presses a key on the keyboard), GTK+ receives events from the windowing
+system. These are typically directed at a specific window - for pointer
+events, the window under the pointer (grabs complicate this), for
+keyboard events, the window with the keyboard focus.</p>
+<p>GDK translates these raw windowing system events into #GdkEvents.
+Typical input events are: #GdkEventButton, #GdkEventMotion,
+#GdkEventCrossing, #GdkEventKey, #GdkEventFocus, #GdkEventTouch</p>
+<p>Additionally, GDK/GTK synthesizes other signals to let know whether
+grabs (system-wide or in-app) are taking input away:
+#GdkEventGrabBroken, #GtkWidget::grab-notify</p>
+<p>When GTK+ is initialized, it sets up an event handler function with
+gdk_event_handler_set(), which receives all of these input events (as
+well as others, for instance window management related events).</p>
+<h2 id="event-propagation">Event propagation</h2>
+<p>For widgets which have a #GdkWindow set, events are received from the
+windowing system and passed to gtk_main_do_event(). See its
+documentation for details of what it does: compression of enter/leave
+events, identification of the widget receiving the event, pushing the
+event onto a stack for gtk_get_current_event(), and propagating the
+event to the widget.</p>
+<p>When a GDK backend produces an input event, it is tied to a #GdkDevice
+and a #GdkWindow, which in turn represents a windowing system surface
+in the backend. If a widget has grabbed the current input device, or all
+input devices, the event is propagated to that #GtkWidget. Otherwise,
+it is propagated to the the #GtkWidget which called
+gtk_widget_register_window() on the #GdkWindow receiving the event.</p>
+<p>Grabs are implemented for each input device, and globally. A grab for a
+specific input device (gtk_device_grab_add()), is sent events in
+preference to a global grab (gtk_grab_add()). Input grabs only have
+effect within the #GtkWindowGroup containing the #GtkWidget which
+registered the event’s #GdkWindow. If this #GtkWidget is a child of
+the grab widget, the event is propagated to the child — this is the
+basis for propagating events within modal dialogs.</p>
+<p>An event is propagated to a widget using gtk_propagate_event().
+Propagation differs between event types: key events (%GDK_KEY_PRESS,
+%GDK_KEY_RELEASE) are delivered to the top-level #GtkWindow; other
+events are propagated down and up the widget hierarchy in three phases
+(see #GtkPropagationPhase).</p>
+<p>For key events, the top-level window’s default
+#GtkWindow::key-press-event and #GtkWindow::key-release-event signal
+handlers handle mnemonics and accelerators first. Other key presses are
+then passed to gtk_window_propagate_key_event() which propagates the
+event upwards from the window’s current focus widget
+(gtk_window_get_focus()) to the top-level.</p>
+<p>For other events, in the first phase (the “capture” phase) the event is
+delivered to each widget from the top-most (for example, the top-level
+#GtkWindow or grab widget) down to the target #GtkWidget.
+<a href="hotdoc_markdown/input-handling.html#event-controllers-and-gestures">Gestures</a> that
+are attached with %GTK_PHASE_CAPTURE get a chance to react to the
+event.</p>
+<p>After the “capture” phase, the widget that was intended to be the
+destination of the event will run gestures attached to it with
+%GTK_PHASE_TARGET. This is known as the “target” phase, and only
+happens on that widget.</p>
+<p>Next, the #GtkWidget::event signal is emitted, then the appropriate
+signal for the event in question, for example
+#GtkWidget::motion-notify-event. Handling these signals was the primary
+way to handle input in GTK+ widgets before gestures were introduced. If
+the widget is realized, the #GtkWidget::event-after signal is emitted.
+The signals are emitted from the target widget up to the top-level, as
+part of the “bubble” phase.</p>
+<p>The default handlers for the event signals send the event to gestures
+that are attached with %GTK_PHASE_BUBBLE. Therefore, gestures in the
+“bubble” phase are only used if the widget does not have its own event
+handlers, or takes care to chain up to the default #GtkWidget handlers.</p>
+<p>Events are not delivered to a widget which is insensitive or unmapped.</p>
+<p>Any time during the propagation phase, a widget may indicate that a
+received event was consumed and propagation should therefore be stopped.
+In traditional event handlers, this is hinted by returning
+%GDK_EVENT_STOP. If gestures are used, this may happen when the widget
+tells the gesture to claim the event touch sequence (or the pointer
+events) for its own. See the "gesture states" section below to know more
+of the latter.</p>
+<h2 id="event-masks">Event masks</h2>
+<p>Each widget instance has a basic event mask and another per input
+device, which determine the types of input event it receives. Each event
+mask set on a widget is added to the corresponding (basic or per-device)
+event mask for the widget’s #GdkWindow, and all child #GdkWindows.</p>
+<p>Filtering events against event masks happens inside #GdkWindow, which
+exposes event masks to the windowing system to reduce the number of
+events GDK receives from it. On receiving an event, it is filtered
+against the #GdkWindow’s mask for the input device, if set. Otherwise,
+it is filtered against the #GdkWindow’s basic event mask.</p>
+<p>This means that widgets must add to the event mask for each event type
+they expect to receive, using gtk_widget_set_events() or
+gtk_widget_add_events() to preserve the existing mask. Widgets which
+are aware of floating devices should use
+gtk_widget_set_device_events() or
+gtk_widget_add_device_events(), and must explicitly enable the
+device using gtk_widget_set_device_enabled(). See the
+#GdkDeviceManager documentation for more information.</p>
+<p>All standard widgets set the event mask for all events they expect to
+receive, and it is not necessary to modify this. Masks should be set
+when implementing a new widget.</p>
+<h2 id="touch-events">Touch events</h2>
+<p>Touch events are emitted as events of type %GDK_TOUCH_BEGIN,
+%GDK_TOUCH_UPDATE or %GDK_TOUCH_END, those events contain an “event
+sequence” that univocally identifies the physical touch until it is
+lifted from the device.</p>
+<p>On some windowing platforms, multitouch devices perform pointer
+emulation, this works by granting a “pointer emulating” hint to one of
+the currently interacting touch sequences, which will be reported on
+every #GdkEventTouch event from that sequence. By default, if a widget
+didn't request touch events by setting %GDK_TOUCH_MASK on its event
+mask and didn't override #GtkWidget::touch-event, GTK+ will transform
+these “pointer emulating” events into semantically similar
+#GdkEventButton and #GdkEventMotion events. Depending on
+%GDK_TOUCH_MASK being in the event mask or not, non-pointer-emulating
+sequences could still trigger gestures or just get filtered out,
+regardless of the widget not handling those directly.</p>
+<p>If the widget sets %GDK_TOUCH_MASK on its event mask and doesn't chain
+up on #GtkWidget::touch-event, only touch events will be received, and
+no pointer emulation will be performed.</p>
+<h2 id="grabs">Grabs</h2>
+<p>Grabs are a method to claim all input events from a device, they happen
+either implicitly on pointer and touch devices, or explicitly. Implicit
+grabs happen on user interaction, when a #GdkEventButtonPress happens,
+all events from then on, until after the corresponding
+#GdkEventButtonRelease, will be reported to the widget that got the
+first event. Likewise, on touch events, every #GdkEventSequence will
+deliver only events to the widget that received its %GDK_TOUCH_BEGIN
+event.</p>
+<p>Explicit grabs happen programatically (both activation and
+deactivation), and can be either system-wide (GDK grabs) or
+application-wide (GTK grabs). On the windowing platforms that support
+it, GDK grabs will prevent any interaction with any other
+application/window/widget than the grabbing one, whereas GTK grabs will
+be effective only within the application (across all its windows), still
+allowing for interaction with other applications.</p>
+<p>But one important aspect of grabs is that they may potentially happen at
+any point somewhere else, even while the pointer/touch device is already
+grabbed. This makes it necessary for widgets to handle the cancellation
+of any ongoing interaction. Depending on whether a GTK or GDK grab is
+causing this, the widget will respectively receive a
+#GtkWidget::grab-notify signal, or a #GdkEventGrabBroken event.</p>
+<p>On gestures, these signals are handled automatically, causing the
+gesture to cancel all tracked pointer/touch events, and signal the end
+of recognition.</p>
+<h2 id="keyboard-input">Keyboard input</h2>
+<h2 id="event-controllers-and-gestures">Event controllers and gestures</h2>
+<p>Event controllers are standalone objects that can perform specific
+actions upon received #GdkEvents. These are tied to a #GtkWidget, and
+can be told of the event propagation phase at which they will manage the
+events.</p>
+<p>Gestures are a set of specific controllers that are prepared to handle
+pointer and/or touch events, each gestures implementation attempts to
+recognize specific actions out the received events, notifying of the
+state/progress accordingly to let the widget react to those. On
+multi-touch gestures, every interacting touch sequence will be tracked
+independently.</p>
+<p>Being gestures “simple” units, it is not uncommon to tie several
+together to perform higher level actions, grouped gestures handle the
+same event sequences simultaneously, and those sequences share a same
+state across all grouped gestures. Some examples of grouping may be: A
+“drag” and a “swipe” gestures may want grouping. The former will
+report events as the dragging happens, the latter will tell the swipe
+X/Y velocities only after gesture has finished., Grouping a “drag”
+gesture with a “pan” gesture will only effectively allow dragging in the
+panning orientation, as both gestures share state., If “press” and “long
+press” are wanted simultaneously, those would need grouping.</p>
+<h2 id="gesture-states">Gesture states</h2>
+<p>Gestures have a notion of “state” for each individual touch sequence.
+When events from a touch sequence are first received, the touch sequence
+will have “none” state, this means the touch sequence is being handled
+by the gesture to possibly trigger actions, but the event propagation
+will not be stopped.</p>
+<p>When the gesture enters recognition, or at a later point in time, the
+widget may choose to claim the touch sequences (individually or as a
+group), hence stopping event propagation after the event is run through
+every gesture in that widget and propagation phase. Anytime this
+happens, the touch sequences are cancelled downwards the propagation
+chain, to let these know that no further events will be sent.</p>
+<p>Alternatively, or at a later point in time, the widget may choose to
+deny the touch sequences, thus letting those go through again in event
+propagation. When this happens in the capture phase, and if there are no
+other claiming gestures in the widget, a
+%GDK_TOUCH_BEGIN/%GDK_BUTTON_PRESS event will be emulated and
+propagated downwards, in order to preserve consistency.</p>
+<p>Grouped gestures always share the same state for a given touch sequence,
+so setting the state on one does transfer the state to the others. They
+also are mutually exclusive, within a widget there may be only one
+gesture group claiming a given sequence. If another gesture group claims
+later that same sequence, the first group will deny the sequence.</p>
+
+    </div>
+        
+
+
+
+
+		
+	</div>
+	<div id="search_results">
+		<p>The results of the search are</p>
+	</div>
+	<hr>
+	<div id="footer">
+		    
+
+	</div>
+</div>
+
+<div id="toc-column">
+	
+		<div class="edit-button">
+		
+
+	</div>
+		<div id="toc-wrapper">
+		<nav id="toc"></nav>
+	</div>
+</div>
+</div>
+</main>
+
+</body>
+
+<script src="assets/js/navbar_offset_scroller.js"></script>
+</html>

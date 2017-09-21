@@ -1,0 +1,1166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<base href="..">
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>gtkfeatures</title>
+
+<link rel="stylesheet" href="assets/css/custom_bootstrap.css" type="text/css">
+<link rel="stylesheet" href="assets/css/bootstrap-toc.min.css" type="text/css">
+<link rel="stylesheet" href="assets/css/frontend.css" type="text/css">
+<link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
+
+<link rel="stylesheet" href="assets/css/prism.css" type="text/css">
+
+<script src="assets/js/mustache.min.js"></script>
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/scrollspy.js"></script>
+<script src="assets/js/bootstrap.js"></script>
+<script src="assets/js/typeahead.jquery.min.js"></script>
+<script src="assets/js/search.js"></script>
+<script src="assets/js/isotope.pkgd.min.js"></script>
+<script src="assets/js/compare-versions.js"></script>
+<script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="assets/js/bootstrap-toc.min.js"></script>
+<script src="assets/js/jquery.touchSwipe.min.js"></script>
+<script src="assets/js/anchor.min.js"></script>
+<script src="assets/js/tag_filtering.js"></script>
+<script src="assets/js/language_switching.js"></script>
+
+<script src="assets/js/lines_around_headings.js"></script>
+
+<script src="assets/js/prism-core.js"></script>
+<script src="assets/js/prism-autoloader.js"></script>
+<script src="assets/js/prism_autoloader_path_override.js"></script>
+<script src="assets/js/trie.js"></script>
+
+
+</head>
+
+<body class="no-script
+" data-spy="scroll" data-target="#toc" data-offset="70">
+
+<script>
+$('body').removeClass('no-script');
+</script>
+
+<nav class="navbar navbar-fixed-top navbar-default" id="topnav">
+	<div class="container-fluid">
+		<div class="navbar-right">
+			<a id="toc-toggle">
+				<span class="glyphicon glyphicon-menu-right"></span>
+				<span class="glyphicon glyphicon-menu-left"></span>
+			</a>
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-wrapper" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<form action="" class="navbar-form pull-right" id="navbar-search-form">
+                               <div class="form-group has-feedback">
+                                       <input type="text" class="form-control input-sm" name="search" id="sidenav-lookup-field" placeholder="search" disabled>
+				       <span class="glyphicon glyphicon-search form-control-feedback" id="search-mgn-glass"></span>
+                               </div>
+                        </form>
+		</div>
+		<div class="navbar-header">
+			<a id="sidenav-toggle">
+				<span class="glyphicon glyphicon-menu-right"></span>
+				<span class="glyphicon glyphicon-menu-left"></span>
+			</a>
+			<a id="home-link" href="index.html" class="hotdoc-navbar-brand">
+				<img src="assets/images/home.svg" alt="Home">
+			</a>
+		</div>
+		<div class="navbar-collapse collapse" id="navbar-wrapper">
+			<ul class="nav navbar-nav" id="menu">
+							</ul>
+			<div class="hidden-xs hidden-sm navbar-text navbar-center">
+							</div>
+		</div>
+	</div>
+</nav>
+
+<main>
+<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="hotdoc_markdown/gtkfeatures.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['c', 'javascript', 'python']" data-hotdoc-meta-gi-language="c">
+<script src="assets/js/utils.js"></script>
+
+<div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
+	<script src="assets/js/navigation.js"></script>
+	<script src="assets/js/sitemap.js"></script>
+</div>
+
+<div id="body">
+	<div id="main">
+				    <div id="page-description" data-hotdoc-source="gtkfeatures.markdown" data-hotdoc-role="main">
+    </div>
+        
+        
+
+            <h2 class="symbol_section">Functions</h2>
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_get_major_version">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_get_major_version">
+	<span><code>gtk_get_major_version</code></span>
+</h3>
+
+
+
+
+<pre class="c-prototype">
+<a title="guint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint">guint</a>
+gtk_get_major_version ()</pre>
+
+<p>Returns the major version number of the GTK+ library.
+(e.g. in GTK+ version 3.1.5 this is 3.)</p>
+<p>This function is in the library, so it represents the GTK+ library
+your code is running against. Contrast with the <a href="https://developer.gnome.org/gtk3/gtk3-Feature-Test-Macros.html#GTK-MAJOR-VERSION:CAPS">GTK_MAJOR_VERSION</a>
+macro, which represents the major version of the GTK+ headers you
+have included when compiling your code.</p>
+
+
+
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>the major version number of the GTK+ library</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_get_major_version">
+	<span><code>prototype.get_major_version</code></span>
+</h3>
+
+
+<pre class="javascript-prototype">
+function prototype.get_major_version(): {
+    // javascript wrapper for 'gtk_get_major_version'
+}</pre>
+
+<p>Returns the major version number of the GTK+ library.
+(e.g. in GTK+ version 3.1.5 this is 3.)</p>
+<p>This function is in the library, so it represents the GTK+ library
+your code is running against. Contrast with the <a href="https://developer.gnome.org/gtk3/gtk3-Feature-Test-Macros.html#GTK-MAJOR-VERSION:CAPS">Gtk.MAJOR_VERSION</a>
+macro, which represents the major version of the GTK+ headers you
+have included when compiling your code.</p>
+
+
+
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p>the major version number of the GTK+ library</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_get_major_version">
+	<span><code>Gtk.get_major_version</code></span>
+</h3>
+
+
+<pre class="python-prototype">
+def Gtk.get_major_version ():
+    #python wrapper for 'gtk_get_major_version'</pre>
+
+<p>Returns the major version number of the GTK+ library.
+(e.g. in GTK+ version 3.1.5 this is 3.)</p>
+<p>This function is in the library, so it represents the GTK+ library
+your code is running against. Contrast with the <a href="https://developer.gnome.org/gtk3/gtk3-Feature-Test-Macros.html#GTK-MAJOR-VERSION:CAPS">Gtk.MAJOR_VERSION</a>
+macro, which represents the major version of the GTK+ headers you
+have included when compiling your code.</p>
+
+
+
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+										)
+								–
+			</div>
+							<p>the major version number of the GTK+ library</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_get_minor_version">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_get_minor_version">
+	<span><code>gtk_get_minor_version</code></span>
+</h3>
+
+
+
+
+<pre class="c-prototype">
+<a title="guint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint">guint</a>
+gtk_get_minor_version ()</pre>
+
+<p>Returns the minor version number of the GTK+ library.
+(e.g. in GTK+ version 3.1.5 this is 1.)</p>
+<p>This function is in the library, so it represents the GTK+ library
+your code is are running against. Contrast with the
+<a href="https://developer.gnome.org/gtk3/gtk3-Feature-Test-Macros.html#GTK-MINOR-VERSION:CAPS">GTK_MINOR_VERSION</a> macro, which represents the minor version of the
+GTK+ headers you have included when compiling your code.</p>
+
+
+
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>the minor version number of the GTK+ library</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_get_minor_version">
+	<span><code>prototype.get_minor_version</code></span>
+</h3>
+
+
+<pre class="javascript-prototype">
+function prototype.get_minor_version(): {
+    // javascript wrapper for 'gtk_get_minor_version'
+}</pre>
+
+<p>Returns the minor version number of the GTK+ library.
+(e.g. in GTK+ version 3.1.5 this is 1.)</p>
+<p>This function is in the library, so it represents the GTK+ library
+your code is are running against. Contrast with the
+<a href="https://developer.gnome.org/gtk3/gtk3-Feature-Test-Macros.html#GTK-MINOR-VERSION:CAPS">Gtk.MINOR_VERSION</a> macro, which represents the minor version of the
+GTK+ headers you have included when compiling your code.</p>
+
+
+
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p>the minor version number of the GTK+ library</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_get_minor_version">
+	<span><code>Gtk.get_minor_version</code></span>
+</h3>
+
+
+<pre class="python-prototype">
+def Gtk.get_minor_version ():
+    #python wrapper for 'gtk_get_minor_version'</pre>
+
+<p>Returns the minor version number of the GTK+ library.
+(e.g. in GTK+ version 3.1.5 this is 1.)</p>
+<p>This function is in the library, so it represents the GTK+ library
+your code is are running against. Contrast with the
+<a href="https://developer.gnome.org/gtk3/gtk3-Feature-Test-Macros.html#GTK-MINOR-VERSION:CAPS">Gtk.MINOR_VERSION</a> macro, which represents the minor version of the
+GTK+ headers you have included when compiling your code.</p>
+
+
+
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+										)
+								–
+			</div>
+							<p>the minor version number of the GTK+ library</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_get_micro_version">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_get_micro_version">
+	<span><code>gtk_get_micro_version</code></span>
+</h3>
+
+
+
+
+<pre class="c-prototype">
+<a title="guint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint">guint</a>
+gtk_get_micro_version ()</pre>
+
+<p>Returns the micro version number of the GTK+ library.
+(e.g. in GTK+ version 3.1.5 this is 5.)</p>
+<p>This function is in the library, so it represents the GTK+ library
+your code is are running against. Contrast with the
+<a href="https://developer.gnome.org/gtk3/gtk3-Feature-Test-Macros.html#GTK-MICRO-VERSION:CAPS">GTK_MICRO_VERSION</a> macro, which represents the micro version of the
+GTK+ headers you have included when compiling your code.</p>
+
+
+
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>the micro version number of the GTK+ library</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_get_micro_version">
+	<span><code>prototype.get_micro_version</code></span>
+</h3>
+
+
+<pre class="javascript-prototype">
+function prototype.get_micro_version(): {
+    // javascript wrapper for 'gtk_get_micro_version'
+}</pre>
+
+<p>Returns the micro version number of the GTK+ library.
+(e.g. in GTK+ version 3.1.5 this is 5.)</p>
+<p>This function is in the library, so it represents the GTK+ library
+your code is are running against. Contrast with the
+<a href="https://developer.gnome.org/gtk3/gtk3-Feature-Test-Macros.html#GTK-MICRO-VERSION:CAPS">Gtk.MICRO_VERSION</a> macro, which represents the micro version of the
+GTK+ headers you have included when compiling your code.</p>
+
+
+
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p>the micro version number of the GTK+ library</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_get_micro_version">
+	<span><code>Gtk.get_micro_version</code></span>
+</h3>
+
+
+<pre class="python-prototype">
+def Gtk.get_micro_version ():
+    #python wrapper for 'gtk_get_micro_version'</pre>
+
+<p>Returns the micro version number of the GTK+ library.
+(e.g. in GTK+ version 3.1.5 this is 5.)</p>
+<p>This function is in the library, so it represents the GTK+ library
+your code is are running against. Contrast with the
+<a href="https://developer.gnome.org/gtk3/gtk3-Feature-Test-Macros.html#GTK-MICRO-VERSION:CAPS">Gtk.MICRO_VERSION</a> macro, which represents the micro version of the
+GTK+ headers you have included when compiling your code.</p>
+
+
+
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+										)
+								–
+			</div>
+							<p>the micro version number of the GTK+ library</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_get_binary_age">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_get_binary_age">
+	<span><code>gtk_get_binary_age</code></span>
+</h3>
+
+
+
+
+<pre class="c-prototype">
+<a title="guint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint">guint</a>
+gtk_get_binary_age ()</pre>
+
+<p>Returns the binary age as passed to <code>libtool</code>
+when building the GTK+ library the process is running against.
+If <code>libtool</code> means nothing to you, don't
+worry about it.</p>
+
+
+
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>the binary age of the GTK+ library</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_get_binary_age">
+	<span><code>prototype.get_binary_age</code></span>
+</h3>
+
+
+<pre class="javascript-prototype">
+function prototype.get_binary_age(): {
+    // javascript wrapper for 'gtk_get_binary_age'
+}</pre>
+
+<p>Returns the binary age as passed to <code>libtool</code>
+when building the GTK+ library the process is running against.
+If <code>libtool</code> means nothing to you, don't
+worry about it.</p>
+
+
+
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p>the binary age of the GTK+ library</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_get_binary_age">
+	<span><code>Gtk.get_binary_age</code></span>
+</h3>
+
+
+<pre class="python-prototype">
+def Gtk.get_binary_age ():
+    #python wrapper for 'gtk_get_binary_age'</pre>
+
+<p>Returns the binary age as passed to <code>libtool</code>
+when building the GTK+ library the process is running against.
+If <code>libtool</code> means nothing to you, don't
+worry about it.</p>
+
+
+
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+										)
+								–
+			</div>
+							<p>the binary age of the GTK+ library</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_get_interface_age">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_get_interface_age">
+	<span><code>gtk_get_interface_age</code></span>
+</h3>
+
+
+
+
+<pre class="c-prototype">
+<a title="guint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint">guint</a>
+gtk_get_interface_age ()</pre>
+
+<p>Returns the interface age as passed to <code>libtool</code>
+when building the GTK+ library the process is running against.
+If <code>libtool</code> means nothing to you, don't
+worry about it.</p>
+
+
+
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>the interface age of the GTK+ library</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_get_interface_age">
+	<span><code>prototype.get_interface_age</code></span>
+</h3>
+
+
+<pre class="javascript-prototype">
+function prototype.get_interface_age(): {
+    // javascript wrapper for 'gtk_get_interface_age'
+}</pre>
+
+<p>Returns the interface age as passed to <code>libtool</code>
+when building the GTK+ library the process is running against.
+If <code>libtool</code> means nothing to you, don't
+worry about it.</p>
+
+
+
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p>the interface age of the GTK+ library</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_get_interface_age">
+	<span><code>Gtk.get_interface_age</code></span>
+</h3>
+
+
+<pre class="python-prototype">
+def Gtk.get_interface_age ():
+    #python wrapper for 'gtk_get_interface_age'</pre>
+
+<p>Returns the interface age as passed to <code>libtool</code>
+when building the GTK+ library the process is running against.
+If <code>libtool</code> means nothing to you, don't
+worry about it.</p>
+
+
+
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+										)
+								–
+			</div>
+							<p>the interface age of the GTK+ library</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_check_version">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_check_version">
+	<span><code>gtk_check_version</code></span>
+</h3>
+
+
+
+
+<pre class="c-prototype">
+const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> *
+gtk_check_version (<a title="guint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint">guint</a> required_major,
+                   <a title="guint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint">guint</a> required_minor,
+                   <a title="guint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint">guint</a> required_micro)</pre>
+
+<p>Checks that the GTK+ library in use is compatible with the
+given version. Generally you would pass in the constants
+<a href="https://developer.gnome.org/gtk3/gtk3-Feature-Test-Macros.html#GTK-MAJOR-VERSION:CAPS">GTK_MAJOR_VERSION</a>, <a href="https://developer.gnome.org/gtk3/gtk3-Feature-Test-Macros.html#GTK-MINOR-VERSION:CAPS">GTK_MINOR_VERSION</a>, <a href="https://developer.gnome.org/gtk3/gtk3-Feature-Test-Macros.html#GTK-MICRO-VERSION:CAPS">GTK_MICRO_VERSION</a>
+as the three arguments to this function; that produces
+a check that the library in use is compatible with
+the version of GTK+ the application or module was compiled
+against.</p>
+<p>Compatibility is defined by two things: first the version
+of the running library is newer than the version
+<em>required_major</em>.required_minor.@required_micro. Second
+the running library must be binary compatible with the
+version <em>required_major</em>.required_minor.@required_micro
+(same major version.)</p>
+<p>This function is primarily for GTK+ modules; the module
+can call this function to check that it wasn’t loaded
+into an incompatible version of GTK+. However, such a
+check isn’t completely reliable, since the module may be
+linked against an old version of GTK+ and calling the
+old version of <a href="hotdoc_markdown/gtkfeatures.html#gtk_check_version">gtk_check_version</a>, but still get loaded
+into an application using a newer version of GTK+.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>required_major</code></em></i>
+				–
+	</div>
+			<p>the required major version</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>required_minor</code></em></i>
+				–
+	</div>
+			<p>the required minor version</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>required_micro</code></em></i>
+				–
+	</div>
+			<p>the required micro version</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					
+										
+<span class="annotation">[<abbr title="NULL may be passed to the value"><span class="acronym">nullable</span></abbr>]</span>
+
+										)
+								–
+			</div>
+							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> if the GTK+ library is compatible with the
+given version, or a string describing the version mismatch.
+The returned string is owned by GTK+ and should not be modified
+or freed.</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_check_version">
+	<span><code>prototype.check_version</code></span>
+</h3>
+
+
+<pre class="javascript-prototype">
+function prototype.check_version(required_major: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, required_minor: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, required_micro: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_check_version'
+}</pre>
+
+<p>Checks that the GTK+ library in use is compatible with the
+given version. Generally you would pass in the constants
+<a href="https://developer.gnome.org/gtk3/gtk3-Feature-Test-Macros.html#GTK-MAJOR-VERSION:CAPS">Gtk.MAJOR_VERSION</a>, <a href="https://developer.gnome.org/gtk3/gtk3-Feature-Test-Macros.html#GTK-MINOR-VERSION:CAPS">Gtk.MINOR_VERSION</a>, <a href="https://developer.gnome.org/gtk3/gtk3-Feature-Test-Macros.html#GTK-MICRO-VERSION:CAPS">Gtk.MICRO_VERSION</a>
+as the three arguments to this function; that produces
+a check that the library in use is compatible with
+the version of GTK+ the application or module was compiled
+against.</p>
+<p>Compatibility is defined by two things: first the version
+of the running library is newer than the version
+<em>required_major</em>.required_minor.@required_micro. Second
+the running library must be binary compatible with the
+version <em>required_major</em>.required_minor.@required_micro
+(same major version.)</p>
+<p>This function is primarily for GTK+ modules; the module
+can call this function to check that it wasn’t loaded
+into an incompatible version of GTK+. However, such a
+check isn’t completely reliable, since the module may be
+linked against an old version of GTK+ and calling the
+old version of <a href="hotdoc_markdown/gtkfeatures.html#gtk_check_version">prototype.check_version</a>, but still get loaded
+into an application using a newer version of GTK+.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>required_major</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the required major version</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>required_minor</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the required minor version</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>required_micro</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the required micro version</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
+										)
+								–
+			</div>
+							<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a> if the GTK+ library is compatible with the
+given version, or a string describing the version mismatch.
+The returned string is owned by GTK+ and should not be modified
+or freed.</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_check_version">
+	<span><code>Gtk.check_version</code></span>
+</h3>
+
+
+<pre class="python-prototype">
+def Gtk.check_version (required_major, required_minor, required_micro):
+    #python wrapper for 'gtk_check_version'</pre>
+
+<p>Checks that the GTK+ library in use is compatible with the
+given version. Generally you would pass in the constants
+<a href="https://developer.gnome.org/gtk3/gtk3-Feature-Test-Macros.html#GTK-MAJOR-VERSION:CAPS">Gtk.MAJOR_VERSION</a>, <a href="https://developer.gnome.org/gtk3/gtk3-Feature-Test-Macros.html#GTK-MINOR-VERSION:CAPS">Gtk.MINOR_VERSION</a>, <a href="https://developer.gnome.org/gtk3/gtk3-Feature-Test-Macros.html#GTK-MICRO-VERSION:CAPS">Gtk.MICRO_VERSION</a>
+as the three arguments to this function; that produces
+a check that the library in use is compatible with
+the version of GTK+ the application or module was compiled
+against.</p>
+<p>Compatibility is defined by two things: first the version
+of the running library is newer than the version
+<em>required_major</em>.required_minor.@required_micro. Second
+the running library must be binary compatible with the
+version <em>required_major</em>.required_minor.@required_micro
+(same major version.)</p>
+<p>This function is primarily for GTK+ modules; the module
+can call this function to check that it wasn’t loaded
+into an incompatible version of GTK+. However, such a
+check isn’t completely reliable, since the module may be
+linked against an old version of GTK+ and calling the
+old version of <a href="hotdoc_markdown/gtkfeatures.html#gtk_check_version">Gtk.check_version</a>, but still get loaded
+into an application using a newer version of GTK+.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>required_major</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>the required major version</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>required_minor</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>the required minor version</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>required_micro</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>the required micro version</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
+										)
+								–
+			</div>
+							<p><a href="https://docs.python.org/3/library/constants.html#None">None</a> if the GTK+ library is compatible with the
+given version, or a string describing the version mismatch.
+The returned string is owned by GTK+ and should not be modified
+or freed.</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+
+
+
+
+
+		
+	</div>
+	<div id="search_results">
+		<p>The results of the search are</p>
+	</div>
+	<hr>
+	<div id="footer">
+		    
+
+	</div>
+</div>
+
+<div id="toc-column">
+	
+		<div class="edit-button">
+		
+
+	</div>
+		<div id="toc-wrapper">
+		<nav id="toc"></nav>
+	</div>
+</div>
+</div>
+</main>
+
+</body>
+
+<script src="assets/js/navbar_offset_scroller.js"></script>
+</html>

@@ -1,0 +1,4185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<base href="..">
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>gtkgesture</title>
+
+<link rel="stylesheet" href="assets/css/custom_bootstrap.css" type="text/css">
+<link rel="stylesheet" href="assets/css/bootstrap-toc.min.css" type="text/css">
+<link rel="stylesheet" href="assets/css/frontend.css" type="text/css">
+<link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
+
+<link rel="stylesheet" href="assets/css/prism.css" type="text/css">
+
+<script src="assets/js/mustache.min.js"></script>
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/scrollspy.js"></script>
+<script src="assets/js/bootstrap.js"></script>
+<script src="assets/js/typeahead.jquery.min.js"></script>
+<script src="assets/js/search.js"></script>
+<script src="assets/js/isotope.pkgd.min.js"></script>
+<script src="assets/js/compare-versions.js"></script>
+<script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="assets/js/bootstrap-toc.min.js"></script>
+<script src="assets/js/jquery.touchSwipe.min.js"></script>
+<script src="assets/js/anchor.min.js"></script>
+<script src="assets/js/tag_filtering.js"></script>
+<script src="assets/js/language_switching.js"></script>
+
+<script src="assets/js/lines_around_headings.js"></script>
+
+<script src="assets/js/prism-core.js"></script>
+<script src="assets/js/prism-autoloader.js"></script>
+<script src="assets/js/prism_autoloader_path_override.js"></script>
+<script src="assets/js/trie.js"></script>
+
+
+</head>
+
+<body class="no-script
+" data-spy="scroll" data-target="#toc" data-offset="70">
+
+<script>
+$('body').removeClass('no-script');
+</script>
+
+<nav class="navbar navbar-fixed-top navbar-default" id="topnav">
+	<div class="container-fluid">
+		<div class="navbar-right">
+			<a id="toc-toggle">
+				<span class="glyphicon glyphicon-menu-right"></span>
+				<span class="glyphicon glyphicon-menu-left"></span>
+			</a>
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-wrapper" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<form action="" class="navbar-form pull-right" id="navbar-search-form">
+                               <div class="form-group has-feedback">
+                                       <input type="text" class="form-control input-sm" name="search" id="sidenav-lookup-field" placeholder="search" disabled>
+				       <span class="glyphicon glyphicon-search form-control-feedback" id="search-mgn-glass"></span>
+                               </div>
+                        </form>
+		</div>
+		<div class="navbar-header">
+			<a id="sidenav-toggle">
+				<span class="glyphicon glyphicon-menu-right"></span>
+				<span class="glyphicon glyphicon-menu-left"></span>
+			</a>
+			<a id="home-link" href="index.html" class="hotdoc-navbar-brand">
+				<img src="assets/images/home.svg" alt="Home">
+			</a>
+		</div>
+		<div class="navbar-collapse collapse" id="navbar-wrapper">
+			<ul class="nav navbar-nav" id="menu">
+							</ul>
+			<div class="hidden-xs hidden-sm navbar-text navbar-center">
+							</div>
+		</div>
+	</div>
+</nav>
+
+<main>
+<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="hotdoc_markdown/gtkgesture.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['c', 'javascript', 'python']" data-hotdoc-meta-gi-language="c">
+<script src="assets/js/utils.js"></script>
+
+<div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
+	<script src="assets/js/navigation.js"></script>
+	<script src="assets/js/sitemap.js"></script>
+</div>
+
+<div id="body">
+	<div id="main">
+				    <div id="page-description" data-hotdoc-source="gtkgesture.markdown" data-hotdoc-role="main">
+    </div>
+        
+        
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="GtkGesture">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h2 data-hotdoc-id="GtkGesture">
+	<span><code>GtkGesture</code></span>
+</h2>
+
+
+<div class="hierarchy_container">
+	<div class="hierarchy_details">
+<pre>
+<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object">GObject</a>
+    <span class="lineart">╰──</span><a title="GtkEventController" href="hotdoc_markdown/gtkeventcontroller.html#GtkEventController" data-gi-href-python="hotdoc_markdown/gtkeventcontroller.html#GtkEventController" data-gi-title-python="Gtk.EventController" data-gi-href-javascript="hotdoc_markdown/gtkeventcontroller.html#GtkEventController" data-gi-title-javascript="Gtk.EventController">GtkEventController</a>
+        <span class="lineart">╰──</span>GtkGesture
+            <span class="lineart">╰──</span><a title="GtkGestureRotate" href="hotdoc_markdown/gtkgesturerotate.html#GtkGestureRotate" data-gi-href-python="hotdoc_markdown/gtkgesturerotate.html#GtkGestureRotate" data-gi-title-python="Gtk.GestureRotate" data-gi-href-javascript="hotdoc_markdown/gtkgesturerotate.html#GtkGestureRotate" data-gi-title-javascript="Gtk.GestureRotate">GtkGestureRotate</a>
+            <span class="lineart">╰──</span><a title="GtkGestureSingle" href="hotdoc_markdown/gtkgesturesingle.html#GtkGestureSingle" data-gi-href-python="hotdoc_markdown/gtkgesturesingle.html#GtkGestureSingle" data-gi-title-python="Gtk.GestureSingle" data-gi-href-javascript="hotdoc_markdown/gtkgesturesingle.html#GtkGestureSingle" data-gi-title-javascript="Gtk.GestureSingle">GtkGestureSingle</a>
+            <span class="lineart">╰──</span><a title="GtkGestureZoom" href="hotdoc_markdown/gtkgesturezoom.html#GtkGestureZoom" data-gi-href-python="hotdoc_markdown/gtkgesturezoom.html#GtkGestureZoom" data-gi-title-python="Gtk.GestureZoom" data-gi-href-javascript="hotdoc_markdown/gtkgesturezoom.html#GtkGestureZoom" data-gi-title-javascript="Gtk.GestureZoom">GtkGestureZoom</a>
+</pre>
+
+</div>
+
+</div>
+
+
+
+
+
+
+<h3>Class structure</h3>
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="GtkGestureClass">
+	<span><code>GtkGestureClass</code></span>
+</h4>
+
+
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h3>
+	Gtk.GestureClass
+</h3>
+
+
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3>
+	Gtk.GestureClass
+</h3>
+
+
+
+
+
+
+
+        </div>
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h2 data-hotdoc-id="GtkGesture">
+	<span><code>GtkGesture</code></span>
+</h2>
+
+
+<div class="hierarchy_container">
+	<div class="hierarchy_details">
+<pre>
+<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object">GObject</a>
+    <span class="lineart">╰──</span><a title="GtkEventController" href="hotdoc_markdown/gtkeventcontroller.html#GtkEventController" data-gi-href-python="hotdoc_markdown/gtkeventcontroller.html#GtkEventController" data-gi-title-python="Gtk.EventController" data-gi-href-javascript="hotdoc_markdown/gtkeventcontroller.html#GtkEventController" data-gi-title-javascript="Gtk.EventController">GtkEventController</a>
+        <span class="lineart">╰──</span>GtkGesture
+            <span class="lineart">╰──</span><a title="GtkGestureRotate" href="hotdoc_markdown/gtkgesturerotate.html#GtkGestureRotate" data-gi-href-python="hotdoc_markdown/gtkgesturerotate.html#GtkGestureRotate" data-gi-title-python="Gtk.GestureRotate" data-gi-href-javascript="hotdoc_markdown/gtkgesturerotate.html#GtkGestureRotate" data-gi-title-javascript="Gtk.GestureRotate">GtkGestureRotate</a>
+            <span class="lineart">╰──</span><a title="GtkGestureSingle" href="hotdoc_markdown/gtkgesturesingle.html#GtkGestureSingle" data-gi-href-python="hotdoc_markdown/gtkgesturesingle.html#GtkGestureSingle" data-gi-title-python="Gtk.GestureSingle" data-gi-href-javascript="hotdoc_markdown/gtkgesturesingle.html#GtkGestureSingle" data-gi-title-javascript="Gtk.GestureSingle">GtkGestureSingle</a>
+            <span class="lineart">╰──</span><a title="GtkGestureZoom" href="hotdoc_markdown/gtkgesturezoom.html#GtkGestureZoom" data-gi-href-python="hotdoc_markdown/gtkgesturezoom.html#GtkGestureZoom" data-gi-title-python="Gtk.GestureZoom" data-gi-href-javascript="hotdoc_markdown/gtkgesturezoom.html#GtkGestureZoom" data-gi-title-javascript="Gtk.GestureZoom">GtkGestureZoom</a>
+</pre>
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h2 data-hotdoc-id="GtkGesture">
+	<span><code>GtkGesture</code></span>
+</h2>
+
+
+<div class="hierarchy_container">
+	<div class="hierarchy_details">
+<pre>
+<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object">GObject</a>
+    <span class="lineart">╰──</span><a title="GtkEventController" href="hotdoc_markdown/gtkeventcontroller.html#GtkEventController" data-gi-href-python="hotdoc_markdown/gtkeventcontroller.html#GtkEventController" data-gi-title-python="Gtk.EventController" data-gi-href-javascript="hotdoc_markdown/gtkeventcontroller.html#GtkEventController" data-gi-title-javascript="Gtk.EventController">GtkEventController</a>
+        <span class="lineart">╰──</span>GtkGesture
+            <span class="lineart">╰──</span><a title="GtkGestureRotate" href="hotdoc_markdown/gtkgesturerotate.html#GtkGestureRotate" data-gi-href-python="hotdoc_markdown/gtkgesturerotate.html#GtkGestureRotate" data-gi-title-python="Gtk.GestureRotate" data-gi-href-javascript="hotdoc_markdown/gtkgesturerotate.html#GtkGestureRotate" data-gi-title-javascript="Gtk.GestureRotate">GtkGestureRotate</a>
+            <span class="lineart">╰──</span><a title="GtkGestureSingle" href="hotdoc_markdown/gtkgesturesingle.html#GtkGestureSingle" data-gi-href-python="hotdoc_markdown/gtkgesturesingle.html#GtkGestureSingle" data-gi-title-python="Gtk.GestureSingle" data-gi-href-javascript="hotdoc_markdown/gtkgesturesingle.html#GtkGestureSingle" data-gi-title-javascript="Gtk.GestureSingle">GtkGestureSingle</a>
+            <span class="lineart">╰──</span><a title="GtkGestureZoom" href="hotdoc_markdown/gtkgesturezoom.html#GtkGestureZoom" data-gi-href-python="hotdoc_markdown/gtkgesturezoom.html#GtkGestureZoom" data-gi-title-python="Gtk.GestureZoom" data-gi-href-javascript="hotdoc_markdown/gtkgesturezoom.html#GtkGestureZoom" data-gi-title-javascript="Gtk.GestureZoom">GtkGestureZoom</a>
+</pre>
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+        </div>
+
+</div>
+
+
+            <h3 class="symbol_section">Methods</h3>
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.14;" id="gtk_gesture_get_device">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gesture_get_device">
+	<span><code>gtk_gesture_get_device</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GdkDevice" href="https://developer.gnome.org/gdk3/GdkDevice.html#GdkDevice-struct">GdkDevice</a> *
+gtk_gesture_get_device (<a title="GtkGesture" href="hotdoc_markdown/gtkgesture.html#GtkGesture">GtkGesture</a> * gesture)</pre>
+
+<p>Returns the master <a href="https://developer.gnome.org/gdk3/GdkDevice.html#GdkDevice-struct">GdkDevice</a> that is currently operating
+on <em>gesture</em>, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> if the gesture is not being interacted.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>gesture</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkgesture.html#GtkGesture">GtkGesture</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					
+										
+<span class="annotation">[<abbr title="NULL may be passed to the value"><span class="acronym">nullable</span></abbr>]</span>
+<span class="annotation">[<abbr title="Don't free data after the code is done"><span class="acronym">transfer: none</span></abbr>]</span>
+
+										)
+								–
+			</div>
+							<p>a <a href="https://developer.gnome.org/gdk3/GdkDevice.html#GdkDevice-struct">GdkDevice</a>, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.14
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gesture_get_device">
+	<span><code>Gtk.prototype.get_device</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_device(): {
+    // javascript wrapper for 'gtk_gesture_get_device'
+}</pre>
+
+<p>Returns the master <a href="https://developer.gnome.org/gdk3/GdkDevice.html#GdkDevice-struct">Gdk.Device</a> that is currently operating
+on <em>gesture</em>, or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a> if the gesture is not being interacted.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>gesture</code></em></i>
+					(
+						<a title="Gtk.Gesture" href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gdk.Device" href="https://developer.gnome.org/gdk3/GdkDevice.html#GdkDevice-struct">Gdk.Device</a>
+										)
+								–
+			</div>
+							<p>a <a href="https://developer.gnome.org/gdk3/GdkDevice.html#GdkDevice-struct">Gdk.Device</a>, or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.14
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gesture_get_device">
+	<span><code>Gtk.Gesture.get_device</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Gesture.get_device (self):
+    #python wrapper for 'gtk_gesture_get_device'</pre>
+
+<p>Returns the master <a href="https://developer.gnome.org/gdk3/GdkDevice.html#GdkDevice-struct">Gdk.Device</a> that is currently operating
+on <em>gesture</em>, or <a href="https://docs.python.org/3/library/constants.html#None">None</a> if the gesture is not being interacted.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>gesture</code></em></i>
+					(
+						<a title="Gtk.Gesture" href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gdk.Device" href="https://developer.gnome.org/gdk3/GdkDevice.html#GdkDevice-struct">Gdk.Device</a>
+										)
+								–
+			</div>
+							<p>a <a href="https://developer.gnome.org/gdk3/GdkDevice.html#GdkDevice-struct">Gdk.Device</a>, or <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.14
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.14;" id="gtk_gesture_is_active">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gesture_is_active">
+	<span><code>gtk_gesture_is_active</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_gesture_is_active (<a title="GtkGesture" href="hotdoc_markdown/gtkgesture.html#GtkGesture">GtkGesture</a> * gesture)</pre>
+
+<p>Returns <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if the gesture is currently active.
+A gesture is active meanwhile there are touch sequences
+interacting with it.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>gesture</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkgesture.html#GtkGesture">GtkGesture</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if gesture is active</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.14
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gesture_is_active">
+	<span><code>Gtk.prototype.is_active</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.is_active(): {
+    // javascript wrapper for 'gtk_gesture_is_active'
+}</pre>
+
+<p>Returns <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if the gesture is currently active.
+A gesture is active meanwhile there are touch sequences
+interacting with it.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>gesture</code></em></i>
+					(
+						<a title="Gtk.Gesture" href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if gesture is active</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.14
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gesture_is_active">
+	<span><code>Gtk.Gesture.is_active</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Gesture.is_active (self):
+    #python wrapper for 'gtk_gesture_is_active'</pre>
+
+<p>Returns <a href="https://docs.python.org/3/library/constants.html#True">True</a> if the gesture is currently active.
+A gesture is active meanwhile there are touch sequences
+interacting with it.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>gesture</code></em></i>
+					(
+						<a title="Gtk.Gesture" href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+										)
+								–
+			</div>
+							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if gesture is active</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.14
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.14;" id="gtk_gesture_is_recognized">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gesture_is_recognized">
+	<span><code>gtk_gesture_is_recognized</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_gesture_is_recognized (<a title="GtkGesture" href="hotdoc_markdown/gtkgesture.html#GtkGesture">GtkGesture</a> * gesture)</pre>
+
+<p>Returns <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if the gesture is currently recognized.
+A gesture is recognized if there are as many interacting
+touch sequences as required by <em>gesture</em>, and GtkGesture::check
+returned <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> for the sequences being currently interpreted.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>gesture</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkgesture.html#GtkGesture">GtkGesture</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if gesture is recognized</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.14
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gesture_is_recognized">
+	<span><code>Gtk.prototype.is_recognized</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.is_recognized(): {
+    // javascript wrapper for 'gtk_gesture_is_recognized'
+}</pre>
+
+<p>Returns <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if the gesture is currently recognized.
+A gesture is recognized if there are as many interacting
+touch sequences as required by <em>gesture</em>, and GtkGesture::check
+returned <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> for the sequences being currently interpreted.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>gesture</code></em></i>
+					(
+						<a title="Gtk.Gesture" href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if gesture is recognized</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.14
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gesture_is_recognized">
+	<span><code>Gtk.Gesture.is_recognized</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Gesture.is_recognized (self):
+    #python wrapper for 'gtk_gesture_is_recognized'</pre>
+
+<p>Returns <a href="https://docs.python.org/3/library/constants.html#True">True</a> if the gesture is currently recognized.
+A gesture is recognized if there are as many interacting
+touch sequences as required by <em>gesture</em>, and GtkGesture::check
+returned <a href="https://docs.python.org/3/library/constants.html#True">True</a> for the sequences being currently interpreted.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>gesture</code></em></i>
+					(
+						<a title="Gtk.Gesture" href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+										)
+								–
+			</div>
+							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if gesture is recognized</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.14
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.14;" id="gtk_gesture_get_sequence_state">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gesture_get_sequence_state">
+	<span><code>gtk_gesture_get_sequence_state</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkEventSequenceState" href="hotdoc_markdown/gtkgesture.html#GtkEventSequenceState">GtkEventSequenceState</a>
+gtk_gesture_get_sequence_state (<a title="GtkGesture" href="hotdoc_markdown/gtkgesture.html#GtkGesture">GtkGesture</a> * gesture,
+                                <a title="GdkEventSequence" href="https://developer.gnome.org/gdk3/gdk3-Events.html#GdkEventSequence">GdkEventSequence</a> * sequence)</pre>
+
+<p>Returns the <em>sequence</em> state, as seen by <em>gesture</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>gesture</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkgesture.html#GtkGesture">GtkGesture</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>sequence</code></em></i>
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/gdk3/gdk3-Events.html#GdkEventSequence">GdkEventSequence</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>The sequence state in <em>gesture</em></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.14
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gesture_get_sequence_state">
+	<span><code>Gtk.prototype.get_sequence_state</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_sequence_state(sequence: <a title="Gdk.EventSequence" href="https://developer.gnome.org/gdk3/gdk3-Events.html#GdkEventSequence">Gdk.EventSequence</a>): {
+    // javascript wrapper for 'gtk_gesture_get_sequence_state'
+}</pre>
+
+<p>Returns the <em>sequence</em> state, as seen by <em>gesture</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>gesture</code></em></i>
+					(
+						<a title="Gtk.Gesture" href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>sequence</code></em></i>
+					(
+						<a title="Gdk.EventSequence" href="https://developer.gnome.org/gdk3/gdk3-Events.html#GdkEventSequence">Gdk.EventSequence</a>
+						)
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/gdk3/gdk3-Events.html#GdkEventSequence">Gdk.EventSequence</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.EventSequenceState" href="hotdoc_markdown/gtkgesture.html#GtkEventSequenceState">Gtk.EventSequenceState</a>
+										)
+								–
+			</div>
+							<p>The sequence state in <em>gesture</em></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.14
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gesture_get_sequence_state">
+	<span><code>Gtk.Gesture.get_sequence_state</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Gesture.get_sequence_state (self, sequence):
+    #python wrapper for 'gtk_gesture_get_sequence_state'</pre>
+
+<p>Returns the <em>sequence</em> state, as seen by <em>gesture</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>gesture</code></em></i>
+					(
+						<a title="Gtk.Gesture" href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>sequence</code></em></i>
+					(
+						<a title="Gdk.EventSequence" href="https://developer.gnome.org/gdk3/gdk3-Events.html#GdkEventSequence">Gdk.EventSequence</a>
+						)
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/gdk3/gdk3-Events.html#GdkEventSequence">Gdk.EventSequence</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.EventSequenceState" href="hotdoc_markdown/gtkgesture.html#GtkEventSequenceState">Gtk.EventSequenceState</a>
+										)
+								–
+			</div>
+							<p>The sequence state in <em>gesture</em></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.14
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.14;" id="gtk_gesture_set_sequence_state">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gesture_set_sequence_state">
+	<span><code>gtk_gesture_set_sequence_state</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_gesture_set_sequence_state (<a title="GtkGesture" href="hotdoc_markdown/gtkgesture.html#GtkGesture">GtkGesture</a> * gesture,
+                                <a title="GdkEventSequence" href="https://developer.gnome.org/gdk3/gdk3-Events.html#GdkEventSequence">GdkEventSequence</a> * sequence,
+                                <a title="GtkEventSequenceState" href="hotdoc_markdown/gtkgesture.html#GtkEventSequenceState">GtkEventSequenceState</a> state)</pre>
+
+<p>Sets the state of <em>sequence</em> in <em>gesture</em>. Sequences start
+in state <a href="gtkenums.html#GTK_EVENT_SEQUENCE_NONE">GTK_EVENT_SEQUENCE_NONE</a>, and whenever they change
+state, they can never go back to that state. Likewise,
+sequences in state <a href="gtkenums.html#GTK_EVENT_SEQUENCE_DENIED">GTK_EVENT_SEQUENCE_DENIED</a> cannot turn
+back to a not denied state. With these rules, the lifetime
+of an event sequence is constrained to the next four:</p>
+<ul>
+<li>None</li>
+<li>None → Denied</li>
+<li>None → Claimed</li>
+<li>None → Claimed → Denied</li>
+</ul>
+<p>Note: Due to event handling ordering, it may be unsafe to
+set the state on another gesture within a <a href="gtkgesture.html#GtkGesture::begin">begin</a>
+signal handler, as the callback might be executed before
+the other gesture knows about the sequence. A safe way to
+perform this could be:</p>
+<pre><code class="language-["> static void
+ first_gesture_begin_cb (GtkGesture       *first_gesture,
+                         GdkEventSequence *sequence,
+                         gpointer          user_data)
+ {
+   gtk_gesture_set_sequence_state (first_gesture, sequence, GTK_EVENT_SEQUENCE_ACCEPTED);
+   gtk_gesture_set_sequence_state (second_gesture, sequence, GTK_EVENT_SEQUENCE_DENIED);
+ }
+
+ static void
+ second_gesture_begin_cb (GtkGesture       *second_gesture,
+                          GdkEventSequence *sequence,
+                          gpointer          user_data)
+ {
+   if (gtk_gesture_get_sequence_state (first_gesture, sequence) == GTK_EVENT_SEQUENCE_ACCEPTED)
+     gtk_gesture_set_sequence_state (second_gesture, sequence, GTK_EVENT_SEQUENCE_DENIED);
+ }
+</code></pre>
+<p>If both gestures are in the same group, just set the state on
+the gesture emitting the event, the sequence will be already
+be initialized to the group's global state when the second
+gesture processes the event.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>gesture</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkgesture.html#GtkGesture">GtkGesture</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>sequence</code></em></i>
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/gdk3/gdk3-Events.html#GdkEventSequence">GdkEventSequence</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>state</code></em></i>
+				–
+	</div>
+			<p>the sequence state</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if <em>sequence</em> is handled by <em>gesture</em>,
+and the state is changed successfully</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.14
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gesture_set_sequence_state">
+	<span><code>Gtk.prototype.set_sequence_state</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_sequence_state(sequence: <a title="Gdk.EventSequence" href="https://developer.gnome.org/gdk3/gdk3-Events.html#GdkEventSequence">Gdk.EventSequence</a>, state: <a title="Gtk.EventSequenceState" href="hotdoc_markdown/gtkgesture.html#GtkEventSequenceState">Gtk.EventSequenceState</a>): {
+    // javascript wrapper for 'gtk_gesture_set_sequence_state'
+}</pre>
+
+<p>Sets the state of <em>sequence</em> in <em>gesture</em>. Sequences start
+in state <a href="gtkenums.html#GTK_EVENT_SEQUENCE_NONE">Gtk.EventSequenceState.NONE</a>, and whenever they change
+state, they can never go back to that state. Likewise,
+sequences in state <a href="gtkenums.html#GTK_EVENT_SEQUENCE_DENIED">Gtk.EventSequenceState.DENIED</a> cannot turn
+back to a not denied state. With these rules, the lifetime
+of an event sequence is constrained to the next four:</p>
+<ul>
+<li>None</li>
+<li>None → Denied</li>
+<li>None → Claimed</li>
+<li>None → Claimed → Denied</li>
+</ul>
+<p>Note: Due to event handling ordering, it may be unsafe to
+set the state on another gesture within a <a href="gtkgesture.html#GtkGesture::begin">begin</a>
+signal handler, as the callback might be executed before
+the other gesture knows about the sequence. A safe way to
+perform this could be:</p>
+<pre><code class="language-["> static void
+ first_gesture_begin_cb (GtkGesture       *first_gesture,
+                         GdkEventSequence *sequence,
+                         gpointer          user_data)
+ {
+   gtk_gesture_set_sequence_state (first_gesture, sequence, GTK_EVENT_SEQUENCE_ACCEPTED);
+   gtk_gesture_set_sequence_state (second_gesture, sequence, GTK_EVENT_SEQUENCE_DENIED);
+ }
+
+ static void
+ second_gesture_begin_cb (GtkGesture       *second_gesture,
+                          GdkEventSequence *sequence,
+                          gpointer          user_data)
+ {
+   if (gtk_gesture_get_sequence_state (first_gesture, sequence) == GTK_EVENT_SEQUENCE_ACCEPTED)
+     gtk_gesture_set_sequence_state (second_gesture, sequence, GTK_EVENT_SEQUENCE_DENIED);
+ }
+</code></pre>
+<p>If both gestures are in the same group, just set the state on
+the gesture emitting the event, the sequence will be already
+be initialized to the group's global state when the second
+gesture processes the event.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>gesture</code></em></i>
+					(
+						<a title="Gtk.Gesture" href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>sequence</code></em></i>
+					(
+						<a title="Gdk.EventSequence" href="https://developer.gnome.org/gdk3/gdk3-Events.html#GdkEventSequence">Gdk.EventSequence</a>
+						)
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/gdk3/gdk3-Events.html#GdkEventSequence">Gdk.EventSequence</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>state</code></em></i>
+					(
+						<a title="Gtk.EventSequenceState" href="hotdoc_markdown/gtkgesture.html#GtkEventSequenceState">Gtk.EventSequenceState</a>
+						)
+				–
+	</div>
+			<p>the sequence state</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if <em>sequence</em> is handled by <em>gesture</em>,
+and the state is changed successfully</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.14
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gesture_set_sequence_state">
+	<span><code>Gtk.Gesture.set_sequence_state</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Gesture.set_sequence_state (self, sequence, state):
+    #python wrapper for 'gtk_gesture_set_sequence_state'</pre>
+
+<p>Sets the state of <em>sequence</em> in <em>gesture</em>. Sequences start
+in state <a href="gtkenums.html#GTK_EVENT_SEQUENCE_NONE">Gtk.EventSequenceState.NONE</a>, and whenever they change
+state, they can never go back to that state. Likewise,
+sequences in state <a href="gtkenums.html#GTK_EVENT_SEQUENCE_DENIED">Gtk.EventSequenceState.DENIED</a> cannot turn
+back to a not denied state. With these rules, the lifetime
+of an event sequence is constrained to the next four:</p>
+<ul>
+<li>None</li>
+<li>None → Denied</li>
+<li>None → Claimed</li>
+<li>None → Claimed → Denied</li>
+</ul>
+<p>Note: Due to event handling ordering, it may be unsafe to
+set the state on another gesture within a <a href="gtkgesture.html#GtkGesture::begin">begin</a>
+signal handler, as the callback might be executed before
+the other gesture knows about the sequence. A safe way to
+perform this could be:</p>
+<pre><code class="language-["> static void
+ first_gesture_begin_cb (GtkGesture       *first_gesture,
+                         GdkEventSequence *sequence,
+                         gpointer          user_data)
+ {
+   gtk_gesture_set_sequence_state (first_gesture, sequence, GTK_EVENT_SEQUENCE_ACCEPTED);
+   gtk_gesture_set_sequence_state (second_gesture, sequence, GTK_EVENT_SEQUENCE_DENIED);
+ }
+
+ static void
+ second_gesture_begin_cb (GtkGesture       *second_gesture,
+                          GdkEventSequence *sequence,
+                          gpointer          user_data)
+ {
+   if (gtk_gesture_get_sequence_state (first_gesture, sequence) == GTK_EVENT_SEQUENCE_ACCEPTED)
+     gtk_gesture_set_sequence_state (second_gesture, sequence, GTK_EVENT_SEQUENCE_DENIED);
+ }
+</code></pre>
+<p>If both gestures are in the same group, just set the state on
+the gesture emitting the event, the sequence will be already
+be initialized to the group's global state when the second
+gesture processes the event.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>gesture</code></em></i>
+					(
+						<a title="Gtk.Gesture" href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>sequence</code></em></i>
+					(
+						<a title="Gdk.EventSequence" href="https://developer.gnome.org/gdk3/gdk3-Events.html#GdkEventSequence">Gdk.EventSequence</a>
+						)
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/gdk3/gdk3-Events.html#GdkEventSequence">Gdk.EventSequence</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>state</code></em></i>
+					(
+						<a title="Gtk.EventSequenceState" href="hotdoc_markdown/gtkgesture.html#GtkEventSequenceState">Gtk.EventSequenceState</a>
+						)
+				–
+	</div>
+			<p>the sequence state</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+										)
+								–
+			</div>
+							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if <em>sequence</em> is handled by <em>gesture</em>,
+and the state is changed successfully</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.14
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.14;" id="gtk_gesture_set_state">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gesture_set_state">
+	<span><code>gtk_gesture_set_state</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_gesture_set_state (<a title="GtkGesture" href="hotdoc_markdown/gtkgesture.html#GtkGesture">GtkGesture</a> * gesture,
+                       <a title="GtkEventSequenceState" href="hotdoc_markdown/gtkgesture.html#GtkEventSequenceState">GtkEventSequenceState</a> state)</pre>
+
+<p>Sets the state of all sequences that <em>gesture</em> is currently
+interacting with. See <a href="hotdoc_markdown/gtkgesture.html#gtk_gesture_set_sequence_state">gtk_gesture_set_sequence_state</a>
+for more details on sequence states.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>gesture</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkgesture.html#GtkGesture">GtkGesture</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>state</code></em></i>
+				–
+	</div>
+			<p>the sequence state</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if the state of at least one sequence
+was changed successfully</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.14
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gesture_set_state">
+	<span><code>Gtk.prototype.set_state</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_state(state: <a title="Gtk.EventSequenceState" href="hotdoc_markdown/gtkgesture.html#GtkEventSequenceState">Gtk.EventSequenceState</a>): {
+    // javascript wrapper for 'gtk_gesture_set_state'
+}</pre>
+
+<p>Sets the state of all sequences that <em>gesture</em> is currently
+interacting with. See <a href="hotdoc_markdown/gtkgesture.html#gtk_gesture_set_sequence_state">Gtk.prototype.set_sequence_state</a>
+for more details on sequence states.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>gesture</code></em></i>
+					(
+						<a title="Gtk.Gesture" href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>state</code></em></i>
+					(
+						<a title="Gtk.EventSequenceState" href="hotdoc_markdown/gtkgesture.html#GtkEventSequenceState">Gtk.EventSequenceState</a>
+						)
+				–
+	</div>
+			<p>the sequence state</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if the state of at least one sequence
+was changed successfully</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.14
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gesture_set_state">
+	<span><code>Gtk.Gesture.set_state</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Gesture.set_state (self, state):
+    #python wrapper for 'gtk_gesture_set_state'</pre>
+
+<p>Sets the state of all sequences that <em>gesture</em> is currently
+interacting with. See <a href="hotdoc_markdown/gtkgesture.html#gtk_gesture_set_sequence_state">Gtk.Gesture.set_sequence_state</a>
+for more details on sequence states.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>gesture</code></em></i>
+					(
+						<a title="Gtk.Gesture" href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>state</code></em></i>
+					(
+						<a title="Gtk.EventSequenceState" href="hotdoc_markdown/gtkgesture.html#GtkEventSequenceState">Gtk.EventSequenceState</a>
+						)
+				–
+	</div>
+			<p>the sequence state</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+										)
+								–
+			</div>
+							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if the state of at least one sequence
+was changed successfully</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.14
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.14;" id="gtk_gesture_get_sequences">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gesture_get_sequences">
+	<span><code>gtk_gesture_get_sequences</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GList" href="https://developer.gnome.org/glib/unstable/glib-Doubly-Linked-Lists.html#GList">GList</a> *
+gtk_gesture_get_sequences (<a title="GtkGesture" href="hotdoc_markdown/gtkgesture.html#GtkGesture">GtkGesture</a> * gesture)</pre>
+
+<p>Returns the list of <a href="https://developer.gnome.org/gdk3/gdk3-Events.html#GdkEventSequence">GdkEventSequence</a> currently being interpreted
+by <em>gesture</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>gesture</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkgesture.html#GtkGesture">GtkGesture</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					
+										
+<span class="annotation">[<abbr title="Free data container after the code is done"><span class="acronym">transfer: container</span></abbr>]</span>
+<span class="annotation">[<abbr title="Generic and defining element of containers and arrays"><span class="acronym">element-type</span></abbr> GdkEventSequence]</span>
+
+										)
+								–
+			</div>
+							<p>A list
+of <a href="https://developer.gnome.org/gdk3/gdk3-Events.html#GdkEventSequence">GdkEventSequence</a>, the list elements are owned by GTK+
+and must not be freed or modified, the list itself must be deleted
+through <a href="https://developer.gnome.org/glib/unstable/glib-Doubly-Linked-Lists.html#g-list-free">g_list_free</a></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.14
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gesture_get_sequences">
+	<span><code>Gtk.prototype.get_sequences</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_sequences(): {
+    // javascript wrapper for 'gtk_gesture_get_sequences'
+}</pre>
+
+<p>Returns the list of <a href="https://developer.gnome.org/gdk3/gdk3-Events.html#GdkEventSequence">Gdk.EventSequence</a> currently being interpreted
+by <em>gesture</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>gesture</code></em></i>
+					(
+						<a title="Gtk.Gesture" href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					[ <a title="Gdk.EventSequence" href="https://developer.gnome.org/gdk3/gdk3-Events.html#GdkEventSequence">Gdk.EventSequence</a> ]
+										)
+								–
+			</div>
+							<p>A list
+of <a href="https://developer.gnome.org/gdk3/gdk3-Events.html#GdkEventSequence">Gdk.EventSequence</a>, the list elements are owned by GTK+
+and must not be freed or modified, the list itself must be deleted
+through <a href="https://developer.gnome.org/glib/unstable/glib-Doubly-Linked-Lists.html#g-list-free">g_list_free (not introspectable)</a></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.14
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gesture_get_sequences">
+	<span><code>Gtk.Gesture.get_sequences</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Gesture.get_sequences (self):
+    #python wrapper for 'gtk_gesture_get_sequences'</pre>
+
+<p>Returns the list of <a href="https://developer.gnome.org/gdk3/gdk3-Events.html#GdkEventSequence">Gdk.EventSequence</a> currently being interpreted
+by <em>gesture</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>gesture</code></em></i>
+					(
+						<a title="Gtk.Gesture" href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					[ <a title="Gdk.EventSequence" href="https://developer.gnome.org/gdk3/gdk3-Events.html#GdkEventSequence">Gdk.EventSequence</a> ]
+										)
+								–
+			</div>
+							<p>A list
+of <a href="https://developer.gnome.org/gdk3/gdk3-Events.html#GdkEventSequence">Gdk.EventSequence</a>, the list elements are owned by GTK+
+and must not be freed or modified, the list itself must be deleted
+through <a href="https://developer.gnome.org/glib/unstable/glib-Doubly-Linked-Lists.html#g-list-free">g_list_free (not introspectable)</a></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.14
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.14;" id="gtk_gesture_handles_sequence">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gesture_handles_sequence">
+	<span><code>gtk_gesture_handles_sequence</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_gesture_handles_sequence (<a title="GtkGesture" href="hotdoc_markdown/gtkgesture.html#GtkGesture">GtkGesture</a> * gesture,
+                              <a title="GdkEventSequence" href="https://developer.gnome.org/gdk3/gdk3-Events.html#GdkEventSequence">GdkEventSequence</a> * sequence)</pre>
+
+<p>Returns <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if <em>gesture</em> is currently handling events corresponding to
+<em>sequence</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>gesture</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkgesture.html#GtkGesture">GtkGesture</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>sequence</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="NULL may be passed to the value"><span class="acronym">nullable</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/gdk3/gdk3-Events.html#GdkEventSequence">GdkEventSequence</a> or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if <em>gesture</em> is handling <em>sequence</em>, <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS">FALSE</a> otherwise</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.14
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gesture_handles_sequence">
+	<span><code>Gtk.prototype.handles_sequence</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.handles_sequence(sequence: <a title="Gdk.EventSequence" href="https://developer.gnome.org/gdk3/gdk3-Events.html#GdkEventSequence">Gdk.EventSequence</a>): {
+    // javascript wrapper for 'gtk_gesture_handles_sequence'
+}</pre>
+
+<p>Returns <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if <em>gesture</em> is currently handling events corresponding to
+<em>sequence</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>gesture</code></em></i>
+					(
+						<a title="Gtk.Gesture" href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>sequence</code></em></i>
+					(
+						<a title="Gdk.EventSequence" href="https://developer.gnome.org/gdk3/gdk3-Events.html#GdkEventSequence">Gdk.EventSequence</a>
+						)
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/gdk3/gdk3-Events.html#GdkEventSequence">Gdk.EventSequence</a> or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if <em>gesture</em> is handling <em>sequence</em>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">false</a> otherwise</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.14
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gesture_handles_sequence">
+	<span><code>Gtk.Gesture.handles_sequence</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Gesture.handles_sequence (self, sequence):
+    #python wrapper for 'gtk_gesture_handles_sequence'</pre>
+
+<p>Returns <a href="https://docs.python.org/3/library/constants.html#True">True</a> if <em>gesture</em> is currently handling events corresponding to
+<em>sequence</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>gesture</code></em></i>
+					(
+						<a title="Gtk.Gesture" href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>sequence</code></em></i>
+					(
+						<a title="Gdk.EventSequence" href="https://developer.gnome.org/gdk3/gdk3-Events.html#GdkEventSequence">Gdk.EventSequence</a>
+						)
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/gdk3/gdk3-Events.html#GdkEventSequence">Gdk.EventSequence</a> or <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+										)
+								–
+			</div>
+							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if <em>gesture</em> is handling <em>sequence</em>, <a href="https://docs.python.org/3/library/constants.html#False">False</a> otherwise</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.14
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.14;" id="gtk_gesture_get_last_updated_sequence">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gesture_get_last_updated_sequence">
+	<span><code>gtk_gesture_get_last_updated_sequence</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GdkEventSequence" href="https://developer.gnome.org/gdk3/gdk3-Events.html#GdkEventSequence">GdkEventSequence</a> *
+gtk_gesture_get_last_updated_sequence (<a title="GtkGesture" href="hotdoc_markdown/gtkgesture.html#GtkGesture">GtkGesture</a> * gesture)</pre>
+
+<p>Returns the <a href="https://developer.gnome.org/gdk3/gdk3-Events.html#GdkEventSequence">GdkEventSequence</a> that was last updated on <em>gesture</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>gesture</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkgesture.html#GtkGesture">GtkGesture</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					
+										
+<span class="annotation">[<abbr title="Don't free data after the code is done"><span class="acronym">transfer: none</span></abbr>]</span>
+<span class="annotation">[<abbr title="NULL may be passed to the value"><span class="acronym">nullable</span></abbr>]</span>
+
+										)
+								–
+			</div>
+							<p>The last updated sequence</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.14
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gesture_get_last_updated_sequence">
+	<span><code>Gtk.prototype.get_last_updated_sequence</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_last_updated_sequence(): {
+    // javascript wrapper for 'gtk_gesture_get_last_updated_sequence'
+}</pre>
+
+<p>Returns the <a href="https://developer.gnome.org/gdk3/gdk3-Events.html#GdkEventSequence">Gdk.EventSequence</a> that was last updated on <em>gesture</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>gesture</code></em></i>
+					(
+						<a title="Gtk.Gesture" href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gdk.EventSequence" href="https://developer.gnome.org/gdk3/gdk3-Events.html#GdkEventSequence">Gdk.EventSequence</a>
+										)
+								–
+			</div>
+							<p>The last updated sequence</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.14
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gesture_get_last_updated_sequence">
+	<span><code>Gtk.Gesture.get_last_updated_sequence</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Gesture.get_last_updated_sequence (self):
+    #python wrapper for 'gtk_gesture_get_last_updated_sequence'</pre>
+
+<p>Returns the <a href="https://developer.gnome.org/gdk3/gdk3-Events.html#GdkEventSequence">Gdk.EventSequence</a> that was last updated on <em>gesture</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>gesture</code></em></i>
+					(
+						<a title="Gtk.Gesture" href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gdk.EventSequence" href="https://developer.gnome.org/gdk3/gdk3-Events.html#GdkEventSequence">Gdk.EventSequence</a>
+										)
+								–
+			</div>
+							<p>The last updated sequence</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.14
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_gesture_get_last_event">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gesture_get_last_event">
+	<span><code>gtk_gesture_get_last_event</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+const GdkEvent*
+gtk_gesture_get_last_event (<a title="GtkGesture" href="hotdoc_markdown/gtkgesture.html#GtkGesture">GtkGesture</a> * gesture,
+                            <a title="GdkEventSequence" href="https://developer.gnome.org/gdk3/gdk3-Events.html#GdkEventSequence">GdkEventSequence</a> * sequence)</pre>
+
+<p>Returns the last event that was processed for <em>sequence</em>.</p>
+<p>Note that the returned pointer is only valid as long as the <em>sequence</em>
+is still interpreted by the <em>gesture</em>. If in doubt, you should make
+a copy of the event.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>gesture</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkgesture.html#GtkGesture">GtkGesture</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>sequence</code></em></i>
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/gdk3/gdk3-Events.html#GdkEventSequence">GdkEventSequence</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					
+										
+<span class="annotation">[<abbr title="Don't free data after the code is done"><span class="acronym">transfer: none</span></abbr>]</span>
+<span class="annotation">[<abbr title="NULL may be passed to the value"><span class="acronym">nullable</span></abbr>]</span>
+
+										)
+								–
+			</div>
+							<p>The last event from <em>sequence</em></p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gesture_get_last_event">
+	<span><code>Gtk.prototype.get_last_event</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_last_event(sequence: <a title="Gdk.EventSequence" href="https://developer.gnome.org/gdk3/gdk3-Events.html#GdkEventSequence">Gdk.EventSequence</a>): {
+    // javascript wrapper for 'gtk_gesture_get_last_event'
+}</pre>
+
+<p>Returns the last event that was processed for <em>sequence</em>.</p>
+<p>Note that the returned pointer is only valid as long as the <em>sequence</em>
+is still interpreted by the <em>gesture</em>. If in doubt, you should make
+a copy of the event.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>gesture</code></em></i>
+					(
+						<a title="Gtk.Gesture" href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>sequence</code></em></i>
+					(
+						<a title="Gdk.EventSequence" href="https://developer.gnome.org/gdk3/gdk3-Events.html#GdkEventSequence">Gdk.EventSequence</a>
+						)
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/gdk3/gdk3-Events.html#GdkEventSequence">Gdk.EventSequence</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					Gdk.Event
+										)
+								–
+			</div>
+							<p>The last event from <em>sequence</em></p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gesture_get_last_event">
+	<span><code>Gtk.Gesture.get_last_event</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Gesture.get_last_event (self, sequence):
+    #python wrapper for 'gtk_gesture_get_last_event'</pre>
+
+<p>Returns the last event that was processed for <em>sequence</em>.</p>
+<p>Note that the returned pointer is only valid as long as the <em>sequence</em>
+is still interpreted by the <em>gesture</em>. If in doubt, you should make
+a copy of the event.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>gesture</code></em></i>
+					(
+						<a title="Gtk.Gesture" href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>sequence</code></em></i>
+					(
+						<a title="Gdk.EventSequence" href="https://developer.gnome.org/gdk3/gdk3-Events.html#GdkEventSequence">Gdk.EventSequence</a>
+						)
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/gdk3/gdk3-Events.html#GdkEventSequence">Gdk.EventSequence</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					Gdk.Event
+										)
+								–
+			</div>
+							<p>The last event from <em>sequence</em></p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.14;" id="gtk_gesture_get_point">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gesture_get_point">
+	<span><code>gtk_gesture_get_point</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_gesture_get_point (<a title="GtkGesture" href="hotdoc_markdown/gtkgesture.html#GtkGesture">GtkGesture</a> * gesture,
+                       <a title="GdkEventSequence" href="https://developer.gnome.org/gdk3/gdk3-Events.html#GdkEventSequence">GdkEventSequence</a> * sequence,
+                       <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> * x,
+                       <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> * y)</pre>
+
+<p>If <em>sequence</em> is currently being interpreted by <em>gesture</em>, this
+function returns <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> and fills in <em>x</em> and <em>y</em> with the last coordinates
+stored for that event sequence. The coordinates are always relative to the
+widget allocation.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>gesture</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkgesture.html#GtkGesture">GtkGesture</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>sequence</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/gdk3/gdk3-Events.html#GdkEventSequence">GdkEventSequence</a>, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> for pointer events</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>x</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="Parameter for returning results"><span class="acronym">out</span></abbr>]</span>
+<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>return location for X axis of the sequence coordinates</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>y</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="Parameter for returning results"><span class="acronym">out</span></abbr>]</span>
+<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>return location for Y axis of the sequence coordinates</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if <em>sequence</em> is currently interpreted</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.14
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gesture_get_point">
+	<span><code>Gtk.prototype.get_point</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_point(sequence: <a title="Gdk.EventSequence" href="https://developer.gnome.org/gdk3/gdk3-Events.html#GdkEventSequence">Gdk.EventSequence</a>): {
+    // javascript wrapper for 'gtk_gesture_get_point'
+}</pre>
+
+<p>If <em>sequence</em> is currently being interpreted by <em>gesture</em>, this
+function returns <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> and fills in <em>x</em> and <em>y</em> with the last coordinates
+stored for that event sequence. The coordinates are always relative to the
+widget allocation.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>gesture</code></em></i>
+					(
+						<a title="Gtk.Gesture" href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>sequence</code></em></i>
+					(
+						<a title="Gdk.EventSequence" href="https://developer.gnome.org/gdk3/gdk3-Events.html#GdkEventSequence">Gdk.EventSequence</a>
+						)
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/gdk3/gdk3-Events.html#GdkEventSequence">Gdk.EventSequence</a>, or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a> for pointer events</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<p><b>Returns a tuple made of:</b></p>
+				
+<div class="symbol-detail">
+	<div>
+									(
+			<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if <em>sequence</em> is currently interpreted</p>
+
+	</div>
+
+				
+<div class="symbol-detail">
+	<div>
+				<i><em><code>x</code></em></i>
+									(
+			<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if <em>sequence</em> is currently interpreted</p>
+
+	</div>
+
+				
+<div class="symbol-detail">
+	<div>
+				<i><em><code>y</code></em></i>
+									(
+			<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if <em>sequence</em> is currently interpreted</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.14
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gesture_get_point">
+	<span><code>Gtk.Gesture.get_point</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Gesture.get_point (self, sequence):
+    #python wrapper for 'gtk_gesture_get_point'</pre>
+
+<p>If <em>sequence</em> is currently being interpreted by <em>gesture</em>, this
+function returns <a href="https://docs.python.org/3/library/constants.html#True">True</a> and fills in <em>x</em> and <em>y</em> with the last coordinates
+stored for that event sequence. The coordinates are always relative to the
+widget allocation.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>gesture</code></em></i>
+					(
+						<a title="Gtk.Gesture" href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>sequence</code></em></i>
+					(
+						<a title="Gdk.EventSequence" href="https://developer.gnome.org/gdk3/gdk3-Events.html#GdkEventSequence">Gdk.EventSequence</a>
+						)
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/gdk3/gdk3-Events.html#GdkEventSequence">Gdk.EventSequence</a>, or <a href="https://docs.python.org/3/library/constants.html#None">None</a> for pointer events</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<p><b>Returns a tuple made of:</b></p>
+				
+<div class="symbol-detail">
+	<div>
+									(
+			<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+						)
+				–
+	</div>
+			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if <em>sequence</em> is currently interpreted</p>
+
+	</div>
+
+				
+<div class="symbol-detail">
+	<div>
+				<i><em><code>x</code></em></i>
+									(
+			<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if <em>sequence</em> is currently interpreted</p>
+
+	</div>
+
+				
+<div class="symbol-detail">
+	<div>
+				<i><em><code>y</code></em></i>
+									(
+			<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if <em>sequence</em> is currently interpreted</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.14
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.14;" id="gtk_gesture_get_bounding_box">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gesture_get_bounding_box">
+	<span><code>gtk_gesture_get_bounding_box</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_gesture_get_bounding_box (<a title="GtkGesture" href="hotdoc_markdown/gtkgesture.html#GtkGesture">GtkGesture</a> * gesture,
+                              <a title="GdkRectangle" href="https://developer.gnome.org/gdk3/gdk3-Points-Rectangles-and-Regions.html#GdkRectangle">GdkRectangle</a> * rect)</pre>
+
+<p>If there are touch sequences being currently handled by <em>gesture</em>,
+this function returns <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> and fills in <em>rect</em> with the bounding
+box containing all active touches. Otherwise, <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS">FALSE</a> will be
+returned.</p>
+<p>Note: This function will yield unexpected results on touchpad
+gestures. Since there is no correlation between physical and
+pixel distances, these will look as if constrained in an
+infinitely small area, <em>rect</em> width and height will thus be 0
+regardless of the number of touchpoints.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>gesture</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkgesture.html#GtkGesture">GtkGesture</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>rect</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="Parameter for returning results"><span class="acronym">out</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>bounding box containing all active touches.</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if there are active touches, <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS">FALSE</a> otherwise</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.14
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gesture_get_bounding_box">
+	<span><code>Gtk.prototype.get_bounding_box</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_bounding_box(): {
+    // javascript wrapper for 'gtk_gesture_get_bounding_box'
+}</pre>
+
+<p>If there are touch sequences being currently handled by <em>gesture</em>,
+this function returns <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> and fills in <em>rect</em> with the bounding
+box containing all active touches. Otherwise, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">false</a> will be
+returned.</p>
+<p>Note: This function will yield unexpected results on touchpad
+gestures. Since there is no correlation between physical and
+pixel distances, these will look as if constrained in an
+infinitely small area, <em>rect</em> width and height will thus be 0
+regardless of the number of touchpoints.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>gesture</code></em></i>
+					(
+						<a title="Gtk.Gesture" href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<p><b>Returns a tuple made of:</b></p>
+				
+<div class="symbol-detail">
+	<div>
+									(
+			<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if there are active touches, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">false</a> otherwise</p>
+
+	</div>
+
+				
+<div class="symbol-detail">
+	<div>
+				<i><em><code>rect</code></em></i>
+									(
+			<a title="Gdk.Rectangle" href="https://developer.gnome.org/gdk3/gdk3-Points-Rectangles-and-Regions.html#GdkRectangle">Gdk.Rectangle</a>
+						)
+				–
+	</div>
+			<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if there are active touches, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">false</a> otherwise</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.14
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gesture_get_bounding_box">
+	<span><code>Gtk.Gesture.get_bounding_box</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Gesture.get_bounding_box (self):
+    #python wrapper for 'gtk_gesture_get_bounding_box'</pre>
+
+<p>If there are touch sequences being currently handled by <em>gesture</em>,
+this function returns <a href="https://docs.python.org/3/library/constants.html#True">True</a> and fills in <em>rect</em> with the bounding
+box containing all active touches. Otherwise, <a href="https://docs.python.org/3/library/constants.html#False">False</a> will be
+returned.</p>
+<p>Note: This function will yield unexpected results on touchpad
+gestures. Since there is no correlation between physical and
+pixel distances, these will look as if constrained in an
+infinitely small area, <em>rect</em> width and height will thus be 0
+regardless of the number of touchpoints.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>gesture</code></em></i>
+					(
+						<a title="Gtk.Gesture" href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<p><b>Returns a tuple made of:</b></p>
+				
+<div class="symbol-detail">
+	<div>
+									(
+			<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+						)
+				–
+	</div>
+			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if there are active touches, <a href="https://docs.python.org/3/library/constants.html#False">False</a> otherwise</p>
+
+	</div>
+
+				
+<div class="symbol-detail">
+	<div>
+				<i><em><code>rect</code></em></i>
+									(
+			<a title="Gdk.Rectangle" href="https://developer.gnome.org/gdk3/gdk3-Points-Rectangles-and-Regions.html#GdkRectangle">Gdk.Rectangle</a>
+						)
+				–
+	</div>
+			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if there are active touches, <a href="https://docs.python.org/3/library/constants.html#False">False</a> otherwise</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.14
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.14;" id="gtk_gesture_get_bounding_box_center">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gesture_get_bounding_box_center">
+	<span><code>gtk_gesture_get_bounding_box_center</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_gesture_get_bounding_box_center (<a title="GtkGesture" href="hotdoc_markdown/gtkgesture.html#GtkGesture">GtkGesture</a> * gesture,
+                                     <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> * x,
+                                     <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> * y)</pre>
+
+<p>If there are touch sequences being currently handled by <em>gesture</em>,
+this function returns <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> and fills in <em>x</em> and <em>y</em> with the center
+of the bounding box containing all active touches. Otherwise, <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS">FALSE</a>
+will be returned.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>gesture</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkgesture.html#GtkGesture">GtkGesture</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>x</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="Parameter for returning results"><span class="acronym">out</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>X coordinate for the bounding box center</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>y</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="Parameter for returning results"><span class="acronym">out</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>Y coordinate for the bounding box center</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS">FALSE</a> if no active touches are present, <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> otherwise</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.14
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gesture_get_bounding_box_center">
+	<span><code>Gtk.prototype.get_bounding_box_center</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_bounding_box_center(): {
+    // javascript wrapper for 'gtk_gesture_get_bounding_box_center'
+}</pre>
+
+<p>If there are touch sequences being currently handled by <em>gesture</em>,
+this function returns <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> and fills in <em>x</em> and <em>y</em> with the center
+of the bounding box containing all active touches. Otherwise, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">false</a>
+will be returned.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>gesture</code></em></i>
+					(
+						<a title="Gtk.Gesture" href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<p><b>Returns a tuple made of:</b></p>
+				
+<div class="symbol-detail">
+	<div>
+									(
+			<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">false</a> if no active touches are present, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> otherwise</p>
+
+	</div>
+
+				
+<div class="symbol-detail">
+	<div>
+				<i><em><code>x</code></em></i>
+									(
+			<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">false</a> if no active touches are present, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> otherwise</p>
+
+	</div>
+
+				
+<div class="symbol-detail">
+	<div>
+				<i><em><code>y</code></em></i>
+									(
+			<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">false</a> if no active touches are present, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> otherwise</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.14
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gesture_get_bounding_box_center">
+	<span><code>Gtk.Gesture.get_bounding_box_center</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Gesture.get_bounding_box_center (self):
+    #python wrapper for 'gtk_gesture_get_bounding_box_center'</pre>
+
+<p>If there are touch sequences being currently handled by <em>gesture</em>,
+this function returns <a href="https://docs.python.org/3/library/constants.html#True">True</a> and fills in <em>x</em> and <em>y</em> with the center
+of the bounding box containing all active touches. Otherwise, <a href="https://docs.python.org/3/library/constants.html#False">False</a>
+will be returned.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>gesture</code></em></i>
+					(
+						<a title="Gtk.Gesture" href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<p><b>Returns a tuple made of:</b></p>
+				
+<div class="symbol-detail">
+	<div>
+									(
+			<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+						)
+				–
+	</div>
+			<p><a href="https://docs.python.org/3/library/constants.html#False">False</a> if no active touches are present, <a href="https://docs.python.org/3/library/constants.html#True">True</a> otherwise</p>
+
+	</div>
+
+				
+<div class="symbol-detail">
+	<div>
+				<i><em><code>x</code></em></i>
+									(
+			<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p><a href="https://docs.python.org/3/library/constants.html#False">False</a> if no active touches are present, <a href="https://docs.python.org/3/library/constants.html#True">True</a> otherwise</p>
+
+	</div>
+
+				
+<div class="symbol-detail">
+	<div>
+				<i><em><code>y</code></em></i>
+									(
+			<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p><a href="https://docs.python.org/3/library/constants.html#False">False</a> if no active touches are present, <a href="https://docs.python.org/3/library/constants.html#True">True</a> otherwise</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.14
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.14;" id="gtk_gesture_group">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gesture_group">
+	<span><code>gtk_gesture_group</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_gesture_group (<a title="GtkGesture" href="hotdoc_markdown/gtkgesture.html#GtkGesture">GtkGesture</a> * group_gesture,
+                   <a title="GtkGesture" href="hotdoc_markdown/gtkgesture.html#GtkGesture">GtkGesture</a> * gesture)</pre>
+
+<p>Adds <em>gesture</em> to the same group than <em>group_gesture</em>. Gestures
+are by default isolated in their own groups.</p>
+<p>When gestures are grouped, the state of <a href="https://developer.gnome.org/gdk3/gdk3-Events.html#GdkEventSequence">GdkEventSequence</a>
+is kept in sync for all of those, so calling <a href="hotdoc_markdown/gtkgesture.html#gtk_gesture_set_sequence_state">gtk_gesture_set_sequence_state</a>,
+on one will transfer the same value to the others.</p>
+<p>Groups also perform an "implicit grabbing" of sequences, if a
+<a href="https://developer.gnome.org/gdk3/gdk3-Events.html#GdkEventSequence">GdkEventSequence</a> state is set to <a href="gtkenums.html#GTK_EVENT_SEQUENCE_CLAIMED">GTK_EVENT_SEQUENCE_CLAIMED</a> on one group,
+every other gesture group attached to the same <a href="hotdoc_markdown/gtkwidget.html#GtkWidget">GtkWidget</a> will switch the
+state for that sequence to <a href="gtkenums.html#GTK_EVENT_SEQUENCE_DENIED">GTK_EVENT_SEQUENCE_DENIED</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>group_gesture</code></em></i>
+				–
+	</div>
+			<p><a href="hotdoc_markdown/gtkgesture.html#GtkGesture">GtkGesture</a> to group <em>gesture</em> with</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>gesture</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkgesture.html#GtkGesture">GtkGesture</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.14
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gesture_group">
+	<span><code>Gtk.prototype.group</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.group(gesture: <a title="Gtk.Gesture" href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a>): {
+    // javascript wrapper for 'gtk_gesture_group'
+}</pre>
+
+<p>Adds <em>gesture</em> to the same group than <em>group_gesture</em>. Gestures
+are by default isolated in their own groups.</p>
+<p>When gestures are grouped, the state of <a href="https://developer.gnome.org/gdk3/gdk3-Events.html#GdkEventSequence">Gdk.EventSequence</a>
+is kept in sync for all of those, so calling <a href="hotdoc_markdown/gtkgesture.html#gtk_gesture_set_sequence_state">Gtk.prototype.set_sequence_state</a>,
+on one will transfer the same value to the others.</p>
+<p>Groups also perform an "implicit grabbing" of sequences, if a
+<a href="https://developer.gnome.org/gdk3/gdk3-Events.html#GdkEventSequence">Gdk.EventSequence</a> state is set to <a href="gtkenums.html#GTK_EVENT_SEQUENCE_CLAIMED">Gtk.EventSequenceState.CLAIMED</a> on one group,
+every other gesture group attached to the same <a href="hotdoc_markdown/gtkwidget.html#GtkWidget">Gtk.Widget</a> will switch the
+state for that sequence to <a href="gtkenums.html#GTK_EVENT_SEQUENCE_DENIED">Gtk.EventSequenceState.DENIED</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>group_gesture</code></em></i>
+					(
+						<a title="Gtk.Gesture" href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a>
+						)
+				–
+	</div>
+			<p><a href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a> to group <em>gesture</em> with</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>gesture</code></em></i>
+					(
+						<a title="Gtk.Gesture" href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.14
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gesture_group">
+	<span><code>Gtk.Gesture.group</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Gesture.group (self, gesture):
+    #python wrapper for 'gtk_gesture_group'</pre>
+
+<p>Adds <em>gesture</em> to the same group than <em>group_gesture</em>. Gestures
+are by default isolated in their own groups.</p>
+<p>When gestures are grouped, the state of <a href="https://developer.gnome.org/gdk3/gdk3-Events.html#GdkEventSequence">Gdk.EventSequence</a>
+is kept in sync for all of those, so calling <a href="hotdoc_markdown/gtkgesture.html#gtk_gesture_set_sequence_state">Gtk.Gesture.set_sequence_state</a>,
+on one will transfer the same value to the others.</p>
+<p>Groups also perform an "implicit grabbing" of sequences, if a
+<a href="https://developer.gnome.org/gdk3/gdk3-Events.html#GdkEventSequence">Gdk.EventSequence</a> state is set to <a href="gtkenums.html#GTK_EVENT_SEQUENCE_CLAIMED">Gtk.EventSequenceState.CLAIMED</a> on one group,
+every other gesture group attached to the same <a href="hotdoc_markdown/gtkwidget.html#GtkWidget">Gtk.Widget</a> will switch the
+state for that sequence to <a href="gtkenums.html#GTK_EVENT_SEQUENCE_DENIED">Gtk.EventSequenceState.DENIED</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>group_gesture</code></em></i>
+					(
+						<a title="Gtk.Gesture" href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a>
+						)
+				–
+	</div>
+			<p><a href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a> to group <em>gesture</em> with</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>gesture</code></em></i>
+					(
+						<a title="Gtk.Gesture" href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.14
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.14;" id="gtk_gesture_ungroup">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gesture_ungroup">
+	<span><code>gtk_gesture_ungroup</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_gesture_ungroup (<a title="GtkGesture" href="hotdoc_markdown/gtkgesture.html#GtkGesture">GtkGesture</a> * gesture)</pre>
+
+<p>Separates <em>gesture</em> into an isolated group.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>gesture</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkgesture.html#GtkGesture">GtkGesture</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.14
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gesture_ungroup">
+	<span><code>Gtk.prototype.ungroup</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.ungroup(): {
+    // javascript wrapper for 'gtk_gesture_ungroup'
+}</pre>
+
+<p>Separates <em>gesture</em> into an isolated group.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>gesture</code></em></i>
+					(
+						<a title="Gtk.Gesture" href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.14
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gesture_ungroup">
+	<span><code>Gtk.Gesture.ungroup</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Gesture.ungroup (self):
+    #python wrapper for 'gtk_gesture_ungroup'</pre>
+
+<p>Separates <em>gesture</em> into an isolated group.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>gesture</code></em></i>
+					(
+						<a title="Gtk.Gesture" href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.14
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.14;" id="gtk_gesture_get_group">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gesture_get_group">
+	<span><code>gtk_gesture_get_group</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GList" href="https://developer.gnome.org/glib/unstable/glib-Doubly-Linked-Lists.html#GList">GList</a> *
+gtk_gesture_get_group (<a title="GtkGesture" href="hotdoc_markdown/gtkgesture.html#GtkGesture">GtkGesture</a> * gesture)</pre>
+
+<p>Returns all gestures in the group of <em>gesture</em></p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>gesture</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkgesture.html#GtkGesture">GtkGesture</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					
+										
+<span class="annotation">[<abbr title="Generic and defining element of containers and arrays"><span class="acronym">element-type</span></abbr> GtkGesture]</span>
+<span class="annotation">[<abbr title="Free data container after the code is done"><span class="acronym">transfer: container</span></abbr>]</span>
+
+										)
+								–
+			</div>
+							<p>The list
+of <a href="hotdoc_markdown/gtkgesture.html#GtkGesture">GtkGesture</a>, free with <a href="https://developer.gnome.org/glib/unstable/glib-Doubly-Linked-Lists.html#g-list-free">g_list_free</a></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.14
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gesture_get_group">
+	<span><code>Gtk.prototype.get_group</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_group(): {
+    // javascript wrapper for 'gtk_gesture_get_group'
+}</pre>
+
+<p>Returns all gestures in the group of <em>gesture</em></p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>gesture</code></em></i>
+					(
+						<a title="Gtk.Gesture" href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					[ <a title="Gtk.Gesture" href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a> ]
+										)
+								–
+			</div>
+							<p>The list
+of <a href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a>, free with <a href="https://developer.gnome.org/glib/unstable/glib-Doubly-Linked-Lists.html#g-list-free">g_list_free (not introspectable)</a></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.14
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gesture_get_group">
+	<span><code>Gtk.Gesture.get_group</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Gesture.get_group (self):
+    #python wrapper for 'gtk_gesture_get_group'</pre>
+
+<p>Returns all gestures in the group of <em>gesture</em></p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>gesture</code></em></i>
+					(
+						<a title="Gtk.Gesture" href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					[ <a title="Gtk.Gesture" href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a> ]
+										)
+								–
+			</div>
+							<p>The list
+of <a href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a>, free with <a href="https://developer.gnome.org/glib/unstable/glib-Doubly-Linked-Lists.html#g-list-free">g_list_free (not introspectable)</a></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.14
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.14;" id="gtk_gesture_is_grouped_with">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gesture_is_grouped_with">
+	<span><code>gtk_gesture_is_grouped_with</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_gesture_is_grouped_with (<a title="GtkGesture" href="hotdoc_markdown/gtkgesture.html#GtkGesture">GtkGesture</a> * gesture,
+                             <a title="GtkGesture" href="hotdoc_markdown/gtkgesture.html#GtkGesture">GtkGesture</a> * other)</pre>
+
+<p>Returns <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if both gestures pertain to the same group.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>gesture</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkgesture.html#GtkGesture">GtkGesture</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>other</code></em></i>
+				–
+	</div>
+			<p>another <a href="hotdoc_markdown/gtkgesture.html#GtkGesture">GtkGesture</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>whether the gestures are grouped</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.14
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gesture_is_grouped_with">
+	<span><code>Gtk.prototype.is_grouped_with</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.is_grouped_with(other: <a title="Gtk.Gesture" href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a>): {
+    // javascript wrapper for 'gtk_gesture_is_grouped_with'
+}</pre>
+
+<p>Returns <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if both gestures pertain to the same group.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>gesture</code></em></i>
+					(
+						<a title="Gtk.Gesture" href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>other</code></em></i>
+					(
+						<a title="Gtk.Gesture" href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a>
+						)
+				–
+	</div>
+			<p>another <a href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p>whether the gestures are grouped</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.14
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_gesture_is_grouped_with">
+	<span><code>Gtk.Gesture.is_grouped_with</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Gesture.is_grouped_with (self, other):
+    #python wrapper for 'gtk_gesture_is_grouped_with'</pre>
+
+<p>Returns <a href="https://docs.python.org/3/library/constants.html#True">True</a> if both gestures pertain to the same group.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>gesture</code></em></i>
+					(
+						<a title="Gtk.Gesture" href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>other</code></em></i>
+					(
+						<a title="Gtk.Gesture" href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a>
+						)
+				–
+	</div>
+			<p>another <a href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+										)
+								–
+			</div>
+							<p>whether the gestures are grouped</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.14
+		</p>
+
+
+        </div>
+
+</div>
+
+
+        
+
+            <h2 class="symbol_section">Enumerations</h2>
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.14;" id="GtkEventSequenceState">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h3 data-hotdoc-id="GtkEventSequenceState">
+	<span><code>GtkEventSequenceState</code></span>
+</h3>
+
+
+<p>Describes the state of a <a href="https://developer.gnome.org/gdk3/gdk3-Events.html#GdkEventSequence">GdkEventSequence</a> in a <a href="hotdoc_markdown/gtkgesture.html#GtkGesture">GtkGesture</a>.</p>
+
+
+
+
+	<div class="members-container">
+		<h4>Members</h4>
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_EVENT_SEQUENCE_NONE">
+	<div>
+		<i><em><code>GTK_EVENT_SEQUENCE_NONE</code></em></i>
+		(<span class="value">0</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_EVENT_SEQUENCE_CLAIMED">
+	<div>
+		<i><em><code>GTK_EVENT_SEQUENCE_CLAIMED</code></em></i>
+		(<span class="value">1</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_EVENT_SEQUENCE_DENIED">
+	<div>
+		<i><em><code>GTK_EVENT_SEQUENCE_DENIED</code></em></i>
+		(<span class="value">2</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h3 data-hotdoc-id="GtkEventSequenceState">
+	<span><code>Gtk.EventSequenceState</code></span>
+</h3>
+
+
+<p>Describes the state of a <a href="https://developer.gnome.org/gdk3/gdk3-Events.html#GdkEventSequence">Gdk.EventSequence</a> in a <a href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a>.</p>
+
+
+
+
+	<div class="members-container">
+		<h4>Members</h4>
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_EVENT_SEQUENCE_NONE">
+	<div>
+		<i><em><code>Gtk.EventSequenceState.NONE</code></em></i>
+		(<span class="value">0</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_EVENT_SEQUENCE_CLAIMED">
+	<div>
+		<i><em><code>Gtk.EventSequenceState.CLAIMED</code></em></i>
+		(<span class="value">1</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_EVENT_SEQUENCE_DENIED">
+	<div>
+		<i><em><code>Gtk.EventSequenceState.DENIED</code></em></i>
+		(<span class="value">2</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="GtkEventSequenceState">
+	<span><code>Gtk.EventSequenceState</code></span>
+</h3>
+
+
+<p>Describes the state of a <a href="https://developer.gnome.org/gdk3/gdk3-Events.html#GdkEventSequence">Gdk.EventSequence</a> in a <a href="hotdoc_markdown/gtkgesture.html#GtkGesture">Gtk.Gesture</a>.</p>
+
+
+
+
+	<div class="members-container">
+		<h4>Members</h4>
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_EVENT_SEQUENCE_NONE">
+	<div>
+		<i><em><code>Gtk.EventSequenceState.NONE</code></em></i>
+		(<span class="value">0</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_EVENT_SEQUENCE_CLAIMED">
+	<div>
+		<i><em><code>Gtk.EventSequenceState.CLAIMED</code></em></i>
+		(<span class="value">1</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_EVENT_SEQUENCE_DENIED">
+	<div>
+		<i><em><code>Gtk.EventSequenceState.DENIED</code></em></i>
+		(<span class="value">2</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+
+</div>
+
+
+
+
+
+
+		
+	</div>
+	<div id="search_results">
+		<p>The results of the search are</p>
+	</div>
+	<hr>
+	<div id="footer">
+		    
+
+	</div>
+</div>
+
+<div id="toc-column">
+	
+		<div class="edit-button">
+		
+
+	</div>
+		<div id="toc-wrapper">
+		<nav id="toc"></nav>
+	</div>
+</div>
+</div>
+</main>
+
+</body>
+
+<script src="assets/js/navbar_offset_scroller.js"></script>
+</html>

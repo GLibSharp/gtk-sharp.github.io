@@ -1,0 +1,4932 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<base href=".">
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>gtkimage</title>
+
+<link rel="stylesheet" href="assets/css/custom_bootstrap.css" type="text/css">
+<link rel="stylesheet" href="assets/css/bootstrap-toc.min.css" type="text/css">
+<link rel="stylesheet" href="assets/css/frontend.css" type="text/css">
+<link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
+
+<link rel="stylesheet" href="assets/css/prism.css" type="text/css">
+
+<script src="assets/js/mustache.min.js"></script>
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/scrollspy.js"></script>
+<script src="assets/js/bootstrap.js"></script>
+<script src="assets/js/typeahead.jquery.min.js"></script>
+<script src="assets/js/search.js"></script>
+<script src="assets/js/isotope.pkgd.min.js"></script>
+<script src="assets/js/compare-versions.js"></script>
+<script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="assets/js/bootstrap-toc.min.js"></script>
+<script src="assets/js/jquery.touchSwipe.min.js"></script>
+<script src="assets/js/anchor.min.js"></script>
+<script src="assets/js/tag_filtering.js"></script>
+<script src="assets/js/language_switching.js"></script>
+
+<script src="assets/js/lines_around_headings.js"></script>
+
+<script src="assets/js/prism-core.js"></script>
+<script src="assets/js/prism-autoloader.js"></script>
+<script src="assets/js/prism_autoloader_path_override.js"></script>
+<script src="assets/js/trie.js"></script>
+
+
+</head>
+
+<body class="no-script
+" data-spy="scroll" data-target="#toc" data-offset="70">
+
+<script>
+$('body').removeClass('no-script');
+</script>
+
+<nav class="navbar navbar-fixed-top navbar-default" id="topnav">
+	<div class="container-fluid">
+		<div class="navbar-right">
+			<a id="toc-toggle">
+				<span class="glyphicon glyphicon-menu-right"></span>
+				<span class="glyphicon glyphicon-menu-left"></span>
+			</a>
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-wrapper" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<form action="" class="navbar-form pull-right" id="navbar-search-form">
+                               <div class="form-group has-feedback">
+                                       <input type="text" class="form-control input-sm" name="search" id="sidenav-lookup-field" placeholder="search" disabled>
+				       <span class="glyphicon glyphicon-search form-control-feedback" id="search-mgn-glass"></span>
+                               </div>
+                        </form>
+		</div>
+		<div class="navbar-header">
+			<a id="sidenav-toggle">
+				<span class="glyphicon glyphicon-menu-right"></span>
+				<span class="glyphicon glyphicon-menu-left"></span>
+			</a>
+			<a id="home-link" href="index.html" class="hotdoc-navbar-brand">
+				<img src="assets/images/home.svg" alt="Home">
+			</a>
+		</div>
+		<div class="navbar-collapse collapse" id="navbar-wrapper">
+			<ul class="nav navbar-nav" id="menu">
+							</ul>
+			<div class="hidden-xs hidden-sm navbar-text navbar-center">
+							</div>
+		</div>
+	</div>
+</nav>
+
+<main>
+<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="gtkimage.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['c', 'javascript', 'python']" data-hotdoc-meta-gi-language="c">
+<script src="assets/js/utils.js"></script>
+
+<div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
+	<script src="assets/js/navigation.js"></script>
+	<script src="assets/js/sitemap.js"></script>
+</div>
+
+<div id="body">
+	<div id="main">
+				    <div id="page-description" data-hotdoc-source="gtkimage.markdown" data-hotdoc-role="main">
+    </div>
+        
+        
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="GtkImage">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h2 data-hotdoc-id="GtkImage">
+	<span><code>GtkImage</code></span>
+</h2>
+
+
+<div class="hierarchy_container">
+	<div class="hierarchy_details">
+<pre>
+<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object">GObject</a>
+    <span class="lineart">╰──</span><a title="GInitiallyUnowned" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-javascript="GObject.InitiallyUnowned" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-python="GObject.InitiallyUnowned">GInitiallyUnowned</a>
+        <span class="lineart">╰──</span><a title="GtkWidget" href="gtkwidget.html#GtkWidget" data-gi-href-javascript="gtkwidget.html#GtkWidget" data-gi-title-javascript="Gtk.Widget" data-gi-href-python="gtkwidget.html#GtkWidget" data-gi-title-python="Gtk.Widget">GtkWidget</a>
+            <span class="lineart">╰──</span>GtkImage
+</pre>
+
+</div>
+
+</div>
+
+<div class="interfaces_container">
+	
+<p><b>Implemented interfaces:</b>
+    AtkImplementorIface, <a title="GtkBuildable" href="gtkbuildable.html#GtkBuildable" data-gi-href-javascript="gtkbuildable.html#GtkBuildable" data-gi-title-javascript="Gtk.Buildable" data-gi-href-python="gtkbuildable.html#GtkBuildable" data-gi-title-python="Gtk.Buildable">GtkBuildable</a>
+</p>
+
+</div>
+
+<div class="class_details">
+	<p>This struct contain private data only and should be accessed by the functions
+below.</p>
+
+</div>
+
+
+
+	<div class="members-container">
+		<h3>Members</h3>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkImage.parent_instance">
+	<div>
+		<i><em><code>parent_instance</code></em></i>
+		(<a title="GtkWidget" href="gtkwidget.html#GtkWidget" data-gi-href-javascript="gtkwidget.html#GtkWidget" data-gi-title-javascript="Gtk.Widget" data-gi-href-python="gtkwidget.html#GtkWidget" data-gi-title-python="Gtk.Widget">GtkWidget</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+<h3>Class structure</h3>
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="GtkImageClass">
+	<span><code>GtkImageClass</code></span>
+</h4>
+
+
+
+
+
+	<div class="members-container">
+		<h5>Fields</h5>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkImageClass.parent_class">
+	<div>
+		<i><em><code>parent_class</code></em></i>
+		(<a title="GtkWidgetClass" href="GtkWidgetClass">GtkWidgetClass</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h3>
+	Gtk.ImageClass
+</h3>
+
+
+
+
+
+	<div class="members-container">
+		<h5>Attributes</h5>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkImageClass.parent_class">
+	<div>
+		<i><em><code>ImageClass.parent_class</code></em></i>
+		(<a title="Gtk.WidgetClass" href="GtkWidgetClass">Gtk.WidgetClass</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3>
+	Gtk.ImageClass
+</h3>
+
+
+
+
+
+	<div class="members-container">
+		<h5>Attributes</h5>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkImageClass.parent_class">
+	<div>
+		<i><em><code>ImageClass.parent_class</code></em></i>
+		(<a title="Gtk.WidgetClass" href="GtkWidgetClass">Gtk.WidgetClass</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h2 data-hotdoc-id="GtkImage">
+	<span><code>GtkImage</code></span>
+</h2>
+
+
+<div class="hierarchy_container">
+	<div class="hierarchy_details">
+<pre>
+<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object">GObject</a>
+    <span class="lineart">╰──</span><a title="GInitiallyUnowned" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-javascript="GObject.InitiallyUnowned" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-python="GObject.InitiallyUnowned">GInitiallyUnowned</a>
+        <span class="lineart">╰──</span><a title="GtkWidget" href="gtkwidget.html#GtkWidget" data-gi-href-javascript="gtkwidget.html#GtkWidget" data-gi-title-javascript="Gtk.Widget" data-gi-href-python="gtkwidget.html#GtkWidget" data-gi-title-python="Gtk.Widget">GtkWidget</a>
+            <span class="lineart">╰──</span>GtkImage
+</pre>
+
+</div>
+
+</div>
+
+<div class="interfaces_container">
+	
+<p><b>Implemented interfaces:</b>
+    AtkImplementorIface, <a title="GtkBuildable" href="gtkbuildable.html#GtkBuildable" data-gi-href-javascript="gtkbuildable.html#GtkBuildable" data-gi-title-javascript="Gtk.Buildable" data-gi-href-python="gtkbuildable.html#GtkBuildable" data-gi-title-python="Gtk.Buildable">GtkBuildable</a>
+</p>
+
+</div>
+
+<div class="class_details">
+	<p>This struct contain private data only and should be accessed by the functions
+below.</p>
+
+</div>
+
+
+
+	<div class="members-container">
+		<h3>Members</h3>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkImage.parent_instance">
+	<div>
+		<i><em><code>parent_instance</code></em></i>
+		(<a title="GtkWidget" href="gtkwidget.html#GtkWidget" data-gi-href-javascript="gtkwidget.html#GtkWidget" data-gi-title-javascript="Gtk.Widget" data-gi-href-python="gtkwidget.html#GtkWidget" data-gi-title-python="Gtk.Widget">GtkWidget</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h2 data-hotdoc-id="GtkImage">
+	<span><code>GtkImage</code></span>
+</h2>
+
+
+<div class="hierarchy_container">
+	<div class="hierarchy_details">
+<pre>
+<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object">GObject</a>
+    <span class="lineart">╰──</span><a title="GInitiallyUnowned" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-javascript="GObject.InitiallyUnowned" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-python="GObject.InitiallyUnowned">GInitiallyUnowned</a>
+        <span class="lineart">╰──</span><a title="GtkWidget" href="gtkwidget.html#GtkWidget" data-gi-href-javascript="gtkwidget.html#GtkWidget" data-gi-title-javascript="Gtk.Widget" data-gi-href-python="gtkwidget.html#GtkWidget" data-gi-title-python="Gtk.Widget">GtkWidget</a>
+            <span class="lineart">╰──</span>GtkImage
+</pre>
+
+</div>
+
+</div>
+
+<div class="interfaces_container">
+	
+<p><b>Implemented interfaces:</b>
+    AtkImplementorIface, <a title="GtkBuildable" href="gtkbuildable.html#GtkBuildable" data-gi-href-javascript="gtkbuildable.html#GtkBuildable" data-gi-title-javascript="Gtk.Buildable" data-gi-href-python="gtkbuildable.html#GtkBuildable" data-gi-title-python="Gtk.Buildable">GtkBuildable</a>
+</p>
+
+</div>
+
+<div class="class_details">
+	<p>This struct contain private data only and should be accessed by the functions
+below.</p>
+
+</div>
+
+
+
+	<div class="members-container">
+		<h3>Members</h3>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkImage.parent_instance">
+	<div>
+		<i><em><code>parent_instance</code></em></i>
+		(<a title="GtkWidget" href="gtkwidget.html#GtkWidget" data-gi-href-javascript="gtkwidget.html#GtkWidget" data-gi-title-javascript="Gtk.Widget" data-gi-href-python="gtkwidget.html#GtkWidget" data-gi-title-python="Gtk.Widget">GtkWidget</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+
+</div>
+
+
+            <h3 class="symbol_section">Constructors</h3>
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_image_new_from_file">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_image_new_from_file">
+	<span><code>gtk_image_new_from_file</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkWidget" href="gtkwidget.html#GtkWidget">GtkWidget</a> *
+gtk_image_new_from_file (<a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * filename)</pre>
+
+<p>Creates a new <a href="gtkimage.html#GtkImage">GtkImage</a> displaying the file <em>filename</em>. If the file
+isn’t found or can’t be loaded, the resulting <a href="gtkimage.html#GtkImage">GtkImage</a> will
+display a “broken image” icon. This function never returns <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a>,
+it always returns a valid <a href="gtkimage.html#GtkImage">GtkImage</a> widget.</p>
+<p>If the file contains an animation, the image will contain an
+animation.</p>
+<p>If you need to detect failures to load the file, use
+<a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-File-Loading.html#gdk-pixbuf-new-from-file">gdk_pixbuf_new_from_file</a> to load the file yourself, then create
+the <a href="gtkimage.html#GtkImage">GtkImage</a> from the pixbuf. (Or for animations, use
+<a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-Animations.html#gdk-pixbuf-animation-new-from-file">gdk_pixbuf_animation_new_from_file</a>).</p>
+<p>The storage type (<a href="gtkimage.html#gtk_image_get_storage_type">gtk_image_get_storage_type</a>) of the returned
+image is not defined, it will be whatever is appropriate for
+displaying the file.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>filename</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="Override the parsed C type with given type"><span class="acronym">type</span></abbr> filename]</span>
+
+						)
+				–
+	</div>
+			<p>a filename</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>a new <a href="gtkimage.html#GtkImage">GtkImage</a></p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_image_new_from_file">
+	<span><code>Gtk.prototype.new_from_file</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.new_from_file(filename: filename): {
+    // javascript wrapper for 'gtk_image_new_from_file'
+}</pre>
+
+<p>Creates a new <a href="gtkimage.html#GtkImage">Gtk.Image</a> displaying the file <em>filename</em>. If the file
+isn’t found or can’t be loaded, the resulting <a href="gtkimage.html#GtkImage">Gtk.Image</a> will
+display a “broken image” icon. This function never returns <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a>,
+it always returns a valid <a href="gtkimage.html#GtkImage">Gtk.Image</a> widget.</p>
+<p>If the file contains an animation, the image will contain an
+animation.</p>
+<p>If you need to detect failures to load the file, use
+<a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-File-Loading.html#gdk-pixbuf-new-from-file">GdkPixbuf.prototype.new_from_file</a> to load the file yourself, then create
+the <a href="gtkimage.html#GtkImage">Gtk.Image</a> from the pixbuf. (Or for animations, use
+<a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-Animations.html#gdk-pixbuf-animation-new-from-file">GdkPixbuf.prototype.new_from_file</a>).</p>
+<p>The storage type (<a href="gtkimage.html#gtk_image_get_storage_type">Gtk.prototype.get_storage_type</a>) of the returned
+image is not defined, it will be whatever is appropriate for
+displaying the file.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>filename</code></em></i>
+					(
+						filename
+						)
+				–
+	</div>
+			<p>a filename</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>a new <a href="gtkimage.html#GtkImage">Gtk.Image</a></p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_image_new_from_file">
+	<span><code>Gtk.Image.new_from_file</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Image.new_from_file (filename):
+    #python wrapper for 'gtk_image_new_from_file'</pre>
+
+<p>Creates a new <a href="gtkimage.html#GtkImage">Gtk.Image</a> displaying the file <em>filename</em>. If the file
+isn’t found or can’t be loaded, the resulting <a href="gtkimage.html#GtkImage">Gtk.Image</a> will
+display a “broken image” icon. This function never returns <a href="https://docs.python.org/3/library/constants.html#None">None</a>,
+it always returns a valid <a href="gtkimage.html#GtkImage">Gtk.Image</a> widget.</p>
+<p>If the file contains an animation, the image will contain an
+animation.</p>
+<p>If you need to detect failures to load the file, use
+<a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-File-Loading.html#gdk-pixbuf-new-from-file">GdkPixbuf.Pixbuf.new_from_file</a> to load the file yourself, then create
+the <a href="gtkimage.html#GtkImage">Gtk.Image</a> from the pixbuf. (Or for animations, use
+<a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-Animations.html#gdk-pixbuf-animation-new-from-file">GdkPixbuf.PixbufAnimation.new_from_file</a>).</p>
+<p>The storage type (<a href="gtkimage.html#gtk_image_get_storage_type">Gtk.Image.get_storage_type</a>) of the returned
+image is not defined, it will be whatever is appropriate for
+displaying the file.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>filename</code></em></i>
+					(
+						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
+						)
+				–
+	</div>
+			<p>a filename</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>a new <a href="gtkimage.html#GtkImage">Gtk.Image</a></p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_image_new_from_pixbuf">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_image_new_from_pixbuf">
+	<span><code>gtk_image_new_from_pixbuf</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkWidget" href="gtkwidget.html#GtkWidget">GtkWidget</a> *
+gtk_image_new_from_pixbuf (<a title="GdkPixbuf" href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf</a> * pixbuf)</pre>
+
+<p>Creates a new <a href="gtkimage.html#GtkImage">GtkImage</a> displaying <em>pixbuf</em>.
+The <a href="gtkimage.html#GtkImage">GtkImage</a> does not assume a reference to the
+pixbuf; you still need to unref it if you own references.
+<a href="gtkimage.html#GtkImage">GtkImage</a> will add its own reference rather than adopting yours.</p>
+<p>Note that this function just creates an <a href="gtkimage.html#GtkImage">GtkImage</a> from the pixbuf. The
+<a href="gtkimage.html#GtkImage">GtkImage</a> created will not react to state changes. Should you want that,
+you should use <a href="gtkimage.html#gtk_image_new_from_icon_name">gtk_image_new_from_icon_name</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>pixbuf</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>a <a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf</a>, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>a new <a href="gtkimage.html#GtkImage">GtkImage</a></p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_image_new_from_pixbuf">
+	<span><code>Gtk.prototype.new_from_pixbuf</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.new_from_pixbuf(pixbuf: <a title="GdkPixbuf.Pixbuf" href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf.Pixbuf</a>): {
+    // javascript wrapper for 'gtk_image_new_from_pixbuf'
+}</pre>
+
+<p>Creates a new <a href="gtkimage.html#GtkImage">Gtk.Image</a> displaying <em>pixbuf</em>.
+The <a href="gtkimage.html#GtkImage">Gtk.Image</a> does not assume a reference to the
+pixbuf; you still need to unref it if you own references.
+<a href="gtkimage.html#GtkImage">Gtk.Image</a> will add its own reference rather than adopting yours.</p>
+<p>Note that this function just creates an <a href="gtkimage.html#GtkImage">Gtk.Image</a> from the pixbuf. The
+<a href="gtkimage.html#GtkImage">Gtk.Image</a> created will not react to state changes. Should you want that,
+you should use <a href="gtkimage.html#gtk_image_new_from_icon_name">Gtk.prototype.new_from_icon_name</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>pixbuf</code></em></i>
+					(
+						<a title="GdkPixbuf.Pixbuf" href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf.Pixbuf</a>
+						)
+				–
+	</div>
+			<p>a <a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf.Pixbuf</a>, or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>a new <a href="gtkimage.html#GtkImage">Gtk.Image</a></p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_image_new_from_pixbuf">
+	<span><code>Gtk.Image.new_from_pixbuf</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Image.new_from_pixbuf (pixbuf):
+    #python wrapper for 'gtk_image_new_from_pixbuf'</pre>
+
+<p>Creates a new <a href="gtkimage.html#GtkImage">Gtk.Image</a> displaying <em>pixbuf</em>.
+The <a href="gtkimage.html#GtkImage">Gtk.Image</a> does not assume a reference to the
+pixbuf; you still need to unref it if you own references.
+<a href="gtkimage.html#GtkImage">Gtk.Image</a> will add its own reference rather than adopting yours.</p>
+<p>Note that this function just creates an <a href="gtkimage.html#GtkImage">Gtk.Image</a> from the pixbuf. The
+<a href="gtkimage.html#GtkImage">Gtk.Image</a> created will not react to state changes. Should you want that,
+you should use <a href="gtkimage.html#gtk_image_new_from_icon_name">Gtk.Image.new_from_icon_name</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>pixbuf</code></em></i>
+					(
+						<a title="GdkPixbuf.Pixbuf" href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf.Pixbuf</a>
+						)
+				–
+	</div>
+			<p>a <a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf.Pixbuf</a>, or <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>a new <a href="gtkimage.html#GtkImage">Gtk.Image</a></p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_image_new_from_animation">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_image_new_from_animation">
+	<span><code>gtk_image_new_from_animation</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkWidget" href="gtkwidget.html#GtkWidget">GtkWidget</a> *
+gtk_image_new_from_animation (<a title="GdkPixbufAnimation" href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-Animations.html#GdkPixbufAnimation-struct">GdkPixbufAnimation</a> * animation)</pre>
+
+<p>Creates a <a href="gtkimage.html#GtkImage">GtkImage</a> displaying the given animation.
+The <a href="gtkimage.html#GtkImage">GtkImage</a> does not assume a reference to the
+animation; you still need to unref it if you own references.
+<a href="gtkimage.html#GtkImage">GtkImage</a> will add its own reference rather than adopting yours.</p>
+<p>Note that the animation frames are shown using a timeout with
+<a href="https://developer.gnome.org/glib/unstable/glib-The-Main-Event-Loop.html#G-PRIORITY-DEFAULT:CAPS">G_PRIORITY_DEFAULT</a>. When using animations to indicate busyness,
+keep in mind that the animation will only be shown if the main loop
+is not busy with something that has a higher priority.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>animation</code></em></i>
+				–
+	</div>
+			<p>an animation</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>a new <a href="gtkimage.html#GtkImage">GtkImage</a> widget</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_image_new_from_animation">
+	<span><code>Gtk.prototype.new_from_animation</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.new_from_animation(animation: <a title="GdkPixbuf.PixbufAnimation" href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-Animations.html#GdkPixbufAnimation-struct">GdkPixbuf.PixbufAnimation</a>): {
+    // javascript wrapper for 'gtk_image_new_from_animation'
+}</pre>
+
+<p>Creates a <a href="gtkimage.html#GtkImage">Gtk.Image</a> displaying the given animation.
+The <a href="gtkimage.html#GtkImage">Gtk.Image</a> does not assume a reference to the
+animation; you still need to unref it if you own references.
+<a href="gtkimage.html#GtkImage">Gtk.Image</a> will add its own reference rather than adopting yours.</p>
+<p>Note that the animation frames are shown using a timeout with
+<a href="https://developer.gnome.org/glib/unstable/glib-The-Main-Event-Loop.html#G-PRIORITY-DEFAULT:CAPS">GLib.PRIORITY_DEFAULT</a>. When using animations to indicate busyness,
+keep in mind that the animation will only be shown if the main loop
+is not busy with something that has a higher priority.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>animation</code></em></i>
+					(
+						<a title="GdkPixbuf.PixbufAnimation" href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-Animations.html#GdkPixbufAnimation-struct">GdkPixbuf.PixbufAnimation</a>
+						)
+				–
+	</div>
+			<p>an animation</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>a new <a href="gtkimage.html#GtkImage">Gtk.Image</a> widget</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_image_new_from_animation">
+	<span><code>Gtk.Image.new_from_animation</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Image.new_from_animation (animation):
+    #python wrapper for 'gtk_image_new_from_animation'</pre>
+
+<p>Creates a <a href="gtkimage.html#GtkImage">Gtk.Image</a> displaying the given animation.
+The <a href="gtkimage.html#GtkImage">Gtk.Image</a> does not assume a reference to the
+animation; you still need to unref it if you own references.
+<a href="gtkimage.html#GtkImage">Gtk.Image</a> will add its own reference rather than adopting yours.</p>
+<p>Note that the animation frames are shown using a timeout with
+<a href="https://developer.gnome.org/glib/unstable/glib-The-Main-Event-Loop.html#G-PRIORITY-DEFAULT:CAPS">GLib.PRIORITY_DEFAULT</a>. When using animations to indicate busyness,
+keep in mind that the animation will only be shown if the main loop
+is not busy with something that has a higher priority.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>animation</code></em></i>
+					(
+						<a title="GdkPixbuf.PixbufAnimation" href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-Animations.html#GdkPixbufAnimation-struct">GdkPixbuf.PixbufAnimation</a>
+						)
+				–
+	</div>
+			<p>an animation</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>a new <a href="gtkimage.html#GtkImage">Gtk.Image</a> widget</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.6;" id="gtk_image_new_from_icon_name">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_image_new_from_icon_name">
+	<span><code>gtk_image_new_from_icon_name</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkWidget" href="gtkwidget.html#GtkWidget">GtkWidget</a> *
+gtk_image_new_from_icon_name (const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * icon_name,
+                              <a title="GtkIconSize" href="https://developer.gnome.org/gtk3/gtk3-Themeable-Stock-Images.html#GtkIconSize">GtkIconSize</a> size)</pre>
+
+<p>Creates a <a href="gtkimage.html#GtkImage">GtkImage</a> displaying an icon from the current icon theme.
+If the icon name isn’t known, a “broken image” icon will be
+displayed instead.  If the current icon theme is changed, the icon
+will be updated appropriately.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>icon_name</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="NULL may be passed to the value"><span class="acronym">nullable</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>an icon name or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>size</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="Override the parsed C type with given type"><span class="acronym">type</span></abbr> int]</span>
+
+						)
+				–
+	</div>
+			<p>a stock icon size (#GtkIconSize)</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>a new <a href="gtkimage.html#GtkImage">GtkImage</a> displaying the themed icon</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.6
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_image_new_from_icon_name">
+	<span><code>Gtk.prototype.new_from_icon_name</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.new_from_icon_name(icon_name: <a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>, size: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_image_new_from_icon_name'
+}</pre>
+
+<p>Creates a <a href="gtkimage.html#GtkImage">Gtk.Image</a> displaying an icon from the current icon theme.
+If the icon name isn’t known, a “broken image” icon will be
+displayed instead.  If the current icon theme is changed, the icon
+will be updated appropriately.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>icon_name</code></em></i>
+					(
+						<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
+						)
+				–
+	</div>
+			<p>an icon name or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>size</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>a stock icon size (#GtkIconSize)</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>a new <a href="gtkimage.html#GtkImage">Gtk.Image</a> displaying the themed icon</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.6
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_image_new_from_icon_name">
+	<span><code>Gtk.Image.new_from_icon_name</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Image.new_from_icon_name (icon_name, size):
+    #python wrapper for 'gtk_image_new_from_icon_name'</pre>
+
+<p>Creates a <a href="gtkimage.html#GtkImage">Gtk.Image</a> displaying an icon from the current icon theme.
+If the icon name isn’t known, a “broken image” icon will be
+displayed instead.  If the current icon theme is changed, the icon
+will be updated appropriately.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>icon_name</code></em></i>
+					(
+						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
+						)
+				–
+	</div>
+			<p>an icon name or <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>size</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>a stock icon size (#GtkIconSize)</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>a new <a href="gtkimage.html#GtkImage">Gtk.Image</a> displaying the themed icon</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.6
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.14;" id="gtk_image_new_from_gicon">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_image_new_from_gicon">
+	<span><code>gtk_image_new_from_gicon</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkWidget" href="gtkwidget.html#GtkWidget">GtkWidget</a> *
+gtk_image_new_from_gicon (<a title="GIcon" href="https://developer.gnome.org/gio/unstable/GIcon.html#GIcon-struct">GIcon</a> * icon,
+                          <a title="GtkIconSize" href="https://developer.gnome.org/gtk3/gtk3-Themeable-Stock-Images.html#GtkIconSize">GtkIconSize</a> size)</pre>
+
+<p>Creates a <a href="gtkimage.html#GtkImage">GtkImage</a> displaying an icon from the current icon theme.
+If the icon name isn’t known, a “broken image” icon will be
+displayed instead.  If the current icon theme is changed, the icon
+will be updated appropriately.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>icon</code></em></i>
+				–
+	</div>
+			<p>an icon</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>size</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="Override the parsed C type with given type"><span class="acronym">type</span></abbr> int]</span>
+
+						)
+				–
+	</div>
+			<p>a stock icon size (#GtkIconSize)</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>a new <a href="gtkimage.html#GtkImage">GtkImage</a> displaying the themed icon</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.14
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_image_new_from_gicon">
+	<span><code>Gtk.prototype.new_from_gicon</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.new_from_gicon(icon: <a title="Gio.Icon" href="https://developer.gnome.org/gio/unstable/GIcon.html#GIcon-struct">Gio.Icon</a>, size: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_image_new_from_gicon'
+}</pre>
+
+<p>Creates a <a href="gtkimage.html#GtkImage">Gtk.Image</a> displaying an icon from the current icon theme.
+If the icon name isn’t known, a “broken image” icon will be
+displayed instead.  If the current icon theme is changed, the icon
+will be updated appropriately.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>icon</code></em></i>
+					(
+						<a title="Gio.Icon" href="https://developer.gnome.org/gio/unstable/GIcon.html#GIcon-struct">Gio.Icon</a>
+						)
+				–
+	</div>
+			<p>an icon</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>size</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>a stock icon size (#GtkIconSize)</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>a new <a href="gtkimage.html#GtkImage">Gtk.Image</a> displaying the themed icon</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.14
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_image_new_from_gicon">
+	<span><code>Gtk.Image.new_from_gicon</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Image.new_from_gicon (icon, size):
+    #python wrapper for 'gtk_image_new_from_gicon'</pre>
+
+<p>Creates a <a href="gtkimage.html#GtkImage">Gtk.Image</a> displaying an icon from the current icon theme.
+If the icon name isn’t known, a “broken image” icon will be
+displayed instead.  If the current icon theme is changed, the icon
+will be updated appropriately.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>icon</code></em></i>
+					(
+						<a title="Gio.Icon" href="https://developer.gnome.org/gio/unstable/GIcon.html#GIcon-struct">Gio.Icon</a>
+						)
+				–
+	</div>
+			<p>an icon</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>size</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>a stock icon size (#GtkIconSize)</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>a new <a href="gtkimage.html#GtkImage">Gtk.Image</a> displaying the themed icon</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.14
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.4;" id="gtk_image_new_from_resource">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_image_new_from_resource">
+	<span><code>gtk_image_new_from_resource</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkWidget" href="gtkwidget.html#GtkWidget">GtkWidget</a> *
+gtk_image_new_from_resource (const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * resource_path)</pre>
+
+<p>Creates a new <a href="gtkimage.html#GtkImage">GtkImage</a> displaying the resource file <em>resource_path</em>. If the file
+isn’t found or can’t be loaded, the resulting <a href="gtkimage.html#GtkImage">GtkImage</a> will
+display a “broken image” icon. This function never returns <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a>,
+it always returns a valid <a href="gtkimage.html#GtkImage">GtkImage</a> widget.</p>
+<p>If the file contains an animation, the image will contain an
+animation.</p>
+<p>If you need to detect failures to load the file, use
+<a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-File-Loading.html#gdk-pixbuf-new-from-file">gdk_pixbuf_new_from_file</a> to load the file yourself, then create
+the <a href="gtkimage.html#GtkImage">GtkImage</a> from the pixbuf. (Or for animations, use
+<a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-Animations.html#gdk-pixbuf-animation-new-from-file">gdk_pixbuf_animation_new_from_file</a>).</p>
+<p>The storage type (<a href="gtkimage.html#gtk_image_get_storage_type">gtk_image_get_storage_type</a>) of the returned
+image is not defined, it will be whatever is appropriate for
+displaying the file.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>resource_path</code></em></i>
+				–
+	</div>
+			<p>a resource path</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>a new <a href="gtkimage.html#GtkImage">GtkImage</a></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.4
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_image_new_from_resource">
+	<span><code>Gtk.prototype.new_from_resource</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.new_from_resource(resource_path: <a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>): {
+    // javascript wrapper for 'gtk_image_new_from_resource'
+}</pre>
+
+<p>Creates a new <a href="gtkimage.html#GtkImage">Gtk.Image</a> displaying the resource file <em>resource_path</em>. If the file
+isn’t found or can’t be loaded, the resulting <a href="gtkimage.html#GtkImage">Gtk.Image</a> will
+display a “broken image” icon. This function never returns <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a>,
+it always returns a valid <a href="gtkimage.html#GtkImage">Gtk.Image</a> widget.</p>
+<p>If the file contains an animation, the image will contain an
+animation.</p>
+<p>If you need to detect failures to load the file, use
+<a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-File-Loading.html#gdk-pixbuf-new-from-file">GdkPixbuf.prototype.new_from_file</a> to load the file yourself, then create
+the <a href="gtkimage.html#GtkImage">Gtk.Image</a> from the pixbuf. (Or for animations, use
+<a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-Animations.html#gdk-pixbuf-animation-new-from-file">GdkPixbuf.prototype.new_from_file</a>).</p>
+<p>The storage type (<a href="gtkimage.html#gtk_image_get_storage_type">Gtk.prototype.get_storage_type</a>) of the returned
+image is not defined, it will be whatever is appropriate for
+displaying the file.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>resource_path</code></em></i>
+					(
+						<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
+						)
+				–
+	</div>
+			<p>a resource path</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>a new <a href="gtkimage.html#GtkImage">Gtk.Image</a></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.4
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_image_new_from_resource">
+	<span><code>Gtk.Image.new_from_resource</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Image.new_from_resource (resource_path):
+    #python wrapper for 'gtk_image_new_from_resource'</pre>
+
+<p>Creates a new <a href="gtkimage.html#GtkImage">Gtk.Image</a> displaying the resource file <em>resource_path</em>. If the file
+isn’t found or can’t be loaded, the resulting <a href="gtkimage.html#GtkImage">Gtk.Image</a> will
+display a “broken image” icon. This function never returns <a href="https://docs.python.org/3/library/constants.html#None">None</a>,
+it always returns a valid <a href="gtkimage.html#GtkImage">Gtk.Image</a> widget.</p>
+<p>If the file contains an animation, the image will contain an
+animation.</p>
+<p>If you need to detect failures to load the file, use
+<a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-File-Loading.html#gdk-pixbuf-new-from-file">GdkPixbuf.Pixbuf.new_from_file</a> to load the file yourself, then create
+the <a href="gtkimage.html#GtkImage">Gtk.Image</a> from the pixbuf. (Or for animations, use
+<a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-Animations.html#gdk-pixbuf-animation-new-from-file">GdkPixbuf.PixbufAnimation.new_from_file</a>).</p>
+<p>The storage type (<a href="gtkimage.html#gtk_image_get_storage_type">Gtk.Image.get_storage_type</a>) of the returned
+image is not defined, it will be whatever is appropriate for
+displaying the file.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>resource_path</code></em></i>
+					(
+						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
+						)
+				–
+	</div>
+			<p>a resource path</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>a new <a href="gtkimage.html#GtkImage">Gtk.Image</a></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.4
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.10;" id="gtk_image_new_from_surface">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_image_new_from_surface">
+	<span><code>gtk_image_new_from_surface</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkWidget" href="gtkwidget.html#GtkWidget">GtkWidget</a> *
+gtk_image_new_from_surface (<a title="cairo_surface_t" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-surface-t.html#cairo-surface-t">cairo_surface_t</a> * surface)</pre>
+
+<p>Creates a new <a href="gtkimage.html#GtkImage">GtkImage</a> displaying <em>surface</em>.
+The <a href="gtkimage.html#GtkImage">GtkImage</a> does not assume a reference to the
+surface; you still need to unref it if you own references.
+<a href="gtkimage.html#GtkImage">GtkImage</a> will add its own reference rather than adopting yours.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>surface</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/cairo/unstable/cairo-cairo-surface-t.html#cairo-surface-t">cairo_surface_t</a>, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>a new <a href="gtkimage.html#GtkImage">GtkImage</a></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_image_new_from_surface">
+	<span><code>Gtk.prototype.new_from_surface</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.new_from_surface(surface: <a title="cairo.Surface" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-surface-t.html#cairo-surface-t">cairo.Surface</a>): {
+    // javascript wrapper for 'gtk_image_new_from_surface'
+}</pre>
+
+<p>Creates a new <a href="gtkimage.html#GtkImage">Gtk.Image</a> displaying <em>surface</em>.
+The <a href="gtkimage.html#GtkImage">Gtk.Image</a> does not assume a reference to the
+surface; you still need to unref it if you own references.
+<a href="gtkimage.html#GtkImage">Gtk.Image</a> will add its own reference rather than adopting yours.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>surface</code></em></i>
+					(
+						<a title="cairo.Surface" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-surface-t.html#cairo-surface-t">cairo.Surface</a>
+						)
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/cairo/unstable/cairo-cairo-surface-t.html#cairo-surface-t">cairo.Surface</a>, or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>a new <a href="gtkimage.html#GtkImage">Gtk.Image</a></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_image_new_from_surface">
+	<span><code>Gtk.Image.new_from_surface</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Image.new_from_surface (surface):
+    #python wrapper for 'gtk_image_new_from_surface'</pre>
+
+<p>Creates a new <a href="gtkimage.html#GtkImage">Gtk.Image</a> displaying <em>surface</em>.
+The <a href="gtkimage.html#GtkImage">Gtk.Image</a> does not assume a reference to the
+surface; you still need to unref it if you own references.
+<a href="gtkimage.html#GtkImage">Gtk.Image</a> will add its own reference rather than adopting yours.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>surface</code></em></i>
+					(
+						<a title="cairo.Surface" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-surface-t.html#cairo-surface-t">cairo.Surface</a>
+						)
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/cairo/unstable/cairo-cairo-surface-t.html#cairo-surface-t">cairo.Surface</a>, or <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>a new <a href="gtkimage.html#GtkImage">Gtk.Image</a></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.10
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_image_new">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_image_new">
+	<span><code>gtk_image_new</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkWidget" href="gtkwidget.html#GtkWidget">GtkWidget</a> *
+gtk_image_new ()</pre>
+
+<p>Creates a new empty <a href="gtkimage.html#GtkImage">GtkImage</a> widget.</p>
+
+
+
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>a newly created <a href="gtkimage.html#GtkImage">GtkImage</a> widget.</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_image_new">
+	<span><code>Gtk.prototype.new</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.new(): {
+    // javascript wrapper for 'gtk_image_new'
+}</pre>
+
+<p>Creates a new empty <a href="gtkimage.html#GtkImage">Gtk.Image</a> widget.</p>
+
+
+
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>a newly created <a href="gtkimage.html#GtkImage">Gtk.Image</a> widget.</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_image_new">
+	<span><code>Gtk.Image.new</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Image.new ():
+    #python wrapper for 'gtk_image_new'</pre>
+
+<p>Creates a new empty <a href="gtkimage.html#GtkImage">Gtk.Image</a> widget.</p>
+
+
+
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>a newly created <a href="gtkimage.html#GtkImage">Gtk.Image</a> widget.</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+
+            <h3 class="symbol_section">Methods</h3>
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_image_get_pixbuf">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_image_get_pixbuf">
+	<span><code>gtk_image_get_pixbuf</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GdkPixbuf" href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf</a> *
+gtk_image_get_pixbuf (<a title="GtkImage" href="gtkimage.html#GtkImage">GtkImage</a> * image)</pre>
+
+<p>Gets the <a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf</a> being displayed by the <a href="gtkimage.html#GtkImage">GtkImage</a>.
+The storage type of the image must be <a href="gtkimage.html#GTK_IMAGE_EMPTY">GTK_IMAGE_EMPTY</a> or
+<a href="gtkimage.html#GTK_IMAGE_PIXBUF">GTK_IMAGE_PIXBUF</a> (see <a href="gtkimage.html#gtk_image_get_storage_type">gtk_image_get_storage_type</a>).
+The caller of this function does not own a reference to the
+returned pixbuf.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>image</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkimage.html#GtkImage">GtkImage</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					
+										
+<span class="annotation">[<abbr title="NULL may be passed to the value"><span class="acronym">nullable</span></abbr>]</span>
+<span class="annotation">[<abbr title="Don't free data after the code is done"><span class="acronym">transfer: none</span></abbr>]</span>
+
+										)
+								–
+			</div>
+							<p>the displayed pixbuf, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> if
+the image is empty</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_image_get_pixbuf">
+	<span><code>Gtk.prototype.get_pixbuf</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_pixbuf(): {
+    // javascript wrapper for 'gtk_image_get_pixbuf'
+}</pre>
+
+<p>Gets the <a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf.Pixbuf</a> being displayed by the <a href="gtkimage.html#GtkImage">Gtk.Image</a>.
+The storage type of the image must be <a href="gtkimage.html#GTK_IMAGE_EMPTY">Gtk.ImageType.EMPTY</a> or
+<a href="gtkimage.html#GTK_IMAGE_PIXBUF">Gtk.ImageType.PIXBUF</a> (see <a href="gtkimage.html#gtk_image_get_storage_type">Gtk.prototype.get_storage_type</a>).
+The caller of this function does not own a reference to the
+returned pixbuf.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>image</code></em></i>
+					(
+						<a title="Gtk.Image" href="gtkimage.html#GtkImage">Gtk.Image</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkimage.html#GtkImage">Gtk.Image</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="GdkPixbuf.Pixbuf" href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf.Pixbuf</a>
+										)
+								–
+			</div>
+							<p>the displayed pixbuf, or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a> if
+the image is empty</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_image_get_pixbuf">
+	<span><code>Gtk.Image.get_pixbuf</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Image.get_pixbuf (self):
+    #python wrapper for 'gtk_image_get_pixbuf'</pre>
+
+<p>Gets the <a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf.Pixbuf</a> being displayed by the <a href="gtkimage.html#GtkImage">Gtk.Image</a>.
+The storage type of the image must be <a href="gtkimage.html#GTK_IMAGE_EMPTY">Gtk.ImageType.EMPTY</a> or
+<a href="gtkimage.html#GTK_IMAGE_PIXBUF">Gtk.ImageType.PIXBUF</a> (see <a href="gtkimage.html#gtk_image_get_storage_type">Gtk.Image.get_storage_type</a>).
+The caller of this function does not own a reference to the
+returned pixbuf.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>image</code></em></i>
+					(
+						<a title="Gtk.Image" href="gtkimage.html#GtkImage">Gtk.Image</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkimage.html#GtkImage">Gtk.Image</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="GdkPixbuf.Pixbuf" href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf.Pixbuf</a>
+										)
+								–
+			</div>
+							<p>the displayed pixbuf, or <a href="https://docs.python.org/3/library/constants.html#None">None</a> if
+the image is empty</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_image_get_animation">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_image_get_animation">
+	<span><code>gtk_image_get_animation</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GdkPixbufAnimation" href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-Animations.html#GdkPixbufAnimation-struct">GdkPixbufAnimation</a> *
+gtk_image_get_animation (<a title="GtkImage" href="gtkimage.html#GtkImage">GtkImage</a> * image)</pre>
+
+<p>Gets the <a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-Animations.html#GdkPixbufAnimation-struct">GdkPixbufAnimation</a> being displayed by the <a href="gtkimage.html#GtkImage">GtkImage</a>.
+The storage type of the image must be <a href="gtkimage.html#GTK_IMAGE_EMPTY">GTK_IMAGE_EMPTY</a> or
+<a href="gtkimage.html#GTK_IMAGE_ANIMATION">GTK_IMAGE_ANIMATION</a> (see <a href="gtkimage.html#gtk_image_get_storage_type">gtk_image_get_storage_type</a>).
+The caller of this function does not own a reference to the
+returned animation.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>image</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkimage.html#GtkImage">GtkImage</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					
+										
+<span class="annotation">[<abbr title="NULL may be passed to the value"><span class="acronym">nullable</span></abbr>]</span>
+<span class="annotation">[<abbr title="Don't free data after the code is done"><span class="acronym">transfer: none</span></abbr>]</span>
+
+										)
+								–
+			</div>
+							<p>the displayed animation, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> if
+the image is empty</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_image_get_animation">
+	<span><code>Gtk.prototype.get_animation</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_animation(): {
+    // javascript wrapper for 'gtk_image_get_animation'
+}</pre>
+
+<p>Gets the <a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-Animations.html#GdkPixbufAnimation-struct">GdkPixbuf.PixbufAnimation</a> being displayed by the <a href="gtkimage.html#GtkImage">Gtk.Image</a>.
+The storage type of the image must be <a href="gtkimage.html#GTK_IMAGE_EMPTY">Gtk.ImageType.EMPTY</a> or
+<a href="gtkimage.html#GTK_IMAGE_ANIMATION">Gtk.ImageType.ANIMATION</a> (see <a href="gtkimage.html#gtk_image_get_storage_type">Gtk.prototype.get_storage_type</a>).
+The caller of this function does not own a reference to the
+returned animation.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>image</code></em></i>
+					(
+						<a title="Gtk.Image" href="gtkimage.html#GtkImage">Gtk.Image</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkimage.html#GtkImage">Gtk.Image</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="GdkPixbuf.PixbufAnimation" href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-Animations.html#GdkPixbufAnimation-struct">GdkPixbuf.PixbufAnimation</a>
+										)
+								–
+			</div>
+							<p>the displayed animation, or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a> if
+the image is empty</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_image_get_animation">
+	<span><code>Gtk.Image.get_animation</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Image.get_animation (self):
+    #python wrapper for 'gtk_image_get_animation'</pre>
+
+<p>Gets the <a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-Animations.html#GdkPixbufAnimation-struct">GdkPixbuf.PixbufAnimation</a> being displayed by the <a href="gtkimage.html#GtkImage">Gtk.Image</a>.
+The storage type of the image must be <a href="gtkimage.html#GTK_IMAGE_EMPTY">Gtk.ImageType.EMPTY</a> or
+<a href="gtkimage.html#GTK_IMAGE_ANIMATION">Gtk.ImageType.ANIMATION</a> (see <a href="gtkimage.html#gtk_image_get_storage_type">Gtk.Image.get_storage_type</a>).
+The caller of this function does not own a reference to the
+returned animation.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>image</code></em></i>
+					(
+						<a title="Gtk.Image" href="gtkimage.html#GtkImage">Gtk.Image</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkimage.html#GtkImage">Gtk.Image</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="GdkPixbuf.PixbufAnimation" href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-Animations.html#GdkPixbufAnimation-struct">GdkPixbuf.PixbufAnimation</a>
+										)
+								–
+			</div>
+							<p>the displayed animation, or <a href="https://docs.python.org/3/library/constants.html#None">None</a> if
+the image is empty</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.6;" id="gtk_image_get_icon_name">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_image_get_icon_name">
+	<span><code>gtk_image_get_icon_name</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_image_get_icon_name (<a title="GtkImage" href="gtkimage.html#GtkImage">GtkImage</a> * image,
+                         const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> ** icon_name,
+                         <a title="GtkIconSize" href="https://developer.gnome.org/gtk3/gtk3-Themeable-Stock-Images.html#GtkIconSize">GtkIconSize</a> * size)</pre>
+
+<p>Gets the icon name and size being displayed by the <a href="gtkimage.html#GtkImage">GtkImage</a>.
+The storage type of the image must be <a href="gtkimage.html#GTK_IMAGE_EMPTY">GTK_IMAGE_EMPTY</a> or
+<a href="gtkimage.html#GTK_IMAGE_ICON_NAME">GTK_IMAGE_ICON_NAME</a> (see <a href="gtkimage.html#gtk_image_get_storage_type">gtk_image_get_storage_type</a>).
+The returned string is owned by the <a href="gtkimage.html#GtkImage">GtkImage</a> and should not
+be freed.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>image</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkimage.html#GtkImage">GtkImage</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>icon_name</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="Parameter for returning results"><span class="acronym">out</span></abbr>]</span>
+<span class="annotation">[<abbr title="Don't free data after the code is done"><span class="acronym">transfer: none</span></abbr>]</span>
+<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>place to store an
+icon name, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>size</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="Parameter for returning results"><span class="acronym">out</span></abbr>]</span>
+<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
+<span class="annotation">[<abbr title="Override the parsed C type with given type"><span class="acronym">type</span></abbr> int]</span>
+
+						)
+				–
+	</div>
+			<p>place to store an icon size
+(#GtkIconSize), or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.6
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_image_get_icon_name">
+	<span><code>Gtk.prototype.get_icon_name</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_icon_name(): {
+    // javascript wrapper for 'gtk_image_get_icon_name'
+}</pre>
+
+<p>Gets the icon name and size being displayed by the <a href="gtkimage.html#GtkImage">Gtk.Image</a>.
+The storage type of the image must be <a href="gtkimage.html#GTK_IMAGE_EMPTY">Gtk.ImageType.EMPTY</a> or
+<a href="gtkimage.html#GTK_IMAGE_ICON_NAME">Gtk.ImageType.ICON_NAME</a> (see <a href="gtkimage.html#gtk_image_get_storage_type">Gtk.prototype.get_storage_type</a>).
+The returned string is owned by the <a href="gtkimage.html#GtkImage">Gtk.Image</a> and should not
+be freed.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>image</code></em></i>
+					(
+						<a title="Gtk.Image" href="gtkimage.html#GtkImage">Gtk.Image</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkimage.html#GtkImage">Gtk.Image</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.6
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_image_get_icon_name">
+	<span><code>Gtk.Image.get_icon_name</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Image.get_icon_name (self):
+    #python wrapper for 'gtk_image_get_icon_name'</pre>
+
+<p>Gets the icon name and size being displayed by the <a href="gtkimage.html#GtkImage">Gtk.Image</a>.
+The storage type of the image must be <a href="gtkimage.html#GTK_IMAGE_EMPTY">Gtk.ImageType.EMPTY</a> or
+<a href="gtkimage.html#GTK_IMAGE_ICON_NAME">Gtk.ImageType.ICON_NAME</a> (see <a href="gtkimage.html#gtk_image_get_storage_type">Gtk.Image.get_storage_type</a>).
+The returned string is owned by the <a href="gtkimage.html#GtkImage">Gtk.Image</a> and should not
+be freed.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>image</code></em></i>
+					(
+						<a title="Gtk.Image" href="gtkimage.html#GtkImage">Gtk.Image</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkimage.html#GtkImage">Gtk.Image</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.6
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.14;" id="gtk_image_get_gicon">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_image_get_gicon">
+	<span><code>gtk_image_get_gicon</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_image_get_gicon (<a title="GtkImage" href="gtkimage.html#GtkImage">GtkImage</a> * image,
+                     <a title="GIcon" href="https://developer.gnome.org/gio/unstable/GIcon.html#GIcon-struct">GIcon</a> ** gicon,
+                     <a title="GtkIconSize" href="https://developer.gnome.org/gtk3/gtk3-Themeable-Stock-Images.html#GtkIconSize">GtkIconSize</a> * size)</pre>
+
+<p>Gets the <a href="https://developer.gnome.org/gio/unstable/GIcon.html#GIcon-struct">GIcon</a> and size being displayed by the <a href="gtkimage.html#GtkImage">GtkImage</a>.
+The storage type of the image must be <a href="gtkimage.html#GTK_IMAGE_EMPTY">GTK_IMAGE_EMPTY</a> or
+<a href="gtkimage.html#GTK_IMAGE_GICON">GTK_IMAGE_GICON</a> (see <a href="gtkimage.html#gtk_image_get_storage_type">gtk_image_get_storage_type</a>).
+The caller of this function does not own a reference to the
+returned <a href="https://developer.gnome.org/gio/unstable/GIcon.html#GIcon-struct">GIcon</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>image</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkimage.html#GtkImage">GtkImage</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>gicon</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="Parameter for returning results"><span class="acronym">out</span></abbr>]</span>
+<span class="annotation">[<abbr title="Don't free data after the code is done"><span class="acronym">transfer: none</span></abbr>]</span>
+<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>place to store a
+<a href="https://developer.gnome.org/gio/unstable/GIcon.html#GIcon-struct">GIcon</a>, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>size</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="Parameter for returning results"><span class="acronym">out</span></abbr>]</span>
+<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
+<span class="annotation">[<abbr title="Override the parsed C type with given type"><span class="acronym">type</span></abbr> int]</span>
+
+						)
+				–
+	</div>
+			<p>place to store an icon size
+(#GtkIconSize), or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.14
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_image_get_gicon">
+	<span><code>Gtk.prototype.get_gicon</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_gicon(): {
+    // javascript wrapper for 'gtk_image_get_gicon'
+}</pre>
+
+<p>Gets the <a href="https://developer.gnome.org/gio/unstable/GIcon.html#GIcon-struct">Gio.Icon</a> and size being displayed by the <a href="gtkimage.html#GtkImage">Gtk.Image</a>.
+The storage type of the image must be <a href="gtkimage.html#GTK_IMAGE_EMPTY">Gtk.ImageType.EMPTY</a> or
+<a href="gtkimage.html#GTK_IMAGE_GICON">Gtk.ImageType.GICON</a> (see <a href="gtkimage.html#gtk_image_get_storage_type">Gtk.prototype.get_storage_type</a>).
+The caller of this function does not own a reference to the
+returned <a href="https://developer.gnome.org/gio/unstable/GIcon.html#GIcon-struct">Gio.Icon</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>image</code></em></i>
+					(
+						<a title="Gtk.Image" href="gtkimage.html#GtkImage">Gtk.Image</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkimage.html#GtkImage">Gtk.Image</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.14
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_image_get_gicon">
+	<span><code>Gtk.Image.get_gicon</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Image.get_gicon (self):
+    #python wrapper for 'gtk_image_get_gicon'</pre>
+
+<p>Gets the <a href="https://developer.gnome.org/gio/unstable/GIcon.html#GIcon-struct">Gio.Icon</a> and size being displayed by the <a href="gtkimage.html#GtkImage">Gtk.Image</a>.
+The storage type of the image must be <a href="gtkimage.html#GTK_IMAGE_EMPTY">Gtk.ImageType.EMPTY</a> or
+<a href="gtkimage.html#GTK_IMAGE_GICON">Gtk.ImageType.GICON</a> (see <a href="gtkimage.html#gtk_image_get_storage_type">Gtk.Image.get_storage_type</a>).
+The caller of this function does not own a reference to the
+returned <a href="https://developer.gnome.org/gio/unstable/GIcon.html#GIcon-struct">Gio.Icon</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>image</code></em></i>
+					(
+						<a title="Gtk.Image" href="gtkimage.html#GtkImage">Gtk.Image</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkimage.html#GtkImage">Gtk.Image</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.14
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_image_get_storage_type">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_image_get_storage_type">
+	<span><code>gtk_image_get_storage_type</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkImageType" href="gtkimage.html#GtkImageType">GtkImageType</a>
+gtk_image_get_storage_type (<a title="GtkImage" href="gtkimage.html#GtkImage">GtkImage</a> * image)</pre>
+
+<p>Gets the type of representation being used by the <a href="gtkimage.html#GtkImage">GtkImage</a>
+to store image data. If the <a href="gtkimage.html#GtkImage">GtkImage</a> has no image data,
+the return value will be <a href="gtkimage.html#GTK_IMAGE_EMPTY">GTK_IMAGE_EMPTY</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>image</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkimage.html#GtkImage">GtkImage</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>image representation being used</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_image_get_storage_type">
+	<span><code>Gtk.prototype.get_storage_type</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_storage_type(): {
+    // javascript wrapper for 'gtk_image_get_storage_type'
+}</pre>
+
+<p>Gets the type of representation being used by the <a href="gtkimage.html#GtkImage">Gtk.Image</a>
+to store image data. If the <a href="gtkimage.html#GtkImage">Gtk.Image</a> has no image data,
+the return value will be <a href="gtkimage.html#GTK_IMAGE_EMPTY">Gtk.ImageType.EMPTY</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>image</code></em></i>
+					(
+						<a title="Gtk.Image" href="gtkimage.html#GtkImage">Gtk.Image</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkimage.html#GtkImage">Gtk.Image</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.ImageType" href="gtkimage.html#GtkImageType">Gtk.ImageType</a>
+										)
+								–
+			</div>
+							<p>image representation being used</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_image_get_storage_type">
+	<span><code>Gtk.Image.get_storage_type</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Image.get_storage_type (self):
+    #python wrapper for 'gtk_image_get_storage_type'</pre>
+
+<p>Gets the type of representation being used by the <a href="gtkimage.html#GtkImage">Gtk.Image</a>
+to store image data. If the <a href="gtkimage.html#GtkImage">Gtk.Image</a> has no image data,
+the return value will be <a href="gtkimage.html#GTK_IMAGE_EMPTY">Gtk.ImageType.EMPTY</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>image</code></em></i>
+					(
+						<a title="Gtk.Image" href="gtkimage.html#GtkImage">Gtk.Image</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkimage.html#GtkImage">Gtk.Image</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.ImageType" href="gtkimage.html#GtkImageType">Gtk.ImageType</a>
+										)
+								–
+			</div>
+							<p>image representation being used</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_image_set_from_file">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_image_set_from_file">
+	<span><code>gtk_image_set_from_file</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_image_set_from_file (<a title="GtkImage" href="gtkimage.html#GtkImage">GtkImage</a> * image,
+                         <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * filename)</pre>
+
+<p>See <a href="gtkimage.html#gtk_image_new_from_file">gtk_image_new_from_file</a> for details.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>image</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkimage.html#GtkImage">GtkImage</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>filename</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="Override the parsed C type with given type"><span class="acronym">type</span></abbr> filename]</span>
+<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>a filename or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_image_set_from_file">
+	<span><code>Gtk.prototype.set_from_file</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_from_file(filename: filename): {
+    // javascript wrapper for 'gtk_image_set_from_file'
+}</pre>
+
+<p>See <a href="gtkimage.html#gtk_image_new_from_file">Gtk.prototype.new_from_file</a> for details.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>image</code></em></i>
+					(
+						<a title="Gtk.Image" href="gtkimage.html#GtkImage">Gtk.Image</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkimage.html#GtkImage">Gtk.Image</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>filename</code></em></i>
+					(
+						filename
+						)
+				–
+	</div>
+			<p>a filename or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_image_set_from_file">
+	<span><code>Gtk.Image.set_from_file</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Image.set_from_file (self, filename):
+    #python wrapper for 'gtk_image_set_from_file'</pre>
+
+<p>See <a href="gtkimage.html#gtk_image_new_from_file">Gtk.Image.new_from_file</a> for details.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>image</code></em></i>
+					(
+						<a title="Gtk.Image" href="gtkimage.html#GtkImage">Gtk.Image</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkimage.html#GtkImage">Gtk.Image</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>filename</code></em></i>
+					(
+						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
+						)
+				–
+	</div>
+			<p>a filename or <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_image_set_from_pixbuf">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_image_set_from_pixbuf">
+	<span><code>gtk_image_set_from_pixbuf</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_image_set_from_pixbuf (<a title="GtkImage" href="gtkimage.html#GtkImage">GtkImage</a> * image,
+                           <a title="GdkPixbuf" href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf</a> * pixbuf)</pre>
+
+<p>See <a href="gtkimage.html#gtk_image_new_from_pixbuf">gtk_image_new_from_pixbuf</a> for details.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>image</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkimage.html#GtkImage">GtkImage</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>pixbuf</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>a <a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf</a> or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_image_set_from_pixbuf">
+	<span><code>Gtk.prototype.set_from_pixbuf</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_from_pixbuf(pixbuf: <a title="GdkPixbuf.Pixbuf" href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf.Pixbuf</a>): {
+    // javascript wrapper for 'gtk_image_set_from_pixbuf'
+}</pre>
+
+<p>See <a href="gtkimage.html#gtk_image_new_from_pixbuf">Gtk.prototype.new_from_pixbuf</a> for details.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>image</code></em></i>
+					(
+						<a title="Gtk.Image" href="gtkimage.html#GtkImage">Gtk.Image</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkimage.html#GtkImage">Gtk.Image</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>pixbuf</code></em></i>
+					(
+						<a title="GdkPixbuf.Pixbuf" href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf.Pixbuf</a>
+						)
+				–
+	</div>
+			<p>a <a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf.Pixbuf</a> or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_image_set_from_pixbuf">
+	<span><code>Gtk.Image.set_from_pixbuf</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Image.set_from_pixbuf (self, pixbuf):
+    #python wrapper for 'gtk_image_set_from_pixbuf'</pre>
+
+<p>See <a href="gtkimage.html#gtk_image_new_from_pixbuf">Gtk.Image.new_from_pixbuf</a> for details.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>image</code></em></i>
+					(
+						<a title="Gtk.Image" href="gtkimage.html#GtkImage">Gtk.Image</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkimage.html#GtkImage">Gtk.Image</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>pixbuf</code></em></i>
+					(
+						<a title="GdkPixbuf.Pixbuf" href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf.Pixbuf</a>
+						)
+				–
+	</div>
+			<p>a <a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf.Pixbuf</a> or <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_image_set_from_animation">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_image_set_from_animation">
+	<span><code>gtk_image_set_from_animation</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_image_set_from_animation (<a title="GtkImage" href="gtkimage.html#GtkImage">GtkImage</a> * image,
+                              <a title="GdkPixbufAnimation" href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-Animations.html#GdkPixbufAnimation-struct">GdkPixbufAnimation</a> * animation)</pre>
+
+<p>Causes the <a href="gtkimage.html#GtkImage">GtkImage</a> to display the given animation (or display
+nothing, if you set the animation to <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a>).</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>image</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkimage.html#GtkImage">GtkImage</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>animation</code></em></i>
+				–
+	</div>
+			<p>the <a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-Animations.html#GdkPixbufAnimation-struct">GdkPixbufAnimation</a></p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_image_set_from_animation">
+	<span><code>Gtk.prototype.set_from_animation</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_from_animation(animation: <a title="GdkPixbuf.PixbufAnimation" href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-Animations.html#GdkPixbufAnimation-struct">GdkPixbuf.PixbufAnimation</a>): {
+    // javascript wrapper for 'gtk_image_set_from_animation'
+}</pre>
+
+<p>Causes the <a href="gtkimage.html#GtkImage">Gtk.Image</a> to display the given animation (or display
+nothing, if you set the animation to <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a>).</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>image</code></em></i>
+					(
+						<a title="Gtk.Image" href="gtkimage.html#GtkImage">Gtk.Image</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkimage.html#GtkImage">Gtk.Image</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>animation</code></em></i>
+					(
+						<a title="GdkPixbuf.PixbufAnimation" href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-Animations.html#GdkPixbufAnimation-struct">GdkPixbuf.PixbufAnimation</a>
+						)
+				–
+	</div>
+			<p>the <a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-Animations.html#GdkPixbufAnimation-struct">GdkPixbuf.PixbufAnimation</a></p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_image_set_from_animation">
+	<span><code>Gtk.Image.set_from_animation</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Image.set_from_animation (self, animation):
+    #python wrapper for 'gtk_image_set_from_animation'</pre>
+
+<p>Causes the <a href="gtkimage.html#GtkImage">Gtk.Image</a> to display the given animation (or display
+nothing, if you set the animation to <a href="https://docs.python.org/3/library/constants.html#None">None</a>).</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>image</code></em></i>
+					(
+						<a title="Gtk.Image" href="gtkimage.html#GtkImage">Gtk.Image</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkimage.html#GtkImage">Gtk.Image</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>animation</code></em></i>
+					(
+						<a title="GdkPixbuf.PixbufAnimation" href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-Animations.html#GdkPixbufAnimation-struct">GdkPixbuf.PixbufAnimation</a>
+						)
+				–
+	</div>
+			<p>the <a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-Animations.html#GdkPixbufAnimation-struct">GdkPixbuf.PixbufAnimation</a></p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.6;" id="gtk_image_set_from_icon_name">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_image_set_from_icon_name">
+	<span><code>gtk_image_set_from_icon_name</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_image_set_from_icon_name (<a title="GtkImage" href="gtkimage.html#GtkImage">GtkImage</a> * image,
+                              const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * icon_name,
+                              <a title="GtkIconSize" href="https://developer.gnome.org/gtk3/gtk3-Themeable-Stock-Images.html#GtkIconSize">GtkIconSize</a> size)</pre>
+
+<p>See <a href="gtkimage.html#gtk_image_new_from_icon_name">gtk_image_new_from_icon_name</a> for details.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>image</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkimage.html#GtkImage">GtkImage</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>icon_name</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="NULL may be passed to the value"><span class="acronym">nullable</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>an icon name or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>size</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="Override the parsed C type with given type"><span class="acronym">type</span></abbr> int]</span>
+
+						)
+				–
+	</div>
+			<p>an icon size (#GtkIconSize)</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.6
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_image_set_from_icon_name">
+	<span><code>Gtk.prototype.set_from_icon_name</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_from_icon_name(icon_name: <a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>, size: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_image_set_from_icon_name'
+}</pre>
+
+<p>See <a href="gtkimage.html#gtk_image_new_from_icon_name">Gtk.prototype.new_from_icon_name</a> for details.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>image</code></em></i>
+					(
+						<a title="Gtk.Image" href="gtkimage.html#GtkImage">Gtk.Image</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkimage.html#GtkImage">Gtk.Image</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>icon_name</code></em></i>
+					(
+						<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
+						)
+				–
+	</div>
+			<p>an icon name or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>size</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>an icon size (#GtkIconSize)</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.6
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_image_set_from_icon_name">
+	<span><code>Gtk.Image.set_from_icon_name</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Image.set_from_icon_name (self, icon_name, size):
+    #python wrapper for 'gtk_image_set_from_icon_name'</pre>
+
+<p>See <a href="gtkimage.html#gtk_image_new_from_icon_name">Gtk.Image.new_from_icon_name</a> for details.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>image</code></em></i>
+					(
+						<a title="Gtk.Image" href="gtkimage.html#GtkImage">Gtk.Image</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkimage.html#GtkImage">Gtk.Image</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>icon_name</code></em></i>
+					(
+						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
+						)
+				–
+	</div>
+			<p>an icon name or <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>size</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>an icon size (#GtkIconSize)</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.6
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.14;" id="gtk_image_set_from_gicon">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_image_set_from_gicon">
+	<span><code>gtk_image_set_from_gicon</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_image_set_from_gicon (<a title="GtkImage" href="gtkimage.html#GtkImage">GtkImage</a> * image,
+                          <a title="GIcon" href="https://developer.gnome.org/gio/unstable/GIcon.html#GIcon-struct">GIcon</a> * icon,
+                          <a title="GtkIconSize" href="https://developer.gnome.org/gtk3/gtk3-Themeable-Stock-Images.html#GtkIconSize">GtkIconSize</a> size)</pre>
+
+<p>See <a href="gtkimage.html#gtk_image_new_from_gicon">gtk_image_new_from_gicon</a> for details.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>image</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkimage.html#GtkImage">GtkImage</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>icon</code></em></i>
+				–
+	</div>
+			<p>an icon</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>size</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="Override the parsed C type with given type"><span class="acronym">type</span></abbr> int]</span>
+
+						)
+				–
+	</div>
+			<p>an icon size (#GtkIconSize)</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.14
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_image_set_from_gicon">
+	<span><code>Gtk.prototype.set_from_gicon</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_from_gicon(icon: <a title="Gio.Icon" href="https://developer.gnome.org/gio/unstable/GIcon.html#GIcon-struct">Gio.Icon</a>, size: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_image_set_from_gicon'
+}</pre>
+
+<p>See <a href="gtkimage.html#gtk_image_new_from_gicon">Gtk.prototype.new_from_gicon</a> for details.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>image</code></em></i>
+					(
+						<a title="Gtk.Image" href="gtkimage.html#GtkImage">Gtk.Image</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkimage.html#GtkImage">Gtk.Image</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>icon</code></em></i>
+					(
+						<a title="Gio.Icon" href="https://developer.gnome.org/gio/unstable/GIcon.html#GIcon-struct">Gio.Icon</a>
+						)
+				–
+	</div>
+			<p>an icon</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>size</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>an icon size (#GtkIconSize)</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.14
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_image_set_from_gicon">
+	<span><code>Gtk.Image.set_from_gicon</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Image.set_from_gicon (self, icon, size):
+    #python wrapper for 'gtk_image_set_from_gicon'</pre>
+
+<p>See <a href="gtkimage.html#gtk_image_new_from_gicon">Gtk.Image.new_from_gicon</a> for details.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>image</code></em></i>
+					(
+						<a title="Gtk.Image" href="gtkimage.html#GtkImage">Gtk.Image</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkimage.html#GtkImage">Gtk.Image</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>icon</code></em></i>
+					(
+						<a title="Gio.Icon" href="https://developer.gnome.org/gio/unstable/GIcon.html#GIcon-struct">Gio.Icon</a>
+						)
+				–
+	</div>
+			<p>an icon</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>size</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>an icon size (#GtkIconSize)</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.14
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_image_set_from_resource">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_image_set_from_resource">
+	<span><code>gtk_image_set_from_resource</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_image_set_from_resource (<a title="GtkImage" href="gtkimage.html#GtkImage">GtkImage</a> * image,
+                             const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * resource_path)</pre>
+
+<p>See <a href="gtkimage.html#gtk_image_new_from_resource">gtk_image_new_from_resource</a> for details.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>image</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkimage.html#GtkImage">GtkImage</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>resource_path</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>a resource path or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_image_set_from_resource">
+	<span><code>Gtk.prototype.set_from_resource</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_from_resource(resource_path: <a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>): {
+    // javascript wrapper for 'gtk_image_set_from_resource'
+}</pre>
+
+<p>See <a href="gtkimage.html#gtk_image_new_from_resource">Gtk.prototype.new_from_resource</a> for details.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>image</code></em></i>
+					(
+						<a title="Gtk.Image" href="gtkimage.html#GtkImage">Gtk.Image</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkimage.html#GtkImage">Gtk.Image</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>resource_path</code></em></i>
+					(
+						<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
+						)
+				–
+	</div>
+			<p>a resource path or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_image_set_from_resource">
+	<span><code>Gtk.Image.set_from_resource</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Image.set_from_resource (self, resource_path):
+    #python wrapper for 'gtk_image_set_from_resource'</pre>
+
+<p>See <a href="gtkimage.html#gtk_image_new_from_resource">Gtk.Image.new_from_resource</a> for details.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>image</code></em></i>
+					(
+						<a title="Gtk.Image" href="gtkimage.html#GtkImage">Gtk.Image</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkimage.html#GtkImage">Gtk.Image</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>resource_path</code></em></i>
+					(
+						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
+						)
+				–
+	</div>
+			<p>a resource path or <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.10;" id="gtk_image_set_from_surface">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_image_set_from_surface">
+	<span><code>gtk_image_set_from_surface</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_image_set_from_surface (<a title="GtkImage" href="gtkimage.html#GtkImage">GtkImage</a> * image,
+                            <a title="cairo_surface_t" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-surface-t.html#cairo-surface-t">cairo_surface_t</a> * surface)</pre>
+
+<p>See <a href="gtkimage.html#gtk_image_new_from_surface">gtk_image_new_from_surface</a> for details.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>image</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkimage.html#GtkImage">GtkImage</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>surface</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="NULL may be passed to the value"><span class="acronym">nullable</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>a cairo_surface_t or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_image_set_from_surface">
+	<span><code>Gtk.prototype.set_from_surface</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_from_surface(surface: <a title="cairo.Surface" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-surface-t.html#cairo-surface-t">cairo.Surface</a>): {
+    // javascript wrapper for 'gtk_image_set_from_surface'
+}</pre>
+
+<p>See <a href="gtkimage.html#gtk_image_new_from_surface">Gtk.prototype.new_from_surface</a> for details.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>image</code></em></i>
+					(
+						<a title="Gtk.Image" href="gtkimage.html#GtkImage">Gtk.Image</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkimage.html#GtkImage">Gtk.Image</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>surface</code></em></i>
+					(
+						<a title="cairo.Surface" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-surface-t.html#cairo-surface-t">cairo.Surface</a>
+						)
+				–
+	</div>
+			<p>a cairo_surface_t or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_image_set_from_surface">
+	<span><code>Gtk.Image.set_from_surface</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Image.set_from_surface (self, surface):
+    #python wrapper for 'gtk_image_set_from_surface'</pre>
+
+<p>See <a href="gtkimage.html#gtk_image_new_from_surface">Gtk.Image.new_from_surface</a> for details.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>image</code></em></i>
+					(
+						<a title="Gtk.Image" href="gtkimage.html#GtkImage">Gtk.Image</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkimage.html#GtkImage">Gtk.Image</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>surface</code></em></i>
+					(
+						<a title="cairo.Surface" href="https://developer.gnome.org/cairo/unstable/cairo-cairo-surface-t.html#cairo-surface-t">cairo.Surface</a>
+						)
+				–
+	</div>
+			<p>a cairo_surface_t or <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.10
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.8;" id="gtk_image_clear">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_image_clear">
+	<span><code>gtk_image_clear</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_image_clear (<a title="GtkImage" href="gtkimage.html#GtkImage">GtkImage</a> * image)</pre>
+
+<p>Resets the image to be empty.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>image</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkimage.html#GtkImage">GtkImage</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.8
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_image_clear">
+	<span><code>Gtk.prototype.clear</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.clear(): {
+    // javascript wrapper for 'gtk_image_clear'
+}</pre>
+
+<p>Resets the image to be empty.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>image</code></em></i>
+					(
+						<a title="Gtk.Image" href="gtkimage.html#GtkImage">Gtk.Image</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkimage.html#GtkImage">Gtk.Image</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.8
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_image_clear">
+	<span><code>Gtk.Image.clear</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Image.clear (self):
+    #python wrapper for 'gtk_image_clear'</pre>
+
+<p>Resets the image to be empty.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>image</code></em></i>
+					(
+						<a title="Gtk.Image" href="gtkimage.html#GtkImage">Gtk.Image</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkimage.html#GtkImage">Gtk.Image</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.8
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.6;" id="gtk_image_set_pixel_size">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_image_set_pixel_size">
+	<span><code>gtk_image_set_pixel_size</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_image_set_pixel_size (<a title="GtkImage" href="gtkimage.html#GtkImage">GtkImage</a> * image,
+                          <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> pixel_size)</pre>
+
+<p>Sets the pixel size to use for named icons. If the pixel size is set
+to a value != -1, it is used instead of the icon size set by
+<a href="gtkimage.html#gtk_image_set_from_icon_name">gtk_image_set_from_icon_name</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>image</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkimage.html#GtkImage">GtkImage</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>pixel_size</code></em></i>
+				–
+	</div>
+			<p>the new pixel size</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.6
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_image_set_pixel_size">
+	<span><code>Gtk.prototype.set_pixel_size</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_pixel_size(pixel_size: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_image_set_pixel_size'
+}</pre>
+
+<p>Sets the pixel size to use for named icons. If the pixel size is set
+to a value != -1, it is used instead of the icon size set by
+<a href="gtkimage.html#gtk_image_set_from_icon_name">Gtk.prototype.set_from_icon_name</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>image</code></em></i>
+					(
+						<a title="Gtk.Image" href="gtkimage.html#GtkImage">Gtk.Image</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkimage.html#GtkImage">Gtk.Image</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>pixel_size</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the new pixel size</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.6
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_image_set_pixel_size">
+	<span><code>Gtk.Image.set_pixel_size</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Image.set_pixel_size (self, pixel_size):
+    #python wrapper for 'gtk_image_set_pixel_size'</pre>
+
+<p>Sets the pixel size to use for named icons. If the pixel size is set
+to a value != -1, it is used instead of the icon size set by
+<a href="gtkimage.html#gtk_image_set_from_icon_name">Gtk.Image.set_from_icon_name</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>image</code></em></i>
+					(
+						<a title="Gtk.Image" href="gtkimage.html#GtkImage">Gtk.Image</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkimage.html#GtkImage">Gtk.Image</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>pixel_size</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>the new pixel size</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.6
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.6;" id="gtk_image_get_pixel_size">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_image_get_pixel_size">
+	<span><code>gtk_image_get_pixel_size</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a>
+gtk_image_get_pixel_size (<a title="GtkImage" href="gtkimage.html#GtkImage">GtkImage</a> * image)</pre>
+
+<p>Gets the pixel size used for named icons.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>image</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkimage.html#GtkImage">GtkImage</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>the pixel size used for named icons.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.6
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_image_get_pixel_size">
+	<span><code>Gtk.prototype.get_pixel_size</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_pixel_size(): {
+    // javascript wrapper for 'gtk_image_get_pixel_size'
+}</pre>
+
+<p>Gets the pixel size used for named icons.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>image</code></em></i>
+					(
+						<a title="Gtk.Image" href="gtkimage.html#GtkImage">Gtk.Image</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkimage.html#GtkImage">Gtk.Image</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p>the pixel size used for named icons.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.6
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_image_get_pixel_size">
+	<span><code>Gtk.Image.get_pixel_size</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Image.get_pixel_size (self):
+    #python wrapper for 'gtk_image_get_pixel_size'</pre>
+
+<p>Gets the pixel size used for named icons.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>image</code></em></i>
+					(
+						<a title="Gtk.Image" href="gtkimage.html#GtkImage">Gtk.Image</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkimage.html#GtkImage">Gtk.Image</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+										)
+								–
+			</div>
+							<p>the pixel size used for named icons.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.6
+		</p>
+
+
+        </div>
+
+</div>
+
+
+        
+
+            <h2 class="symbol_section">Enumerations</h2>
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="GtkImageType">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h3 data-hotdoc-id="GtkImageType">
+	<span><code>GtkImageType</code></span>
+</h3>
+
+
+<p>Describes the image data representation used by a <a href="gtkimage.html#GtkImage">GtkImage</a>. If you
+want to get the image from the widget, you can only get the
+currently-stored representation. e.g.  if the
+<a href="gtkimage.html#gtk_image_get_storage_type">gtk_image_get_storage_type</a> returns <a href="gtkimage.html#GTK_IMAGE_PIXBUF">GTK_IMAGE_PIXBUF</a>, then you can
+call <a href="gtkimage.html#gtk_image_get_pixbuf">gtk_image_get_pixbuf</a>.  For empty images, you can request any
+storage type (call any of the "get" functions), but they will all
+return <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> values.</p>
+
+
+
+
+	<div class="members-container">
+		<h4>Members</h4>
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_IMAGE_EMPTY">
+	<div>
+		<i><em><code>GTK_IMAGE_EMPTY</code></em></i>
+		(<span class="value">0</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_IMAGE_PIXBUF">
+	<div>
+		<i><em><code>GTK_IMAGE_PIXBUF</code></em></i>
+		(<span class="value">1</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_IMAGE_ANIMATION">
+	<div>
+		<i><em><code>GTK_IMAGE_ANIMATION</code></em></i>
+		(<span class="value">2</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_IMAGE_ICON_NAME">
+	<div>
+		<i><em><code>GTK_IMAGE_ICON_NAME</code></em></i>
+		(<span class="value">3</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_IMAGE_GICON">
+	<div>
+		<i><em><code>GTK_IMAGE_GICON</code></em></i>
+		(<span class="value">4</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_IMAGE_SURFACE">
+	<div>
+		<i><em><code>GTK_IMAGE_SURFACE</code></em></i>
+		(<span class="value">5</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h3 data-hotdoc-id="GtkImageType">
+	<span><code>Gtk.ImageType</code></span>
+</h3>
+
+
+<p>Describes the image data representation used by a <a href="gtkimage.html#GtkImage">Gtk.Image</a>. If you
+want to get the image from the widget, you can only get the
+currently-stored representation. e.g.  if the
+<a href="gtkimage.html#gtk_image_get_storage_type">Gtk.prototype.get_storage_type</a> returns <a href="gtkimage.html#GTK_IMAGE_PIXBUF">Gtk.ImageType.PIXBUF</a>, then you can
+call <a href="gtkimage.html#gtk_image_get_pixbuf">Gtk.prototype.get_pixbuf</a>.  For empty images, you can request any
+storage type (call any of the "get" functions), but they will all
+return <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a> values.</p>
+
+
+
+
+	<div class="members-container">
+		<h4>Members</h4>
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_IMAGE_EMPTY">
+	<div>
+		<i><em><code>Gtk.ImageType.EMPTY</code></em></i>
+		(<span class="value">0</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_IMAGE_PIXBUF">
+	<div>
+		<i><em><code>Gtk.ImageType.PIXBUF</code></em></i>
+		(<span class="value">1</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_IMAGE_ANIMATION">
+	<div>
+		<i><em><code>Gtk.ImageType.ANIMATION</code></em></i>
+		(<span class="value">2</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_IMAGE_ICON_NAME">
+	<div>
+		<i><em><code>Gtk.ImageType.ICON_NAME</code></em></i>
+		(<span class="value">3</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_IMAGE_GICON">
+	<div>
+		<i><em><code>Gtk.ImageType.GICON</code></em></i>
+		(<span class="value">4</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_IMAGE_SURFACE">
+	<div>
+		<i><em><code>Gtk.ImageType.SURFACE</code></em></i>
+		(<span class="value">5</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="GtkImageType">
+	<span><code>Gtk.ImageType</code></span>
+</h3>
+
+
+<p>Describes the image data representation used by a <a href="gtkimage.html#GtkImage">Gtk.Image</a>. If you
+want to get the image from the widget, you can only get the
+currently-stored representation. e.g.  if the
+<a href="gtkimage.html#gtk_image_get_storage_type">Gtk.Image.get_storage_type</a> returns <a href="gtkimage.html#GTK_IMAGE_PIXBUF">Gtk.ImageType.PIXBUF</a>, then you can
+call <a href="gtkimage.html#gtk_image_get_pixbuf">Gtk.Image.get_pixbuf</a>.  For empty images, you can request any
+storage type (call any of the "get" functions), but they will all
+return <a href="https://docs.python.org/3/library/constants.html#None">None</a> values.</p>
+
+
+
+
+	<div class="members-container">
+		<h4>Members</h4>
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_IMAGE_EMPTY">
+	<div>
+		<i><em><code>Gtk.ImageType.EMPTY</code></em></i>
+		(<span class="value">0</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_IMAGE_PIXBUF">
+	<div>
+		<i><em><code>Gtk.ImageType.PIXBUF</code></em></i>
+		(<span class="value">1</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_IMAGE_ANIMATION">
+	<div>
+		<i><em><code>Gtk.ImageType.ANIMATION</code></em></i>
+		(<span class="value">2</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_IMAGE_ICON_NAME">
+	<div>
+		<i><em><code>Gtk.ImageType.ICON_NAME</code></em></i>
+		(<span class="value">3</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_IMAGE_GICON">
+	<div>
+		<i><em><code>Gtk.ImageType.GICON</code></em></i>
+		(<span class="value">4</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_IMAGE_SURFACE">
+	<div>
+		<i><em><code>Gtk.ImageType.SURFACE</code></em></i>
+		(<span class="value">5</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+
+</div>
+
+
+
+
+
+
+		
+	</div>
+	<div id="search_results">
+		<p>The results of the search are</p>
+	</div>
+	<hr>
+	<div id="footer">
+		    
+
+	</div>
+</div>
+
+<div id="toc-column">
+	
+		<div class="edit-button">
+		
+
+	</div>
+		<div id="toc-wrapper">
+		<nav id="toc"></nav>
+	</div>
+</div>
+</div>
+</main>
+
+</body>
+
+<script src="assets/js/navbar_offset_scroller.js"></script>
+</html>

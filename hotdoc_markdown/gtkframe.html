@@ -1,0 +1,2012 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<base href="..">
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>gtkframe</title>
+
+<link rel="stylesheet" href="assets/css/custom_bootstrap.css" type="text/css">
+<link rel="stylesheet" href="assets/css/bootstrap-toc.min.css" type="text/css">
+<link rel="stylesheet" href="assets/css/frontend.css" type="text/css">
+<link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
+
+<link rel="stylesheet" href="assets/css/prism.css" type="text/css">
+
+<script src="assets/js/mustache.min.js"></script>
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/scrollspy.js"></script>
+<script src="assets/js/bootstrap.js"></script>
+<script src="assets/js/typeahead.jquery.min.js"></script>
+<script src="assets/js/search.js"></script>
+<script src="assets/js/isotope.pkgd.min.js"></script>
+<script src="assets/js/compare-versions.js"></script>
+<script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="assets/js/bootstrap-toc.min.js"></script>
+<script src="assets/js/jquery.touchSwipe.min.js"></script>
+<script src="assets/js/anchor.min.js"></script>
+<script src="assets/js/tag_filtering.js"></script>
+<script src="assets/js/language_switching.js"></script>
+
+<script src="assets/js/lines_around_headings.js"></script>
+
+<script src="assets/js/prism-core.js"></script>
+<script src="assets/js/prism-autoloader.js"></script>
+<script src="assets/js/prism_autoloader_path_override.js"></script>
+<script src="assets/js/trie.js"></script>
+
+
+</head>
+
+<body class="no-script
+" data-spy="scroll" data-target="#toc" data-offset="70">
+
+<script>
+$('body').removeClass('no-script');
+</script>
+
+<nav class="navbar navbar-fixed-top navbar-default" id="topnav">
+	<div class="container-fluid">
+		<div class="navbar-right">
+			<a id="toc-toggle">
+				<span class="glyphicon glyphicon-menu-right"></span>
+				<span class="glyphicon glyphicon-menu-left"></span>
+			</a>
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-wrapper" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<form action="" class="navbar-form pull-right" id="navbar-search-form">
+                               <div class="form-group has-feedback">
+                                       <input type="text" class="form-control input-sm" name="search" id="sidenav-lookup-field" placeholder="search" disabled>
+				       <span class="glyphicon glyphicon-search form-control-feedback" id="search-mgn-glass"></span>
+                               </div>
+                        </form>
+		</div>
+		<div class="navbar-header">
+			<a id="sidenav-toggle">
+				<span class="glyphicon glyphicon-menu-right"></span>
+				<span class="glyphicon glyphicon-menu-left"></span>
+			</a>
+			<a id="home-link" href="index.html" class="hotdoc-navbar-brand">
+				<img src="assets/images/home.svg" alt="Home">
+			</a>
+		</div>
+		<div class="navbar-collapse collapse" id="navbar-wrapper">
+			<ul class="nav navbar-nav" id="menu">
+							</ul>
+			<div class="hidden-xs hidden-sm navbar-text navbar-center">
+							</div>
+		</div>
+	</div>
+</nav>
+
+<main>
+<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="hotdoc_markdown/gtkframe.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['c', 'javascript', 'python']" data-hotdoc-meta-gi-language="c">
+<script src="assets/js/utils.js"></script>
+
+<div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
+	<script src="assets/js/navigation.js"></script>
+	<script src="assets/js/sitemap.js"></script>
+</div>
+
+<div id="body">
+	<div id="main">
+				    <div id="page-description" data-hotdoc-source="gtkframe.markdown" data-hotdoc-role="main">
+    </div>
+        
+        
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="GtkFrame">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h2 data-hotdoc-id="GtkFrame">
+	<span><code>GtkFrame</code></span>
+</h2>
+
+
+<div class="hierarchy_container">
+	<div class="hierarchy_details">
+<pre>
+<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object">GObject</a>
+    <span class="lineart">╰──</span><a title="GInitiallyUnowned" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-python="GObject.InitiallyUnowned" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-javascript="GObject.InitiallyUnowned">GInitiallyUnowned</a>
+        <span class="lineart">╰──</span><a title="GtkWidget" href="hotdoc_markdown/gtkwidget.html#GtkWidget" data-gi-href-python="hotdoc_markdown/gtkwidget.html#GtkWidget" data-gi-title-python="Gtk.Widget" data-gi-href-javascript="hotdoc_markdown/gtkwidget.html#GtkWidget" data-gi-title-javascript="Gtk.Widget">GtkWidget</a>
+            <span class="lineart">╰──</span><a title="GtkContainer" href="hotdoc_markdown/gtkcontainer.html#GtkContainer" data-gi-href-python="hotdoc_markdown/gtkcontainer.html#GtkContainer" data-gi-title-python="Gtk.Container" data-gi-href-javascript="hotdoc_markdown/gtkcontainer.html#GtkContainer" data-gi-title-javascript="Gtk.Container">GtkContainer</a>
+                <span class="lineart">╰──</span><a title="GtkBin" href="hotdoc_markdown/gtkbin.html#GtkBin" data-gi-href-python="hotdoc_markdown/gtkbin.html#GtkBin" data-gi-title-python="Gtk.Bin" data-gi-href-javascript="hotdoc_markdown/gtkbin.html#GtkBin" data-gi-title-javascript="Gtk.Bin">GtkBin</a>
+                    <span class="lineart">╰──</span>GtkFrame
+                        <span class="lineart">╰──</span><a title="GtkAspectFrame" href="hotdoc_markdown/gtkaspectframe.html#GtkAspectFrame" data-gi-href-python="hotdoc_markdown/gtkaspectframe.html#GtkAspectFrame" data-gi-title-python="Gtk.AspectFrame" data-gi-href-javascript="hotdoc_markdown/gtkaspectframe.html#GtkAspectFrame" data-gi-title-javascript="Gtk.AspectFrame">GtkAspectFrame</a>
+</pre>
+
+</div>
+
+</div>
+
+<div class="interfaces_container">
+	
+<p><b>Implemented interfaces:</b>
+    AtkImplementorIface, <a title="GtkBuildable" href="hotdoc_markdown/gtkbuildable.html#GtkBuildable" data-gi-href-python="hotdoc_markdown/gtkbuildable.html#GtkBuildable" data-gi-title-python="Gtk.Buildable" data-gi-href-javascript="hotdoc_markdown/gtkbuildable.html#GtkBuildable" data-gi-title-javascript="Gtk.Buildable">GtkBuildable</a>
+</p>
+
+</div>
+
+
+
+
+	<div class="members-container">
+		<h3>Members</h3>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkFrame.bin">
+	<div>
+		<i><em><code>bin</code></em></i>
+		(<a title="GtkBin" href="hotdoc_markdown/gtkbin.html#GtkBin" data-gi-href-python="hotdoc_markdown/gtkbin.html#GtkBin" data-gi-title-python="Gtk.Bin" data-gi-href-javascript="hotdoc_markdown/gtkbin.html#GtkBin" data-gi-title-javascript="Gtk.Bin">GtkBin</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+<h3>Class structure</h3>
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="GtkFrameClass">
+	<span><code>GtkFrameClass</code></span>
+</h4>
+
+
+
+
+
+	<div class="members-container">
+		<h5>Fields</h5>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkFrameClass.parent_class">
+	<div>
+		<i><em><code>parent_class</code></em></i>
+		(<a title="GtkBinClass" href="GtkBinClass">GtkBinClass</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h3>
+	Gtk.FrameClass
+</h3>
+
+
+
+
+
+	<div class="members-container">
+		<h5>Attributes</h5>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkFrameClass.parent_class">
+	<div>
+		<i><em><code>FrameClass.parent_class</code></em></i>
+		(<a title="Gtk.BinClass" href="GtkBinClass">Gtk.BinClass</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3>
+	Gtk.FrameClass
+</h3>
+
+
+
+
+
+	<div class="members-container">
+		<h5>Attributes</h5>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkFrameClass.parent_class">
+	<div>
+		<i><em><code>FrameClass.parent_class</code></em></i>
+		(<a title="Gtk.BinClass" href="GtkBinClass">Gtk.BinClass</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h2 data-hotdoc-id="GtkFrame">
+	<span><code>GtkFrame</code></span>
+</h2>
+
+
+<div class="hierarchy_container">
+	<div class="hierarchy_details">
+<pre>
+<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object">GObject</a>
+    <span class="lineart">╰──</span><a title="GInitiallyUnowned" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-python="GObject.InitiallyUnowned" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-javascript="GObject.InitiallyUnowned">GInitiallyUnowned</a>
+        <span class="lineart">╰──</span><a title="GtkWidget" href="hotdoc_markdown/gtkwidget.html#GtkWidget" data-gi-href-python="hotdoc_markdown/gtkwidget.html#GtkWidget" data-gi-title-python="Gtk.Widget" data-gi-href-javascript="hotdoc_markdown/gtkwidget.html#GtkWidget" data-gi-title-javascript="Gtk.Widget">GtkWidget</a>
+            <span class="lineart">╰──</span><a title="GtkContainer" href="hotdoc_markdown/gtkcontainer.html#GtkContainer" data-gi-href-python="hotdoc_markdown/gtkcontainer.html#GtkContainer" data-gi-title-python="Gtk.Container" data-gi-href-javascript="hotdoc_markdown/gtkcontainer.html#GtkContainer" data-gi-title-javascript="Gtk.Container">GtkContainer</a>
+                <span class="lineart">╰──</span><a title="GtkBin" href="hotdoc_markdown/gtkbin.html#GtkBin" data-gi-href-python="hotdoc_markdown/gtkbin.html#GtkBin" data-gi-title-python="Gtk.Bin" data-gi-href-javascript="hotdoc_markdown/gtkbin.html#GtkBin" data-gi-title-javascript="Gtk.Bin">GtkBin</a>
+                    <span class="lineart">╰──</span>GtkFrame
+                        <span class="lineart">╰──</span><a title="GtkAspectFrame" href="hotdoc_markdown/gtkaspectframe.html#GtkAspectFrame" data-gi-href-python="hotdoc_markdown/gtkaspectframe.html#GtkAspectFrame" data-gi-title-python="Gtk.AspectFrame" data-gi-href-javascript="hotdoc_markdown/gtkaspectframe.html#GtkAspectFrame" data-gi-title-javascript="Gtk.AspectFrame">GtkAspectFrame</a>
+</pre>
+
+</div>
+
+</div>
+
+<div class="interfaces_container">
+	
+<p><b>Implemented interfaces:</b>
+    AtkImplementorIface, <a title="GtkBuildable" href="hotdoc_markdown/gtkbuildable.html#GtkBuildable" data-gi-href-python="hotdoc_markdown/gtkbuildable.html#GtkBuildable" data-gi-title-python="Gtk.Buildable" data-gi-href-javascript="hotdoc_markdown/gtkbuildable.html#GtkBuildable" data-gi-title-javascript="Gtk.Buildable">GtkBuildable</a>
+</p>
+
+</div>
+
+
+
+
+	<div class="members-container">
+		<h3>Members</h3>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkFrame.bin">
+	<div>
+		<i><em><code>bin</code></em></i>
+		(<a title="GtkBin" href="hotdoc_markdown/gtkbin.html#GtkBin" data-gi-href-python="hotdoc_markdown/gtkbin.html#GtkBin" data-gi-title-python="Gtk.Bin" data-gi-href-javascript="hotdoc_markdown/gtkbin.html#GtkBin" data-gi-title-javascript="Gtk.Bin">GtkBin</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h2 data-hotdoc-id="GtkFrame">
+	<span><code>GtkFrame</code></span>
+</h2>
+
+
+<div class="hierarchy_container">
+	<div class="hierarchy_details">
+<pre>
+<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object">GObject</a>
+    <span class="lineart">╰──</span><a title="GInitiallyUnowned" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-python="GObject.InitiallyUnowned" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-javascript="GObject.InitiallyUnowned">GInitiallyUnowned</a>
+        <span class="lineart">╰──</span><a title="GtkWidget" href="hotdoc_markdown/gtkwidget.html#GtkWidget" data-gi-href-python="hotdoc_markdown/gtkwidget.html#GtkWidget" data-gi-title-python="Gtk.Widget" data-gi-href-javascript="hotdoc_markdown/gtkwidget.html#GtkWidget" data-gi-title-javascript="Gtk.Widget">GtkWidget</a>
+            <span class="lineart">╰──</span><a title="GtkContainer" href="hotdoc_markdown/gtkcontainer.html#GtkContainer" data-gi-href-python="hotdoc_markdown/gtkcontainer.html#GtkContainer" data-gi-title-python="Gtk.Container" data-gi-href-javascript="hotdoc_markdown/gtkcontainer.html#GtkContainer" data-gi-title-javascript="Gtk.Container">GtkContainer</a>
+                <span class="lineart">╰──</span><a title="GtkBin" href="hotdoc_markdown/gtkbin.html#GtkBin" data-gi-href-python="hotdoc_markdown/gtkbin.html#GtkBin" data-gi-title-python="Gtk.Bin" data-gi-href-javascript="hotdoc_markdown/gtkbin.html#GtkBin" data-gi-title-javascript="Gtk.Bin">GtkBin</a>
+                    <span class="lineart">╰──</span>GtkFrame
+                        <span class="lineart">╰──</span><a title="GtkAspectFrame" href="hotdoc_markdown/gtkaspectframe.html#GtkAspectFrame" data-gi-href-python="hotdoc_markdown/gtkaspectframe.html#GtkAspectFrame" data-gi-title-python="Gtk.AspectFrame" data-gi-href-javascript="hotdoc_markdown/gtkaspectframe.html#GtkAspectFrame" data-gi-title-javascript="Gtk.AspectFrame">GtkAspectFrame</a>
+</pre>
+
+</div>
+
+</div>
+
+<div class="interfaces_container">
+	
+<p><b>Implemented interfaces:</b>
+    AtkImplementorIface, <a title="GtkBuildable" href="hotdoc_markdown/gtkbuildable.html#GtkBuildable" data-gi-href-python="hotdoc_markdown/gtkbuildable.html#GtkBuildable" data-gi-title-python="Gtk.Buildable" data-gi-href-javascript="hotdoc_markdown/gtkbuildable.html#GtkBuildable" data-gi-title-javascript="Gtk.Buildable">GtkBuildable</a>
+</p>
+
+</div>
+
+
+
+
+	<div class="members-container">
+		<h3>Members</h3>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkFrame.bin">
+	<div>
+		<i><em><code>bin</code></em></i>
+		(<a title="GtkBin" href="hotdoc_markdown/gtkbin.html#GtkBin" data-gi-href-python="hotdoc_markdown/gtkbin.html#GtkBin" data-gi-title-python="Gtk.Bin" data-gi-href-javascript="hotdoc_markdown/gtkbin.html#GtkBin" data-gi-title-javascript="Gtk.Bin">GtkBin</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+
+</div>
+
+
+            <h3 class="symbol_section">Constructors</h3>
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_frame_new">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_frame_new">
+	<span><code>gtk_frame_new</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkWidget" href="hotdoc_markdown/gtkwidget.html#GtkWidget">GtkWidget</a> *
+gtk_frame_new (const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * label)</pre>
+
+<p>Creates a new <a href="hotdoc_markdown/gtkframe.html#GtkFrame">GtkFrame</a>, with optional label <em>label</em>.
+If <em>label</em> is <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a>, the label is omitted.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>label</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>the text to use as the label of the frame</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>a new <a href="hotdoc_markdown/gtkframe.html#GtkFrame">GtkFrame</a> widget</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_frame_new">
+	<span><code>Gtk.prototype.new</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.new(label: <a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>): {
+    // javascript wrapper for 'gtk_frame_new'
+}</pre>
+
+<p>Creates a new <a href="hotdoc_markdown/gtkframe.html#GtkFrame">Gtk.Frame</a>, with optional label <em>label</em>.
+If <em>label</em> is <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a>, the label is omitted.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>label</code></em></i>
+					(
+						<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
+						)
+				–
+	</div>
+			<p>the text to use as the label of the frame</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="hotdoc_markdown/gtkwidget.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>a new <a href="hotdoc_markdown/gtkframe.html#GtkFrame">Gtk.Frame</a> widget</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_frame_new">
+	<span><code>Gtk.Frame.new</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Frame.new (label):
+    #python wrapper for 'gtk_frame_new'</pre>
+
+<p>Creates a new <a href="hotdoc_markdown/gtkframe.html#GtkFrame">Gtk.Frame</a>, with optional label <em>label</em>.
+If <em>label</em> is <a href="https://docs.python.org/3/library/constants.html#None">None</a>, the label is omitted.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>label</code></em></i>
+					(
+						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
+						)
+				–
+	</div>
+			<p>the text to use as the label of the frame</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="hotdoc_markdown/gtkwidget.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>a new <a href="hotdoc_markdown/gtkframe.html#GtkFrame">Gtk.Frame</a> widget</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+
+            <h3 class="symbol_section">Methods</h3>
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_frame_set_label">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_frame_set_label">
+	<span><code>gtk_frame_set_label</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_frame_set_label (<a title="GtkFrame" href="hotdoc_markdown/gtkframe.html#GtkFrame">GtkFrame</a> * frame,
+                     const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * label)</pre>
+
+<p>Removes the current <a href="gtkframe.html#GtkFrame:label-widget">label-widget</a>. If <em>label</em> is not <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a>, creates a
+new <a href="hotdoc_markdown/gtklabel.html#GtkLabel">GtkLabel</a> with that text and adds it as the <a href="gtkframe.html#GtkFrame:label-widget">label-widget</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>frame</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkframe.html#GtkFrame">GtkFrame</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>label</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>the text to use as the label of the frame</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_frame_set_label">
+	<span><code>Gtk.prototype.set_label</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_label(label: <a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>): {
+    // javascript wrapper for 'gtk_frame_set_label'
+}</pre>
+
+<p>Removes the current <a href="gtkframe.html#GtkFrame:label-widget">label-widget</a>. If <em>label</em> is not <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a>, creates a
+new <a href="hotdoc_markdown/gtklabel.html#GtkLabel">Gtk.Label</a> with that text and adds it as the <a href="gtkframe.html#GtkFrame:label-widget">label-widget</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>frame</code></em></i>
+					(
+						<a title="Gtk.Frame" href="hotdoc_markdown/gtkframe.html#GtkFrame">Gtk.Frame</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkframe.html#GtkFrame">Gtk.Frame</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>label</code></em></i>
+					(
+						<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
+						)
+				–
+	</div>
+			<p>the text to use as the label of the frame</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_frame_set_label">
+	<span><code>Gtk.Frame.set_label</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Frame.set_label (self, label):
+    #python wrapper for 'gtk_frame_set_label'</pre>
+
+<p>Removes the current <a href="gtkframe.html#GtkFrame:label-widget">label-widget</a>. If <em>label</em> is not <a href="https://docs.python.org/3/library/constants.html#None">None</a>, creates a
+new <a href="hotdoc_markdown/gtklabel.html#GtkLabel">Gtk.Label</a> with that text and adds it as the <a href="gtkframe.html#GtkFrame:label-widget">label-widget</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>frame</code></em></i>
+					(
+						<a title="Gtk.Frame" href="hotdoc_markdown/gtkframe.html#GtkFrame">Gtk.Frame</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkframe.html#GtkFrame">Gtk.Frame</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>label</code></em></i>
+					(
+						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
+						)
+				–
+	</div>
+			<p>the text to use as the label of the frame</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_frame_set_label_widget">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_frame_set_label_widget">
+	<span><code>gtk_frame_set_label_widget</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_frame_set_label_widget (<a title="GtkFrame" href="hotdoc_markdown/gtkframe.html#GtkFrame">GtkFrame</a> * frame,
+                            <a title="GtkWidget" href="hotdoc_markdown/gtkwidget.html#GtkWidget">GtkWidget</a> * label_widget)</pre>
+
+<p>Sets the <a href="gtkframe.html#GtkFrame:label-widget">label-widget</a> for the frame. This is the widget that
+will appear embedded in the top edge of the frame as a title.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>frame</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkframe.html#GtkFrame">GtkFrame</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>label_widget</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="NULL may be passed to the value"><span class="acronym">nullable</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>the new label widget</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_frame_set_label_widget">
+	<span><code>Gtk.prototype.set_label_widget</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_label_widget(label_widget: <a title="Gtk.Widget" href="hotdoc_markdown/gtkwidget.html#GtkWidget">Gtk.Widget</a>): {
+    // javascript wrapper for 'gtk_frame_set_label_widget'
+}</pre>
+
+<p>Sets the <a href="gtkframe.html#GtkFrame:label-widget">label-widget</a> for the frame. This is the widget that
+will appear embedded in the top edge of the frame as a title.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>frame</code></em></i>
+					(
+						<a title="Gtk.Frame" href="hotdoc_markdown/gtkframe.html#GtkFrame">Gtk.Frame</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkframe.html#GtkFrame">Gtk.Frame</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>label_widget</code></em></i>
+					(
+						<a title="Gtk.Widget" href="hotdoc_markdown/gtkwidget.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>the new label widget</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_frame_set_label_widget">
+	<span><code>Gtk.Frame.set_label_widget</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Frame.set_label_widget (self, label_widget):
+    #python wrapper for 'gtk_frame_set_label_widget'</pre>
+
+<p>Sets the <a href="gtkframe.html#GtkFrame:label-widget">label-widget</a> for the frame. This is the widget that
+will appear embedded in the top edge of the frame as a title.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>frame</code></em></i>
+					(
+						<a title="Gtk.Frame" href="hotdoc_markdown/gtkframe.html#GtkFrame">Gtk.Frame</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkframe.html#GtkFrame">Gtk.Frame</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>label_widget</code></em></i>
+					(
+						<a title="Gtk.Widget" href="hotdoc_markdown/gtkwidget.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>the new label widget</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_frame_set_label_align">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_frame_set_label_align">
+	<span><code>gtk_frame_set_label_align</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_frame_set_label_align (<a title="GtkFrame" href="hotdoc_markdown/gtkframe.html#GtkFrame">GtkFrame</a> * frame,
+                           <a title="gfloat" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gfloat">gfloat</a> xalign,
+                           <a title="gfloat" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gfloat">gfloat</a> yalign)</pre>
+
+<p>Sets the alignment of the frame widget’s label. The
+default values for a newly created frame are 0.0 and 0.5.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>frame</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkframe.html#GtkFrame">GtkFrame</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>xalign</code></em></i>
+				–
+	</div>
+			<p>The position of the label along the top edge
+of the widget. A value of 0.0 represents left alignment;
+1.0 represents right alignment.</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>yalign</code></em></i>
+				–
+	</div>
+			<p>The y alignment of the label. A value of 0.0 aligns under
+the frame; 1.0 aligns above the frame. If the values are exactly
+0.0 or 1.0 the gap in the frame won’t be painted because the label
+will be completely above or below the frame.</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_frame_set_label_align">
+	<span><code>Gtk.prototype.set_label_align</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_label_align(xalign: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, yalign: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_frame_set_label_align'
+}</pre>
+
+<p>Sets the alignment of the frame widget’s label. The
+default values for a newly created frame are 0.0 and 0.5.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>frame</code></em></i>
+					(
+						<a title="Gtk.Frame" href="hotdoc_markdown/gtkframe.html#GtkFrame">Gtk.Frame</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkframe.html#GtkFrame">Gtk.Frame</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>xalign</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>The position of the label along the top edge
+of the widget. A value of 0.0 represents left alignment;
+1.0 represents right alignment.</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>yalign</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>The y alignment of the label. A value of 0.0 aligns under
+the frame; 1.0 aligns above the frame. If the values are exactly
+0.0 or 1.0 the gap in the frame won’t be painted because the label
+will be completely above or below the frame.</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_frame_set_label_align">
+	<span><code>Gtk.Frame.set_label_align</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Frame.set_label_align (self, xalign, yalign):
+    #python wrapper for 'gtk_frame_set_label_align'</pre>
+
+<p>Sets the alignment of the frame widget’s label. The
+default values for a newly created frame are 0.0 and 0.5.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>frame</code></em></i>
+					(
+						<a title="Gtk.Frame" href="hotdoc_markdown/gtkframe.html#GtkFrame">Gtk.Frame</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkframe.html#GtkFrame">Gtk.Frame</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>xalign</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>The position of the label along the top edge
+of the widget. A value of 0.0 represents left alignment;
+1.0 represents right alignment.</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>yalign</code></em></i>
+					(
+						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
+						)
+				–
+	</div>
+			<p>The y alignment of the label. A value of 0.0 aligns under
+the frame; 1.0 aligns above the frame. If the values are exactly
+0.0 or 1.0 the gap in the frame won’t be painted because the label
+will be completely above or below the frame.</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_frame_set_shadow_type">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_frame_set_shadow_type">
+	<span><code>gtk_frame_set_shadow_type</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_frame_set_shadow_type (<a title="GtkFrame" href="hotdoc_markdown/gtkframe.html#GtkFrame">GtkFrame</a> * frame,
+                           <a title="GtkShadowType" href="hotdoc_markdown/gtkenums.html#GtkShadowType">GtkShadowType</a> type)</pre>
+
+<p>Sets the <a href="gtkframe.html#GtkFrame:shadow-type">shadow-type</a> for <em>frame</em>, i.e. whether it is drawn without
+(%GTK_SHADOW_NONE) or with (other values) a visible border. Values other than
+<a href="gtkenums.html#GTK_SHADOW_NONE">GTK_SHADOW_NONE</a> are treated identically by GtkFrame. The chosen type is
+applied by removing or adding the .flat class to the main CSS node, frame.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>frame</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkframe.html#GtkFrame">GtkFrame</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>type</code></em></i>
+				–
+	</div>
+			<p>the new <a href="hotdoc_markdown/gtkenums.html#GtkShadowType">GtkShadowType</a></p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_frame_set_shadow_type">
+	<span><code>Gtk.prototype.set_shadow_type</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_shadow_type(type: <a title="Gtk.ShadowType" href="hotdoc_markdown/gtkenums.html#GtkShadowType">Gtk.ShadowType</a>): {
+    // javascript wrapper for 'gtk_frame_set_shadow_type'
+}</pre>
+
+<p>Sets the <a href="gtkframe.html#GtkFrame:shadow-type">shadow-type</a> for <em>frame</em>, i.e. whether it is drawn without
+(%GTK_SHADOW_NONE) or with (other values) a visible border. Values other than
+<a href="gtkenums.html#GTK_SHADOW_NONE">Gtk.ShadowType.NONE</a> are treated identically by GtkFrame. The chosen type is
+applied by removing or adding the .flat class to the main CSS node, frame.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>frame</code></em></i>
+					(
+						<a title="Gtk.Frame" href="hotdoc_markdown/gtkframe.html#GtkFrame">Gtk.Frame</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkframe.html#GtkFrame">Gtk.Frame</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>type</code></em></i>
+					(
+						<a title="Gtk.ShadowType" href="hotdoc_markdown/gtkenums.html#GtkShadowType">Gtk.ShadowType</a>
+						)
+				–
+	</div>
+			<p>the new <a href="hotdoc_markdown/gtkenums.html#GtkShadowType">Gtk.ShadowType</a></p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_frame_set_shadow_type">
+	<span><code>Gtk.Frame.set_shadow_type</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Frame.set_shadow_type (self, type):
+    #python wrapper for 'gtk_frame_set_shadow_type'</pre>
+
+<p>Sets the <a href="gtkframe.html#GtkFrame:shadow-type">shadow-type</a> for <em>frame</em>, i.e. whether it is drawn without
+(%GTK_SHADOW_NONE) or with (other values) a visible border. Values other than
+<a href="gtkenums.html#GTK_SHADOW_NONE">Gtk.ShadowType.NONE</a> are treated identically by GtkFrame. The chosen type is
+applied by removing or adding the .flat class to the main CSS node, frame.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>frame</code></em></i>
+					(
+						<a title="Gtk.Frame" href="hotdoc_markdown/gtkframe.html#GtkFrame">Gtk.Frame</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkframe.html#GtkFrame">Gtk.Frame</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>type</code></em></i>
+					(
+						<a title="Gtk.ShadowType" href="hotdoc_markdown/gtkenums.html#GtkShadowType">Gtk.ShadowType</a>
+						)
+				–
+	</div>
+			<p>the new <a href="hotdoc_markdown/gtkenums.html#GtkShadowType">Gtk.ShadowType</a></p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_frame_get_label">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_frame_get_label">
+	<span><code>gtk_frame_get_label</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> *
+gtk_frame_get_label (<a title="GtkFrame" href="hotdoc_markdown/gtkframe.html#GtkFrame">GtkFrame</a> * frame)</pre>
+
+<p>If the frame’s label widget is a <a href="hotdoc_markdown/gtklabel.html#GtkLabel">GtkLabel</a>, returns the
+text in the label widget. (The frame will have a <a href="hotdoc_markdown/gtklabel.html#GtkLabel">GtkLabel</a>
+for the label widget if a non-%NULL argument was passed
+to <a href="hotdoc_markdown/gtkframe.html#gtk_frame_new">gtk_frame_new</a>.)</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>frame</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkframe.html#GtkFrame">GtkFrame</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					
+										
+<span class="annotation">[<abbr title="NULL may be passed to the value"><span class="acronym">nullable</span></abbr>]</span>
+
+										)
+								–
+			</div>
+							<p>the text in the label, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> if there
+was no label widget or the lable widget was not
+a <a href="hotdoc_markdown/gtklabel.html#GtkLabel">GtkLabel</a>. This string is owned by GTK+ and
+must not be modified or freed.</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_frame_get_label">
+	<span><code>Gtk.prototype.get_label</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_label(): {
+    // javascript wrapper for 'gtk_frame_get_label'
+}</pre>
+
+<p>If the frame’s label widget is a <a href="hotdoc_markdown/gtklabel.html#GtkLabel">Gtk.Label</a>, returns the
+text in the label widget. (The frame will have a <a href="hotdoc_markdown/gtklabel.html#GtkLabel">Gtk.Label</a>
+for the label widget if a non-%NULL argument was passed
+to <a href="hotdoc_markdown/gtkframe.html#gtk_frame_new">Gtk.prototype.new</a>.)</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>frame</code></em></i>
+					(
+						<a title="Gtk.Frame" href="hotdoc_markdown/gtkframe.html#GtkFrame">Gtk.Frame</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkframe.html#GtkFrame">Gtk.Frame</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="String" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>
+										)
+								–
+			</div>
+							<p>the text in the label, or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a> if there
+was no label widget or the lable widget was not
+a <a href="hotdoc_markdown/gtklabel.html#GtkLabel">Gtk.Label</a>. This string is owned by GTK+ and
+must not be modified or freed.</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_frame_get_label">
+	<span><code>Gtk.Frame.get_label</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Frame.get_label (self):
+    #python wrapper for 'gtk_frame_get_label'</pre>
+
+<p>If the frame’s label widget is a <a href="hotdoc_markdown/gtklabel.html#GtkLabel">Gtk.Label</a>, returns the
+text in the label widget. (The frame will have a <a href="hotdoc_markdown/gtklabel.html#GtkLabel">Gtk.Label</a>
+for the label widget if a non-%NULL argument was passed
+to <a href="hotdoc_markdown/gtkframe.html#gtk_frame_new">Gtk.Frame.new</a>.)</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>frame</code></em></i>
+					(
+						<a title="Gtk.Frame" href="hotdoc_markdown/gtkframe.html#GtkFrame">Gtk.Frame</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkframe.html#GtkFrame">Gtk.Frame</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
+										)
+								–
+			</div>
+							<p>the text in the label, or <a href="https://docs.python.org/3/library/constants.html#None">None</a> if there
+was no label widget or the lable widget was not
+a <a href="hotdoc_markdown/gtklabel.html#GtkLabel">Gtk.Label</a>. This string is owned by GTK+ and
+must not be modified or freed.</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_frame_get_label_align">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_frame_get_label_align">
+	<span><code>gtk_frame_get_label_align</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_frame_get_label_align (<a title="GtkFrame" href="hotdoc_markdown/gtkframe.html#GtkFrame">GtkFrame</a> * frame,
+                           <a title="gfloat" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gfloat">gfloat</a> * xalign,
+                           <a title="gfloat" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gfloat">gfloat</a> * yalign)</pre>
+
+<p>Retrieves the X and Y alignment of the frame’s label. See
+<a href="hotdoc_markdown/gtkframe.html#gtk_frame_set_label_align">gtk_frame_set_label_align</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>frame</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkframe.html#GtkFrame">GtkFrame</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>xalign</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="Parameter for returning results"><span class="acronym">out</span></abbr>]</span>
+<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>location to store X alignment of
+frame’s label, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>yalign</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="Parameter for returning results"><span class="acronym">out</span></abbr>]</span>
+<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>location to store X alignment of
+frame’s label, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_frame_get_label_align">
+	<span><code>Gtk.prototype.get_label_align</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_label_align(): {
+    // javascript wrapper for 'gtk_frame_get_label_align'
+}</pre>
+
+<p>Retrieves the X and Y alignment of the frame’s label. See
+<a href="hotdoc_markdown/gtkframe.html#gtk_frame_set_label_align">Gtk.prototype.set_label_align</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>frame</code></em></i>
+					(
+						<a title="Gtk.Frame" href="hotdoc_markdown/gtkframe.html#GtkFrame">Gtk.Frame</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkframe.html#GtkFrame">Gtk.Frame</a></p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_frame_get_label_align">
+	<span><code>Gtk.Frame.get_label_align</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Frame.get_label_align (self):
+    #python wrapper for 'gtk_frame_get_label_align'</pre>
+
+<p>Retrieves the X and Y alignment of the frame’s label. See
+<a href="hotdoc_markdown/gtkframe.html#gtk_frame_set_label_align">Gtk.Frame.set_label_align</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>frame</code></em></i>
+					(
+						<a title="Gtk.Frame" href="hotdoc_markdown/gtkframe.html#GtkFrame">Gtk.Frame</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkframe.html#GtkFrame">Gtk.Frame</a></p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_frame_get_label_widget">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_frame_get_label_widget">
+	<span><code>gtk_frame_get_label_widget</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkWidget" href="hotdoc_markdown/gtkwidget.html#GtkWidget">GtkWidget</a> *
+gtk_frame_get_label_widget (<a title="GtkFrame" href="hotdoc_markdown/gtkframe.html#GtkFrame">GtkFrame</a> * frame)</pre>
+
+<p>Retrieves the label widget for the frame. See
+<a href="hotdoc_markdown/gtkframe.html#gtk_frame_set_label_widget">gtk_frame_set_label_widget</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>frame</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkframe.html#GtkFrame">GtkFrame</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					
+										
+<span class="annotation">[<abbr title="NULL may be passed to the value"><span class="acronym">nullable</span></abbr>]</span>
+<span class="annotation">[<abbr title="Don't free data after the code is done"><span class="acronym">transfer: none</span></abbr>]</span>
+
+										)
+								–
+			</div>
+							<p>the label widget, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> if
+there is none.</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_frame_get_label_widget">
+	<span><code>Gtk.prototype.get_label_widget</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_label_widget(): {
+    // javascript wrapper for 'gtk_frame_get_label_widget'
+}</pre>
+
+<p>Retrieves the label widget for the frame. See
+<a href="hotdoc_markdown/gtkframe.html#gtk_frame_set_label_widget">Gtk.prototype.set_label_widget</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>frame</code></em></i>
+					(
+						<a title="Gtk.Frame" href="hotdoc_markdown/gtkframe.html#GtkFrame">Gtk.Frame</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkframe.html#GtkFrame">Gtk.Frame</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="hotdoc_markdown/gtkwidget.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>the label widget, or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a> if
+there is none.</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_frame_get_label_widget">
+	<span><code>Gtk.Frame.get_label_widget</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Frame.get_label_widget (self):
+    #python wrapper for 'gtk_frame_get_label_widget'</pre>
+
+<p>Retrieves the label widget for the frame. See
+<a href="hotdoc_markdown/gtkframe.html#gtk_frame_set_label_widget">Gtk.Frame.set_label_widget</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>frame</code></em></i>
+					(
+						<a title="Gtk.Frame" href="hotdoc_markdown/gtkframe.html#GtkFrame">Gtk.Frame</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkframe.html#GtkFrame">Gtk.Frame</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="hotdoc_markdown/gtkwidget.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>the label widget, or <a href="https://docs.python.org/3/library/constants.html#None">None</a> if
+there is none.</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_frame_get_shadow_type">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_frame_get_shadow_type">
+	<span><code>gtk_frame_get_shadow_type</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkShadowType" href="hotdoc_markdown/gtkenums.html#GtkShadowType">GtkShadowType</a>
+gtk_frame_get_shadow_type (<a title="GtkFrame" href="hotdoc_markdown/gtkframe.html#GtkFrame">GtkFrame</a> * frame)</pre>
+
+<p>Retrieves the shadow type of the frame. See
+<a href="hotdoc_markdown/gtkframe.html#gtk_frame_set_shadow_type">gtk_frame_set_shadow_type</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>frame</code></em></i>
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkframe.html#GtkFrame">GtkFrame</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>the current shadow type of the frame.</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_frame_get_shadow_type">
+	<span><code>Gtk.prototype.get_shadow_type</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_shadow_type(): {
+    // javascript wrapper for 'gtk_frame_get_shadow_type'
+}</pre>
+
+<p>Retrieves the shadow type of the frame. See
+<a href="hotdoc_markdown/gtkframe.html#gtk_frame_set_shadow_type">Gtk.prototype.set_shadow_type</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>frame</code></em></i>
+					(
+						<a title="Gtk.Frame" href="hotdoc_markdown/gtkframe.html#GtkFrame">Gtk.Frame</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkframe.html#GtkFrame">Gtk.Frame</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.ShadowType" href="hotdoc_markdown/gtkenums.html#GtkShadowType">Gtk.ShadowType</a>
+										)
+								–
+			</div>
+							<p>the current shadow type of the frame.</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_frame_get_shadow_type">
+	<span><code>Gtk.Frame.get_shadow_type</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Frame.get_shadow_type (self):
+    #python wrapper for 'gtk_frame_get_shadow_type'</pre>
+
+<p>Retrieves the shadow type of the frame. See
+<a href="hotdoc_markdown/gtkframe.html#gtk_frame_set_shadow_type">Gtk.Frame.set_shadow_type</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>frame</code></em></i>
+					(
+						<a title="Gtk.Frame" href="hotdoc_markdown/gtkframe.html#GtkFrame">Gtk.Frame</a>
+						)
+				–
+	</div>
+			<p>a <a href="hotdoc_markdown/gtkframe.html#GtkFrame">Gtk.Frame</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.ShadowType" href="hotdoc_markdown/gtkenums.html#GtkShadowType">Gtk.ShadowType</a>
+										)
+								–
+			</div>
+							<p>the current shadow type of the frame.</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+
+
+
+
+
+		
+	</div>
+	<div id="search_results">
+		<p>The results of the search are</p>
+	</div>
+	<hr>
+	<div id="footer">
+		    
+
+	</div>
+</div>
+
+<div id="toc-column">
+	
+		<div class="edit-button">
+		
+
+	</div>
+		<div id="toc-wrapper">
+		<nav id="toc"></nav>
+	</div>
+</div>
+</div>
+</main>
+
+</body>
+
+<script src="assets/js/navbar_offset_scroller.js"></script>
+</html>

@@ -1,0 +1,1 @@
+urls_downloaded_cb({"token": "Gtk.prototype.spin", "urls": [{"url": "gtkspinbutton.html#gtk_spin_button_spin", "context": {"gi-language": ["javascript"]}}, {"url": "gtkspinbutton.html#GtkSpinType", "context": {"gi-language": ["javascript"]}}]});

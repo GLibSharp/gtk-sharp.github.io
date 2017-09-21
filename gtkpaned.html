@@ -1,0 +1,2427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<base href=".">
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>gtkpaned</title>
+
+<link rel="stylesheet" href="assets/css/custom_bootstrap.css" type="text/css">
+<link rel="stylesheet" href="assets/css/bootstrap-toc.min.css" type="text/css">
+<link rel="stylesheet" href="assets/css/frontend.css" type="text/css">
+<link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
+
+<link rel="stylesheet" href="assets/css/prism.css" type="text/css">
+
+<script src="assets/js/mustache.min.js"></script>
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/scrollspy.js"></script>
+<script src="assets/js/bootstrap.js"></script>
+<script src="assets/js/typeahead.jquery.min.js"></script>
+<script src="assets/js/search.js"></script>
+<script src="assets/js/isotope.pkgd.min.js"></script>
+<script src="assets/js/compare-versions.js"></script>
+<script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="assets/js/bootstrap-toc.min.js"></script>
+<script src="assets/js/jquery.touchSwipe.min.js"></script>
+<script src="assets/js/anchor.min.js"></script>
+<script src="assets/js/tag_filtering.js"></script>
+<script src="assets/js/language_switching.js"></script>
+
+<script src="assets/js/lines_around_headings.js"></script>
+
+<script src="assets/js/prism-core.js"></script>
+<script src="assets/js/prism-autoloader.js"></script>
+<script src="assets/js/prism_autoloader_path_override.js"></script>
+<script src="assets/js/trie.js"></script>
+
+
+</head>
+
+<body class="no-script
+" data-spy="scroll" data-target="#toc" data-offset="70">
+
+<script>
+$('body').removeClass('no-script');
+</script>
+
+<nav class="navbar navbar-fixed-top navbar-default" id="topnav">
+	<div class="container-fluid">
+		<div class="navbar-right">
+			<a id="toc-toggle">
+				<span class="glyphicon glyphicon-menu-right"></span>
+				<span class="glyphicon glyphicon-menu-left"></span>
+			</a>
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-wrapper" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<form action="" class="navbar-form pull-right" id="navbar-search-form">
+                               <div class="form-group has-feedback">
+                                       <input type="text" class="form-control input-sm" name="search" id="sidenav-lookup-field" placeholder="search" disabled>
+				       <span class="glyphicon glyphicon-search form-control-feedback" id="search-mgn-glass"></span>
+                               </div>
+                        </form>
+		</div>
+		<div class="navbar-header">
+			<a id="sidenav-toggle">
+				<span class="glyphicon glyphicon-menu-right"></span>
+				<span class="glyphicon glyphicon-menu-left"></span>
+			</a>
+			<a id="home-link" href="index.html" class="hotdoc-navbar-brand">
+				<img src="assets/images/home.svg" alt="Home">
+			</a>
+		</div>
+		<div class="navbar-collapse collapse" id="navbar-wrapper">
+			<ul class="nav navbar-nav" id="menu">
+							</ul>
+			<div class="hidden-xs hidden-sm navbar-text navbar-center">
+							</div>
+		</div>
+	</div>
+</nav>
+
+<main>
+<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="gtkpaned.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['c', 'javascript', 'python']" data-hotdoc-meta-gi-language="c">
+<script src="assets/js/utils.js"></script>
+
+<div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
+	<script src="assets/js/navigation.js"></script>
+	<script src="assets/js/sitemap.js"></script>
+</div>
+
+<div id="body">
+	<div id="main">
+				    <div id="page-description" data-hotdoc-source="gtkpaned.markdown" data-hotdoc-role="main">
+    </div>
+        
+        
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="GtkPaned">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h2 data-hotdoc-id="GtkPaned">
+	<span><code>GtkPaned</code></span>
+</h2>
+
+
+<div class="hierarchy_container">
+	<div class="hierarchy_details">
+<pre>
+<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object">GObject</a>
+    <span class="lineart">╰──</span><a title="GInitiallyUnowned" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-javascript="GObject.InitiallyUnowned" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-python="GObject.InitiallyUnowned">GInitiallyUnowned</a>
+        <span class="lineart">╰──</span><a title="GtkWidget" href="gtkwidget.html#GtkWidget" data-gi-href-javascript="gtkwidget.html#GtkWidget" data-gi-title-javascript="Gtk.Widget" data-gi-href-python="gtkwidget.html#GtkWidget" data-gi-title-python="Gtk.Widget">GtkWidget</a>
+            <span class="lineart">╰──</span><a title="GtkContainer" href="gtkcontainer.html#GtkContainer" data-gi-href-javascript="gtkcontainer.html#GtkContainer" data-gi-title-javascript="Gtk.Container" data-gi-href-python="gtkcontainer.html#GtkContainer" data-gi-title-python="Gtk.Container">GtkContainer</a>
+                <span class="lineart">╰──</span>GtkPaned
+</pre>
+
+</div>
+
+</div>
+
+<div class="interfaces_container">
+	
+<p><b>Implemented interfaces:</b>
+    AtkImplementorIface, <a title="GtkBuildable" href="gtkbuildable.html#GtkBuildable" data-gi-href-javascript="gtkbuildable.html#GtkBuildable" data-gi-title-javascript="Gtk.Buildable" data-gi-href-python="gtkbuildable.html#GtkBuildable" data-gi-title-python="Gtk.Buildable">GtkBuildable</a>, <a title="GtkOrientable" href="gtkorientable.html#GtkOrientable" data-gi-href-javascript="gtkorientable.html#GtkOrientable" data-gi-title-javascript="Gtk.Orientable" data-gi-href-python="gtkorientable.html#GtkOrientable" data-gi-title-python="Gtk.Orientable">GtkOrientable</a>
+</p>
+
+</div>
+
+
+
+
+	<div class="members-container">
+		<h3>Members</h3>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkPaned.container">
+	<div>
+		<i><em><code>container</code></em></i>
+		(<a title="GtkContainer" href="gtkcontainer.html#GtkContainer" data-gi-href-javascript="gtkcontainer.html#GtkContainer" data-gi-title-javascript="Gtk.Container" data-gi-href-python="gtkcontainer.html#GtkContainer" data-gi-title-python="Gtk.Container">GtkContainer</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+<h3>Class structure</h3>
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="GtkPanedClass">
+	<span><code>GtkPanedClass</code></span>
+</h4>
+
+
+
+
+
+	<div class="members-container">
+		<h5>Fields</h5>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkPanedClass.parent_class">
+	<div>
+		<i><em><code>parent_class</code></em></i>
+		(<a title="GtkContainerClass" href="GtkContainerClass">GtkContainerClass</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h3>
+	Gtk.PanedClass
+</h3>
+
+
+
+
+
+	<div class="members-container">
+		<h5>Attributes</h5>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkPanedClass.parent_class">
+	<div>
+		<i><em><code>PanedClass.parent_class</code></em></i>
+		(<a title="Gtk.ContainerClass" href="GtkContainerClass">Gtk.ContainerClass</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3>
+	Gtk.PanedClass
+</h3>
+
+
+
+
+
+	<div class="members-container">
+		<h5>Attributes</h5>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkPanedClass.parent_class">
+	<div>
+		<i><em><code>PanedClass.parent_class</code></em></i>
+		(<a title="Gtk.ContainerClass" href="GtkContainerClass">Gtk.ContainerClass</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h2 data-hotdoc-id="GtkPaned">
+	<span><code>GtkPaned</code></span>
+</h2>
+
+
+<div class="hierarchy_container">
+	<div class="hierarchy_details">
+<pre>
+<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object">GObject</a>
+    <span class="lineart">╰──</span><a title="GInitiallyUnowned" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-javascript="GObject.InitiallyUnowned" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-python="GObject.InitiallyUnowned">GInitiallyUnowned</a>
+        <span class="lineart">╰──</span><a title="GtkWidget" href="gtkwidget.html#GtkWidget" data-gi-href-javascript="gtkwidget.html#GtkWidget" data-gi-title-javascript="Gtk.Widget" data-gi-href-python="gtkwidget.html#GtkWidget" data-gi-title-python="Gtk.Widget">GtkWidget</a>
+            <span class="lineart">╰──</span><a title="GtkContainer" href="gtkcontainer.html#GtkContainer" data-gi-href-javascript="gtkcontainer.html#GtkContainer" data-gi-title-javascript="Gtk.Container" data-gi-href-python="gtkcontainer.html#GtkContainer" data-gi-title-python="Gtk.Container">GtkContainer</a>
+                <span class="lineart">╰──</span>GtkPaned
+</pre>
+
+</div>
+
+</div>
+
+<div class="interfaces_container">
+	
+<p><b>Implemented interfaces:</b>
+    AtkImplementorIface, <a title="GtkBuildable" href="gtkbuildable.html#GtkBuildable" data-gi-href-javascript="gtkbuildable.html#GtkBuildable" data-gi-title-javascript="Gtk.Buildable" data-gi-href-python="gtkbuildable.html#GtkBuildable" data-gi-title-python="Gtk.Buildable">GtkBuildable</a>, <a title="GtkOrientable" href="gtkorientable.html#GtkOrientable" data-gi-href-javascript="gtkorientable.html#GtkOrientable" data-gi-title-javascript="Gtk.Orientable" data-gi-href-python="gtkorientable.html#GtkOrientable" data-gi-title-python="Gtk.Orientable">GtkOrientable</a>
+</p>
+
+</div>
+
+
+
+
+	<div class="members-container">
+		<h3>Members</h3>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkPaned.container">
+	<div>
+		<i><em><code>container</code></em></i>
+		(<a title="GtkContainer" href="gtkcontainer.html#GtkContainer" data-gi-href-javascript="gtkcontainer.html#GtkContainer" data-gi-title-javascript="Gtk.Container" data-gi-href-python="gtkcontainer.html#GtkContainer" data-gi-title-python="Gtk.Container">GtkContainer</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h2 data-hotdoc-id="GtkPaned">
+	<span><code>GtkPaned</code></span>
+</h2>
+
+
+<div class="hierarchy_container">
+	<div class="hierarchy_details">
+<pre>
+<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object">GObject</a>
+    <span class="lineart">╰──</span><a title="GInitiallyUnowned" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-javascript="GObject.InitiallyUnowned" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-python="GObject.InitiallyUnowned">GInitiallyUnowned</a>
+        <span class="lineart">╰──</span><a title="GtkWidget" href="gtkwidget.html#GtkWidget" data-gi-href-javascript="gtkwidget.html#GtkWidget" data-gi-title-javascript="Gtk.Widget" data-gi-href-python="gtkwidget.html#GtkWidget" data-gi-title-python="Gtk.Widget">GtkWidget</a>
+            <span class="lineart">╰──</span><a title="GtkContainer" href="gtkcontainer.html#GtkContainer" data-gi-href-javascript="gtkcontainer.html#GtkContainer" data-gi-title-javascript="Gtk.Container" data-gi-href-python="gtkcontainer.html#GtkContainer" data-gi-title-python="Gtk.Container">GtkContainer</a>
+                <span class="lineart">╰──</span>GtkPaned
+</pre>
+
+</div>
+
+</div>
+
+<div class="interfaces_container">
+	
+<p><b>Implemented interfaces:</b>
+    AtkImplementorIface, <a title="GtkBuildable" href="gtkbuildable.html#GtkBuildable" data-gi-href-javascript="gtkbuildable.html#GtkBuildable" data-gi-title-javascript="Gtk.Buildable" data-gi-href-python="gtkbuildable.html#GtkBuildable" data-gi-title-python="Gtk.Buildable">GtkBuildable</a>, <a title="GtkOrientable" href="gtkorientable.html#GtkOrientable" data-gi-href-javascript="gtkorientable.html#GtkOrientable" data-gi-title-javascript="Gtk.Orientable" data-gi-href-python="gtkorientable.html#GtkOrientable" data-gi-title-python="Gtk.Orientable">GtkOrientable</a>
+</p>
+
+</div>
+
+
+
+
+	<div class="members-container">
+		<h3>Members</h3>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkPaned.container">
+	<div>
+		<i><em><code>container</code></em></i>
+		(<a title="GtkContainer" href="gtkcontainer.html#GtkContainer" data-gi-href-javascript="gtkcontainer.html#GtkContainer" data-gi-title-javascript="Gtk.Container" data-gi-href-python="gtkcontainer.html#GtkContainer" data-gi-title-python="Gtk.Container">GtkContainer</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+
+</div>
+
+
+            <h3 class="symbol_section">Constructors</h3>
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_paned_new">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_paned_new">
+	<span><code>gtk_paned_new</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkWidget" href="gtkwidget.html#GtkWidget">GtkWidget</a> *
+gtk_paned_new (<a title="GtkOrientation" href="gtkenums.html#GtkOrientation">GtkOrientation</a> orientation)</pre>
+
+<p>Creates a new <a href="gtkpaned.html#GtkPaned">GtkPaned</a> widget.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>orientation</code></em></i>
+				–
+	</div>
+			<p>the paned’s orientation.</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>a new <a href="gtkpaned.html#GtkPaned">GtkPaned</a>.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_paned_new">
+	<span><code>Gtk.prototype.new</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.new(orientation: <a title="Gtk.Orientation" href="gtkenums.html#GtkOrientation">Gtk.Orientation</a>): {
+    // javascript wrapper for 'gtk_paned_new'
+}</pre>
+
+<p>Creates a new <a href="gtkpaned.html#GtkPaned">Gtk.Paned</a> widget.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>orientation</code></em></i>
+					(
+						<a title="Gtk.Orientation" href="gtkenums.html#GtkOrientation">Gtk.Orientation</a>
+						)
+				–
+	</div>
+			<p>the paned’s orientation.</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>a new <a href="gtkpaned.html#GtkPaned">Gtk.Paned</a>.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_paned_new">
+	<span><code>Gtk.Paned.new</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Paned.new (orientation):
+    #python wrapper for 'gtk_paned_new'</pre>
+
+<p>Creates a new <a href="gtkpaned.html#GtkPaned">Gtk.Paned</a> widget.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>orientation</code></em></i>
+					(
+						<a title="Gtk.Orientation" href="gtkenums.html#GtkOrientation">Gtk.Orientation</a>
+						)
+				–
+	</div>
+			<p>the paned’s orientation.</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>a new <a href="gtkpaned.html#GtkPaned">Gtk.Paned</a>.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+
+</div>
+
+
+            <h3 class="symbol_section">Methods</h3>
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_paned_add1">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_paned_add1">
+	<span><code>gtk_paned_add1</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_paned_add1 (<a title="GtkPaned" href="gtkpaned.html#GtkPaned">GtkPaned</a> * paned,
+                <a title="GtkWidget" href="gtkwidget.html#GtkWidget">GtkWidget</a> * child)</pre>
+
+<p>Adds a child to the top or left pane with default parameters. This is
+equivalent to
+<code>gtk_paned_pack1 (paned, child, FALSE, TRUE)</code>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>paned</code></em></i>
+				–
+	</div>
+			<p>a paned widget</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>child</code></em></i>
+				–
+	</div>
+			<p>the child to add</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_paned_add1">
+	<span><code>Gtk.prototype.add1</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.add1(child: <a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>): {
+    // javascript wrapper for 'gtk_paned_add1'
+}</pre>
+
+<p>Adds a child to the top or left pane with default parameters. This is
+equivalent to
+<code>gtk_paned_pack1 (paned, child, FALSE, TRUE)</code>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>paned</code></em></i>
+					(
+						<a title="Gtk.Paned" href="gtkpaned.html#GtkPaned">Gtk.Paned</a>
+						)
+				–
+	</div>
+			<p>a paned widget</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>child</code></em></i>
+					(
+						<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>the child to add</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_paned_add1">
+	<span><code>Gtk.Paned.add1</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Paned.add1 (self, child):
+    #python wrapper for 'gtk_paned_add1'</pre>
+
+<p>Adds a child to the top or left pane with default parameters. This is
+equivalent to
+<code>gtk_paned_pack1 (paned, child, FALSE, TRUE)</code>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>paned</code></em></i>
+					(
+						<a title="Gtk.Paned" href="gtkpaned.html#GtkPaned">Gtk.Paned</a>
+						)
+				–
+	</div>
+			<p>a paned widget</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>child</code></em></i>
+					(
+						<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>the child to add</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_paned_add2">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_paned_add2">
+	<span><code>gtk_paned_add2</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_paned_add2 (<a title="GtkPaned" href="gtkpaned.html#GtkPaned">GtkPaned</a> * paned,
+                <a title="GtkWidget" href="gtkwidget.html#GtkWidget">GtkWidget</a> * child)</pre>
+
+<p>Adds a child to the bottom or right pane with default parameters. This
+is equivalent to
+<code>gtk_paned_pack2 (paned, child, TRUE, TRUE)</code>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>paned</code></em></i>
+				–
+	</div>
+			<p>a paned widget</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>child</code></em></i>
+				–
+	</div>
+			<p>the child to add</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_paned_add2">
+	<span><code>Gtk.prototype.add2</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.add2(child: <a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>): {
+    // javascript wrapper for 'gtk_paned_add2'
+}</pre>
+
+<p>Adds a child to the bottom or right pane with default parameters. This
+is equivalent to
+<code>gtk_paned_pack2 (paned, child, TRUE, TRUE)</code>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>paned</code></em></i>
+					(
+						<a title="Gtk.Paned" href="gtkpaned.html#GtkPaned">Gtk.Paned</a>
+						)
+				–
+	</div>
+			<p>a paned widget</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>child</code></em></i>
+					(
+						<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>the child to add</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_paned_add2">
+	<span><code>Gtk.Paned.add2</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Paned.add2 (self, child):
+    #python wrapper for 'gtk_paned_add2'</pre>
+
+<p>Adds a child to the bottom or right pane with default parameters. This
+is equivalent to
+<code>gtk_paned_pack2 (paned, child, TRUE, TRUE)</code>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>paned</code></em></i>
+					(
+						<a title="Gtk.Paned" href="gtkpaned.html#GtkPaned">Gtk.Paned</a>
+						)
+				–
+	</div>
+			<p>a paned widget</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>child</code></em></i>
+					(
+						<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>the child to add</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_paned_pack1">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_paned_pack1">
+	<span><code>gtk_paned_pack1</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_paned_pack1 (<a title="GtkPaned" href="gtkpaned.html#GtkPaned">GtkPaned</a> * paned,
+                 <a title="GtkWidget" href="gtkwidget.html#GtkWidget">GtkWidget</a> * child,
+                 <a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a> resize,
+                 <a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a> shrink)</pre>
+
+<p>Adds a child to the top or left pane.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>paned</code></em></i>
+				–
+	</div>
+			<p>a paned widget</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>child</code></em></i>
+				–
+	</div>
+			<p>the child to add</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>resize</code></em></i>
+				–
+	</div>
+			<p>should this child expand when the paned widget is resized.</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>shrink</code></em></i>
+				–
+	</div>
+			<p>can this child be made smaller than its requisition.</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_paned_pack1">
+	<span><code>Gtk.prototype.pack1</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.pack1(child: <a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>, resize: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, shrink: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_paned_pack1'
+}</pre>
+
+<p>Adds a child to the top or left pane.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>paned</code></em></i>
+					(
+						<a title="Gtk.Paned" href="gtkpaned.html#GtkPaned">Gtk.Paned</a>
+						)
+				–
+	</div>
+			<p>a paned widget</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>child</code></em></i>
+					(
+						<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>the child to add</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>resize</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>should this child expand when the paned widget is resized.</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>shrink</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>can this child be made smaller than its requisition.</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_paned_pack1">
+	<span><code>Gtk.Paned.pack1</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Paned.pack1 (self, child, resize, shrink):
+    #python wrapper for 'gtk_paned_pack1'</pre>
+
+<p>Adds a child to the top or left pane.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>paned</code></em></i>
+					(
+						<a title="Gtk.Paned" href="gtkpaned.html#GtkPaned">Gtk.Paned</a>
+						)
+				–
+	</div>
+			<p>a paned widget</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>child</code></em></i>
+					(
+						<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>the child to add</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>resize</code></em></i>
+					(
+						<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+						)
+				–
+	</div>
+			<p>should this child expand when the paned widget is resized.</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>shrink</code></em></i>
+					(
+						<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+						)
+				–
+	</div>
+			<p>can this child be made smaller than its requisition.</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_paned_pack2">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_paned_pack2">
+	<span><code>gtk_paned_pack2</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_paned_pack2 (<a title="GtkPaned" href="gtkpaned.html#GtkPaned">GtkPaned</a> * paned,
+                 <a title="GtkWidget" href="gtkwidget.html#GtkWidget">GtkWidget</a> * child,
+                 <a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a> resize,
+                 <a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a> shrink)</pre>
+
+<p>Adds a child to the bottom or right pane.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>paned</code></em></i>
+				–
+	</div>
+			<p>a paned widget</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>child</code></em></i>
+				–
+	</div>
+			<p>the child to add</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>resize</code></em></i>
+				–
+	</div>
+			<p>should this child expand when the paned widget is resized.</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>shrink</code></em></i>
+				–
+	</div>
+			<p>can this child be made smaller than its requisition.</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_paned_pack2">
+	<span><code>Gtk.prototype.pack2</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.pack2(child: <a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>, resize: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, shrink: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_paned_pack2'
+}</pre>
+
+<p>Adds a child to the bottom or right pane.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>paned</code></em></i>
+					(
+						<a title="Gtk.Paned" href="gtkpaned.html#GtkPaned">Gtk.Paned</a>
+						)
+				–
+	</div>
+			<p>a paned widget</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>child</code></em></i>
+					(
+						<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>the child to add</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>resize</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>should this child expand when the paned widget is resized.</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>shrink</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>can this child be made smaller than its requisition.</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_paned_pack2">
+	<span><code>Gtk.Paned.pack2</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Paned.pack2 (self, child, resize, shrink):
+    #python wrapper for 'gtk_paned_pack2'</pre>
+
+<p>Adds a child to the bottom or right pane.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>paned</code></em></i>
+					(
+						<a title="Gtk.Paned" href="gtkpaned.html#GtkPaned">Gtk.Paned</a>
+						)
+				–
+	</div>
+			<p>a paned widget</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>child</code></em></i>
+					(
+						<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>the child to add</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>resize</code></em></i>
+					(
+						<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+						)
+				–
+	</div>
+			<p>should this child expand when the paned widget is resized.</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>shrink</code></em></i>
+					(
+						<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+						)
+				–
+	</div>
+			<p>can this child be made smaller than its requisition.</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.4;" id="gtk_paned_get_child1">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_paned_get_child1">
+	<span><code>gtk_paned_get_child1</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkWidget" href="gtkwidget.html#GtkWidget">GtkWidget</a> *
+gtk_paned_get_child1 (<a title="GtkPaned" href="gtkpaned.html#GtkPaned">GtkPaned</a> * paned)</pre>
+
+<p>Obtains the first child of the paned widget.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>paned</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkpaned.html#GtkPaned">GtkPaned</a> widget</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					
+										
+<span class="annotation">[<abbr title="NULL may be passed to the value"><span class="acronym">nullable</span></abbr>]</span>
+<span class="annotation">[<abbr title="Don't free data after the code is done"><span class="acronym">transfer: none</span></abbr>]</span>
+
+										)
+								–
+			</div>
+							<p>first child, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> if it is not set.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.4
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_paned_get_child1">
+	<span><code>Gtk.prototype.get_child1</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_child1(): {
+    // javascript wrapper for 'gtk_paned_get_child1'
+}</pre>
+
+<p>Obtains the first child of the paned widget.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>paned</code></em></i>
+					(
+						<a title="Gtk.Paned" href="gtkpaned.html#GtkPaned">Gtk.Paned</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkpaned.html#GtkPaned">Gtk.Paned</a> widget</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>first child, or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a> if it is not set.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.4
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_paned_get_child1">
+	<span><code>Gtk.Paned.get_child1</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Paned.get_child1 (self):
+    #python wrapper for 'gtk_paned_get_child1'</pre>
+
+<p>Obtains the first child of the paned widget.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>paned</code></em></i>
+					(
+						<a title="Gtk.Paned" href="gtkpaned.html#GtkPaned">Gtk.Paned</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkpaned.html#GtkPaned">Gtk.Paned</a> widget</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>first child, or <a href="https://docs.python.org/3/library/constants.html#None">None</a> if it is not set.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.4
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:2.4;" id="gtk_paned_get_child2">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_paned_get_child2">
+	<span><code>gtk_paned_get_child2</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkWidget" href="gtkwidget.html#GtkWidget">GtkWidget</a> *
+gtk_paned_get_child2 (<a title="GtkPaned" href="gtkpaned.html#GtkPaned">GtkPaned</a> * paned)</pre>
+
+<p>Obtains the second child of the paned widget.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>paned</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkpaned.html#GtkPaned">GtkPaned</a> widget</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					
+										
+<span class="annotation">[<abbr title="NULL may be passed to the value"><span class="acronym">nullable</span></abbr>]</span>
+<span class="annotation">[<abbr title="Don't free data after the code is done"><span class="acronym">transfer: none</span></abbr>]</span>
+
+										)
+								–
+			</div>
+							<p>second child, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> if it is not set.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.4
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_paned_get_child2">
+	<span><code>Gtk.prototype.get_child2</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_child2(): {
+    // javascript wrapper for 'gtk_paned_get_child2'
+}</pre>
+
+<p>Obtains the second child of the paned widget.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>paned</code></em></i>
+					(
+						<a title="Gtk.Paned" href="gtkpaned.html#GtkPaned">Gtk.Paned</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkpaned.html#GtkPaned">Gtk.Paned</a> widget</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>second child, or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a> if it is not set.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.4
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_paned_get_child2">
+	<span><code>Gtk.Paned.get_child2</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Paned.get_child2 (self):
+    #python wrapper for 'gtk_paned_get_child2'</pre>
+
+<p>Obtains the second child of the paned widget.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>paned</code></em></i>
+					(
+						<a title="Gtk.Paned" href="gtkpaned.html#GtkPaned">Gtk.Paned</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkpaned.html#GtkPaned">Gtk.Paned</a> widget</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>second child, or <a href="https://docs.python.org/3/library/constants.html#None">None</a> if it is not set.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.4
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_paned_set_position">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_paned_set_position">
+	<span><code>gtk_paned_set_position</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_paned_set_position (<a title="GtkPaned" href="gtkpaned.html#GtkPaned">GtkPaned</a> * paned,
+                        <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> position)</pre>
+
+<p>Sets the position of the divider between the two panes.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>paned</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkpaned.html#GtkPaned">GtkPaned</a> widget</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>position</code></em></i>
+				–
+	</div>
+			<p>pixel position of divider, a negative value means that the position
+is unset.</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_paned_set_position">
+	<span><code>Gtk.prototype.set_position</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_position(position: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_paned_set_position'
+}</pre>
+
+<p>Sets the position of the divider between the two panes.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>paned</code></em></i>
+					(
+						<a title="Gtk.Paned" href="gtkpaned.html#GtkPaned">Gtk.Paned</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkpaned.html#GtkPaned">Gtk.Paned</a> widget</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>position</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>pixel position of divider, a negative value means that the position
+is unset.</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_paned_set_position">
+	<span><code>Gtk.Paned.set_position</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Paned.set_position (self, position):
+    #python wrapper for 'gtk_paned_set_position'</pre>
+
+<p>Sets the position of the divider between the two panes.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>paned</code></em></i>
+					(
+						<a title="Gtk.Paned" href="gtkpaned.html#GtkPaned">Gtk.Paned</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkpaned.html#GtkPaned">Gtk.Paned</a> widget</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>position</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>pixel position of divider, a negative value means that the position
+is unset.</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_paned_get_position">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_paned_get_position">
+	<span><code>gtk_paned_get_position</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a>
+gtk_paned_get_position (<a title="GtkPaned" href="gtkpaned.html#GtkPaned">GtkPaned</a> * paned)</pre>
+
+<p>Obtains the position of the divider between the two panes.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>paned</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkpaned.html#GtkPaned">GtkPaned</a> widget</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>position of the divider</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_paned_get_position">
+	<span><code>Gtk.prototype.get_position</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_position(): {
+    // javascript wrapper for 'gtk_paned_get_position'
+}</pre>
+
+<p>Obtains the position of the divider between the two panes.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>paned</code></em></i>
+					(
+						<a title="Gtk.Paned" href="gtkpaned.html#GtkPaned">Gtk.Paned</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkpaned.html#GtkPaned">Gtk.Paned</a> widget</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p>position of the divider</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_paned_get_position">
+	<span><code>Gtk.Paned.get_position</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Paned.get_position (self):
+    #python wrapper for 'gtk_paned_get_position'</pre>
+
+<p>Obtains the position of the divider between the two panes.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>paned</code></em></i>
+					(
+						<a title="Gtk.Paned" href="gtkpaned.html#GtkPaned">Gtk.Paned</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkpaned.html#GtkPaned">Gtk.Paned</a> widget</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+										)
+								–
+			</div>
+							<p>position of the divider</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.16;" id="gtk_paned_set_wide_handle">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_paned_set_wide_handle">
+	<span><code>gtk_paned_set_wide_handle</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_paned_set_wide_handle (<a title="GtkPaned" href="gtkpaned.html#GtkPaned">GtkPaned</a> * paned,
+                           <a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a> wide)</pre>
+
+<p>Sets the <a href="https://developer.gnome.org/gtk3/GtkPaned.html#GtkPaned--wide-handle">wide-handle</a> property.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>paned</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkpaned.html#GtkPaned">GtkPaned</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>wide</code></em></i>
+				–
+	</div>
+			<p>the new value for the <a href="https://developer.gnome.org/gtk3/GtkPaned.html#GtkPaned--wide-handle">wide-handle</a> property</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.16
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_paned_set_wide_handle">
+	<span><code>Gtk.prototype.set_wide_handle</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_wide_handle(wide: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_paned_set_wide_handle'
+}</pre>
+
+<p>Sets the <a href="https://developer.gnome.org/gtk3/GtkPaned.html#GtkPaned--wide-handle">wide-handle</a> property.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>paned</code></em></i>
+					(
+						<a title="Gtk.Paned" href="gtkpaned.html#GtkPaned">Gtk.Paned</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkpaned.html#GtkPaned">Gtk.Paned</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>wide</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the new value for the <a href="https://developer.gnome.org/gtk3/GtkPaned.html#GtkPaned--wide-handle">wide-handle</a> property</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.16
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_paned_set_wide_handle">
+	<span><code>Gtk.Paned.set_wide_handle</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Paned.set_wide_handle (self, wide):
+    #python wrapper for 'gtk_paned_set_wide_handle'</pre>
+
+<p>Sets the <a href="https://developer.gnome.org/gtk3/GtkPaned.html#GtkPaned--wide-handle">wide-handle</a> property.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>paned</code></em></i>
+					(
+						<a title="Gtk.Paned" href="gtkpaned.html#GtkPaned">Gtk.Paned</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkpaned.html#GtkPaned">Gtk.Paned</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>wide</code></em></i>
+					(
+						<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+						)
+				–
+	</div>
+			<p>the new value for the <a href="https://developer.gnome.org/gtk3/GtkPaned.html#GtkPaned--wide-handle">wide-handle</a> property</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.16
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.16;" id="gtk_paned_get_wide_handle">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_paned_get_wide_handle">
+	<span><code>gtk_paned_get_wide_handle</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_paned_get_wide_handle (<a title="GtkPaned" href="gtkpaned.html#GtkPaned">GtkPaned</a> * paned)</pre>
+
+<p>Gets the <a href="https://developer.gnome.org/gtk3/GtkPaned.html#GtkPaned--wide-handle">wide-handle</a> property.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>paned</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkpaned.html#GtkPaned">GtkPaned</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if the paned should have a wide handle</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.16
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_paned_get_wide_handle">
+	<span><code>Gtk.prototype.get_wide_handle</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_wide_handle(): {
+    // javascript wrapper for 'gtk_paned_get_wide_handle'
+}</pre>
+
+<p>Gets the <a href="https://developer.gnome.org/gtk3/GtkPaned.html#GtkPaned--wide-handle">wide-handle</a> property.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>paned</code></em></i>
+					(
+						<a title="Gtk.Paned" href="gtkpaned.html#GtkPaned">Gtk.Paned</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkpaned.html#GtkPaned">Gtk.Paned</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> if the paned should have a wide handle</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.16
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_paned_get_wide_handle">
+	<span><code>Gtk.Paned.get_wide_handle</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Paned.get_wide_handle (self):
+    #python wrapper for 'gtk_paned_get_wide_handle'</pre>
+
+<p>Gets the <a href="https://developer.gnome.org/gtk3/GtkPaned.html#GtkPaned--wide-handle">wide-handle</a> property.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>paned</code></em></i>
+					(
+						<a title="Gtk.Paned" href="gtkpaned.html#GtkPaned">Gtk.Paned</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkpaned.html#GtkPaned">Gtk.Paned</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+										)
+								–
+			</div>
+							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if the paned should have a wide handle</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.16
+		</p>
+
+
+        </div>
+
+</div>
+
+
+
+
+
+
+		
+	</div>
+	<div id="search_results">
+		<p>The results of the search are</p>
+	</div>
+	<hr>
+	<div id="footer">
+		    
+
+	</div>
+</div>
+
+<div id="toc-column">
+	
+		<div class="edit-button">
+		
+
+	</div>
+		<div id="toc-wrapper">
+		<nav id="toc"></nav>
+	</div>
+</div>
+</div>
+</main>
+
+</body>
+
+<script src="assets/js/navbar_offset_scroller.js"></script>
+</html>

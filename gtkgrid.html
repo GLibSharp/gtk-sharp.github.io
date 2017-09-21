@@ -1,0 +1,4448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<base href=".">
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>gtkgrid</title>
+
+<link rel="stylesheet" href="assets/css/custom_bootstrap.css" type="text/css">
+<link rel="stylesheet" href="assets/css/bootstrap-toc.min.css" type="text/css">
+<link rel="stylesheet" href="assets/css/frontend.css" type="text/css">
+<link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
+
+<link rel="stylesheet" href="assets/css/prism.css" type="text/css">
+
+<script src="assets/js/mustache.min.js"></script>
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/scrollspy.js"></script>
+<script src="assets/js/bootstrap.js"></script>
+<script src="assets/js/typeahead.jquery.min.js"></script>
+<script src="assets/js/search.js"></script>
+<script src="assets/js/isotope.pkgd.min.js"></script>
+<script src="assets/js/compare-versions.js"></script>
+<script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="assets/js/bootstrap-toc.min.js"></script>
+<script src="assets/js/jquery.touchSwipe.min.js"></script>
+<script src="assets/js/anchor.min.js"></script>
+<script src="assets/js/tag_filtering.js"></script>
+<script src="assets/js/language_switching.js"></script>
+
+<script src="assets/js/lines_around_headings.js"></script>
+
+<script src="assets/js/prism-core.js"></script>
+<script src="assets/js/prism-autoloader.js"></script>
+<script src="assets/js/prism_autoloader_path_override.js"></script>
+<script src="assets/js/trie.js"></script>
+
+
+</head>
+
+<body class="no-script
+" data-spy="scroll" data-target="#toc" data-offset="70">
+
+<script>
+$('body').removeClass('no-script');
+</script>
+
+<nav class="navbar navbar-fixed-top navbar-default" id="topnav">
+	<div class="container-fluid">
+		<div class="navbar-right">
+			<a id="toc-toggle">
+				<span class="glyphicon glyphicon-menu-right"></span>
+				<span class="glyphicon glyphicon-menu-left"></span>
+			</a>
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-wrapper" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<form action="" class="navbar-form pull-right" id="navbar-search-form">
+                               <div class="form-group has-feedback">
+                                       <input type="text" class="form-control input-sm" name="search" id="sidenav-lookup-field" placeholder="search" disabled>
+				       <span class="glyphicon glyphicon-search form-control-feedback" id="search-mgn-glass"></span>
+                               </div>
+                        </form>
+		</div>
+		<div class="navbar-header">
+			<a id="sidenav-toggle">
+				<span class="glyphicon glyphicon-menu-right"></span>
+				<span class="glyphicon glyphicon-menu-left"></span>
+			</a>
+			<a id="home-link" href="index.html" class="hotdoc-navbar-brand">
+				<img src="assets/images/home.svg" alt="Home">
+			</a>
+		</div>
+		<div class="navbar-collapse collapse" id="navbar-wrapper">
+			<ul class="nav navbar-nav" id="menu">
+							</ul>
+			<div class="hidden-xs hidden-sm navbar-text navbar-center">
+							</div>
+		</div>
+	</div>
+</nav>
+
+<main>
+<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="gtkgrid.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['c', 'javascript', 'python']" data-hotdoc-meta-gi-language="c">
+<script src="assets/js/utils.js"></script>
+
+<div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
+	<script src="assets/js/navigation.js"></script>
+	<script src="assets/js/sitemap.js"></script>
+</div>
+
+<div id="body">
+	<div id="main">
+				    <div id="page-description" data-hotdoc-source="gtkgrid.markdown" data-hotdoc-role="main">
+    </div>
+        
+        
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="GtkGrid">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h2 data-hotdoc-id="GtkGrid">
+	<span><code>GtkGrid</code></span>
+</h2>
+
+
+<div class="hierarchy_container">
+	<div class="hierarchy_details">
+<pre>
+<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object">GObject</a>
+    <span class="lineart">╰──</span><a title="GInitiallyUnowned" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-javascript="GObject.InitiallyUnowned" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-python="GObject.InitiallyUnowned">GInitiallyUnowned</a>
+        <span class="lineart">╰──</span><a title="GtkWidget" href="gtkwidget.html#GtkWidget" data-gi-href-javascript="gtkwidget.html#GtkWidget" data-gi-title-javascript="Gtk.Widget" data-gi-href-python="gtkwidget.html#GtkWidget" data-gi-title-python="Gtk.Widget">GtkWidget</a>
+            <span class="lineart">╰──</span><a title="GtkContainer" href="gtkcontainer.html#GtkContainer" data-gi-href-javascript="gtkcontainer.html#GtkContainer" data-gi-title-javascript="Gtk.Container" data-gi-href-python="gtkcontainer.html#GtkContainer" data-gi-title-python="Gtk.Container">GtkContainer</a>
+                <span class="lineart">╰──</span>GtkGrid
+</pre>
+
+</div>
+
+</div>
+
+<div class="interfaces_container">
+	
+<p><b>Implemented interfaces:</b>
+    AtkImplementorIface, <a title="GtkBuildable" href="gtkbuildable.html#GtkBuildable" data-gi-href-javascript="gtkbuildable.html#GtkBuildable" data-gi-title-javascript="Gtk.Buildable" data-gi-href-python="gtkbuildable.html#GtkBuildable" data-gi-title-python="Gtk.Buildable">GtkBuildable</a>, <a title="GtkOrientable" href="gtkorientable.html#GtkOrientable" data-gi-href-javascript="gtkorientable.html#GtkOrientable" data-gi-title-javascript="Gtk.Orientable" data-gi-href-python="gtkorientable.html#GtkOrientable" data-gi-title-python="Gtk.Orientable">GtkOrientable</a>
+</p>
+
+</div>
+
+
+
+
+
+<h3>Class structure</h3>
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="GtkGridClass">
+	<span><code>GtkGridClass</code></span>
+</h4>
+
+
+
+
+
+	<div class="members-container">
+		<h5>Fields</h5>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkGridClass.parent_class">
+	<div>
+		<i><em><code>parent_class</code></em></i>
+		(<a title="GtkContainerClass" href="GtkContainerClass">GtkContainerClass</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h3>
+	Gtk.GridClass
+</h3>
+
+
+
+
+
+	<div class="members-container">
+		<h5>Attributes</h5>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkGridClass.parent_class">
+	<div>
+		<i><em><code>GridClass.parent_class</code></em></i>
+		(<a title="Gtk.ContainerClass" href="GtkContainerClass">Gtk.ContainerClass</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3>
+	Gtk.GridClass
+</h3>
+
+
+
+
+
+	<div class="members-container">
+		<h5>Attributes</h5>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkGridClass.parent_class">
+	<div>
+		<i><em><code>GridClass.parent_class</code></em></i>
+		(<a title="Gtk.ContainerClass" href="GtkContainerClass">Gtk.ContainerClass</a>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h2 data-hotdoc-id="GtkGrid">
+	<span><code>GtkGrid</code></span>
+</h2>
+
+
+<div class="hierarchy_container">
+	<div class="hierarchy_details">
+<pre>
+<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object">GObject</a>
+    <span class="lineart">╰──</span><a title="GInitiallyUnowned" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-javascript="GObject.InitiallyUnowned" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-python="GObject.InitiallyUnowned">GInitiallyUnowned</a>
+        <span class="lineart">╰──</span><a title="GtkWidget" href="gtkwidget.html#GtkWidget" data-gi-href-javascript="gtkwidget.html#GtkWidget" data-gi-title-javascript="Gtk.Widget" data-gi-href-python="gtkwidget.html#GtkWidget" data-gi-title-python="Gtk.Widget">GtkWidget</a>
+            <span class="lineart">╰──</span><a title="GtkContainer" href="gtkcontainer.html#GtkContainer" data-gi-href-javascript="gtkcontainer.html#GtkContainer" data-gi-title-javascript="Gtk.Container" data-gi-href-python="gtkcontainer.html#GtkContainer" data-gi-title-python="Gtk.Container">GtkContainer</a>
+                <span class="lineart">╰──</span>GtkGrid
+</pre>
+
+</div>
+
+</div>
+
+<div class="interfaces_container">
+	
+<p><b>Implemented interfaces:</b>
+    AtkImplementorIface, <a title="GtkBuildable" href="gtkbuildable.html#GtkBuildable" data-gi-href-javascript="gtkbuildable.html#GtkBuildable" data-gi-title-javascript="Gtk.Buildable" data-gi-href-python="gtkbuildable.html#GtkBuildable" data-gi-title-python="Gtk.Buildable">GtkBuildable</a>, <a title="GtkOrientable" href="gtkorientable.html#GtkOrientable" data-gi-href-javascript="gtkorientable.html#GtkOrientable" data-gi-title-javascript="Gtk.Orientable" data-gi-href-python="gtkorientable.html#GtkOrientable" data-gi-title-python="Gtk.Orientable">GtkOrientable</a>
+</p>
+
+</div>
+
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h2 data-hotdoc-id="GtkGrid">
+	<span><code>GtkGrid</code></span>
+</h2>
+
+
+<div class="hierarchy_container">
+	<div class="hierarchy_details">
+<pre>
+<a title="GObject" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-javascript="GObject.Object" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GObject-struct" data-gi-title-python="GObject.Object">GObject</a>
+    <span class="lineart">╰──</span><a title="GInitiallyUnowned" href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-href-javascript="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-javascript="GObject.InitiallyUnowned" data-gi-href-python="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#GInitiallyUnowned" data-gi-title-python="GObject.InitiallyUnowned">GInitiallyUnowned</a>
+        <span class="lineart">╰──</span><a title="GtkWidget" href="gtkwidget.html#GtkWidget" data-gi-href-javascript="gtkwidget.html#GtkWidget" data-gi-title-javascript="Gtk.Widget" data-gi-href-python="gtkwidget.html#GtkWidget" data-gi-title-python="Gtk.Widget">GtkWidget</a>
+            <span class="lineart">╰──</span><a title="GtkContainer" href="gtkcontainer.html#GtkContainer" data-gi-href-javascript="gtkcontainer.html#GtkContainer" data-gi-title-javascript="Gtk.Container" data-gi-href-python="gtkcontainer.html#GtkContainer" data-gi-title-python="Gtk.Container">GtkContainer</a>
+                <span class="lineart">╰──</span>GtkGrid
+</pre>
+
+</div>
+
+</div>
+
+<div class="interfaces_container">
+	
+<p><b>Implemented interfaces:</b>
+    AtkImplementorIface, <a title="GtkBuildable" href="gtkbuildable.html#GtkBuildable" data-gi-href-javascript="gtkbuildable.html#GtkBuildable" data-gi-title-javascript="Gtk.Buildable" data-gi-href-python="gtkbuildable.html#GtkBuildable" data-gi-title-python="Gtk.Buildable">GtkBuildable</a>, <a title="GtkOrientable" href="gtkorientable.html#GtkOrientable" data-gi-href-javascript="gtkorientable.html#GtkOrientable" data-gi-title-javascript="Gtk.Orientable" data-gi-href-python="gtkorientable.html#GtkOrientable" data-gi-title-python="Gtk.Orientable">GtkOrientable</a>
+</p>
+
+</div>
+
+
+
+
+
+
+        </div>
+
+</div>
+
+
+            <h3 class="symbol_section">Constructors</h3>
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_grid_new">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_grid_new">
+	<span><code>gtk_grid_new</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkWidget" href="gtkwidget.html#GtkWidget">GtkWidget</a> *
+gtk_grid_new ()</pre>
+
+<p>Creates a new grid widget.</p>
+
+
+
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>the new <a href="gtkgrid.html#GtkGrid">GtkGrid</a></p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_grid_new">
+	<span><code>Gtk.prototype.new</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.new(): {
+    // javascript wrapper for 'gtk_grid_new'
+}</pre>
+
+<p>Creates a new grid widget.</p>
+
+
+
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>the new <a href="gtkgrid.html#GtkGrid">Gtk.Grid</a></p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_grid_new">
+	<span><code>Gtk.Grid.new</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Grid.new ():
+    #python wrapper for 'gtk_grid_new'</pre>
+
+<p>Creates a new grid widget.</p>
+
+
+
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>the new <a href="gtkgrid.html#GtkGrid">Gtk.Grid</a></p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+
+            <h3 class="symbol_section">Methods</h3>
+                    
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_grid_attach">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_grid_attach">
+	<span><code>gtk_grid_attach</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_grid_attach (<a title="GtkGrid" href="gtkgrid.html#GtkGrid">GtkGrid</a> * grid,
+                 <a title="GtkWidget" href="gtkwidget.html#GtkWidget">GtkWidget</a> * child,
+                 <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> left,
+                 <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> top,
+                 <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> width,
+                 <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> height)</pre>
+
+<p>Adds a widget to the grid.</p>
+<p>The position of <em>child</em> is determined by <em>left</em> and <em>top</em>. The
+number of “cells” that <em>child</em> will occupy is determined by
+<em>width</em> and <em>height</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>grid</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkgrid.html#GtkGrid">GtkGrid</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>child</code></em></i>
+				–
+	</div>
+			<p>the widget to add</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>left</code></em></i>
+				–
+	</div>
+			<p>the column number to attach the left side of <em>child</em> to</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>top</code></em></i>
+				–
+	</div>
+			<p>the row number to attach the top side of <em>child</em> to</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>width</code></em></i>
+				–
+	</div>
+			<p>the number of columns that <em>child</em> will span</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>height</code></em></i>
+				–
+	</div>
+			<p>the number of rows that <em>child</em> will span</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_grid_attach">
+	<span><code>Gtk.prototype.attach</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.attach(child: <a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>, left: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, top: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, width: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, height: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_grid_attach'
+}</pre>
+
+<p>Adds a widget to the grid.</p>
+<p>The position of <em>child</em> is determined by <em>left</em> and <em>top</em>. The
+number of “cells” that <em>child</em> will occupy is determined by
+<em>width</em> and <em>height</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>grid</code></em></i>
+					(
+						<a title="Gtk.Grid" href="gtkgrid.html#GtkGrid">Gtk.Grid</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkgrid.html#GtkGrid">Gtk.Grid</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>child</code></em></i>
+					(
+						<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>the widget to add</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>left</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the column number to attach the left side of <em>child</em> to</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>top</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the row number to attach the top side of <em>child</em> to</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>width</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the number of columns that <em>child</em> will span</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>height</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the number of rows that <em>child</em> will span</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_grid_attach">
+	<span><code>Gtk.Grid.attach</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Grid.attach (self, child, left, top, width, height):
+    #python wrapper for 'gtk_grid_attach'</pre>
+
+<p>Adds a widget to the grid.</p>
+<p>The position of <em>child</em> is determined by <em>left</em> and <em>top</em>. The
+number of “cells” that <em>child</em> will occupy is determined by
+<em>width</em> and <em>height</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>grid</code></em></i>
+					(
+						<a title="Gtk.Grid" href="gtkgrid.html#GtkGrid">Gtk.Grid</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkgrid.html#GtkGrid">Gtk.Grid</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>child</code></em></i>
+					(
+						<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>the widget to add</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>left</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>the column number to attach the left side of <em>child</em> to</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>top</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>the row number to attach the top side of <em>child</em> to</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>width</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>the number of columns that <em>child</em> will span</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>height</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>the number of rows that <em>child</em> will span</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_grid_attach_next_to">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_grid_attach_next_to">
+	<span><code>gtk_grid_attach_next_to</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_grid_attach_next_to (<a title="GtkGrid" href="gtkgrid.html#GtkGrid">GtkGrid</a> * grid,
+                         <a title="GtkWidget" href="gtkwidget.html#GtkWidget">GtkWidget</a> * child,
+                         <a title="GtkWidget" href="gtkwidget.html#GtkWidget">GtkWidget</a> * sibling,
+                         <a title="GtkPositionType" href="gtkenums.html#GtkPositionType">GtkPositionType</a> side,
+                         <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> width,
+                         <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> height)</pre>
+
+<p>Adds a widget to the grid.</p>
+<p>The widget is placed next to <em>sibling</em>, on the side determined by
+<em>side</em>. When <em>sibling</em> is <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a>, the widget is placed in row (for
+left or right placement) or column 0 (for top or bottom placement),
+at the end indicated by <em>side</em>.</p>
+<p>Attaching widgets labeled [1], [2], [3] with <em>sibling</em> == <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> and
+<em>side</em> == <a href="gtkenums.html#GTK_POS_LEFT">GTK_POS_LEFT</a> yields a layout of [3][2][1].</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>grid</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkgrid.html#GtkGrid">GtkGrid</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>child</code></em></i>
+				–
+	</div>
+			<p>the widget to add</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>sibling</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>the child of <em>grid</em> that <em>child</em> will be placed
+next to, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> to place <em>child</em> at the beginning or end</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>side</code></em></i>
+				–
+	</div>
+			<p>the side of <em>sibling</em> that <em>child</em> is positioned next to</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>width</code></em></i>
+				–
+	</div>
+			<p>the number of columns that <em>child</em> will span</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>height</code></em></i>
+				–
+	</div>
+			<p>the number of rows that <em>child</em> will span</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_grid_attach_next_to">
+	<span><code>Gtk.prototype.attach_next_to</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.attach_next_to(child: <a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>, sibling: <a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>, side: <a title="Gtk.PositionType" href="gtkenums.html#GtkPositionType">Gtk.PositionType</a>, width: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, height: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_grid_attach_next_to'
+}</pre>
+
+<p>Adds a widget to the grid.</p>
+<p>The widget is placed next to <em>sibling</em>, on the side determined by
+<em>side</em>. When <em>sibling</em> is <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a>, the widget is placed in row (for
+left or right placement) or column 0 (for top or bottom placement),
+at the end indicated by <em>side</em>.</p>
+<p>Attaching widgets labeled [1], [2], [3] with <em>sibling</em> == <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a> and
+<em>side</em> == <a href="gtkenums.html#GTK_POS_LEFT">Gtk.PositionType.LEFT</a> yields a layout of [3][2][1].</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>grid</code></em></i>
+					(
+						<a title="Gtk.Grid" href="gtkgrid.html#GtkGrid">Gtk.Grid</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkgrid.html#GtkGrid">Gtk.Grid</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>child</code></em></i>
+					(
+						<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>the widget to add</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>sibling</code></em></i>
+					(
+						<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>the child of <em>grid</em> that <em>child</em> will be placed
+next to, or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a> to place <em>child</em> at the beginning or end</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>side</code></em></i>
+					(
+						<a title="Gtk.PositionType" href="gtkenums.html#GtkPositionType">Gtk.PositionType</a>
+						)
+				–
+	</div>
+			<p>the side of <em>sibling</em> that <em>child</em> is positioned next to</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>width</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the number of columns that <em>child</em> will span</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>height</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the number of rows that <em>child</em> will span</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_grid_attach_next_to">
+	<span><code>Gtk.Grid.attach_next_to</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Grid.attach_next_to (self, child, sibling, side, width, height):
+    #python wrapper for 'gtk_grid_attach_next_to'</pre>
+
+<p>Adds a widget to the grid.</p>
+<p>The widget is placed next to <em>sibling</em>, on the side determined by
+<em>side</em>. When <em>sibling</em> is <a href="https://docs.python.org/3/library/constants.html#None">None</a>, the widget is placed in row (for
+left or right placement) or column 0 (for top or bottom placement),
+at the end indicated by <em>side</em>.</p>
+<p>Attaching widgets labeled [1], [2], [3] with <em>sibling</em> == <a href="https://docs.python.org/3/library/constants.html#None">None</a> and
+<em>side</em> == <a href="gtkenums.html#GTK_POS_LEFT">Gtk.PositionType.LEFT</a> yields a layout of [3][2][1].</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>grid</code></em></i>
+					(
+						<a title="Gtk.Grid" href="gtkgrid.html#GtkGrid">Gtk.Grid</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkgrid.html#GtkGrid">Gtk.Grid</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>child</code></em></i>
+					(
+						<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>the widget to add</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>sibling</code></em></i>
+					(
+						<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>the child of <em>grid</em> that <em>child</em> will be placed
+next to, or <a href="https://docs.python.org/3/library/constants.html#None">None</a> to place <em>child</em> at the beginning or end</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>side</code></em></i>
+					(
+						<a title="Gtk.PositionType" href="gtkenums.html#GtkPositionType">Gtk.PositionType</a>
+						)
+				–
+	</div>
+			<p>the side of <em>sibling</em> that <em>child</em> is positioned next to</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>width</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>the number of columns that <em>child</em> will span</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>height</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>the number of rows that <em>child</em> will span</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.2;" id="gtk_grid_get_child_at">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_grid_get_child_at">
+	<span><code>gtk_grid_get_child_at</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkWidget" href="gtkwidget.html#GtkWidget">GtkWidget</a> *
+gtk_grid_get_child_at (<a title="GtkGrid" href="gtkgrid.html#GtkGrid">GtkGrid</a> * grid,
+                       <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> left,
+                       <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> top)</pre>
+
+<p>Gets the child of <em>grid</em> whose area covers the grid
+cell whose upper left corner is at <em>left</em>, <em>top</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>grid</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkgrid.html#GtkGrid">GtkGrid</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>left</code></em></i>
+				–
+	</div>
+			<p>the left edge of the cell</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>top</code></em></i>
+				–
+	</div>
+			<p>the top edge of the cell</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					
+										
+<span class="annotation">[<abbr title="Don't free data after the code is done"><span class="acronym">transfer: none</span></abbr>]</span>
+<span class="annotation">[<abbr title="NULL may be passed to the value"><span class="acronym">nullable</span></abbr>]</span>
+
+										)
+								–
+			</div>
+							<p>the child at the given position, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.2
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_grid_get_child_at">
+	<span><code>Gtk.prototype.get_child_at</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_child_at(left: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, top: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_grid_get_child_at'
+}</pre>
+
+<p>Gets the child of <em>grid</em> whose area covers the grid
+cell whose upper left corner is at <em>left</em>, <em>top</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>grid</code></em></i>
+					(
+						<a title="Gtk.Grid" href="gtkgrid.html#GtkGrid">Gtk.Grid</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkgrid.html#GtkGrid">Gtk.Grid</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>left</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the left edge of the cell</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>top</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the top edge of the cell</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>the child at the given position, or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">null</a></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.2
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_grid_get_child_at">
+	<span><code>Gtk.Grid.get_child_at</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Grid.get_child_at (self, left, top):
+    #python wrapper for 'gtk_grid_get_child_at'</pre>
+
+<p>Gets the child of <em>grid</em> whose area covers the grid
+cell whose upper left corner is at <em>left</em>, <em>top</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>grid</code></em></i>
+					(
+						<a title="Gtk.Grid" href="gtkgrid.html#GtkGrid">Gtk.Grid</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkgrid.html#GtkGrid">Gtk.Grid</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>left</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>the left edge of the cell</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>top</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>the top edge of the cell</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
+										)
+								–
+			</div>
+							<p>the child at the given position, or <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.2
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.2;" id="gtk_grid_insert_row">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_grid_insert_row">
+	<span><code>gtk_grid_insert_row</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_grid_insert_row (<a title="GtkGrid" href="gtkgrid.html#GtkGrid">GtkGrid</a> * grid,
+                     <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> position)</pre>
+
+<p>Inserts a row at the specified position.</p>
+<p>Children which are attached at or below this position
+are moved one row down. Children which span across this
+position are grown to span the new row.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>grid</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkgrid.html#GtkGrid">GtkGrid</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>position</code></em></i>
+				–
+	</div>
+			<p>the position to insert the row at</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.2
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_grid_insert_row">
+	<span><code>Gtk.prototype.insert_row</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.insert_row(position: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_grid_insert_row'
+}</pre>
+
+<p>Inserts a row at the specified position.</p>
+<p>Children which are attached at or below this position
+are moved one row down. Children which span across this
+position are grown to span the new row.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>grid</code></em></i>
+					(
+						<a title="Gtk.Grid" href="gtkgrid.html#GtkGrid">Gtk.Grid</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkgrid.html#GtkGrid">Gtk.Grid</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>position</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the position to insert the row at</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.2
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_grid_insert_row">
+	<span><code>Gtk.Grid.insert_row</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Grid.insert_row (self, position):
+    #python wrapper for 'gtk_grid_insert_row'</pre>
+
+<p>Inserts a row at the specified position.</p>
+<p>Children which are attached at or below this position
+are moved one row down. Children which span across this
+position are grown to span the new row.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>grid</code></em></i>
+					(
+						<a title="Gtk.Grid" href="gtkgrid.html#GtkGrid">Gtk.Grid</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkgrid.html#GtkGrid">Gtk.Grid</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>position</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>the position to insert the row at</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.2
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.2;" id="gtk_grid_insert_column">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_grid_insert_column">
+	<span><code>gtk_grid_insert_column</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_grid_insert_column (<a title="GtkGrid" href="gtkgrid.html#GtkGrid">GtkGrid</a> * grid,
+                        <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> position)</pre>
+
+<p>Inserts a column at the specified position.</p>
+<p>Children which are attached at or to the right of this position
+are moved one column to the right. Children which span across this
+position are grown to span the new column.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>grid</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkgrid.html#GtkGrid">GtkGrid</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>position</code></em></i>
+				–
+	</div>
+			<p>the position to insert the column at</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.2
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_grid_insert_column">
+	<span><code>Gtk.prototype.insert_column</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.insert_column(position: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_grid_insert_column'
+}</pre>
+
+<p>Inserts a column at the specified position.</p>
+<p>Children which are attached at or to the right of this position
+are moved one column to the right. Children which span across this
+position are grown to span the new column.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>grid</code></em></i>
+					(
+						<a title="Gtk.Grid" href="gtkgrid.html#GtkGrid">Gtk.Grid</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkgrid.html#GtkGrid">Gtk.Grid</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>position</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the position to insert the column at</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.2
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_grid_insert_column">
+	<span><code>Gtk.Grid.insert_column</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Grid.insert_column (self, position):
+    #python wrapper for 'gtk_grid_insert_column'</pre>
+
+<p>Inserts a column at the specified position.</p>
+<p>Children which are attached at or to the right of this position
+are moved one column to the right. Children which span across this
+position are grown to span the new column.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>grid</code></em></i>
+					(
+						<a title="Gtk.Grid" href="gtkgrid.html#GtkGrid">Gtk.Grid</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkgrid.html#GtkGrid">Gtk.Grid</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>position</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>the position to insert the column at</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.2
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.10;" id="gtk_grid_remove_row">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_grid_remove_row">
+	<span><code>gtk_grid_remove_row</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_grid_remove_row (<a title="GtkGrid" href="gtkgrid.html#GtkGrid">GtkGrid</a> * grid,
+                     <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> position)</pre>
+
+<p>Removes a row from the grid.</p>
+<p>Children that are placed in this row are removed,
+spanning children that overlap this row have their
+height reduced by one, and children below the row
+are moved up.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>grid</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkgrid.html#GtkGrid">GtkGrid</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>position</code></em></i>
+				–
+	</div>
+			<p>the position of the row to remove</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_grid_remove_row">
+	<span><code>Gtk.prototype.remove_row</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.remove_row(position: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_grid_remove_row'
+}</pre>
+
+<p>Removes a row from the grid.</p>
+<p>Children that are placed in this row are removed,
+spanning children that overlap this row have their
+height reduced by one, and children below the row
+are moved up.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>grid</code></em></i>
+					(
+						<a title="Gtk.Grid" href="gtkgrid.html#GtkGrid">Gtk.Grid</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkgrid.html#GtkGrid">Gtk.Grid</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>position</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the position of the row to remove</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_grid_remove_row">
+	<span><code>Gtk.Grid.remove_row</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Grid.remove_row (self, position):
+    #python wrapper for 'gtk_grid_remove_row'</pre>
+
+<p>Removes a row from the grid.</p>
+<p>Children that are placed in this row are removed,
+spanning children that overlap this row have their
+height reduced by one, and children below the row
+are moved up.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>grid</code></em></i>
+					(
+						<a title="Gtk.Grid" href="gtkgrid.html#GtkGrid">Gtk.Grid</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkgrid.html#GtkGrid">Gtk.Grid</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>position</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>the position of the row to remove</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.10
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.10;" id="gtk_grid_remove_column">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_grid_remove_column">
+	<span><code>gtk_grid_remove_column</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_grid_remove_column (<a title="GtkGrid" href="gtkgrid.html#GtkGrid">GtkGrid</a> * grid,
+                        <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> position)</pre>
+
+<p>Removes a column from the grid.</p>
+<p>Children that are placed in this column are removed,
+spanning children that overlap this column have their
+width reduced by one, and children after the column
+are moved to the left.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>grid</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkgrid.html#GtkGrid">GtkGrid</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>position</code></em></i>
+				–
+	</div>
+			<p>the position of the column to remove</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_grid_remove_column">
+	<span><code>Gtk.prototype.remove_column</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.remove_column(position: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_grid_remove_column'
+}</pre>
+
+<p>Removes a column from the grid.</p>
+<p>Children that are placed in this column are removed,
+spanning children that overlap this column have their
+width reduced by one, and children after the column
+are moved to the left.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>grid</code></em></i>
+					(
+						<a title="Gtk.Grid" href="gtkgrid.html#GtkGrid">Gtk.Grid</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkgrid.html#GtkGrid">Gtk.Grid</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>position</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the position of the column to remove</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_grid_remove_column">
+	<span><code>Gtk.Grid.remove_column</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Grid.remove_column (self, position):
+    #python wrapper for 'gtk_grid_remove_column'</pre>
+
+<p>Removes a column from the grid.</p>
+<p>Children that are placed in this column are removed,
+spanning children that overlap this column have their
+width reduced by one, and children after the column
+are moved to the left.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>grid</code></em></i>
+					(
+						<a title="Gtk.Grid" href="gtkgrid.html#GtkGrid">Gtk.Grid</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkgrid.html#GtkGrid">Gtk.Grid</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>position</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>the position of the column to remove</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.10
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.2;" id="gtk_grid_insert_next_to">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_grid_insert_next_to">
+	<span><code>gtk_grid_insert_next_to</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_grid_insert_next_to (<a title="GtkGrid" href="gtkgrid.html#GtkGrid">GtkGrid</a> * grid,
+                         <a title="GtkWidget" href="gtkwidget.html#GtkWidget">GtkWidget</a> * sibling,
+                         <a title="GtkPositionType" href="gtkenums.html#GtkPositionType">GtkPositionType</a> side)</pre>
+
+<p>Inserts a row or column at the specified position.</p>
+<p>The new row or column is placed next to <em>sibling</em>, on the side
+determined by <em>side</em>. If <em>side</em> is <a href="gtkenums.html#GTK_POS_TOP">GTK_POS_TOP</a> or <a href="gtkenums.html#GTK_POS_BOTTOM">GTK_POS_BOTTOM</a>,
+a row is inserted. If <em>side</em> is <a href="gtkenums.html#GTK_POS_LEFT">GTK_POS_LEFT</a> of <a href="gtkenums.html#GTK_POS_RIGHT">GTK_POS_RIGHT</a>,
+a column is inserted.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>grid</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkgrid.html#GtkGrid">GtkGrid</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>sibling</code></em></i>
+				–
+	</div>
+			<p>the child of <em>grid</em> that the new row or column will be
+placed next to</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>side</code></em></i>
+				–
+	</div>
+			<p>the side of <em>sibling</em> that <em>child</em> is positioned next to</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.2
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_grid_insert_next_to">
+	<span><code>Gtk.prototype.insert_next_to</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.insert_next_to(sibling: <a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>, side: <a title="Gtk.PositionType" href="gtkenums.html#GtkPositionType">Gtk.PositionType</a>): {
+    // javascript wrapper for 'gtk_grid_insert_next_to'
+}</pre>
+
+<p>Inserts a row or column at the specified position.</p>
+<p>The new row or column is placed next to <em>sibling</em>, on the side
+determined by <em>side</em>. If <em>side</em> is <a href="gtkenums.html#GTK_POS_TOP">Gtk.PositionType.TOP</a> or <a href="gtkenums.html#GTK_POS_BOTTOM">Gtk.PositionType.BOTTOM</a>,
+a row is inserted. If <em>side</em> is <a href="gtkenums.html#GTK_POS_LEFT">Gtk.PositionType.LEFT</a> of <a href="gtkenums.html#GTK_POS_RIGHT">Gtk.PositionType.RIGHT</a>,
+a column is inserted.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>grid</code></em></i>
+					(
+						<a title="Gtk.Grid" href="gtkgrid.html#GtkGrid">Gtk.Grid</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkgrid.html#GtkGrid">Gtk.Grid</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>sibling</code></em></i>
+					(
+						<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>the child of <em>grid</em> that the new row or column will be
+placed next to</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>side</code></em></i>
+					(
+						<a title="Gtk.PositionType" href="gtkenums.html#GtkPositionType">Gtk.PositionType</a>
+						)
+				–
+	</div>
+			<p>the side of <em>sibling</em> that <em>child</em> is positioned next to</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.2
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_grid_insert_next_to">
+	<span><code>Gtk.Grid.insert_next_to</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Grid.insert_next_to (self, sibling, side):
+    #python wrapper for 'gtk_grid_insert_next_to'</pre>
+
+<p>Inserts a row or column at the specified position.</p>
+<p>The new row or column is placed next to <em>sibling</em>, on the side
+determined by <em>side</em>. If <em>side</em> is <a href="gtkenums.html#GTK_POS_TOP">Gtk.PositionType.TOP</a> or <a href="gtkenums.html#GTK_POS_BOTTOM">Gtk.PositionType.BOTTOM</a>,
+a row is inserted. If <em>side</em> is <a href="gtkenums.html#GTK_POS_LEFT">Gtk.PositionType.LEFT</a> of <a href="gtkenums.html#GTK_POS_RIGHT">Gtk.PositionType.RIGHT</a>,
+a column is inserted.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>grid</code></em></i>
+					(
+						<a title="Gtk.Grid" href="gtkgrid.html#GtkGrid">Gtk.Grid</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkgrid.html#GtkGrid">Gtk.Grid</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>sibling</code></em></i>
+					(
+						<a title="Gtk.Widget" href="gtkwidget.html#GtkWidget">Gtk.Widget</a>
+						)
+				–
+	</div>
+			<p>the child of <em>grid</em> that the new row or column will be
+placed next to</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>side</code></em></i>
+					(
+						<a title="Gtk.PositionType" href="gtkenums.html#GtkPositionType">Gtk.PositionType</a>
+						)
+				–
+	</div>
+			<p>the side of <em>sibling</em> that <em>child</em> is positioned next to</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.2
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_grid_set_row_homogeneous">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_grid_set_row_homogeneous">
+	<span><code>gtk_grid_set_row_homogeneous</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_grid_set_row_homogeneous (<a title="GtkGrid" href="gtkgrid.html#GtkGrid">GtkGrid</a> * grid,
+                              <a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a> homogeneous)</pre>
+
+<p>Sets whether all rows of <em>grid</em> will have the same height.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>grid</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkgrid.html#GtkGrid">GtkGrid</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>homogeneous</code></em></i>
+				–
+	</div>
+			<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> to make rows homogeneous</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_grid_set_row_homogeneous">
+	<span><code>Gtk.prototype.set_row_homogeneous</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_row_homogeneous(homogeneous: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_grid_set_row_homogeneous'
+}</pre>
+
+<p>Sets whether all rows of <em>grid</em> will have the same height.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>grid</code></em></i>
+					(
+						<a title="Gtk.Grid" href="gtkgrid.html#GtkGrid">Gtk.Grid</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkgrid.html#GtkGrid">Gtk.Grid</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>homogeneous</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> to make rows homogeneous</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_grid_set_row_homogeneous">
+	<span><code>Gtk.Grid.set_row_homogeneous</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Grid.set_row_homogeneous (self, homogeneous):
+    #python wrapper for 'gtk_grid_set_row_homogeneous'</pre>
+
+<p>Sets whether all rows of <em>grid</em> will have the same height.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>grid</code></em></i>
+					(
+						<a title="Gtk.Grid" href="gtkgrid.html#GtkGrid">Gtk.Grid</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkgrid.html#GtkGrid">Gtk.Grid</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>homogeneous</code></em></i>
+					(
+						<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+						)
+				–
+	</div>
+			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> to make rows homogeneous</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_grid_get_row_homogeneous">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_grid_get_row_homogeneous">
+	<span><code>gtk_grid_get_row_homogeneous</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_grid_get_row_homogeneous (<a title="GtkGrid" href="gtkgrid.html#GtkGrid">GtkGrid</a> * grid)</pre>
+
+<p>Returns whether all rows of <em>grid</em> have the same height.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>grid</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkgrid.html#GtkGrid">GtkGrid</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>whether all rows of <em>grid</em> have the same height.</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_grid_get_row_homogeneous">
+	<span><code>Gtk.prototype.get_row_homogeneous</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_row_homogeneous(): {
+    // javascript wrapper for 'gtk_grid_get_row_homogeneous'
+}</pre>
+
+<p>Returns whether all rows of <em>grid</em> have the same height.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>grid</code></em></i>
+					(
+						<a title="Gtk.Grid" href="gtkgrid.html#GtkGrid">Gtk.Grid</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkgrid.html#GtkGrid">Gtk.Grid</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p>whether all rows of <em>grid</em> have the same height.</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_grid_get_row_homogeneous">
+	<span><code>Gtk.Grid.get_row_homogeneous</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Grid.get_row_homogeneous (self):
+    #python wrapper for 'gtk_grid_get_row_homogeneous'</pre>
+
+<p>Returns whether all rows of <em>grid</em> have the same height.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>grid</code></em></i>
+					(
+						<a title="Gtk.Grid" href="gtkgrid.html#GtkGrid">Gtk.Grid</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkgrid.html#GtkGrid">Gtk.Grid</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+										)
+								–
+			</div>
+							<p>whether all rows of <em>grid</em> have the same height.</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_grid_set_row_spacing">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_grid_set_row_spacing">
+	<span><code>gtk_grid_set_row_spacing</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_grid_set_row_spacing (<a title="GtkGrid" href="gtkgrid.html#GtkGrid">GtkGrid</a> * grid,
+                          <a title="guint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint">guint</a> spacing)</pre>
+
+<p>Sets the amount of space between rows of <em>grid</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>grid</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkgrid.html#GtkGrid">GtkGrid</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spacing</code></em></i>
+				–
+	</div>
+			<p>the amount of space to insert between rows</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_grid_set_row_spacing">
+	<span><code>Gtk.prototype.set_row_spacing</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_row_spacing(spacing: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_grid_set_row_spacing'
+}</pre>
+
+<p>Sets the amount of space between rows of <em>grid</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>grid</code></em></i>
+					(
+						<a title="Gtk.Grid" href="gtkgrid.html#GtkGrid">Gtk.Grid</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkgrid.html#GtkGrid">Gtk.Grid</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spacing</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the amount of space to insert between rows</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_grid_set_row_spacing">
+	<span><code>Gtk.Grid.set_row_spacing</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Grid.set_row_spacing (self, spacing):
+    #python wrapper for 'gtk_grid_set_row_spacing'</pre>
+
+<p>Sets the amount of space between rows of <em>grid</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>grid</code></em></i>
+					(
+						<a title="Gtk.Grid" href="gtkgrid.html#GtkGrid">Gtk.Grid</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkgrid.html#GtkGrid">Gtk.Grid</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spacing</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>the amount of space to insert between rows</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_grid_get_row_spacing">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_grid_get_row_spacing">
+	<span><code>gtk_grid_get_row_spacing</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="guint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint">guint</a>
+gtk_grid_get_row_spacing (<a title="GtkGrid" href="gtkgrid.html#GtkGrid">GtkGrid</a> * grid)</pre>
+
+<p>Returns the amount of space between the rows of <em>grid</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>grid</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkgrid.html#GtkGrid">GtkGrid</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>the row spacing of <em>grid</em></p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_grid_get_row_spacing">
+	<span><code>Gtk.prototype.get_row_spacing</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_row_spacing(): {
+    // javascript wrapper for 'gtk_grid_get_row_spacing'
+}</pre>
+
+<p>Returns the amount of space between the rows of <em>grid</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>grid</code></em></i>
+					(
+						<a title="Gtk.Grid" href="gtkgrid.html#GtkGrid">Gtk.Grid</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkgrid.html#GtkGrid">Gtk.Grid</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p>the row spacing of <em>grid</em></p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_grid_get_row_spacing">
+	<span><code>Gtk.Grid.get_row_spacing</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Grid.get_row_spacing (self):
+    #python wrapper for 'gtk_grid_get_row_spacing'</pre>
+
+<p>Returns the amount of space between the rows of <em>grid</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>grid</code></em></i>
+					(
+						<a title="Gtk.Grid" href="gtkgrid.html#GtkGrid">Gtk.Grid</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkgrid.html#GtkGrid">Gtk.Grid</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+										)
+								–
+			</div>
+							<p>the row spacing of <em>grid</em></p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_grid_set_column_homogeneous">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_grid_set_column_homogeneous">
+	<span><code>gtk_grid_set_column_homogeneous</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_grid_set_column_homogeneous (<a title="GtkGrid" href="gtkgrid.html#GtkGrid">GtkGrid</a> * grid,
+                                 <a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a> homogeneous)</pre>
+
+<p>Sets whether all columns of <em>grid</em> will have the same width.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>grid</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkgrid.html#GtkGrid">GtkGrid</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>homogeneous</code></em></i>
+				–
+	</div>
+			<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> to make columns homogeneous</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_grid_set_column_homogeneous">
+	<span><code>Gtk.prototype.set_column_homogeneous</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_column_homogeneous(homogeneous: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_grid_set_column_homogeneous'
+}</pre>
+
+<p>Sets whether all columns of <em>grid</em> will have the same width.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>grid</code></em></i>
+					(
+						<a title="Gtk.Grid" href="gtkgrid.html#GtkGrid">Gtk.Grid</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkgrid.html#GtkGrid">Gtk.Grid</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>homogeneous</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">true</a> to make columns homogeneous</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_grid_set_column_homogeneous">
+	<span><code>Gtk.Grid.set_column_homogeneous</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Grid.set_column_homogeneous (self, homogeneous):
+    #python wrapper for 'gtk_grid_set_column_homogeneous'</pre>
+
+<p>Sets whether all columns of <em>grid</em> will have the same width.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>grid</code></em></i>
+					(
+						<a title="Gtk.Grid" href="gtkgrid.html#GtkGrid">Gtk.Grid</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkgrid.html#GtkGrid">Gtk.Grid</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>homogeneous</code></em></i>
+					(
+						<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+						)
+				–
+	</div>
+			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> to make columns homogeneous</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_grid_get_column_homogeneous">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_grid_get_column_homogeneous">
+	<span><code>gtk_grid_get_column_homogeneous</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_grid_get_column_homogeneous (<a title="GtkGrid" href="gtkgrid.html#GtkGrid">GtkGrid</a> * grid)</pre>
+
+<p>Returns whether all columns of <em>grid</em> have the same width.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>grid</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkgrid.html#GtkGrid">GtkGrid</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>whether all columns of <em>grid</em> have the same width.</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_grid_get_column_homogeneous">
+	<span><code>Gtk.prototype.get_column_homogeneous</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_column_homogeneous(): {
+    // javascript wrapper for 'gtk_grid_get_column_homogeneous'
+}</pre>
+
+<p>Returns whether all columns of <em>grid</em> have the same width.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>grid</code></em></i>
+					(
+						<a title="Gtk.Grid" href="gtkgrid.html#GtkGrid">Gtk.Grid</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkgrid.html#GtkGrid">Gtk.Grid</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p>whether all columns of <em>grid</em> have the same width.</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_grid_get_column_homogeneous">
+	<span><code>Gtk.Grid.get_column_homogeneous</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Grid.get_column_homogeneous (self):
+    #python wrapper for 'gtk_grid_get_column_homogeneous'</pre>
+
+<p>Returns whether all columns of <em>grid</em> have the same width.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>grid</code></em></i>
+					(
+						<a title="Gtk.Grid" href="gtkgrid.html#GtkGrid">Gtk.Grid</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkgrid.html#GtkGrid">Gtk.Grid</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+										)
+								–
+			</div>
+							<p>whether all columns of <em>grid</em> have the same width.</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_grid_set_column_spacing">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_grid_set_column_spacing">
+	<span><code>gtk_grid_set_column_spacing</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_grid_set_column_spacing (<a title="GtkGrid" href="gtkgrid.html#GtkGrid">GtkGrid</a> * grid,
+                             <a title="guint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint">guint</a> spacing)</pre>
+
+<p>Sets the amount of space between columns of <em>grid</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>grid</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkgrid.html#GtkGrid">GtkGrid</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spacing</code></em></i>
+				–
+	</div>
+			<p>the amount of space to insert between columns</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_grid_set_column_spacing">
+	<span><code>Gtk.prototype.set_column_spacing</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_column_spacing(spacing: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_grid_set_column_spacing'
+}</pre>
+
+<p>Sets the amount of space between columns of <em>grid</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>grid</code></em></i>
+					(
+						<a title="Gtk.Grid" href="gtkgrid.html#GtkGrid">Gtk.Grid</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkgrid.html#GtkGrid">Gtk.Grid</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spacing</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the amount of space to insert between columns</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_grid_set_column_spacing">
+	<span><code>Gtk.Grid.set_column_spacing</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Grid.set_column_spacing (self, spacing):
+    #python wrapper for 'gtk_grid_set_column_spacing'</pre>
+
+<p>Sets the amount of space between columns of <em>grid</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>grid</code></em></i>
+					(
+						<a title="Gtk.Grid" href="gtkgrid.html#GtkGrid">Gtk.Grid</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkgrid.html#GtkGrid">Gtk.Grid</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>spacing</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>the amount of space to insert between columns</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="" id="gtk_grid_get_column_spacing">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_grid_get_column_spacing">
+	<span><code>gtk_grid_get_column_spacing</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="guint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint">guint</a>
+gtk_grid_get_column_spacing (<a title="GtkGrid" href="gtkgrid.html#GtkGrid">GtkGrid</a> * grid)</pre>
+
+<p>Returns the amount of space between the columns of <em>grid</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>grid</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkgrid.html#GtkGrid">GtkGrid</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>the column spacing of <em>grid</em></p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_grid_get_column_spacing">
+	<span><code>Gtk.prototype.get_column_spacing</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_column_spacing(): {
+    // javascript wrapper for 'gtk_grid_get_column_spacing'
+}</pre>
+
+<p>Returns the amount of space between the columns of <em>grid</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>grid</code></em></i>
+					(
+						<a title="Gtk.Grid" href="gtkgrid.html#GtkGrid">Gtk.Grid</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkgrid.html#GtkGrid">Gtk.Grid</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p>the column spacing of <em>grid</em></p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_grid_get_column_spacing">
+	<span><code>Gtk.Grid.get_column_spacing</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Grid.get_column_spacing (self):
+    #python wrapper for 'gtk_grid_get_column_spacing'</pre>
+
+<p>Returns the amount of space between the columns of <em>grid</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>grid</code></em></i>
+					(
+						<a title="Gtk.Grid" href="gtkgrid.html#GtkGrid">Gtk.Grid</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkgrid.html#GtkGrid">Gtk.Grid</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+										)
+								–
+			</div>
+							<p>the column spacing of <em>grid</em></p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.10;" id="gtk_grid_get_baseline_row">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_grid_get_baseline_row">
+	<span><code>gtk_grid_get_baseline_row</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a>
+gtk_grid_get_baseline_row (<a title="GtkGrid" href="gtkgrid.html#GtkGrid">GtkGrid</a> * grid)</pre>
+
+<p>Returns which row defines the global baseline of <em>grid</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>grid</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkgrid.html#GtkGrid">GtkGrid</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>the row index defining the global baseline</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_grid_get_baseline_row">
+	<span><code>Gtk.prototype.get_baseline_row</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_baseline_row(): {
+    // javascript wrapper for 'gtk_grid_get_baseline_row'
+}</pre>
+
+<p>Returns which row defines the global baseline of <em>grid</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>grid</code></em></i>
+					(
+						<a title="Gtk.Grid" href="gtkgrid.html#GtkGrid">Gtk.Grid</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkgrid.html#GtkGrid">Gtk.Grid</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+										)
+								–
+			</div>
+							<p>the row index defining the global baseline</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_grid_get_baseline_row">
+	<span><code>Gtk.Grid.get_baseline_row</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Grid.get_baseline_row (self):
+    #python wrapper for 'gtk_grid_get_baseline_row'</pre>
+
+<p>Returns which row defines the global baseline of <em>grid</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>grid</code></em></i>
+					(
+						<a title="Gtk.Grid" href="gtkgrid.html#GtkGrid">Gtk.Grid</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkgrid.html#GtkGrid">Gtk.Grid</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+										)
+								–
+			</div>
+							<p>the row index defining the global baseline</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.10
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.10;" id="gtk_grid_set_baseline_row">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_grid_set_baseline_row">
+	<span><code>gtk_grid_set_baseline_row</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_grid_set_baseline_row (<a title="GtkGrid" href="gtkgrid.html#GtkGrid">GtkGrid</a> * grid,
+                           <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> row)</pre>
+
+<p>Sets which row defines the global baseline for the entire grid.
+Each row in the grid can have its own local baseline, but only
+one of those is global, meaning it will be the baseline in the
+parent of the <em>grid</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>grid</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkgrid.html#GtkGrid">GtkGrid</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>row</code></em></i>
+				–
+	</div>
+			<p>the row index</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_grid_set_baseline_row">
+	<span><code>Gtk.prototype.set_baseline_row</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_baseline_row(row: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_grid_set_baseline_row'
+}</pre>
+
+<p>Sets which row defines the global baseline for the entire grid.
+Each row in the grid can have its own local baseline, but only
+one of those is global, meaning it will be the baseline in the
+parent of the <em>grid</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>grid</code></em></i>
+					(
+						<a title="Gtk.Grid" href="gtkgrid.html#GtkGrid">Gtk.Grid</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkgrid.html#GtkGrid">Gtk.Grid</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>row</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>the row index</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_grid_set_baseline_row">
+	<span><code>Gtk.Grid.set_baseline_row</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Grid.set_baseline_row (self, row):
+    #python wrapper for 'gtk_grid_set_baseline_row'</pre>
+
+<p>Sets which row defines the global baseline for the entire grid.
+Each row in the grid can have its own local baseline, but only
+one of those is global, meaning it will be the baseline in the
+parent of the <em>grid</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>grid</code></em></i>
+					(
+						<a title="Gtk.Grid" href="gtkgrid.html#GtkGrid">Gtk.Grid</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkgrid.html#GtkGrid">Gtk.Grid</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>row</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>the row index</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.10
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.10;" id="gtk_grid_get_row_baseline_position">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_grid_get_row_baseline_position">
+	<span><code>gtk_grid_get_row_baseline_position</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkBaselinePosition" href="gtkenums.html#GtkBaselinePosition">GtkBaselinePosition</a>
+gtk_grid_get_row_baseline_position (<a title="GtkGrid" href="gtkgrid.html#GtkGrid">GtkGrid</a> * grid,
+                                    <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> row)</pre>
+
+<p>Returns the baseline position of <em>row</em> as set
+by <a href="gtkgrid.html#gtk_grid_set_row_baseline_position">gtk_grid_set_row_baseline_position</a> or the default value
+<a href="gtkenums.html#GTK_BASELINE_POSITION_CENTER">GTK_BASELINE_POSITION_CENTER</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>grid</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkgrid.html#GtkGrid">GtkGrid</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>row</code></em></i>
+				–
+	</div>
+			<p>a row index</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>the baseline position of <em>row</em></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_grid_get_row_baseline_position">
+	<span><code>Gtk.prototype.get_row_baseline_position</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.get_row_baseline_position(row: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>): {
+    // javascript wrapper for 'gtk_grid_get_row_baseline_position'
+}</pre>
+
+<p>Returns the baseline position of <em>row</em> as set
+by <a href="gtkgrid.html#gtk_grid_set_row_baseline_position">Gtk.prototype.set_row_baseline_position</a> or the default value
+<a href="gtkenums.html#GTK_BASELINE_POSITION_CENTER">Gtk.BaselinePosition.CENTER</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>grid</code></em></i>
+					(
+						<a title="Gtk.Grid" href="gtkgrid.html#GtkGrid">Gtk.Grid</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkgrid.html#GtkGrid">Gtk.Grid</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>row</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>a row index</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.BaselinePosition" href="gtkenums.html#GtkBaselinePosition">Gtk.BaselinePosition</a>
+										)
+								–
+			</div>
+							<p>the baseline position of <em>row</em></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_grid_get_row_baseline_position">
+	<span><code>Gtk.Grid.get_row_baseline_position</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Grid.get_row_baseline_position (self, row):
+    #python wrapper for 'gtk_grid_get_row_baseline_position'</pre>
+
+<p>Returns the baseline position of <em>row</em> as set
+by <a href="gtkgrid.html#gtk_grid_set_row_baseline_position">Gtk.Grid.set_row_baseline_position</a> or the default value
+<a href="gtkenums.html#GTK_BASELINE_POSITION_CENTER">Gtk.BaselinePosition.CENTER</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>grid</code></em></i>
+					(
+						<a title="Gtk.Grid" href="gtkgrid.html#GtkGrid">Gtk.Grid</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkgrid.html#GtkGrid">Gtk.Grid</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>row</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>a row index</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.BaselinePosition" href="gtkenums.html#GtkBaselinePosition">Gtk.BaselinePosition</a>
+										)
+								–
+			</div>
+							<p>the baseline position of <em>row</em></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.10
+		</p>
+
+
+        </div>
+
+</div>
+
+            
+
+<div class="base_symbol_container" data-hotdoc-tags="since:3.10;" id="gtk_grid_set_row_baseline_position">
+	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_grid_set_row_baseline_position">
+	<span><code>gtk_grid_set_row_baseline_position</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_grid_set_row_baseline_position (<a title="GtkGrid" href="gtkgrid.html#GtkGrid">GtkGrid</a> * grid,
+                                    <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> row,
+                                    <a title="GtkBaselinePosition" href="gtkenums.html#GtkBaselinePosition">GtkBaselinePosition</a> pos)</pre>
+
+<p>Sets how the baseline should be positioned on <em>row</em> of the
+grid, in case that row is assigned more space than is requested.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>grid</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkgrid.html#GtkGrid">GtkGrid</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>row</code></em></i>
+				–
+	</div>
+			<p>a row index</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>pos</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkenums.html#GtkBaselinePosition">GtkBaselinePosition</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-javascript">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_grid_set_row_baseline_position">
+	<span><code>Gtk.prototype.set_row_baseline_position</code></span>
+</h4>
+
+
+<pre class="javascript-prototype">
+function Gtk.prototype.set_row_baseline_position(row: <a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>, pos: <a title="Gtk.BaselinePosition" href="gtkenums.html#GtkBaselinePosition">Gtk.BaselinePosition</a>): {
+    // javascript wrapper for 'gtk_grid_set_row_baseline_position'
+}</pre>
+
+<p>Sets how the baseline should be positioned on <em>row</em> of the
+grid, in case that row is assigned more space than is requested.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>grid</code></em></i>
+					(
+						<a title="Gtk.Grid" href="gtkgrid.html#GtkGrid">Gtk.Grid</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkgrid.html#GtkGrid">Gtk.Grid</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>row</code></em></i>
+					(
+						<a title="Number" href="https://developer.mozilla.org/en-US/docs/Glossary/Number">Number</a>
+						)
+				–
+	</div>
+			<p>a row index</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>pos</code></em></i>
+					(
+						<a title="Gtk.BaselinePosition" href="gtkenums.html#GtkBaselinePosition">Gtk.BaselinePosition</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkenums.html#GtkBaselinePosition">Gtk.BaselinePosition</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_grid_set_row_baseline_position">
+	<span><code>Gtk.Grid.set_row_baseline_position</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Grid.set_row_baseline_position (self, row, pos):
+    #python wrapper for 'gtk_grid_set_row_baseline_position'</pre>
+
+<p>Sets how the baseline should be positioned on <em>row</em> of the
+grid, in case that row is assigned more space than is requested.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>grid</code></em></i>
+					(
+						<a title="Gtk.Grid" href="gtkgrid.html#GtkGrid">Gtk.Grid</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkgrid.html#GtkGrid">Gtk.Grid</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>row</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>a row index</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>pos</code></em></i>
+					(
+						<a title="Gtk.BaselinePosition" href="gtkenums.html#GtkBaselinePosition">Gtk.BaselinePosition</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkenums.html#GtkBaselinePosition">Gtk.BaselinePosition</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.10
+		</p>
+
+
+        </div>
+
+</div>
+
+
+
+
+
+
+		
+	</div>
+	<div id="search_results">
+		<p>The results of the search are</p>
+	</div>
+	<hr>
+	<div id="footer">
+		    
+
+	</div>
+</div>
+
+<div id="toc-column">
+	
+		<div class="edit-button">
+		
+
+	</div>
+		<div id="toc-wrapper">
+		<nav id="toc"></nav>
+	</div>
+</div>
+</div>
+</main>
+
+</body>
+
+<script src="assets/js/navbar_offset_scroller.js"></script>
+</html>
