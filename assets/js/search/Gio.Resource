@@ -1,1 +1,1 @@
-urls_downloaded_cb({"token": "Gio.Resource", "urls": [{"url": "gtkbuilder.html#gtk_builder_new_from_resource", "context": {"gi-language": ["python", "javascript"]}}, {"url": "gtkcssprovider.html#gtk_css_provider_load_from_resource", "context": {"gi-language": ["python", "javascript"]}}]});
+urls_downloaded_cb({"token": "Gio.Resource", "urls": [{"url": "gtkbuilder.html#gtk_builder_new_from_resource", "context": {"gi-language": ["javascript", "python"]}}, {"url": "gtkcssprovider.html#gtk_css_provider_load_from_resource", "context": {"gi-language": ["javascript", "python"]}}]});

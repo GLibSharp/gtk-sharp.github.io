@@ -89,7 +89,7 @@ $('body').removeClass('no-script');
 </nav>
 
 <main>
-<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="gtkwidgetpath.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['python', 'c', 'javascript']" data-hotdoc-meta-gi-language="c">
+<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="gtkwidgetpath.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['c', 'python', 'javascript']" data-hotdoc-meta-gi-language="c">
 <script src="assets/js/utils.js"></script>
 
 <div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
@@ -107,13 +107,13 @@ $('body').removeClass('no-script');
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="GtkWidgetPath">
 	
-        <div class="gi-symbol gi-symbol-python">
+        <div class="gi-symbol gi-symbol-c">
             
 
 
 
 <h2 data-hotdoc-id="GtkWidgetPath">
-	<span><code>Gtk.WidgetPath</code></span>
+	<span><code>GtkWidgetPath</code></span>
 </h2>
 
 
@@ -125,13 +125,13 @@ $('body').removeClass('no-script');
 
 
         </div>
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-python">
             
 
 
 
 <h2 data-hotdoc-id="GtkWidgetPath">
-	<span><code>GtkWidgetPath</code></span>
+	<span><code>Gtk.WidgetPath</code></span>
 </h2>
 
 
@@ -170,47 +170,6 @@ $('body').removeClass('no-script');
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_widget_path_new">
 	
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_widget_path_new">
-	<span><code>Gtk.WidgetPath.new</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.WidgetPath.new ():
-    #python wrapper for 'gtk_widget_path_new'</pre>
-
-<p>Returns an empty widget path.</p>
-
-
-
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Gtk.WidgetPath" href="gtkwidgetpath.html#GtkWidgetPath">Gtk.WidgetPath</a>
-										)
-								–
-			</div>
-							<p>A newly created, empty, <a href="gtkwidgetpath.html#GtkWidgetPath">Gtk.WidgetPath</a></p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.0
-		</p>
-
-
-        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -245,6 +204,47 @@ gtk_widget_path_new ()</pre>
 								–
 			</div>
 							<p>A newly created, empty, <a href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_widget_path_new">
+	<span><code>Gtk.WidgetPath.new</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.WidgetPath.new ():
+    #python wrapper for 'gtk_widget_path_new'</pre>
+
+<p>Returns an empty widget path.</p>
+
+
+
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.WidgetPath" href="gtkwidgetpath.html#GtkWidgetPath">Gtk.WidgetPath</a>
+										)
+								–
+			</div>
+							<p>A newly created, empty, <a href="gtkwidgetpath.html#GtkWidgetPath">Gtk.WidgetPath</a></p>
 
 					</div>
 	</div>
@@ -308,6 +308,70 @@ function Gtk.prototype.new(): {
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_widget_path_append_type">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_widget_path_append_type">
+	<span><code>gtk_widget_path_append_type</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a>
+gtk_widget_path_append_type (<a title="GtkWidgetPath" href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a> * path,
+                             <a title="GType" href="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#GType">GType</a> type)</pre>
+
+<p>Appends a widget type to the widget hierarchy represented by <em>path</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>path</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>type</code></em></i>
+				–
+	</div>
+			<p>widget type to append</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>the position where the element was inserted</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -363,70 +427,6 @@ def Gtk.WidgetPath.append_type (self, type):
 									(
 					<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
 										)
-								–
-			</div>
-							<p>the position where the element was inserted</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.0
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_widget_path_append_type">
-	<span><code>gtk_widget_path_append_type</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-<a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a>
-gtk_widget_path_append_type (<a title="GtkWidgetPath" href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a> * path,
-                             <a title="GType" href="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#GType">GType</a> type)</pre>
-
-<p>Appends a widget type to the widget hierarchy represented by <em>path</em>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>path</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>type</code></em></i>
-				–
-	</div>
-			<p>widget type to append</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
 								–
 			</div>
 							<p>the position where the element was inserted</p>
@@ -520,6 +520,90 @@ function Gtk.prototype.append_type(type: <a title="GObject.Type" href="https://d
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.2;" id="gtk_widget_path_append_with_siblings">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_widget_path_append_with_siblings">
+	<span><code>gtk_widget_path_append_with_siblings</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a>
+gtk_widget_path_append_with_siblings (<a title="GtkWidgetPath" href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a> * path,
+                                      <a title="GtkWidgetPath" href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a> * siblings,
+                                      <a title="guint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint">guint</a> sibling_index)</pre>
+
+<p>Appends a widget type with all its siblings to the widget hierarchy
+represented by <em>path</em>. Using this function instead of
+<a href="gtkwidgetpath.html#gtk_widget_path_append_type">gtk_widget_path_append_type</a> will allow the CSS theming to use
+sibling matches in selectors and apply :nth-child pseudo classes.
+In turn, it requires a lot more care in widget implementations as
+widgets need to make sure to call <a href="gtkwidget.html#gtk_widget_reset_style">gtk_widget_reset_style</a> on all
+involved widgets when the <em>siblings</em> path changes.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>path</code></em></i>
+				–
+	</div>
+			<p>the widget path to append to</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>siblings</code></em></i>
+				–
+	</div>
+			<p>a widget path describing a list of siblings. This path
+may not contain any siblings itself and it must not be modified
+afterwards.</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>sibling_index</code></em></i>
+				–
+	</div>
+			<p>index into <em>siblings</em> for where the added element is
+positioned.</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>the position where the element was inserted.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.2
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -597,90 +681,6 @@ positioned.</p>
 									(
 					<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
 										)
-								–
-			</div>
-							<p>the position where the element was inserted.</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.2
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_widget_path_append_with_siblings">
-	<span><code>gtk_widget_path_append_with_siblings</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-<a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a>
-gtk_widget_path_append_with_siblings (<a title="GtkWidgetPath" href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a> * path,
-                                      <a title="GtkWidgetPath" href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a> * siblings,
-                                      <a title="guint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint">guint</a> sibling_index)</pre>
-
-<p>Appends a widget type with all its siblings to the widget hierarchy
-represented by <em>path</em>. Using this function instead of
-<a href="gtkwidgetpath.html#gtk_widget_path_append_type">gtk_widget_path_append_type</a> will allow the CSS theming to use
-sibling matches in selectors and apply :nth-child pseudo classes.
-In turn, it requires a lot more care in widget implementations as
-widgets need to make sure to call <a href="gtkwidget.html#gtk_widget_reset_style">gtk_widget_reset_style</a> on all
-involved widgets when the <em>siblings</em> path changes.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>path</code></em></i>
-				–
-	</div>
-			<p>the widget path to append to</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>siblings</code></em></i>
-				–
-	</div>
-			<p>a widget path describing a list of siblings. This path
-may not contain any siblings itself and it must not be modified
-afterwards.</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>sibling_index</code></em></i>
-				–
-	</div>
-			<p>index into <em>siblings</em> for where the added element is
-positioned.</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
 								–
 			</div>
 							<p>the position where the element was inserted.</p>
@@ -796,6 +796,73 @@ positioned.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.2;" id="gtk_widget_path_append_for_widget">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_widget_path_append_for_widget">
+	<span><code>gtk_widget_path_append_for_widget</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a>
+gtk_widget_path_append_for_widget (<a title="GtkWidgetPath" href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a> * path,
+                                   <a title="GtkWidget" href="gtkwidget.html#GtkWidget">GtkWidget</a> * widget)</pre>
+
+<p>Appends the data from <em>widget</em> to the widget hierarchy represented
+by <em>path</em>. This function is a shortcut for adding information from
+<em>widget</em> to the given <em>path</em>. This includes setting the name or
+adding the style classes from <em>widget</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>path</code></em></i>
+				–
+	</div>
+			<p>a widget path</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>widget</code></em></i>
+				–
+	</div>
+			<p>the widget to append to the widget path</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>the position where the data was inserted</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.2
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -854,73 +921,6 @@ adding the style classes from <em>widget</em>.</p>
 									(
 					<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
 										)
-								–
-			</div>
-							<p>the position where the data was inserted</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.2
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_widget_path_append_for_widget">
-	<span><code>gtk_widget_path_append_for_widget</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-<a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a>
-gtk_widget_path_append_for_widget (<a title="GtkWidgetPath" href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a> * path,
-                                   <a title="GtkWidget" href="gtkwidget.html#GtkWidget">GtkWidget</a> * widget)</pre>
-
-<p>Appends the data from <em>widget</em> to the widget hierarchy represented
-by <em>path</em>. This function is a shortcut for adding information from
-<em>widget</em> to the given <em>path</em>. This includes setting the name or
-adding the style classes from <em>widget</em>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>path</code></em></i>
-				–
-	</div>
-			<p>a widget path</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-				–
-	</div>
-			<p>the widget to append to the widget path</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
 								–
 			</div>
 							<p>the position where the data was inserted</p>
@@ -1017,63 +1017,6 @@ adding the style classes from <em>widget</em>.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_widget_path_copy">
 	
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_widget_path_copy">
-	<span><code>Gtk.WidgetPath.copy</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.WidgetPath.copy (self):
-    #python wrapper for 'gtk_widget_path_copy'</pre>
-
-<p>Returns a copy of <em>path</em></p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>path</code></em></i>
-					(
-						<a title="Gtk.WidgetPath" href="gtkwidgetpath.html#GtkWidgetPath">Gtk.WidgetPath</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkwidgetpath.html#GtkWidgetPath">Gtk.WidgetPath</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Gtk.WidgetPath" href="gtkwidgetpath.html#GtkWidgetPath">Gtk.WidgetPath</a>
-										)
-								–
-			</div>
-							<p>a copy of <em>path</em></p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.0
-		</p>
-
-
-        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -1117,6 +1060,63 @@ gtk_widget_path_copy (const <a title="GtkWidgetPath" href="gtkwidgetpath.html#Gt
 										
 <span class="annotation">[<abbr title="Free data after the code is done"><span class="acronym">transfer: full</span></abbr>]</span>
 
+										)
+								–
+			</div>
+							<p>a copy of <em>path</em></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_widget_path_copy">
+	<span><code>Gtk.WidgetPath.copy</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.WidgetPath.copy (self):
+    #python wrapper for 'gtk_widget_path_copy'</pre>
+
+<p>Returns a copy of <em>path</em></p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>path</code></em></i>
+					(
+						<a title="Gtk.WidgetPath" href="gtkwidgetpath.html#GtkWidgetPath">Gtk.WidgetPath</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkwidgetpath.html#GtkWidgetPath">Gtk.WidgetPath</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.WidgetPath" href="gtkwidgetpath.html#GtkWidgetPath">Gtk.WidgetPath</a>
 										)
 								–
 			</div>
@@ -1198,6 +1198,59 @@ function Gtk.prototype.copy(): {
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.2;" id="gtk_widget_path_ref">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_widget_path_ref">
+	<span><code>gtk_widget_path_ref</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkWidgetPath" href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a> *
+gtk_widget_path_ref (<a title="GtkWidgetPath" href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a> * path)</pre>
+
+<p>Increments the reference count on <em>path</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>path</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p><em>path</em> itself.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.2
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -1240,59 +1293,6 @@ def Gtk.WidgetPath.ref (self):
 									(
 					<a title="Gtk.WidgetPath" href="gtkwidgetpath.html#GtkWidgetPath">Gtk.WidgetPath</a>
 										)
-								–
-			</div>
-							<p><em>path</em> itself.</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.2
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_widget_path_ref">
-	<span><code>gtk_widget_path_ref</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-<a title="GtkWidgetPath" href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a> *
-gtk_widget_path_ref (<a title="GtkWidgetPath" href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a> * path)</pre>
-
-<p>Increments the reference count on <em>path</em>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>path</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
 								–
 			</div>
 							<p><em>path</em> itself.</p>
@@ -1373,6 +1373,48 @@ function Gtk.prototype.ref(): {
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.2;" id="gtk_widget_path_unref">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_widget_path_unref">
+	<span><code>gtk_widget_path_unref</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_widget_path_unref (<a title="GtkWidgetPath" href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a> * path)</pre>
+
+<p>Decrements the reference count on <em>path</em>, freeing the structure
+if the reference count reaches 0.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>path</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.2
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -1404,48 +1446,6 @@ if the reference count reaches 0.</p>
 				–
 	</div>
 			<p>a <a href="gtkwidgetpath.html#GtkWidgetPath">Gtk.WidgetPath</a></p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.2
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_widget_path_unref">
-	<span><code>gtk_widget_path_unref</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-gtk_widget_path_unref (<a title="GtkWidgetPath" href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a> * path)</pre>
-
-<p>Decrements the reference count on <em>path</em>, freeing the structure
-if the reference count reaches 0.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>path</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a></p>
 
 	</div>
 
@@ -1511,6 +1511,48 @@ if the reference count reaches 0.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_widget_path_free">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_widget_path_free">
+	<span><code>gtk_widget_path_free</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_widget_path_free (<a title="GtkWidgetPath" href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a> * path)</pre>
+
+<p>Decrements the reference count on <em>path</em>, freeing the structure
+if the reference count reaches 0.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>path</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -1542,48 +1584,6 @@ if the reference count reaches 0.</p>
 				–
 	</div>
 			<p>a <a href="gtkwidgetpath.html#GtkWidgetPath">Gtk.WidgetPath</a></p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.0
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_widget_path_free">
-	<span><code>gtk_widget_path_free</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-gtk_widget_path_free (<a title="GtkWidgetPath" href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a> * path)</pre>
-
-<p>Decrements the reference count on <em>path</em>, freeing the structure
-if the reference count reaches 0.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>path</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a></p>
 
 	</div>
 
@@ -1649,6 +1649,60 @@ if the reference count reaches 0.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_widget_path_get_object_type">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_widget_path_get_object_type">
+	<span><code>gtk_widget_path_get_object_type</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GType" href="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#GType">GType</a>
+gtk_widget_path_get_object_type (const <a title="GtkWidgetPath" href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a> * path)</pre>
+
+<p>Returns the topmost object type, that is, the object type this path
+is representing.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>path</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkwidget.html#GtkWidget">GtkWidget</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>The object type</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -1692,60 +1746,6 @@ is representing.</p>
 									(
 					<a title="GObject.Type" href="https://developer.gnome.org/gobject/stable/gobject-Type-Information.html#GType">GObject.Type</a>
 										)
-								–
-			</div>
-							<p>The object type</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.0
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_widget_path_get_object_type">
-	<span><code>gtk_widget_path_get_object_type</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-<a title="GType" href="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#GType">GType</a>
-gtk_widget_path_get_object_type (const <a title="GtkWidgetPath" href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a> * path)</pre>
-
-<p>Returns the topmost object type, that is, the object type this path
-is representing.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>path</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkwidget.html#GtkWidget">GtkWidget</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
 								–
 			</div>
 							<p>The object type</p>
@@ -1827,6 +1827,71 @@ is representing.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_widget_path_has_parent">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_widget_path_has_parent">
+	<span><code>gtk_widget_path_has_parent</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_widget_path_has_parent (const <a title="GtkWidgetPath" href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a> * path,
+                            <a title="GType" href="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#GType">GType</a> type)</pre>
+
+<p>Returns <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if any of the parents of the widget represented
+in <em>path</em> is of type <em>type</em>, or any subtype of it.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>path</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>type</code></em></i>
+				–
+	</div>
+			<p>widget type to check in parents</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if any parent is of type <em>type</em></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -1886,71 +1951,6 @@ in <em>path</em> is of type <em>type</em>, or any subtype of it.</p>
 								–
 			</div>
 							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if any parent is of type <em>type</em></p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.0
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_widget_path_has_parent">
-	<span><code>gtk_widget_path_has_parent</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
-gtk_widget_path_has_parent (const <a title="GtkWidgetPath" href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a> * path,
-                            <a title="GType" href="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#GType">GType</a> type)</pre>
-
-<p>Returns <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if any of the parents of the widget represented
-in <em>path</em> is of type <em>type</em>, or any subtype of it.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>path</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>type</code></em></i>
-				–
-	</div>
-			<p>widget type to check in parents</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-								–
-			</div>
-							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if any parent is of type <em>type</em></p>
 
 					</div>
 	</div>
@@ -2042,6 +2042,71 @@ in <em>path</em> is of type <em>type</em>, or any subtype of it.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_widget_path_is_type">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_widget_path_is_type">
+	<span><code>gtk_widget_path_is_type</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_widget_path_is_type (const <a title="GtkWidgetPath" href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a> * path,
+                         <a title="GType" href="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#GType">GType</a> type)</pre>
+
+<p>Returns <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if the widget type represented by this path
+is <em>type</em>, or a subtype of it.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>path</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>type</code></em></i>
+				–
+	</div>
+			<p>widget type to match</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if the widget represented by <em>path</em> is of type <em>type</em></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -2101,71 +2166,6 @@ is <em>type</em>, or a subtype of it.</p>
 								–
 			</div>
 							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if the widget represented by <em>path</em> is of type <em>type</em></p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.0
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_widget_path_is_type">
-	<span><code>gtk_widget_path_is_type</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
-gtk_widget_path_is_type (const <a title="GtkWidgetPath" href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a> * path,
-                         <a title="GType" href="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#GType">GType</a> type)</pre>
-
-<p>Returns <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if the widget type represented by this path
-is <em>type</em>, or a subtype of it.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>path</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>type</code></em></i>
-				–
-	</div>
-			<p>widget type to match</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-								–
-			</div>
-							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if the widget represented by <em>path</em> is of type <em>type</em></p>
 
 					</div>
 	</div>
@@ -2257,6 +2257,71 @@ is <em>type</em>, or a subtype of it.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_widget_path_iter_add_class">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_widget_path_iter_add_class">
+	<span><code>gtk_widget_path_iter_add_class</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_widget_path_iter_add_class (<a title="GtkWidgetPath" href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a> * path,
+                                <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> pos,
+                                const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * name)</pre>
+
+<p>Adds the class <em>name</em> to the widget at position <em>pos</em> in
+the hierarchy defined in <em>path</em>. See
+<a href="gtkstylecontext.html#gtk_style_context_add_class">gtk_style_context_add_class</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>path</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkwidget.html#GtkWidget">GtkWidget</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>pos</code></em></i>
+				–
+	</div>
+			<p>position to modify, -1 for the path head</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>name</code></em></i>
+				–
+	</div>
+			<p>a class name</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -2312,71 +2377,6 @@ the hierarchy defined in <em>path</em>. See
 					(
 						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
 						)
-				–
-	</div>
-			<p>a class name</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.0
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_widget_path_iter_add_class">
-	<span><code>gtk_widget_path_iter_add_class</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-gtk_widget_path_iter_add_class (<a title="GtkWidgetPath" href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a> * path,
-                                <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> pos,
-                                const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * name)</pre>
-
-<p>Adds the class <em>name</em> to the widget at position <em>pos</em> in
-the hierarchy defined in <em>path</em>. See
-<a href="gtkstylecontext.html#gtk_style_context_add_class">gtk_style_context_add_class</a>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>path</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkwidget.html#GtkWidget">GtkWidget</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>pos</code></em></i>
-				–
-	</div>
-			<p>position to modify, -1 for the path head</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>name</code></em></i>
 				–
 	</div>
 			<p>a class name</p>
@@ -2472,6 +2472,59 @@ the hierarchy defined in <em>path</em>. See
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_widget_path_iter_clear_classes">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_widget_path_iter_clear_classes">
+	<span><code>gtk_widget_path_iter_clear_classes</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_widget_path_iter_clear_classes (<a title="GtkWidgetPath" href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a> * path,
+                                    <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> pos)</pre>
+
+<p>Removes all classes from the widget at position <em>pos</em> in the
+hierarchy defined in <em>path</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>path</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkwidget.html#GtkWidget">GtkWidget</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>pos</code></em></i>
+				–
+	</div>
+			<p>position to modify, -1 for the path head</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -2513,59 +2566,6 @@ hierarchy defined in <em>path</em>.</p>
 					(
 						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
 						)
-				–
-	</div>
-			<p>position to modify, -1 for the path head</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.0
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_widget_path_iter_clear_classes">
-	<span><code>gtk_widget_path_iter_clear_classes</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-gtk_widget_path_iter_clear_classes (<a title="GtkWidgetPath" href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a> * path,
-                                    <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> pos)</pre>
-
-<p>Removes all classes from the widget at position <em>pos</em> in the
-hierarchy defined in <em>path</em>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>path</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkwidget.html#GtkWidget">GtkWidget</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>pos</code></em></i>
 				–
 	</div>
 			<p>position to modify, -1 for the path head</p>
@@ -2647,75 +2647,6 @@ hierarchy defined in <em>path</em>.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_widget_path_iter_get_name">
 	
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_widget_path_iter_get_name">
-	<span><code>Gtk.WidgetPath.iter_get_name</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.WidgetPath.iter_get_name (self, pos):
-    #python wrapper for 'gtk_widget_path_iter_get_name'</pre>
-
-<p>Returns the name corresponding to the widget found at
-the position <em>pos</em> in the widget hierarchy defined by
-<em>path</em></p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>path</code></em></i>
-					(
-						<a title="Gtk.WidgetPath" href="gtkwidgetpath.html#GtkWidgetPath">Gtk.WidgetPath</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkwidgetpath.html#GtkWidgetPath">Gtk.WidgetPath</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>pos</code></em></i>
-					(
-						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
-						)
-				–
-	</div>
-			<p>position to get the widget name for, -1 for the path head</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
-										)
-								–
-			</div>
-							<p>The widget name, or <a href="https://docs.python.org/3/library/constants.html#None">None</a> if none was set.</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -2776,6 +2707,75 @@ the position <em>pos</em> in the widget hierarchy defined by
 								–
 			</div>
 							<p>The widget name, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> if none was set.</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_widget_path_iter_get_name">
+	<span><code>Gtk.WidgetPath.iter_get_name</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.WidgetPath.iter_get_name (self, pos):
+    #python wrapper for 'gtk_widget_path_iter_get_name'</pre>
+
+<p>Returns the name corresponding to the widget found at
+the position <em>pos</em> in the widget hierarchy defined by
+<em>path</em></p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>path</code></em></i>
+					(
+						<a title="Gtk.WidgetPath" href="gtkwidgetpath.html#GtkWidgetPath">Gtk.WidgetPath</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkwidgetpath.html#GtkWidgetPath">Gtk.WidgetPath</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>pos</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>position to get the widget name for, -1 for the path head</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
+										)
+								–
+			</div>
+							<p>The widget name, or <a href="https://docs.python.org/3/library/constants.html#None">None</a> if none was set.</p>
 
 					</div>
 	</div>
@@ -2862,77 +2862,6 @@ the position <em>pos</em> in the widget hierarchy defined by
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.20;" id="gtk_widget_path_iter_get_object_name">
 	
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_widget_path_iter_get_object_name">
-	<span><code>Gtk.WidgetPath.iter_get_object_name</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.WidgetPath.iter_get_object_name (self, pos):
-    #python wrapper for 'gtk_widget_path_iter_get_object_name'</pre>
-
-<p>Returns the object name that is at position <em>pos</em> in the widget
-hierarchy defined in <em>path</em>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>path</code></em></i>
-					(
-						<a title="Gtk.WidgetPath" href="gtkwidgetpath.html#GtkWidgetPath">Gtk.WidgetPath</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkwidgetpath.html#GtkWidgetPath">Gtk.WidgetPath</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>pos</code></em></i>
-					(
-						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
-						)
-				–
-	</div>
-			<p>position to get the object name for, -1 for the path head</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
-										)
-								–
-			</div>
-							<p>the name or <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.20
-		</p>
-
-
-        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -2992,6 +2921,77 @@ hierarchy defined in <em>path</em>.</p>
 								–
 			</div>
 							<p>the name or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.20
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_widget_path_iter_get_object_name">
+	<span><code>Gtk.WidgetPath.iter_get_object_name</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.WidgetPath.iter_get_object_name (self, pos):
+    #python wrapper for 'gtk_widget_path_iter_get_object_name'</pre>
+
+<p>Returns the object name that is at position <em>pos</em> in the widget
+hierarchy defined in <em>path</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>path</code></em></i>
+					(
+						<a title="Gtk.WidgetPath" href="gtkwidgetpath.html#GtkWidgetPath">Gtk.WidgetPath</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkwidgetpath.html#GtkWidgetPath">Gtk.WidgetPath</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>pos</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>position to get the object name for, -1 for the path head</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
+										)
+								–
+			</div>
+							<p>the name or <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
 
 					</div>
 	</div>
@@ -3083,6 +3083,71 @@ hierarchy defined in <em>path</em>.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_widget_path_iter_get_object_type">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_widget_path_iter_get_object_type">
+	<span><code>gtk_widget_path_iter_get_object_type</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GType" href="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#GType">GType</a>
+gtk_widget_path_iter_get_object_type (const <a title="GtkWidgetPath" href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a> * path,
+                                      <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> pos)</pre>
+
+<p>Returns the object <a href="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#GType">GType</a> that is at position <em>pos</em> in the widget
+hierarchy defined in <em>path</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>path</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>pos</code></em></i>
+				–
+	</div>
+			<p>position to get the object type for, -1 for the path head</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>a widget type</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -3139,71 +3204,6 @@ hierarchy defined in <em>path</em>.</p>
 									(
 					<a title="GObject.Type" href="https://developer.gnome.org/gobject/stable/gobject-Type-Information.html#GType">GObject.Type</a>
 										)
-								–
-			</div>
-							<p>a widget type</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.0
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_widget_path_iter_get_object_type">
-	<span><code>gtk_widget_path_iter_get_object_type</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-<a title="GType" href="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#GType">GType</a>
-gtk_widget_path_iter_get_object_type (const <a title="GtkWidgetPath" href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a> * path,
-                                      <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> pos)</pre>
-
-<p>Returns the object <a href="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#GType">GType</a> that is at position <em>pos</em> in the widget
-hierarchy defined in <em>path</em>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>path</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>pos</code></em></i>
-				–
-	</div>
-			<p>position to get the object type for, -1 for the path head</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
 								–
 			</div>
 							<p>a widget type</p>
@@ -3298,6 +3298,68 @@ hierarchy defined in <em>path</em>.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_widget_path_iter_get_siblings">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_widget_path_iter_get_siblings">
+	<span><code>gtk_widget_path_iter_get_siblings</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+const <a title="GtkWidgetPath" href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a> *
+gtk_widget_path_iter_get_siblings (const <a title="GtkWidgetPath" href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a> * path,
+                                   <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> pos)</pre>
+
+<p>Returns the list of siblings for the element at <em>pos</em>. If the element
+was not added with siblings, <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> is returned.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>path</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>pos</code></em></i>
+				–
+	</div>
+			<p>position to get the siblings for, -1 for the path head</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> or the list of siblings for the element at <em>pos</em>.</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -3357,68 +3419,6 @@ was not added with siblings, <a href="https://docs.python.org/3/library/constant
 								–
 			</div>
 							<p><a href="https://docs.python.org/3/library/constants.html#None">None</a> or the list of siblings for the element at <em>pos</em>.</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_widget_path_iter_get_siblings">
-	<span><code>gtk_widget_path_iter_get_siblings</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-const <a title="GtkWidgetPath" href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a> *
-gtk_widget_path_iter_get_siblings (const <a title="GtkWidgetPath" href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a> * path,
-                                   <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> pos)</pre>
-
-<p>Returns the list of siblings for the element at <em>pos</em>. If the element
-was not added with siblings, <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> is returned.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>path</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>pos</code></em></i>
-				–
-	</div>
-			<p>position to get the siblings for, -1 for the path head</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-								–
-			</div>
-							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> or the list of siblings for the element at <em>pos</em>.</p>
 
 					</div>
 	</div>
@@ -3504,6 +3504,70 @@ was not added with siblings, <a href="https://developer.mozilla.org/en-US/docs/W
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_widget_path_iter_get_sibling_index">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_widget_path_iter_get_sibling_index">
+	<span><code>gtk_widget_path_iter_get_sibling_index</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="guint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint">guint</a>
+gtk_widget_path_iter_get_sibling_index (const <a title="GtkWidgetPath" href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a> * path,
+                                        <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> pos)</pre>
+
+<p>Returns the index into the list of siblings for the element at <em>pos</em> as
+returned by <a href="gtkwidgetpath.html#gtk_widget_path_iter_get_siblings">gtk_widget_path_iter_get_siblings</a>. If that function would
+return <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> because the element at <em>pos</em> has no siblings, this function
+will return 0.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>path</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>pos</code></em></i>
+				–
+	</div>
+			<p>position to get the sibling index for, -1 for the path head</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>0 or the index into the list of siblings for the element at <em>pos</em>.</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -3562,70 +3626,6 @@ will return 0.</p>
 									(
 					<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
 										)
-								–
-			</div>
-							<p>0 or the index into the list of siblings for the element at <em>pos</em>.</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_widget_path_iter_get_sibling_index">
-	<span><code>gtk_widget_path_iter_get_sibling_index</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-<a title="guint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint">guint</a>
-gtk_widget_path_iter_get_sibling_index (const <a title="GtkWidgetPath" href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a> * path,
-                                        <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> pos)</pre>
-
-<p>Returns the index into the list of siblings for the element at <em>pos</em> as
-returned by <a href="gtkwidgetpath.html#gtk_widget_path_iter_get_siblings">gtk_widget_path_iter_get_siblings</a>. If that function would
-return <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> because the element at <em>pos</em> has no siblings, this function
-will return 0.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>path</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>pos</code></em></i>
-				–
-	</div>
-			<p>position to get the sibling index for, -1 for the path head</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
 								–
 			</div>
 							<p>0 or the index into the list of siblings for the element at <em>pos</em>.</p>
@@ -3716,6 +3716,72 @@ will return 0.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.14;" id="gtk_widget_path_iter_get_state">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_widget_path_iter_get_state">
+	<span><code>gtk_widget_path_iter_get_state</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkStateFlags" href="gtkenums.html#GtkStateFlags">GtkStateFlags</a>
+gtk_widget_path_iter_get_state (const <a title="GtkWidgetPath" href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a> * path,
+                                <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> pos)</pre>
+
+<p>Returns the state flags corresponding to the widget found at
+the position <em>pos</em> in the widget hierarchy defined by
+<em>path</em></p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>path</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>pos</code></em></i>
+				–
+	</div>
+			<p>position to get the state for, -1 for the path head</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>The state flags</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.14
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -3773,72 +3839,6 @@ the position <em>pos</em> in the widget hierarchy defined by
 									(
 					<a title="Gtk.StateFlags" href="gtkenums.html#GtkStateFlags">Gtk.StateFlags</a>
 										)
-								–
-			</div>
-							<p>The state flags</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.14
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_widget_path_iter_get_state">
-	<span><code>gtk_widget_path_iter_get_state</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-<a title="GtkStateFlags" href="gtkenums.html#GtkStateFlags">GtkStateFlags</a>
-gtk_widget_path_iter_get_state (const <a title="GtkWidgetPath" href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a> * path,
-                                <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> pos)</pre>
-
-<p>Returns the state flags corresponding to the widget found at
-the position <em>pos</em> in the widget hierarchy defined by
-<em>path</em></p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>path</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>pos</code></em></i>
-				–
-	</div>
-			<p>position to get the state for, -1 for the path head</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
 								–
 			</div>
 							<p>The state flags</p>
@@ -3934,6 +3934,82 @@ the position <em>pos</em> in the widget hierarchy defined by
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_widget_path_iter_has_class">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_widget_path_iter_has_class">
+	<span><code>gtk_widget_path_iter_has_class</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_widget_path_iter_has_class (const <a title="GtkWidgetPath" href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a> * path,
+                                <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> pos,
+                                const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * name)</pre>
+
+<p>Returns <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if the widget at position <em>pos</em> has the class <em>name</em>
+defined, <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS">FALSE</a> otherwise.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>path</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>pos</code></em></i>
+				–
+	</div>
+			<p>position to query, -1 for the path head</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>name</code></em></i>
+				–
+	</div>
+			<p>class name</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if the class <em>name</em> is defined for the widget at <em>pos</em></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -4006,82 +4082,6 @@ defined, <a href="https://docs.python.org/3/library/constants.html#False">False<
 								–
 			</div>
 							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if the class <em>name</em> is defined for the widget at <em>pos</em></p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.0
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_widget_path_iter_has_class">
-	<span><code>gtk_widget_path_iter_has_class</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
-gtk_widget_path_iter_has_class (const <a title="GtkWidgetPath" href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a> * path,
-                                <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> pos,
-                                const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * name)</pre>
-
-<p>Returns <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if the widget at position <em>pos</em> has the class <em>name</em>
-defined, <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS">FALSE</a> otherwise.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>path</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>pos</code></em></i>
-				–
-	</div>
-			<p>position to query, -1 for the path head</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>name</code></em></i>
-				–
-	</div>
-			<p>class name</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-								–
-			</div>
-							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if the class <em>name</em> is defined for the widget at <em>pos</em></p>
 
 					</div>
 	</div>
@@ -4186,6 +4186,82 @@ defined, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refere
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_widget_path_iter_has_name">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_widget_path_iter_has_name">
+	<span><code>gtk_widget_path_iter_has_name</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_widget_path_iter_has_name (const <a title="GtkWidgetPath" href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a> * path,
+                               <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> pos,
+                               const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * name)</pre>
+
+<p>Returns <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if the widget at position <em>pos</em> has the name <em>name</em>,
+<a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS">FALSE</a> otherwise.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>path</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>pos</code></em></i>
+				–
+	</div>
+			<p>position to query, -1 for the path head</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>name</code></em></i>
+				–
+	</div>
+			<p>a widget name</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if the widget at <em>pos</em> has this name</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -4258,82 +4334,6 @@ def Gtk.WidgetPath.iter_has_name (self, pos, name):
 								–
 			</div>
 							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if the widget at <em>pos</em> has this name</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.0
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_widget_path_iter_has_name">
-	<span><code>gtk_widget_path_iter_has_name</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
-gtk_widget_path_iter_has_name (const <a title="GtkWidgetPath" href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a> * path,
-                               <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> pos,
-                               const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * name)</pre>
-
-<p>Returns <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if the widget at position <em>pos</em> has the name <em>name</em>,
-<a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS">FALSE</a> otherwise.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>path</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>pos</code></em></i>
-				–
-	</div>
-			<p>position to query, -1 for the path head</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>name</code></em></i>
-				–
-	</div>
-			<p>a widget name</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-								–
-			</div>
-							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if the widget at <em>pos</em> has this name</p>
 
 					</div>
 	</div>
@@ -4438,6 +4438,82 @@ function Gtk.prototype.iter_has_name(pos: <a title="Number" href="https://develo
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_widget_path_iter_has_qclass">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_widget_path_iter_has_qclass">
+	<span><code>gtk_widget_path_iter_has_qclass</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_widget_path_iter_has_qclass (const <a title="GtkWidgetPath" href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a> * path,
+                                 <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> pos,
+                                 <a title="GQuark" href="https://developer.gnome.org/glib/unstable/glib-Quarks.html#GQuark">GQuark</a> qname)</pre>
+
+<p>See <a href="gtkwidgetpath.html#gtk_widget_path_iter_has_class">gtk_widget_path_iter_has_class</a>. This is a version that operates
+with GQuarks.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>path</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>pos</code></em></i>
+				–
+	</div>
+			<p>position to query, -1 for the path head</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>qname</code></em></i>
+				–
+	</div>
+			<p>class name as a <a href="https://developer.gnome.org/glib/unstable/glib-Quarks.html#GQuark">GQuark</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if the widget at <em>pos</em> has the class defined.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -4510,82 +4586,6 @@ with GQuarks.</p>
 								–
 			</div>
 							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if the widget at <em>pos</em> has the class defined.</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.0
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_widget_path_iter_has_qclass">
-	<span><code>gtk_widget_path_iter_has_qclass</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
-gtk_widget_path_iter_has_qclass (const <a title="GtkWidgetPath" href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a> * path,
-                                 <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> pos,
-                                 <a title="GQuark" href="https://developer.gnome.org/glib/unstable/glib-Quarks.html#GQuark">GQuark</a> qname)</pre>
-
-<p>See <a href="gtkwidgetpath.html#gtk_widget_path_iter_has_class">gtk_widget_path_iter_has_class</a>. This is a version that operates
-with GQuarks.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>path</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>pos</code></em></i>
-				–
-	</div>
-			<p>position to query, -1 for the path head</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>qname</code></em></i>
-				–
-	</div>
-			<p>class name as a <a href="https://developer.gnome.org/glib/unstable/glib-Quarks.html#GQuark">GQuark</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-								–
-			</div>
-							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if the widget at <em>pos</em> has the class defined.</p>
 
 					</div>
 	</div>
@@ -4690,6 +4690,82 @@ with GQuarks.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_widget_path_iter_has_qname">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_widget_path_iter_has_qname">
+	<span><code>gtk_widget_path_iter_has_qname</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_widget_path_iter_has_qname (const <a title="GtkWidgetPath" href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a> * path,
+                                <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> pos,
+                                <a title="GQuark" href="https://developer.gnome.org/glib/unstable/glib-Quarks.html#GQuark">GQuark</a> qname)</pre>
+
+<p>See <a href="gtkwidgetpath.html#gtk_widget_path_iter_has_name">gtk_widget_path_iter_has_name</a>. This is a version
+that operates on <a href="https://developer.gnome.org/glib/unstable/glib-Quarks.html#GQuark">GQuark</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>path</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>pos</code></em></i>
+				–
+	</div>
+			<p>position to query, -1 for the path head</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>qname</code></em></i>
+				–
+	</div>
+			<p>widget name as a <a href="https://developer.gnome.org/glib/unstable/glib-Quarks.html#GQuark">GQuark</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if the widget at <em>pos</em> has this name</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -4762,82 +4838,6 @@ that operates on <a href="https://developer.gnome.org/glib/unstable/glib-Quarks.
 								–
 			</div>
 							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if the widget at <em>pos</em> has this name</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.0
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_widget_path_iter_has_qname">
-	<span><code>gtk_widget_path_iter_has_qname</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
-gtk_widget_path_iter_has_qname (const <a title="GtkWidgetPath" href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a> * path,
-                                <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> pos,
-                                <a title="GQuark" href="https://developer.gnome.org/glib/unstable/glib-Quarks.html#GQuark">GQuark</a> qname)</pre>
-
-<p>See <a href="gtkwidgetpath.html#gtk_widget_path_iter_has_name">gtk_widget_path_iter_has_name</a>. This is a version
-that operates on <a href="https://developer.gnome.org/glib/unstable/glib-Quarks.html#GQuark">GQuark</a>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>path</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>pos</code></em></i>
-				–
-	</div>
-			<p>position to query, -1 for the path head</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>qname</code></em></i>
-				–
-	</div>
-			<p>widget name as a <a href="https://developer.gnome.org/glib/unstable/glib-Quarks.html#GQuark">GQuark</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-								–
-			</div>
-							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if the widget at <em>pos</em> has this name</p>
 
 					</div>
 	</div>
@@ -4942,80 +4942,6 @@ that operates on <a href="https://developer.gnome.org/glib/unstable/glib-Quarks.
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_widget_path_iter_list_classes">
 	
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_widget_path_iter_list_classes">
-	<span><code>Gtk.WidgetPath.iter_list_classes</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.WidgetPath.iter_list_classes (self, pos):
-    #python wrapper for 'gtk_widget_path_iter_list_classes'</pre>
-
-<p>Returns a list with all the class names defined for the widget
-at position <em>pos</em> in the hierarchy defined in <em>path</em>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>path</code></em></i>
-					(
-						<a title="Gtk.WidgetPath" href="gtkwidgetpath.html#GtkWidgetPath">Gtk.WidgetPath</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkwidgetpath.html#GtkWidgetPath">Gtk.WidgetPath</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>pos</code></em></i>
-					(
-						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
-						)
-				–
-	</div>
-			<p>position to query, -1 for the path head</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="GLib.SList" href="https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html#GSList">GLib.SList</a>
-										)
-								–
-			</div>
-							<p>The list of
-classes, This is a list of strings, the <a href="https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html#GSList">GLib.SList</a> contents
-are owned by GTK+, but you should use <a href="https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html#g-slist-free">g_slist_free (not introspectable)</a> to
-free the list itself.</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.0
-		</p>
-
-
-        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -5078,6 +5004,80 @@ at position <em>pos</em> in the hierarchy defined in <em>path</em>.</p>
 							<p>The list of
 classes, This is a list of strings, the <a href="https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html#GSList">GSList</a> contents
 are owned by GTK+, but you should use <a href="https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html#g-slist-free">g_slist_free</a> to
+free the list itself.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_widget_path_iter_list_classes">
+	<span><code>Gtk.WidgetPath.iter_list_classes</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.WidgetPath.iter_list_classes (self, pos):
+    #python wrapper for 'gtk_widget_path_iter_list_classes'</pre>
+
+<p>Returns a list with all the class names defined for the widget
+at position <em>pos</em> in the hierarchy defined in <em>path</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>path</code></em></i>
+					(
+						<a title="Gtk.WidgetPath" href="gtkwidgetpath.html#GtkWidgetPath">Gtk.WidgetPath</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkwidgetpath.html#GtkWidgetPath">Gtk.WidgetPath</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>pos</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>position to query, -1 for the path head</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="GLib.SList" href="https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html#GSList">GLib.SList</a>
+										)
+								–
+			</div>
+							<p>The list of
+classes, This is a list of strings, the <a href="https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html#GSList">GLib.SList</a> contents
+are owned by GTK+, but you should use <a href="https://developer.gnome.org/glib/unstable/glib-Singly-Linked-Lists.html#g-slist-free">g_slist_free (not introspectable)</a> to
 free the list itself.</p>
 
 					</div>
@@ -5173,6 +5173,70 @@ free the list itself.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_widget_path_iter_remove_class">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_widget_path_iter_remove_class">
+	<span><code>gtk_widget_path_iter_remove_class</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_widget_path_iter_remove_class (<a title="GtkWidgetPath" href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a> * path,
+                                   <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> pos,
+                                   const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * name)</pre>
+
+<p>Removes the class <em>name</em> from the widget at position <em>pos</em> in
+the hierarchy defined in <em>path</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>path</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>pos</code></em></i>
+				–
+	</div>
+			<p>position to modify, -1 for the path head</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>name</code></em></i>
+				–
+	</div>
+			<p>class name</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -5227,70 +5291,6 @@ the hierarchy defined in <em>path</em>.</p>
 					(
 						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
 						)
-				–
-	</div>
-			<p>class name</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.0
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_widget_path_iter_remove_class">
-	<span><code>gtk_widget_path_iter_remove_class</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-gtk_widget_path_iter_remove_class (<a title="GtkWidgetPath" href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a> * path,
-                                   <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> pos,
-                                   const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * name)</pre>
-
-<p>Removes the class <em>name</em> from the widget at position <em>pos</em> in
-the hierarchy defined in <em>path</em>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>path</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>pos</code></em></i>
-				–
-	</div>
-			<p>position to modify, -1 for the path head</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>name</code></em></i>
 				–
 	</div>
 			<p>class name</p>
@@ -5385,6 +5385,70 @@ the hierarchy defined in <em>path</em>.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_widget_path_iter_set_name">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_widget_path_iter_set_name">
+	<span><code>gtk_widget_path_iter_set_name</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_widget_path_iter_set_name (<a title="GtkWidgetPath" href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a> * path,
+                               <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> pos,
+                               const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * name)</pre>
+
+<p>Sets the widget name for the widget found at position <em>pos</em>
+in the widget hierarchy defined by <em>path</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>path</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>pos</code></em></i>
+				–
+	</div>
+			<p>position to modify, -1 for the path head</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>name</code></em></i>
+				–
+	</div>
+			<p>widget name</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -5439,70 +5503,6 @@ in the widget hierarchy defined by <em>path</em>.</p>
 					(
 						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
 						)
-				–
-	</div>
-			<p>widget name</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.0
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_widget_path_iter_set_name">
-	<span><code>gtk_widget_path_iter_set_name</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-gtk_widget_path_iter_set_name (<a title="GtkWidgetPath" href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a> * path,
-                               <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> pos,
-                               const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * name)</pre>
-
-<p>Sets the widget name for the widget found at position <em>pos</em>
-in the widget hierarchy defined by <em>path</em>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>path</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>pos</code></em></i>
-				–
-	</div>
-			<p>position to modify, -1 for the path head</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>name</code></em></i>
 				–
 	</div>
 			<p>widget name</p>
@@ -5597,6 +5597,77 @@ in the widget hierarchy defined by <em>path</em>.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.20;" id="gtk_widget_path_iter_set_object_name">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_widget_path_iter_set_object_name">
+	<span><code>gtk_widget_path_iter_set_object_name</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_widget_path_iter_set_object_name (<a title="GtkWidgetPath" href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a> * path,
+                                      <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> pos,
+                                      const char* name)</pre>
+
+<p>Sets the object name for a given position in the widget hierarchy
+defined by <em>path</em>.</p>
+<p>When set, the object name overrides the object type when matching
+CSS.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>path</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>pos</code></em></i>
+				–
+	</div>
+			<p>position to modify, -1 for the path head</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>name</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>object name to set or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> to unset</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.20
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -5656,77 +5727,6 @@ CSS.</p>
 				–
 	</div>
 			<p>object name to set or <a href="https://docs.python.org/3/library/constants.html#None">None</a> to unset</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.20
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_widget_path_iter_set_object_name">
-	<span><code>gtk_widget_path_iter_set_object_name</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-gtk_widget_path_iter_set_object_name (<a title="GtkWidgetPath" href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a> * path,
-                                      <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> pos,
-                                      const char* name)</pre>
-
-<p>Sets the object name for a given position in the widget hierarchy
-defined by <em>path</em>.</p>
-<p>When set, the object name overrides the object type when matching
-CSS.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>path</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>pos</code></em></i>
-				–
-	</div>
-			<p>position to modify, -1 for the path head</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>name</code></em></i>
-					(
-						
-<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
-
-						)
-				–
-	</div>
-			<p>object name to set or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> to unset</p>
 
 	</div>
 
@@ -5820,6 +5820,70 @@ CSS.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_widget_path_iter_set_object_type">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_widget_path_iter_set_object_type">
+	<span><code>gtk_widget_path_iter_set_object_type</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_widget_path_iter_set_object_type (<a title="GtkWidgetPath" href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a> * path,
+                                      <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> pos,
+                                      <a title="GType" href="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#GType">GType</a> type)</pre>
+
+<p>Sets the object type for a given position in the widget hierarchy
+defined by <em>path</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>path</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>pos</code></em></i>
+				–
+	</div>
+			<p>position to modify, -1 for the path head</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>type</code></em></i>
+				–
+	</div>
+			<p>object type to set</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -5874,70 +5938,6 @@ defined by <em>path</em>.</p>
 					(
 						<a title="GObject.Type" href="https://developer.gnome.org/gobject/stable/gobject-Type-Information.html#GType">GObject.Type</a>
 						)
-				–
-	</div>
-			<p>object type to set</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.0
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_widget_path_iter_set_object_type">
-	<span><code>gtk_widget_path_iter_set_object_type</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-gtk_widget_path_iter_set_object_type (<a title="GtkWidgetPath" href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a> * path,
-                                      <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> pos,
-                                      <a title="GType" href="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#GType">GType</a> type)</pre>
-
-<p>Sets the object type for a given position in the widget hierarchy
-defined by <em>path</em>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>path</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>pos</code></em></i>
-				–
-	</div>
-			<p>position to modify, -1 for the path head</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>type</code></em></i>
 				–
 	</div>
 			<p>object type to set</p>
@@ -6032,6 +6032,78 @@ defined by <em>path</em>.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.14;" id="gtk_widget_path_iter_set_state">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_widget_path_iter_set_state">
+	<span><code>gtk_widget_path_iter_set_state</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_widget_path_iter_set_state (<a title="GtkWidgetPath" href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a> * path,
+                                <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> pos,
+                                <a title="GtkStateFlags" href="gtkenums.html#GtkStateFlags">GtkStateFlags</a> state)</pre>
+
+<p>Sets the widget name for the widget found at position <em>pos</em>
+in the widget hierarchy defined by <em>path</em>.</p>
+<p>If you want to update just a single state flag, you need to do
+this manually, as this function updates all state flags.</p>
+<h2>Setting a flag</h2>
+<pre><code class="language-[&lt;!--"> gtk_widget_path_iter_set_state (path, pos, gtk_widget_path_iter_get_state (path, pos) | flag);
+</code></pre>
+<h2>Unsetting a flag</h2>
+<pre><code class="language-[&lt;!--"> gtk_widget_path_iter_set_state (path, pos, gtk_widget_path_iter_get_state (path, pos) &amp; ~flag);
+</code></pre>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>path</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>pos</code></em></i>
+				–
+	</div>
+			<p>position to modify, -1 for the path head</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>state</code></em></i>
+				–
+	</div>
+			<p>state flags</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.14
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -6094,78 +6166,6 @@ this manually, as this function updates all state flags.</p>
 					(
 						<a title="Gtk.StateFlags" href="gtkenums.html#GtkStateFlags">Gtk.StateFlags</a>
 						)
-				–
-	</div>
-			<p>state flags</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.14
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_widget_path_iter_set_state">
-	<span><code>gtk_widget_path_iter_set_state</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-gtk_widget_path_iter_set_state (<a title="GtkWidgetPath" href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a> * path,
-                                <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> pos,
-                                <a title="GtkStateFlags" href="gtkenums.html#GtkStateFlags">GtkStateFlags</a> state)</pre>
-
-<p>Sets the widget name for the widget found at position <em>pos</em>
-in the widget hierarchy defined by <em>path</em>.</p>
-<p>If you want to update just a single state flag, you need to do
-this manually, as this function updates all state flags.</p>
-<h2>Setting a flag</h2>
-<pre><code class="language-[&lt;!--"> gtk_widget_path_iter_set_state (path, pos, gtk_widget_path_iter_get_state (path, pos) | flag);
-</code></pre>
-<h2>Unsetting a flag</h2>
-<pre><code class="language-[&lt;!--"> gtk_widget_path_iter_set_state (path, pos, gtk_widget_path_iter_get_state (path, pos) &amp; ~flag);
-</code></pre>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>path</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>pos</code></em></i>
-				–
-	</div>
-			<p>position to modify, -1 for the path head</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>state</code></em></i>
 				–
 	</div>
 			<p>state flags</p>
@@ -6268,6 +6268,60 @@ this manually, as this function updates all state flags.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_widget_path_length">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_widget_path_length">
+	<span><code>gtk_widget_path_length</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a>
+gtk_widget_path_length (const <a title="GtkWidgetPath" href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a> * path)</pre>
+
+<p>Returns the number of <a href="gtkwidget.html#GtkWidget">GtkWidget</a> <a href="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#GType">GType</a> between the represented
+widget and its topmost container.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>path</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>the number of elements in the path</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -6311,60 +6365,6 @@ widget and its topmost container.</p>
 									(
 					<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
 										)
-								–
-			</div>
-							<p>the number of elements in the path</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.0
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_widget_path_length">
-	<span><code>gtk_widget_path_length</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-<a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a>
-gtk_widget_path_length (const <a title="GtkWidgetPath" href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a> * path)</pre>
-
-<p>Returns the number of <a href="gtkwidget.html#GtkWidget">GtkWidget</a> <a href="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#GType">GType</a> between the represented
-widget and its topmost container.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>path</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
 								–
 			</div>
 							<p>the number of elements in the path</p>
@@ -6446,6 +6446,58 @@ widget and its topmost container.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_widget_path_prepend_type">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_widget_path_prepend_type">
+	<span><code>gtk_widget_path_prepend_type</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_widget_path_prepend_type (<a title="GtkWidgetPath" href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a> * path,
+                              <a title="GType" href="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#GType">GType</a> type)</pre>
+
+<p>Prepends a widget type to the widget hierachy represented by <em>path</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>path</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>type</code></em></i>
+				–
+	</div>
+			<p>widget type to prepend</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -6486,58 +6538,6 @@ def Gtk.WidgetPath.prepend_type (self, type):
 					(
 						<a title="GObject.Type" href="https://developer.gnome.org/gobject/stable/gobject-Type-Information.html#GType">GObject.Type</a>
 						)
-				–
-	</div>
-			<p>widget type to prepend</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.0
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_widget_path_prepend_type">
-	<span><code>gtk_widget_path_prepend_type</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-gtk_widget_path_prepend_type (<a title="GtkWidgetPath" href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a> * path,
-                              <a title="GType" href="https://developer.gnome.org/gobject/unstable/gobject-Type-Information.html#GType">GType</a> type)</pre>
-
-<p>Prepends a widget type to the widget hierachy represented by <em>path</em>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>path</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>type</code></em></i>
 				–
 	</div>
 			<p>widget type to prepend</p>
@@ -6618,6 +6618,63 @@ function Gtk.prototype.prepend_type(type: <a title="GObject.Type" href="https://
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.2;" id="gtk_widget_path_to_string">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_widget_path_to_string">
+	<span><code>gtk_widget_path_to_string</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+char*
+gtk_widget_path_to_string (const <a title="GtkWidgetPath" href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a> * path)</pre>
+
+<p>Dumps the widget path into a string representation. It tries to match
+the CSS style as closely as possible (Note that there might be paths
+that cannot be represented in CSS).</p>
+<p>The main use of this code is for debugging purposes, so that you can
+<a href="https://developer.gnome.org/glib/unstable/glib-Warnings-and-Assertions.html#g-print">g_print</a> the path or dump it in a gdb session.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>path</code></em></i>
+				–
+	</div>
+			<p>the path</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>A new string describing <em>path</em>.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.2
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -6664,63 +6721,6 @@ that cannot be represented in CSS).</p>
 									(
 					<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
 										)
-								–
-			</div>
-							<p>A new string describing <em>path</em>.</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.2
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_widget_path_to_string">
-	<span><code>gtk_widget_path_to_string</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-char*
-gtk_widget_path_to_string (const <a title="GtkWidgetPath" href="gtkwidgetpath.html#GtkWidgetPath">GtkWidgetPath</a> * path)</pre>
-
-<p>Dumps the widget path into a string representation. It tries to match
-the CSS style as closely as possible (Note that there might be paths
-that cannot be represented in CSS).</p>
-<p>The main use of this code is for debugging purposes, so that you can
-<a href="https://developer.gnome.org/glib/unstable/glib-Warnings-and-Assertions.html#g-print">g_print</a> the path or dump it in a gdb session.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>path</code></em></i>
-				–
-	</div>
-			<p>the path</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
 								–
 			</div>
 							<p>A new string describing <em>path</em>.</p>

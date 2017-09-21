@@ -89,7 +89,7 @@ $('body').removeClass('no-script');
 </nav>
 
 <main>
-<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="gtkpapersize.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['python', 'c', 'javascript']" data-hotdoc-meta-gi-language="c">
+<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="gtkpapersize.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['c', 'python', 'javascript']" data-hotdoc-meta-gi-language="c">
 <script src="assets/js/utils.js"></script>
 
 <div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
@@ -107,13 +107,13 @@ $('body').removeClass('no-script');
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="GtkPaperSize">
 	
-        <div class="gi-symbol gi-symbol-python">
+        <div class="gi-symbol gi-symbol-c">
             
 
 
 
 <h2 data-hotdoc-id="GtkPaperSize">
-	<span><code>Gtk.PaperSize</code></span>
+	<span><code>GtkPaperSize</code></span>
 </h2>
 
 
@@ -125,13 +125,13 @@ $('body').removeClass('no-script');
 
 
         </div>
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-python">
             
 
 
 
 <h2 data-hotdoc-id="GtkPaperSize">
-	<span><code>GtkPaperSize</code></span>
+	<span><code>Gtk.PaperSize</code></span>
 </h2>
 
 
@@ -170,68 +170,6 @@ $('body').removeClass('no-script');
 
 <div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_paper_size_new">
 	
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_paper_size_new">
-	<span><code>Gtk.PaperSize.new</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.PaperSize.new (name):
-    #python wrapper for 'gtk_paper_size_new'</pre>
-
-<p>Creates a new <a href="gtkpapersize.html#GtkPaperSize">Gtk.PaperSize</a> object by parsing a
-<a href="ftp://ftp.pwg.org/pub/pwg/candidates/cs-pwgmsn10-20020226-5101.1.pdf">PWG 5101.1-2002</a>
-paper name.</p>
-<p>If <em>name</em> is <a href="https://docs.python.org/3/library/constants.html#None">None</a>, the default paper size is returned,
-see <a href="gtkpapersize.html#gtk_paper_size_get_default">Gtk.PaperSize.get_default</a>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>name</code></em></i>
-					(
-						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
-						)
-				–
-	</div>
-			<p>a paper size name, or <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Gtk.PaperSize" href="gtkpapersize.html#GtkPaperSize">Gtk.PaperSize</a>
-										)
-								–
-			</div>
-							<p>a new <a href="gtkpapersize.html#GtkPaperSize">Gtk.PaperSize</a>, use <a href="gtkpapersize.html#gtk_paper_size_free">Gtk.PaperSize.free</a>
-to free it</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.10
-		</p>
-
-
-        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -282,6 +220,68 @@ see <a href="gtkpapersize.html#gtk_paper_size_get_default">gtk_paper_size_get_de
 								–
 			</div>
 							<p>a new <a href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a>, use <a href="gtkpapersize.html#gtk_paper_size_free">gtk_paper_size_free</a>
+to free it</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_paper_size_new">
+	<span><code>Gtk.PaperSize.new</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.PaperSize.new (name):
+    #python wrapper for 'gtk_paper_size_new'</pre>
+
+<p>Creates a new <a href="gtkpapersize.html#GtkPaperSize">Gtk.PaperSize</a> object by parsing a
+<a href="ftp://ftp.pwg.org/pub/pwg/candidates/cs-pwgmsn10-20020226-5101.1.pdf">PWG 5101.1-2002</a>
+paper name.</p>
+<p>If <em>name</em> is <a href="https://docs.python.org/3/library/constants.html#None">None</a>, the default paper size is returned,
+see <a href="gtkpapersize.html#gtk_paper_size_get_default">Gtk.PaperSize.get_default</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>name</code></em></i>
+					(
+						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
+						)
+				–
+	</div>
+			<p>a paper size name, or <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.PaperSize" href="gtkpapersize.html#GtkPaperSize">Gtk.PaperSize</a>
+										)
+								–
+			</div>
+							<p>a new <a href="gtkpapersize.html#GtkPaperSize">Gtk.PaperSize</a>, use <a href="gtkpapersize.html#gtk_paper_size_free">Gtk.PaperSize.free</a>
 to free it</p>
 
 					</div>
@@ -365,6 +365,97 @@ to free it</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_paper_size_new_from_ppd">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_paper_size_new_from_ppd">
+	<span><code>gtk_paper_size_new_from_ppd</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkPaperSize" href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> *
+gtk_paper_size_new_from_ppd (const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * ppd_name,
+                             const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * ppd_display_name,
+                             <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> width,
+                             <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> height)</pre>
+
+<p>Creates a new <a href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> object by using
+PPD information.</p>
+<p>If <em>ppd_name</em> is not a recognized PPD paper name,
+<em>ppd_display_name</em>, <em>width</em> and <em>height</em> are used to
+construct a custom <a href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> object.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>ppd_name</code></em></i>
+				–
+	</div>
+			<p>a PPD paper name</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>ppd_display_name</code></em></i>
+				–
+	</div>
+			<p>the corresponding human-readable name</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>width</code></em></i>
+				–
+	</div>
+			<p>the paper width, in points</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>height</code></em></i>
+				–
+	</div>
+			<p>the paper height in points</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>a new <a href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a>, use <a href="gtkpapersize.html#gtk_paper_size_free">gtk_paper_size_free</a>
+to free it</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -453,97 +544,6 @@ construct a custom <a href="gtkpapersize.html#GtkPaperSize">Gtk.PaperSize</a> ob
 								–
 			</div>
 							<p>a new <a href="gtkpapersize.html#GtkPaperSize">Gtk.PaperSize</a>, use <a href="gtkpapersize.html#gtk_paper_size_free">Gtk.PaperSize.free</a>
-to free it</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.10
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_paper_size_new_from_ppd">
-	<span><code>gtk_paper_size_new_from_ppd</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-<a title="GtkPaperSize" href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> *
-gtk_paper_size_new_from_ppd (const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * ppd_name,
-                             const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * ppd_display_name,
-                             <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> width,
-                             <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> height)</pre>
-
-<p>Creates a new <a href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> object by using
-PPD information.</p>
-<p>If <em>ppd_name</em> is not a recognized PPD paper name,
-<em>ppd_display_name</em>, <em>width</em> and <em>height</em> are used to
-construct a custom <a href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> object.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>ppd_name</code></em></i>
-				–
-	</div>
-			<p>a PPD paper name</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>ppd_display_name</code></em></i>
-				–
-	</div>
-			<p>the corresponding human-readable name</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>width</code></em></i>
-				–
-	</div>
-			<p>the paper width, in points</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>height</code></em></i>
-				–
-	</div>
-			<p>the paper height in points</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-								–
-			</div>
-							<p>a new <a href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a>, use <a href="gtkpapersize.html#gtk_paper_size_free">gtk_paper_size_free</a>
 to free it</p>
 
 					</div>
@@ -666,6 +666,86 @@ to free it</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.16;" id="gtk_paper_size_new_from_ipp">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_paper_size_new_from_ipp">
+	<span><code>gtk_paper_size_new_from_ipp</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkPaperSize" href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> *
+gtk_paper_size_new_from_ipp (const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * ipp_name,
+                             <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> width,
+                             <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> height)</pre>
+
+<p>Creates a new <a href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> object by using
+IPP information.</p>
+<p>If <em>ipp_name</em> is not a recognized paper name,
+<em>width</em> and <em>height</em> are used to
+construct a custom <a href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> object.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>ipp_name</code></em></i>
+				–
+	</div>
+			<p>an IPP paper name</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>width</code></em></i>
+				–
+	</div>
+			<p>the paper width, in points</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>height</code></em></i>
+				–
+	</div>
+			<p>the paper height in points</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>a new <a href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a>, use <a href="gtkpapersize.html#gtk_paper_size_free">gtk_paper_size_free</a>
+to free it</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.16
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -741,86 +821,6 @@ construct a custom <a href="gtkpapersize.html#GtkPaperSize">Gtk.PaperSize</a> ob
 								–
 			</div>
 							<p>a new <a href="gtkpapersize.html#GtkPaperSize">Gtk.PaperSize</a>, use <a href="gtkpapersize.html#gtk_paper_size_free">Gtk.PaperSize.free</a>
-to free it</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.16
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_paper_size_new_from_ipp">
-	<span><code>gtk_paper_size_new_from_ipp</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-<a title="GtkPaperSize" href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> *
-gtk_paper_size_new_from_ipp (const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * ipp_name,
-                             <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> width,
-                             <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> height)</pre>
-
-<p>Creates a new <a href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> object by using
-IPP information.</p>
-<p>If <em>ipp_name</em> is not a recognized paper name,
-<em>width</em> and <em>height</em> are used to
-construct a custom <a href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> object.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>ipp_name</code></em></i>
-				–
-	</div>
-			<p>an IPP paper name</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>width</code></em></i>
-				–
-	</div>
-			<p>the paper width, in points</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>height</code></em></i>
-				–
-	</div>
-			<p>the paper height in points</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-								–
-			</div>
-							<p>a new <a href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a>, use <a href="gtkpapersize.html#gtk_paper_size_free">gtk_paper_size_free</a>
 to free it</p>
 
 					</div>
@@ -930,6 +930,105 @@ to free it</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_paper_size_new_custom">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_paper_size_new_custom">
+	<span><code>gtk_paper_size_new_custom</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkPaperSize" href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> *
+gtk_paper_size_new_custom (const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * name,
+                           const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * display_name,
+                           <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> width,
+                           <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> height,
+                           <a title="GtkUnit" href="gtkpapersize.html#GtkUnit">GtkUnit</a> unit)</pre>
+
+<p>Creates a new <a href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> object with the
+given parameters.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>name</code></em></i>
+				–
+	</div>
+			<p>the paper name</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>display_name</code></em></i>
+				–
+	</div>
+			<p>the human-readable name</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>width</code></em></i>
+				–
+	</div>
+			<p>the paper width, in units of <em>unit</em></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>height</code></em></i>
+				–
+	</div>
+			<p>the paper height, in units of <em>unit</em></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>unit</code></em></i>
+				–
+	</div>
+			<p>the unit for <em>width</em> and <em>height</em>. not <a href="gtkpapersize.html#GTK_UNIT_NONE">GTK_UNIT_NONE</a>.</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>a new <a href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> object, use <a href="gtkpapersize.html#gtk_paper_size_free">gtk_paper_size_free</a>
+to free it</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -1028,105 +1127,6 @@ given parameters.</p>
 								–
 			</div>
 							<p>a new <a href="gtkpapersize.html#GtkPaperSize">Gtk.PaperSize</a> object, use <a href="gtkpapersize.html#gtk_paper_size_free">Gtk.PaperSize.free</a>
-to free it</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.10
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_paper_size_new_custom">
-	<span><code>gtk_paper_size_new_custom</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-<a title="GtkPaperSize" href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> *
-gtk_paper_size_new_custom (const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * name,
-                           const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * display_name,
-                           <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> width,
-                           <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> height,
-                           <a title="GtkUnit" href="gtkpapersize.html#GtkUnit">GtkUnit</a> unit)</pre>
-
-<p>Creates a new <a href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> object with the
-given parameters.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>name</code></em></i>
-				–
-	</div>
-			<p>the paper name</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>display_name</code></em></i>
-				–
-	</div>
-			<p>the human-readable name</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>width</code></em></i>
-				–
-	</div>
-			<p>the paper width, in units of <em>unit</em></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>height</code></em></i>
-				–
-	</div>
-			<p>the paper height, in units of <em>unit</em></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>unit</code></em></i>
-				–
-	</div>
-			<p>the unit for <em>width</em> and <em>height</em>. not <a href="gtkpapersize.html#GTK_UNIT_NONE">GTK_UNIT_NONE</a>.</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-								–
-			</div>
-							<p>a new <a href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> object, use <a href="gtkpapersize.html#gtk_paper_size_free">gtk_paper_size_free</a>
 to free it</p>
 
 					</div>
@@ -1259,6 +1259,73 @@ to free it</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="since:2.12;" id="gtk_paper_size_new_from_key_file">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_paper_size_new_from_key_file">
+	<span><code>gtk_paper_size_new_from_key_file</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkPaperSize" href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> *
+gtk_paper_size_new_from_key_file (<a title="GKeyFile" href="https://developer.gnome.org/glib/unstable/glib-Key-value-file-parser.html#GKeyFile">GKeyFile</a> * key_file,
+                                  const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * group_name)</pre>
+
+<p>Reads a paper size from the group <em>group_name</em> in the key file
+<em>key_file</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>key_file</code></em></i>
+				–
+	</div>
+			<p>the <a href="https://developer.gnome.org/glib/unstable/glib-Key-value-file-parser.html#GKeyFile">GKeyFile</a> to retrieve the papersize from</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>group_name</code></em></i>
+				–
+	</div>
+			<p>the name ofthe group in the key file to read,
+or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> to read the first group</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>a new <a href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> object with the restored
+paper size, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> if an error occurred</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.12
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -1321,73 +1388,6 @@ or <a href="https://docs.python.org/3/library/constants.html#None">None</a> to r
 			</div>
 							<p>a new <a href="gtkpapersize.html#GtkPaperSize">Gtk.PaperSize</a> object with the restored
 paper size, or <a href="https://docs.python.org/3/library/constants.html#None">None</a> if an error occurred</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.12
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_paper_size_new_from_key_file">
-	<span><code>gtk_paper_size_new_from_key_file</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-<a title="GtkPaperSize" href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> *
-gtk_paper_size_new_from_key_file (<a title="GKeyFile" href="https://developer.gnome.org/glib/unstable/glib-Key-value-file-parser.html#GKeyFile">GKeyFile</a> * key_file,
-                                  const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * group_name)</pre>
-
-<p>Reads a paper size from the group <em>group_name</em> in the key file
-<em>key_file</em>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>key_file</code></em></i>
-				–
-	</div>
-			<p>the <a href="https://developer.gnome.org/glib/unstable/glib-Key-value-file-parser.html#GKeyFile">GKeyFile</a> to retrieve the papersize from</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>group_name</code></em></i>
-				–
-	</div>
-			<p>the name ofthe group in the key file to read,
-or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> to read the first group</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-								–
-			</div>
-							<p>a new <a href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> object with the restored
-paper size, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> if an error occurred</p>
 
 					</div>
 	</div>
@@ -1481,64 +1481,6 @@ paper size, or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.22;" id="gtk_paper_size_new_from_gvariant">
 	
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_paper_size_new_from_gvariant">
-	<span><code>Gtk.PaperSize.new_from_gvariant</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.PaperSize.new_from_gvariant (variant):
-    #python wrapper for 'gtk_paper_size_new_from_gvariant'</pre>
-
-<p>Deserialize a paper size from an a{sv} variant in
-the format produced by <a href="gtkpapersize.html#gtk_paper_size_to_gvariant">Gtk.PaperSize.to_gvariant</a>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>variant</code></em></i>
-					(
-						<a title="GLib.Variant" href="https://developer.gnome.org/glib/stable/glib-GVariant.html">GLib.Variant</a>
-						)
-				–
-	</div>
-			<p>an a{sv} <a href="https://developer.gnome.org/glib/stable/glib-GVariant.html">GLib.Variant</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Gtk.PaperSize" href="gtkpapersize.html#GtkPaperSize">Gtk.PaperSize</a>
-										)
-								–
-			</div>
-							<p>a new <a href="gtkpapersize.html#GtkPaperSize">Gtk.PaperSize</a> object</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.22
-		</p>
-
-
-        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -1587,6 +1529,64 @@ the format produced by <a href="gtkpapersize.html#gtk_paper_size_to_gvariant">gt
 								–
 			</div>
 							<p>a new <a href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> object</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.22
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_paper_size_new_from_gvariant">
+	<span><code>Gtk.PaperSize.new_from_gvariant</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.PaperSize.new_from_gvariant (variant):
+    #python wrapper for 'gtk_paper_size_new_from_gvariant'</pre>
+
+<p>Deserialize a paper size from an a{sv} variant in
+the format produced by <a href="gtkpapersize.html#gtk_paper_size_to_gvariant">Gtk.PaperSize.to_gvariant</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>variant</code></em></i>
+					(
+						<a title="GLib.Variant" href="https://developer.gnome.org/glib/stable/glib-GVariant.html">GLib.Variant</a>
+						)
+				–
+	</div>
+			<p>an a{sv} <a href="https://developer.gnome.org/glib/stable/glib-GVariant.html">GLib.Variant</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.PaperSize" href="gtkpapersize.html#GtkPaperSize">Gtk.PaperSize</a>
+										)
+								–
+			</div>
+							<p>a new <a href="gtkpapersize.html#GtkPaperSize">Gtk.PaperSize</a> object</p>
 
 					</div>
 	</div>
@@ -1667,6 +1667,59 @@ the format produced by <a href="gtkpapersize.html#gtk_paper_size_to_gvariant">Gt
 
 <div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_paper_size_copy">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_paper_size_copy">
+	<span><code>gtk_paper_size_copy</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkPaperSize" href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> *
+gtk_paper_size_copy (<a title="GtkPaperSize" href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> * other)</pre>
+
+<p>Copies an existing <a href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>other</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>a copy of <em>other</em></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -1709,59 +1762,6 @@ def Gtk.PaperSize.copy (self):
 									(
 					<a title="Gtk.PaperSize" href="gtkpapersize.html#GtkPaperSize">Gtk.PaperSize</a>
 										)
-								–
-			</div>
-							<p>a copy of <em>other</em></p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.10
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_paper_size_copy">
-	<span><code>gtk_paper_size_copy</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-<a title="GtkPaperSize" href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> *
-gtk_paper_size_copy (<a title="GtkPaperSize" href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> * other)</pre>
-
-<p>Copies an existing <a href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>other</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
 								–
 			</div>
 							<p>a copy of <em>other</em></p>
@@ -1842,6 +1842,47 @@ function Gtk.prototype.copy(): {
 
 <div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_paper_size_free">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_paper_size_free">
+	<span><code>gtk_paper_size_free</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_paper_size_free (<a title="GtkPaperSize" href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> * size)</pre>
+
+<p>Free the given <a href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> object.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>size</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -1872,47 +1913,6 @@ def Gtk.PaperSize.free (self):
 				–
 	</div>
 			<p>a <a href="gtkpapersize.html#GtkPaperSize">Gtk.PaperSize</a></p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.10
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_paper_size_free">
-	<span><code>gtk_paper_size_free</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-gtk_paper_size_free (<a title="GtkPaperSize" href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> * size)</pre>
-
-<p>Free the given <a href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> object.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>size</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a></p>
 
 	</div>
 
@@ -1977,6 +1977,71 @@ function Gtk.prototype.free(): {
 
 <div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_paper_size_is_equal">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_paper_size_is_equal">
+	<span><code>gtk_paper_size_is_equal</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_paper_size_is_equal (<a title="GtkPaperSize" href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> * size1,
+                         <a title="GtkPaperSize" href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> * size2)</pre>
+
+<p>Compares two <a href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> objects.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>size1</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> object</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>size2</code></em></i>
+				–
+	</div>
+			<p>another <a href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> object</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a>, if <em>size1</em> and <em>size2</em>
+represent the same paper size</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -2035,71 +2100,6 @@ def Gtk.PaperSize.is_equal (self, size2):
 								–
 			</div>
 							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a>, if <em>size1</em> and <em>size2</em>
-represent the same paper size</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.10
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_paper_size_is_equal">
-	<span><code>gtk_paper_size_is_equal</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
-gtk_paper_size_is_equal (<a title="GtkPaperSize" href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> * size1,
-                         <a title="GtkPaperSize" href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> * size2)</pre>
-
-<p>Compares two <a href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> objects.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>size1</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> object</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>size2</code></em></i>
-				–
-	</div>
-			<p>another <a href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> object</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-								–
-			</div>
-							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a>, if <em>size1</em> and <em>size2</em>
 represent the same paper size</p>
 
 					</div>
@@ -2192,6 +2192,59 @@ represent the same paper size</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_paper_size_get_name">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_paper_size_get_name">
+	<span><code>gtk_paper_size_get_name</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> *
+gtk_paper_size_get_name (<a title="GtkPaperSize" href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> * size)</pre>
+
+<p>Gets the name of the <a href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>size</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> object</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>the name of <em>size</em></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -2234,59 +2287,6 @@ def Gtk.PaperSize.get_name (self):
 									(
 					<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
 										)
-								–
-			</div>
-							<p>the name of <em>size</em></p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.10
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_paper_size_get_name">
-	<span><code>gtk_paper_size_get_name</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> *
-gtk_paper_size_get_name (<a title="GtkPaperSize" href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> * size)</pre>
-
-<p>Gets the name of the <a href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>size</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> object</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
 								–
 			</div>
 							<p>the name of <em>size</em></p>
@@ -2367,6 +2367,59 @@ function Gtk.prototype.get_name(): {
 
 <div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_paper_size_get_display_name">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_paper_size_get_display_name">
+	<span><code>gtk_paper_size_get_display_name</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> *
+gtk_paper_size_get_display_name (<a title="GtkPaperSize" href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> * size)</pre>
+
+<p>Gets the human-readable name of the <a href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>size</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> object</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>the human-readable name of <em>size</em></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -2409,59 +2462,6 @@ def Gtk.PaperSize.get_display_name (self):
 									(
 					<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
 										)
-								–
-			</div>
-							<p>the human-readable name of <em>size</em></p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.10
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_paper_size_get_display_name">
-	<span><code>gtk_paper_size_get_display_name</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> *
-gtk_paper_size_get_display_name (<a title="GtkPaperSize" href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> * size)</pre>
-
-<p>Gets the human-readable name of the <a href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>size</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> object</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
 								–
 			</div>
 							<p>the human-readable name of <em>size</em></p>
@@ -2542,6 +2542,60 @@ function Gtk.prototype.get_display_name(): {
 
 <div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_paper_size_get_ppd_name">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_paper_size_get_ppd_name">
+	<span><code>gtk_paper_size_get_ppd_name</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> *
+gtk_paper_size_get_ppd_name (<a title="GtkPaperSize" href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> * size)</pre>
+
+<p>Gets the PPD name of the <a href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a>, which
+may be <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>size</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> object</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>the PPD name of <em>size</em></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -2585,60 +2639,6 @@ may be <a href="https://docs.python.org/3/library/constants.html#None">None</a>.
 									(
 					<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
 										)
-								–
-			</div>
-							<p>the PPD name of <em>size</em></p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.10
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_paper_size_get_ppd_name">
-	<span><code>gtk_paper_size_get_ppd_name</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> *
-gtk_paper_size_get_ppd_name (<a title="GtkPaperSize" href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> * size)</pre>
-
-<p>Gets the PPD name of the <a href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a>, which
-may be <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>size</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> object</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
 								–
 			</div>
 							<p>the PPD name of <em>size</em></p>
@@ -2720,6 +2720,71 @@ may be <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Referenc
 
 <div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_paper_size_get_width">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_paper_size_get_width">
+	<span><code>gtk_paper_size_get_width</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a>
+gtk_paper_size_get_width (<a title="GtkPaperSize" href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> * size,
+                          <a title="GtkUnit" href="gtkpapersize.html#GtkUnit">GtkUnit</a> unit)</pre>
+
+<p>Gets the paper width of the <a href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a>, in
+units of <em>unit</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>size</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> object</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>unit</code></em></i>
+				–
+	</div>
+			<p>the unit for the return value, not <a href="gtkpapersize.html#GTK_UNIT_NONE">GTK_UNIT_NONE</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>the paper width</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -2776,71 +2841,6 @@ units of <em>unit</em>.</p>
 									(
 					<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
 										)
-								–
-			</div>
-							<p>the paper width</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.10
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_paper_size_get_width">
-	<span><code>gtk_paper_size_get_width</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-<a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a>
-gtk_paper_size_get_width (<a title="GtkPaperSize" href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> * size,
-                          <a title="GtkUnit" href="gtkpapersize.html#GtkUnit">GtkUnit</a> unit)</pre>
-
-<p>Gets the paper width of the <a href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a>, in
-units of <em>unit</em>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>size</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> object</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>unit</code></em></i>
-				–
-	</div>
-			<p>the unit for the return value, not <a href="gtkpapersize.html#GTK_UNIT_NONE">GTK_UNIT_NONE</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
 								–
 			</div>
 							<p>the paper width</p>
@@ -2935,6 +2935,71 @@ units of <em>unit</em>.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_paper_size_get_height">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_paper_size_get_height">
+	<span><code>gtk_paper_size_get_height</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a>
+gtk_paper_size_get_height (<a title="GtkPaperSize" href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> * size,
+                           <a title="GtkUnit" href="gtkpapersize.html#GtkUnit">GtkUnit</a> unit)</pre>
+
+<p>Gets the paper height of the <a href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a>, in
+units of <em>unit</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>size</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> object</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>unit</code></em></i>
+				–
+	</div>
+			<p>the unit for the return value, not <a href="gtkpapersize.html#GTK_UNIT_NONE">GTK_UNIT_NONE</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>the paper height</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -2991,71 +3056,6 @@ units of <em>unit</em>.</p>
 									(
 					<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
 										)
-								–
-			</div>
-							<p>the paper height</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.10
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_paper_size_get_height">
-	<span><code>gtk_paper_size_get_height</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-<a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a>
-gtk_paper_size_get_height (<a title="GtkPaperSize" href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> * size,
-                           <a title="GtkUnit" href="gtkpapersize.html#GtkUnit">GtkUnit</a> unit)</pre>
-
-<p>Gets the paper height of the <a href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a>, in
-units of <em>unit</em>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>size</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> object</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>unit</code></em></i>
-				–
-	</div>
-			<p>the unit for the return value, not <a href="gtkpapersize.html#GTK_UNIT_NONE">GTK_UNIT_NONE</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
 								–
 			</div>
 							<p>the paper height</p>
@@ -3150,6 +3150,56 @@ units of <em>unit</em>.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_paper_size_is_ipp">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_paper_size_is_ipp">
+	<span><code>gtk_paper_size_is_ipp</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_paper_size_is_ipp (<a title="GtkPaperSize" href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> * size)</pre>
+
+<p>Returns <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if <em>size</em> is an IPP standard paper size.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>size</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> object</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>whether <em>size</em> is not an IPP custom paper size.</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -3192,56 +3242,6 @@ def Gtk.PaperSize.is_ipp (self):
 									(
 					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
 										)
-								–
-			</div>
-							<p>whether <em>size</em> is not an IPP custom paper size.</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_paper_size_is_ipp">
-	<span><code>gtk_paper_size_is_ipp</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
-gtk_paper_size_is_ipp (<a title="GtkPaperSize" href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> * size)</pre>
-
-<p>Returns <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if <em>size</em> is an IPP standard paper size.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>size</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> object</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
 								–
 			</div>
 							<p>whether <em>size</em> is not an IPP custom paper size.</p>
@@ -3316,6 +3316,56 @@ function Gtk.prototype.is_ipp(): {
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_paper_size_is_custom">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_paper_size_is_custom">
+	<span><code>gtk_paper_size_is_custom</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_paper_size_is_custom (<a title="GtkPaperSize" href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> * size)</pre>
+
+<p>Returns <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if <em>size</em> is not a standard paper size.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>size</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> object</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>whether <em>size</em> is a custom paper size.</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -3358,56 +3408,6 @@ def Gtk.PaperSize.is_custom (self):
 									(
 					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
 										)
-								–
-			</div>
-							<p>whether <em>size</em> is a custom paper size.</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_paper_size_is_custom">
-	<span><code>gtk_paper_size_is_custom</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
-gtk_paper_size_is_custom (<a title="GtkPaperSize" href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> * size)</pre>
-
-<p>Returns <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if <em>size</em> is not a standard paper size.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>size</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> object</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
 								–
 			</div>
 							<p>whether <em>size</em> is a custom paper size.</p>
@@ -3482,6 +3482,80 @@ function Gtk.prototype.is_custom(): {
 
 <div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_paper_size_set_size">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_paper_size_set_size">
+	<span><code>gtk_paper_size_set_size</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_paper_size_set_size (<a title="GtkPaperSize" href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> * size,
+                         <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> width,
+                         <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> height,
+                         <a title="GtkUnit" href="gtkpapersize.html#GtkUnit">GtkUnit</a> unit)</pre>
+
+<p>Changes the dimensions of a <em>size</em> to <em>width</em> x <em>height</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>size</code></em></i>
+				–
+	</div>
+			<p>a custom <a href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> object</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>width</code></em></i>
+				–
+	</div>
+			<p>the new width in units of <em>unit</em></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>height</code></em></i>
+				–
+	</div>
+			<p>the new height in units of <em>unit</em></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>unit</code></em></i>
+				–
+	</div>
+			<p>the unit for <em>width</em> and <em>height</em></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -3548,80 +3622,6 @@ def Gtk.PaperSize.set_size (self, width, height, unit):
 					(
 						<a title="Gtk.Unit" href="gtkpapersize.html#GtkUnit">Gtk.Unit</a>
 						)
-				–
-	</div>
-			<p>the unit for <em>width</em> and <em>height</em></p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.10
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_paper_size_set_size">
-	<span><code>gtk_paper_size_set_size</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-gtk_paper_size_set_size (<a title="GtkPaperSize" href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> * size,
-                         <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> width,
-                         <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> height,
-                         <a title="GtkUnit" href="gtkpapersize.html#GtkUnit">GtkUnit</a> unit)</pre>
-
-<p>Changes the dimensions of a <em>size</em> to <em>width</em> x <em>height</em>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>size</code></em></i>
-				–
-	</div>
-			<p>a custom <a href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> object</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>width</code></em></i>
-				–
-	</div>
-			<p>the new width in units of <em>unit</em></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>height</code></em></i>
-				–
-	</div>
-			<p>the new height in units of <em>unit</em></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>unit</code></em></i>
 				–
 	</div>
 			<p>the unit for <em>width</em> and <em>height</em></p>
@@ -3728,6 +3728,70 @@ function Gtk.prototype.set_size(width: <a title="Number" href="https://developer
 
 <div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_paper_size_get_default_top_margin">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_paper_size_get_default_top_margin">
+	<span><code>gtk_paper_size_get_default_top_margin</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a>
+gtk_paper_size_get_default_top_margin (<a title="GtkPaperSize" href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> * size,
+                                       <a title="GtkUnit" href="gtkpapersize.html#GtkUnit">GtkUnit</a> unit)</pre>
+
+<p>Gets the default top margin for the <a href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>size</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> object</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>unit</code></em></i>
+				–
+	</div>
+			<p>the unit for the return value, not <a href="gtkpapersize.html#GTK_UNIT_NONE">GTK_UNIT_NONE</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>the default top margin</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -3783,70 +3847,6 @@ def Gtk.PaperSize.get_default_top_margin (self, unit):
 									(
 					<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
 										)
-								–
-			</div>
-							<p>the default top margin</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.10
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_paper_size_get_default_top_margin">
-	<span><code>gtk_paper_size_get_default_top_margin</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-<a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a>
-gtk_paper_size_get_default_top_margin (<a title="GtkPaperSize" href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> * size,
-                                       <a title="GtkUnit" href="gtkpapersize.html#GtkUnit">GtkUnit</a> unit)</pre>
-
-<p>Gets the default top margin for the <a href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>size</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> object</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>unit</code></em></i>
-				–
-	</div>
-			<p>the unit for the return value, not <a href="gtkpapersize.html#GTK_UNIT_NONE">GTK_UNIT_NONE</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
 								–
 			</div>
 							<p>the default top margin</p>
@@ -3940,6 +3940,70 @@ function Gtk.prototype.get_default_top_margin(unit: <a title="Gtk.Unit" href="gt
 
 <div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_paper_size_get_default_bottom_margin">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_paper_size_get_default_bottom_margin">
+	<span><code>gtk_paper_size_get_default_bottom_margin</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a>
+gtk_paper_size_get_default_bottom_margin (<a title="GtkPaperSize" href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> * size,
+                                          <a title="GtkUnit" href="gtkpapersize.html#GtkUnit">GtkUnit</a> unit)</pre>
+
+<p>Gets the default bottom margin for the <a href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>size</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> object</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>unit</code></em></i>
+				–
+	</div>
+			<p>the unit for the return value, not <a href="gtkpapersize.html#GTK_UNIT_NONE">GTK_UNIT_NONE</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>the default bottom margin</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -3995,70 +4059,6 @@ def Gtk.PaperSize.get_default_bottom_margin (self, unit):
 									(
 					<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
 										)
-								–
-			</div>
-							<p>the default bottom margin</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.10
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_paper_size_get_default_bottom_margin">
-	<span><code>gtk_paper_size_get_default_bottom_margin</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-<a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a>
-gtk_paper_size_get_default_bottom_margin (<a title="GtkPaperSize" href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> * size,
-                                          <a title="GtkUnit" href="gtkpapersize.html#GtkUnit">GtkUnit</a> unit)</pre>
-
-<p>Gets the default bottom margin for the <a href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>size</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> object</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>unit</code></em></i>
-				–
-	</div>
-			<p>the unit for the return value, not <a href="gtkpapersize.html#GTK_UNIT_NONE">GTK_UNIT_NONE</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
 								–
 			</div>
 							<p>the default bottom margin</p>
@@ -4152,6 +4152,70 @@ function Gtk.prototype.get_default_bottom_margin(unit: <a title="Gtk.Unit" href=
 
 <div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_paper_size_get_default_left_margin">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_paper_size_get_default_left_margin">
+	<span><code>gtk_paper_size_get_default_left_margin</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a>
+gtk_paper_size_get_default_left_margin (<a title="GtkPaperSize" href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> * size,
+                                        <a title="GtkUnit" href="gtkpapersize.html#GtkUnit">GtkUnit</a> unit)</pre>
+
+<p>Gets the default left margin for the <a href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>size</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> object</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>unit</code></em></i>
+				–
+	</div>
+			<p>the unit for the return value, not <a href="gtkpapersize.html#GTK_UNIT_NONE">GTK_UNIT_NONE</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>the default left margin</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -4207,70 +4271,6 @@ def Gtk.PaperSize.get_default_left_margin (self, unit):
 									(
 					<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
 										)
-								–
-			</div>
-							<p>the default left margin</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.10
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_paper_size_get_default_left_margin">
-	<span><code>gtk_paper_size_get_default_left_margin</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-<a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a>
-gtk_paper_size_get_default_left_margin (<a title="GtkPaperSize" href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> * size,
-                                        <a title="GtkUnit" href="gtkpapersize.html#GtkUnit">GtkUnit</a> unit)</pre>
-
-<p>Gets the default left margin for the <a href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>size</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> object</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>unit</code></em></i>
-				–
-	</div>
-			<p>the unit for the return value, not <a href="gtkpapersize.html#GTK_UNIT_NONE">GTK_UNIT_NONE</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
 								–
 			</div>
 							<p>the default left margin</p>
@@ -4364,6 +4364,70 @@ function Gtk.prototype.get_default_left_margin(unit: <a title="Gtk.Unit" href="g
 
 <div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_paper_size_get_default_right_margin">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_paper_size_get_default_right_margin">
+	<span><code>gtk_paper_size_get_default_right_margin</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a>
+gtk_paper_size_get_default_right_margin (<a title="GtkPaperSize" href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> * size,
+                                         <a title="GtkUnit" href="gtkpapersize.html#GtkUnit">GtkUnit</a> unit)</pre>
+
+<p>Gets the default right margin for the <a href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>size</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> object</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>unit</code></em></i>
+				–
+	</div>
+			<p>the unit for the return value, not <a href="gtkpapersize.html#GTK_UNIT_NONE">GTK_UNIT_NONE</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>the default right margin</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -4419,70 +4483,6 @@ def Gtk.PaperSize.get_default_right_margin (self, unit):
 									(
 					<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
 										)
-								–
-			</div>
-							<p>the default right margin</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.10
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_paper_size_get_default_right_margin">
-	<span><code>gtk_paper_size_get_default_right_margin</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-<a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a>
-gtk_paper_size_get_default_right_margin (<a title="GtkPaperSize" href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> * size,
-                                         <a title="GtkUnit" href="gtkpapersize.html#GtkUnit">GtkUnit</a> unit)</pre>
-
-<p>Gets the default right margin for the <a href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>size</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> object</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>unit</code></em></i>
-				–
-	</div>
-			<p>the unit for the return value, not <a href="gtkpapersize.html#GTK_UNIT_NONE">GTK_UNIT_NONE</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
 								–
 			</div>
 							<p>the default right margin</p>
@@ -4576,6 +4576,69 @@ function Gtk.prototype.get_default_right_margin(unit: <a title="Gtk.Unit" href="
 
 <div class="base_symbol_container" data-hotdoc-tags="since:2.12;" id="gtk_paper_size_to_key_file">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_paper_size_to_key_file">
+	<span><code>gtk_paper_size_to_key_file</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_paper_size_to_key_file (<a title="GtkPaperSize" href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> * size,
+                            <a title="GKeyFile" href="https://developer.gnome.org/glib/unstable/glib-Key-value-file-parser.html#GKeyFile">GKeyFile</a> * key_file,
+                            const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * group_name)</pre>
+
+<p>This function adds the paper size from <em>size</em> to <em>key_file</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>size</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>key_file</code></em></i>
+				–
+	</div>
+			<p>the <a href="https://developer.gnome.org/glib/unstable/glib-Key-value-file-parser.html#GKeyFile">GKeyFile</a> to save the paper size to</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>group_name</code></em></i>
+				–
+	</div>
+			<p>the group to add the settings to in <em>key_file</em></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.12
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -4629,69 +4692,6 @@ def Gtk.PaperSize.to_key_file (self, key_file, group_name):
 					(
 						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
 						)
-				–
-	</div>
-			<p>the group to add the settings to in <em>key_file</em></p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.12
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_paper_size_to_key_file">
-	<span><code>gtk_paper_size_to_key_file</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-gtk_paper_size_to_key_file (<a title="GtkPaperSize" href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> * size,
-                            <a title="GKeyFile" href="https://developer.gnome.org/glib/unstable/glib-Key-value-file-parser.html#GKeyFile">GKeyFile</a> * key_file,
-                            const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * group_name)</pre>
-
-<p>This function adds the paper size from <em>size</em> to <em>key_file</em>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>size</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>key_file</code></em></i>
-				–
-	</div>
-			<p>the <a href="https://developer.gnome.org/glib/unstable/glib-Key-value-file-parser.html#GKeyFile">GKeyFile</a> to save the paper size to</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>group_name</code></em></i>
 				–
 	</div>
 			<p>the group to add the settings to in <em>key_file</em></p>
@@ -4785,63 +4785,6 @@ function Gtk.prototype.to_key_file(key_file: <a title="GLib.KeyFile" href="https
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.22;" id="gtk_paper_size_to_gvariant">
 	
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_paper_size_to_gvariant">
-	<span><code>Gtk.PaperSize.to_gvariant</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.PaperSize.to_gvariant (self):
-    #python wrapper for 'gtk_paper_size_to_gvariant'</pre>
-
-<p>Serialize a paper size to an a{sv} variant.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>paper_size</code></em></i>
-					(
-						<a title="Gtk.PaperSize" href="gtkpapersize.html#GtkPaperSize">Gtk.PaperSize</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkpapersize.html#GtkPaperSize">Gtk.PaperSize</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="GLib.Variant" href="https://developer.gnome.org/glib/stable/glib-GVariant.html">GLib.Variant</a>
-										)
-								–
-			</div>
-							<p>a new, floating, <a href="https://developer.gnome.org/glib/stable/glib-GVariant.html">GLib.Variant</a></p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.22
-		</p>
-
-
-        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -4889,6 +4832,63 @@ gtk_paper_size_to_gvariant (<a title="GtkPaperSize" href="gtkpapersize.html#GtkP
 								–
 			</div>
 							<p>a new, floating, <a href="https://developer.gnome.org/glib/unstable/glib-GVariant.html#GVariant">GVariant</a></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.22
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_paper_size_to_gvariant">
+	<span><code>Gtk.PaperSize.to_gvariant</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.PaperSize.to_gvariant (self):
+    #python wrapper for 'gtk_paper_size_to_gvariant'</pre>
+
+<p>Serialize a paper size to an a{sv} variant.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>paper_size</code></em></i>
+					(
+						<a title="Gtk.PaperSize" href="gtkpapersize.html#GtkPaperSize">Gtk.PaperSize</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkpapersize.html#GtkPaperSize">Gtk.PaperSize</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="GLib.Variant" href="https://developer.gnome.org/glib/stable/glib-GVariant.html">GLib.Variant</a>
+										)
+								–
+			</div>
+							<p>a new, floating, <a href="https://developer.gnome.org/glib/stable/glib-GVariant.html">GLib.Variant</a></p>
 
 					</div>
 	</div>
@@ -4970,65 +4970,6 @@ function Gtk.prototype.to_gvariant(): {
 
 <div class="base_symbol_container" data-hotdoc-tags="since:2.12;" id="gtk_paper_size_get_paper_sizes">
 	
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_paper_size_get_paper_sizes">
-	<span><code>Gtk.PaperSize.get_paper_sizes</code></span>
-</h3>
-
-
-<pre class="python-prototype">
-def Gtk.PaperSize.get_paper_sizes (include_custom):
-    #python wrapper for 'gtk_paper_size_get_paper_sizes'</pre>
-
-<p>Creates a list of known paper sizes.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>include_custom</code></em></i>
-					(
-						<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
-						)
-				–
-	</div>
-			<p>whether to include custom paper sizes
-as defined in the page setup dialog</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					[ <a title="Gtk.PaperSize" href="gtkpapersize.html#GtkPaperSize">Gtk.PaperSize</a> ]
-										)
-								–
-			</div>
-							<p>a newly allocated list of newly
-allocated <a href="gtkpapersize.html#GtkPaperSize">Gtk.PaperSize</a> objects</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.12
-		</p>
-
-
-        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -5079,6 +5020,65 @@ as defined in the page setup dialog</p>
 			</div>
 							<p>a newly allocated list of newly
 allocated <a href="gtkpapersize.html#GtkPaperSize">GtkPaperSize</a> objects</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.12
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_paper_size_get_paper_sizes">
+	<span><code>Gtk.PaperSize.get_paper_sizes</code></span>
+</h3>
+
+
+<pre class="python-prototype">
+def Gtk.PaperSize.get_paper_sizes (include_custom):
+    #python wrapper for 'gtk_paper_size_get_paper_sizes'</pre>
+
+<p>Creates a list of known paper sizes.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>include_custom</code></em></i>
+					(
+						<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+						)
+				–
+	</div>
+			<p>whether to include custom paper sizes
+as defined in the page setup dialog</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					[ <a title="Gtk.PaperSize" href="gtkpapersize.html#GtkPaperSize">Gtk.PaperSize</a> ]
+										)
+								–
+			</div>
+							<p>a newly allocated list of newly
+allocated <a href="gtkpapersize.html#GtkPaperSize">Gtk.PaperSize</a> objects</p>
 
 					</div>
 	</div>
@@ -5158,6 +5158,48 @@ allocated <a href="gtkpapersize.html#GtkPaperSize">Gtk.PaperSize</a> objects</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_paper_size_get_default">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_paper_size_get_default">
+	<span><code>gtk_paper_size_get_default</code></span>
+</h3>
+
+
+
+
+<pre class="c-prototype">
+const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> *
+gtk_paper_size_get_default ()</pre>
+
+<p>Returns the name of the default paper size, which
+depends on the current locale.</p>
+
+
+
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>the name of the default paper size. The string
+is owned by GTK+ and should not be modified.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -5185,48 +5227,6 @@ depends on the current locale.</p>
 									(
 					<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
 										)
-								–
-			</div>
-							<p>the name of the default paper size. The string
-is owned by GTK+ and should not be modified.</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.10
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_paper_size_get_default">
-	<span><code>gtk_paper_size_get_default</code></span>
-</h3>
-
-
-
-
-<pre class="c-prototype">
-const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> *
-gtk_paper_size_get_default ()</pre>
-
-<p>Returns the name of the default paper size, which
-depends on the current locale.</p>
-
-
-
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
 								–
 			</div>
 							<p>the name of the default paper size. The string
@@ -5296,68 +5296,6 @@ is owned by GTK+ and should not be modified.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="GtkUnit">
 	
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="GtkUnit">
-	<span><code>Gtk.Unit</code></span>
-</h3>
-
-
-<p>See also <a href="gtkprintsettings.html#gtk_print_settings_set_paper_width">Gtk.PrintSettings.set_paper_width</a>.</p>
-
-
-
-
-	<div class="members-container">
-		<h4>Members</h4>
-					
-<div class="symbol-detail" data-hotdoc-id="GTK_UNIT_NONE">
-	<div>
-		<i><em><code>Gtk.Unit.NONE</code></em></i>
-		(<span class="value">0</span>)
-		–
-	</div>
-			<i>No description available</i>
-	</div>
-
-					
-<div class="symbol-detail" data-hotdoc-id="GTK_UNIT_POINTS">
-	<div>
-		<i><em><code>Gtk.Unit.POINTS</code></em></i>
-		(<span class="value">1</span>)
-		–
-	</div>
-			<i>No description available</i>
-	</div>
-
-					
-<div class="symbol-detail" data-hotdoc-id="GTK_UNIT_INCH">
-	<div>
-		<i><em><code>Gtk.Unit.INCH</code></em></i>
-		(<span class="value">2</span>)
-		–
-	</div>
-			<i>No description available</i>
-	</div>
-
-					
-<div class="symbol-detail" data-hotdoc-id="GTK_UNIT_MM">
-	<div>
-		<i><em><code>Gtk.Unit.MM</code></em></i>
-		(<span class="value">3</span>)
-		–
-	</div>
-			<i>No description available</i>
-	</div>
-
-			</div>
-
-
-
-        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -5409,6 +5347,68 @@ is owned by GTK+ and should not be modified.</p>
 <div class="symbol-detail" data-hotdoc-id="GTK_UNIT_MM">
 	<div>
 		<i><em><code>GTK_UNIT_MM</code></em></i>
+		(<span class="value">3</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="GtkUnit">
+	<span><code>Gtk.Unit</code></span>
+</h3>
+
+
+<p>See also <a href="gtkprintsettings.html#gtk_print_settings_set_paper_width">Gtk.PrintSettings.set_paper_width</a>.</p>
+
+
+
+
+	<div class="members-container">
+		<h4>Members</h4>
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_UNIT_NONE">
+	<div>
+		<i><em><code>Gtk.Unit.NONE</code></em></i>
+		(<span class="value">0</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_UNIT_POINTS">
+	<div>
+		<i><em><code>Gtk.Unit.POINTS</code></em></i>
+		(<span class="value">1</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_UNIT_INCH">
+	<div>
+		<i><em><code>Gtk.Unit.INCH</code></em></i>
+		(<span class="value">2</span>)
+		–
+	</div>
+			<i>No description available</i>
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GTK_UNIT_MM">
+	<div>
+		<i><em><code>Gtk.Unit.MM</code></em></i>
 		(<span class="value">3</span>)
 		–
 	</div>
@@ -5516,21 +5516,6 @@ is owned by GTK+ and should not be modified.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="GTK_PAPER_NAME_A3">
 	
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="GTK_PAPER_NAME_A3">
-	<span><code>Gtk.PAPER_NAME_A3</code></span>
-</h3>
-
-
-<p>Name for the A3 paper size.</p>
-
-
-
-        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -5544,6 +5529,21 @@ is owned by GTK+ and should not be modified.</p>
 <pre class="raw_code">
 #define GTK_PAPER_NAME_A3 "iso_a3"
 </pre>
+
+<p>Name for the A3 paper size.</p>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="GTK_PAPER_NAME_A3">
+	<span><code>Gtk.PAPER_NAME_A3</code></span>
+</h3>
+
 
 <p>Name for the A3 paper size.</p>
 
@@ -5572,21 +5572,6 @@ is owned by GTK+ and should not be modified.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="GTK_PAPER_NAME_A4">
 	
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="GTK_PAPER_NAME_A4">
-	<span><code>Gtk.PAPER_NAME_A4</code></span>
-</h3>
-
-
-<p>Name for the A4 paper size.</p>
-
-
-
-        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -5600,6 +5585,21 @@ is owned by GTK+ and should not be modified.</p>
 <pre class="raw_code">
 #define GTK_PAPER_NAME_A4 "iso_a4"
 </pre>
+
+<p>Name for the A4 paper size.</p>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="GTK_PAPER_NAME_A4">
+	<span><code>Gtk.PAPER_NAME_A4</code></span>
+</h3>
+
 
 <p>Name for the A4 paper size.</p>
 
@@ -5628,21 +5628,6 @@ is owned by GTK+ and should not be modified.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="GTK_PAPER_NAME_A5">
 	
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="GTK_PAPER_NAME_A5">
-	<span><code>Gtk.PAPER_NAME_A5</code></span>
-</h3>
-
-
-<p>Name for the A5 paper size.</p>
-
-
-
-        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -5656,6 +5641,21 @@ is owned by GTK+ and should not be modified.</p>
 <pre class="raw_code">
 #define GTK_PAPER_NAME_A5 "iso_a5"
 </pre>
+
+<p>Name for the A5 paper size.</p>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="GTK_PAPER_NAME_A5">
+	<span><code>Gtk.PAPER_NAME_A5</code></span>
+</h3>
+
 
 <p>Name for the A5 paper size.</p>
 
@@ -5684,21 +5684,6 @@ is owned by GTK+ and should not be modified.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="GTK_PAPER_NAME_B5">
 	
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="GTK_PAPER_NAME_B5">
-	<span><code>Gtk.PAPER_NAME_B5</code></span>
-</h3>
-
-
-<p>Name for the B5 paper size.</p>
-
-
-
-        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -5712,6 +5697,21 @@ is owned by GTK+ and should not be modified.</p>
 <pre class="raw_code">
 #define GTK_PAPER_NAME_B5 "iso_b5"
 </pre>
+
+<p>Name for the B5 paper size.</p>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="GTK_PAPER_NAME_B5">
+	<span><code>Gtk.PAPER_NAME_B5</code></span>
+</h3>
+
 
 <p>Name for the B5 paper size.</p>
 
@@ -5740,21 +5740,6 @@ is owned by GTK+ and should not be modified.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="GTK_PAPER_NAME_LETTER">
 	
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="GTK_PAPER_NAME_LETTER">
-	<span><code>Gtk.PAPER_NAME_LETTER</code></span>
-</h3>
-
-
-<p>Name for the Letter paper size.</p>
-
-
-
-        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -5768,6 +5753,21 @@ is owned by GTK+ and should not be modified.</p>
 <pre class="raw_code">
 #define GTK_PAPER_NAME_LETTER "na_letter"
 </pre>
+
+<p>Name for the Letter paper size.</p>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="GTK_PAPER_NAME_LETTER">
+	<span><code>Gtk.PAPER_NAME_LETTER</code></span>
+</h3>
+
 
 <p>Name for the Letter paper size.</p>
 
@@ -5796,21 +5796,6 @@ is owned by GTK+ and should not be modified.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="GTK_PAPER_NAME_EXECUTIVE">
 	
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="GTK_PAPER_NAME_EXECUTIVE">
-	<span><code>Gtk.PAPER_NAME_EXECUTIVE</code></span>
-</h3>
-
-
-<p>Name for the Executive paper size.</p>
-
-
-
-        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -5824,6 +5809,21 @@ is owned by GTK+ and should not be modified.</p>
 <pre class="raw_code">
 #define GTK_PAPER_NAME_EXECUTIVE "na_executive"
 </pre>
+
+<p>Name for the Executive paper size.</p>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="GTK_PAPER_NAME_EXECUTIVE">
+	<span><code>Gtk.PAPER_NAME_EXECUTIVE</code></span>
+</h3>
+
 
 <p>Name for the Executive paper size.</p>
 
@@ -5852,21 +5852,6 @@ is owned by GTK+ and should not be modified.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="GTK_PAPER_NAME_LEGAL">
 	
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="GTK_PAPER_NAME_LEGAL">
-	<span><code>Gtk.PAPER_NAME_LEGAL</code></span>
-</h3>
-
-
-<p>Name for the Legal paper size.</p>
-
-
-
-        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -5880,6 +5865,21 @@ is owned by GTK+ and should not be modified.</p>
 <pre class="raw_code">
 #define GTK_PAPER_NAME_LEGAL "na_legal"
 </pre>
+
+<p>Name for the Legal paper size.</p>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="GTK_PAPER_NAME_LEGAL">
+	<span><code>Gtk.PAPER_NAME_LEGAL</code></span>
+</h3>
+
 
 <p>Name for the Legal paper size.</p>
 

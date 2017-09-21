@@ -89,7 +89,7 @@ $('body').removeClass('no-script');
 </nav>
 
 <main>
-<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="gtkcolorchooser.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['python', 'c', 'javascript']" data-hotdoc-meta-gi-language="c">
+<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="gtkcolorchooser.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['c', 'python', 'javascript']" data-hotdoc-meta-gi-language="c">
 <script src="assets/js/utils.js"></script>
 
 <div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
@@ -110,49 +110,6 @@ $('body').removeClass('no-script');
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.4;" id="gtk_color_chooser_get_rgba">
 	
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_color_chooser_get_rgba">
-	<span><code>Gtk.ColorChooser.get_rgba</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.ColorChooser.get_rgba (self):
-    #python wrapper for 'gtk_color_chooser_get_rgba'</pre>
-
-<p>Gets the currently-selected color.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>chooser</code></em></i>
-					(
-						<a title="Gtk.ColorChooser" href="gtkcolorchooser.html#GtkColorChooser">Gtk.ColorChooser</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkcolorchooser.html#GtkColorChooser">Gtk.ColorChooser</a></p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.4
-		</p>
-
-
-        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -197,6 +154,49 @@ gtk_color_chooser_get_rgba (<a title="GtkColorChooser" href="gtkcolorchooser.htm
 				–
 	</div>
 			<p>a <a href="https://developer.gnome.org/gdk3/gdk3-RGBA-Colors.html#GdkRGBA">GdkRGBA</a> to fill in with the current color</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.4
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_color_chooser_get_rgba">
+	<span><code>Gtk.ColorChooser.get_rgba</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.ColorChooser.get_rgba (self):
+    #python wrapper for 'gtk_color_chooser_get_rgba'</pre>
+
+<p>Gets the currently-selected color.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>chooser</code></em></i>
+					(
+						<a title="Gtk.ColorChooser" href="gtkcolorchooser.html#GtkColorChooser">Gtk.ColorChooser</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkcolorchooser.html#GtkColorChooser">Gtk.ColorChooser</a></p>
 
 	</div>
 
@@ -261,6 +261,58 @@ function Gtk.prototype.get_rgba(): {
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.4;" id="gtk_color_chooser_set_rgba">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_color_chooser_set_rgba">
+	<span><code>gtk_color_chooser_set_rgba</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_color_chooser_set_rgba (<a title="GtkColorChooser" href="gtkcolorchooser.html#GtkColorChooser">GtkColorChooser</a> * chooser,
+                            const <a title="GdkRGBA" href="https://developer.gnome.org/gdk3/gdk3-RGBA-Colors.html#GdkRGBA">GdkRGBA</a> * color)</pre>
+
+<p>Sets the color.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>chooser</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkcolorchooser.html#GtkColorChooser">GtkColorChooser</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>color</code></em></i>
+				–
+	</div>
+			<p>the new color</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.4
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -301,58 +353,6 @@ def Gtk.ColorChooser.set_rgba (self, color):
 					(
 						<a title="Gdk.RGBA" href="https://developer.gnome.org/gdk3/gdk3-RGBA-Colors.html#GdkRGBA">Gdk.RGBA</a>
 						)
-				–
-	</div>
-			<p>the new color</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.4
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_color_chooser_set_rgba">
-	<span><code>gtk_color_chooser_set_rgba</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-gtk_color_chooser_set_rgba (<a title="GtkColorChooser" href="gtkcolorchooser.html#GtkColorChooser">GtkColorChooser</a> * chooser,
-                            const <a title="GdkRGBA" href="https://developer.gnome.org/gdk3/gdk3-RGBA-Colors.html#GdkRGBA">GdkRGBA</a> * color)</pre>
-
-<p>Sets the color.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>chooser</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkcolorchooser.html#GtkColorChooser">GtkColorChooser</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>color</code></em></i>
 				–
 	</div>
 			<p>the new color</p>
@@ -433,6 +433,60 @@ function Gtk.prototype.set_rgba(color: <a title="Gdk.RGBA" href="https://develop
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.4;" id="gtk_color_chooser_get_use_alpha">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_color_chooser_get_use_alpha">
+	<span><code>gtk_color_chooser_get_use_alpha</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_color_chooser_get_use_alpha (<a title="GtkColorChooser" href="gtkcolorchooser.html#GtkColorChooser">GtkColorChooser</a> * chooser)</pre>
+
+<p>Returns whether the color chooser shows the alpha channel.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>chooser</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkcolorchooser.html#GtkColorChooser">GtkColorChooser</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if the color chooser uses the alpha channel,
+<a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS">FALSE</a> if not</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.4
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -479,60 +533,6 @@ def Gtk.ColorChooser.get_use_alpha (self):
 			</div>
 							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if the color chooser uses the alpha channel,
 <a href="https://docs.python.org/3/library/constants.html#False">False</a> if not</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.4
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_color_chooser_get_use_alpha">
-	<span><code>gtk_color_chooser_get_use_alpha</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
-gtk_color_chooser_get_use_alpha (<a title="GtkColorChooser" href="gtkcolorchooser.html#GtkColorChooser">GtkColorChooser</a> * chooser)</pre>
-
-<p>Returns whether the color chooser shows the alpha channel.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>chooser</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkcolorchooser.html#GtkColorChooser">GtkColorChooser</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-								–
-			</div>
-							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if the color chooser uses the alpha channel,
-<a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS">FALSE</a> if not</p>
 
 					</div>
 	</div>
@@ -611,6 +611,58 @@ function Gtk.prototype.get_use_alpha(): {
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.4;" id="gtk_color_chooser_set_use_alpha">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_color_chooser_set_use_alpha">
+	<span><code>gtk_color_chooser_set_use_alpha</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_color_chooser_set_use_alpha (<a title="GtkColorChooser" href="gtkcolorchooser.html#GtkColorChooser">GtkColorChooser</a> * chooser,
+                                 <a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a> use_alpha)</pre>
+
+<p>Sets whether or not the color chooser should use the alpha channel.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>chooser</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkcolorchooser.html#GtkColorChooser">GtkColorChooser</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>use_alpha</code></em></i>
+				–
+	</div>
+			<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if color chooser should use alpha channel, <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS">FALSE</a> if not</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.4
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -654,58 +706,6 @@ def Gtk.ColorChooser.set_use_alpha (self, use_alpha):
 				–
 	</div>
 			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if color chooser should use alpha channel, <a href="https://docs.python.org/3/library/constants.html#False">False</a> if not</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.4
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_color_chooser_set_use_alpha">
-	<span><code>gtk_color_chooser_set_use_alpha</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-gtk_color_chooser_set_use_alpha (<a title="GtkColorChooser" href="gtkcolorchooser.html#GtkColorChooser">GtkColorChooser</a> * chooser,
-                                 <a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a> use_alpha)</pre>
-
-<p>Sets whether or not the color chooser should use the alpha channel.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>chooser</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkcolorchooser.html#GtkColorChooser">GtkColorChooser</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>use_alpha</code></em></i>
-				–
-	</div>
-			<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if color chooser should use alpha channel, <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS">FALSE</a> if not</p>
 
 	</div>
 
@@ -783,6 +783,110 @@ function Gtk.prototype.set_use_alpha(use_alpha: <a title="Number" href="https://
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.4;" id="gtk_color_chooser_add_palette">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_color_chooser_add_palette">
+	<span><code>gtk_color_chooser_add_palette</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_color_chooser_add_palette (<a title="GtkColorChooser" href="gtkcolorchooser.html#GtkColorChooser">GtkColorChooser</a> * chooser,
+                               <a title="GtkOrientation" href="gtkenums.html#GtkOrientation">GtkOrientation</a> orientation,
+                               <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> colors_per_line,
+                               <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> n_colors,
+                               <a title="GdkRGBA" href="https://developer.gnome.org/gdk3/gdk3-RGBA-Colors.html#GdkRGBA">GdkRGBA</a> * colors)</pre>
+
+<p>Adds a palette to the color chooser. If <em>orientation</em> is horizontal,
+the colors are grouped in rows, with <em>colors_per_line</em> colors
+in each row. If <em>horizontal</em> is <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS">FALSE</a>, the colors are grouped
+in columns instead.</p>
+<p>The default color palette of <a href="gtkcolorchooserwidget.html#GtkColorChooserWidget">GtkColorChooserWidget</a> has
+27 colors, organized in columns of 3 colors. The default gray
+palette has 9 grays in a single row.</p>
+<p>The layout of the color chooser widget works best when the
+palettes have 9-10 columns.</p>
+<p>Calling this function for the first time has the
+side effect of removing the default color and gray palettes
+from the color chooser.</p>
+<p>If <em>colors</em> is <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a>, removes all previously added palettes.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>chooser</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkcolorchooser.html#GtkColorChooser">GtkColorChooser</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>orientation</code></em></i>
+				–
+	</div>
+			<p><a href="gtkenums.html#GTK_ORIENTATION_HORIZONTAL">GTK_ORIENTATION_HORIZONTAL</a> if the palette should
+be displayed in rows, <a href="gtkenums.html#GTK_ORIENTATION_VERTICAL">GTK_ORIENTATION_VERTICAL</a> for columns</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>colors_per_line</code></em></i>
+				–
+	</div>
+			<p>the number of colors to show in each row/column</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>n_colors</code></em></i>
+				–
+	</div>
+			<p>the total number of elements in <em>colors</em></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>colors</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
+<span class="annotation">[<abbr title="Parameter points to an array of items"><span class="acronym">array</span></abbr> length=n_colors]</span>
+
+						)
+				–
+	</div>
+			<p>the colors of the palette, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.4
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -878,110 +982,6 @@ be displayed in rows, <a href="gtkenums.html#GTK_ORIENTATION_VERTICAL">Gtk.Orien
 				–
 	</div>
 			<p>the colors of the palette, or <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.4
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_color_chooser_add_palette">
-	<span><code>gtk_color_chooser_add_palette</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-gtk_color_chooser_add_palette (<a title="GtkColorChooser" href="gtkcolorchooser.html#GtkColorChooser">GtkColorChooser</a> * chooser,
-                               <a title="GtkOrientation" href="gtkenums.html#GtkOrientation">GtkOrientation</a> orientation,
-                               <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> colors_per_line,
-                               <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> n_colors,
-                               <a title="GdkRGBA" href="https://developer.gnome.org/gdk3/gdk3-RGBA-Colors.html#GdkRGBA">GdkRGBA</a> * colors)</pre>
-
-<p>Adds a palette to the color chooser. If <em>orientation</em> is horizontal,
-the colors are grouped in rows, with <em>colors_per_line</em> colors
-in each row. If <em>horizontal</em> is <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS">FALSE</a>, the colors are grouped
-in columns instead.</p>
-<p>The default color palette of <a href="gtkcolorchooserwidget.html#GtkColorChooserWidget">GtkColorChooserWidget</a> has
-27 colors, organized in columns of 3 colors. The default gray
-palette has 9 grays in a single row.</p>
-<p>The layout of the color chooser widget works best when the
-palettes have 9-10 columns.</p>
-<p>Calling this function for the first time has the
-side effect of removing the default color and gray palettes
-from the color chooser.</p>
-<p>If <em>colors</em> is <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a>, removes all previously added palettes.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>chooser</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkcolorchooser.html#GtkColorChooser">GtkColorChooser</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>orientation</code></em></i>
-				–
-	</div>
-			<p><a href="gtkenums.html#GTK_ORIENTATION_HORIZONTAL">GTK_ORIENTATION_HORIZONTAL</a> if the palette should
-be displayed in rows, <a href="gtkenums.html#GTK_ORIENTATION_VERTICAL">GTK_ORIENTATION_VERTICAL</a> for columns</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>colors_per_line</code></em></i>
-				–
-	</div>
-			<p>the number of colors to show in each row/column</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>n_colors</code></em></i>
-				–
-	</div>
-			<p>the total number of elements in <em>colors</em></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>colors</code></em></i>
-					(
-						
-<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
-<span class="annotation">[<abbr title="Parameter points to an array of items"><span class="acronym">array</span></abbr> length=n_colors]</span>
-
-						)
-				–
-	</div>
-			<p>the colors of the palette, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
 
 	</div>
 
@@ -1115,20 +1115,6 @@ be displayed in rows, <a href="gtkenums.html#GTK_ORIENTATION_VERTICAL">Gtk.Orien
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="GtkColorChooser">
 	
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="GtkColorChooser">
-	<span><code>Gtk.ColorChooser</code></span>
-</h3>
-
-
-
-
-
-        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -1136,6 +1122,20 @@ be displayed in rows, <a href="gtkenums.html#GTK_ORIENTATION_VERTICAL">Gtk.Orien
 
 <h3 data-hotdoc-id="GtkColorChooser">
 	<span><code>GtkColorChooser</code></span>
+</h3>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="GtkColorChooser">
+	<span><code>Gtk.ColorChooser</code></span>
 </h3>
 
 

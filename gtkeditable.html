@@ -89,7 +89,7 @@ $('body').removeClass('no-script');
 </nav>
 
 <main>
-<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="gtkeditable.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['python', 'c', 'javascript']" data-hotdoc-meta-gi-language="c">
+<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="gtkeditable.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['c', 'python', 'javascript']" data-hotdoc-meta-gi-language="c">
 <script src="assets/js/utils.js"></script>
 
 <div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
@@ -110,6 +110,71 @@ $('body').removeClass('no-script');
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_editable_select_region">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_editable_select_region">
+	<span><code>gtk_editable_select_region</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_editable_select_region (<a title="GtkEditable" href="gtkeditable.html#GtkEditable">GtkEditable</a> * editable,
+                            <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> start_pos,
+                            <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> end_pos)</pre>
+
+<p>Selects a region of text. The characters that are selected are
+those characters at positions from <em>start_pos</em> up to, but not
+including <em>end_pos</em>. If <em>end_pos</em> is negative, then the
+characters selected are those characters from <em>start_pos</em> to
+the end of the text.</p>
+<p>Note that positions are specified in characters, not bytes.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>editable</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkeditable.html#GtkEditable">GtkEditable</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>start_pos</code></em></i>
+				–
+	</div>
+			<p>start of region</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>end_pos</code></em></i>
+				–
+	</div>
+			<p>end of region</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -168,71 +233,6 @@ the end of the text.</p>
 					(
 						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
 						)
-				–
-	</div>
-			<p>end of region</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_editable_select_region">
-	<span><code>gtk_editable_select_region</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-gtk_editable_select_region (<a title="GtkEditable" href="gtkeditable.html#GtkEditable">GtkEditable</a> * editable,
-                            <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> start_pos,
-                            <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> end_pos)</pre>
-
-<p>Selects a region of text. The characters that are selected are
-those characters at positions from <em>start_pos</em> up to, but not
-including <em>end_pos</em>. If <em>end_pos</em> is negative, then the
-characters selected are those characters from <em>start_pos</em> to
-the end of the text.</p>
-<p>Note that positions are specified in characters, not bytes.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>editable</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkeditable.html#GtkEditable">GtkEditable</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>start_pos</code></em></i>
-				–
-	</div>
-			<p>start of region</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>end_pos</code></em></i>
 				–
 	</div>
 			<p>end of region</p>
@@ -325,91 +325,6 @@ the end of the text.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_editable_get_selection_bounds">
 	
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_editable_get_selection_bounds">
-	<span><code>Gtk.Editable.get_selection_bounds</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.Editable.get_selection_bounds (self):
-    #python wrapper for 'gtk_editable_get_selection_bounds'</pre>
-
-<p>Retrieves the selection bound of the editable. start_pos will be filled
-with the start of the selection and <em>end_pos</em> with end. If no text was
-selected both will be identical and <a href="https://docs.python.org/3/library/constants.html#False">False</a> will be returned.</p>
-<p>Note that positions are specified in characters, not bytes.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>editable</code></em></i>
-					(
-						<a title="Gtk.Editable" href="gtkeditable.html#GtkEditable">Gtk.Editable</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkeditable.html#GtkEditable">Gtk.Editable</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<p><b>Returns a tuple made of:</b></p>
-				
-<div class="symbol-detail">
-	<div>
-									(
-			<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
-						)
-				–
-	</div>
-			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if an area is selected, <a href="https://docs.python.org/3/library/constants.html#False">False</a> otherwise</p>
-
-	</div>
-
-				
-<div class="symbol-detail">
-	<div>
-				<i><em><code>start_pos</code></em></i>
-									(
-			<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
-						)
-				–
-	</div>
-			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if an area is selected, <a href="https://docs.python.org/3/library/constants.html#False">False</a> otherwise</p>
-
-	</div>
-
-				
-<div class="symbol-detail">
-	<div>
-				<i><em><code>end_pos</code></em></i>
-									(
-			<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
-						)
-				–
-	</div>
-			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if an area is selected, <a href="https://docs.python.org/3/library/constants.html#False">False</a> otherwise</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -491,6 +406,91 @@ selected both will be identical and <a href="https://developer.gnome.org/glib/un
 
 					</div>
 	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_editable_get_selection_bounds">
+	<span><code>Gtk.Editable.get_selection_bounds</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Editable.get_selection_bounds (self):
+    #python wrapper for 'gtk_editable_get_selection_bounds'</pre>
+
+<p>Retrieves the selection bound of the editable. start_pos will be filled
+with the start of the selection and <em>end_pos</em> with end. If no text was
+selected both will be identical and <a href="https://docs.python.org/3/library/constants.html#False">False</a> will be returned.</p>
+<p>Note that positions are specified in characters, not bytes.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>editable</code></em></i>
+					(
+						<a title="Gtk.Editable" href="gtkeditable.html#GtkEditable">Gtk.Editable</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkeditable.html#GtkEditable">Gtk.Editable</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<p><b>Returns a tuple made of:</b></p>
+				
+<div class="symbol-detail">
+	<div>
+									(
+			<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
+						)
+				–
+	</div>
+			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if an area is selected, <a href="https://docs.python.org/3/library/constants.html#False">False</a> otherwise</p>
+
+	</div>
+
+				
+<div class="symbol-detail">
+	<div>
+				<i><em><code>start_pos</code></em></i>
+									(
+			<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if an area is selected, <a href="https://docs.python.org/3/library/constants.html#False">False</a> otherwise</p>
+
+	</div>
+
+				
+<div class="symbol-detail">
+	<div>
+				<i><em><code>end_pos</code></em></i>
+									(
+			<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if an area is selected, <a href="https://docs.python.org/3/library/constants.html#False">False</a> otherwise</p>
+
+	</div>
+
+			</div>
 
 
 
@@ -590,6 +590,85 @@ selected both will be identical and <a href="https://developer.mozilla.org/en-US
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_editable_insert_text">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_editable_insert_text">
+	<span><code>gtk_editable_insert_text</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_editable_insert_text (<a title="GtkEditable" href="gtkeditable.html#GtkEditable">GtkEditable</a> * editable,
+                          const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * new_text,
+                          <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> new_text_length,
+                          <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> * position)</pre>
+
+<p>Inserts <em>new_text_length</em> bytes of <em>new_text</em> into the contents of the
+widget, at position <em>position</em>.</p>
+<p>Note that the position is in characters, not in bytes.
+The function updates <em>position</em> to point after the newly inserted text.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>editable</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkeditable.html#GtkEditable">GtkEditable</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>new_text</code></em></i>
+				–
+	</div>
+			<p>the text to append</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>new_text_length</code></em></i>
+				–
+	</div>
+			<p>the length of the text in bytes, or -1</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>position</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="Parameter for input and for returning results"><span class="acronym">inout</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>location of the position text will be inserted at</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -658,85 +737,6 @@ The function updates <em>position</em> to point after the newly inserted text.</
 		<i><em><code>position</code></em></i>
 					(
 						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
-						)
-				–
-	</div>
-			<p>location of the position text will be inserted at</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_editable_insert_text">
-	<span><code>gtk_editable_insert_text</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-gtk_editable_insert_text (<a title="GtkEditable" href="gtkeditable.html#GtkEditable">GtkEditable</a> * editable,
-                          const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * new_text,
-                          <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> new_text_length,
-                          <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> * position)</pre>
-
-<p>Inserts <em>new_text_length</em> bytes of <em>new_text</em> into the contents of the
-widget, at position <em>position</em>.</p>
-<p>Note that the position is in characters, not in bytes.
-The function updates <em>position</em> to point after the newly inserted text.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>editable</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkeditable.html#GtkEditable">GtkEditable</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>new_text</code></em></i>
-				–
-	</div>
-			<p>the text to append</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>new_text_length</code></em></i>
-				–
-	</div>
-			<p>the length of the text in bytes, or -1</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>position</code></em></i>
-					(
-						
-<span class="annotation">[<abbr title="Parameter for input and for returning results"><span class="acronym">inout</span></abbr>]</span>
-
 						)
 				–
 	</div>
@@ -841,6 +841,70 @@ The function updates <em>position</em> to point after the newly inserted text.</
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_editable_delete_text">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_editable_delete_text">
+	<span><code>gtk_editable_delete_text</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_editable_delete_text (<a title="GtkEditable" href="gtkeditable.html#GtkEditable">GtkEditable</a> * editable,
+                          <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> start_pos,
+                          <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> end_pos)</pre>
+
+<p>Deletes a sequence of characters. The characters that are deleted are
+those characters at positions from <em>start_pos</em> up to, but not including
+<em>end_pos</em>. If <em>end_pos</em> is negative, then the characters deleted
+are those from <em>start_pos</em> to the end of the text.</p>
+<p>Note that the positions are specified in characters, not bytes.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>editable</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkeditable.html#GtkEditable">GtkEditable</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>start_pos</code></em></i>
+				–
+	</div>
+			<p>start position</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>end_pos</code></em></i>
+				–
+	</div>
+			<p>end position</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -898,70 +962,6 @@ are those from <em>start_pos</em> to the end of the text.</p>
 					(
 						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
 						)
-				–
-	</div>
-			<p>end position</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_editable_delete_text">
-	<span><code>gtk_editable_delete_text</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-gtk_editable_delete_text (<a title="GtkEditable" href="gtkeditable.html#GtkEditable">GtkEditable</a> * editable,
-                          <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> start_pos,
-                          <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> end_pos)</pre>
-
-<p>Deletes a sequence of characters. The characters that are deleted are
-those characters at positions from <em>start_pos</em> up to, but not including
-<em>end_pos</em>. If <em>end_pos</em> is negative, then the characters deleted
-are those from <em>start_pos</em> to the end of the text.</p>
-<p>Note that the positions are specified in characters, not bytes.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>editable</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkeditable.html#GtkEditable">GtkEditable</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>start_pos</code></em></i>
-				–
-	</div>
-			<p>start position</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>end_pos</code></em></i>
 				–
 	</div>
 			<p>end position</p>
@@ -1053,6 +1053,84 @@ are those from <em>start_pos</em> to the end of the text.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_editable_get_chars">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_editable_get_chars">
+	<span><code>gtk_editable_get_chars</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> *
+gtk_editable_get_chars (<a title="GtkEditable" href="gtkeditable.html#GtkEditable">GtkEditable</a> * editable,
+                        <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> start_pos,
+                        <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> end_pos)</pre>
+
+<p>Retrieves a sequence of characters. The characters that are retrieved
+are those characters at positions from <em>start_pos</em> up to, but not
+including <em>end_pos</em>. If <em>end_pos</em> is negative, then the characters
+retrieved are those characters from <em>start_pos</em> to the end of the text.</p>
+<p>Note that positions are specified in characters, not bytes.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>editable</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkeditable.html#GtkEditable">GtkEditable</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>start_pos</code></em></i>
+				–
+	</div>
+			<p>start of text</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>end_pos</code></em></i>
+				–
+	</div>
+			<p>end of text</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>a pointer to the contents of the widget as a
+string. This string is allocated by the <a href="gtkeditable.html#GtkEditable">GtkEditable</a>
+implementation and should be freed by the caller.</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -1129,84 +1207,6 @@ retrieved are those characters from <em>start_pos</em> to the end of the text.</
 			</div>
 							<p>a pointer to the contents of the widget as a
 string. This string is allocated by the <a href="gtkeditable.html#GtkEditable">Gtk.Editable</a>
-implementation and should be freed by the caller.</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_editable_get_chars">
-	<span><code>gtk_editable_get_chars</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-<a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> *
-gtk_editable_get_chars (<a title="GtkEditable" href="gtkeditable.html#GtkEditable">GtkEditable</a> * editable,
-                        <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> start_pos,
-                        <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> end_pos)</pre>
-
-<p>Retrieves a sequence of characters. The characters that are retrieved
-are those characters at positions from <em>start_pos</em> up to, but not
-including <em>end_pos</em>. If <em>end_pos</em> is negative, then the characters
-retrieved are those characters from <em>start_pos</em> to the end of the text.</p>
-<p>Note that positions are specified in characters, not bytes.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>editable</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkeditable.html#GtkEditable">GtkEditable</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>start_pos</code></em></i>
-				–
-	</div>
-			<p>start of text</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>end_pos</code></em></i>
-				–
-	</div>
-			<p>end of text</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-								–
-			</div>
-							<p>a pointer to the contents of the widget as a
-string. This string is allocated by the <a href="gtkeditable.html#GtkEditable">GtkEditable</a>
 implementation and should be freed by the caller.</p>
 
 					</div>
@@ -1311,6 +1311,45 @@ implementation and should be freed by the caller.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_editable_cut_clipboard">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_editable_cut_clipboard">
+	<span><code>gtk_editable_cut_clipboard</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_editable_cut_clipboard (<a title="GtkEditable" href="gtkeditable.html#GtkEditable">GtkEditable</a> * editable)</pre>
+
+<p>Removes the contents of the currently selected content in the editable and
+puts it on the clipboard.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>editable</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkeditable.html#GtkEditable">GtkEditable</a></p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -1342,45 +1381,6 @@ puts it on the clipboard.</p>
 				–
 	</div>
 			<p>a <a href="gtkeditable.html#GtkEditable">Gtk.Editable</a></p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_editable_cut_clipboard">
-	<span><code>gtk_editable_cut_clipboard</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-gtk_editable_cut_clipboard (<a title="GtkEditable" href="gtkeditable.html#GtkEditable">GtkEditable</a> * editable)</pre>
-
-<p>Removes the contents of the currently selected content in the editable and
-puts it on the clipboard.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>editable</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkeditable.html#GtkEditable">GtkEditable</a></p>
 
 	</div>
 
@@ -1440,6 +1440,45 @@ puts it on the clipboard.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_editable_copy_clipboard">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_editable_copy_clipboard">
+	<span><code>gtk_editable_copy_clipboard</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_editable_copy_clipboard (<a title="GtkEditable" href="gtkeditable.html#GtkEditable">GtkEditable</a> * editable)</pre>
+
+<p>Copies the contents of the currently selected content in the editable and
+puts it on the clipboard.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>editable</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkeditable.html#GtkEditable">GtkEditable</a></p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -1471,45 +1510,6 @@ puts it on the clipboard.</p>
 				–
 	</div>
 			<p>a <a href="gtkeditable.html#GtkEditable">Gtk.Editable</a></p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_editable_copy_clipboard">
-	<span><code>gtk_editable_copy_clipboard</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-gtk_editable_copy_clipboard (<a title="GtkEditable" href="gtkeditable.html#GtkEditable">GtkEditable</a> * editable)</pre>
-
-<p>Copies the contents of the currently selected content in the editable and
-puts it on the clipboard.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>editable</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkeditable.html#GtkEditable">GtkEditable</a></p>
 
 	</div>
 
@@ -1569,6 +1569,45 @@ puts it on the clipboard.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_editable_paste_clipboard">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_editable_paste_clipboard">
+	<span><code>gtk_editable_paste_clipboard</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_editable_paste_clipboard (<a title="GtkEditable" href="gtkeditable.html#GtkEditable">GtkEditable</a> * editable)</pre>
+
+<p>Pastes the content of the clipboard to the current position of the
+cursor in the editable.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>editable</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkeditable.html#GtkEditable">GtkEditable</a></p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -1600,45 +1639,6 @@ cursor in the editable.</p>
 				–
 	</div>
 			<p>a <a href="gtkeditable.html#GtkEditable">Gtk.Editable</a></p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_editable_paste_clipboard">
-	<span><code>gtk_editable_paste_clipboard</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-gtk_editable_paste_clipboard (<a title="GtkEditable" href="gtkeditable.html#GtkEditable">GtkEditable</a> * editable)</pre>
-
-<p>Pastes the content of the clipboard to the current position of the
-cursor in the editable.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>editable</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkeditable.html#GtkEditable">GtkEditable</a></p>
 
 	</div>
 
@@ -1698,6 +1698,45 @@ cursor in the editable.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_editable_delete_selection">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_editable_delete_selection">
+	<span><code>gtk_editable_delete_selection</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_editable_delete_selection (<a title="GtkEditable" href="gtkeditable.html#GtkEditable">GtkEditable</a> * editable)</pre>
+
+<p>Deletes the currently selected text of the editable.
+This call doesn’t do anything if there is no selected text.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>editable</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkeditable.html#GtkEditable">GtkEditable</a></p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -1729,45 +1768,6 @@ This call doesn’t do anything if there is no selected text.</p>
 				–
 	</div>
 			<p>a <a href="gtkeditable.html#GtkEditable">Gtk.Editable</a></p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_editable_delete_selection">
-	<span><code>gtk_editable_delete_selection</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-gtk_editable_delete_selection (<a title="GtkEditable" href="gtkeditable.html#GtkEditable">GtkEditable</a> * editable)</pre>
-
-<p>Deletes the currently selected text of the editable.
-This call doesn’t do anything if there is no selected text.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>editable</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkeditable.html#GtkEditable">GtkEditable</a></p>
 
 	</div>
 
@@ -1827,6 +1827,60 @@ This call doesn’t do anything if there is no selected text.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_editable_set_position">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_editable_set_position">
+	<span><code>gtk_editable_set_position</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_editable_set_position (<a title="GtkEditable" href="gtkeditable.html#GtkEditable">GtkEditable</a> * editable,
+                           <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> position)</pre>
+
+<p>Sets the cursor position in the editable to the given value.</p>
+<p>The cursor is displayed before the character with the given (base 0)
+index in the contents of the editable. The value must be less than or
+equal to the number of characters in the editable. A value of -1
+indicates that the position should be set after the last character
+of the editable. Note that <em>position</em> is in characters, not in bytes.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>editable</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkeditable.html#GtkEditable">GtkEditable</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>position</code></em></i>
+				–
+	</div>
+			<p>the position of the cursor</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -1872,60 +1926,6 @@ of the editable. Note that <em>position</em> is in characters, not in bytes.</p>
 					(
 						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
 						)
-				–
-	</div>
-			<p>the position of the cursor</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_editable_set_position">
-	<span><code>gtk_editable_set_position</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-gtk_editable_set_position (<a title="GtkEditable" href="gtkeditable.html#GtkEditable">GtkEditable</a> * editable,
-                           <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> position)</pre>
-
-<p>Sets the cursor position in the editable to the given value.</p>
-<p>The cursor is displayed before the character with the given (base 0)
-index in the contents of the editable. The value must be less than or
-equal to the number of characters in the editable. A value of -1
-indicates that the position should be set after the last character
-of the editable. Note that <em>position</em> is in characters, not in bytes.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>editable</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkeditable.html#GtkEditable">GtkEditable</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>position</code></em></i>
 				–
 	</div>
 			<p>the position of the cursor</p>
@@ -2005,6 +2005,58 @@ of the editable. Note that <em>position</em> is in characters, not in bytes.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_editable_get_position">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_editable_get_position">
+	<span><code>gtk_editable_get_position</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a>
+gtk_editable_get_position (<a title="GtkEditable" href="gtkeditable.html#GtkEditable">GtkEditable</a> * editable)</pre>
+
+<p>Retrieves the current position of the cursor relative to the start
+of the content of the editable.</p>
+<p>Note that this position is in characters, not in bytes.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>editable</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkeditable.html#GtkEditable">GtkEditable</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>the cursor position</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -2049,58 +2101,6 @@ of the content of the editable.</p>
 									(
 					<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
 										)
-								–
-			</div>
-							<p>the cursor position</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_editable_get_position">
-	<span><code>gtk_editable_get_position</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-<a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a>
-gtk_editable_get_position (<a title="GtkEditable" href="gtkeditable.html#GtkEditable">GtkEditable</a> * editable)</pre>
-
-<p>Retrieves the current position of the cursor relative to the start
-of the content of the editable.</p>
-<p>Note that this position is in characters, not in bytes.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>editable</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkeditable.html#GtkEditable">GtkEditable</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
 								–
 			</div>
 							<p>the cursor position</p>
@@ -2177,6 +2177,57 @@ of the content of the editable.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_editable_set_editable">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_editable_set_editable">
+	<span><code>gtk_editable_set_editable</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_editable_set_editable (<a title="GtkEditable" href="gtkeditable.html#GtkEditable">GtkEditable</a> * editable,
+                           <a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a> is_editable)</pre>
+
+<p>Determines if the user can edit the text in the editable
+widget or not.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>editable</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkeditable.html#GtkEditable">GtkEditable</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>is_editable</code></em></i>
+				–
+	</div>
+			<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if the user is allowed to edit the text
+in the widget</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -2221,57 +2272,6 @@ widget or not.</p>
 				–
 	</div>
 			<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if the user is allowed to edit the text
-in the widget</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_editable_set_editable">
-	<span><code>gtk_editable_set_editable</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-gtk_editable_set_editable (<a title="GtkEditable" href="gtkeditable.html#GtkEditable">GtkEditable</a> * editable,
-                           <a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a> is_editable)</pre>
-
-<p>Determines if the user can edit the text in the editable
-widget or not.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>editable</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkeditable.html#GtkEditable">GtkEditable</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>is_editable</code></em></i>
-				–
-	</div>
-			<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if the user is allowed to edit the text
 in the widget</p>
 
 	</div>
@@ -2346,6 +2346,57 @@ in the widget</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_editable_get_editable">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_editable_get_editable">
+	<span><code>gtk_editable_get_editable</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_editable_get_editable (<a title="GtkEditable" href="gtkeditable.html#GtkEditable">GtkEditable</a> * editable)</pre>
+
+<p>Retrieves whether <em>editable</em> is editable. See
+<a href="gtkeditable.html#gtk_editable_set_editable">gtk_editable_set_editable</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>editable</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkeditable.html#GtkEditable">GtkEditable</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if <em>editable</em> is editable.</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -2392,57 +2443,6 @@ def Gtk.Editable.get_editable (self):
 								–
 			</div>
 							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if <em>editable</em> is editable.</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_editable_get_editable">
-	<span><code>gtk_editable_get_editable</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
-gtk_editable_get_editable (<a title="GtkEditable" href="gtkeditable.html#GtkEditable">GtkEditable</a> * editable)</pre>
-
-<p>Retrieves whether <em>editable</em> is editable. See
-<a href="gtkeditable.html#gtk_editable_set_editable">gtk_editable_set_editable</a>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>editable</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkeditable.html#GtkEditable">GtkEditable</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-								–
-			</div>
-							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if <em>editable</em> is editable.</p>
 
 					</div>
 	</div>
@@ -2519,20 +2519,6 @@ function Gtk.prototype.get_editable(): {
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="GtkEditable">
 	
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="GtkEditable">
-	<span><code>Gtk.Editable</code></span>
-</h3>
-
-
-
-
-
-        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -2540,6 +2526,20 @@ function Gtk.prototype.get_editable(): {
 
 <h3 data-hotdoc-id="GtkEditable">
 	<span><code>GtkEditable</code></span>
+</h3>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="GtkEditable">
+	<span><code>Gtk.Editable</code></span>
 </h3>
 
 

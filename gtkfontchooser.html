@@ -89,7 +89,7 @@ $('body').removeClass('no-script');
 </nav>
 
 <main>
-<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="gtkfontchooser.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['python', 'c', 'javascript']" data-hotdoc-meta-gi-language="c">
+<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="gtkfontchooser.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['c', 'python', 'javascript']" data-hotdoc-meta-gi-language="c">
 <script src="assets/js/utils.js"></script>
 
 <div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
@@ -110,67 +110,6 @@ $('body').removeClass('no-script');
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.2;" id="gtk_font_chooser_get_font_family">
 	
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_font_chooser_get_font_family">
-	<span><code>Gtk.FontChooser.get_font_family</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.FontChooser.get_font_family (self):
-    #python wrapper for 'gtk_font_chooser_get_font_family'</pre>
-
-<p>Gets the <a href="https://developer.gnome.org/pango/unstable/pango-Fonts.html#PangoFontFamily-struct">Pango.FontFamily</a> representing the selected font family.
-Font families are a collection of font faces.</p>
-<p>If the selected font is not installed, returns <a href="https://docs.python.org/3/library/constants.html#None">None</a>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>fontchooser</code></em></i>
-					(
-						<a title="Gtk.FontChooser" href="gtkfontchooser.html#GtkFontChooser">Gtk.FontChooser</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkfontchooser.html#GtkFontChooser">Gtk.FontChooser</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Pango.FontFamily" href="https://developer.gnome.org/pango/unstable/pango-Fonts.html#PangoFontFamily-struct">Pango.FontFamily</a>
-										)
-								–
-			</div>
-							<p>A <a href="https://developer.gnome.org/pango/unstable/pango-Fonts.html#PangoFontFamily-struct">Pango.FontFamily</a> representing the
-selected font family, or <a href="https://docs.python.org/3/library/constants.html#None">None</a>. The returned object is owned by <em>fontchooser</em>
-and must not be modified or freed.</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.2
-		</p>
-
-
-        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -222,6 +161,67 @@ Font families are a collection of font faces.</p>
 			</div>
 							<p>A <a href="https://developer.gnome.org/pango/unstable/pango-Fonts.html#PangoFontFamily-struct">PangoFontFamily</a> representing the
 selected font family, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a>. The returned object is owned by <em>fontchooser</em>
+and must not be modified or freed.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.2
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_font_chooser_get_font_family">
+	<span><code>Gtk.FontChooser.get_font_family</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.FontChooser.get_font_family (self):
+    #python wrapper for 'gtk_font_chooser_get_font_family'</pre>
+
+<p>Gets the <a href="https://developer.gnome.org/pango/unstable/pango-Fonts.html#PangoFontFamily-struct">Pango.FontFamily</a> representing the selected font family.
+Font families are a collection of font faces.</p>
+<p>If the selected font is not installed, returns <a href="https://docs.python.org/3/library/constants.html#None">None</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>fontchooser</code></em></i>
+					(
+						<a title="Gtk.FontChooser" href="gtkfontchooser.html#GtkFontChooser">Gtk.FontChooser</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkfontchooser.html#GtkFontChooser">Gtk.FontChooser</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Pango.FontFamily" href="https://developer.gnome.org/pango/unstable/pango-Fonts.html#PangoFontFamily-struct">Pango.FontFamily</a>
+										)
+								–
+			</div>
+							<p>A <a href="https://developer.gnome.org/pango/unstable/pango-Fonts.html#PangoFontFamily-struct">Pango.FontFamily</a> representing the
+selected font family, or <a href="https://docs.python.org/3/library/constants.html#None">None</a>. The returned object is owned by <em>fontchooser</em>
 and must not be modified or freed.</p>
 
 					</div>
@@ -304,67 +304,6 @@ and must not be modified or freed.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.2;" id="gtk_font_chooser_get_font_face">
 	
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_font_chooser_get_font_face">
-	<span><code>Gtk.FontChooser.get_font_face</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.FontChooser.get_font_face (self):
-    #python wrapper for 'gtk_font_chooser_get_font_face'</pre>
-
-<p>Gets the <a href="https://developer.gnome.org/pango/unstable/pango-Fonts.html#PangoFontFace-struct">Pango.FontFace</a> representing the selected font group
-details (i.e. family, slant, weight, width, etc).</p>
-<p>If the selected font is not installed, returns <a href="https://docs.python.org/3/library/constants.html#None">None</a>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>fontchooser</code></em></i>
-					(
-						<a title="Gtk.FontChooser" href="gtkfontchooser.html#GtkFontChooser">Gtk.FontChooser</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkfontchooser.html#GtkFontChooser">Gtk.FontChooser</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Pango.FontFace" href="https://developer.gnome.org/pango/unstable/pango-Fonts.html#PangoFontFace-struct">Pango.FontFace</a>
-										)
-								–
-			</div>
-							<p>A <a href="https://developer.gnome.org/pango/unstable/pango-Fonts.html#PangoFontFace-struct">Pango.FontFace</a> representing the
-selected font group details, or <a href="https://docs.python.org/3/library/constants.html#None">None</a>. The returned object is owned by
-<em>fontchooser</em> and must not be modified or freed.</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.2
-		</p>
-
-
-        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -416,6 +355,67 @@ details (i.e. family, slant, weight, width, etc).</p>
 			</div>
 							<p>A <a href="https://developer.gnome.org/pango/unstable/pango-Fonts.html#PangoFontFace-struct">PangoFontFace</a> representing the
 selected font group details, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a>. The returned object is owned by
+<em>fontchooser</em> and must not be modified or freed.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.2
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_font_chooser_get_font_face">
+	<span><code>Gtk.FontChooser.get_font_face</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.FontChooser.get_font_face (self):
+    #python wrapper for 'gtk_font_chooser_get_font_face'</pre>
+
+<p>Gets the <a href="https://developer.gnome.org/pango/unstable/pango-Fonts.html#PangoFontFace-struct">Pango.FontFace</a> representing the selected font group
+details (i.e. family, slant, weight, width, etc).</p>
+<p>If the selected font is not installed, returns <a href="https://docs.python.org/3/library/constants.html#None">None</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>fontchooser</code></em></i>
+					(
+						<a title="Gtk.FontChooser" href="gtkfontchooser.html#GtkFontChooser">Gtk.FontChooser</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkfontchooser.html#GtkFontChooser">Gtk.FontChooser</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Pango.FontFace" href="https://developer.gnome.org/pango/unstable/pango-Fonts.html#PangoFontFace-struct">Pango.FontFace</a>
+										)
+								–
+			</div>
+							<p>A <a href="https://developer.gnome.org/pango/unstable/pango-Fonts.html#PangoFontFace-struct">Pango.FontFace</a> representing the
+selected font group details, or <a href="https://docs.python.org/3/library/constants.html#None">None</a>. The returned object is owned by
 <em>fontchooser</em> and must not be modified or freed.</p>
 
 					</div>
@@ -498,6 +498,60 @@ selected font group details, or <a href="https://developer.mozilla.org/en-US/doc
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.2;" id="gtk_font_chooser_get_font_size">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_font_chooser_get_font_size">
+	<span><code>gtk_font_chooser_get_font_size</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a>
+gtk_font_chooser_get_font_size (<a title="GtkFontChooser" href="gtkfontchooser.html#GtkFontChooser">GtkFontChooser</a> * fontchooser)</pre>
+
+<p>The selected font size.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>fontchooser</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkfontchooser.html#GtkFontChooser">GtkFontChooser</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>A n integer representing the selected font size,
+or -1 if no font size is selected.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.2
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -540,60 +594,6 @@ def Gtk.FontChooser.get_font_size (self):
 									(
 					<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
 										)
-								–
-			</div>
-							<p>A n integer representing the selected font size,
-or -1 if no font size is selected.</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.2
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_font_chooser_get_font_size">
-	<span><code>gtk_font_chooser_get_font_size</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-<a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a>
-gtk_font_chooser_get_font_size (<a title="GtkFontChooser" href="gtkfontchooser.html#GtkFontChooser">GtkFontChooser</a> * fontchooser)</pre>
-
-<p>The selected font size.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>fontchooser</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkfontchooser.html#GtkFontChooser">GtkFontChooser</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
 								–
 			</div>
 							<p>A n integer representing the selected font size,
@@ -676,72 +676,6 @@ or -1 if no font size is selected.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.2;" id="gtk_font_chooser_get_font">
 	
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_font_chooser_get_font">
-	<span><code>Gtk.FontChooser.get_font</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.FontChooser.get_font (self):
-    #python wrapper for 'gtk_font_chooser_get_font'</pre>
-
-<p>Gets the currently-selected font name.</p>
-<p>Note that this can be a different string than what you set with
-<a href="gtkfontchooser.html#gtk_font_chooser_set_font">Gtk.FontChooser.set_font</a>, as the font chooser widget may
-normalize font names and thus return a string with a different
-structure. For example, “Helvetica Italic Bold 12” could be
-normalized to “Helvetica Bold Italic 12”.</p>
-<p>Use <a href="https://developer.gnome.org/pango/unstable/pango-Fonts.html#pango-font-description-equal">Pango.FontDescription.equal</a> if you want to compare two
-font descriptions.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>fontchooser</code></em></i>
-					(
-						<a title="Gtk.FontChooser" href="gtkfontchooser.html#GtkFontChooser">Gtk.FontChooser</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkfontchooser.html#GtkFontChooser">Gtk.FontChooser</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
-										)
-								–
-			</div>
-							<p>A string with the name
-of the current font, or <a href="https://docs.python.org/3/library/constants.html#None">None</a> if  no font is selected. You must
-free this string with <a href="https://developer.gnome.org/glib/unstable/glib-Memory-Allocation.html#g-free">GLib.free</a>.</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.2
-		</p>
-
-
-        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -799,6 +733,72 @@ font descriptions.</p>
 							<p>A string with the name
 of the current font, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> if  no font is selected. You must
 free this string with <a href="https://developer.gnome.org/glib/unstable/glib-Memory-Allocation.html#g-free">g_free</a>.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.2
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_font_chooser_get_font">
+	<span><code>Gtk.FontChooser.get_font</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.FontChooser.get_font (self):
+    #python wrapper for 'gtk_font_chooser_get_font'</pre>
+
+<p>Gets the currently-selected font name.</p>
+<p>Note that this can be a different string than what you set with
+<a href="gtkfontchooser.html#gtk_font_chooser_set_font">Gtk.FontChooser.set_font</a>, as the font chooser widget may
+normalize font names and thus return a string with a different
+structure. For example, “Helvetica Italic Bold 12” could be
+normalized to “Helvetica Bold Italic 12”.</p>
+<p>Use <a href="https://developer.gnome.org/pango/unstable/pango-Fonts.html#pango-font-description-equal">Pango.FontDescription.equal</a> if you want to compare two
+font descriptions.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>fontchooser</code></em></i>
+					(
+						<a title="Gtk.FontChooser" href="gtkfontchooser.html#GtkFontChooser">Gtk.FontChooser</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkfontchooser.html#GtkFontChooser">Gtk.FontChooser</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
+										)
+								–
+			</div>
+							<p>A string with the name
+of the current font, or <a href="https://docs.python.org/3/library/constants.html#None">None</a> if  no font is selected. You must
+free this string with <a href="https://developer.gnome.org/glib/unstable/glib-Memory-Allocation.html#g-free">GLib.free</a>.</p>
 
 					</div>
 	</div>
@@ -885,6 +885,58 @@ free this string with <a href="https://developer.gnome.org/glib/unstable/glib-Me
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.2;" id="gtk_font_chooser_set_font">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_font_chooser_set_font">
+	<span><code>gtk_font_chooser_set_font</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_font_chooser_set_font (<a title="GtkFontChooser" href="gtkfontchooser.html#GtkFontChooser">GtkFontChooser</a> * fontchooser,
+                           const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * fontname)</pre>
+
+<p>Sets the currently-selected font.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>fontchooser</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkfontchooser.html#GtkFontChooser">GtkFontChooser</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>fontname</code></em></i>
+				–
+	</div>
+			<p>a font name like “Helvetica 12” or “Times Bold 18”</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.2
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -925,58 +977,6 @@ def Gtk.FontChooser.set_font (self, fontname):
 					(
 						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
 						)
-				–
-	</div>
-			<p>a font name like “Helvetica 12” or “Times Bold 18”</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.2
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_font_chooser_set_font">
-	<span><code>gtk_font_chooser_set_font</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-gtk_font_chooser_set_font (<a title="GtkFontChooser" href="gtkfontchooser.html#GtkFontChooser">GtkFontChooser</a> * fontchooser,
-                           const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * fontname)</pre>
-
-<p>Sets the currently-selected font.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>fontchooser</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkfontchooser.html#GtkFontChooser">GtkFontChooser</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>fontname</code></em></i>
 				–
 	</div>
 			<p>a font name like “Helvetica 12” or “Times Bold 18”</p>
@@ -1057,71 +1057,6 @@ function Gtk.prototype.set_font(fontname: <a title="String" href="https://develo
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.2;" id="gtk_font_chooser_get_font_desc">
 	
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_font_chooser_get_font_desc">
-	<span><code>Gtk.FontChooser.get_font_desc</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.FontChooser.get_font_desc (self):
-    #python wrapper for 'gtk_font_chooser_get_font_desc'</pre>
-
-<p>Gets the currently-selected font.</p>
-<p>Note that this can be a different string than what you set with
-<a href="gtkfontchooser.html#gtk_font_chooser_set_font">Gtk.FontChooser.set_font</a>, as the font chooser widget may
-normalize font names and thus return a string with a different
-structure. For example, “Helvetica Italic Bold 12” could be
-normalized to “Helvetica Bold Italic 12”.</p>
-<p>Use <a href="https://developer.gnome.org/pango/unstable/pango-Fonts.html#pango-font-description-equal">Pango.FontDescription.equal</a> if you want to compare two
-font descriptions.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>fontchooser</code></em></i>
-					(
-						<a title="Gtk.FontChooser" href="gtkfontchooser.html#GtkFontChooser">Gtk.FontChooser</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkfontchooser.html#GtkFontChooser">Gtk.FontChooser</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Pango.FontDescription" href="https://developer.gnome.org/pango/unstable/pango-Fonts.html#PangoFontDescription-struct">Pango.FontDescription</a>
-										)
-								–
-			</div>
-							<p>A <a href="https://developer.gnome.org/pango/unstable/pango-Fonts.html#PangoFontDescription-struct">Pango.FontDescription</a> for the
-current font, or <a href="https://docs.python.org/3/library/constants.html#None">None</a> if  no font is selected.</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.2
-		</p>
-
-
-        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -1178,6 +1113,71 @@ font descriptions.</p>
 			</div>
 							<p>A <a href="https://developer.gnome.org/pango/unstable/pango-Fonts.html#PangoFontDescription-struct">PangoFontDescription</a> for the
 current font, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> if  no font is selected.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.2
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_font_chooser_get_font_desc">
+	<span><code>Gtk.FontChooser.get_font_desc</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.FontChooser.get_font_desc (self):
+    #python wrapper for 'gtk_font_chooser_get_font_desc'</pre>
+
+<p>Gets the currently-selected font.</p>
+<p>Note that this can be a different string than what you set with
+<a href="gtkfontchooser.html#gtk_font_chooser_set_font">Gtk.FontChooser.set_font</a>, as the font chooser widget may
+normalize font names and thus return a string with a different
+structure. For example, “Helvetica Italic Bold 12” could be
+normalized to “Helvetica Bold Italic 12”.</p>
+<p>Use <a href="https://developer.gnome.org/pango/unstable/pango-Fonts.html#pango-font-description-equal">Pango.FontDescription.equal</a> if you want to compare two
+font descriptions.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>fontchooser</code></em></i>
+					(
+						<a title="Gtk.FontChooser" href="gtkfontchooser.html#GtkFontChooser">Gtk.FontChooser</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkfontchooser.html#GtkFontChooser">Gtk.FontChooser</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Pango.FontDescription" href="https://developer.gnome.org/pango/unstable/pango-Fonts.html#PangoFontDescription-struct">Pango.FontDescription</a>
+										)
+								–
+			</div>
+							<p>A <a href="https://developer.gnome.org/pango/unstable/pango-Fonts.html#PangoFontDescription-struct">Pango.FontDescription</a> for the
+current font, or <a href="https://docs.python.org/3/library/constants.html#None">None</a> if  no font is selected.</p>
 
 					</div>
 	</div>
@@ -1263,6 +1263,58 @@ current font, or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScrip
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.2;" id="gtk_font_chooser_set_font_desc">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_font_chooser_set_font_desc">
+	<span><code>gtk_font_chooser_set_font_desc</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_font_chooser_set_font_desc (<a title="GtkFontChooser" href="gtkfontchooser.html#GtkFontChooser">GtkFontChooser</a> * fontchooser,
+                                const <a title="PangoFontDescription" href="https://developer.gnome.org/pango/unstable/pango-Fonts.html#PangoFontDescription-struct">PangoFontDescription</a> * font_desc)</pre>
+
+<p>Sets the currently-selected font from <em>font_desc</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>fontchooser</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkfontchooser.html#GtkFontChooser">GtkFontChooser</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>font_desc</code></em></i>
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/pango/unstable/pango-Fonts.html#PangoFontDescription-struct">PangoFontDescription</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.2
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -1306,58 +1358,6 @@ def Gtk.FontChooser.set_font_desc (self, font_desc):
 				–
 	</div>
 			<p>a <a href="https://developer.gnome.org/pango/unstable/pango-Fonts.html#PangoFontDescription-struct">Pango.FontDescription</a></p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.2
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_font_chooser_set_font_desc">
-	<span><code>gtk_font_chooser_set_font_desc</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-gtk_font_chooser_set_font_desc (<a title="GtkFontChooser" href="gtkfontchooser.html#GtkFontChooser">GtkFontChooser</a> * fontchooser,
-                                const <a title="PangoFontDescription" href="https://developer.gnome.org/pango/unstable/pango-Fonts.html#PangoFontDescription-struct">PangoFontDescription</a> * font_desc)</pre>
-
-<p>Sets the currently-selected font from <em>font_desc</em>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>fontchooser</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkfontchooser.html#GtkFontChooser">GtkFontChooser</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>font_desc</code></em></i>
-				–
-	</div>
-			<p>a <a href="https://developer.gnome.org/pango/unstable/pango-Fonts.html#PangoFontDescription-struct">PangoFontDescription</a></p>
 
 	</div>
 
@@ -1435,64 +1435,6 @@ function Gtk.prototype.set_font_desc(font_desc: <a title="Pango.FontDescription"
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.2;" id="gtk_font_chooser_get_preview_text">
 	
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_font_chooser_get_preview_text">
-	<span><code>Gtk.FontChooser.get_preview_text</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.FontChooser.get_preview_text (self):
-    #python wrapper for 'gtk_font_chooser_get_preview_text'</pre>
-
-<p>Gets the text displayed in the preview area.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>fontchooser</code></em></i>
-					(
-						<a title="Gtk.FontChooser" href="gtkfontchooser.html#GtkFontChooser">Gtk.FontChooser</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkfontchooser.html#GtkFontChooser">Gtk.FontChooser</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
-										)
-								–
-			</div>
-							<p>the text displayed in the
-preview area</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.2
-		</p>
-
-
-        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -1536,6 +1478,64 @@ gtk_font_chooser_get_preview_text (<a title="GtkFontChooser" href="gtkfontchoose
 										
 <span class="annotation">[<abbr title="Free data after the code is done"><span class="acronym">transfer: full</span></abbr>]</span>
 
+										)
+								–
+			</div>
+							<p>the text displayed in the
+preview area</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.2
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_font_chooser_get_preview_text">
+	<span><code>Gtk.FontChooser.get_preview_text</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.FontChooser.get_preview_text (self):
+    #python wrapper for 'gtk_font_chooser_get_preview_text'</pre>
+
+<p>Gets the text displayed in the preview area.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>fontchooser</code></em></i>
+					(
+						<a title="Gtk.FontChooser" href="gtkfontchooser.html#GtkFontChooser">Gtk.FontChooser</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkfontchooser.html#GtkFontChooser">Gtk.FontChooser</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
 										)
 								–
 			</div>
@@ -1619,63 +1619,6 @@ preview area</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.2;" id="gtk_font_chooser_set_preview_text">
 	
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_font_chooser_set_preview_text">
-	<span><code>Gtk.FontChooser.set_preview_text</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.FontChooser.set_preview_text (self, text):
-    #python wrapper for 'gtk_font_chooser_set_preview_text'</pre>
-
-<p>Sets the text displayed in the preview area.
-The <em>text</em> is used to show how the selected font looks.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>fontchooser</code></em></i>
-					(
-						<a title="Gtk.FontChooser" href="gtkfontchooser.html#GtkFontChooser">Gtk.FontChooser</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkfontchooser.html#GtkFontChooser">Gtk.FontChooser</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>text</code></em></i>
-					(
-						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
-						)
-				–
-	</div>
-			<p>the text to display in the preview area</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.2
-		</p>
-
-
-        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -1717,6 +1660,63 @@ The <em>text</em> is used to show how the selected font looks.</p>
 						
 <span class="annotation">[<abbr title="Don't free data after the code is done"><span class="acronym">transfer: none</span></abbr>]</span>
 
+						)
+				–
+	</div>
+			<p>the text to display in the preview area</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.2
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_font_chooser_set_preview_text">
+	<span><code>Gtk.FontChooser.set_preview_text</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.FontChooser.set_preview_text (self, text):
+    #python wrapper for 'gtk_font_chooser_set_preview_text'</pre>
+
+<p>Sets the text displayed in the preview area.
+The <em>text</em> is used to show how the selected font looks.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>fontchooser</code></em></i>
+					(
+						<a title="Gtk.FontChooser" href="gtkfontchooser.html#GtkFontChooser">Gtk.FontChooser</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkfontchooser.html#GtkFontChooser">Gtk.FontChooser</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>text</code></em></i>
+					(
+						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
 						)
 				–
 	</div>
@@ -1799,6 +1799,60 @@ The <em>text</em> is used to show how the selected font looks.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.2;" id="gtk_font_chooser_get_show_preview_entry">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_font_chooser_get_show_preview_entry">
+	<span><code>gtk_font_chooser_get_show_preview_entry</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_font_chooser_get_show_preview_entry (<a title="GtkFontChooser" href="gtkfontchooser.html#GtkFontChooser">GtkFontChooser</a> * fontchooser)</pre>
+
+<p>Returns whether the preview entry is shown or not.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>fontchooser</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkfontchooser.html#GtkFontChooser">GtkFontChooser</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if the preview entry is shown
+or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS">FALSE</a> if it is hidden.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.2
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -1845,60 +1899,6 @@ def Gtk.FontChooser.get_show_preview_entry (self):
 			</div>
 							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if the preview entry is shown
 or <a href="https://docs.python.org/3/library/constants.html#False">False</a> if it is hidden.</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.2
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_font_chooser_get_show_preview_entry">
-	<span><code>gtk_font_chooser_get_show_preview_entry</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
-gtk_font_chooser_get_show_preview_entry (<a title="GtkFontChooser" href="gtkfontchooser.html#GtkFontChooser">GtkFontChooser</a> * fontchooser)</pre>
-
-<p>Returns whether the preview entry is shown or not.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>fontchooser</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkfontchooser.html#GtkFontChooser">GtkFontChooser</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-								–
-			</div>
-							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if the preview entry is shown
-or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS">FALSE</a> if it is hidden.</p>
 
 					</div>
 	</div>
@@ -1977,6 +1977,58 @@ or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Gl
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.2;" id="gtk_font_chooser_set_show_preview_entry">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_font_chooser_set_show_preview_entry">
+	<span><code>gtk_font_chooser_set_show_preview_entry</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_font_chooser_set_show_preview_entry (<a title="GtkFontChooser" href="gtkfontchooser.html#GtkFontChooser">GtkFontChooser</a> * fontchooser,
+                                         <a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a> show_preview_entry)</pre>
+
+<p>Shows or hides the editable preview entry.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>fontchooser</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkfontchooser.html#GtkFontChooser">GtkFontChooser</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>show_preview_entry</code></em></i>
+				–
+	</div>
+			<p>whether to show the editable preview entry or not</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.2
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -2017,58 +2069,6 @@ def Gtk.FontChooser.set_show_preview_entry (self, show_preview_entry):
 					(
 						<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
 						)
-				–
-	</div>
-			<p>whether to show the editable preview entry or not</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.2
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_font_chooser_set_show_preview_entry">
-	<span><code>gtk_font_chooser_set_show_preview_entry</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-gtk_font_chooser_set_show_preview_entry (<a title="GtkFontChooser" href="gtkfontchooser.html#GtkFontChooser">GtkFontChooser</a> * fontchooser,
-                                         <a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a> show_preview_entry)</pre>
-
-<p>Shows or hides the editable preview entry.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>fontchooser</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkfontchooser.html#GtkFontChooser">GtkFontChooser</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>show_preview_entry</code></em></i>
 				–
 	</div>
 			<p>whether to show the editable preview entry or not</p>
@@ -2149,6 +2149,86 @@ function Gtk.prototype.set_show_preview_entry(show_preview_entry: <a title="Numb
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.2;" id="gtk_font_chooser_set_filter_func">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_font_chooser_set_filter_func">
+	<span><code>gtk_font_chooser_set_filter_func</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_font_chooser_set_filter_func (<a title="GtkFontChooser" href="gtkfontchooser.html#GtkFontChooser">GtkFontChooser</a> * fontchooser,
+                                  <a title="GtkFontFilterFunc" href="gtkfontchooser.html#GtkFontFilterFunc">GtkFontFilterFunc</a> filter,
+                                  <a title="gpointer" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer">gpointer</a> user_data,
+                                  <a title="GDestroyNotify" href="https://developer.gnome.org/glib/unstable/glib-Datasets.html#GDestroyNotify">GDestroyNotify</a> destroy)</pre>
+
+<p>Adds a filter function that decides which fonts to display
+in the font chooser.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>fontchooser</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkfontchooser.html#GtkFontChooser">GtkFontChooser</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>filter</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>a <a href="gtkfontchooser.html#GtkFontFilterFunc">GtkFontFilterFunc</a>, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>user_data</code></em></i>
+				–
+	</div>
+			<p>data to pass to <em>filter</em></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>destroy</code></em></i>
+				–
+	</div>
+			<p>function to call to free <em>data</em> when it is no longer needed</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.2
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -2216,86 +2296,6 @@ in the font chooser.</p>
 					(
 						<a title="GLib.DestroyNotify" href="https://developer.gnome.org/glib/unstable/glib-Datasets.html#GDestroyNotify">GLib.DestroyNotify</a>
 						)
-				–
-	</div>
-			<p>function to call to free <em>data</em> when it is no longer needed</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.2
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_font_chooser_set_filter_func">
-	<span><code>gtk_font_chooser_set_filter_func</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-gtk_font_chooser_set_filter_func (<a title="GtkFontChooser" href="gtkfontchooser.html#GtkFontChooser">GtkFontChooser</a> * fontchooser,
-                                  <a title="GtkFontFilterFunc" href="gtkfontchooser.html#GtkFontFilterFunc">GtkFontFilterFunc</a> filter,
-                                  <a title="gpointer" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer">gpointer</a> user_data,
-                                  <a title="GDestroyNotify" href="https://developer.gnome.org/glib/unstable/glib-Datasets.html#GDestroyNotify">GDestroyNotify</a> destroy)</pre>
-
-<p>Adds a filter function that decides which fonts to display
-in the font chooser.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>fontchooser</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkfontchooser.html#GtkFontChooser">GtkFontChooser</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>filter</code></em></i>
-					(
-						
-<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
-
-						)
-				–
-	</div>
-			<p>a <a href="gtkfontchooser.html#GtkFontFilterFunc">GtkFontFilterFunc</a>, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>user_data</code></em></i>
-				–
-	</div>
-			<p>data to pass to <em>filter</em></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>destroy</code></em></i>
 				–
 	</div>
 			<p>function to call to free <em>data</em> when it is no longer needed</p>
@@ -2403,80 +2403,6 @@ in the font chooser.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.18;" id="gtk_font_chooser_set_font_map">
 	
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_font_chooser_set_font_map">
-	<span><code>Gtk.FontChooser.set_font_map</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.FontChooser.set_font_map (self, fontmap):
-    #python wrapper for 'gtk_font_chooser_set_font_map'</pre>
-
-<p>Sets a custom font map to use for this font chooser widget.
-A custom font map can be used to present application-specific
-fonts instead of or in addition to the normal system fonts.</p>
-<pre><code class="language-[&lt;!--"> FcConfig *config;
- PangoFontMap *fontmap;
-
- config = FcInitLoadConfigAndFonts ();
- FcConfigAppFontAddFile (config, my_app_font_file);
-
- fontmap = pango_cairo_font_map_new_for_font_type (CAIRO_FONT_TYPE_FT);
- pango_fc_font_map_set_config (PANGO_FC_FONT_MAP (fontmap), config);
-
- gtk_font_chooser_set_font_map (font_chooser, fontmap);
-</code></pre>
-<p>Note that other GTK+ widgets will only be able to use the application-specific
-font if it is present in the font map they use:</p>
-<pre><code class="language-["> context = gtk_widget_get_pango_context (label);
- pango_context_set_font_map (context, fontmap);
-</code></pre>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>fontchooser</code></em></i>
-					(
-						<a title="Gtk.FontChooser" href="gtkfontchooser.html#GtkFontChooser">Gtk.FontChooser</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkfontchooser.html#GtkFontChooser">Gtk.FontChooser</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>fontmap</code></em></i>
-					(
-						<a title="Pango.FontMap" href="https://developer.gnome.org/pango/unstable/pango-Fonts.html#PangoFontMap-struct">Pango.FontMap</a>
-						)
-				–
-	</div>
-			<p>a <a href="https://developer.gnome.org/pango/unstable/pango-Fonts.html#PangoFontMap-struct">Pango.FontMap</a></p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.18
-		</p>
-
-
-        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -2539,6 +2465,80 @@ font if it is present in the font map they use:</p>
 				–
 	</div>
 			<p>a <a href="https://developer.gnome.org/pango/unstable/pango-Fonts.html#PangoFontMap-struct">PangoFontMap</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.18
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_font_chooser_set_font_map">
+	<span><code>Gtk.FontChooser.set_font_map</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.FontChooser.set_font_map (self, fontmap):
+    #python wrapper for 'gtk_font_chooser_set_font_map'</pre>
+
+<p>Sets a custom font map to use for this font chooser widget.
+A custom font map can be used to present application-specific
+fonts instead of or in addition to the normal system fonts.</p>
+<pre><code class="language-[&lt;!--"> FcConfig *config;
+ PangoFontMap *fontmap;
+
+ config = FcInitLoadConfigAndFonts ();
+ FcConfigAppFontAddFile (config, my_app_font_file);
+
+ fontmap = pango_cairo_font_map_new_for_font_type (CAIRO_FONT_TYPE_FT);
+ pango_fc_font_map_set_config (PANGO_FC_FONT_MAP (fontmap), config);
+
+ gtk_font_chooser_set_font_map (font_chooser, fontmap);
+</code></pre>
+<p>Note that other GTK+ widgets will only be able to use the application-specific
+font if it is present in the font map they use:</p>
+<pre><code class="language-["> context = gtk_widget_get_pango_context (label);
+ pango_context_set_font_map (context, fontmap);
+</code></pre>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>fontchooser</code></em></i>
+					(
+						<a title="Gtk.FontChooser" href="gtkfontchooser.html#GtkFontChooser">Gtk.FontChooser</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkfontchooser.html#GtkFontChooser">Gtk.FontChooser</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>fontmap</code></em></i>
+					(
+						<a title="Pango.FontMap" href="https://developer.gnome.org/pango/unstable/pango-Fonts.html#PangoFontMap-struct">Pango.FontMap</a>
+						)
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/pango/unstable/pango-Fonts.html#PangoFontMap-struct">Pango.FontMap</a></p>
 
 	</div>
 
@@ -2634,64 +2634,6 @@ font if it is present in the font map they use:</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.18;" id="gtk_font_chooser_get_font_map">
 	
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_font_chooser_get_font_map">
-	<span><code>Gtk.FontChooser.get_font_map</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.FontChooser.get_font_map (self):
-    #python wrapper for 'gtk_font_chooser_get_font_map'</pre>
-
-<p>Gets the custom font map of this font chooser widget,
-or <a href="https://docs.python.org/3/library/constants.html#None">None</a> if it does not have one.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>fontchooser</code></em></i>
-					(
-						<a title="Gtk.FontChooser" href="gtkfontchooser.html#GtkFontChooser">Gtk.FontChooser</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkfontchooser.html#GtkFontChooser">Gtk.FontChooser</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Pango.FontMap" href="https://developer.gnome.org/pango/unstable/pango-Fonts.html#PangoFontMap-struct">Pango.FontMap</a>
-										)
-								–
-			</div>
-							<p>a <a href="https://developer.gnome.org/pango/unstable/pango-Fonts.html#PangoFontMap-struct">Pango.FontMap</a>, or <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.18
-		</p>
-
-
-        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -2741,6 +2683,64 @@ or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#
 								–
 			</div>
 							<p>a <a href="https://developer.gnome.org/pango/unstable/pango-Fonts.html#PangoFontMap-struct">PangoFontMap</a>, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.18
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_font_chooser_get_font_map">
+	<span><code>Gtk.FontChooser.get_font_map</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.FontChooser.get_font_map (self):
+    #python wrapper for 'gtk_font_chooser_get_font_map'</pre>
+
+<p>Gets the custom font map of this font chooser widget,
+or <a href="https://docs.python.org/3/library/constants.html#None">None</a> if it does not have one.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>fontchooser</code></em></i>
+					(
+						<a title="Gtk.FontChooser" href="gtkfontchooser.html#GtkFontChooser">Gtk.FontChooser</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkfontchooser.html#GtkFontChooser">Gtk.FontChooser</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Pango.FontMap" href="https://developer.gnome.org/pango/unstable/pango-Fonts.html#PangoFontMap-struct">Pango.FontMap</a>
+										)
+								–
+			</div>
+							<p>a <a href="https://developer.gnome.org/pango/unstable/pango-Fonts.html#PangoFontMap-struct">Pango.FontMap</a>, or <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
 
 					</div>
 	</div>
@@ -2823,20 +2823,6 @@ or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Gl
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="GtkFontChooser">
 	
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="GtkFontChooser">
-	<span><code>Gtk.FontChooser</code></span>
-</h3>
-
-
-
-
-
-        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -2844,6 +2830,20 @@ or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Gl
 
 <h3 data-hotdoc-id="GtkFontChooser">
 	<span><code>GtkFontChooser</code></span>
+</h3>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="GtkFontChooser">
+	<span><code>Gtk.FontChooser</code></span>
 </h3>
 
 
@@ -2874,6 +2874,84 @@ or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Gl
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="GtkFontFilterFunc">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h3 data-hotdoc-id="GtkFontFilterFunc">
+	<span><code>GtkFontFilterFunc</code></span>
+</h3>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+(*GtkFontFilterFunc) (const <a title="PangoFontFamily" href="https://developer.gnome.org/pango/unstable/pango-Fonts.html#PangoFontFamily-struct">PangoFontFamily</a> * family,
+                      const <a title="PangoFontFace" href="https://developer.gnome.org/pango/unstable/pango-Fonts.html#PangoFontFace-struct">PangoFontFace</a> * face,
+                      <a title="gpointer" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer">gpointer</a> data)</pre>
+
+<p>The type of function that is used for deciding what fonts get
+shown in a <a href="gtkfontchooser.html#GtkFontChooser">GtkFontChooser</a>. See <a href="gtkfontchooser.html#gtk_font_chooser_set_filter_func">gtk_font_chooser_set_filter_func</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>family</code></em></i>
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/pango/unstable/pango-Fonts.html#PangoFontFamily-struct">PangoFontFamily</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>face</code></em></i>
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/pango/unstable/pango-Fonts.html#PangoFontFace-struct">PangoFontFace</a> belonging to <em>family</em></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>data</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="This parameter is a closure for callbacks, many bindings can pass NULL here"><span class="acronym">closure</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>user data passed to <a href="gtkfontchooser.html#gtk_font_chooser_set_filter_func">gtk_font_chooser_set_filter_func</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if the font should be displayed</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -2950,84 +3028,6 @@ shown in a <a href="gtkfontchooser.html#GtkFontChooser">Gtk.FontChooser</a>. See
 								–
 			</div>
 							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if the font should be displayed</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h3 data-hotdoc-id="GtkFontFilterFunc">
-	<span><code>GtkFontFilterFunc</code></span>
-</h3>
-
-
-
-
-<pre class="c-prototype">
-<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
-(*GtkFontFilterFunc) (const <a title="PangoFontFamily" href="https://developer.gnome.org/pango/unstable/pango-Fonts.html#PangoFontFamily-struct">PangoFontFamily</a> * family,
-                      const <a title="PangoFontFace" href="https://developer.gnome.org/pango/unstable/pango-Fonts.html#PangoFontFace-struct">PangoFontFace</a> * face,
-                      <a title="gpointer" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gpointer">gpointer</a> data)</pre>
-
-<p>The type of function that is used for deciding what fonts get
-shown in a <a href="gtkfontchooser.html#GtkFontChooser">GtkFontChooser</a>. See <a href="gtkfontchooser.html#gtk_font_chooser_set_filter_func">gtk_font_chooser_set_filter_func</a>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>family</code></em></i>
-				–
-	</div>
-			<p>a <a href="https://developer.gnome.org/pango/unstable/pango-Fonts.html#PangoFontFamily-struct">PangoFontFamily</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>face</code></em></i>
-				–
-	</div>
-			<p>a <a href="https://developer.gnome.org/pango/unstable/pango-Fonts.html#PangoFontFace-struct">PangoFontFace</a> belonging to <em>family</em></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>data</code></em></i>
-					(
-						
-<span class="annotation">[<abbr title="This parameter is a closure for callbacks, many bindings can pass NULL here"><span class="acronym">closure</span></abbr>]</span>
-
-						)
-				–
-	</div>
-			<p>user data passed to <a href="gtkfontchooser.html#gtk_font_chooser_set_filter_func">gtk_font_chooser_set_filter_func</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-								–
-			</div>
-							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if the font should be displayed</p>
 
 					</div>
 	</div>

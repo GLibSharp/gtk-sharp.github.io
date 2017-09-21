@@ -89,7 +89,7 @@ $('body').removeClass('no-script');
 </nav>
 
 <main>
-<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="gtksnapshot.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['python', 'c', 'javascript']" data-hotdoc-meta-gi-language="c">
+<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="gtksnapshot.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['c', 'python', 'javascript']" data-hotdoc-meta-gi-language="c">
 <script src="assets/js/utils.js"></script>
 
 <div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
@@ -822,6 +822,48 @@ be blended will be recorded until the second call to <a href="gtksnapshot.html#g
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.90;" id="gtk_snapshot_pop">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_snapshot_pop">
+	<span><code>gtk_snapshot_pop</code></span>
+</h3>
+
+
+
+
+<pre class="c-prototype">
+gtk_snapshot_pop (<a title="GtkSnapshot" href="gtksnapshot.html#GtkSnapshot">GtkSnapshot</a> * snapshot)</pre>
+
+<p>Removes the top element from the stack of render nodes,
+and appends it to the node underneath it.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>snapshot</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtksnapshot.html#GtkSnapshot">GtkSnapshot</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.90
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -853,48 +895,6 @@ and appends it to the node underneath it.</p>
 				–
 	</div>
 			<p>a <a href="gtksnapshot.html#GtkSnapshot">Gtk.Snapshot</a></p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.90
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_snapshot_pop">
-	<span><code>gtk_snapshot_pop</code></span>
-</h3>
-
-
-
-
-<pre class="c-prototype">
-gtk_snapshot_pop (<a title="GtkSnapshot" href="gtksnapshot.html#GtkSnapshot">GtkSnapshot</a> * snapshot)</pre>
-
-<p>Removes the top element from the stack of render nodes,
-and appends it to the node underneath it.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>snapshot</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtksnapshot.html#GtkSnapshot">GtkSnapshot</a></p>
 
 	</div>
 
@@ -960,6 +960,69 @@ and appends it to the node underneath it.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.90;" id="gtk_snapshot_offset">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_snapshot_offset">
+	<span><code>gtk_snapshot_offset</code></span>
+</h3>
+
+
+
+
+<pre class="c-prototype">
+gtk_snapshot_offset (<a title="GtkSnapshot" href="gtksnapshot.html#GtkSnapshot">GtkSnapshot</a> * snapshot,
+                     int x,
+                     int y)</pre>
+
+<p>Appends a translation by (@x, <em>y</em>) to the current transformation.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>snapshot</code></em></i>
+				–
+	</div>
+			<p>a $GtkSnapshot</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>x</code></em></i>
+				–
+	</div>
+			<p>horizontal translation</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>y</code></em></i>
+				–
+	</div>
+			<p>vertical translation</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.90
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -1013,69 +1076,6 @@ def Gtk.Snapshot.offset (self, x, y):
 					(
 						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
 						)
-				–
-	</div>
-			<p>vertical translation</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.90
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_snapshot_offset">
-	<span><code>gtk_snapshot_offset</code></span>
-</h3>
-
-
-
-
-<pre class="c-prototype">
-gtk_snapshot_offset (<a title="GtkSnapshot" href="gtksnapshot.html#GtkSnapshot">GtkSnapshot</a> * snapshot,
-                     int x,
-                     int y)</pre>
-
-<p>Appends a translation by (@x, <em>y</em>) to the current transformation.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>snapshot</code></em></i>
-				–
-	</div>
-			<p>a $GtkSnapshot</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>x</code></em></i>
-				–
-	</div>
-			<p>horizontal translation</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>y</code></em></i>
 				–
 	</div>
 			<p>vertical translation</p>
@@ -1169,53 +1169,6 @@ function Gtk.prototype.offset(x: <a title="Number" href="https://developer.mozil
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_snapshot_get_offset">
 	
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_snapshot_get_offset">
-	<span><code>Gtk.Snapshot.get_offset</code></span>
-</h3>
-
-
-<pre class="python-prototype">
-def Gtk.Snapshot.get_offset (self):
-    #python wrapper for 'gtk_snapshot_get_offset'</pre>
-
-<p>Queries the offset managed by <em>snapshot</em>. This offset is the
-accumulated sum of calls to <a href="gtksnapshot.html#gtk_snapshot_offset">Gtk.Snapshot.offset</a>.</p>
-<p>Use this offset to determine how to offset nodes that you
-manually add to the snapshot using
-gtk_snapshot_append.</p>
-<p>Note that other functions that add nodes for you, such as
-<a href="gtksnapshot.html#gtk_snapshot_append_cairo">gtk_snapshot_append_cairo (not introspectable)</a> will add this offset for
-you.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>snapshot</code></em></i>
-					(
-						<a title="Gtk.Snapshot" href="gtksnapshot.html#GtkSnapshot">Gtk.Snapshot</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtksnapshot.html#GtkSnapshot">Gtk.Snapshot</a></p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -1295,6 +1248,53 @@ you.</p>
 
 
         </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_snapshot_get_offset">
+	<span><code>Gtk.Snapshot.get_offset</code></span>
+</h3>
+
+
+<pre class="python-prototype">
+def Gtk.Snapshot.get_offset (self):
+    #python wrapper for 'gtk_snapshot_get_offset'</pre>
+
+<p>Queries the offset managed by <em>snapshot</em>. This offset is the
+accumulated sum of calls to <a href="gtksnapshot.html#gtk_snapshot_offset">Gtk.Snapshot.offset</a>.</p>
+<p>Use this offset to determine how to offset nodes that you
+manually add to the snapshot using
+gtk_snapshot_append.</p>
+<p>Note that other functions that add nodes for you, such as
+<a href="gtksnapshot.html#gtk_snapshot_append_cairo">gtk_snapshot_append_cairo (not introspectable)</a> will add this offset for
+you.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>snapshot</code></em></i>
+					(
+						<a title="Gtk.Snapshot" href="gtksnapshot.html#GtkSnapshot">Gtk.Snapshot</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtksnapshot.html#GtkSnapshot">Gtk.Snapshot</a></p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-javascript">
             
 
@@ -1350,6 +1350,58 @@ you.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_snapshot_append_node">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_snapshot_append_node">
+	<span><code>gtk_snapshot_append_node</code></span>
+</h3>
+
+
+
+
+<pre class="c-prototype">
+gtk_snapshot_append_node (<a title="GtkSnapshot" href="gtksnapshot.html#GtkSnapshot">GtkSnapshot</a> * snapshot,
+                          GskRenderNode* node)</pre>
+
+<p>Appends <em>node</em> to the current render node of <em>snapshot</em>,
+without changing the current node. If <em>snapshot</em> does
+not have a current node yet, <em>node</em> will become the
+initial node.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>snapshot</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtksnapshot.html#GtkSnapshot">GtkSnapshot</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>node</code></em></i>
+				–
+	</div>
+			<p>a GskRenderNode</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -1393,58 +1445,6 @@ initial node.</p>
 					(
 						Gsk.RenderNode
 						)
-				–
-	</div>
-			<p>a GskRenderNode</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_snapshot_append_node">
-	<span><code>gtk_snapshot_append_node</code></span>
-</h3>
-
-
-
-
-<pre class="c-prototype">
-gtk_snapshot_append_node (<a title="GtkSnapshot" href="gtksnapshot.html#GtkSnapshot">GtkSnapshot</a> * snapshot,
-                          GskRenderNode* node)</pre>
-
-<p>Appends <em>node</em> to the current render node of <em>snapshot</em>,
-without changing the current node. If <em>snapshot</em> does
-not have a current node yet, <em>node</em> will become the
-initial node.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>snapshot</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtksnapshot.html#GtkSnapshot">GtkSnapshot</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>node</code></em></i>
 				–
 	</div>
 			<p>a GskRenderNode</p>
@@ -1813,6 +1813,70 @@ to the current render node of <em>snapshot</em>.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.90;" id="gtk_snapshot_clips_rect">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_snapshot_clips_rect">
+	<span><code>gtk_snapshot_clips_rect</code></span>
+</h3>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_snapshot_clips_rect (<a title="GtkSnapshot" href="gtksnapshot.html#GtkSnapshot">GtkSnapshot</a> * snapshot,
+                         const <a title="cairo_rectangle_int_t" href="https://developer.gnome.org/cairo/unstable/cairo-Types.html#cairo-rectangle-int-t">cairo_rectangle_int_t</a> * bounds)</pre>
+
+<p>Tests whether the rectangle is entirely outside the clip region of <em>snapshot</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>snapshot</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtksnapshot.html#GtkSnapshot">GtkSnapshot</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>bounds</code></em></i>
+				–
+	</div>
+			<p>a rectangle</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> is <em>bounds</em> is entirely outside the clip region</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.90
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -1871,70 +1935,6 @@ def Gtk.Snapshot.clips_rect (self, bounds):
 								–
 			</div>
 							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> is <em>bounds</em> is entirely outside the clip region</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.90
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_snapshot_clips_rect">
-	<span><code>gtk_snapshot_clips_rect</code></span>
-</h3>
-
-
-
-
-<pre class="c-prototype">
-<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
-gtk_snapshot_clips_rect (<a title="GtkSnapshot" href="gtksnapshot.html#GtkSnapshot">GtkSnapshot</a> * snapshot,
-                         const <a title="cairo_rectangle_int_t" href="https://developer.gnome.org/cairo/unstable/cairo-Types.html#cairo-rectangle-int-t">cairo_rectangle_int_t</a> * bounds)</pre>
-
-<p>Tests whether the rectangle is entirely outside the clip region of <em>snapshot</em>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>snapshot</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtksnapshot.html#GtkSnapshot">GtkSnapshot</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>bounds</code></em></i>
-				–
-	</div>
-			<p>a rectangle</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-								–
-			</div>
-							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> is <em>bounds</em> is entirely outside the clip region</p>
 
 					</div>
 	</div>
@@ -2025,6 +2025,104 @@ function Gtk.prototype.clips_rect(bounds: <a title="cairo.RectangleInt" href="ht
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.90;" id="gtk_snapshot_render_background">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_snapshot_render_background">
+	<span><code>gtk_snapshot_render_background</code></span>
+</h3>
+
+
+
+
+<pre class="c-prototype">
+gtk_snapshot_render_background (<a title="GtkSnapshot" href="gtksnapshot.html#GtkSnapshot">GtkSnapshot</a> * snapshot,
+                                <a title="GtkStyleContext" href="gtkstylecontext.html#GtkStyleContext">GtkStyleContext</a> * context,
+                                <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> x,
+                                <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> y,
+                                <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> width,
+                                <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> height)</pre>
+
+<p>Creates a render node for the CSS background according to <em>context</em>,
+and appends it to the current node of <em>snapshot</em>, without changing
+the current node.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>snapshot</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtksnapshot.html#GtkSnapshot">GtkSnapshot</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+				–
+	</div>
+			<p>the <a href="gtkstylecontext.html#GtkStyleContext">GtkStyleContext</a> to use</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>x</code></em></i>
+				–
+	</div>
+			<p>X origin of the rectangle</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>y</code></em></i>
+				–
+	</div>
+			<p>Y origin of the rectangle</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>width</code></em></i>
+				–
+	</div>
+			<p>rectangle width</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>height</code></em></i>
+				–
+	</div>
+			<p>rectangle height</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.90
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -2119,104 +2217,6 @@ the current node.</p>
 					(
 						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
 						)
-				–
-	</div>
-			<p>rectangle height</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.90
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_snapshot_render_background">
-	<span><code>gtk_snapshot_render_background</code></span>
-</h3>
-
-
-
-
-<pre class="c-prototype">
-gtk_snapshot_render_background (<a title="GtkSnapshot" href="gtksnapshot.html#GtkSnapshot">GtkSnapshot</a> * snapshot,
-                                <a title="GtkStyleContext" href="gtkstylecontext.html#GtkStyleContext">GtkStyleContext</a> * context,
-                                <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> x,
-                                <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> y,
-                                <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> width,
-                                <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> height)</pre>
-
-<p>Creates a render node for the CSS background according to <em>context</em>,
-and appends it to the current node of <em>snapshot</em>, without changing
-the current node.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>snapshot</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtksnapshot.html#GtkSnapshot">GtkSnapshot</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>context</code></em></i>
-				–
-	</div>
-			<p>the <a href="gtkstylecontext.html#GtkStyleContext">GtkStyleContext</a> to use</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>x</code></em></i>
-				–
-	</div>
-			<p>X origin of the rectangle</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>y</code></em></i>
-				–
-	</div>
-			<p>Y origin of the rectangle</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>width</code></em></i>
-				–
-	</div>
-			<p>rectangle width</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>height</code></em></i>
 				–
 	</div>
 			<p>rectangle height</p>
@@ -2351,6 +2351,104 @@ the current node.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.90;" id="gtk_snapshot_render_frame">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_snapshot_render_frame">
+	<span><code>gtk_snapshot_render_frame</code></span>
+</h3>
+
+
+
+
+<pre class="c-prototype">
+gtk_snapshot_render_frame (<a title="GtkSnapshot" href="gtksnapshot.html#GtkSnapshot">GtkSnapshot</a> * snapshot,
+                           <a title="GtkStyleContext" href="gtkstylecontext.html#GtkStyleContext">GtkStyleContext</a> * context,
+                           <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> x,
+                           <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> y,
+                           <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> width,
+                           <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> height)</pre>
+
+<p>Creates a render node for the CSS border according to <em>context</em>,
+and appends it to the current node of <em>snapshot</em>, without changing
+the current node.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>snapshot</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtksnapshot.html#GtkSnapshot">GtkSnapshot</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+				–
+	</div>
+			<p>the <a href="gtkstylecontext.html#GtkStyleContext">GtkStyleContext</a> to use</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>x</code></em></i>
+				–
+	</div>
+			<p>X origin of the rectangle</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>y</code></em></i>
+				–
+	</div>
+			<p>Y origin of the rectangle</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>width</code></em></i>
+				–
+	</div>
+			<p>rectangle width</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>height</code></em></i>
+				–
+	</div>
+			<p>rectangle height</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.90
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -2445,104 +2543,6 @@ the current node.</p>
 					(
 						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
 						)
-				–
-	</div>
-			<p>rectangle height</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.90
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_snapshot_render_frame">
-	<span><code>gtk_snapshot_render_frame</code></span>
-</h3>
-
-
-
-
-<pre class="c-prototype">
-gtk_snapshot_render_frame (<a title="GtkSnapshot" href="gtksnapshot.html#GtkSnapshot">GtkSnapshot</a> * snapshot,
-                           <a title="GtkStyleContext" href="gtkstylecontext.html#GtkStyleContext">GtkStyleContext</a> * context,
-                           <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> x,
-                           <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> y,
-                           <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> width,
-                           <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> height)</pre>
-
-<p>Creates a render node for the CSS border according to <em>context</em>,
-and appends it to the current node of <em>snapshot</em>, without changing
-the current node.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>snapshot</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtksnapshot.html#GtkSnapshot">GtkSnapshot</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>context</code></em></i>
-				–
-	</div>
-			<p>the <a href="gtkstylecontext.html#GtkStyleContext">GtkStyleContext</a> to use</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>x</code></em></i>
-				–
-	</div>
-			<p>X origin of the rectangle</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>y</code></em></i>
-				–
-	</div>
-			<p>Y origin of the rectangle</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>width</code></em></i>
-				–
-	</div>
-			<p>rectangle width</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>height</code></em></i>
 				–
 	</div>
 			<p>rectangle height</p>
@@ -2677,6 +2677,104 @@ the current node.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.90;" id="gtk_snapshot_render_focus">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_snapshot_render_focus">
+	<span><code>gtk_snapshot_render_focus</code></span>
+</h3>
+
+
+
+
+<pre class="c-prototype">
+gtk_snapshot_render_focus (<a title="GtkSnapshot" href="gtksnapshot.html#GtkSnapshot">GtkSnapshot</a> * snapshot,
+                           <a title="GtkStyleContext" href="gtkstylecontext.html#GtkStyleContext">GtkStyleContext</a> * context,
+                           <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> x,
+                           <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> y,
+                           <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> width,
+                           <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> height)</pre>
+
+<p>Creates a render node for the focus outline according to <em>context</em>,
+and appends it to the current node of <em>snapshot</em>, without changing
+the current node.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>snapshot</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtksnapshot.html#GtkSnapshot">GtkSnapshot</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+				–
+	</div>
+			<p>the <a href="gtkstylecontext.html#GtkStyleContext">GtkStyleContext</a> to use</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>x</code></em></i>
+				–
+	</div>
+			<p>X origin of the rectangle</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>y</code></em></i>
+				–
+	</div>
+			<p>Y origin of the rectangle</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>width</code></em></i>
+				–
+	</div>
+			<p>rectangle width</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>height</code></em></i>
+				–
+	</div>
+			<p>rectangle height</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.90
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -2771,104 +2869,6 @@ the current node.</p>
 					(
 						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
 						)
-				–
-	</div>
-			<p>rectangle height</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.90
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_snapshot_render_focus">
-	<span><code>gtk_snapshot_render_focus</code></span>
-</h3>
-
-
-
-
-<pre class="c-prototype">
-gtk_snapshot_render_focus (<a title="GtkSnapshot" href="gtksnapshot.html#GtkSnapshot">GtkSnapshot</a> * snapshot,
-                           <a title="GtkStyleContext" href="gtkstylecontext.html#GtkStyleContext">GtkStyleContext</a> * context,
-                           <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> x,
-                           <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> y,
-                           <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> width,
-                           <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> height)</pre>
-
-<p>Creates a render node for the focus outline according to <em>context</em>,
-and appends it to the current node of <em>snapshot</em>, without changing
-the current node.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>snapshot</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtksnapshot.html#GtkSnapshot">GtkSnapshot</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>context</code></em></i>
-				–
-	</div>
-			<p>the <a href="gtkstylecontext.html#GtkStyleContext">GtkStyleContext</a> to use</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>x</code></em></i>
-				–
-	</div>
-			<p>X origin of the rectangle</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>y</code></em></i>
-				–
-	</div>
-			<p>Y origin of the rectangle</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>width</code></em></i>
-				–
-	</div>
-			<p>rectangle width</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>height</code></em></i>
 				–
 	</div>
 			<p>rectangle height</p>
@@ -3003,6 +3003,93 @@ the current node.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.90;" id="gtk_snapshot_render_layout">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_snapshot_render_layout">
+	<span><code>gtk_snapshot_render_layout</code></span>
+</h3>
+
+
+
+
+<pre class="c-prototype">
+gtk_snapshot_render_layout (<a title="GtkSnapshot" href="gtksnapshot.html#GtkSnapshot">GtkSnapshot</a> * snapshot,
+                            <a title="GtkStyleContext" href="gtkstylecontext.html#GtkStyleContext">GtkStyleContext</a> * context,
+                            <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> x,
+                            <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> y,
+                            <a title="PangoLayout" href="https://developer.gnome.org/pango/unstable/pango-Layout-Objects.html#PangoLayout-struct">PangoLayout</a> * layout)</pre>
+
+<p>Creates a render node for rendering <em>layout</em> according to the style
+information in <em>context</em>, and appends it to the current node of <em>snapshot</em>,
+without changing the current node.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>snapshot</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtksnapshot.html#GtkSnapshot">GtkSnapshot</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+				–
+	</div>
+			<p>the <a href="gtkstylecontext.html#GtkStyleContext">GtkStyleContext</a> to use</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>x</code></em></i>
+				–
+	</div>
+			<p>X origin of the rectangle</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>y</code></em></i>
+				–
+	</div>
+			<p>Y origin of the rectangle</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>layout</code></em></i>
+				–
+	</div>
+			<p>the <a href="https://developer.gnome.org/pango/unstable/pango-Layout-Objects.html#PangoLayout-struct">PangoLayout</a> to render</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.90
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -3087,93 +3174,6 @@ without changing the current node.</p>
 				–
 	</div>
 			<p>the <a href="https://developer.gnome.org/pango/unstable/pango-Layout-Objects.html#PangoLayout-struct">Pango.Layout</a> to render</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.90
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_snapshot_render_layout">
-	<span><code>gtk_snapshot_render_layout</code></span>
-</h3>
-
-
-
-
-<pre class="c-prototype">
-gtk_snapshot_render_layout (<a title="GtkSnapshot" href="gtksnapshot.html#GtkSnapshot">GtkSnapshot</a> * snapshot,
-                            <a title="GtkStyleContext" href="gtkstylecontext.html#GtkStyleContext">GtkStyleContext</a> * context,
-                            <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> x,
-                            <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> y,
-                            <a title="PangoLayout" href="https://developer.gnome.org/pango/unstable/pango-Layout-Objects.html#PangoLayout-struct">PangoLayout</a> * layout)</pre>
-
-<p>Creates a render node for rendering <em>layout</em> according to the style
-information in <em>context</em>, and appends it to the current node of <em>snapshot</em>,
-without changing the current node.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>snapshot</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtksnapshot.html#GtkSnapshot">GtkSnapshot</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>context</code></em></i>
-				–
-	</div>
-			<p>the <a href="gtkstylecontext.html#GtkStyleContext">GtkStyleContext</a> to use</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>x</code></em></i>
-				–
-	</div>
-			<p>X origin of the rectangle</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>y</code></em></i>
-				–
-	</div>
-			<p>Y origin of the rectangle</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>layout</code></em></i>
-				–
-	</div>
-			<p>the <a href="https://developer.gnome.org/pango/unstable/pango-Layout-Objects.html#PangoLayout-struct">PangoLayout</a> to render</p>
 
 	</div>
 
@@ -3292,6 +3292,113 @@ without changing the current node.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.90;" id="gtk_snapshot_render_insertion_cursor">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_snapshot_render_insertion_cursor">
+	<span><code>gtk_snapshot_render_insertion_cursor</code></span>
+</h3>
+
+
+
+
+<pre class="c-prototype">
+gtk_snapshot_render_insertion_cursor (<a title="GtkSnapshot" href="gtksnapshot.html#GtkSnapshot">GtkSnapshot</a> * snapshot,
+                                      <a title="GtkStyleContext" href="gtkstylecontext.html#GtkStyleContext">GtkStyleContext</a> * context,
+                                      <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> x,
+                                      <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> y,
+                                      <a title="PangoLayout" href="https://developer.gnome.org/pango/unstable/pango-Layout-Objects.html#PangoLayout-struct">PangoLayout</a> * layout,
+                                      int index,
+                                      <a title="PangoDirection" href="https://developer.gnome.org/pango/unstable/pango-Bidirectional-Text.html#PangoDirection">PangoDirection</a> direction)</pre>
+
+<p>Draws a text caret on <em>cr</em> at the specified index of <em>layout</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>snapshot</code></em></i>
+				–
+	</div>
+			<p>snapshot to render to</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkstylecontext.html#GtkStyleContext">GtkStyleContext</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>x</code></em></i>
+				–
+	</div>
+			<p>X origin</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>y</code></em></i>
+				–
+	</div>
+			<p>Y origin</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>layout</code></em></i>
+				–
+	</div>
+			<p>the <a href="https://developer.gnome.org/pango/unstable/pango-Layout-Objects.html#PangoLayout-struct">PangoLayout</a> of the text</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>index</code></em></i>
+				–
+	</div>
+			<p>the index in the <a href="https://developer.gnome.org/pango/unstable/pango-Layout-Objects.html#PangoLayout-struct">PangoLayout</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>direction</code></em></i>
+				–
+	</div>
+			<p>the <a href="https://developer.gnome.org/pango/unstable/pango-Bidirectional-Text.html#PangoDirection">PangoDirection</a> of the text</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.90
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -3400,113 +3507,6 @@ def Gtk.Snapshot.render_insertion_cursor (self, context, x, y, layout, index, di
 				–
 	</div>
 			<p>the <a href="https://developer.gnome.org/pango/unstable/pango-Bidirectional-Text.html#PangoDirection">Pango.Direction</a> of the text</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.90
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_snapshot_render_insertion_cursor">
-	<span><code>gtk_snapshot_render_insertion_cursor</code></span>
-</h3>
-
-
-
-
-<pre class="c-prototype">
-gtk_snapshot_render_insertion_cursor (<a title="GtkSnapshot" href="gtksnapshot.html#GtkSnapshot">GtkSnapshot</a> * snapshot,
-                                      <a title="GtkStyleContext" href="gtkstylecontext.html#GtkStyleContext">GtkStyleContext</a> * context,
-                                      <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> x,
-                                      <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> y,
-                                      <a title="PangoLayout" href="https://developer.gnome.org/pango/unstable/pango-Layout-Objects.html#PangoLayout-struct">PangoLayout</a> * layout,
-                                      int index,
-                                      <a title="PangoDirection" href="https://developer.gnome.org/pango/unstable/pango-Bidirectional-Text.html#PangoDirection">PangoDirection</a> direction)</pre>
-
-<p>Draws a text caret on <em>cr</em> at the specified index of <em>layout</em>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>snapshot</code></em></i>
-				–
-	</div>
-			<p>snapshot to render to</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>context</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkstylecontext.html#GtkStyleContext">GtkStyleContext</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>x</code></em></i>
-				–
-	</div>
-			<p>X origin</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>y</code></em></i>
-				–
-	</div>
-			<p>Y origin</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>layout</code></em></i>
-				–
-	</div>
-			<p>the <a href="https://developer.gnome.org/pango/unstable/pango-Layout-Objects.html#PangoLayout-struct">PangoLayout</a> of the text</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>index</code></em></i>
-				–
-	</div>
-			<p>the index in the <a href="https://developer.gnome.org/pango/unstable/pango-Layout-Objects.html#PangoLayout-struct">PangoLayout</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>direction</code></em></i>
-				–
-	</div>
-			<p>the <a href="https://developer.gnome.org/pango/unstable/pango-Bidirectional-Text.html#PangoDirection">PangoDirection</a> of the text</p>
 
 	</div>
 
@@ -3649,6 +3649,93 @@ function Gtk.prototype.render_insertion_cursor(context: <a title="Gtk.StyleConte
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.90;" id="gtk_snapshot_render_icon">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_snapshot_render_icon">
+	<span><code>gtk_snapshot_render_icon</code></span>
+</h3>
+
+
+
+
+<pre class="c-prototype">
+gtk_snapshot_render_icon (<a title="GtkSnapshot" href="gtksnapshot.html#GtkSnapshot">GtkSnapshot</a> * snapshot,
+                          <a title="GtkStyleContext" href="gtkstylecontext.html#GtkStyleContext">GtkStyleContext</a> * context,
+                          <a title="GdkPixbuf" href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf</a> * pixbuf,
+                          <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> x,
+                          <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> y)</pre>
+
+<p>Creates a render node for rendering <em>pixbuf</em> according to the style
+information in <em>context</em>, and appends it to the current node of <em>snapshot</em>,
+without changing the current node.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>snapshot</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtksnapshot.html#GtkSnapshot">GtkSnapshot</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>context</code></em></i>
+				–
+	</div>
+			<p>the <a href="gtkstylecontext.html#GtkStyleContext">GtkStyleContext</a> to use</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>pixbuf</code></em></i>
+				–
+	</div>
+			<p>the <a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf</a> to render</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>x</code></em></i>
+				–
+	</div>
+			<p>X origin of the rectangle</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>y</code></em></i>
+				–
+	</div>
+			<p>Y origin of the rectangle</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.90
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -3730,93 +3817,6 @@ without changing the current node.</p>
 					(
 						<a title="float" href="https://docs.python.org/3/library/functions.html#float">float</a>
 						)
-				–
-	</div>
-			<p>Y origin of the rectangle</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.90
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_snapshot_render_icon">
-	<span><code>gtk_snapshot_render_icon</code></span>
-</h3>
-
-
-
-
-<pre class="c-prototype">
-gtk_snapshot_render_icon (<a title="GtkSnapshot" href="gtksnapshot.html#GtkSnapshot">GtkSnapshot</a> * snapshot,
-                          <a title="GtkStyleContext" href="gtkstylecontext.html#GtkStyleContext">GtkStyleContext</a> * context,
-                          <a title="GdkPixbuf" href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf</a> * pixbuf,
-                          <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> x,
-                          <a title="gdouble" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gdouble">gdouble</a> y)</pre>
-
-<p>Creates a render node for rendering <em>pixbuf</em> according to the style
-information in <em>context</em>, and appends it to the current node of <em>snapshot</em>,
-without changing the current node.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>snapshot</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtksnapshot.html#GtkSnapshot">GtkSnapshot</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>context</code></em></i>
-				–
-	</div>
-			<p>the <a href="gtkstylecontext.html#GtkStyleContext">GtkStyleContext</a> to use</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>pixbuf</code></em></i>
-				–
-	</div>
-			<p>the <a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf</a> to render</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>x</code></em></i>
-				–
-	</div>
-			<p>X origin of the rectangle</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>y</code></em></i>
 				–
 	</div>
 			<p>Y origin of the rectangle</p>
@@ -3940,13 +3940,13 @@ without changing the current node.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="GtkSnapshot">
 	
-        <div class="gi-symbol gi-symbol-python">
+        <div class="gi-symbol gi-symbol-c">
             
 
 
 
-<h3>
-	Gtk.Snapshot
+<h3 data-hotdoc-id="GtkSnapshot">
+	<span><code>GtkSnapshot</code></span>
 </h3>
 
 
@@ -3956,13 +3956,13 @@ without changing the current node.</p>
 
 
         </div>
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-python">
             
 
 
 
-<h3 data-hotdoc-id="GtkSnapshot">
-	<span><code>GtkSnapshot</code></span>
+<h3>
+	Gtk.Snapshot
 </h3>
 
 

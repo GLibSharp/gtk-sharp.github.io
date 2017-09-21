@@ -89,7 +89,7 @@ $('body').removeClass('no-script');
 </nav>
 
 <main>
-<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="gtkactionable.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['python', 'c', 'javascript']" data-hotdoc-meta-gi-language="c">
+<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="gtkactionable.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['c', 'python', 'javascript']" data-hotdoc-meta-gi-language="c">
 <script src="assets/js/utils.js"></script>
 
 <div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
@@ -110,64 +110,6 @@ $('body').removeClass('no-script');
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.4;" id="gtk_actionable_get_action_name">
 	
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_actionable_get_action_name">
-	<span><code>Gtk.Actionable.get_action_name</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.Actionable.get_action_name (self):
-    #python wrapper for 'gtk_actionable_get_action_name'</pre>
-
-<p>Gets the action name for <em>actionable</em>.</p>
-<p>See <a href="gtkactionable.html#gtk_actionable_set_action_name">Gtk.Actionable.set_action_name</a> for more information.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>actionable</code></em></i>
-					(
-						<a title="Gtk.Actionable" href="gtkactionable.html#GtkActionable">Gtk.Actionable</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkactionable.html#GtkActionable">Gtk.Actionable</a> widget</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
-										)
-								–
-			</div>
-							<p>the action name, or <a href="https://docs.python.org/3/library/constants.html#None">None</a> if none is set</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.4
-		</p>
-
-
-        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -216,6 +158,64 @@ gtk_actionable_get_action_name (<a title="GtkActionable" href="gtkactionable.htm
 								–
 			</div>
 							<p>the action name, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> if none is set</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.4
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_actionable_get_action_name">
+	<span><code>Gtk.Actionable.get_action_name</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Actionable.get_action_name (self):
+    #python wrapper for 'gtk_actionable_get_action_name'</pre>
+
+<p>Gets the action name for <em>actionable</em>.</p>
+<p>See <a href="gtkactionable.html#gtk_actionable_set_action_name">Gtk.Actionable.set_action_name</a> for more information.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>actionable</code></em></i>
+					(
+						<a title="Gtk.Actionable" href="gtkactionable.html#GtkActionable">Gtk.Actionable</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkactionable.html#GtkActionable">Gtk.Actionable</a> widget</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
+										)
+								–
+			</div>
+							<p>the action name, or <a href="https://docs.python.org/3/library/constants.html#None">None</a> if none is set</p>
 
 					</div>
 	</div>
@@ -294,70 +294,6 @@ function Gtk.prototype.get_action_name(): {
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.4;" id="gtk_actionable_set_action_name">
 	
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_actionable_set_action_name">
-	<span><code>Gtk.Actionable.set_action_name</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.Actionable.set_action_name (self, action_name):
-    #python wrapper for 'gtk_actionable_set_action_name'</pre>
-
-<p>Specifies the name of the action with which this widget should be
-associated.  If <em>action_name</em> is <a href="https://docs.python.org/3/library/constants.html#None">None</a> then the widget will be
-unassociated from any previous action.</p>
-<p>Usually this function is used when the widget is located (or will be
-located) within the hierarchy of a <a href="gtkapplicationwindow.html#GtkApplicationWindow">Gtk.ApplicationWindow</a>.</p>
-<p>Names are of the form “win.save” or “app.quit” for actions on the
-containing <a href="gtkapplicationwindow.html#GtkApplicationWindow">Gtk.ApplicationWindow</a> or its associated <a href="gtkapplication.html#GtkApplication">Gtk.Application</a>,
-respectively.  This is the same form used for actions in the <a href="https://developer.gnome.org/gio/unstable/GMenu.html#GMenu-struct">Gio.Menu</a>
-associated with the window.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>actionable</code></em></i>
-					(
-						<a title="Gtk.Actionable" href="gtkactionable.html#GtkActionable">Gtk.Actionable</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkactionable.html#GtkActionable">Gtk.Actionable</a> widget</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>action_name</code></em></i>
-					(
-						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
-						)
-				–
-	</div>
-			<p>an action name, or <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.4
-		</p>
-
-
-        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -410,6 +346,70 @@ associated with the window.</p>
 				–
 	</div>
 			<p>an action name, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.4
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_actionable_set_action_name">
+	<span><code>Gtk.Actionable.set_action_name</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Actionable.set_action_name (self, action_name):
+    #python wrapper for 'gtk_actionable_set_action_name'</pre>
+
+<p>Specifies the name of the action with which this widget should be
+associated.  If <em>action_name</em> is <a href="https://docs.python.org/3/library/constants.html#None">None</a> then the widget will be
+unassociated from any previous action.</p>
+<p>Usually this function is used when the widget is located (or will be
+located) within the hierarchy of a <a href="gtkapplicationwindow.html#GtkApplicationWindow">Gtk.ApplicationWindow</a>.</p>
+<p>Names are of the form “win.save” or “app.quit” for actions on the
+containing <a href="gtkapplicationwindow.html#GtkApplicationWindow">Gtk.ApplicationWindow</a> or its associated <a href="gtkapplication.html#GtkApplication">Gtk.Application</a>,
+respectively.  This is the same form used for actions in the <a href="https://developer.gnome.org/gio/unstable/GMenu.html#GMenu-struct">Gio.Menu</a>
+associated with the window.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>actionable</code></em></i>
+					(
+						<a title="Gtk.Actionable" href="gtkactionable.html#GtkActionable">Gtk.Actionable</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkactionable.html#GtkActionable">Gtk.Actionable</a> widget</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>action_name</code></em></i>
+					(
+						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
+						)
+				–
+	</div>
+			<p>an action name, or <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
 
 	</div>
 
@@ -495,64 +495,6 @@ associated with the window.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.4;" id="gtk_actionable_get_action_target_value">
 	
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_actionable_get_action_target_value">
-	<span><code>Gtk.Actionable.get_action_target_value</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.Actionable.get_action_target_value (self):
-    #python wrapper for 'gtk_actionable_get_action_target_value'</pre>
-
-<p>Gets the current target value of <em>actionable</em>.</p>
-<p>See <a href="gtkactionable.html#gtk_actionable_set_action_target_value">Gtk.Actionable.set_action_target_value</a> for more information.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>actionable</code></em></i>
-					(
-						<a title="Gtk.Actionable" href="gtkactionable.html#GtkActionable">Gtk.Actionable</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkactionable.html#GtkActionable">Gtk.Actionable</a> widget</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="GLib.Variant" href="https://developer.gnome.org/glib/stable/glib-GVariant.html">GLib.Variant</a>
-										)
-								–
-			</div>
-							<p>the current target value</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.4
-		</p>
-
-
-        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -597,6 +539,64 @@ gtk_actionable_get_action_target_value (<a title="GtkActionable" href="gtkaction
 										
 <span class="annotation">[<abbr title="Don't free data after the code is done"><span class="acronym">transfer: none</span></abbr>]</span>
 
+										)
+								–
+			</div>
+							<p>the current target value</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.4
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_actionable_get_action_target_value">
+	<span><code>Gtk.Actionable.get_action_target_value</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.Actionable.get_action_target_value (self):
+    #python wrapper for 'gtk_actionable_get_action_target_value'</pre>
+
+<p>Gets the current target value of <em>actionable</em>.</p>
+<p>See <a href="gtkactionable.html#gtk_actionable_set_action_target_value">Gtk.Actionable.set_action_target_value</a> for more information.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>actionable</code></em></i>
+					(
+						<a title="Gtk.Actionable" href="gtkactionable.html#GtkActionable">Gtk.Actionable</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkactionable.html#GtkActionable">Gtk.Actionable</a> widget</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="GLib.Variant" href="https://developer.gnome.org/glib/stable/glib-GVariant.html">GLib.Variant</a>
 										)
 								–
 			</div>
@@ -679,6 +679,73 @@ function Gtk.prototype.get_action_target_value(): {
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.4;" id="gtk_actionable_set_action_target_value">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_actionable_set_action_target_value">
+	<span><code>gtk_actionable_set_action_target_value</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_actionable_set_action_target_value (<a title="GtkActionable" href="gtkactionable.html#GtkActionable">GtkActionable</a> * actionable,
+                                        <a title="GVariant" href="https://developer.gnome.org/glib/unstable/glib-GVariant.html#GVariant">GVariant</a> * target_value)</pre>
+
+<p>Sets the target value of an actionable widget.</p>
+<p>If <em>target_value</em> is <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> then the target value is unset.</p>
+<p>The target value has two purposes.  First, it is used as the
+parameter to activation of the action associated with the
+<a href="gtkactionable.html#GtkActionable">GtkActionable</a> widget. Second, it is used to determine if the widget
+should be rendered as “active” — the widget is active if the state
+is equal to the given target.</p>
+<p>Consider the example of associating a set of buttons with a <a href="https://developer.gnome.org/gio/unstable/GAction.html#GAction-struct">GAction</a>
+with string state in a typical “radio button” situation.  Each button
+will be associated with the same action, but with a different target
+value for that action.  Clicking on a particular button will activate
+the action with the target of that button, which will typically cause
+the action’s state to change to that value.  Since the action’s state
+is now equal to the target value of the button, the button will now
+be rendered as active (and the other buttons, with different targets,
+rendered inactive).</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>actionable</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkactionable.html#GtkActionable">GtkActionable</a> widget</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>target_value</code></em></i>
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/glib/unstable/glib-GVariant.html#GVariant">GVariant</a> to set as the target value, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.4
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -737,73 +804,6 @@ rendered inactive).</p>
 				–
 	</div>
 			<p>a <a href="https://developer.gnome.org/glib/stable/glib-GVariant.html">GLib.Variant</a> to set as the target value, or <a href="https://docs.python.org/3/library/constants.html#None">None</a></p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.4
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_actionable_set_action_target_value">
-	<span><code>gtk_actionable_set_action_target_value</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-gtk_actionable_set_action_target_value (<a title="GtkActionable" href="gtkactionable.html#GtkActionable">GtkActionable</a> * actionable,
-                                        <a title="GVariant" href="https://developer.gnome.org/glib/unstable/glib-GVariant.html#GVariant">GVariant</a> * target_value)</pre>
-
-<p>Sets the target value of an actionable widget.</p>
-<p>If <em>target_value</em> is <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a> then the target value is unset.</p>
-<p>The target value has two purposes.  First, it is used as the
-parameter to activation of the action associated with the
-<a href="gtkactionable.html#GtkActionable">GtkActionable</a> widget. Second, it is used to determine if the widget
-should be rendered as “active” — the widget is active if the state
-is equal to the given target.</p>
-<p>Consider the example of associating a set of buttons with a <a href="https://developer.gnome.org/gio/unstable/GAction.html#GAction-struct">GAction</a>
-with string state in a typical “radio button” situation.  Each button
-will be associated with the same action, but with a different target
-value for that action.  Clicking on a particular button will activate
-the action with the target of that button, which will typically cause
-the action’s state to change to that value.  Since the action’s state
-is now equal to the target value of the button, the button will now
-be rendered as active (and the other buttons, with different targets,
-rendered inactive).</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>actionable</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkactionable.html#GtkActionable">GtkActionable</a> widget</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>target_value</code></em></i>
-				–
-	</div>
-			<p>a <a href="https://developer.gnome.org/glib/unstable/glib-GVariant.html#GVariant">GVariant</a> to set as the target value, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
 
 	</div>
 
@@ -972,6 +972,66 @@ gtk_actionable_set_detailed_action_name ().</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.4;" id="gtk_actionable_set_detailed_action_name">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_actionable_set_detailed_action_name">
+	<span><code>gtk_actionable_set_detailed_action_name</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_actionable_set_detailed_action_name (<a title="GtkActionable" href="gtkactionable.html#GtkActionable">GtkActionable</a> * actionable,
+                                         const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * detailed_action_name)</pre>
+
+<p>Sets the action-name and associated string target value of an
+actionable widget.</p>
+<p>This allows for the effect of both <a href="gtkactionable.html#gtk_actionable_set_action_name">gtk_actionable_set_action_name</a>
+and <a href="gtkactionable.html#gtk_actionable_set_action_target_value">gtk_actionable_set_action_target_value</a> in the common case that
+the target is string-valued.</p>
+<p><em>detailed_action_name</em> is a string of the form
+<code>"action::target"</code> where <code>action</code>
+is the action name and <code>target</code> is the string to use
+as the target.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>actionable</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkactionable.html#GtkActionable">GtkActionable</a> widget</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>detailed_action_name</code></em></i>
+				–
+	</div>
+			<p>the detailed action name</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.4
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -1020,66 +1080,6 @@ as the target.</p>
 					(
 						<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
 						)
-				–
-	</div>
-			<p>the detailed action name</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.4
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_actionable_set_detailed_action_name">
-	<span><code>gtk_actionable_set_detailed_action_name</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-gtk_actionable_set_detailed_action_name (<a title="GtkActionable" href="gtkactionable.html#GtkActionable">GtkActionable</a> * actionable,
-                                         const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * detailed_action_name)</pre>
-
-<p>Sets the action-name and associated string target value of an
-actionable widget.</p>
-<p>This allows for the effect of both <a href="gtkactionable.html#gtk_actionable_set_action_name">gtk_actionable_set_action_name</a>
-and <a href="gtkactionable.html#gtk_actionable_set_action_target_value">gtk_actionable_set_action_target_value</a> in the common case that
-the target is string-valued.</p>
-<p><em>detailed_action_name</em> is a string of the form
-<code>"action::target"</code> where <code>action</code>
-is the action name and <code>target</code> is the string to use
-as the target.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>actionable</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkactionable.html#GtkActionable">GtkActionable</a> widget</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>detailed_action_name</code></em></i>
 				–
 	</div>
 			<p>the detailed action name</p>
@@ -1172,13 +1172,13 @@ as the target.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="GtkActionable">
 	
-        <div class="gi-symbol gi-symbol-python">
+        <div class="gi-symbol gi-symbol-c">
             
 
 
 
 <h3 data-hotdoc-id="GtkActionable">
-	<span><code>Gtk.Actionable</code></span>
+	<span><code>GtkActionable</code></span>
 </h3>
 
 
@@ -1190,13 +1190,13 @@ as the target.</p>
 
 
         </div>
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-python">
             
 
 
 
 <h3 data-hotdoc-id="GtkActionable">
-	<span><code>GtkActionable</code></span>
+	<span><code>Gtk.Actionable</code></span>
 </h3>
 
 

@@ -89,7 +89,7 @@ $('body').removeClass('no-script');
 </nav>
 
 <main>
-<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="gtkselection.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['python', 'c', 'javascript']" data-hotdoc-meta-gi-language="c">
+<div data-extension="gi-extension" data-hotdoc-in-toplevel="True" data-hotdoc-project="gtk-4.0.0" data-hotdoc-ref="gtkselection.html" class="page_container" id="page-wrapper" data-hotdoc-meta-gi-languages="['c', 'python', 'javascript']" data-hotdoc-meta-gi-language="c">
 <script src="assets/js/utils.js"></script>
 
 <div class="panel panel-collapse oc-collapsed" id="sidenav" data-hotdoc-role="navigation">
@@ -108,13 +108,13 @@ $('body').removeClass('no-script');
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="GtkSelectionData">
 	
-        <div class="gi-symbol gi-symbol-python">
+        <div class="gi-symbol gi-symbol-c">
             
 
 
 
 <h2 data-hotdoc-id="GtkSelectionData">
-	<span><code>Gtk.SelectionData</code></span>
+	<span><code>GtkSelectionData</code></span>
 </h2>
 
 
@@ -126,13 +126,13 @@ $('body').removeClass('no-script');
 
 
         </div>
-        <div class="gi-symbol gi-symbol-c">
+        <div class="gi-symbol gi-symbol-python">
             
 
 
 
 <h2 data-hotdoc-id="GtkSelectionData">
-	<span><code>GtkSelectionData</code></span>
+	<span><code>Gtk.SelectionData</code></span>
 </h2>
 
 
@@ -171,6 +171,95 @@ $('body').removeClass('no-script');
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_selection_data_set">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_selection_data_set">
+	<span><code>gtk_selection_data_set</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_selection_data_set (<a title="GtkSelectionData" href="gtkselection.html#GtkSelectionData">GtkSelectionData</a> * selection_data,
+                        <a title="GdkAtom" href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">GdkAtom</a> type,
+                        <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> format,
+                        <a title="guchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guchar">guchar</a> * data,
+                        <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> length)</pre>
+
+<p>Stores new data into a <a href="gtkselection.html#GtkSelectionData">GtkSelectionData</a> object. Should
+only be called from a selection handler callback.
+Zero-terminates the stored data.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>selection_data</code></em></i>
+				–
+	</div>
+			<p>a pointer to a <a href="gtkselection.html#GtkSelectionData">GtkSelectionData</a>-struct.</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>type</code></em></i>
+				–
+	</div>
+			<p>the type of selection data</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>format</code></em></i>
+				–
+	</div>
+			<p>format (number of bits in a unit)</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>data</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="Parameter points to an array of items"><span class="acronym">array</span></abbr> length=length]</span>
+
+						)
+				–
+	</div>
+			<p>pointer to the data (will be copied)</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>length</code></em></i>
+				–
+	</div>
+			<p>length of the data</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -252,95 +341,6 @@ Zero-terminates the stored data.</p>
 					(
 						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
 						)
-				–
-	</div>
-			<p>length of the data</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_selection_data_set">
-	<span><code>gtk_selection_data_set</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-gtk_selection_data_set (<a title="GtkSelectionData" href="gtkselection.html#GtkSelectionData">GtkSelectionData</a> * selection_data,
-                        <a title="GdkAtom" href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">GdkAtom</a> type,
-                        <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> format,
-                        <a title="guchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guchar">guchar</a> * data,
-                        <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> length)</pre>
-
-<p>Stores new data into a <a href="gtkselection.html#GtkSelectionData">GtkSelectionData</a> object. Should
-only be called from a selection handler callback.
-Zero-terminates the stored data.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>selection_data</code></em></i>
-				–
-	</div>
-			<p>a pointer to a <a href="gtkselection.html#GtkSelectionData">GtkSelectionData</a>-struct.</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>type</code></em></i>
-				–
-	</div>
-			<p>the type of selection data</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>format</code></em></i>
-				–
-	</div>
-			<p>format (number of bits in a unit)</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>data</code></em></i>
-					(
-						
-<span class="annotation">[<abbr title="Parameter points to an array of items"><span class="acronym">array</span></abbr> length=length]</span>
-
-						)
-				–
-	</div>
-			<p>pointer to the data (will be copied)</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>length</code></em></i>
 				–
 	</div>
 			<p>length of the data</p>
@@ -456,6 +456,81 @@ Zero-terminates the stored data.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_selection_data_set_text">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_selection_data_set_text">
+	<span><code>gtk_selection_data_set_text</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_selection_data_set_text (<a title="GtkSelectionData" href="gtkselection.html#GtkSelectionData">GtkSelectionData</a> * selection_data,
+                             const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * str,
+                             <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> len)</pre>
+
+<p>Sets the contents of the selection from a UTF-8 encoded string.
+The string is converted to the form determined by
+<em>selection_data</em>-&gt;target.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>selection_data</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkselection.html#GtkSelectionData">GtkSelectionData</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>str</code></em></i>
+				–
+	</div>
+			<p>a UTF-8 string</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>len</code></em></i>
+				–
+	</div>
+			<p>the length of <em>str</em>, or -1 if <em>str</em> is nul-terminated.</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if the selection was successfully set,
+otherwise <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS">FALSE</a>.</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -530,81 +605,6 @@ The string is converted to the form determined by
 			</div>
 							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if the selection was successfully set,
 otherwise <a href="https://docs.python.org/3/library/constants.html#False">False</a>.</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_selection_data_set_text">
-	<span><code>gtk_selection_data_set_text</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
-gtk_selection_data_set_text (<a title="GtkSelectionData" href="gtkselection.html#GtkSelectionData">GtkSelectionData</a> * selection_data,
-                             const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * str,
-                             <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> len)</pre>
-
-<p>Sets the contents of the selection from a UTF-8 encoded string.
-The string is converted to the form determined by
-<em>selection_data</em>-&gt;target.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>selection_data</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkselection.html#GtkSelectionData">GtkSelectionData</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>str</code></em></i>
-				–
-	</div>
-			<p>a UTF-8 string</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>len</code></em></i>
-				–
-	</div>
-			<p>the length of <em>str</em>, or -1 if <em>str</em> is nul-terminated.</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-								–
-			</div>
-							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if the selection was successfully set,
-otherwise <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS">FALSE</a>.</p>
 
 					</div>
 	</div>
@@ -705,63 +705,6 @@ otherwise <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refer
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_selection_data_get_text">
 	
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_selection_data_get_text">
-	<span><code>Gtk.SelectionData.get_text</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.SelectionData.get_text (self):
-    #python wrapper for 'gtk_selection_data_get_text'</pre>
-
-<p>Gets the contents of the selection data as a UTF-8 string.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>selection_data</code></em></i>
-					(
-						<a title="Gtk.SelectionData" href="gtkselection.html#GtkSelectionData">Gtk.SelectionData</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkselection.html#GtkSelectionData">Gtk.SelectionData</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
-										)
-								–
-			</div>
-							<p>if the selection data contained a
-recognized text type and it could be converted to UTF-8, a newly
-allocated string containing the converted text, otherwise <a href="https://docs.python.org/3/library/constants.html#None">None</a>.
-If the result is non-%NULL it must be freed with <a href="https://developer.gnome.org/glib/unstable/glib-Memory-Allocation.html#g-free">GLib.free</a>.</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -814,6 +757,63 @@ gtk_selection_data_get_text (const <a title="GtkSelectionData" href="gtkselectio
 recognized text type and it could be converted to UTF-8, a newly
 allocated string containing the converted text, otherwise <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a>.
 If the result is non-%NULL it must be freed with <a href="https://developer.gnome.org/glib/unstable/glib-Memory-Allocation.html#g-free">g_free</a>.</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_selection_data_get_text">
+	<span><code>Gtk.SelectionData.get_text</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.SelectionData.get_text (self):
+    #python wrapper for 'gtk_selection_data_get_text'</pre>
+
+<p>Gets the contents of the selection data as a UTF-8 string.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>selection_data</code></em></i>
+					(
+						<a title="Gtk.SelectionData" href="gtkselection.html#GtkSelectionData">Gtk.SelectionData</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkselection.html#GtkSelectionData">Gtk.SelectionData</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>
+										)
+								–
+			</div>
+							<p>if the selection data contained a
+recognized text type and it could be converted to UTF-8, a newly
+allocated string containing the converted text, otherwise <a href="https://docs.python.org/3/library/constants.html#None">None</a>.
+If the result is non-%NULL it must be freed with <a href="https://developer.gnome.org/glib/unstable/glib-Memory-Allocation.html#g-free">GLib.free</a>.</p>
 
 					</div>
 	</div>
@@ -888,6 +888,73 @@ If the result is non-%NULL it must be freed with <a href="https://developer.gnom
 
 <div class="base_symbol_container" data-hotdoc-tags="since:2.6;" id="gtk_selection_data_set_pixbuf">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_selection_data_set_pixbuf">
+	<span><code>gtk_selection_data_set_pixbuf</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_selection_data_set_pixbuf (<a title="GtkSelectionData" href="gtkselection.html#GtkSelectionData">GtkSelectionData</a> * selection_data,
+                               <a title="GdkPixbuf" href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf</a> * pixbuf)</pre>
+
+<p>Sets the contents of the selection from a <a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf</a>
+The pixbuf is converted to the form determined by
+<em>selection_data</em>-&gt;target.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>selection_data</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkselection.html#GtkSelectionData">GtkSelectionData</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>pixbuf</code></em></i>
+				–
+	</div>
+			<p>a <a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if the selection was successfully set,
+otherwise <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS">FALSE</a>.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.6
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -949,73 +1016,6 @@ The pixbuf is converted to the form determined by
 			</div>
 							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if the selection was successfully set,
 otherwise <a href="https://docs.python.org/3/library/constants.html#False">False</a>.</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.6
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_selection_data_set_pixbuf">
-	<span><code>gtk_selection_data_set_pixbuf</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
-gtk_selection_data_set_pixbuf (<a title="GtkSelectionData" href="gtkselection.html#GtkSelectionData">GtkSelectionData</a> * selection_data,
-                               <a title="GdkPixbuf" href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf</a> * pixbuf)</pre>
-
-<p>Sets the contents of the selection from a <a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf</a>
-The pixbuf is converted to the form determined by
-<em>selection_data</em>-&gt;target.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>selection_data</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkselection.html#GtkSelectionData">GtkSelectionData</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>pixbuf</code></em></i>
-				–
-	</div>
-			<p>a <a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-								–
-			</div>
-							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if the selection was successfully set,
-otherwise <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS">FALSE</a>.</p>
 
 					</div>
 	</div>
@@ -1109,67 +1109,6 @@ otherwise <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refer
 
 <div class="base_symbol_container" data-hotdoc-tags="since:2.6;" id="gtk_selection_data_get_pixbuf">
 	
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_selection_data_get_pixbuf">
-	<span><code>Gtk.SelectionData.get_pixbuf</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.SelectionData.get_pixbuf (self):
-    #python wrapper for 'gtk_selection_data_get_pixbuf'</pre>
-
-<p>Gets the contents of the selection data as a <a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf.Pixbuf</a>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>selection_data</code></em></i>
-					(
-						<a title="Gtk.SelectionData" href="gtkselection.html#GtkSelectionData">Gtk.SelectionData</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkselection.html#GtkSelectionData">Gtk.SelectionData</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="GdkPixbuf.Pixbuf" href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf.Pixbuf</a>
-										)
-								–
-			</div>
-							<p>if the selection data
-contained a recognized image type and it could be converted to a
-<a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf.Pixbuf</a>, a newly allocated pixbuf is returned, otherwise
-<a href="https://docs.python.org/3/library/constants.html#None">None</a>.  If the result is non-%NULL it must be freed with
-<a href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-unref">GObject.Object.unref</a>.</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.6
-		</p>
-
-
-        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -1222,6 +1161,67 @@ contained a recognized image type and it could be converted to a
 <a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf</a>, a newly allocated pixbuf is returned, otherwise
 <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a>.  If the result is non-%NULL it must be freed with
 <a href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-unref">g_object_unref</a>.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.6
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_selection_data_get_pixbuf">
+	<span><code>Gtk.SelectionData.get_pixbuf</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.SelectionData.get_pixbuf (self):
+    #python wrapper for 'gtk_selection_data_get_pixbuf'</pre>
+
+<p>Gets the contents of the selection data as a <a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf.Pixbuf</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>selection_data</code></em></i>
+					(
+						<a title="Gtk.SelectionData" href="gtkselection.html#GtkSelectionData">Gtk.SelectionData</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkselection.html#GtkSelectionData">Gtk.SelectionData</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="GdkPixbuf.Pixbuf" href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf.Pixbuf</a>
+										)
+								–
+			</div>
+							<p>if the selection data
+contained a recognized image type and it could be converted to a
+<a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf.Pixbuf</a>, a newly allocated pixbuf is returned, otherwise
+<a href="https://docs.python.org/3/library/constants.html#None">None</a>.  If the result is non-%NULL it must be freed with
+<a href="https://developer.gnome.org/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-unref">GObject.Object.unref</a>.</p>
 
 					</div>
 	</div>
@@ -1303,6 +1303,79 @@ contained a recognized image type and it could be converted to a
 
 <div class="base_symbol_container" data-hotdoc-tags="since:2.6;" id="gtk_selection_data_set_uris">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_selection_data_set_uris">
+	<span><code>gtk_selection_data_set_uris</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_selection_data_set_uris (<a title="GtkSelectionData" href="gtkselection.html#GtkSelectionData">GtkSelectionData</a> * selection_data,
+                             <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> ** uris)</pre>
+
+<p>Sets the contents of the selection from a list of URIs.
+The string is converted to the form determined by
+<em>selection_data</em>-&gt;target.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>selection_data</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkselection.html#GtkSelectionData">GtkSelectionData</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>uris</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="Parameter points to an array of items"><span class="acronym">array</span></abbr> zero-terminated=1]</span>
+
+						)
+				–
+	</div>
+			<p>a <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a>-terminated array of
+strings holding URIs</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if the selection was successfully set,
+otherwise <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS">FALSE</a>.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.6
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -1365,79 +1438,6 @@ strings holding URIs</p>
 			</div>
 							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if the selection was successfully set,
 otherwise <a href="https://docs.python.org/3/library/constants.html#False">False</a>.</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.6
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_selection_data_set_uris">
-	<span><code>gtk_selection_data_set_uris</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
-gtk_selection_data_set_uris (<a title="GtkSelectionData" href="gtkselection.html#GtkSelectionData">GtkSelectionData</a> * selection_data,
-                             <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> ** uris)</pre>
-
-<p>Sets the contents of the selection from a list of URIs.
-The string is converted to the form determined by
-<em>selection_data</em>-&gt;target.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>selection_data</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkselection.html#GtkSelectionData">GtkSelectionData</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>uris</code></em></i>
-					(
-						
-<span class="annotation">[<abbr title="Parameter points to an array of items"><span class="acronym">array</span></abbr> zero-terminated=1]</span>
-
-						)
-				–
-	</div>
-			<p>a <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a>-terminated array of
-strings holding URIs</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-								–
-			</div>
-							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if the selection was successfully set,
-otherwise <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS">FALSE</a>.</p>
 
 					</div>
 	</div>
@@ -1532,67 +1532,6 @@ otherwise <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refer
 
 <div class="base_symbol_container" data-hotdoc-tags="since:2.6;" id="gtk_selection_data_get_uris">
 	
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_selection_data_get_uris">
-	<span><code>Gtk.SelectionData.get_uris</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.SelectionData.get_uris (self):
-    #python wrapper for 'gtk_selection_data_get_uris'</pre>
-
-<p>Gets the contents of the selection data as array of URIs.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>selection_data</code></em></i>
-					(
-						<a title="Gtk.SelectionData" href="gtkselection.html#GtkSelectionData">Gtk.SelectionData</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkselection.html#GtkSelectionData">Gtk.SelectionData</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					[ <a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a> ]
-										)
-								–
-			</div>
-							<p>if
-the selection data contains a list of
-URIs, a newly allocated <a href="https://docs.python.org/3/library/constants.html#None">None</a>-terminated string array
-containing the URIs, otherwise <a href="https://docs.python.org/3/library/constants.html#None">None</a>. If the result is
-non-%NULL it must be freed with <a href="https://developer.gnome.org/glib/unstable/glib-String-Utility-Functions.html#g-strfreev">GLib.strfreev</a>.</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.6
-		</p>
-
-
-        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -1646,6 +1585,67 @@ the selection data contains a list of
 URIs, a newly allocated <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a>-terminated string array
 containing the URIs, otherwise <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a>. If the result is
 non-%NULL it must be freed with <a href="https://developer.gnome.org/glib/unstable/glib-String-Utility-Functions.html#g-strfreev">g_strfreev</a>.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.6
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_selection_data_get_uris">
+	<span><code>Gtk.SelectionData.get_uris</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.SelectionData.get_uris (self):
+    #python wrapper for 'gtk_selection_data_get_uris'</pre>
+
+<p>Gets the contents of the selection data as array of URIs.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>selection_data</code></em></i>
+					(
+						<a title="Gtk.SelectionData" href="gtkselection.html#GtkSelectionData">Gtk.SelectionData</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkselection.html#GtkSelectionData">Gtk.SelectionData</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					[ <a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a> ]
+										)
+								–
+			</div>
+							<p>if
+the selection data contains a list of
+URIs, a newly allocated <a href="https://docs.python.org/3/library/constants.html#None">None</a>-terminated string array
+containing the URIs, otherwise <a href="https://docs.python.org/3/library/constants.html#None">None</a>. If the result is
+non-%NULL it must be freed with <a href="https://developer.gnome.org/glib/unstable/glib-String-Utility-Functions.html#g-strfreev">GLib.strfreev</a>.</p>
 
 					</div>
 	</div>
@@ -1727,6 +1727,84 @@ non-%NULL it must be freed with <a href="https://developer.gnome.org/glib/unstab
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_selection_data_get_targets">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_selection_data_get_targets">
+	<span><code>gtk_selection_data_get_targets</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_selection_data_get_targets (const <a title="GtkSelectionData" href="gtkselection.html#GtkSelectionData">GtkSelectionData</a> * selection_data,
+                                <a title="GdkAtom" href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">GdkAtom</a> ** targets,
+                                <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> * n_atoms)</pre>
+
+<p>Gets the contents of <em>selection_data</em> as an array of targets.
+This can be used to interpret the results of getting
+the standard TARGETS target that is always supplied for
+any selection.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>selection_data</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkselection.html#GtkSelectionData">GtkSelectionData</a> object</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>targets</code></em></i>
+				–
+	</div>
+			<p>(out) (array length=n_atoms) (transfer container):
+location to store an array of targets. The result stored
+here must be freed with <a href="https://developer.gnome.org/glib/unstable/glib-Memory-Allocation.html#g-free">g_free</a>.</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>n_atoms</code></em></i>
+				–
+	</div>
+			<p>location to store number of items in <em>targets</em>.</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if <em>selection_data</em> contains a valid
+array of targets, otherwise <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS">FALSE</a>.</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -1809,84 +1887,6 @@ array of targets, otherwise <a href="https://docs.python.org/3/library/constants
 	</div>
 
 			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_selection_data_get_targets">
-	<span><code>gtk_selection_data_get_targets</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
-gtk_selection_data_get_targets (const <a title="GtkSelectionData" href="gtkselection.html#GtkSelectionData">GtkSelectionData</a> * selection_data,
-                                <a title="GdkAtom" href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">GdkAtom</a> ** targets,
-                                <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> * n_atoms)</pre>
-
-<p>Gets the contents of <em>selection_data</em> as an array of targets.
-This can be used to interpret the results of getting
-the standard TARGETS target that is always supplied for
-any selection.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>selection_data</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkselection.html#GtkSelectionData">GtkSelectionData</a> object</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>targets</code></em></i>
-				–
-	</div>
-			<p>(out) (array length=n_atoms) (transfer container):
-location to store an array of targets. The result stored
-here must be freed with <a href="https://developer.gnome.org/glib/unstable/glib-Memory-Allocation.html#g-free">g_free</a>.</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>n_atoms</code></em></i>
-				–
-	</div>
-			<p>location to store number of items in <em>targets</em>.</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-								–
-			</div>
-							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if <em>selection_data</em> contains a valid
-array of targets, otherwise <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS">FALSE</a>.</p>
-
-					</div>
-	</div>
 
 
 
@@ -1989,6 +1989,74 @@ array of targets, otherwise <a href="https://developer.mozilla.org/en-US/docs/We
 
 <div class="base_symbol_container" data-hotdoc-tags="since:2.6;" id="gtk_selection_data_targets_include_image">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_selection_data_targets_include_image">
+	<span><code>gtk_selection_data_targets_include_image</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_selection_data_targets_include_image (const <a title="GtkSelectionData" href="gtkselection.html#GtkSelectionData">GtkSelectionData</a> * selection_data,
+                                          <a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a> writable)</pre>
+
+<p>Given a <a href="gtkselection.html#GtkSelectionData">GtkSelectionData</a> object holding a list of targets,
+determines if any of the targets in <em>targets</em> can be used to
+provide a <a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>selection_data</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkselection.html#GtkSelectionData">GtkSelectionData</a> object</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>writable</code></em></i>
+				–
+	</div>
+			<p>whether to accept only targets for which GTK+ knows
+how to convert a pixbuf into the format</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if <em>selection_data</em> holds a list of targets,
+and a suitable target for images is included, otherwise <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS">FALSE</a>.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.6
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -2051,74 +2119,6 @@ how to convert a pixbuf into the format</p>
 			</div>
 							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if <em>selection_data</em> holds a list of targets,
 and a suitable target for images is included, otherwise <a href="https://docs.python.org/3/library/constants.html#False">False</a>.</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.6
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_selection_data_targets_include_image">
-	<span><code>gtk_selection_data_targets_include_image</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
-gtk_selection_data_targets_include_image (const <a title="GtkSelectionData" href="gtkselection.html#GtkSelectionData">GtkSelectionData</a> * selection_data,
-                                          <a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a> writable)</pre>
-
-<p>Given a <a href="gtkselection.html#GtkSelectionData">GtkSelectionData</a> object holding a list of targets,
-determines if any of the targets in <em>targets</em> can be used to
-provide a <a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf</a>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>selection_data</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkselection.html#GtkSelectionData">GtkSelectionData</a> object</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>writable</code></em></i>
-				–
-	</div>
-			<p>whether to accept only targets for which GTK+ knows
-how to convert a pixbuf into the format</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-								–
-			</div>
-							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if <em>selection_data</em> holds a list of targets,
-and a suitable target for images is included, otherwise <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS">FALSE</a>.</p>
 
 					</div>
 	</div>
@@ -2213,6 +2213,59 @@ and a suitable target for images is included, otherwise <a href="https://develop
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_selection_data_targets_include_text">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_selection_data_targets_include_text">
+	<span><code>gtk_selection_data_targets_include_text</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_selection_data_targets_include_text (const <a title="GtkSelectionData" href="gtkselection.html#GtkSelectionData">GtkSelectionData</a> * selection_data)</pre>
+
+<p>Given a <a href="gtkselection.html#GtkSelectionData">GtkSelectionData</a> object holding a list of targets,
+determines if any of the targets in <em>targets</em> can be used to
+provide text.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>selection_data</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkselection.html#GtkSelectionData">GtkSelectionData</a> object</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if <em>selection_data</em> holds a list of targets,
+and a suitable target for text is included, otherwise <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS">FALSE</a>.</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -2261,59 +2314,6 @@ provide text.</p>
 			</div>
 							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if <em>selection_data</em> holds a list of targets,
 and a suitable target for text is included, otherwise <a href="https://docs.python.org/3/library/constants.html#False">False</a>.</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_selection_data_targets_include_text">
-	<span><code>gtk_selection_data_targets_include_text</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
-gtk_selection_data_targets_include_text (const <a title="GtkSelectionData" href="gtkselection.html#GtkSelectionData">GtkSelectionData</a> * selection_data)</pre>
-
-<p>Given a <a href="gtkselection.html#GtkSelectionData">GtkSelectionData</a> object holding a list of targets,
-determines if any of the targets in <em>targets</em> can be used to
-provide text.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>selection_data</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkselection.html#GtkSelectionData">GtkSelectionData</a> object</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-								–
-			</div>
-							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if <em>selection_data</em> holds a list of targets,
-and a suitable target for text is included, otherwise <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS">FALSE</a>.</p>
 
 					</div>
 	</div>
@@ -2388,6 +2388,62 @@ and a suitable target for text is included, otherwise <a href="https://developer
 
 <div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_selection_data_targets_include_uri">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_selection_data_targets_include_uri">
+	<span><code>gtk_selection_data_targets_include_uri</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_selection_data_targets_include_uri (const <a title="GtkSelectionData" href="gtkselection.html#GtkSelectionData">GtkSelectionData</a> * selection_data)</pre>
+
+<p>Given a <a href="gtkselection.html#GtkSelectionData">GtkSelectionData</a> object holding a list of targets,
+determines if any of the targets in <em>targets</em> can be used to
+provide a list or URIs.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>selection_data</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkselection.html#GtkSelectionData">GtkSelectionData</a> object</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if <em>selection_data</em> holds a list of targets,
+and a suitable target for URI lists is included, otherwise <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS">FALSE</a>.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -2436,62 +2492,6 @@ provide a list or URIs.</p>
 			</div>
 							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if <em>selection_data</em> holds a list of targets,
 and a suitable target for URI lists is included, otherwise <a href="https://docs.python.org/3/library/constants.html#False">False</a>.</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.10
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_selection_data_targets_include_uri">
-	<span><code>gtk_selection_data_targets_include_uri</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
-gtk_selection_data_targets_include_uri (const <a title="GtkSelectionData" href="gtkselection.html#GtkSelectionData">GtkSelectionData</a> * selection_data)</pre>
-
-<p>Given a <a href="gtkselection.html#GtkSelectionData">GtkSelectionData</a> object holding a list of targets,
-determines if any of the targets in <em>targets</em> can be used to
-provide a list or URIs.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>selection_data</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkselection.html#GtkSelectionData">GtkSelectionData</a> object</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-								–
-			</div>
-							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if <em>selection_data</em> holds a list of targets,
-and a suitable target for URI lists is included, otherwise <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS">FALSE</a>.</p>
 
 					</div>
 	</div>
@@ -2572,6 +2572,74 @@ and a suitable target for URI lists is included, otherwise <a href="https://deve
 
 <div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_selection_data_targets_include_rich_text">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_selection_data_targets_include_rich_text">
+	<span><code>gtk_selection_data_targets_include_rich_text</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_selection_data_targets_include_rich_text (const <a title="GtkSelectionData" href="gtkselection.html#GtkSelectionData">GtkSelectionData</a> * selection_data,
+                                              <a title="GtkTextBuffer" href="gtktextbuffer.html#GtkTextBuffer">GtkTextBuffer</a> * buffer)</pre>
+
+<p>Given a <a href="gtkselection.html#GtkSelectionData">GtkSelectionData</a> object holding a list of targets,
+determines if any of the targets in <em>targets</em> can be used to
+provide rich text.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>selection_data</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkselection.html#GtkSelectionData">GtkSelectionData</a> object</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>buffer</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtktextbuffer.html#GtkTextBuffer">GtkTextBuffer</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if <em>selection_data</em> holds a list of targets,
+and a suitable target for rich text is included,
+otherwise <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS">FALSE</a>.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -2634,74 +2702,6 @@ provide rich text.</p>
 							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if <em>selection_data</em> holds a list of targets,
 and a suitable target for rich text is included,
 otherwise <a href="https://docs.python.org/3/library/constants.html#False">False</a>.</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.10
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_selection_data_targets_include_rich_text">
-	<span><code>gtk_selection_data_targets_include_rich_text</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
-gtk_selection_data_targets_include_rich_text (const <a title="GtkSelectionData" href="gtkselection.html#GtkSelectionData">GtkSelectionData</a> * selection_data,
-                                              <a title="GtkTextBuffer" href="gtktextbuffer.html#GtkTextBuffer">GtkTextBuffer</a> * buffer)</pre>
-
-<p>Given a <a href="gtkselection.html#GtkSelectionData">GtkSelectionData</a> object holding a list of targets,
-determines if any of the targets in <em>targets</em> can be used to
-provide rich text.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>selection_data</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkselection.html#GtkSelectionData">GtkSelectionData</a> object</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>buffer</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtktextbuffer.html#GtkTextBuffer">GtkTextBuffer</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-								–
-			</div>
-							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if <em>selection_data</em> holds a list of targets,
-and a suitable target for rich text is included,
-otherwise <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS">FALSE</a>.</p>
 
 					</div>
 	</div>
@@ -2796,63 +2796,6 @@ otherwise <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refer
 
 <div class="base_symbol_container" data-hotdoc-tags="since:2.16;" id="gtk_selection_data_get_selection">
 	
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_selection_data_get_selection">
-	<span><code>Gtk.SelectionData.get_selection</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.SelectionData.get_selection (self):
-    #python wrapper for 'gtk_selection_data_get_selection'</pre>
-
-<p>Retrieves the selection <a href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">Gdk.Atom</a> of the selection data.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>selection_data</code></em></i>
-					(
-						<a title="Gtk.SelectionData" href="gtkselection.html#GtkSelectionData">Gtk.SelectionData</a>
-						)
-				–
-	</div>
-			<p>a pointer to a <a href="gtkselection.html#GtkSelectionData">Gtk.SelectionData</a>-struct.</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Gdk.Atom" href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">Gdk.Atom</a>
-										)
-								–
-			</div>
-							<p>the selection <a href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">Gdk.Atom</a> of the selection data.</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.16
-		</p>
-
-
-        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -2900,6 +2843,63 @@ gtk_selection_data_get_selection (const <a title="GtkSelectionData" href="gtksel
 								–
 			</div>
 							<p>the selection <a href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">GdkAtom</a> of the selection data.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.16
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_selection_data_get_selection">
+	<span><code>Gtk.SelectionData.get_selection</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.SelectionData.get_selection (self):
+    #python wrapper for 'gtk_selection_data_get_selection'</pre>
+
+<p>Retrieves the selection <a href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">Gdk.Atom</a> of the selection data.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>selection_data</code></em></i>
+					(
+						<a title="Gtk.SelectionData" href="gtkselection.html#GtkSelectionData">Gtk.SelectionData</a>
+						)
+				–
+	</div>
+			<p>a pointer to a <a href="gtkselection.html#GtkSelectionData">Gtk.SelectionData</a>-struct.</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gdk.Atom" href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">Gdk.Atom</a>
+										)
+								–
+			</div>
+							<p>the selection <a href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">Gdk.Atom</a> of the selection data.</p>
 
 					</div>
 	</div>
@@ -3045,6 +3045,59 @@ gtk_selection_data_get_data (const <a title="GtkSelectionData" href="gtkselectio
 
 <div class="base_symbol_container" data-hotdoc-tags="since:2.14;" id="gtk_selection_data_get_length">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_selection_data_get_length">
+	<span><code>gtk_selection_data_get_length</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a>
+gtk_selection_data_get_length (const <a title="GtkSelectionData" href="gtkselection.html#GtkSelectionData">GtkSelectionData</a> * selection_data)</pre>
+
+<p>Retrieves the length of the raw data of the selection.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>selection_data</code></em></i>
+				–
+	</div>
+			<p>a pointer to a <a href="gtkselection.html#GtkSelectionData">GtkSelectionData</a>-struct.</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>the length of the data of the selection.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.14
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -3087,59 +3140,6 @@ def Gtk.SelectionData.get_length (self):
 									(
 					<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
 										)
-								–
-			</div>
-							<p>the length of the data of the selection.</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.14
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_selection_data_get_length">
-	<span><code>gtk_selection_data_get_length</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-<a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a>
-gtk_selection_data_get_length (const <a title="GtkSelectionData" href="gtkselection.html#GtkSelectionData">GtkSelectionData</a> * selection_data)</pre>
-
-<p>Retrieves the length of the raw data of the selection.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>selection_data</code></em></i>
-				–
-	</div>
-			<p>a pointer to a <a href="gtkselection.html#GtkSelectionData">GtkSelectionData</a>-struct.</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
 								–
 			</div>
 							<p>the length of the data of the selection.</p>
@@ -3220,78 +3220,6 @@ function Gtk.prototype.get_length(): {
 
 <div class="base_symbol_container" data-hotdoc-tags="since:3.0;" id="gtk_selection_data_get_data_with_length">
 	
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_selection_data_get_data_with_length">
-	<span><code>Gtk.SelectionData.get_data_with_length</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.SelectionData.get_data_with_length (self):
-    #python wrapper for 'gtk_selection_data_get_data_with_length'</pre>
-
-<p>Retrieves the raw data of the selection along with its length.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>selection_data</code></em></i>
-					(
-						<a title="Gtk.SelectionData" href="gtkselection.html#GtkSelectionData">Gtk.SelectionData</a>
-						)
-				–
-	</div>
-			<p>a pointer to a <a href="gtkselection.html#GtkSelectionData">Gtk.SelectionData</a>-struct.</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<p><b>Returns a tuple made of:</b></p>
-				
-<div class="symbol-detail">
-	<div>
-									(
-			[ <a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a> ]
-						)
-				–
-	</div>
-			<p>the raw data of the selection</p>
-
-	</div>
-
-				
-<div class="symbol-detail">
-	<div>
-				<i><em><code>length</code></em></i>
-									(
-			<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
-						)
-				–
-	</div>
-			<p>the raw data of the selection</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 3.0
-		</p>
-
-
-        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -3358,6 +3286,78 @@ gtk_selection_data_get_data_with_length (const <a title="GtkSelectionData" href=
 
 					</div>
 	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 3.0
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_selection_data_get_data_with_length">
+	<span><code>Gtk.SelectionData.get_data_with_length</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.SelectionData.get_data_with_length (self):
+    #python wrapper for 'gtk_selection_data_get_data_with_length'</pre>
+
+<p>Retrieves the raw data of the selection along with its length.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>selection_data</code></em></i>
+					(
+						<a title="Gtk.SelectionData" href="gtkselection.html#GtkSelectionData">Gtk.SelectionData</a>
+						)
+				–
+	</div>
+			<p>a pointer to a <a href="gtkselection.html#GtkSelectionData">Gtk.SelectionData</a>-struct.</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<p><b>Returns a tuple made of:</b></p>
+				
+<div class="symbol-detail">
+	<div>
+									(
+			[ <a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a> ]
+						)
+				–
+	</div>
+			<p>the raw data of the selection</p>
+
+	</div>
+
+				
+<div class="symbol-detail">
+	<div>
+				<i><em><code>length</code></em></i>
+									(
+			<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>the raw data of the selection</p>
+
+	</div>
+
+			</div>
 
 
 
@@ -3447,63 +3447,6 @@ function Gtk.prototype.get_data_with_length(): {
 
 <div class="base_symbol_container" data-hotdoc-tags="since:2.14;" id="gtk_selection_data_get_data_type">
 	
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_selection_data_get_data_type">
-	<span><code>Gtk.SelectionData.get_data_type</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.SelectionData.get_data_type (self):
-    #python wrapper for 'gtk_selection_data_get_data_type'</pre>
-
-<p>Retrieves the data type of the selection.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>selection_data</code></em></i>
-					(
-						<a title="Gtk.SelectionData" href="gtkselection.html#GtkSelectionData">Gtk.SelectionData</a>
-						)
-				–
-	</div>
-			<p>a pointer to a <a href="gtkselection.html#GtkSelectionData">Gtk.SelectionData</a>-struct.</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Gdk.Atom" href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">Gdk.Atom</a>
-										)
-								–
-			</div>
-							<p>the data type of the selection.</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.14
-		</p>
-
-
-        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -3547,6 +3490,63 @@ gtk_selection_data_get_data_type (const <a title="GtkSelectionData" href="gtksel
 										
 <span class="annotation">[<abbr title="Don't free data after the code is done"><span class="acronym">transfer: none</span></abbr>]</span>
 
+										)
+								–
+			</div>
+							<p>the data type of the selection.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.14
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_selection_data_get_data_type">
+	<span><code>Gtk.SelectionData.get_data_type</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.SelectionData.get_data_type (self):
+    #python wrapper for 'gtk_selection_data_get_data_type'</pre>
+
+<p>Retrieves the data type of the selection.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>selection_data</code></em></i>
+					(
+						<a title="Gtk.SelectionData" href="gtkselection.html#GtkSelectionData">Gtk.SelectionData</a>
+						)
+				–
+	</div>
+			<p>a pointer to a <a href="gtkselection.html#GtkSelectionData">Gtk.SelectionData</a>-struct.</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gdk.Atom" href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">Gdk.Atom</a>
 										)
 								–
 			</div>
@@ -3628,63 +3628,6 @@ function Gtk.prototype.get_data_type(): {
 
 <div class="base_symbol_container" data-hotdoc-tags="since:2.14;" id="gtk_selection_data_get_display">
 	
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_selection_data_get_display">
-	<span><code>Gtk.SelectionData.get_display</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.SelectionData.get_display (self):
-    #python wrapper for 'gtk_selection_data_get_display'</pre>
-
-<p>Retrieves the display of the selection.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>selection_data</code></em></i>
-					(
-						<a title="Gtk.SelectionData" href="gtkselection.html#GtkSelectionData">Gtk.SelectionData</a>
-						)
-				–
-	</div>
-			<p>a pointer to a <a href="gtkselection.html#GtkSelectionData">Gtk.SelectionData</a>-struct.</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Gdk.Display" href="https://developer.gnome.org/gdk3/GdkDisplay.html#GdkDisplay-struct">Gdk.Display</a>
-										)
-								–
-			</div>
-							<p>the display of the selection.</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.14
-		</p>
-
-
-        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -3728,6 +3671,63 @@ gtk_selection_data_get_display (const <a title="GtkSelectionData" href="gtkselec
 										
 <span class="annotation">[<abbr title="Don't free data after the code is done"><span class="acronym">transfer: none</span></abbr>]</span>
 
+										)
+								–
+			</div>
+							<p>the display of the selection.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.14
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_selection_data_get_display">
+	<span><code>Gtk.SelectionData.get_display</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.SelectionData.get_display (self):
+    #python wrapper for 'gtk_selection_data_get_display'</pre>
+
+<p>Retrieves the display of the selection.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>selection_data</code></em></i>
+					(
+						<a title="Gtk.SelectionData" href="gtkselection.html#GtkSelectionData">Gtk.SelectionData</a>
+						)
+				–
+	</div>
+			<p>a pointer to a <a href="gtkselection.html#GtkSelectionData">Gtk.SelectionData</a>-struct.</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gdk.Display" href="https://developer.gnome.org/gdk3/GdkDisplay.html#GdkDisplay-struct">Gdk.Display</a>
 										)
 								–
 			</div>
@@ -3809,6 +3809,59 @@ function Gtk.prototype.get_display(): {
 
 <div class="base_symbol_container" data-hotdoc-tags="since:2.14;" id="gtk_selection_data_get_format">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_selection_data_get_format">
+	<span><code>gtk_selection_data_get_format</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a>
+gtk_selection_data_get_format (const <a title="GtkSelectionData" href="gtkselection.html#GtkSelectionData">GtkSelectionData</a> * selection_data)</pre>
+
+<p>Retrieves the format of the selection.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>selection_data</code></em></i>
+				–
+	</div>
+			<p>a pointer to a <a href="gtkselection.html#GtkSelectionData">GtkSelectionData</a>-struct.</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>the format of the selection.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.14
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -3851,59 +3904,6 @@ def Gtk.SelectionData.get_format (self):
 									(
 					<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
 										)
-								–
-			</div>
-							<p>the format of the selection.</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.14
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_selection_data_get_format">
-	<span><code>gtk_selection_data_get_format</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-<a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a>
-gtk_selection_data_get_format (const <a title="GtkSelectionData" href="gtkselection.html#GtkSelectionData">GtkSelectionData</a> * selection_data)</pre>
-
-<p>Retrieves the format of the selection.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>selection_data</code></em></i>
-				–
-	</div>
-			<p>a pointer to a <a href="gtkselection.html#GtkSelectionData">GtkSelectionData</a>-struct.</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
 								–
 			</div>
 							<p>the format of the selection.</p>
@@ -3984,63 +3984,6 @@ function Gtk.prototype.get_format(): {
 
 <div class="base_symbol_container" data-hotdoc-tags="since:2.14;" id="gtk_selection_data_get_target">
 	
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_selection_data_get_target">
-	<span><code>Gtk.SelectionData.get_target</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.SelectionData.get_target (self):
-    #python wrapper for 'gtk_selection_data_get_target'</pre>
-
-<p>Retrieves the target of the selection.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>selection_data</code></em></i>
-					(
-						<a title="Gtk.SelectionData" href="gtkselection.html#GtkSelectionData">Gtk.SelectionData</a>
-						)
-				–
-	</div>
-			<p>a pointer to a <a href="gtkselection.html#GtkSelectionData">Gtk.SelectionData</a>-struct.</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Gdk.Atom" href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">Gdk.Atom</a>
-										)
-								–
-			</div>
-							<p>the target of the selection.</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.14
-		</p>
-
-
-        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -4084,6 +4027,63 @@ gtk_selection_data_get_target (const <a title="GtkSelectionData" href="gtkselect
 										
 <span class="annotation">[<abbr title="Don't free data after the code is done"><span class="acronym">transfer: none</span></abbr>]</span>
 
+										)
+								–
+			</div>
+							<p>the target of the selection.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.14
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_selection_data_get_target">
+	<span><code>Gtk.SelectionData.get_target</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.SelectionData.get_target (self):
+    #python wrapper for 'gtk_selection_data_get_target'</pre>
+
+<p>Retrieves the target of the selection.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>selection_data</code></em></i>
+					(
+						<a title="Gtk.SelectionData" href="gtkselection.html#GtkSelectionData">Gtk.SelectionData</a>
+						)
+				–
+	</div>
+			<p>a pointer to a <a href="gtkselection.html#GtkSelectionData">Gtk.SelectionData</a>-struct.</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gdk.Atom" href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">Gdk.Atom</a>
 										)
 								–
 			</div>
@@ -4165,6 +4165,56 @@ function Gtk.prototype.get_target(): {
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_selection_data_copy">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_selection_data_copy">
+	<span><code>gtk_selection_data_copy</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkSelectionData" href="gtkselection.html#GtkSelectionData">GtkSelectionData</a> *
+gtk_selection_data_copy (const <a title="GtkSelectionData" href="gtkselection.html#GtkSelectionData">GtkSelectionData</a> * data)</pre>
+
+<p>Makes a copy of a <a href="gtkselection.html#GtkSelectionData">GtkSelectionData</a>-struct and its data.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>data</code></em></i>
+				–
+	</div>
+			<p>a pointer to a <a href="gtkselection.html#GtkSelectionData">GtkSelectionData</a>-struct.</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>a pointer to a copy of <em>data</em>.</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -4207,56 +4257,6 @@ def Gtk.SelectionData.copy (self):
 									(
 					<a title="Gtk.SelectionData" href="gtkselection.html#GtkSelectionData">Gtk.SelectionData</a>
 										)
-								–
-			</div>
-							<p>a pointer to a copy of <em>data</em>.</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_selection_data_copy">
-	<span><code>gtk_selection_data_copy</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-<a title="GtkSelectionData" href="gtkselection.html#GtkSelectionData">GtkSelectionData</a> *
-gtk_selection_data_copy (const <a title="GtkSelectionData" href="gtkselection.html#GtkSelectionData">GtkSelectionData</a> * data)</pre>
-
-<p>Makes a copy of a <a href="gtkselection.html#GtkSelectionData">GtkSelectionData</a>-struct and its data.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>data</code></em></i>
-				–
-	</div>
-			<p>a pointer to a <a href="gtkselection.html#GtkSelectionData">GtkSelectionData</a>-struct.</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
 								–
 			</div>
 							<p>a pointer to a copy of <em>data</em>.</p>
@@ -4331,6 +4331,45 @@ function Gtk.prototype.copy(): {
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_selection_data_free">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_selection_data_free">
+	<span><code>gtk_selection_data_free</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_selection_data_free (<a title="GtkSelectionData" href="gtkselection.html#GtkSelectionData">GtkSelectionData</a> * data)</pre>
+
+<p>Frees a <a href="gtkselection.html#GtkSelectionData">GtkSelectionData</a>-struct returned from
+<a href="gtkselection.html#gtk_selection_data_copy">gtk_selection_data_copy</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>data</code></em></i>
+				–
+	</div>
+			<p>a pointer to a <a href="gtkselection.html#GtkSelectionData">GtkSelectionData</a>-struct.</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -4362,45 +4401,6 @@ def Gtk.SelectionData.free (self):
 				–
 	</div>
 			<p>a pointer to a <a href="gtkselection.html#GtkSelectionData">Gtk.SelectionData</a>-struct.</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_selection_data_free">
-	<span><code>gtk_selection_data_free</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-gtk_selection_data_free (<a title="GtkSelectionData" href="gtkselection.html#GtkSelectionData">GtkSelectionData</a> * data)</pre>
-
-<p>Frees a <a href="gtkselection.html#GtkSelectionData">GtkSelectionData</a>-struct returned from
-<a href="gtkselection.html#gtk_selection_data_copy">gtk_selection_data_copy</a>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>data</code></em></i>
-				–
-	</div>
-			<p>a pointer to a <a href="gtkselection.html#GtkSelectionData">GtkSelectionData</a>-struct.</p>
 
 	</div>
 
@@ -4462,70 +4462,6 @@ function Gtk.prototype.free(): {
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="GtkTargetEntry">
 	
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h2 data-hotdoc-id="GtkTargetEntry">
-	<span><code>Gtk.TargetEntry</code></span>
-</h2>
-
-
-
-
-<div class="class_details">
-	<p>A <a href="gtkselection.html#GtkTargetEntry">Gtk.TargetEntry</a> represents a single type of
-data than can be supplied for by a widget for a selection
-or for supplied or received during drag-and-drop.</p>
-
-</div>
-
-
-
-	<div class="members-container">
-		<h3>Members</h3>
-					
-<div class="symbol-detail" data-hotdoc-id="GtkTargetEntry.target">
-	<div>
-		<i><em><code>TargetEntry.target</code></em></i>
-		(<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>)
-		–
-	</div>
-			<p>a string representation of the target type</p>
-
-	</div>
-
-					
-<div class="symbol-detail" data-hotdoc-id="GtkTargetEntry.flags">
-	<div>
-		<i><em><code>TargetEntry.flags</code></em></i>
-		(<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>)
-		–
-	</div>
-			<p><a href="gtkdnd.html#GtkTargetFlags">Gtk.TargetFlags</a> for DND</p>
-
-	</div>
-
-					
-<div class="symbol-detail" data-hotdoc-id="GtkTargetEntry.info">
-	<div>
-		<i><em><code>TargetEntry.info</code></em></i>
-		(<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>)
-		–
-	</div>
-			<p>an application-assigned integer ID which will
-get passed as a parameter to e.g the <a href="https://developer.gnome.org/gtk3/GtkWidget.html#GtkWidget-selection-get">selection-get</a>
-signal. It allows the application to identify the target
-type without extensive string compares.</p>
-
-	</div>
-
-			</div>
-
-
-
-        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -4576,6 +4512,70 @@ or for supplied or received during drag-and-drop.</p>
 	<div>
 		<i><em><code>info</code></em></i>
 		(<a title="guint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint">guint</a>)
+		–
+	</div>
+			<p>an application-assigned integer ID which will
+get passed as a parameter to e.g the <a href="https://developer.gnome.org/gtk3/GtkWidget.html#GtkWidget-selection-get">selection-get</a>
+signal. It allows the application to identify the target
+type without extensive string compares.</p>
+
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h2 data-hotdoc-id="GtkTargetEntry">
+	<span><code>Gtk.TargetEntry</code></span>
+</h2>
+
+
+
+
+<div class="class_details">
+	<p>A <a href="gtkselection.html#GtkTargetEntry">Gtk.TargetEntry</a> represents a single type of
+data than can be supplied for by a widget for a selection
+or for supplied or received during drag-and-drop.</p>
+
+</div>
+
+
+
+	<div class="members-container">
+		<h3>Members</h3>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkTargetEntry.target">
+	<div>
+		<i><em><code>TargetEntry.target</code></em></i>
+		(<a title="str" href="https://docs.python.org/3/library/functions.html#func-str">str</a>)
+		–
+	</div>
+			<p>a string representation of the target type</p>
+
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GtkTargetEntry.flags">
+	<div>
+		<i><em><code>TargetEntry.flags</code></em></i>
+		(<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>)
+		–
+	</div>
+			<p><a href="gtkdnd.html#GtkTargetFlags">Gtk.TargetFlags</a> for DND</p>
+
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GtkTargetEntry.info">
+	<div>
+		<i><em><code>TargetEntry.info</code></em></i>
+		(<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>)
 		–
 	</div>
 			<p>an application-assigned integer ID which will
@@ -4663,6 +4663,79 @@ type without extensive string compares.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_target_entry_new">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_target_entry_new">
+	<span><code>gtk_target_entry_new</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkTargetEntry" href="gtkselection.html#GtkTargetEntry">GtkTargetEntry</a> *
+gtk_target_entry_new (const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * target,
+                      <a title="guint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint">guint</a> flags,
+                      <a title="guint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint">guint</a> info)</pre>
+
+<p>Makes a new <a href="gtkselection.html#GtkTargetEntry">GtkTargetEntry</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>target</code></em></i>
+				–
+	</div>
+			<p>String identifier for target</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>flags</code></em></i>
+				–
+	</div>
+			<p>Set of flags, see <a href="gtkdnd.html#GtkTargetFlags">GtkTargetFlags</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>info</code></em></i>
+				–
+	</div>
+			<p>an ID that will be passed back to the application</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>a pointer to a new <a href="gtkselection.html#GtkTargetEntry">GtkTargetEntry</a>.
+Free with <a href="gtkselection.html#gtk_target_entry_free">gtk_target_entry_free</a></p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -4735,79 +4808,6 @@ def Gtk.TargetEntry.new (target, flags, info):
 			</div>
 							<p>a pointer to a new <a href="gtkselection.html#GtkTargetEntry">Gtk.TargetEntry</a>.
 Free with <a href="gtkselection.html#gtk_target_entry_free">Gtk.TargetEntry.free</a></p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_target_entry_new">
-	<span><code>gtk_target_entry_new</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-<a title="GtkTargetEntry" href="gtkselection.html#GtkTargetEntry">GtkTargetEntry</a> *
-gtk_target_entry_new (const <a title="gchar" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gchar">gchar</a> * target,
-                      <a title="guint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint">guint</a> flags,
-                      <a title="guint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint">guint</a> info)</pre>
-
-<p>Makes a new <a href="gtkselection.html#GtkTargetEntry">GtkTargetEntry</a>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>target</code></em></i>
-				–
-	</div>
-			<p>String identifier for target</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>flags</code></em></i>
-				–
-	</div>
-			<p>Set of flags, see <a href="gtkdnd.html#GtkTargetFlags">GtkTargetFlags</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>info</code></em></i>
-				–
-	</div>
-			<p>an ID that will be passed back to the application</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-								–
-			</div>
-							<p>a pointer to a new <a href="gtkselection.html#GtkTargetEntry">GtkTargetEntry</a>.
-Free with <a href="gtkselection.html#gtk_target_entry_free">gtk_target_entry_free</a></p>
 
 					</div>
 	</div>
@@ -4908,6 +4908,57 @@ Free with <a href="gtkselection.html#gtk_target_entry_free">Gtk.prototype.free</
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_target_entry_copy">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_target_entry_copy">
+	<span><code>gtk_target_entry_copy</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkTargetEntry" href="gtkselection.html#GtkTargetEntry">GtkTargetEntry</a> *
+gtk_target_entry_copy (<a title="GtkTargetEntry" href="gtkselection.html#GtkTargetEntry">GtkTargetEntry</a> * data)</pre>
+
+<p>Makes a copy of a <a href="gtkselection.html#GtkTargetEntry">GtkTargetEntry</a> and its data.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>data</code></em></i>
+				–
+	</div>
+			<p>a pointer to a <a href="gtkselection.html#GtkTargetEntry">GtkTargetEntry</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>a pointer to a copy of <em>data</em>.
+Free with <a href="gtkselection.html#gtk_target_entry_free">gtk_target_entry_free</a></p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -4954,57 +5005,6 @@ def Gtk.TargetEntry.copy (self):
 			</div>
 							<p>a pointer to a copy of <em>data</em>.
 Free with <a href="gtkselection.html#gtk_target_entry_free">Gtk.TargetEntry.free</a></p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_target_entry_copy">
-	<span><code>gtk_target_entry_copy</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-<a title="GtkTargetEntry" href="gtkselection.html#GtkTargetEntry">GtkTargetEntry</a> *
-gtk_target_entry_copy (<a title="GtkTargetEntry" href="gtkselection.html#GtkTargetEntry">GtkTargetEntry</a> * data)</pre>
-
-<p>Makes a copy of a <a href="gtkselection.html#GtkTargetEntry">GtkTargetEntry</a> and its data.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>data</code></em></i>
-				–
-	</div>
-			<p>a pointer to a <a href="gtkselection.html#GtkTargetEntry">GtkTargetEntry</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-								–
-			</div>
-							<p>a pointer to a copy of <em>data</em>.
-Free with <a href="gtkselection.html#gtk_target_entry_free">gtk_target_entry_free</a></p>
 
 					</div>
 	</div>
@@ -5077,6 +5077,45 @@ Free with <a href="gtkselection.html#gtk_target_entry_free">Gtk.prototype.free</
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_target_entry_free">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_target_entry_free">
+	<span><code>gtk_target_entry_free</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_target_entry_free (<a title="GtkTargetEntry" href="gtkselection.html#GtkTargetEntry">GtkTargetEntry</a> * data)</pre>
+
+<p>Frees a <a href="gtkselection.html#GtkTargetEntry">GtkTargetEntry</a> returned from
+<a href="gtkselection.html#gtk_target_entry_new">gtk_target_entry_new</a> or <a href="gtkselection.html#gtk_target_entry_copy">gtk_target_entry_copy</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>data</code></em></i>
+				–
+	</div>
+			<p>a pointer to a <a href="gtkselection.html#GtkTargetEntry">GtkTargetEntry</a>.</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -5108,45 +5147,6 @@ def Gtk.TargetEntry.free (self):
 				–
 	</div>
 			<p>a pointer to a <a href="gtkselection.html#GtkTargetEntry">Gtk.TargetEntry</a>.</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_target_entry_free">
-	<span><code>gtk_target_entry_free</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-gtk_target_entry_free (<a title="GtkTargetEntry" href="gtkselection.html#GtkTargetEntry">GtkTargetEntry</a> * data)</pre>
-
-<p>Frees a <a href="gtkselection.html#GtkTargetEntry">GtkTargetEntry</a> returned from
-<a href="gtkselection.html#gtk_target_entry_new">gtk_target_entry_new</a> or <a href="gtkselection.html#gtk_target_entry_copy">gtk_target_entry_copy</a>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>data</code></em></i>
-				–
-	</div>
-			<p>a pointer to a <a href="gtkselection.html#GtkTargetEntry">GtkTargetEntry</a>.</p>
 
 	</div>
 
@@ -5208,30 +5208,6 @@ function Gtk.prototype.free(): {
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="GtkTargetList">
 	
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h2 data-hotdoc-id="GtkTargetList">
-	<span><code>Gtk.TargetList</code></span>
-</h2>
-
-
-
-
-<div class="class_details">
-	<p>A <a href="gtkselection.html#GtkTargetList">Gtk.TargetList</a>-struct is a reference counted list
-of <a href="gtkselection.html#GtkTargetPair">Gtk.TargetPair</a> and should be treated as
-opaque.</p>
-
-</div>
-
-
-
-
-
-        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -5247,6 +5223,30 @@ opaque.</p>
 <div class="class_details">
 	<p>A <a href="gtkselection.html#GtkTargetList">GtkTargetList</a>-struct is a reference counted list
 of <a href="gtkselection.html#GtkTargetPair">GtkTargetPair</a> and should be treated as
+opaque.</p>
+
+</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h2 data-hotdoc-id="GtkTargetList">
+	<span><code>Gtk.TargetList</code></span>
+</h2>
+
+
+
+
+<div class="class_details">
+	<p>A <a href="gtkselection.html#GtkTargetList">Gtk.TargetList</a>-struct is a reference counted list
+of <a href="gtkselection.html#GtkTargetPair">Gtk.TargetPair</a> and should be treated as
 opaque.</p>
 
 </div>
@@ -5289,74 +5289,6 @@ opaque.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_target_list_new">
 	
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_target_list_new">
-	<span><code>Gtk.TargetList.new</code></span>
-</h4>
-
-
-<pre class="python-prototype">
-def Gtk.TargetList.new (targets, ntargets):
-    #python wrapper for 'gtk_target_list_new'</pre>
-
-<p>Creates a new <a href="gtkselection.html#GtkTargetList">Gtk.TargetList</a> from an array of <a href="gtkselection.html#GtkTargetEntry">Gtk.TargetEntry</a>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>targets</code></em></i>
-					(
-						[ <a title="Gtk.TargetEntry" href="gtkselection.html#GtkTargetEntry">Gtk.TargetEntry</a> ]
-						)
-				–
-	</div>
-			<p>Pointer to an array
-of <a href="gtkselection.html#GtkTargetEntry">Gtk.TargetEntry</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>ntargets</code></em></i>
-					(
-						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
-						)
-				–
-	</div>
-			<p>number of entries in <em>targets</em>.</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-									(
-					<a title="Gtk.TargetList" href="gtkselection.html#GtkTargetList">Gtk.TargetList</a>
-										)
-								–
-			</div>
-							<p>the new <a href="gtkselection.html#GtkTargetList">Gtk.TargetList</a>.</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -5422,6 +5354,74 @@ of <a href="gtkselection.html#GtkTargetEntry">GtkTargetEntry</a></p>
 								–
 			</div>
 							<p>the new <a href="gtkselection.html#GtkTargetList">GtkTargetList</a>.</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_target_list_new">
+	<span><code>Gtk.TargetList.new</code></span>
+</h4>
+
+
+<pre class="python-prototype">
+def Gtk.TargetList.new (targets, ntargets):
+    #python wrapper for 'gtk_target_list_new'</pre>
+
+<p>Creates a new <a href="gtkselection.html#GtkTargetList">Gtk.TargetList</a> from an array of <a href="gtkselection.html#GtkTargetEntry">Gtk.TargetEntry</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>targets</code></em></i>
+					(
+						[ <a title="Gtk.TargetEntry" href="gtkselection.html#GtkTargetEntry">Gtk.TargetEntry</a> ]
+						)
+				–
+	</div>
+			<p>Pointer to an array
+of <a href="gtkselection.html#GtkTargetEntry">Gtk.TargetEntry</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>ntargets</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>number of entries in <em>targets</em>.</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+									(
+					<a title="Gtk.TargetList" href="gtkselection.html#GtkTargetList">Gtk.TargetList</a>
+										)
+								–
+			</div>
+							<p>the new <a href="gtkselection.html#GtkTargetList">Gtk.TargetList</a>.</p>
 
 					</div>
 	</div>
@@ -5509,6 +5509,56 @@ of <a href="gtkselection.html#GtkTargetEntry">Gtk.TargetEntry</a></p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_target_list_ref">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_target_list_ref">
+	<span><code>gtk_target_list_ref</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="GtkTargetList" href="gtkselection.html#GtkTargetList">GtkTargetList</a> *
+gtk_target_list_ref (<a title="GtkTargetList" href="gtkselection.html#GtkTargetList">GtkTargetList</a> * list)</pre>
+
+<p>Increases the reference count of a <a href="gtkselection.html#GtkTargetList">GtkTargetList</a> by one.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>list</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkselection.html#GtkTargetList">GtkTargetList</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>the passed in <a href="gtkselection.html#GtkTargetList">GtkTargetList</a>.</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -5554,56 +5604,6 @@ def Gtk.TargetList.ref (self):
 								–
 			</div>
 							<p>the passed in <a href="gtkselection.html#GtkTargetList">Gtk.TargetList</a>.</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_target_list_ref">
-	<span><code>gtk_target_list_ref</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-<a title="GtkTargetList" href="gtkselection.html#GtkTargetList">GtkTargetList</a> *
-gtk_target_list_ref (<a title="GtkTargetList" href="gtkselection.html#GtkTargetList">GtkTargetList</a> * list)</pre>
-
-<p>Increases the reference count of a <a href="gtkselection.html#GtkTargetList">GtkTargetList</a> by one.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>list</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkselection.html#GtkTargetList">GtkTargetList</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-								–
-			</div>
-							<p>the passed in <a href="gtkselection.html#GtkTargetList">GtkTargetList</a>.</p>
 
 					</div>
 	</div>
@@ -5675,6 +5675,45 @@ function Gtk.prototype.ref(): {
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_target_list_unref">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_target_list_unref">
+	<span><code>gtk_target_list_unref</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_target_list_unref (<a title="GtkTargetList" href="gtkselection.html#GtkTargetList">GtkTargetList</a> * list)</pre>
+
+<p>Decreases the reference count of a <a href="gtkselection.html#GtkTargetList">GtkTargetList</a> by one.
+If the resulting reference count is zero, frees the list.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>list</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkselection.html#GtkTargetList">GtkTargetList</a></p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -5706,45 +5745,6 @@ If the resulting reference count is zero, frees the list.</p>
 				–
 	</div>
 			<p>a <a href="gtkselection.html#GtkTargetList">Gtk.TargetList</a></p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_target_list_unref">
-	<span><code>gtk_target_list_unref</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-gtk_target_list_unref (<a title="GtkTargetList" href="gtkselection.html#GtkTargetList">GtkTargetList</a> * list)</pre>
-
-<p>Decreases the reference count of a <a href="gtkselection.html#GtkTargetList">GtkTargetList</a> by one.
-If the resulting reference count is zero, frees the list.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>list</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkselection.html#GtkTargetList">GtkTargetList</a></p>
 
 	</div>
 
@@ -5804,6 +5804,77 @@ If the resulting reference count is zero, frees the list.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_target_list_add">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_target_list_add">
+	<span><code>gtk_target_list_add</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_target_list_add (<a title="GtkTargetList" href="gtkselection.html#GtkTargetList">GtkTargetList</a> * list,
+                     <a title="GdkAtom" href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">GdkAtom</a> target,
+                     <a title="guint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint">guint</a> flags,
+                     <a title="guint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint">guint</a> info)</pre>
+
+<p>Appends another target to a <a href="gtkselection.html#GtkTargetList">GtkTargetList</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>list</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkselection.html#GtkTargetList">GtkTargetList</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>target</code></em></i>
+				–
+	</div>
+			<p>the interned atom representing the target</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>flags</code></em></i>
+				–
+	</div>
+			<p>the flags for this target</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>info</code></em></i>
+				–
+	</div>
+			<p>an ID that will be passed back to the application</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -5870,77 +5941,6 @@ def Gtk.TargetList.add (self, target, flags, info):
 					(
 						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
 						)
-				–
-	</div>
-			<p>an ID that will be passed back to the application</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_target_list_add">
-	<span><code>gtk_target_list_add</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-gtk_target_list_add (<a title="GtkTargetList" href="gtkselection.html#GtkTargetList">GtkTargetList</a> * list,
-                     <a title="GdkAtom" href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">GdkAtom</a> target,
-                     <a title="guint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint">guint</a> flags,
-                     <a title="guint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint">guint</a> info)</pre>
-
-<p>Appends another target to a <a href="gtkselection.html#GtkTargetList">GtkTargetList</a>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>list</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkselection.html#GtkTargetList">GtkTargetList</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>target</code></em></i>
-				–
-	</div>
-			<p>the interned atom representing the target</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>flags</code></em></i>
-				–
-	</div>
-			<p>the flags for this target</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>info</code></em></i>
 				–
 	</div>
 			<p>an ID that will be passed back to the application</p>
@@ -6041,6 +6041,71 @@ function Gtk.prototype.add(target: <a title="Gdk.Atom" href="https://developer.g
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_target_list_add_table">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_target_list_add_table">
+	<span><code>gtk_target_list_add_table</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_target_list_add_table (<a title="GtkTargetList" href="gtkselection.html#GtkTargetList">GtkTargetList</a> * list,
+                           <a title="GtkTargetEntry" href="gtkselection.html#GtkTargetEntry">GtkTargetEntry</a> * targets,
+                           <a title="guint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint">guint</a> ntargets)</pre>
+
+<p>Prepends a table of <a href="gtkselection.html#GtkTargetEntry">GtkTargetEntry</a> to a target list.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>list</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkselection.html#GtkTargetList">GtkTargetList</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>targets</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="Parameter points to an array of items"><span class="acronym">array</span></abbr> length=ntargets]</span>
+
+						)
+				–
+	</div>
+			<p>the table of <a href="gtkselection.html#GtkTargetEntry">GtkTargetEntry</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>ntargets</code></em></i>
+				–
+	</div>
+			<p>number of targets in the table</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -6094,71 +6159,6 @@ def Gtk.TargetList.add_table (self, targets, ntargets):
 					(
 						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
 						)
-				–
-	</div>
-			<p>number of targets in the table</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_target_list_add_table">
-	<span><code>gtk_target_list_add_table</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-gtk_target_list_add_table (<a title="GtkTargetList" href="gtkselection.html#GtkTargetList">GtkTargetList</a> * list,
-                           <a title="GtkTargetEntry" href="gtkselection.html#GtkTargetEntry">GtkTargetEntry</a> * targets,
-                           <a title="guint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint">guint</a> ntargets)</pre>
-
-<p>Prepends a table of <a href="gtkselection.html#GtkTargetEntry">GtkTargetEntry</a> to a target list.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>list</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkselection.html#GtkTargetList">GtkTargetList</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>targets</code></em></i>
-					(
-						
-<span class="annotation">[<abbr title="Parameter points to an array of items"><span class="acronym">array</span></abbr> length=ntargets]</span>
-
-						)
-				–
-	</div>
-			<p>the table of <a href="gtkselection.html#GtkTargetEntry">GtkTargetEntry</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>ntargets</code></em></i>
 				–
 	</div>
 			<p>number of targets in the table</p>
@@ -6246,6 +6246,59 @@ function Gtk.prototype.add_table(targets: [ <a title="Gtk.TargetEntry" href="gtk
 
 <div class="base_symbol_container" data-hotdoc-tags="since:2.6;" id="gtk_target_list_add_text_targets">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_target_list_add_text_targets">
+	<span><code>gtk_target_list_add_text_targets</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_target_list_add_text_targets (<a title="GtkTargetList" href="gtkselection.html#GtkTargetList">GtkTargetList</a> * list,
+                                  <a title="guint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint">guint</a> info)</pre>
+
+<p>Appends the text targets supported by <a href="gtkselection.html#GtkSelectionData">GtkSelectionData</a> to
+the target list. All targets are added with the same <em>info</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>list</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkselection.html#GtkTargetList">GtkTargetList</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>info</code></em></i>
+				–
+	</div>
+			<p>an ID that will be passed back to the application</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.6
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -6287,59 +6340,6 @@ the target list. All targets are added with the same <em>info</em>.</p>
 					(
 						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
 						)
-				–
-	</div>
-			<p>an ID that will be passed back to the application</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.6
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_target_list_add_text_targets">
-	<span><code>gtk_target_list_add_text_targets</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-gtk_target_list_add_text_targets (<a title="GtkTargetList" href="gtkselection.html#GtkTargetList">GtkTargetList</a> * list,
-                                  <a title="guint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint">guint</a> info)</pre>
-
-<p>Appends the text targets supported by <a href="gtkselection.html#GtkSelectionData">GtkSelectionData</a> to
-the target list. All targets are added with the same <em>info</em>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>list</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkselection.html#GtkTargetList">GtkTargetList</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>info</code></em></i>
 				–
 	</div>
 			<p>an ID that will be passed back to the application</p>
@@ -6421,6 +6421,71 @@ the target list. All targets are added with the same <em>info</em>.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="since:2.6;" id="gtk_target_list_add_image_targets">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_target_list_add_image_targets">
+	<span><code>gtk_target_list_add_image_targets</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_target_list_add_image_targets (<a title="GtkTargetList" href="gtkselection.html#GtkTargetList">GtkTargetList</a> * list,
+                                   <a title="guint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint">guint</a> info,
+                                   <a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a> writable)</pre>
+
+<p>Appends the image targets supported by <a href="gtkselection.html#GtkSelectionData">GtkSelectionData</a> to
+the target list. All targets are added with the same <em>info</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>list</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkselection.html#GtkTargetList">GtkTargetList</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>info</code></em></i>
+				–
+	</div>
+			<p>an ID that will be passed back to the application</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>writable</code></em></i>
+				–
+	</div>
+			<p>whether to add only targets for which GTK+ knows
+how to convert a pixbuf into the format</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.6
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -6475,71 +6540,6 @@ the target list. All targets are added with the same <em>info</em>.</p>
 					(
 						<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
 						)
-				–
-	</div>
-			<p>whether to add only targets for which GTK+ knows
-how to convert a pixbuf into the format</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.6
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_target_list_add_image_targets">
-	<span><code>gtk_target_list_add_image_targets</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-gtk_target_list_add_image_targets (<a title="GtkTargetList" href="gtkselection.html#GtkTargetList">GtkTargetList</a> * list,
-                                   <a title="guint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint">guint</a> info,
-                                   <a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a> writable)</pre>
-
-<p>Appends the image targets supported by <a href="gtkselection.html#GtkSelectionData">GtkSelectionData</a> to
-the target list. All targets are added with the same <em>info</em>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>list</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkselection.html#GtkTargetList">GtkTargetList</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>info</code></em></i>
-				–
-	</div>
-			<p>an ID that will be passed back to the application</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>writable</code></em></i>
 				–
 	</div>
 			<p>whether to add only targets for which GTK+ knows
@@ -6636,6 +6636,59 @@ how to convert a pixbuf into the format</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="since:2.6;" id="gtk_target_list_add_uri_targets">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_target_list_add_uri_targets">
+	<span><code>gtk_target_list_add_uri_targets</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_target_list_add_uri_targets (<a title="GtkTargetList" href="gtkselection.html#GtkTargetList">GtkTargetList</a> * list,
+                                 <a title="guint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint">guint</a> info)</pre>
+
+<p>Appends the URI targets supported by <a href="gtkselection.html#GtkSelectionData">GtkSelectionData</a> to
+the target list. All targets are added with the same <em>info</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>list</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkselection.html#GtkTargetList">GtkTargetList</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>info</code></em></i>
+				–
+	</div>
+			<p>an ID that will be passed back to the application</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.6
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -6677,59 +6730,6 @@ the target list. All targets are added with the same <em>info</em>.</p>
 					(
 						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
 						)
-				–
-	</div>
-			<p>an ID that will be passed back to the application</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.6
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_target_list_add_uri_targets">
-	<span><code>gtk_target_list_add_uri_targets</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-gtk_target_list_add_uri_targets (<a title="GtkTargetList" href="gtkselection.html#GtkTargetList">GtkTargetList</a> * list,
-                                 <a title="guint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint">guint</a> info)</pre>
-
-<p>Appends the URI targets supported by <a href="gtkselection.html#GtkSelectionData">GtkSelectionData</a> to
-the target list. All targets are added with the same <em>info</em>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>list</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkselection.html#GtkTargetList">GtkTargetList</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>info</code></em></i>
 				–
 	</div>
 			<p>an ID that will be passed back to the application</p>
@@ -6811,6 +6811,84 @@ the target list. All targets are added with the same <em>info</em>.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_target_list_add_rich_text_targets">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_target_list_add_rich_text_targets">
+	<span><code>gtk_target_list_add_rich_text_targets</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_target_list_add_rich_text_targets (<a title="GtkTargetList" href="gtkselection.html#GtkTargetList">GtkTargetList</a> * list,
+                                       <a title="guint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint">guint</a> info,
+                                       <a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a> deserializable,
+                                       <a title="GtkTextBuffer" href="gtktextbuffer.html#GtkTextBuffer">GtkTextBuffer</a> * buffer)</pre>
+
+<p>Appends the rich text targets registered with
+<a href="gtktextbuffer.html#gtk_text_buffer_register_serialize_format">gtk_text_buffer_register_serialize_format</a> or
+<a href="gtktextbuffer.html#gtk_text_buffer_register_deserialize_format">gtk_text_buffer_register_deserialize_format</a> to the target list. All
+targets are added with the same <em>info</em>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>list</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkselection.html#GtkTargetList">GtkTargetList</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>info</code></em></i>
+				–
+	</div>
+			<p>an ID that will be passed back to the application</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>deserializable</code></em></i>
+				–
+	</div>
+			<p>if <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a>, then deserializable rich text formats
+will be added, serializable formats otherwise.</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>buffer</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtktextbuffer.html#GtkTextBuffer">GtkTextBuffer</a>.</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -6884,84 +6962,6 @@ will be added, serializable formats otherwise.</p>
 				–
 	</div>
 			<p>a <a href="gtktextbuffer.html#GtkTextBuffer">Gtk.TextBuffer</a>.</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.10
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_target_list_add_rich_text_targets">
-	<span><code>gtk_target_list_add_rich_text_targets</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-gtk_target_list_add_rich_text_targets (<a title="GtkTargetList" href="gtkselection.html#GtkTargetList">GtkTargetList</a> * list,
-                                       <a title="guint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint">guint</a> info,
-                                       <a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a> deserializable,
-                                       <a title="GtkTextBuffer" href="gtktextbuffer.html#GtkTextBuffer">GtkTextBuffer</a> * buffer)</pre>
-
-<p>Appends the rich text targets registered with
-<a href="gtktextbuffer.html#gtk_text_buffer_register_serialize_format">gtk_text_buffer_register_serialize_format</a> or
-<a href="gtktextbuffer.html#gtk_text_buffer_register_deserialize_format">gtk_text_buffer_register_deserialize_format</a> to the target list. All
-targets are added with the same <em>info</em>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>list</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkselection.html#GtkTargetList">GtkTargetList</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>info</code></em></i>
-				–
-	</div>
-			<p>an ID that will be passed back to the application</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>deserializable</code></em></i>
-				–
-	</div>
-			<p>if <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a>, then deserializable rich text formats
-will be added, serializable formats otherwise.</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>buffer</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtktextbuffer.html#GtkTextBuffer">GtkTextBuffer</a>.</p>
 
 	</div>
 
@@ -7069,6 +7069,55 @@ will be added, serializable formats otherwise.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_target_list_remove">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_target_list_remove">
+	<span><code>gtk_target_list_remove</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+gtk_target_list_remove (<a title="GtkTargetList" href="gtkselection.html#GtkTargetList">GtkTargetList</a> * list,
+                        <a title="GdkAtom" href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">GdkAtom</a> target)</pre>
+
+<p>Removes a target from a target list.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>list</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkselection.html#GtkTargetList">GtkTargetList</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>target</code></em></i>
+				–
+	</div>
+			<p>the interned atom representing the target</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -7109,55 +7158,6 @@ def Gtk.TargetList.remove (self, target):
 					(
 						<a title="Gdk.Atom" href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">Gdk.Atom</a>
 						)
-				–
-	</div>
-			<p>the interned atom representing the target</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_target_list_remove">
-	<span><code>gtk_target_list_remove</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-gtk_target_list_remove (<a title="GtkTargetList" href="gtkselection.html#GtkTargetList">GtkTargetList</a> * list,
-                        <a title="GdkAtom" href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">GdkAtom</a> target)</pre>
-
-<p>Removes a target from a target list.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>list</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkselection.html#GtkTargetList">GtkTargetList</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>target</code></em></i>
 				–
 	</div>
 			<p>the interned atom representing the target</p>
@@ -7232,6 +7232,85 @@ function Gtk.prototype.remove(target: <a title="Gdk.Atom" href="https://develope
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_target_list_find">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h4 data-hotdoc-id="gtk_target_list_find">
+	<span><code>gtk_target_list_find</code></span>
+</h4>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_target_list_find (<a title="GtkTargetList" href="gtkselection.html#GtkTargetList">GtkTargetList</a> * list,
+                      <a title="GdkAtom" href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">GdkAtom</a> target,
+                      <a title="guint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint">guint</a> * info)</pre>
+
+<p>Looks up a given target in a <a href="gtkselection.html#GtkTargetList">GtkTargetList</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>list</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkselection.html#GtkTargetList">GtkTargetList</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>target</code></em></i>
+				–
+	</div>
+			<p>an interned atom representing the target to search for</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>info</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="Parameter for returning results"><span class="acronym">out</span></abbr>]</span>
+<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>a pointer to the location to store
+application info for target, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if the target was found, otherwise <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS">FALSE</a></p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -7308,85 +7387,6 @@ def Gtk.TargetList.find (self, target):
 	</div>
 
 			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h4 data-hotdoc-id="gtk_target_list_find">
-	<span><code>gtk_target_list_find</code></span>
-</h4>
-
-
-
-
-<pre class="c-prototype">
-<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
-gtk_target_list_find (<a title="GtkTargetList" href="gtkselection.html#GtkTargetList">GtkTargetList</a> * list,
-                      <a title="GdkAtom" href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">GdkAtom</a> target,
-                      <a title="guint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint">guint</a> * info)</pre>
-
-<p>Looks up a given target in a <a href="gtkselection.html#GtkTargetList">GtkTargetList</a>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>list</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkselection.html#GtkTargetList">GtkTargetList</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>target</code></em></i>
-				–
-	</div>
-			<p>an interned atom representing the target to search for</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>info</code></em></i>
-					(
-						
-<span class="annotation">[<abbr title="Parameter for returning results"><span class="acronym">out</span></abbr>]</span>
-<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
-
-						)
-				–
-	</div>
-			<p>a pointer to the location to store
-application info for target, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-								–
-			</div>
-							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if the target was found, otherwise <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS">FALSE</a></p>
-
-					</div>
-	</div>
 
 
 
@@ -7487,63 +7487,6 @@ function Gtk.prototype.find(target: <a title="Gdk.Atom" href="https://developer.
 
 <div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_target_table_free">
 	
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_target_table_free">
-	<span><code>Gtk.target_table_free</code></span>
-</h3>
-
-
-<pre class="python-prototype">
-def Gtk.target_table_free (targets, n_targets):
-    #python wrapper for 'gtk_target_table_free'</pre>
-
-<p>This function frees a target table as returned by
-<a href="gtkselection.html#gtk_target_table_new_from_list">Gtk.target_table_new_from_list</a></p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>targets</code></em></i>
-					(
-						[ <a title="Gtk.TargetEntry" href="gtkselection.html#GtkTargetEntry">Gtk.TargetEntry</a> ]
-						)
-				–
-	</div>
-			<p>a <a href="gtkselection.html#GtkTargetEntry">Gtk.TargetEntry</a> array</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>n_targets</code></em></i>
-					(
-						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
-						)
-				–
-	</div>
-			<p>the number of entries in the array</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.10
-		</p>
-
-
-        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -7586,6 +7529,63 @@ gtk_target_table_free (<a title="GtkTargetEntry" href="gtkselection.html#GtkTarg
 <div class="symbol-detail">
 	<div>
 		<i><em><code>n_targets</code></em></i>
+				–
+	</div>
+			<p>the number of entries in the array</p>
+
+	</div>
+
+			</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_target_table_free">
+	<span><code>Gtk.target_table_free</code></span>
+</h3>
+
+
+<pre class="python-prototype">
+def Gtk.target_table_free (targets, n_targets):
+    #python wrapper for 'gtk_target_table_free'</pre>
+
+<p>This function frees a target table as returned by
+<a href="gtkselection.html#gtk_target_table_new_from_list">Gtk.target_table_new_from_list</a></p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>targets</code></em></i>
+					(
+						[ <a title="Gtk.TargetEntry" href="gtkselection.html#GtkTargetEntry">Gtk.TargetEntry</a> ]
+						)
+				–
+	</div>
+			<p>a <a href="gtkselection.html#GtkTargetEntry">Gtk.TargetEntry</a> array</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>n_targets</code></em></i>
+					(
+						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
 				–
 	</div>
 			<p>the number of entries in the array</p>
@@ -7667,81 +7667,6 @@ function prototype.target_table_free(targets: [ <a title="Gtk.TargetEntry" href=
 
 <div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_target_table_new_from_list">
 	
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_target_table_new_from_list">
-	<span><code>Gtk.target_table_new_from_list</code></span>
-</h3>
-
-
-<pre class="python-prototype">
-def Gtk.target_table_new_from_list (list):
-    #python wrapper for 'gtk_target_table_new_from_list'</pre>
-
-<p>This function creates an <a href="gtkselection.html#GtkTargetEntry">Gtk.TargetEntry</a> array that contains the
-same targets as the passed list. The returned table is newly
-allocated and should be freed using <a href="gtkselection.html#gtk_target_table_free">Gtk.target_table_free</a> when no
-longer needed.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>list</code></em></i>
-					(
-						<a title="Gtk.TargetList" href="gtkselection.html#GtkTargetList">Gtk.TargetList</a>
-						)
-				–
-	</div>
-			<p>a <a href="gtkselection.html#GtkTargetList">Gtk.TargetList</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<p><b>Returns a tuple made of:</b></p>
-				
-<div class="symbol-detail">
-	<div>
-									(
-			[ <a title="Gtk.TargetEntry" href="gtkselection.html#GtkTargetEntry">Gtk.TargetEntry</a> ]
-						)
-				–
-	</div>
-			<p>the new table.</p>
-
-	</div>
-
-				
-<div class="symbol-detail">
-	<div>
-				<i><em><code>n_targets</code></em></i>
-									(
-			<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
-						)
-				–
-	</div>
-			<p>the new table.</p>
-
-	</div>
-
-			</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.10
-		</p>
-
-
-        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -7812,6 +7737,81 @@ longer needed.</p>
 
 					</div>
 	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_target_table_new_from_list">
+	<span><code>Gtk.target_table_new_from_list</code></span>
+</h3>
+
+
+<pre class="python-prototype">
+def Gtk.target_table_new_from_list (list):
+    #python wrapper for 'gtk_target_table_new_from_list'</pre>
+
+<p>This function creates an <a href="gtkselection.html#GtkTargetEntry">Gtk.TargetEntry</a> array that contains the
+same targets as the passed list. The returned table is newly
+allocated and should be freed using <a href="gtkselection.html#gtk_target_table_free">Gtk.target_table_free</a> when no
+longer needed.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>list</code></em></i>
+					(
+						<a title="Gtk.TargetList" href="gtkselection.html#GtkTargetList">Gtk.TargetList</a>
+						)
+				–
+	</div>
+			<p>a <a href="gtkselection.html#GtkTargetList">Gtk.TargetList</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<p><b>Returns a tuple made of:</b></p>
+				
+<div class="symbol-detail">
+	<div>
+									(
+			[ <a title="Gtk.TargetEntry" href="gtkselection.html#GtkTargetEntry">Gtk.TargetEntry</a> ]
+						)
+				–
+	</div>
+			<p>the new table.</p>
+
+	</div>
+
+				
+<div class="symbol-detail">
+	<div>
+				<i><em><code>n_targets</code></em></i>
+									(
+			<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
+						)
+				–
+	</div>
+			<p>the new table.</p>
+
+	</div>
+
+			</div>
 
 
 
@@ -7904,6 +7904,84 @@ longer needed.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_selection_owner_set">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_selection_owner_set">
+	<span><code>gtk_selection_owner_set</code></span>
+</h3>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_selection_owner_set (<a title="GtkWidget" href="gtkwidget.html#GtkWidget">GtkWidget</a> * widget,
+                         <a title="GdkAtom" href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">GdkAtom</a> selection,
+                         <a title="guint32" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint32">guint32</a> time_)</pre>
+
+<p>Claims ownership of a given selection for a particular widget,
+or, if <em>widget</em> is <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a>, release ownership of the selection.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>widget</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>a <a href="gtkwidget.html#GtkWidget">GtkWidget</a>, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a>.</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>selection</code></em></i>
+				–
+	</div>
+			<p>an interned atom representing the selection to claim</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>time_</code></em></i>
+				–
+	</div>
+			<p>timestamp with which to claim the selection</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if the operation succeeded</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -7976,84 +8054,6 @@ or, if <em>widget</em> is <a href="https://docs.python.org/3/library/constants.h
 								–
 			</div>
 							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if the operation succeeded</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_selection_owner_set">
-	<span><code>gtk_selection_owner_set</code></span>
-</h3>
-
-
-
-
-<pre class="c-prototype">
-<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
-gtk_selection_owner_set (<a title="GtkWidget" href="gtkwidget.html#GtkWidget">GtkWidget</a> * widget,
-                         <a title="GdkAtom" href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">GdkAtom</a> selection,
-                         <a title="guint32" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint32">guint32</a> time_)</pre>
-
-<p>Claims ownership of a given selection for a particular widget,
-or, if <em>widget</em> is <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a>, release ownership of the selection.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-					(
-						
-<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
-
-						)
-				–
-	</div>
-			<p>a <a href="gtkwidget.html#GtkWidget">GtkWidget</a>, or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a>.</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>selection</code></em></i>
-				–
-	</div>
-			<p>an interned atom representing the selection to claim</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>time_</code></em></i>
-				–
-	</div>
-			<p>timestamp with which to claim the selection</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-								–
-			</div>
-							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if the operation succeeded</p>
 
 					</div>
 	</div>
@@ -8152,6 +8152,98 @@ or, if <em>widget</em> is <a href="https://developer.mozilla.org/en-US/docs/Web/
 
 <div class="base_symbol_container" data-hotdoc-tags="since:2.2;" id="gtk_selection_owner_set_for_display">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_selection_owner_set_for_display">
+	<span><code>gtk_selection_owner_set_for_display</code></span>
+</h3>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_selection_owner_set_for_display (<a title="GdkDisplay" href="https://developer.gnome.org/gdk3/GdkDisplay.html#GdkDisplay-struct">GdkDisplay</a> * display,
+                                     <a title="GtkWidget" href="gtkwidget.html#GtkWidget">GtkWidget</a> * widget,
+                                     <a title="GdkAtom" href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">GdkAtom</a> selection,
+                                     <a title="guint32" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint32">guint32</a> time_)</pre>
+
+<p>Claim ownership of a given selection for a particular widget, or,
+if <em>widget</em> is <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a>, release ownership of the selection.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>display</code></em></i>
+				–
+	</div>
+			<p>the <a href="https://developer.gnome.org/gdk3/GdkDisplay.html#GdkDisplay-struct">GdkDisplay</a> where the selection is set</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>widget</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
+
+						)
+				–
+	</div>
+			<p>new selection owner (a <a href="gtkwidget.html#GtkWidget">GtkWidget</a>), or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a>.</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>selection</code></em></i>
+				–
+	</div>
+			<p>an interned atom representing the selection to claim.</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>time_</code></em></i>
+				–
+	</div>
+			<p>timestamp with which to claim the selection</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p>TRUE if the operation succeeded</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.2
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -8234,98 +8326,6 @@ if <em>widget</em> is <a href="https://docs.python.org/3/library/constants.html#
 									(
 					<a title="bool" href="https://docs.python.org/3/library/functions.html#bool">bool</a>
 										)
-								–
-			</div>
-							<p>TRUE if the operation succeeded</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.2
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_selection_owner_set_for_display">
-	<span><code>gtk_selection_owner_set_for_display</code></span>
-</h3>
-
-
-
-
-<pre class="c-prototype">
-<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
-gtk_selection_owner_set_for_display (<a title="GdkDisplay" href="https://developer.gnome.org/gdk3/GdkDisplay.html#GdkDisplay-struct">GdkDisplay</a> * display,
-                                     <a title="GtkWidget" href="gtkwidget.html#GtkWidget">GtkWidget</a> * widget,
-                                     <a title="GdkAtom" href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">GdkAtom</a> selection,
-                                     <a title="guint32" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint32">guint32</a> time_)</pre>
-
-<p>Claim ownership of a given selection for a particular widget, or,
-if <em>widget</em> is <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a>, release ownership of the selection.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>display</code></em></i>
-				–
-	</div>
-			<p>the <a href="https://developer.gnome.org/gdk3/GdkDisplay.html#GdkDisplay-struct">GdkDisplay</a> where the selection is set</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-					(
-						
-<span class="annotation">[<abbr title="NULL is OK, both for passing and returning"><span class="acronym">allow-none</span></abbr>]</span>
-
-						)
-				–
-	</div>
-			<p>new selection owner (a <a href="gtkwidget.html#GtkWidget">GtkWidget</a>), or <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#NULL:CAPS">NULL</a>.</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>selection</code></em></i>
-				–
-	</div>
-			<p>an interned atom representing the selection to claim.</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>time_</code></em></i>
-				–
-	</div>
-			<p>timestamp with which to claim the selection</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
 								–
 			</div>
 							<p>TRUE if the operation succeeded</p>
@@ -8446,6 +8446,78 @@ if <em>widget</em> is <a href="https://developer.mozilla.org/en-US/docs/Web/Java
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_selection_add_target">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_selection_add_target">
+	<span><code>gtk_selection_add_target</code></span>
+</h3>
+
+
+
+
+<pre class="c-prototype">
+gtk_selection_add_target (<a title="GtkWidget" href="gtkwidget.html#GtkWidget">GtkWidget</a> * widget,
+                          <a title="GdkAtom" href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">GdkAtom</a> selection,
+                          <a title="GdkAtom" href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">GdkAtom</a> target,
+                          <a title="guint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint">guint</a> info)</pre>
+
+<p>Appends a specified target to the list of supported targets for a
+given widget and selection.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>widget</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkwidget.html#GtkWidget">GtkWidget</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>selection</code></em></i>
+				–
+	</div>
+			<p>the selection</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>target</code></em></i>
+				–
+	</div>
+			<p>target to add.</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>info</code></em></i>
+				–
+	</div>
+			<p>A unsigned integer which will be passed back to the application.</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -8513,78 +8585,6 @@ given widget and selection.</p>
 					(
 						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
 						)
-				–
-	</div>
-			<p>A unsigned integer which will be passed back to the application.</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_selection_add_target">
-	<span><code>gtk_selection_add_target</code></span>
-</h3>
-
-
-
-
-<pre class="c-prototype">
-gtk_selection_add_target (<a title="GtkWidget" href="gtkwidget.html#GtkWidget">GtkWidget</a> * widget,
-                          <a title="GdkAtom" href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">GdkAtom</a> selection,
-                          <a title="GdkAtom" href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">GdkAtom</a> target,
-                          <a title="guint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint">guint</a> info)</pre>
-
-<p>Appends a specified target to the list of supported targets for a
-given widget and selection.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkwidget.html#GtkWidget">GtkWidget</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>selection</code></em></i>
-				–
-	</div>
-			<p>the selection</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>target</code></em></i>
-				–
-	</div>
-			<p>target to add.</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>info</code></em></i>
 				–
 	</div>
 			<p>A unsigned integer which will be passed back to the application.</p>
@@ -8686,6 +8686,83 @@ given widget and selection.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_selection_add_targets">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_selection_add_targets">
+	<span><code>gtk_selection_add_targets</code></span>
+</h3>
+
+
+
+
+<pre class="c-prototype">
+gtk_selection_add_targets (<a title="GtkWidget" href="gtkwidget.html#GtkWidget">GtkWidget</a> * widget,
+                           <a title="GdkAtom" href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">GdkAtom</a> selection,
+                           <a title="GtkTargetEntry" href="gtkselection.html#GtkTargetEntry">GtkTargetEntry</a> * targets,
+                           <a title="guint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint">guint</a> ntargets)</pre>
+
+<p>Prepends a table of targets to the list of supported targets
+for a given widget and selection.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>widget</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkwidget.html#GtkWidget">GtkWidget</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>selection</code></em></i>
+				–
+	</div>
+			<p>the selection</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>targets</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="Parameter points to an array of items"><span class="acronym">array</span></abbr> length=ntargets]</span>
+
+						)
+				–
+	</div>
+			<p>a table of targets to add</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>ntargets</code></em></i>
+				–
+	</div>
+			<p>number of entries in <em>targets</em></p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -8753,83 +8830,6 @@ for a given widget and selection.</p>
 					(
 						<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>
 						)
-				–
-	</div>
-			<p>number of entries in <em>targets</em></p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_selection_add_targets">
-	<span><code>gtk_selection_add_targets</code></span>
-</h3>
-
-
-
-
-<pre class="c-prototype">
-gtk_selection_add_targets (<a title="GtkWidget" href="gtkwidget.html#GtkWidget">GtkWidget</a> * widget,
-                           <a title="GdkAtom" href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">GdkAtom</a> selection,
-                           <a title="GtkTargetEntry" href="gtkselection.html#GtkTargetEntry">GtkTargetEntry</a> * targets,
-                           <a title="guint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint">guint</a> ntargets)</pre>
-
-<p>Prepends a table of targets to the list of supported targets
-for a given widget and selection.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkwidget.html#GtkWidget">GtkWidget</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>selection</code></em></i>
-				–
-	</div>
-			<p>the selection</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>targets</code></em></i>
-					(
-						
-<span class="annotation">[<abbr title="Parameter points to an array of items"><span class="acronym">array</span></abbr> length=ntargets]</span>
-
-						)
-				–
-	</div>
-			<p>a table of targets to add</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>ntargets</code></em></i>
 				–
 	</div>
 			<p>number of entries in <em>targets</em></p>
@@ -8931,6 +8931,56 @@ for a given widget and selection.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_selection_clear_targets">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_selection_clear_targets">
+	<span><code>gtk_selection_clear_targets</code></span>
+</h3>
+
+
+
+
+<pre class="c-prototype">
+gtk_selection_clear_targets (<a title="GtkWidget" href="gtkwidget.html#GtkWidget">GtkWidget</a> * widget,
+                             <a title="GdkAtom" href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">GdkAtom</a> selection)</pre>
+
+<p>Remove all targets registered for the given selection for the
+widget.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>widget</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkwidget.html#GtkWidget">GtkWidget</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>selection</code></em></i>
+				–
+	</div>
+			<p>an atom representing a selection</p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -8972,56 +9022,6 @@ widget.</p>
 					(
 						<a title="Gdk.Atom" href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">Gdk.Atom</a>
 						)
-				–
-	</div>
-			<p>an atom representing a selection</p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_selection_clear_targets">
-	<span><code>gtk_selection_clear_targets</code></span>
-</h3>
-
-
-
-
-<pre class="c-prototype">
-gtk_selection_clear_targets (<a title="GtkWidget" href="gtkwidget.html#GtkWidget">GtkWidget</a> * widget,
-                             <a title="GdkAtom" href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">GdkAtom</a> selection)</pre>
-
-<p>Remove all targets registered for the given selection for the
-widget.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkwidget.html#GtkWidget">GtkWidget</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>selection</code></em></i>
 				–
 	</div>
 			<p>an atom representing a selection</p>
@@ -9097,6 +9097,93 @@ widget.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_selection_convert">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_selection_convert">
+	<span><code>gtk_selection_convert</code></span>
+</h3>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_selection_convert (<a title="GtkWidget" href="gtkwidget.html#GtkWidget">GtkWidget</a> * widget,
+                       <a title="GdkAtom" href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">GdkAtom</a> selection,
+                       <a title="GdkAtom" href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">GdkAtom</a> target,
+                       <a title="guint32" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint32">guint32</a> time_)</pre>
+
+<p>Requests the contents of a selection. When received,
+a “selection-received” signal will be generated.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>widget</code></em></i>
+				–
+	</div>
+			<p>The widget which acts as requestor</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>selection</code></em></i>
+				–
+	</div>
+			<p>Which selection to get</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>target</code></em></i>
+				–
+	</div>
+			<p>Form of information desired (e.g., STRING)</p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>time_</code></em></i>
+				–
+	</div>
+			<p>Time of request (usually of triggering event)
+In emergency, you could use <a href="https://developer.gnome.org/gdk3/gdk3-Events.html#GDK-CURRENT-TIME:CAPS">GDK_CURRENT_TIME</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if requested succeeded. <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS">FALSE</a> if we could not process
+request. (e.g., there was already a request in process for
+this widget).</p>
+
+					</div>
+	</div>
+
+
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -9183,93 +9270,6 @@ In emergency, you could use <a href="https://developer.gnome.org/gdk3/gdk3-Event
 								–
 			</div>
 							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if requested succeeded. <a href="https://docs.python.org/3/library/constants.html#False">False</a> if we could not process
-request. (e.g., there was already a request in process for
-this widget).</p>
-
-					</div>
-	</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_selection_convert">
-	<span><code>gtk_selection_convert</code></span>
-</h3>
-
-
-
-
-<pre class="c-prototype">
-<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
-gtk_selection_convert (<a title="GtkWidget" href="gtkwidget.html#GtkWidget">GtkWidget</a> * widget,
-                       <a title="GdkAtom" href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">GdkAtom</a> selection,
-                       <a title="GdkAtom" href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">GdkAtom</a> target,
-                       <a title="guint32" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint32">guint32</a> time_)</pre>
-
-<p>Requests the contents of a selection. When received,
-a “selection-received” signal will be generated.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-				–
-	</div>
-			<p>The widget which acts as requestor</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>selection</code></em></i>
-				–
-	</div>
-			<p>Which selection to get</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>target</code></em></i>
-				–
-	</div>
-			<p>Form of information desired (e.g., STRING)</p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>time_</code></em></i>
-				–
-	</div>
-			<p>Time of request (usually of triggering event)
-In emergency, you could use <a href="https://developer.gnome.org/gdk3/gdk3-Events.html#GDK-CURRENT-TIME:CAPS">GDK_CURRENT_TIME</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-								–
-			</div>
-							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if requested succeeded. <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS">FALSE</a> if we could not process
 request. (e.g., there was already a request in process for
 this widget).</p>
 
@@ -9386,6 +9386,89 @@ this widget).</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_targets_include_image">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_targets_include_image">
+	<span><code>gtk_targets_include_image</code></span>
+</h3>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_targets_include_image (<a title="GdkAtom" href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">GdkAtom</a> * targets,
+                           <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> n_targets,
+                           <a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a> writable)</pre>
+
+<p>Determines if any of the targets in <em>targets</em> can be used to
+provide a <a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf</a>.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>targets</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="Parameter points to an array of items"><span class="acronym">array</span></abbr> length=n_targets]</span>
+
+						)
+				–
+	</div>
+			<p>an array of <a href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">GdkAtom</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>n_targets</code></em></i>
+				–
+	</div>
+			<p>the length of <em>targets</em></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>writable</code></em></i>
+				–
+	</div>
+			<p>whether to accept only targets for which GTK+ knows
+how to convert a pixbuf into the format</p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if <em>targets</em> include a suitable target for images,
+otherwise <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS">FALSE</a>.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -9460,89 +9543,6 @@ how to convert a pixbuf into the format</p>
 			</div>
 							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if <em>targets</em> include a suitable target for images,
 otherwise <a href="https://docs.python.org/3/library/constants.html#False">False</a>.</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.10
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_targets_include_image">
-	<span><code>gtk_targets_include_image</code></span>
-</h3>
-
-
-
-
-<pre class="c-prototype">
-<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
-gtk_targets_include_image (<a title="GdkAtom" href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">GdkAtom</a> * targets,
-                           <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> n_targets,
-                           <a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a> writable)</pre>
-
-<p>Determines if any of the targets in <em>targets</em> can be used to
-provide a <a href="http://library.gnome.org/devel/gdk-pixbuf/unstable/gdk-pixbuf-The-GdkPixbuf-Structure.html#GdkPixbuf-struct">GdkPixbuf</a>.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>targets</code></em></i>
-					(
-						
-<span class="annotation">[<abbr title="Parameter points to an array of items"><span class="acronym">array</span></abbr> length=n_targets]</span>
-
-						)
-				–
-	</div>
-			<p>an array of <a href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">GdkAtom</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>n_targets</code></em></i>
-				–
-	</div>
-			<p>the length of <em>targets</em></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>writable</code></em></i>
-				–
-	</div>
-			<p>whether to accept only targets for which GTK+ knows
-how to convert a pixbuf into the format</p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-								–
-			</div>
-							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if <em>targets</em> include a suitable target for images,
-otherwise <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS">FALSE</a>.</p>
 
 					</div>
 	</div>
@@ -9649,6 +9649,77 @@ otherwise <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refer
 
 <div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_targets_include_text">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_targets_include_text">
+	<span><code>gtk_targets_include_text</code></span>
+</h3>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_targets_include_text (<a title="GdkAtom" href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">GdkAtom</a> * targets,
+                          <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> n_targets)</pre>
+
+<p>Determines if any of the targets in <em>targets</em> can be used to
+provide text.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>targets</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="Parameter points to an array of items"><span class="acronym">array</span></abbr> length=n_targets]</span>
+
+						)
+				–
+	</div>
+			<p>an array of <a href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">GdkAtom</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>n_targets</code></em></i>
+				–
+	</div>
+			<p>the length of <em>targets</em></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if <em>targets</em> include a suitable target for text,
+otherwise <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS">FALSE</a>.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -9709,77 +9780,6 @@ provide text.</p>
 			</div>
 							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if <em>targets</em> include a suitable target for text,
 otherwise <a href="https://docs.python.org/3/library/constants.html#False">False</a>.</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.10
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_targets_include_text">
-	<span><code>gtk_targets_include_text</code></span>
-</h3>
-
-
-
-
-<pre class="c-prototype">
-<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
-gtk_targets_include_text (<a title="GdkAtom" href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">GdkAtom</a> * targets,
-                          <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> n_targets)</pre>
-
-<p>Determines if any of the targets in <em>targets</em> can be used to
-provide text.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>targets</code></em></i>
-					(
-						
-<span class="annotation">[<abbr title="Parameter points to an array of items"><span class="acronym">array</span></abbr> length=n_targets]</span>
-
-						)
-				–
-	</div>
-			<p>an array of <a href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">GdkAtom</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>n_targets</code></em></i>
-				–
-	</div>
-			<p>the length of <em>targets</em></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-								–
-			</div>
-							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if <em>targets</em> include a suitable target for text,
-otherwise <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS">FALSE</a>.</p>
 
 					</div>
 	</div>
@@ -9872,6 +9872,77 @@ otherwise <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refer
 
 <div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_targets_include_uri">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_targets_include_uri">
+	<span><code>gtk_targets_include_uri</code></span>
+</h3>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_targets_include_uri (<a title="GdkAtom" href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">GdkAtom</a> * targets,
+                         <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> n_targets)</pre>
+
+<p>Determines if any of the targets in <em>targets</em> can be used to
+provide an uri list.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>targets</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="Parameter points to an array of items"><span class="acronym">array</span></abbr> length=n_targets]</span>
+
+						)
+				–
+	</div>
+			<p>an array of <a href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">GdkAtom</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>n_targets</code></em></i>
+				–
+	</div>
+			<p>the length of <em>targets</em></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if <em>targets</em> include a suitable target for uri lists,
+otherwise <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS">FALSE</a>.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -9932,77 +10003,6 @@ provide an uri list.</p>
 			</div>
 							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if <em>targets</em> include a suitable target for uri lists,
 otherwise <a href="https://docs.python.org/3/library/constants.html#False">False</a>.</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.10
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_targets_include_uri">
-	<span><code>gtk_targets_include_uri</code></span>
-</h3>
-
-
-
-
-<pre class="c-prototype">
-<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
-gtk_targets_include_uri (<a title="GdkAtom" href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">GdkAtom</a> * targets,
-                         <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> n_targets)</pre>
-
-<p>Determines if any of the targets in <em>targets</em> can be used to
-provide an uri list.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>targets</code></em></i>
-					(
-						
-<span class="annotation">[<abbr title="Parameter points to an array of items"><span class="acronym">array</span></abbr> length=n_targets]</span>
-
-						)
-				–
-	</div>
-			<p>an array of <a href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">GdkAtom</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>n_targets</code></em></i>
-				–
-	</div>
-			<p>the length of <em>targets</em></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-								–
-			</div>
-							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if <em>targets</em> include a suitable target for uri lists,
-otherwise <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS">FALSE</a>.</p>
 
 					</div>
 	</div>
@@ -10095,6 +10095,88 @@ otherwise <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refer
 
 <div class="base_symbol_container" data-hotdoc-tags="since:2.10;" id="gtk_targets_include_rich_text">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_targets_include_rich_text">
+	<span><code>gtk_targets_include_rich_text</code></span>
+</h3>
+
+
+
+
+<pre class="c-prototype">
+<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
+gtk_targets_include_rich_text (<a title="GdkAtom" href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">GdkAtom</a> * targets,
+                               <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> n_targets,
+                               <a title="GtkTextBuffer" href="gtktextbuffer.html#GtkTextBuffer">GtkTextBuffer</a> * buffer)</pre>
+
+<p>Determines if any of the targets in <em>targets</em> can be used to
+provide rich text.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>targets</code></em></i>
+					(
+						
+<span class="annotation">[<abbr title="Parameter points to an array of items"><span class="acronym">array</span></abbr> length=n_targets]</span>
+
+						)
+				–
+	</div>
+			<p>an array of <a href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">GdkAtom</a></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>n_targets</code></em></i>
+				–
+	</div>
+			<p>the length of <em>targets</em></p>
+
+	</div>
+
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>buffer</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtktextbuffer.html#GtkTextBuffer">GtkTextBuffer</a></p>
+
+	</div>
+
+			</div>
+
+		<div class="return-values-container">
+		<div class="symbol-detail">
+			<div>
+				<b>Returns</b>
+								–
+			</div>
+							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if <em>targets</em> include a suitable target for rich text,
+otherwise <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS">FALSE</a>.</p>
+
+					</div>
+	</div>
+
+
+
+	<p>
+	<b>Since</b>			: 2.10
+		</p>
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -10168,88 +10250,6 @@ provide rich text.</p>
 			</div>
 							<p><a href="https://docs.python.org/3/library/constants.html#True">True</a> if <em>targets</em> include a suitable target for rich text,
 otherwise <a href="https://docs.python.org/3/library/constants.html#False">False</a>.</p>
-
-					</div>
-	</div>
-
-
-
-	<p>
-	<b>Since</b>			: 2.10
-		</p>
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_targets_include_rich_text">
-	<span><code>gtk_targets_include_rich_text</code></span>
-</h3>
-
-
-
-
-<pre class="c-prototype">
-<a title="gboolean" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gboolean">gboolean</a>
-gtk_targets_include_rich_text (<a title="GdkAtom" href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">GdkAtom</a> * targets,
-                               <a title="gint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#gint">gint</a> n_targets,
-                               <a title="GtkTextBuffer" href="gtktextbuffer.html#GtkTextBuffer">GtkTextBuffer</a> * buffer)</pre>
-
-<p>Determines if any of the targets in <em>targets</em> can be used to
-provide rich text.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>targets</code></em></i>
-					(
-						
-<span class="annotation">[<abbr title="Parameter points to an array of items"><span class="acronym">array</span></abbr> length=n_targets]</span>
-
-						)
-				–
-	</div>
-			<p>an array of <a href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">GdkAtom</a></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>n_targets</code></em></i>
-				–
-	</div>
-			<p>the length of <em>targets</em></p>
-
-	</div>
-
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>buffer</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtktextbuffer.html#GtkTextBuffer">GtkTextBuffer</a></p>
-
-	</div>
-
-			</div>
-
-		<div class="return-values-container">
-		<div class="symbol-detail">
-			<div>
-				<b>Returns</b>
-								–
-			</div>
-							<p><a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS">TRUE</a> if <em>targets</em> include a suitable target for rich text,
-otherwise <a href="https://developer.gnome.org/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS">FALSE</a>.</p>
 
 					</div>
 	</div>
@@ -10355,6 +10355,47 @@ otherwise <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Refer
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="gtk_selection_remove_all">
 	
+        <div class="gi-symbol gi-symbol-c">
+            
+
+
+
+<h3 data-hotdoc-id="gtk_selection_remove_all">
+	<span><code>gtk_selection_remove_all</code></span>
+</h3>
+
+
+
+
+<pre class="c-prototype">
+gtk_selection_remove_all (<a title="GtkWidget" href="gtkwidget.html#GtkWidget">GtkWidget</a> * widget)</pre>
+
+<p>Removes all handlers and unsets ownership of all
+selections for a widget. Called when widget is being
+destroyed. This function will not generally be
+called by applications.</p>
+
+
+
+	<div class="parameters-container">
+		<p><b>Parameters:</b></p>
+					
+<div class="symbol-detail">
+	<div>
+		<i><em><code>widget</code></em></i>
+				–
+	</div>
+			<p>a <a href="gtkwidget.html#GtkWidget">GtkWidget</a></p>
+
+	</div>
+
+			</div>
+
+
+
+
+
+        </div>
         <div class="gi-symbol gi-symbol-python">
             
 
@@ -10388,47 +10429,6 @@ called by applications.</p>
 				–
 	</div>
 			<p>a <a href="gtkwidget.html#GtkWidget">Gtk.Widget</a></p>
-
-	</div>
-
-			</div>
-
-
-
-
-
-        </div>
-        <div class="gi-symbol gi-symbol-c">
-            
-
-
-
-<h3 data-hotdoc-id="gtk_selection_remove_all">
-	<span><code>gtk_selection_remove_all</code></span>
-</h3>
-
-
-
-
-<pre class="c-prototype">
-gtk_selection_remove_all (<a title="GtkWidget" href="gtkwidget.html#GtkWidget">GtkWidget</a> * widget)</pre>
-
-<p>Removes all handlers and unsets ownership of all
-selections for a widget. Called when widget is being
-destroyed. This function will not generally be
-called by applications.</p>
-
-
-
-	<div class="parameters-container">
-		<p><b>Parameters:</b></p>
-					
-<div class="symbol-detail">
-	<div>
-		<i><em><code>widget</code></em></i>
-				–
-	</div>
-			<p>a <a href="gtkwidget.html#GtkWidget">GtkWidget</a></p>
 
 	</div>
 
@@ -10492,66 +10492,6 @@ called by applications.</p>
 
 <div class="base_symbol_container" data-hotdoc-tags="" id="GtkTargetPair">
 	
-        <div class="gi-symbol gi-symbol-python">
-            
-
-
-
-<h3>
-	Gtk.TargetPair
-</h3>
-
-
-<p>A <a href="gtkselection.html#GtkTargetPair">Gtk.TargetPair</a> is used to represent the same
-information as a table of <a href="gtkselection.html#GtkTargetEntry">Gtk.TargetEntry</a>, but in
-an efficient form.</p>
-
-
-
-
-	<div class="members-container">
-		<h4>Attributes</h4>
-					
-<div class="symbol-detail" data-hotdoc-id="GtkTargetPair.target">
-	<div>
-		<i><em><code>TargetPair.target</code></em></i>
-		(<a title="Gdk.Atom" href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">Gdk.Atom</a>)
-		–
-	</div>
-			<p><a href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">Gdk.Atom</a> representation of the target type</p>
-
-	</div>
-
-					
-<div class="symbol-detail" data-hotdoc-id="GtkTargetPair.flags">
-	<div>
-		<i><em><code>TargetPair.flags</code></em></i>
-		(<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>)
-		–
-	</div>
-			<p><a href="gtkdnd.html#GtkTargetFlags">Gtk.TargetFlags</a> for DND</p>
-
-	</div>
-
-					
-<div class="symbol-detail" data-hotdoc-id="GtkTargetPair.info">
-	<div>
-		<i><em><code>TargetPair.info</code></em></i>
-		(<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>)
-		–
-	</div>
-			<p>an application-assigned integer ID which will
-get passed as a parameter to e.g the <a href="https://developer.gnome.org/gtk3/GtkWidget.html#GtkWidget-selection-get">selection-get</a>
-signal. It allows the application to identify the target
-type without extensive string compares.</p>
-
-	</div>
-
-			</div>
-
-
-
-        </div>
         <div class="gi-symbol gi-symbol-c">
             
 
@@ -10598,6 +10538,66 @@ an efficient form.</p>
 	<div>
 		<i><em><code>info</code></em></i>
 		(<a title="guint" href="https://developer.gnome.org/glib/unstable/glib-Basic-Types.html#guint">guint</a>)
+		–
+	</div>
+			<p>an application-assigned integer ID which will
+get passed as a parameter to e.g the <a href="https://developer.gnome.org/gtk3/GtkWidget.html#GtkWidget-selection-get">selection-get</a>
+signal. It allows the application to identify the target
+type without extensive string compares.</p>
+
+	</div>
+
+			</div>
+
+
+
+        </div>
+        <div class="gi-symbol gi-symbol-python">
+            
+
+
+
+<h3>
+	Gtk.TargetPair
+</h3>
+
+
+<p>A <a href="gtkselection.html#GtkTargetPair">Gtk.TargetPair</a> is used to represent the same
+information as a table of <a href="gtkselection.html#GtkTargetEntry">Gtk.TargetEntry</a>, but in
+an efficient form.</p>
+
+
+
+
+	<div class="members-container">
+		<h4>Attributes</h4>
+					
+<div class="symbol-detail" data-hotdoc-id="GtkTargetPair.target">
+	<div>
+		<i><em><code>TargetPair.target</code></em></i>
+		(<a title="Gdk.Atom" href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">Gdk.Atom</a>)
+		–
+	</div>
+			<p><a href="https://developer.gnome.org/gdk3/gdk3-Properties-and-Atoms.html#GdkAtom">Gdk.Atom</a> representation of the target type</p>
+
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GtkTargetPair.flags">
+	<div>
+		<i><em><code>TargetPair.flags</code></em></i>
+		(<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>)
+		–
+	</div>
+			<p><a href="gtkdnd.html#GtkTargetFlags">Gtk.TargetFlags</a> for DND</p>
+
+	</div>
+
+					
+<div class="symbol-detail" data-hotdoc-id="GtkTargetPair.info">
+	<div>
+		<i><em><code>TargetPair.info</code></em></i>
+		(<a title="int" href="https://docs.python.org/3/library/functions.html#int">int</a>)
 		–
 	</div>
 			<p>an application-assigned integer ID which will
